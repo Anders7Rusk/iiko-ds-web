@@ -1,0 +1,45 @@
+/* ============================================================
+   iiko DS — Badge (счётчик / точка)
+   Источник: Figma, страница «🔵Готово 🧾 → Badge»
+   Варианты: Style Accent/Positive/Warning/Negative
+             Type Counter (19×18, скругление 9999px) / Point (8×8)
+   Все значения — только токены из tokens.css
+   ============================================================ */
+
+.ds-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-size: var(--ds-typography-font-size-3x);      /* 12px */
+  font-weight: var(--ds-typography-font-weight-medium); /* 500 */
+  line-height: 1;
+  color: var(--ds-color-text-inversive);             /* #FFFFFF */
+  vertical-align: middle;
+}
+
+/* ── Counter: пилюля 19×18 ──────────────────────────────── */
+
+.ds-badge--counter {
+  height: 18px;
+  min-width: 19px;
+  padding: 0 4px;
+  border-radius: var(--ds-radius-circular);          /* 9999px */
+}
+
+/* ── Point: точка 8×8 ───────────────────────────────────── */
+
+.ds-badge--point {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* ── Стили ──────────────────────────────────────────────── */
+
+.ds-badge--accent   { background: var(--ds-color-badge-accent-background); }   /* #448AFF */
+.ds-badge--positive { background: var(--ds-color-badge-positive-background); } /* #14B456 */
+.ds-badge--warning  { background: var(--ds-color-badge-warning-background); }  /* #FFAB40 */
+.ds-badge--negative { background: var(--ds-color-badge-negative-background); } /* #FF5252 */
