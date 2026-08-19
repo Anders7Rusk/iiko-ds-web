@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=8">
-<link rel="stylesheet" href="components/button.css?v=8">
-<link rel="stylesheet" href="components/badge.css?v=8">
-<link rel="stylesheet" href="showcase.css?v=8">
+<link rel="stylesheet" href="tokens.css?v=9">
+<link rel="stylesheet" href="components/button.css?v=9">
+<link rel="stylesheet" href="components/badge.css?v=9">
+<link rel="stylesheet" href="showcase.css?v=9">
 </head>
 <body>
 
@@ -70,12 +70,14 @@
                     <div class="po-label" id="po-label">button / neutral / filled / default</div>
                   </div>
                   <div class="po-figure">
-                    <span class="pf-label pf-top">Border</span>
-                    <span class="pf-label pf-top2">Padding</span>
-                    <span class="pf-label pf-left">12</span>
-                    <span class="mini-btn" id="po-mini-btn"><span class="mini-btn__label">Label</span><span class="pf-label pf-label-text">Label × 20</span></span>
-                    <span class="pf-label pf-right">12</span>
-                    <span class="pf-label pf-bottom">8</span>
+                    <span class="pf-dim pf-dim-l"><i></i><b>12</b></span>
+                    <span class="pf-dim pf-dim-r"><i></i><b>12</b></span>
+                    <span class="pf-dim pf-dim-t"><i></i><b>8</b></span>
+                    <span class="pf-dim pf-dim-b"><i></i><b>8</b></span>
+                    <span class="pf-btn-wrap">
+                      <span class="pf-radius"><i></i><b>8</b></span>
+                      <span class="mini-btn" id="po-mini-btn"><span class="mini-btn__label">Label</span><span class="pf-label-text">Label × 20</span></span>
+                    </span>
                   </div>
                   <div id="po-tokens">
                     <div class="insp-section"><h4>Layout</h4>
@@ -223,11 +225,14 @@
                 </div>
                 <div class="inspector__props">
                   <div class="prop-figure">
-                    <span class="pf-label pf-top">8</span>
-                    <span class="pf-label pf-left">12</span>
-                    <span class="mini-btn" id="insp-mini-btn"><span class="mini-btn__label">Label</span></span>
-                    <span class="pf-label pf-right">12</span>
-                    <span class="pf-label pf-bottom">8</span>
+                    <span class="pf-dim pf-dim-l"><i></i><b>12</b></span>
+                    <span class="pf-dim pf-dim-r"><i></i><b>12</b></span>
+                    <span class="pf-dim pf-dim-t"><i></i><b>8</b></span>
+                    <span class="pf-dim pf-dim-b"><i></i><b>8</b></span>
+                    <span class="pf-btn-wrap">
+                      <span class="pf-radius"><i></i><b>8</b></span>
+                      <span class="mini-btn" id="insp-mini-btn"><span class="mini-btn__label">Label</span><span class="pf-label-text">Label × 20</span></span>
+                    </span>
                   </div>
                 </div>
                 <div class="inspector__body">
@@ -1181,6 +1186,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=8"></script>
+<script src="sidebar.js?v=9"></script>
 </body>
 </html>
