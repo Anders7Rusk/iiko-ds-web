@@ -13,532 +13,78 @@
 <link rel="stylesheet" href="components/input.css">
 <link rel="stylesheet" href="components/selection.css">
 <link rel="stylesheet" href="components/badge.css">
-<style>
-  /* ── Стили самой витрины (не компоненты!) ─────────────── */
-  :root {
-    --showcase-bg: #f5f5f5;
-    --showcase-card-bg: #ffffff;
-    --showcase-text: #333333;
-    --showcase-text-secondary: #616161;
-    --showcase-border: #e0e0e0;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--showcase-bg);
-    color: var(--showcase-text);
-    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .showcase-header {
-    background: #ffffff;
-    border-bottom: 1px solid var(--showcase-border);
-    padding: 16px 32px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    display: flex;
-    align-items: baseline;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-  .showcase-header h1 { font-size: 20px; font-weight: 500; margin: 0; }
-  .showcase-header .sub { color: var(--showcase-text-secondary); font-size: 12px; }
-  .showcase-nav { display: flex; gap: 16px; flex-wrap: wrap; margin-left: auto; }
-  .showcase-nav a {
-    color: #448aff;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
-  }
-  .showcase-nav a:hover { text-decoration: underline; }
-  main { max-width: 1200px; margin: 0 auto; padding: 24px 32px 64px; }
-  section { margin-bottom: 48px; }
-  section > h2 {
-    font-size: 24px;
-    font-weight: 500;
-    margin: 0 0 4px;
-    scroll-margin-top: 80px;
-  }
-  section > .desc { color: var(--showcase-text-secondary); margin: 0 0 20px; }
-  .card {
-    background: var(--showcase-card-bg);
-    border: 1px solid var(--showcase-border);
-    border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 20px;
-  }
-  .card h3 { font-size: 16px; font-weight: 500; margin: 0 0 16px; }
-  .row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-  .row + .row { margin-top: 16px; }
-  .row-label {
-    min-width: 110px;
-    color: var(--showcase-text-secondary);
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .demo-grid { display: grid; gap: 20px; }
-  .demo-grid--2 { grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); }
-  .code-block { position: relative; margin-top: 16px; }
-  .code-block pre {
-    background: #f8f9fc;
-    border: 1px solid var(--showcase-border);
-    border-radius: 8px;
-    padding: 16px;
-    margin: 0;
-    overflow-x: auto;
-    font-family: 'Roboto Mono', Consolas, monospace;
-    font-size: 12px;
-    line-height: 18px;
-    color: #333333;
-  }
-  .code-block .copy-btn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    border: 1px solid var(--showcase-border);
-    border-radius: 6px;
-    background: #ffffff;
-    padding: 4px 10px;
-    font-size: 12px;
-    font-family: inherit;
-    cursor: pointer;
-    color: #616161;
-  }
-  .code-block .copy-btn:hover { background: #f5f5f5; }
-  .code-block .copy-btn.copied { color: #14b456; border-color: #14b456; }
-  .token-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    border: 1px solid var(--showcase-border);
-    border-radius: 6px;
-    background: #ffffff;
-    padding: 4px 8px;
-    font-family: 'Roboto Mono', Consolas, monospace;
-    font-size: 11px;
-    color: #616161;
-    cursor: pointer;
-  }
-  .token-chip .dot { width: 10px; height: 10px; border-radius: 50%; }
-  .token-row { display: flex; gap: 8px; flex-wrap: wrap; }
-  .badge-demo { display: inline-flex; align-items: center; gap: 12px; }
-</style>
+<link rel="stylesheet" href="showcase.css">
 </head>
 <body>
 
 <header class="showcase-header">
-  <h1>iiko DS · Компоненты в коде</h1>
-  <span class="sub">Чистые HTML/CSS из дизайн-системы · токены из Figma · v0.1</span>
+  <div class="brand">
+    <h1>iiko DS · Компоненты в коде</h1>
+    <span class="sub">чистые HTML/CSS из дизайн-системы · токены из Figma · v0.1</span>
+  </div>
   <nav class="showcase-nav">
-    <a href="#button">Button</a>
-    <a href="#input">Input</a>
-    <a href="#checkbox">Checkbox</a>
-    <a href="#radio">Radio</a>
-    <a href="#badge">Badge</a>
-    <a href="#tokens">Токены</a>
+    <a href="guides/guide-components.md" class="small">Гайд: компоненты</a>
+    <a href="guides/guide-prototyping.md" class="small">Гайд: прототипы</a>
   </nav>
 </header>
 
 <main>
 
-  <section id="button">
-    <h2>Button</h2>
-    <p class="desc">Кнопка. Размеры XS / S / M, стили Accent / Neutral / Positive / Negative / Warning, типы Filled / Outlined / Text. Hover и Press — нативные, наведите курсор. Disabled — атрибут <code>disabled</code>.</p>
+  <div class="page-head">
+    <h2>🔵 Готово</h2>
+    <p class="desc">Компоненты дизайн-системы со статусом «готово» — переведены в чистый HTML/CSS.
+    Каждый компонент — отдельная страница (как в Figma). Все стили — только через токены <code>tokens.css</code>.</p>
+  </div>
 
-    <div class="card">
-      <h3>Filled — Accent / Neutral / Positive / Negative / Warning</h3>
-      <div class="row">
-        <span class="row-label">M</span>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--filled">Button</button>
-      </div>
-      <div class="row">
-        <span class="row-label">M disabled</span>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" disabled>Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled" disabled>Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--filled" disabled>Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--filled" disabled>Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--filled" disabled>Button</button>
-      </div>
-      <div class="row">
-        <span class="row-label">S / XS</span>
-        <button class="ds-btn ds-btn--s ds-btn--accent ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--xs ds-btn--accent ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--s ds-btn--neutral ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--xs ds-btn--neutral ds-btn--filled">Button</button>
-      </div>
-      <div class="row">
-        <span class="row-label">с иконками</span>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
-          <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
-          <span class="ds-btn__label">Button</span>
-        </button>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
-          <span class="ds-btn__label">Button</span>
-          <span class="ds-btn__icon material-icons" aria-hidden="true">arrow_forward</span>
-        </button>
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">
-          <span class="ds-btn__icon material-icons" aria-hidden="true">settings</span>
-          <span class="ds-btn__label">Button</span>
-        </button>
-      </div>
-      <div class="code-block">
-        <button class="copy-btn" data-copy="code-btn">Копировать</button>
-        <pre id="code-btn"><code>&lt;button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"&gt;
-  &lt;span class="ds-btn__icon material-icons" aria-hidden="true"&gt;add&lt;/span&gt;
-  &lt;span class="ds-btn__label"&gt;Button&lt;/span&gt;
-&lt;/button&gt;</code></pre>
-      </div>
-    </div>
+  <div class="catalog-group">
+    <div class="catalog-grid">
 
-    <div class="card">
-      <h3>Outlined и Text</h3>
-      <div class="row">
-        <span class="row-label">Outlined</span>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--outlined">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--outlined">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--outlined">Button</button>
-      </div>
-      <div class="row">
-        <span class="row-label">Text</span>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--text">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--text">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--text">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--text">Button</button>
-      </div>
-      <div class="row">
-        <span class="row-label">disabled</span>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" disabled>Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--text" disabled>Button</button>
-      </div>
-      <div class="code-block">
-        <button class="copy-btn" data-copy="code-btn-outlined">Копировать</button>
-        <pre id="code-btn-outlined"><code>&lt;button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined"&gt;
-  &lt;span class="ds-btn__label"&gt;Button&lt;/span&gt;
-&lt;/button&gt;</code></pre>
-      </div>
-    </div>
-  </section>
-
-  <section id="input">
-    <h2>Input</h2>
-    <p class="desc">Поле ввода. M — с лейблом сверху, S / XS — без лейбла. Состояния: default, hover, focus, error, disabled. Под полем — support text (в ошибке — красный).</p>
-
-    <div class="demo-grid demo-grid--2">
-      <div class="card">
-        <h3>M — Populated</h3>
-        <div class="ds-input ds-input--m">
-          <div class="ds-input__frame">
-            <span class="ds-input__icon material-icons" aria-hidden="true">info</span>
-            <div class="ds-input__content">
-              <label class="ds-input__label" for="inp-m">Label</label>
-              <input class="ds-input__field" id="inp-m" type="text" value="Input text">
-            </div>
-            <span class="ds-input__icon material-icons" aria-hidden="true">close</span>
-          </div>
-          <div class="ds-input__support">Support text</div>
+      <a class="catalog-item" href="button.html">
+        <div class="catalog-preview">
+          <span class="mini-btn">Button</span>
         </div>
-      </div>
+        <span class="name">Button</span>
+        <span class="badge-status badge-status--ready">готово</span>
+      </a>
 
-      <div class="card">
-        <h3>M — Empty (placeholder)</h3>
-        <div class="ds-input ds-input--m">
-          <div class="ds-input__frame">
-            <div class="ds-input__content">
-              <label class="ds-input__label" for="inp-empty">Label</label>
-              <input class="ds-input__field" id="inp-empty" type="text" placeholder="Input text">
-            </div>
-          </div>
-          <div class="ds-input__support">Support text</div>
+      <a class="catalog-item" href="input.html">
+        <div class="catalog-preview">
+          <span class="mini-input"></span>
         </div>
-      </div>
+        <span class="name">Form field + Input</span>
+        <span class="badge-status badge-status--ready">готово</span>
+      </a>
 
-      <div class="card">
-        <h3>M — Error</h3>
-        <div class="ds-input ds-input--m ds-input--error">
-          <div class="ds-input__frame">
-            <div class="ds-input__content">
-              <label class="ds-input__label" for="inp-err">Label</label>
-              <input class="ds-input__field" id="inp-err" type="text" value="Input text">
-            </div>
-          </div>
-          <div class="ds-input__support">Support/Error text</div>
+      <a class="catalog-item" href="checkbox.html">
+        <div class="catalog-preview">
+          <span class="mini-cb material-icons" aria-hidden="true">check_box</span>
+          <span class="mini-cb material-icons" aria-hidden="true">check_box_outline_blank</span>
         </div>
-      </div>
+        <span class="name">Checkbox</span>
+        <span class="badge-status badge-status--ready">готово</span>
+      </a>
 
-      <div class="card">
-        <h3>M — Disabled</h3>
-        <div class="ds-input ds-input--m ds-input--disabled">
-          <div class="ds-input__frame">
-            <div class="ds-input__content">
-              <label class="ds-input__label" for="inp-dis">Label</label>
-              <input class="ds-input__field" id="inp-dis" type="text" value="Input text" disabled>
-            </div>
-          </div>
-          <div class="ds-input__support">Support text</div>
+      <a class="catalog-item" href="radio.html">
+        <div class="catalog-preview">
+          <span class="mini-cb material-icons" aria-hidden="true">radio_button_checked</span>
+          <span class="mini-cb material-icons" aria-hidden="true">radio_button_unchecked</span>
         </div>
-      </div>
+        <span class="name">Radio button</span>
+        <span class="badge-status badge-status--ready">готово</span>
+      </a>
 
-      <div class="card">
-        <h3>S — без лейбла</h3>
-        <div class="ds-input ds-input--s">
-          <div class="ds-input__frame">
-            <div class="ds-input__content">
-              <input class="ds-input__field" type="text" value="Input text">
-            </div>
-          </div>
+      <a class="catalog-item" href="badge.html">
+        <div class="catalog-preview">
+          <span class="mini-badge">7</span>
         </div>
-      </div>
+        <span class="name">Badge</span>
+        <span class="badge-status badge-status--ready">готово</span>
+      </a>
 
-      <div class="card">
-        <h3>XS — без лейбла</h3>
-        <div class="ds-input ds-input--xs">
-          <div class="ds-input__frame">
-            <div class="ds-input__content">
-              <input class="ds-input__field" type="text" value="Input text">
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-
-    <div class="code-block">
-      <button class="copy-btn" data-copy="code-input">Копировать</button>
-      <pre id="code-input"><code>&lt;div class="ds-input ds-input--m"&gt;
-  &lt;div class="ds-input__frame"&gt;
-    &lt;div class="ds-input__content"&gt;
-      &lt;label class="ds-input__label" for="my-input"&gt;Label&lt;/label&gt;
-      &lt;input class="ds-input__field" id="my-input" type="text" placeholder="Input text"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="ds-input__support"&gt;Support text&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-    </div>
-  </section>
-
-  <section id="checkbox">
-    <h2>Checkbox</h2>
-    <p class="desc">Чекбокс с лейблом и подписью. Варианты: Normal / Error / Disable, типы Selected / Deselected / Indeterminate (задаётся в JS: <code>input.indeterminate = true</code>).</p>
-
-    <div class="card">
-      <div class="row">
-        <span class="row-label">Normal</span>
-        <label class="ds-checkbox">
-          <input type="checkbox" class="ds-checkbox__input" checked>
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-        <label class="ds-checkbox">
-          <input type="checkbox" class="ds-checkbox__input">
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-        <label class="ds-checkbox">
-          <input type="checkbox" class="ds-checkbox__input" id="cb-indet">
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Indeterminate</span>
-        </label>
-      </div>
-      <div class="row">
-        <span class="row-label">Error</span>
-        <label class="ds-checkbox ds-checkbox--error">
-          <input type="checkbox" class="ds-checkbox__input" checked>
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-        <label class="ds-checkbox ds-checkbox--error">
-          <input type="checkbox" class="ds-checkbox__input">
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-      </div>
-      <div class="row">
-        <span class="row-label">Disable</span>
-        <label class="ds-checkbox ds-checkbox--disabled">
-          <input type="checkbox" class="ds-checkbox__input" checked disabled>
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-        <label class="ds-checkbox ds-checkbox--disabled">
-          <input type="checkbox" class="ds-checkbox__input" disabled>
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-      </div>
-      <div class="row">
-        <span class="row-label">с подписью</span>
-        <div>
-          <label class="ds-checkbox ds-checkbox--error">
-            <input type="checkbox" class="ds-checkbox__input">
-            <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-            <span class="ds-checkbox__label">Checkbox label</span>
-          </label>
-          <span class="ds-checkbox__support">Support/Error text</span>
-        </div>
-      </div>
-      <div class="code-block">
-        <button class="copy-btn" data-copy="code-checkbox">Копировать</button>
-        <pre id="code-checkbox"><code>&lt;label class="ds-checkbox"&gt;
-  &lt;input type="checkbox" class="ds-checkbox__input" checked&gt;
-  &lt;span class="ds-checkbox__box material-icons" aria-hidden="true"&gt;&lt;/span&gt;
-  &lt;span class="ds-checkbox__label"&gt;Checkbox label&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-      </div>
-    </div>
-  </section>
-
-  <section id="radio">
-    <h2>Radio button</h2>
-    <p class="desc">Радиокнопка с лейблом. Варианты: Normal / Error / Disable, типы Selected / Deselected. Для группы используйте одинаковый <code>name</code>.</p>
-
-    <div class="card">
-      <div class="row">
-        <span class="row-label">Normal</span>
-        <label class="ds-radio">
-          <input type="radio" name="demo-radio" class="ds-radio__input" checked>
-          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
-          <span class="ds-radio__label">Radio button label</span>
-        </label>
-        <label class="ds-radio">
-          <input type="radio" name="demo-radio" class="ds-radio__input">
-          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
-          <span class="ds-radio__label">Radio button label</span>
-        </label>
-      </div>
-      <div class="row">
-        <span class="row-label">Error</span>
-        <label class="ds-radio ds-radio--error">
-          <input type="radio" name="demo-radio-err" class="ds-radio__input" checked>
-          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
-          <span class="ds-radio__label">Radio button label</span>
-        </label>
-        <label class="ds-radio ds-radio--error">
-          <input type="radio" name="demo-radio-err" class="ds-radio__input">
-          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
-          <span class="ds-radio__label">Radio button label</span>
-        </label>
-      </div>
-      <div class="row">
-        <span class="row-label">Disable</span>
-        <label class="ds-radio ds-radio--disabled">
-          <input type="radio" name="demo-radio-dis" class="ds-radio__input" checked disabled>
-          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
-          <span class="ds-radio__label">Radio button label</span>
-        </label>
-        <label class="ds-radio ds-radio--disabled">
-          <input type="radio" name="demo-radio-dis" class="ds-radio__input" disabled>
-          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
-          <span class="ds-radio__label">Radio button label</span>
-        </label>
-      </div>
-      <div class="code-block">
-        <button class="copy-btn" data-copy="code-radio">Копировать</button>
-        <pre id="code-radio"><code>&lt;label class="ds-radio"&gt;
-  &lt;input type="radio" name="group" class="ds-radio__input" checked&gt;
-  &lt;span class="ds-radio__box material-icons" aria-hidden="true"&gt;&lt;/span&gt;
-  &lt;span class="ds-radio__label"&gt;Radio button label&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-      </div>
-    </div>
-  </section>
-
-  <section id="badge">
-    <h2>Badge</h2>
-    <p class="desc">Счётчик (19×18, скругление полное) и точка (8×8). Стили: Accent / Positive / Warning / Negative.</p>
-
-    <div class="card">
-      <div class="row">
-        <span class="row-label">Counter</span>
-        <span class="badge-demo">
-          <span class="ds-badge ds-badge--counter ds-badge--accent">7</span>
-          <span class="ds-badge ds-badge--counter ds-badge--positive">7</span>
-          <span class="ds-badge ds-badge--counter ds-badge--warning">7</span>
-          <span class="ds-badge ds-badge--counter ds-badge--negative">7</span>
-        </span>
-      </div>
-      <div class="row">
-        <span class="row-label">Point</span>
-        <span class="badge-demo">
-          <span class="ds-badge ds-badge--point ds-badge--accent"></span>
-          <span class="ds-badge ds-badge--point ds-badge--positive"></span>
-          <span class="ds-badge ds-badge--point ds-badge--warning"></span>
-          <span class="ds-badge ds-badge--point ds-badge--negative"></span>
-        </span>
-      </div>
-      <div class="code-block">
-        <button class="copy-btn" data-copy="code-badge">Копировать</button>
-        <pre id="code-badge"><code>&lt;span class="ds-badge ds-badge--counter ds-badge--accent"&gt;7&lt;/span&gt;
-&lt;span class="ds-badge ds-badge--point ds-badge--negative"&gt;&lt;/span&gt;</code></pre>
-      </div>
-    </div>
-  </section>
-
-  <section id="tokens">
-    <h2>Токены</h2>
-    <p class="desc">Все компоненты берут значения только из <code>tokens.css</code> (генерируется из дизайн-системы скриптом). Ниже — примеры переменных. Полный список — в файле <code>tokens.css</code>.</p>
-    <div class="card">
-      <h3>Семантические цвета</h3>
-      <div class="token-row">
-        <span class="token-chip"><span class="dot" style="background:#333333"></span>--ds-color-text-primary</span>
-        <span class="token-chip"><span class="dot" style="background:#616161"></span>--ds-color-text-secondary</span>
-        <span class="token-chip"><span class="dot" style="background:#448aff"></span>--ds-color-text-accent</span>
-        <span class="token-chip"><span class="dot" style="background:#9e9e9e"></span>--ds-color-text-disable</span>
-        <span class="token-chip"><span class="dot" style="background:#d6d6d6"></span>--ds-color-text-placeholder</span>
-        <span class="token-chip"><span class="dot" style="background:#ff5252"></span>--ds-color-text-negative</span>
-        <span class="token-chip"><span class="dot" style="background:#e0e0e0"></span>--ds-color-stroke-default</span>
-        <span class="token-chip"><span class="dot" style="background:#448aff"></span>--ds-color-button-accent-default</span>
-      </div>
-      <h3 style="margin-top:20px">Радиусы и отступы</h3>
-      <div class="token-row">
-        <span class="token-chip">--ds-radius-2x: 8px</span>
-        <span class="token-chip">--ds-radius-3x: 12px</span>
-        <span class="token-chip">--ds-radius-circular: 9999px</span>
-        <span class="token-chip">--ds-space-1x: 4px</span>
-        <span class="token-chip">--ds-space-2x: 8px</span>
-        <span class="token-chip">--ds-space-3x: 12px</span>
-      </div>
-      <h3 style="margin-top:20px">Типографика</h3>
-      <div class="token-row">
-        <span class="token-chip">--ds-typography-font-size-3x: 12px</span>
-        <span class="token-chip">--ds-typography-font-size-3-5x: 14px</span>
-        <span class="token-chip">--ds-typography-font-size-4x: 16px</span>
-        <span class="token-chip">--ds-typography-font-weight-regular: 400</span>
-        <span class="token-chip">--ds-typography-font-weight-medium: 500</span>
-      </div>
-    </div>
-  </section>
+  </div>
 
 </main>
-
-<script>
-  // indeterminate checkbox для демонстрации
-  document.getElementById('cb-indet').indeterminate = true;
-
-  // копирование кода
-  document.querySelectorAll('.copy-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var text = document.getElementById(btn.dataset.copy).textContent.trim();
-      navigator.clipboard.writeText(text).then(function () {
-        btn.textContent = 'Скопировано ✓';
-        btn.classList.add('copied');
-        setTimeout(function () {
-          btn.textContent = 'Копировать';
-          btn.classList.remove('copied');
-        }, 1500);
-      });
-    });
-  });
-</script>
 
 </body>
 </html>
