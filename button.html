@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=22">
-<link rel="stylesheet" href="components/button.css?v=22">
-<link rel="stylesheet" href="components/badge.css?v=22">
-<link rel="stylesheet" href="showcase.css?v=22">
+<link rel="stylesheet" href="tokens.css?v=23">
+<link rel="stylesheet" href="components/button.css?v=23">
+<link rel="stylesheet" href="components/badge.css?v=23">
+<link rel="stylesheet" href="showcase.css?v=23">
 </head>
 <body>
 
@@ -1153,7 +1153,7 @@ function fillPopover() {
   var gapVal = size === 'm' ? '8px' : '4px';
   var bw = type === 'outlined' ? '1' : '0';
 
-  document.getElementById('po-label').textContent = 'button / ' + style + ' / ' + type + ' / ' + state + ' / ' + size.toUpperCase();
+  document.getElementById('po-label').textContent = 'button / ' + size.toUpperCase() + ' / ' + style + ' / ' + type + ' / ' + state;
 
   // фигура
   document.querySelectorAll('.pf-r').forEach(function (c) { c.textContent = '8'; });
@@ -1245,7 +1245,7 @@ document.querySelectorAll('#props-popover .po-seg button').forEach(function (btn
       copy.style.display = 'inline-flex';
     } else {
       title.textContent = 'COMPONENT INSPECT TOKEN';
-      label.textContent = 'button / ' + selVal('style') + ' / ' + selVal('type') + ' / ' + selVal('state') + ' / ' + selVal('size').toUpperCase();
+      label.textContent = 'button / ' + selVal('size').toUpperCase() + ' / ' + selVal('style') + ' / ' + selVal('type') + ' / ' + selVal('state');
       copy.style.display = 'none';
     }
   });
@@ -1307,6 +1307,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=22"></script>
+<script src="sidebar.js?v=23"></script>
 </body>
 </html>
