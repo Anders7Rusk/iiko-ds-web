@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=32">
-<link rel="stylesheet" href="components/button.css?v=32">
-<link rel="stylesheet" href="components/badge.css?v=32">
-<link rel="stylesheet" href="showcase.css?v=32">
+<link rel="stylesheet" href="tokens.css?v=33">
+<link rel="stylesheet" href="components/button.css?v=33">
+<link rel="stylesheet" href="components/badge.css?v=33">
+<link rel="stylesheet" href="showcase.css?v=33">
 </head>
 <body>
 
@@ -201,7 +201,7 @@
                         <div class="ds-select__item is-selected" data-value="default" role="option">Default<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
                         <div class="ds-select__item" data-value="hover" role="option">Hover<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
                         <div class="ds-select__item" data-value="press" role="option">Press<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="disabled" role="option">Disable<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="disable" role="option">Disable<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
                         <div class="ds-select__item" data-value="loading" role="option">Loading<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
                       </div>
                     </div>
@@ -786,8 +786,8 @@ function renderStage() {
   var colors = BTN.colors[style][type][state] || BTN.colors[style][type]['default'];
   var cls = 'ds-btn ds-btn--' + size + ' ds-btn--' + style + ' ds-btn--' + type;
   var styleAttr = 'background:' + colors.bg + ';border-color:' + colors.border + ';color:' + colors.label + ';';
-  if (state !== 'default' && state !== 'disabled' && state !== 'loading') styleAttr += 'cursor:default;';
-  var disabled = state === 'disabled' ? ' disabled' : '';
+  if (state !== 'default' && state !== 'disable' && state !== 'loading') styleAttr += 'cursor:default;';
+  var disabled = state === 'disable' ? ' disabled' : '';
   var html = '<button class="' + cls + '" style="' + styleAttr + '"' + disabled + '>';
   if (state === 'loading') html += '<span class="ds-spinner" aria-hidden="true"></span>';
   else if (iconL) html += '<span class="ds-btn__icon material-icons" aria-hidden="true">add</span>';
@@ -1294,6 +1294,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=32"></script>
+<script src="sidebar.js?v=33"></script>
 </body>
 </html>
