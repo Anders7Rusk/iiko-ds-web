@@ -849,7 +849,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 /* тело: колонка типов + размеры в строчку */
 .matrix-body {
   display: flex;
-  gap: 12px;
+  gap: 24px;
   align-items: flex-start;
   overflow-x: auto;
 }
