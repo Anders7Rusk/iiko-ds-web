@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=11">
-<link rel="stylesheet" href="components/button.css?v=11">
-<link rel="stylesheet" href="components/badge.css?v=11">
-<link rel="stylesheet" href="showcase.css?v=11">
+<link rel="stylesheet" href="tokens.css?v=12">
+<link rel="stylesheet" href="components/button.css?v=12">
+<link rel="stylesheet" href="components/badge.css?v=12">
+<link rel="stylesheet" href="showcase.css?v=12">
 </head>
 <body>
 
@@ -59,42 +59,71 @@
                 </div>
 
                 <div class="props-popover" id="props-popover">
-                  <div class="po-head">
+                  <div class="po-toolbar">
                     <div class="po-seg">
                       <button class="is-active" data-view="tokens">Tokens</button>
                       <button data-view="css">CSS</button>
                     </div>
+                    <button class="po-back" id="po-back" type="button" title="Back to Preview" aria-label="Back to Preview">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                    </button>
                   </div>
                   <div class="po-title-row">
                     <div class="po-title">COMPONENT INSPECT TOKEN</div>
                     <div class="po-label" id="po-label">button / neutral / filled / default</div>
                   </div>
                   <div class="po-figure">
-                    <span class="pf-label pf-top">8</span>
-                    <span class="pf-label pf-bottom">8</span>
-                    <span class="pf-label pf-left">12</span>
-                    <span class="pf-label pf-right">12</span>
-                    <span class="pf-radius-label">8</span>
-                    <span class="pf-btn-wrap">
-                      <span class="mini-btn" id="po-mini-btn"><span class="mini-btn__label">Label</span><span class="pf-label-text">Label × 20</span></span>
-                    </span>
-                  </div>
-                  <div id="po-tokens">
-                    <div class="insp-section"><h4>Layout</h4>
-                      <div class="insp-row"><span class="prop">padding</span><span class="var" id="po-pad-var"></span><span class="val" id="po-pad-val"></span></div>
-                      <div class="insp-row"><span class="prop">gap</span><span class="var" id="po-gap-var"></span><span class="val" id="po-gap-val"></span></div>
-                    </div>
-                    <div class="insp-section"><h4>Style</h4>
-                      <div class="insp-row"><span class="prop">border-radius</span><span class="var" id="po-r-var"></span><span class="val" id="po-r-val"></span></div>
-                      <div class="insp-row"><span class="prop">background</span><span class="var" id="po-bg-var"></span><span class="val" id="po-bg-val"></span><span class="swatch" id="po-bg-swatch"></span></div>
-                      <div class="insp-row"><span class="prop">box-shadow</span><span class="var">—</span><span class="val">none</span></div>
-                    </div>
-                    <div class="insp-section"><h4>Colors</h4>
-                      <div class="insp-color-group">Background colors
-                        <div class="insp-row"><span class="var" id="po-cbg-var"></span><span class="val" id="po-cbg-val"></span><span class="swatch" id="po-cbg-swatch"></span></div>
+                    <span class="pf-corner pf-c-tl"></span>
+                    <span class="pf-corner pf-c-tr"></span>
+                    <span class="pf-corner pf-c-bl"></span>
+                    <span class="pf-corner pf-c-br"></span>
+                    <div class="pf-card">
+                      <span class="pf-cap pf-cap--border">Border</span>
+                      <span class="pf-chip pf-r" id="pf-r-tl">8</span>
+                      <span class="pf-chip pf-r" id="pf-r-tr">8</span>
+                      <span class="pf-chip pf-r" id="pf-r-bl">8</span>
+                      <span class="pf-chip pf-r" id="pf-r-br">8</span>
+                      <span class="pf-chip pf-bw pf-bw--t" id="pf-bw-t">0</span>
+                      <span class="pf-chip pf-bw pf-bw--b" id="pf-bw-b">0</span>
+                      <span class="pf-chip pf-bw pf-bw--l" id="pf-bw-l">0</span>
+                      <span class="pf-chip pf-bw pf-bw--r" id="pf-bw-r">0</span>
+                      <div class="pf-inner">
+                        <span class="pf-cap pf-cap--padding">Padding</span>
+                        <span class="pf-chip pf-py pf-py--t" id="pf-py-t">8</span>
+                        <span class="pf-chip pf-py pf-py--b" id="pf-py-b">8</span>
+                        <span class="pf-chip pf-px pf-px--l" id="pf-px-l">12</span>
+                        <span class="pf-chip pf-px pf-px--r" id="pf-px-r">12</span>
+                        <span class="pf-labelbox"><span class="pf-labelbox__text">Label × 20</span></span>
                       </div>
-                      <div class="insp-color-group">Selection colors
-                        <div class="insp-row"><span class="var" id="po-ctl-var"></span><span class="val" id="po-ctl-val"></span><span class="swatch" id="po-ctl-swatch"></span></div>
+                    </div>
+                  </div>
+                  <div id="po-tokens" class="po-code">
+                    <div class="insp-section">
+                      <div class="insp-title insp-title--layout">Layout<span class="insp-title__css">CSS</span></div>
+                      <div class="insp-rows">
+                        <div class="insp-row"><span class="k">padding:</span><span class="v" id="po-pad-v"></span></div>
+                        <div class="insp-row"><span class="k">gap:</span><span class="v" id="po-gap-v"></span></div>
+                      </div>
+                    </div>
+                    <div class="insp-section">
+                      <div class="insp-title insp-title--bordered">Style</div>
+                      <div class="insp-rows">
+                        <div class="insp-row"><span class="k">border-radius:</span><span class="v" id="po-r-v"></span></div>
+                        <div class="insp-row"><span class="k">background:</span><span class="v" id="po-bg-v"></span></div>
+                        <div class="insp-row"><span class="k">box-shadow:</span><span class="v" id="po-sh-v"></span></div>
+                      </div>
+                    </div>
+                    <div class="insp-section">
+                      <div class="insp-title insp-title--bordered">Colors</div>
+                      <div class="insp-sub">Background colors</div>
+                      <div class="insp-swatch">
+                        <span class="sw" id="po-cbg-swatch"></span>
+                        <span class="sw-info"><span class="t" id="po-cbg-var"></span><span class="hex" id="po-cbg-val"></span></span>
+                      </div>
+                      <div class="insp-sub">Selection colors</div>
+                      <div class="insp-swatch">
+                        <span class="sw" id="po-ctl-swatch"></span>
+                        <span class="sw-info"><span class="t" id="po-ctl-var"></span><span class="hex" id="po-ctl-val"></span></span>
                       </div>
                     </div>
                   </div>
@@ -1078,69 +1107,91 @@ buildTokenTables(Object.keys(BTN.styles)[0], 'filled'); // стартовая т
 /* ============================================================
    Поведение: loader
    ============================================================ */
-// чип «Свойства компонента» → выпадающее окно с инспектором токенов
+// чип «Свойства компонента» → панель-инспектор внизу (как в оригинале: превью сжимается до 150px)
+function escVar(t) { return t.replace(/var/g, '<span class="fn">var</span>'); }
+
 function fillPopover() {
   var style = selVal('style');
   var type = selVal('type');
   var state = selVal('state');
   var size = selVal('size');
-  var d = { style: style, type: type, state: state, size: size };
   var colors = BTN.colors[style][type][state];
   var vars = BTN.vars(style, type, state);
   var sz = BTN.sizes[size];
-  document.getElementById('po-label').textContent = 'button / ' + style + ' / ' + type + ' / ' + state;
-  // мини-кнопка
-  var mini = document.getElementById('po-mini-btn');
-  mini.style.background = colors.bg;
-  mini.style.border = (colors.border && colors.border !== 'transparent') ? '1px solid ' + colors.border : '1px solid transparent';
-  mini.style.color = colors.label;
-  // Layout
   var padVar = size === 'm' ? '--ds-space-3x' : size === 's' ? '--ds-space-2x' : '--ds-space-1-5x';
   var padVal = size === 'm' ? '12px' : size === 's' ? '8px' : '6px';
-  document.getElementById('po-pad-var').textContent = 'var(' + padVar + ') var(--ds-space-2x)';
-  document.getElementById('po-pad-val').textContent = padVal + ' / 8px';
-  document.getElementById('po-gap-var').textContent = 'var(--ds-space-2x)';
-  document.getElementById('po-gap-val').textContent = '8px';
+  var pyVal = size === 'm' ? '8px' : '4px';
+  var gapVar = '--ds-space-2x';
+  var gapVal = size === 'm' ? '8px' : '4px';
+  var bw = type === 'outlined' ? '1' : '0';
+
+  document.getElementById('po-label').textContent = 'button / ' + style + ' / ' + type + ' / ' + state;
+
+  // фигура
+  document.querySelectorAll('.pf-r').forEach(function (c) { c.textContent = '8'; });
+  document.querySelectorAll('.pf-bw').forEach(function (c) { c.textContent = bw; });
+  document.getElementById('pf-py-t').textContent = pyVal.replace('px', '');
+  document.getElementById('pf-py-b').textContent = pyVal.replace('px', '');
+  document.getElementById('pf-px-l').textContent = padVal.replace('px', '');
+  document.getElementById('pf-px-r').textContent = padVal.replace('px', '');
+
+  // Layout
+  document.getElementById('po-pad-v').innerHTML =
+    escVar('var(' + padVar + ', ' + padVal + ') var(--ds-space-2x, 8px);');
+  document.getElementById('po-gap-v').innerHTML =
+    escVar('var(' + gapVar + ', ' + gapVal + ');');
+
   // Style
-  document.getElementById('po-r-var').textContent = 'var(--ds-radius-2x)';
-  document.getElementById('po-r-val').textContent = '8px';
-  document.getElementById('po-bg-var').textContent = vars.bg;
-  document.getElementById('po-bg-val').textContent = colors.bg;
-  document.getElementById('po-bg-swatch').style.setProperty('--swatch', colors.bg);
+  document.getElementById('po-r-v').innerHTML = escVar('var(--ds-radius-2x, 8px);');
+  document.getElementById('po-bg-v').innerHTML =
+    '<span class="fn">var</span>(' + vars.bg + ', <span class="dot" style="background:' + colors.bg + '"></span> ' + colors.bg + ');';
+  document.getElementById('po-sh-v').textContent = 'none;';
+
   // Colors
   document.getElementById('po-cbg-var').textContent = vars.bg;
   document.getElementById('po-cbg-val').textContent = colors.bg;
-  document.getElementById('po-cbg-swatch').style.setProperty('--swatch', colors.bg);
+  document.getElementById('po-cbg-swatch').style.background = colors.bg;
   document.getElementById('po-ctl-var').textContent = vars.label;
   document.getElementById('po-ctl-val').textContent = colors.label;
-  document.getElementById('po-ctl-swatch').style.setProperty('--swatch', colors.label);
+  document.getElementById('po-ctl-swatch').style.background = colors.label;
+
   // CSS
-  document.getElementById('po-css').textContent =
-    '.ds-btn--' + size + '.ds-btn--' + style + '.ds-btn--' + type + ' {\n' +
-    '  height: var(' + { xs: '--ds-size-6x', s: '--ds-size-7x', m: '--ds-size-9x' }[size] + ', ' + sz.height + 'px);\n' +
-    '  padding: var(' + padVar + ', ' + padVal + ') var(--ds-space-2x, 8px);\n' +
-    '  gap: var(--ds-space-2x, 8px);\n' +
-    '  border-radius: var(--ds-radius-2x, 8px);\n' +
-    '  background: var(' + vars.bg + ', ' + colors.bg + ');\n' +
-    '  color: var(' + vars.label + ', ' + colors.label + ');\n' +
-    '  box-shadow: none;\n' +
-    '}';
+  var css = 'display: inline-flex;\n' +
+    'padding: var(' + padVar + ', ' + padVal + ') var(--ds-space-2x, 8px);\n' +
+    'justify-content: center;\n' +
+    'align-items: center;\n' +
+    'gap: var(' + gapVar + ', ' + gapVal + ');\n' +
+    'border-radius: var(--ds-radius-2x, 8px);\n' +
+    'background: var(' + vars.bg + ', ' + colors.bg + ');\n' +
+    (type === 'outlined' ? 'border: 1px solid var(' + vars.border + ', ' + colors.border + ');\n' : '') +
+    'box-shadow: none;\n' +
+    'color: var(' + vars.label + ', ' + colors.label + ');';
+  document.getElementById('po-css').textContent = css;
+}
+
+function setPreviewMode(open) {
+  var stage = document.getElementById('stage');
+  var pop = document.getElementById('props-popover');
+  stage.classList.toggle('is-collapsed', open);
+  pop.classList.toggle('is-open', open);
 }
 
 document.getElementById('props-chip').addEventListener('click', function (e) {
   e.stopPropagation();
   var pop = document.getElementById('props-popover');
-  var isOpen = pop.classList.contains('is-open');
-  if (!isOpen) fillPopover();
-  pop.classList.toggle('is-open');
+  if (!pop.classList.contains('is-open')) fillPopover();
+  setPreviewMode(true);
+});
+document.getElementById('po-back').addEventListener('click', function () {
+  setPreviewMode(false);
 });
 document.addEventListener('click', function (e) {
   var pop = document.getElementById('props-popover');
-  if (pop.classList.contains('is-open') && !pop.contains(e.target)) {
-    pop.classList.remove('is-open');
+  if (pop.classList.contains('is-open') && !pop.contains(e.target) && !e.target.closest('#props-chip')) {
+    setPreviewMode(false);
   }
 });
-// сегменты Tokens / CSS в popover
+// сегменты Tokens / CSS
 document.querySelectorAll('#props-popover .po-seg button').forEach(function (btn) {
   btn.addEventListener('click', function () {
     document.querySelectorAll('#props-popover .po-seg button').forEach(function (b) { b.classList.remove('is-active'); });
@@ -1186,6 +1237,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=11"></script>
+<script src="sidebar.js?v=12"></script>
 </body>
 </html>
