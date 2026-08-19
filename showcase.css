@@ -374,6 +374,74 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .props-chip:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); }
 .props-chip .material-icons { font-size: 16px; color: #94a3b8; }
 
+/* Выпадающее окно «Свойства компонента» (popover с инспектором токенов) */
+.props-popover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  max-width: calc(100% - 32px);
+  max-height: calc(100% - 48px);
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+  padding: 16px;
+  z-index: 30;
+  display: none;
+  text-align: left;
+}
+.props-popover.is-open { display: block; }
+.po-head { display: flex; justify-content: flex-end; margin-bottom: 8px; }
+.po-seg {
+  display: flex;
+  gap: 2px;
+  background: var(--muted-2);
+  border-radius: 8px;
+  padding: 2px;
+}
+.po-seg button {
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted-fg);
+  cursor: pointer;
+}
+.po-seg button.is-active { background: #ffffff; color: var(--text); box-shadow: 0 1px 2px rgba(0,0,0,0.08); }
+.po-label {
+  font-size: 10px;
+  color: var(--muted-fg);
+  font-family: 'Roboto Mono', ui-monospace, Consolas, monospace;
+  margin-bottom: 10px;
+}
+.po-figure {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px 40px 30px;
+  background: var(--muted);
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.po-css {
+  font-family: 'Roboto Mono', ui-monospace, Consolas, monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--text);
+  background: var(--muted);
+  border-radius: 8px;
+  padding: 12px;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
 /* Панель свойств справа 350px с border-l (как инспектор Figma) */
 .props-panel {
   display: flex;
