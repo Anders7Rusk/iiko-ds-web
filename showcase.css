@@ -870,10 +870,9 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   display: flex;
   align-items: center;
 }
-/* колонка размера — не сжимается ниже 180px, иначе горизонтальный скролл */
+/* колонка размера — по контенту (кнопки не сжимаются), при нехватке — горизонтальный скролл */
 .matrix-size {
-  flex: 1 1 0;
-  min-width: 180px;
+  flex: 0 0 auto;
 }
 .matrix-size__title {
   font-size: 16px;
