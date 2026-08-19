@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=12">
-<link rel="stylesheet" href="components/button.css?v=12">
-<link rel="stylesheet" href="components/badge.css?v=12">
-<link rel="stylesheet" href="showcase.css?v=12">
+<link rel="stylesheet" href="tokens.css?v=13">
+<link rel="stylesheet" href="components/button.css?v=13">
+<link rel="stylesheet" href="components/badge.css?v=13">
+<link rel="stylesheet" href="showcase.css?v=13">
 </head>
 <body>
 
@@ -786,6 +786,10 @@ function renderStage() {
   code += '</button>';
   document.getElementById('code-interactive').textContent = code;
   document.getElementById('stage-caption').textContent = 'Interactive Preview';
+
+  // инспектор «Свойства компонента» должен отражать текущие настройки (Size/Style/Type/State)
+  var pop = document.getElementById('props-popover');
+  if (pop.classList.contains('is-open')) fillPopover();
 }
 ['ctl-icon-left','ctl-icon-right','ctl-text','ctl-textval','ctl-dark'].forEach(function (id) {
   var el = document.getElementById(id);
@@ -1120,8 +1124,9 @@ function fillPopover() {
   var sz = BTN.sizes[size];
   var padVar = size === 'm' ? '--ds-space-3x' : size === 's' ? '--ds-space-2x' : '--ds-space-1-5x';
   var padVal = size === 'm' ? '12px' : size === 's' ? '8px' : '6px';
+  var pyVar = size === 'm' ? '--ds-space-2x' : '--ds-space-1x';
   var pyVal = size === 'm' ? '8px' : '4px';
-  var gapVar = '--ds-space-2x';
+  var gapVar = size === 'm' ? '--ds-space-2x' : '--ds-space-1x';
   var gapVal = size === 'm' ? '8px' : '4px';
   var bw = type === 'outlined' ? '1' : '0';
 
@@ -1137,7 +1142,7 @@ function fillPopover() {
 
   // Layout
   document.getElementById('po-pad-v').innerHTML =
-    escVar('var(' + padVar + ', ' + padVal + ') var(--ds-space-2x, 8px);');
+    escVar('var(' + pyVar + ', ' + pyVal + ') var(' + padVar + ', ' + padVal + ');');
   document.getElementById('po-gap-v').innerHTML =
     escVar('var(' + gapVar + ', ' + gapVal + ');');
 
@@ -1157,7 +1162,7 @@ function fillPopover() {
 
   // CSS
   var css = 'display: inline-flex;\n' +
-    'padding: var(' + padVar + ', ' + padVal + ') var(--ds-space-2x, 8px);\n' +
+    'padding: var(' + pyVar + ', ' + pyVal + ') var(' + padVar + ', ' + padVal + ');\n' +
     'justify-content: center;\n' +
     'align-items: center;\n' +
     'gap: var(' + gapVar + ', ' + gapVal + ');\n' +
@@ -1237,6 +1242,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=12"></script>
+<script src="sidebar.js?v=13"></script>
 </body>
 </html>
