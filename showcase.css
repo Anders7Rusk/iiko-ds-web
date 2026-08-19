@@ -1442,7 +1442,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 }
 /* инспектор в «Вариантах» (правая колонка матрицы) — фиксируется при прокрутке ВМЕСТЕ с заголовком */
 .matrix-insp { min-width: 0; position: sticky; top: 24px; }
-.component-code--inspector { margin: 0; }
+.component-code--inspector { margin: 8px 0 0; }
 /* в узкой панели путь не влезает рядом с заголовком — опускаем ниже с отступом */
 .component-code--inspector .po-title-row {
   flex-direction: column;
