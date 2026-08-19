@@ -1442,6 +1442,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 }
 /* инспектор в «Вариантах» (правая колонка матрицы) — без внешних отступов */
 .component-code--inspector { margin: 0; }
+.component-code--inspector .po-label { font-size: 11px; white-space: nowrap; }
 .cc-head {
   display: flex;
   align-items: center;
