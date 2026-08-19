@@ -1395,6 +1395,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   font-weight: 500;
   color: #6b7280;
   cursor: pointer;
+  text-transform: uppercase;
   transition: background 0.15s ease, color 0.15s ease;
 }
 .cc-tabs button:hover { color: #111827; }
