@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Badge · iiko DS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components/badge.css">
+<link rel="stylesheet" href="components/button.css">
+<link rel="stylesheet" href="showcase.css">
+</head>
+<body>
+
+<header class="showcase-header">
+  <div class="brand">
+    <h1>iiko DS · Компоненты в коде</h1>
+    <span class="sub">v0.1</span>
+  </div>
+  <nav class="showcase-nav">
+    <a href="index.html">Каталог</a>
+    <a href="button.html">Button</a>
+    <a href="input.html">Input</a>
+    <a href="checkbox.html">Checkbox</a>
+    <a href="radio.html">Radio</a>
+    <a href="badge.html" class="active">Badge</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="page-head">
+    <p class="crumbs">iiko DS → Badge</p>
+    <h2>Badge</h2>
+    <p class="desc">Счётчик (19×18, полное скругление) и точка (8×8). Стили: Accent / Positive / Warning / Negative.</p>
+  </div>
+
+  <!-- ===== Badge ===== -->
+  <section>
+    <h2>Badge</h2>
+    <p class="desc">В Figma — страница «Badge», компонент Badge (Style × Type).</p>
+
+    <div class="card">
+      <h3>Counter · 19×18</h3>
+      <div class="row">
+        <span class="row-label">Accent</span>
+        <span class="ds-badge ds-badge--counter ds-badge--accent">7</span>
+        <span class="ds-badge ds-badge--counter ds-badge--accent">99</span>
+      </div>
+      <div class="row">
+        <span class="row-label">Positive</span>
+        <span class="ds-badge ds-badge--counter ds-badge--positive">7</span>
+      </div>
+      <div class="row">
+        <span class="row-label">Warning</span>
+        <span class="ds-badge ds-badge--counter ds-badge--warning">7</span>
+      </div>
+      <div class="row">
+        <span class="row-label">Negative</span>
+        <span class="ds-badge ds-badge--counter ds-badge--negative">7</span>
+      </div>
+      <h3 style="margin-top:24px">Point · 8×8</h3>
+      <div class="row">
+        <span class="row-label">Стили</span>
+        <span class="ds-badge ds-badge--point ds-badge--accent"></span>
+        <span class="ds-badge ds-badge--point ds-badge--positive"></span>
+        <span class="ds-badge ds-badge--point ds-badge--warning"></span>
+        <span class="ds-badge ds-badge--point ds-badge--negative"></span>
+      </div>
+      <div class="code-block">
+        <button class="copy-btn" data-copy="code-badge">Копировать</button>
+        <pre id="code-badge"><code>&lt;span class="ds-badge ds-badge--counter ds-badge--accent"&gt;7&lt;/span&gt;
+&lt;span class="ds-badge ds-badge--point ds-badge--negative"&gt;&lt;/span&gt;
+
+&lt;!-- типы: --counter / --point
+     стили: --accent / --positive / --warning / --negative --&gt;</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Примеры ===== -->
+  <section>
+    <h2>Примеры использования</h2>
+    <p class="desc">Как в Figma: badge на кнопках и иконках (страница Badge, фрейм «Badge examples»).</p>
+
+    <div class="card">
+      <div class="row">
+        <span class="row-label">Кнопка</span>
+        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" style="position:relative">
+          <span class="ds-btn__label">Button</span>
+          <span class="ds-badge ds-badge--counter ds-badge--negative" style="position:absolute; top:-9px; right:-9px">7</span>
+        </button>
+        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" style="position:relative">
+          <span class="ds-btn__label">Button</span>
+          <span class="ds-badge ds-badge--counter ds-badge--accent" style="position:absolute; top:-9px; right:-9px">7</span>
+        </button>
+      </div>
+      <div class="row">
+        <span class="row-label">Кнопка-иконка</span>
+        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" style="position:relative; padding:8px">
+          <span class="ds-btn__icon material-icons" aria-hidden="true">notifications</span>
+          <span class="ds-badge ds-badge--counter ds-badge--negative" style="position:absolute; top:-9px; right:-9px">7</span>
+        </button>
+        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" style="position:relative; padding:8px">
+          <span class="ds-btn__icon material-icons" aria-hidden="true">shopping_cart</span>
+          <span class="ds-badge ds-badge--counter ds-badge--accent" style="position:absolute; top:-9px; right:-9px">3</span>
+        </button>
+      </div>
+      <div class="row">
+        <span class="row-label">Точка</span>
+        <span style="position:relative; display:inline-flex">
+          <span class="material-icons" style="font-size:20px; color:#616161">notifications</span>
+          <span class="ds-badge ds-badge--point ds-badge--negative" style="position:absolute; top:0; right:0"></span>
+        </span>
+        <span style="position:relative; display:inline-flex">
+          <span class="material-icons" style="font-size:20px; color:#616161">favorite</span>
+          <span class="ds-badge ds-badge--point ds-badge--accent" style="position:absolute; top:0; right:0"></span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  document.querySelectorAll('.copy-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = document.getElementById(btn.dataset.copy).textContent.trim();
+      navigator.clipboard.writeText(text).then(function () {
+        btn.textContent = 'Скопировано ✓';
+        btn.classList.add('copied');
+        setTimeout(function () { btn.textContent = 'Копировать'; btn.classList.remove('copied'); }, 1500);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
