@@ -59,6 +59,10 @@
     }
   });
   html += '</div>';
+  html += '<div class="sidebar__footer">';
+  html += '<a href="guides/guide-components.md">📘 Гайд: компоненты</a>';
+  html += '<a href="guides/guide-prototyping.md">🧩 Гайд: прототипы</a>';
+  html += '</div>';
 
   var host = document.getElementById('sidebar');
   if (host) host.innerHTML = html;
