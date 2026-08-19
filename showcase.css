@@ -852,6 +852,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   gap: 24px;
   align-items: flex-start;
   overflow-x: auto;
+  padding-bottom: 16px; /* отступ между контентом и полосой скролла */
 }
 /* колонка типов — один раз слева для всех размеров */
 .matrix-types {
