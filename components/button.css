@@ -58,6 +58,17 @@
 }
 .ds-btn--m .ds-btn__icon { font-size: 20px; }
 
+/* ── Группа кнопок (Button group из Figma) ───────────────── */
+
+.ds-btn-group {
+  display: flex;
+}
+.ds-btn-group--horizontal { flex-direction: row; gap: var(--ds-space-2x); }   /* 8px */
+.ds-btn-group--vertical   { flex-direction: column; gap: var(--ds-space-2x); }
+.ds-btn-group--margins {
+  padding: 8px 16px;
+}
+
 /* ── Иконки ──────────────────────────────────────────────── */
 
 .ds-btn__icon {
