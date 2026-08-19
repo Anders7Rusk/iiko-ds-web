@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=57">
-<link rel="stylesheet" href="components/button.css?v=57">
-<link rel="stylesheet" href="components/badge.css?v=57">
-<link rel="stylesheet" href="showcase.css?v=57">
+<link rel="stylesheet" href="tokens.css?v=58">
+<link rel="stylesheet" href="components/button.css?v=58">
+<link rel="stylesheet" href="components/badge.css?v=58">
+<link rel="stylesheet" href="showcase.css?v=58">
 </head>
 <body>
 
@@ -317,6 +317,7 @@
                   </div>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </section>
@@ -1287,14 +1288,14 @@ function updateCodePanels() {
   document.getElementById('cc-css').innerHTML = renderCss(lines);
 }
 
-// вкладки HTML | CSS | Tokens
+// вкладки HTML | CSS | Tokens (только блок «Компонента», не «Вариантов»)
 var ccActive = 'html';
-document.querySelectorAll('.cc-tabs button').forEach(function (btn) {
+document.querySelectorAll('#component-code .cc-tabs button').forEach(function (btn) {
   btn.addEventListener('click', function () {
-    document.querySelectorAll('.cc-tabs button').forEach(function (b) { b.classList.remove('is-active'); });
+    document.querySelectorAll('#component-code .cc-tabs button').forEach(function (b) { b.classList.remove('is-active'); });
     btn.classList.add('is-active');
     ccActive = btn.dataset.cc;
-    document.querySelectorAll('.cc-panel').forEach(function (p) { p.classList.remove('is-active'); });
+    document.querySelectorAll('#component-code .cc-panel').forEach(function (p) { p.classList.remove('is-active'); });
     document.getElementById('cc-' + ccActive).classList.add('is-active');
     // иконка копирования — только для HTML/CSS (у Tokens кода для копирования нет)
     document.getElementById('cc-copy').style.display = (ccActive === 'tokens') ? 'none' : 'inline-flex';
@@ -1367,6 +1368,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=57"></script>
+<script src="sidebar.js?v=58"></script>
 </body>
 </html>
