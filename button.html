@@ -401,40 +401,52 @@
 
         <section>
           <div class="card behavior-section">
-            <h4>Hover (Наведение)</h4>
-            <p>Состояние Hover показывает, что элемент интерактивен. Плавный переход (transition) важен для ощущения качества интерфейса. Обычно длится 150–200ms.</p>
-            <ul>
-              <li>Изменяется фон (становится темнее/светлее).</li>
-              <li>Курсор меняется на pointer.</li>
-            </ul>
-            <p class="demo-caption" style="margin-top:12px">Animation Demo</p>
-            <div class="demo-row">
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Hover Me</span></button>
-              <span class="demo-caption">hover</span>
+            <div class="behavior-grid">
+              <div>
+                <h4>Hover (Наведение)</h4>
+                <p>Состояние Hover показывает, что элемент интерактивен. Плавный переход (transition) важен для ощущения качества интерфейса. Обычно длится 150–200ms.</p>
+                <ul>
+                  <li>Изменяется фон (становится темнее/светлее).</li>
+                  <li>Курсор меняется на pointer.</li>
+                </ul>
+              </div>
+              <div class="demo-box">
+                <span class="demo-caption">Animation Demo</span>
+                <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Hover Me</span></button>
+                <span class="demo-caption">default</span>
+              </div>
             </div>
           </div>
 
           <div class="card behavior-section">
-            <h4>Press / Active (Нажатие)</h4>
-            <p>Момент клика. Даёт немедленную тактильную обратную связь. Переход в это состояние должен быть мгновенным или очень быстрым (50–100ms).</p>
-            <ul>
-              <li>Цвет становится ещё более насыщенным.</li>
-              <li>Может меняться тень или масштаб (scale).</li>
-            </ul>
-            <p class="demo-caption" style="margin-top:12px">Animation Demo</p>
-            <div class="demo-row">
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Click Me</span></button>
-              <span class="demo-caption">press</span>
+            <div class="behavior-grid">
+              <div>
+                <h4>Press / Active (Нажатие)</h4>
+                <p>Момент клика. Даёт немедленную тактильную обратную связь. Переход в это состояние должен быть мгновенным или очень быстрым (50–100ms).</p>
+                <ul>
+                  <li>Цвет становится ещё более насыщенным.</li>
+                  <li>Может меняться тень или масштаб (scale).</li>
+                </ul>
+              </div>
+              <div class="demo-box">
+                <span class="demo-caption">Animation Demo</span>
+                <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Click Me</span></button>
+                <span class="demo-caption">default</span>
+              </div>
             </div>
           </div>
 
           <div class="card behavior-section">
-            <h4>Focus (Фокус)</h4>
-            <p>Визуальный маркер для навигации с клавиатуры (Tab). Никогда не убирайте outline без замены на другой стиль фокуса.</p>
-            <div class="demo-row">
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" id="demo-focus"><span class="ds-btn__label">Focused Button</span></button>
+            <div class="behavior-grid">
+              <div>
+                <h4>Focus (Фокус)</h4>
+                <p>Визуальный маркер для навигации с клавиатуры (Tab). Никогда не убирайте outline без замены на другой стиль фокуса.</p>
+              </div>
+              <div class="demo-box">
+                <span class="demo-caption">Focus ring styling</span>
+                <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" id="demo-focus"><span class="ds-btn__label">Focused Button</span></button>
+              </div>
             </div>
-            <p class="demo-caption" style="margin-top:8px">Focus ring styling: outline 2px Accent/300 (#A8C9FF), offset 2px</p>
           </div>
 
           <div class="card behavior-section">
