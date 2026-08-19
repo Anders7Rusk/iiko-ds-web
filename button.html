@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=47">
-<link rel="stylesheet" href="components/button.css?v=47">
-<link rel="stylesheet" href="components/badge.css?v=47">
-<link rel="stylesheet" href="showcase.css?v=47">
+<link rel="stylesheet" href="tokens.css?v=48">
+<link rel="stylesheet" href="components/button.css?v=48">
+<link rel="stylesheet" href="components/badge.css?v=48">
+<link rel="stylesheet" href="showcase.css?v=48">
 </head>
 <body>
 
@@ -896,9 +896,13 @@ function matrixBtn(style, type, size, state) {
   var cls = 'ds-btn ds-btn--' + size + ' ds-btn--' + style + ' ds-btn--' + type;
   var styleAttr = 'background:' + colors.bg + ';border-color:' + colors.border + ';color:' + colors.label + ';';
   var dis = state === 'disable' ? ' disabled' : '';
+  // как в Figma: Element left = add, Element right = add
   return '<button class="' + cls + ' matrix-btn" data-style="' + style + '" data-type="' + type +
          '" data-size="' + size + '" data-state="' + state + '" style="' + styleAttr + '"' + dis + '>' +
-         '<span class="ds-btn__label">Button</span></button>';
+         '<span class="ds-btn__icon material-icons" aria-hidden="true">add</span>' +
+         '<span class="ds-btn__label">Button</span>' +
+         '<span class="ds-btn__icon material-icons" aria-hidden="true">add</span>' +
+         '</button>';
 }
 
 (function buildMatrix() {
@@ -1359,6 +1363,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=47"></script>
+<script src="sidebar.js?v=48"></script>
 </body>
 </html>
