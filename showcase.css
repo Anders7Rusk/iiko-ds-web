@@ -1497,7 +1497,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .cc-panel { display: none; }
 .cc-panel.is-active { display: block; }
 /* HTML и CSS панели: код с номерами строк */
-#cc-html, #cc-css {
+#cc-html, #cc-css, #vc-html, #vc-css {
   padding: 16px;
   font-family: 'Roboto Mono', ui-monospace, Consolas, monospace;
   font-size: 12px;
