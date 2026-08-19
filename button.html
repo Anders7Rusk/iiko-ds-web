@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=54">
-<link rel="stylesheet" href="components/button.css?v=54">
-<link rel="stylesheet" href="components/badge.css?v=54">
-<link rel="stylesheet" href="showcase.css?v=54">
+<link rel="stylesheet" href="tokens.css?v=55">
+<link rel="stylesheet" href="components/button.css?v=55">
+<link rel="stylesheet" href="components/badge.css?v=55">
+<link rel="stylesheet" href="showcase.css?v=55">
 </head>
 <body>
 
@@ -245,7 +245,7 @@
                   <div class="cc-tabs" role="tablist">
                     <button class="is-active" data-vc="html" role="tab">HTML</button>
                     <button data-vc="css" role="tab">CSS</button>
-                    <button data-vc="tokens" role="tab">TOKENS</button>
+                    <button data-vc="tokens" role="tab">Tokens</button>
                   </div>
                   <button class="cc-copy" id="vc-copy" type="button" title="Copy code" aria-label="Copy code">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
@@ -1049,10 +1049,12 @@ function updateVarInspector(d) {
   lastVcCss = lines;
   document.getElementById('vc-css').innerHTML = renderCss(lines);
 
-  // HTML
+  // HTML — как в «Компоненте» (Element left/right = add, как в Figma)
   var htmlCode = '<button class="ds-btn ds-btn--' + size + ' ds-btn--' + style + ' ds-btn--' + type + '"' +
                  (state === 'disable' ? ' disabled' : '') + '>\n' +
+                 '  <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>\n' +
                  '  <span class="ds-btn__label">Button</span>\n' +
+                 '  <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>\n' +
                  '</button>';
   lastVcHtml = htmlCode.split('\n');
   document.getElementById('vc-html').innerHTML = renderHtml(htmlCode.split('\n'));
@@ -1363,6 +1365,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=54"></script>
+<script src="sidebar.js?v=55"></script>
 </body>
 </html>
