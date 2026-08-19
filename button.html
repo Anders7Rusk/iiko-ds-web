@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=39">
-<link rel="stylesheet" href="components/button.css?v=39">
-<link rel="stylesheet" href="components/badge.css?v=39">
-<link rel="stylesheet" href="showcase.css?v=39">
+<link rel="stylesheet" href="tokens.css?v=40">
+<link rel="stylesheet" href="components/button.css?v=40">
+<link rel="stylesheet" href="components/badge.css?v=40">
+<link rel="stylesheet" href="showcase.css?v=40">
 </head>
 <body>
 
@@ -908,22 +908,24 @@ function matrixBtn(style, type, size, state) {
   ['neutral', 'accent', 'positive', 'warning', 'negative', 'disable'].forEach(function (style) {
     html += '<div class="matrix-block">';
     html += '<div class="matrix-title">' + BTN.styles[style].label + '</div>';
-    html += '<div class="matrix-grid">';
-    html += '<span></span>';
-    TYPES.forEach(function (t) { html += '<span class="matrix-head">' + t + '</span>'; });
     SIZES.forEach(function (size) {
-      // подпись размера — отдельная строка (как в оригинале: заголовок над состояниями)
-      html += '<span class="matrix-rowlabel">' + BTN.sizes[size].label + '</span>';
-      html += '<span></span><span></span><span></span>';
-      // подписи состояний: default / hover / press
-      STATES.forEach(function (st) {
-        html += '<span class="matrix-rowlabel" style="font-size:10px;color:#c4c4cc">' + st + '</span>';
-        TYPES.forEach(function (t) {
+      // заголовок блока — размер (M / S / XS)
+      html += '<div class="matrix-size">';
+      html += '<div class="matrix-size__title">' + BTN.sizes[size].label + '</div>';
+      html += '<div class="matrix-grid">';
+      // шапка: угол + состояния (сверху)
+      html += '<span></span>';
+      STATES.forEach(function (st) { html += '<span class="matrix-head">' + st + '</span>'; });
+      // строки: типы (слева) × состояния
+      TYPES.forEach(function (t) {
+        html += '<span class="matrix-rowlabel">' + t + '</span>';
+        STATES.forEach(function (st) {
           html += '<span class="matrix-cell">' + matrixBtn(style, t, size, st) + '</span>';
         });
       });
+      html += '</div></div>';
     });
-    html += '</div></div>';
+    html += '</div>';
   });
 
   // Loader
@@ -1344,6 +1346,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=39"></script>
+<script src="sidebar.js?v=40"></script>
 </body>
 </html>
