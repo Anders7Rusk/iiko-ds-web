@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=19">
-<link rel="stylesheet" href="components/button.css?v=19">
-<link rel="stylesheet" href="components/badge.css?v=19">
-<link rel="stylesheet" href="showcase.css?v=19">
+<link rel="stylesheet" href="tokens.css?v=20">
+<link rel="stylesheet" href="components/button.css?v=20">
+<link rel="stylesheet" href="components/badge.css?v=20">
+<link rel="stylesheet" href="showcase.css?v=20">
 </head>
 <body>
 
@@ -1215,7 +1215,10 @@ document.getElementById('po-back').addEventListener('click', function () {
 });
 document.addEventListener('click', function (e) {
   var pop = document.getElementById('props-popover');
-  if (pop.classList.contains('is-open') && !pop.contains(e.target) && !e.target.closest('#props-chip')) {
+  var wrap = document.querySelector('.interactive-wrap');
+  // закрывать инспектор только при клике ВНЕ карточки конструктора;
+  // клики по настройкам справа (Size/Style/Type/State/свитчи) НЕ закрывают
+  if (pop.classList.contains('is-open') && wrap && !wrap.contains(e.target)) {
     setPreviewMode(false);
   }
 });
@@ -1300,6 +1303,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=19"></script>
+<script src="sidebar.js?v=20"></script>
 </body>
 </html>
