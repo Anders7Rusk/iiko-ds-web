@@ -822,7 +822,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 
 /* ── Матрица вариантов ───────────────────────────────────── */
 
-.matrix-block { margin-bottom: 40px; }
+.matrix-block { margin: 24px 0 40px; }
 /* заголовок блока с нижней линией (как в оригинале: border-b slate-200, pb 8) */
 .matrix-headwrap {
   border-bottom: 1px solid #e2e8f0;
