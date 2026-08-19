@@ -156,11 +156,12 @@
                   </div>
                 </div>
                 <div class="inspector__props">
-                  <span class="mini-btn" id="insp-mini-btn"><span class="mini-btn__label">Button</span></span>
-                  <div class="prop-chips">
-                    <button class="prop-chip" data-prop="border">Border</button>
-                    <button class="prop-chip" data-prop="padding">Padding</button>
-                    <button class="prop-chip" data-prop="label">Label</button>
+                  <div class="prop-figure">
+                    <span class="pf-label pf-top">8</span>
+                    <span class="pf-label pf-left">12</span>
+                    <span class="mini-btn" id="insp-mini-btn"><span class="mini-btn__label">Label</span></span>
+                    <span class="pf-label pf-right">12</span>
+                    <span class="pf-label pf-bottom">Label x 20</span>
                   </div>
                 </div>
                 <div class="inspector__body">
@@ -178,9 +179,12 @@
                       <div class="insp-row"><span class="prop">box-shadow</span><span class="var">—</span><span class="val">none</span></div>
                     </div>
                     <div class="insp-section"><h4>Colors</h4>
-                      <div class="insp-row"><span class="prop">background</span><span class="var" id="ins-cbg-var"></span><span class="val" id="ins-cbg-val"></span><span class="swatch" id="ins-cbg-swatch"></span></div>
-                      <div class="insp-row"><span class="prop">border</span><span class="var" id="ins-cbd-var"></span><span class="val" id="ins-cbd-val"></span><span class="swatch" id="ins-cbd-swatch"></span></div>
-                      <div class="insp-row"><span class="prop">text</span><span class="var" id="ins-ctl-var"></span><span class="val" id="ins-ctl-val"></span><span class="swatch" id="ins-ctl-swatch"></span></div>
+                      <div class="insp-color-group">Background colors
+                        <div class="insp-row"><span class="var" id="ins-cbg-var"></span><span class="val" id="ins-cbg-val"></span><span class="swatch" id="ins-cbg-swatch"></span></div>
+                      </div>
+                      <div class="insp-color-group">Selection colors
+                        <div class="insp-row"><span class="var" id="ins-ctl-var"></span><span class="val" id="ins-ctl-val"></span><span class="swatch" id="ins-ctl-swatch"></span></div>
+                      </div>
                     </div>
                   </div>
 
@@ -795,7 +799,6 @@ function fillInspector(d) {
   setRowColor('ins-bg-var', 'ins-bg-val', 'ins-bg-swatch', vars.bg, colors.bg);
   // Colors
   setRowColor('ins-cbg-var', 'ins-cbg-val', 'ins-cbg-swatch', vars.bg, colors.bg);
-  setRowColor('ins-cbd-var', 'ins-cbd-val', 'ins-cbd-swatch', vars.border, colors.border);
   setRowColor('ins-ctl-var', 'ins-ctl-val', 'ins-ctl-swatch', vars.label, colors.label);
 
   // CSS
@@ -850,21 +853,6 @@ document.querySelectorAll('.inspector__seg button').forEach(function (btn) {
     var isCss = btn.dataset.view === 'css';
     document.getElementById('inspector-tokens').style.display = isCss ? 'none' : 'block';
     document.getElementById('inspector-css').style.display = isCss ? 'block' : 'none';
-  });
-});
-
-// чипы свойств (Border / Padding / Label) — подсветка части кнопки
-document.querySelectorAll('.prop-chip').forEach(function (chip) {
-  chip.addEventListener('click', function () {
-    var prop = chip.dataset.prop;
-    var wasActive = chip.classList.contains('is-active');
-    document.querySelectorAll('.prop-chip').forEach(function (c) { c.classList.remove('is-active'); });
-    var mini = document.getElementById('insp-mini-btn');
-    mini.classList.remove('hl-border', 'hl-padding', 'hl-label');
-    if (!wasActive) {
-      chip.classList.add('is-active');
-      mini.classList.add('hl-' + prop);
-    }
   });
 });
 
