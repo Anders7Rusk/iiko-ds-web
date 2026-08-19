@@ -25,7 +25,6 @@
 
       <div class="page-head">
         <h1>Button</h1>
-        <p class="desc">Кнопка — фундаментальный компонент интерфейса. В Figma — страница «Button», компонент Button (Size × Style × Type × State).</p>
       </div>
 
       <!-- ===== Вкладки страницы ===== -->
@@ -82,8 +81,8 @@
                   <div class="control-group">
                     <label class="control-label" for="ctl-style">Style</label>
                     <select class="control-select" id="ctl-style">
-                      <option value="accent" selected>Accent</option>
-                      <option value="neutral">Neutral</option>
+                      <option value="neutral" selected>Neutral</option>
+                      <option value="accent">Accent</option>
                       <option value="positive">Positive</option>
                       <option value="negative">Negative</option>
                       <option value="warning">Warning</option>
@@ -655,7 +654,7 @@ function renderStage() {
   if (iconR) code += '  <span class="ds-btn__icon material-icons" aria-hidden="true">arrow_forward</span>\n';
   code += '</button>';
   document.getElementById('code-interactive').textContent = code;
-  document.getElementById('stage-caption').textContent = 'Interactive Preview · ' + style + ' / ' + type + ' / ' + state;
+  document.getElementById('stage-caption').textContent = 'Interactive Preview';
 }
 ['ctl-size','ctl-style','ctl-type','ctl-state','ctl-icon-left','ctl-icon-right','ctl-text','ctl-textval','ctl-dark'].forEach(function (id) {
   var el = document.getElementById(id);
