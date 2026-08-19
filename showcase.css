@@ -394,7 +394,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   text-align: left;
 }
 .props-popover.is-open { display: block; }
-.po-head { display: flex; justify-content: flex-end; margin-bottom: 8px; }
+.po-head { display: flex; justify-content: flex-start; margin-bottom: 8px; }
 .po-seg {
   display: flex;
   gap: 2px;
@@ -656,12 +656,28 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   background: rgba(249, 249, 251, 0.6);
 }
 .inspector__title { font-size: 13px; font-weight: 600; color: var(--text); }
+.inspector__title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-top: 10px;
+}
 .inspector__label {
   font-size: 10px;
   color: var(--muted-fg);
   font-family: 'Roboto Mono', ui-monospace, Consolas, monospace;
   margin-top: 2px;
+  text-align: right;
 }
+.po-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.po-title { font-size: 11px; font-weight: 600; letter-spacing: 0.02em; }
 
 /* Свойства в инспекторе: рисунок кнопки с размерными метками (как Figma Site) */
 .inspector__props {
