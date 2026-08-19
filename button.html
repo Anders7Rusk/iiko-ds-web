@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=31">
-<link rel="stylesheet" href="components/button.css?v=31">
-<link rel="stylesheet" href="components/badge.css?v=31">
-<link rel="stylesheet" href="showcase.css?v=31">
+<link rel="stylesheet" href="tokens.css?v=32">
+<link rel="stylesheet" href="components/button.css?v=32">
+<link rel="stylesheet" href="components/badge.css?v=32">
+<link rel="stylesheet" href="showcase.css?v=32">
 </head>
 <body>
 
@@ -1225,9 +1225,9 @@ document.querySelectorAll('.cc-tabs button').forEach(function (btn) {
     document.getElementById('cc-' + ccActive).classList.add('is-active');
     // иконка копирования — только для HTML/CSS (у Tokens кода для копирования нет)
     document.getElementById('cc-copy').style.display = (ccActive === 'tokens') ? 'none' : 'inline-flex';
-    // заголовок — название активной вкладки (HTML → «HTML», CSS → «CSS», Tokens → «Tokens»)
+    // заголовок — название активной вкладки (HTML → «HTML», CSS → «CSS», Tokens → «TOKENS»)
     document.getElementById('po-title').textContent =
-      ccActive === 'tokens' ? 'Tokens' : ccActive.toUpperCase();
+      ccActive === 'tokens' ? 'TOKENS' : ccActive.toUpperCase();
   });
 });
 
@@ -1294,6 +1294,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=31"></script>
+<script src="sidebar.js?v=32"></script>
 </body>
 </html>
