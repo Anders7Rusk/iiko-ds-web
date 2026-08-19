@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=24">
-<link rel="stylesheet" href="components/button.css?v=24">
-<link rel="stylesheet" href="components/badge.css?v=24">
-<link rel="stylesheet" href="showcase.css?v=24">
+<link rel="stylesheet" href="tokens.css?v=25">
+<link rel="stylesheet" href="components/button.css?v=25">
+<link rel="stylesheet" href="components/badge.css?v=25">
+<link rel="stylesheet" href="showcase.css?v=25">
 </head>
 <body>
 
@@ -55,94 +55,83 @@
               <div>
                 <div class="interactive-stage" id="stage">
                   <div id="stage-btn-wrap"></div>
-                  <button class="props-chip" id="props-chip" type="button">Свойства компонента <span class="material-icons" aria-hidden="true">expand_more</span></button>
-                </div>
-
-                <div class="props-popover" id="props-popover">
-                  <div class="po-toolbar">
-                    <div class="po-seg">
-                      <button class="is-active" data-view="tokens">Tokens</button>
-                      <button data-view="css">CSS</button>
-                    </div>
-                    <button class="po-back" id="po-back" type="button" title="Back to Preview" aria-label="Back to Preview">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                    </button>
-                  </div>
-                  <div class="po-title-row">
-                    <div class="po-title-wrap">
-                      <div class="po-title" id="po-title">COMPONENT INSPECT TOKEN</div>
-                      <button class="po-copy" id="po-copy" type="button" title="Copy CSS" aria-label="Copy CSS" style="display:none">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-                      </button>
-                    </div>
-                    <div class="po-label" id="po-label">button / neutral / filled / default</div>
-                  </div>
-                  <div class="po-figure">
-                    <span class="pf-corner pf-c-tl"></span>
-                    <span class="pf-corner pf-c-tr"></span>
-                    <span class="pf-corner pf-c-bl"></span>
-                    <span class="pf-corner pf-c-br"></span>
-                    <div class="pf-card">
-                      <span class="pf-cap pf-cap--border">Border</span>
-                      <span class="pf-chip pf-r" id="pf-r-tl">8</span>
-                      <span class="pf-chip pf-r" id="pf-r-tr">8</span>
-                      <span class="pf-chip pf-r" id="pf-r-bl">8</span>
-                      <span class="pf-chip pf-r" id="pf-r-br">8</span>
-                      <span class="pf-chip pf-bw pf-bw--t" id="pf-bw-t">0</span>
-                      <span class="pf-chip pf-bw pf-bw--b" id="pf-bw-b">0</span>
-                      <span class="pf-chip pf-bw pf-bw--l" id="pf-bw-l">0</span>
-                      <span class="pf-chip pf-bw pf-bw--r" id="pf-bw-r">0</span>
-                      <div class="pf-inner">
-                        <span class="pf-cap pf-cap--padding">Padding</span>
-                        <span class="pf-chip pf-py pf-py--t" id="pf-py-t">8</span>
-                        <span class="pf-chip pf-py pf-py--b" id="pf-py-b">8</span>
-                        <span class="pf-chip pf-px pf-px--l" id="pf-px-l">12</span>
-                        <span class="pf-chip pf-px pf-px--r" id="pf-px-r">12</span>
-                        <span class="pf-labelbox"><span class="pf-labelbox__text">Label × 20</span></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="po-tokens" class="po-code">
-                    <div class="insp-section">
-                      <div class="insp-title">Layout</div>
-                      <div class="insp-rows">
-                        <div class="insp-row"><span class="k">padding:</span><span class="v" id="po-pad-v"></span></div>
-                        <div class="insp-row"><span class="k">gap:</span><span class="v" id="po-gap-v"></span></div>
-                      </div>
-                    </div>
-                    <div class="insp-section">
-                      <div class="insp-title">Style</div>
-                      <div class="insp-rows">
-                        <div class="insp-row"><span class="k">border-radius:</span><span class="v" id="po-r-v"></span></div>
-                        <div class="insp-row"><span class="k">background:</span><span class="v" id="po-bg-v"></span></div>
-                        <div class="insp-row"><span class="k">box-shadow:</span><span class="v" id="po-sh-v"></span></div>
-                      </div>
-                    </div>
-                    <div class="insp-section">
-                      <div class="insp-title">Colors</div>
-                      <div class="insp-sub">Background colors</div>
-                      <div class="insp-swatch">
-                        <span class="sw" id="po-cbg-swatch"></span>
-                        <span class="sw-info"><span class="t" id="po-cbg-var"></span><span class="hex" id="po-cbg-val"></span></span>
-                      </div>
-                      <div class="insp-sub">Selection colors</div>
-                      <div class="insp-swatch">
-                        <span class="sw" id="po-ctl-swatch"></span>
-                        <span class="sw-info"><span class="t" id="po-ctl-var"></span><span class="hex" id="po-ctl-val"></span></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="po-css" id="po-css" style="display:none"></div>
                 </div>
 
                 <div class="stage-caption" id="stage-caption">Interactive Preview</div>
-                <div class="interactive-code">
-                  <div class="code-block code-block--html">
-                    <div class="code-head">
-                      <span class="code-title">HTML</span>
-                      <button class="copy-btn" data-copy="code-interactive">Копировать</button>
+
+                <div class="component-code" id="component-code">
+                  <div class="cc-head">
+                    <div class="cc-tabs" role="tablist">
+                      <button class="is-active" data-cc="html" role="tab">HTML</button>
+                      <button data-cc="css" role="tab">CSS</button>
+                      <button data-cc="tokens" role="tab">Tokens</button>
                     </div>
-                    <div class="code-html" id="code-interactive"></div>
+                    <button class="cc-copy" id="cc-copy" type="button" title="Copy code" aria-label="Copy code">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                    </button>
+                  </div>
+                  <div class="cc-panel is-active" id="cc-html"></div>
+                  <div class="cc-panel" id="cc-css"></div>
+                  <div class="cc-panel" id="cc-tokens">
+                    <div class="po-title-row">
+                      <div class="po-title">COMPONENT INSPECT TOKEN</div>
+                      <div class="po-label" id="po-label">button / M / neutral / filled / default</div>
+                    </div>
+                    <div class="po-figure">
+                      <span class="pf-corner pf-c-tl"></span>
+                      <span class="pf-corner pf-c-tr"></span>
+                      <span class="pf-corner pf-c-bl"></span>
+                      <span class="pf-corner pf-c-br"></span>
+                      <div class="pf-card">
+                        <span class="pf-cap pf-cap--border">Border</span>
+                        <span class="pf-chip pf-r" id="pf-r-tl">8</span>
+                        <span class="pf-chip pf-r" id="pf-r-tr">8</span>
+                        <span class="pf-chip pf-r" id="pf-r-bl">8</span>
+                        <span class="pf-chip pf-r" id="pf-r-br">8</span>
+                        <span class="pf-chip pf-bw pf-bw--t" id="pf-bw-t">0</span>
+                        <span class="pf-chip pf-bw pf-bw--b" id="pf-bw-b">0</span>
+                        <span class="pf-chip pf-bw pf-bw--l" id="pf-bw-l">0</span>
+                        <span class="pf-chip pf-bw pf-bw--r" id="pf-bw-r">0</span>
+                        <div class="pf-inner">
+                          <span class="pf-cap pf-cap--padding">Padding</span>
+                          <span class="pf-chip pf-py pf-py--t" id="pf-py-t">8</span>
+                          <span class="pf-chip pf-py pf-py--b" id="pf-py-b">8</span>
+                          <span class="pf-chip pf-px pf-px--l" id="pf-px-l">12</span>
+                          <span class="pf-chip pf-px pf-px--r" id="pf-px-r">12</span>
+                          <span class="pf-labelbox"><span class="pf-labelbox__text">Label × 20</span></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="po-code">
+                      <div class="insp-section">
+                        <div class="insp-title">Layout</div>
+                        <div class="insp-rows">
+                          <div class="insp-row"><span class="k">padding:</span><span class="v" id="po-pad-v"></span></div>
+                          <div class="insp-row"><span class="k">gap:</span><span class="v" id="po-gap-v"></span></div>
+                        </div>
+                      </div>
+                      <div class="insp-section">
+                        <div class="insp-title">Style</div>
+                        <div class="insp-rows">
+                          <div class="insp-row"><span class="k">border-radius:</span><span class="v" id="po-r-v"></span></div>
+                          <div class="insp-row"><span class="k">background:</span><span class="v" id="po-bg-v"></span></div>
+                          <div class="insp-row"><span class="k">box-shadow:</span><span class="v" id="po-sh-v"></span></div>
+                        </div>
+                      </div>
+                      <div class="insp-section">
+                        <div class="insp-title">Colors</div>
+                        <div class="insp-sub">Background colors</div>
+                        <div class="insp-swatch">
+                          <span class="sw" id="po-cbg-swatch"></span>
+                          <span class="sw-info"><span class="t" id="po-cbg-var"></span><span class="hex" id="po-cbg-val"></span></span>
+                        </div>
+                        <div class="insp-sub">Selection colors</div>
+                        <div class="insp-swatch">
+                          <span class="sw" id="po-ctl-swatch"></span>
+                          <span class="sw-info"><span class="t" id="po-ctl-var"></span><span class="hex" id="po-ctl-val"></span></span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -815,12 +804,12 @@ function renderStage() {
   if (showText) code += '  <span class="ds-btn__label">' + text.replace(/</g, '&lt;') + '</span>\n';
   if (iconR) code += '  <span class="ds-btn__icon material-icons" aria-hidden="true">arrow_forward</span>\n';
   code += '</button>';
-  document.getElementById('code-interactive').innerHTML = renderHtml(code.split('\n'));
+  document.getElementById('cc-html').innerHTML = renderHtml(code.split('\n'));
+  lastHtmlLines = code.split('\n');
   document.getElementById('stage-caption').textContent = 'Interactive Preview';
 
-  // инспектор «Свойства компонента» должен отражать текущие настройки (Size/Style/Type/State)
-  var pop = document.getElementById('props-popover');
-  if (pop.classList.contains('is-open')) fillPopover();
+  // CSS и Tokens — по текущим настройкам
+  updateCodePanels();
 }
 ['ctl-icon-left','ctl-icon-right','ctl-text','ctl-textval','ctl-dark'].forEach(function (id) {
   var el = document.getElementById(id);
@@ -1140,13 +1129,12 @@ buildTokenTables(Object.keys(BTN.styles)[0], 'filled'); // стартовая т
 })();
 
 /* ============================================================
-   Поведение: loader
+   Блок HTML | CSS | Tokens под превью
    ============================================================ */
-// чип «Свойства компонента» → панель-инспектор внизу (как в оригинале: превью сжимается до 150px)
 function esc(t) { return t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 function escVar(t) { return t.replace(/var/g, '<span class="fn">var</span>'); }
 
-// CSS-вкладка инспектора: код с номерами строк и подсветкой (как в оригинале)
+// CSS: код с номерами строк и подсветкой (как в оригинале)
 function renderCss(lines) {
   var nums = lines.map(function (_, i) { return '<span>' + (i + 1) + '</span>'; }).join('');
   var code = lines.map(function (line) {
@@ -1159,14 +1147,17 @@ function renderCss(lines) {
   return '<div class="po-css__row"><div class="po-css__nums">' + nums + '</div><div class="po-css__code">' + code + '</div></div>';
 }
 
-function fillPopover() {
+var lastHtmlLines = [];
+var lastCssLines = [];
+
+// обновление CSS-панели и Tokens-панели по текущим настройкам
+function updateCodePanels() {
   var style = selVal('style');
   var type = selVal('type');
   var state = selVal('state');
   var size = selVal('size');
   var colors = BTN.colors[style][type][state] || BTN.colors[style][type]['default'];
   var vars = BTN.vars(style, type, state);
-  var sz = BTN.sizes[size];
   var padVar = size === 'm' ? '--ds-space-3x' : size === 's' ? '--ds-space-2x' : '--ds-space-1-5x';
   var padVal = size === 'm' ? '12px' : size === 's' ? '8px' : '6px';
   var pyVar = size === 'm' ? '--ds-space-2x' : '--ds-space-1x';
@@ -1175,9 +1166,10 @@ function fillPopover() {
   var gapVal = size === 'm' ? '8px' : '4px';
   var bw = type === 'outlined' ? '1' : '0';
 
+  // Tokens: подпись
   document.getElementById('po-label').textContent = 'button / ' + size.toUpperCase() + ' / ' + style + ' / ' + type + ' / ' + state;
 
-  // фигура
+  // Tokens: фигура
   document.querySelectorAll('.pf-r').forEach(function (c) { c.textContent = '8'; });
   document.querySelectorAll('.pf-bw').forEach(function (c) { c.textContent = bw; });
   document.getElementById('pf-py-t').textContent = pyVal.replace('px', '');
@@ -1185,20 +1177,20 @@ function fillPopover() {
   document.getElementById('pf-px-l').textContent = padVal.replace('px', '');
   document.getElementById('pf-px-r').textContent = padVal.replace('px', '');
 
-  // Layout
+  // Tokens: Layout
   document.getElementById('po-pad-v').innerHTML =
     escVar('var(' + pyVar + ', ' + pyVal + ') var(' + padVar + ', ' + padVal + ');');
   document.getElementById('po-gap-v').innerHTML =
     escVar('var(' + gapVar + ', ' + gapVal + ');');
 
-  // Style
+  // Tokens: Style
   document.getElementById('po-r-v').innerHTML = escVar('var(--ds-radius-2x, 8px);');
   document.getElementById('po-bg-v').innerHTML =
     '<span class="fn">var</span>(' + vars.bg + ', <span class="dot" style="background:' + colors.bg + '"></span> ' + colors.bg + ');';
   var shadow = type === 'text' ? 'none' : '0px 2px 2px #E0E0E0...';
   document.getElementById('po-sh-v').textContent = shadow + ';';
 
-  // Colors
+  // Tokens: Colors
   document.getElementById('po-cbg-var').textContent = vars.bg;
   document.getElementById('po-cbg-val').textContent = colors.bg;
   document.getElementById('po-cbg-swatch').style.background = colors.bg;
@@ -1206,7 +1198,7 @@ function fillPopover() {
   document.getElementById('po-ctl-val').textContent = colors.label;
   document.getElementById('po-ctl-swatch').style.background = colors.label;
 
-  // CSS — код с номерами строк и подсветкой (как в оригинале)
+  // CSS: код с номерами строк и подсветкой
   var lines = [
     'display: inline-flex;',
     'padding: var(' + pyVar + ', ' + pyVal + ') var(' + padVar + ', ' + padVal + ');',
@@ -1220,62 +1212,28 @@ function fillPopover() {
   lines.push('box-shadow: ' + shadow + ';');
   lines.push('color: var(' + vars.label + ', ' + colors.label + ');');
   lastCssLines = lines;
-  document.getElementById('po-css').innerHTML = renderCss(lines);
+  document.getElementById('cc-css').innerHTML = renderCss(lines);
 }
 
-function setPreviewMode(open) {
-  var stage = document.getElementById('stage');
-  var pop = document.getElementById('props-popover');
-  stage.classList.toggle('is-collapsed', open);
-  pop.classList.toggle('is-open', open);
-}
-
-document.getElementById('props-chip').addEventListener('click', function (e) {
-  e.stopPropagation();
-  var pop = document.getElementById('props-popover');
-  if (!pop.classList.contains('is-open')) fillPopover();
-  setPreviewMode(true);
-});
-document.getElementById('po-back').addEventListener('click', function () {
-  setPreviewMode(false);
-});
-document.addEventListener('click', function (e) {
-  var pop = document.getElementById('props-popover');
-  var wrap = document.querySelector('.interactive-wrap');
-  // закрывать инспектор только при клике ВНЕ карточки конструктора;
-  // клики по настройкам справа (Size/Style/Type/State/свитчи) НЕ закрывают
-  if (pop.classList.contains('is-open') && wrap && !wrap.contains(e.target)) {
-    setPreviewMode(false);
-  }
-});
-// сегменты Tokens / CSS — шапка инспектора меняется по вкладке (как в оригинале)
-var lastCssLines = [];
-document.querySelectorAll('#props-popover .po-seg button').forEach(function (btn) {
+// вкладки HTML | CSS | Tokens
+var ccActive = 'html';
+document.querySelectorAll('.cc-tabs button').forEach(function (btn) {
   btn.addEventListener('click', function () {
-    document.querySelectorAll('#props-popover .po-seg button').forEach(function (b) { b.classList.remove('is-active'); });
+    document.querySelectorAll('.cc-tabs button').forEach(function (b) { b.classList.remove('is-active'); });
     btn.classList.add('is-active');
-    var isCss = btn.dataset.view === 'css';
-    document.getElementById('po-tokens').style.display = isCss ? 'none' : 'block';
-    document.getElementById('po-css').style.display = isCss ? 'block' : 'none';
-    // шапка: Tokens → «COMPONENT INSPECT TOKEN» + подпись; CSS → «Layout» + copy + «CSS»
-    var title = document.getElementById('po-title');
-    var label = document.getElementById('po-label');
-    var copy = document.getElementById('po-copy');
-    if (isCss) {
-      title.textContent = 'Layout';
-      label.textContent = 'CSS';
-      copy.style.display = 'inline-flex';
-    } else {
-      title.textContent = 'COMPONENT INSPECT TOKEN';
-      label.textContent = 'button / ' + selVal('size').toUpperCase() + ' / ' + selVal('style') + ' / ' + selVal('type') + ' / ' + selVal('state');
-      copy.style.display = 'none';
-    }
+    ccActive = btn.dataset.cc;
+    document.querySelectorAll('.cc-panel').forEach(function (p) { p.classList.remove('is-active'); });
+    document.getElementById('cc-' + ccActive).classList.add('is-active');
+    // иконка копирования — только для HTML/CSS (у Tokens кода для копирования нет)
+    document.getElementById('cc-copy').style.display = (ccActive === 'tokens') ? 'none' : 'inline-flex';
   });
 });
-document.getElementById('po-copy').addEventListener('click', function () {
-  var text = lastCssLines.join('\n');
+
+// копирование активной вкладки через иконку
+document.getElementById('cc-copy').addEventListener('click', function () {
+  var text = ccActive === 'html' ? lastHtmlLines.join('\n') : lastCssLines.join('\n');
   function done() {
-    var copy = document.getElementById('po-copy');
+    var copy = document.getElementById('cc-copy');
     copy.classList.add('copied');
     setTimeout(function () { copy.classList.remove('copied'); }, 1500);
   }
@@ -1334,6 +1292,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=24"></script>
+<script src="sidebar.js?v=25"></script>
 </body>
 </html>
