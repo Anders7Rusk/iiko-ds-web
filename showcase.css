@@ -1317,6 +1317,46 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .code-block .copy-btn:hover { background: var(--border); color: var(--text); }
 .code-block .copy-btn.copied { color: #14b456; background: #eafaf0; }
 
+/* HTML-блок под превью — в стиле инспектора (шапка + номера строк + подсветка) */
+.code-block--html {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+}
+.code-block--html .code-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-bottom: 1px solid #f3f4f6;
+}
+.code-block--html .code-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #111827;
+}
+.code-block--html .copy-btn {
+  position: static;
+  background: #f3f4f6;
+}
+.code-block--html .copy-btn:hover { background: #e5e7eb; color: #111827; }
+.code-html {
+  padding: 16px;
+  font-family: 'Roboto Mono', ui-monospace, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.625;
+  color: #4b5563;
+  overflow-x: auto;
+  background: #ffffff;
+}
+.code-html .po-css__code { white-space: pre; }
+.code-html .c-tag { color: #2563eb; }
+.code-html .c-attr { color: #9333ea; }
+.code-html .c-str { color: #16a34a; }
+
 /* ── Каталог (index) ─────────────────────────────────────── */
 
 .catalog-grid {
