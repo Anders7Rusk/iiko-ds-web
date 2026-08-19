@@ -29,87 +29,39 @@ body {
   line-height: 24px;
 }
 
-/* ── Лейаут: сайдбар + контент ───────────────────────────── */
+/* ── Лейаут: как Figma Site — контент по центру, без сайдбара ─ */
 
-.layout { display: flex; align-items: flex-start; }
+.layout { display: block; }
+.layout__main { min-width: 0; }
+.sidebar { display: none; }
 
-.sidebar {
-  width: 240px;
-  flex-shrink: 0;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow-y: auto;
-  background: var(--bg);
-  border-right: 1px solid var(--border);
-  padding: 12px 0 24px;
-  font-size: 13px;
-}
-.sidebar__head {
+/* ── Верхняя навигация (минимум, чтобы не ломать вид) ────── */
+
+.topnav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 4px 12px 8px;
-  color: var(--muted-fg);
+  gap: 16px;
+  margin-bottom: 32px;
 }
-.sidebar__title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; }
-.sidebar__icons { display: flex; gap: 4px; color: var(--muted-fg); }
-.sidebar__icons .material-icons { font-size: 18px; cursor: pointer; padding: 2px; border-radius: 6px; }
-.sidebar__icons .material-icons:hover { background: var(--muted); }
-.sidebar__group { margin-top: 12px; }
-.sidebar__group-name {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 2px 12px;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--muted-fg);
-  cursor: default;
-  user-select: none;
-}
-.sidebar__group-name .material-icons { font-size: 14px; }
-.sidebar__item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 5px 12px 5px 28px;
+.topnav-brand {
+  font-size: 14px;
+  font-weight: 700;
   color: var(--text);
   text-decoration: none;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border-radius: 0 8px 8px 0;
-  margin-right: 8px;
 }
-.sidebar__item:hover { background: var(--muted); }
-.sidebar__item.is-active {
-  background: var(--muted);
-  color: var(--accent);
+.topnav-links { display: flex; gap: 6px; flex-wrap: wrap; margin-left: auto; }
+.topnav-links a {
+  font-size: 13px;
   font-weight: 500;
-}
-.sidebar__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); flex-shrink: 0; }
-.sidebar__item.is-active .sidebar__dot { background: var(--accent); }
-.sidebar__item.is-soon { color: #a1a1aa; cursor: default; }
-.sidebar__item.is-soon:hover { background: transparent; }
-.sidebar__soon { font-size: 10px; color: #c4c4cc; margin-left: auto; padding-right: 4px; }
-.sidebar__footer {
-  margin-top: 16px;
-  padding: 8px 16px;
-  border-top: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.sidebar__footer a {
   color: var(--muted-fg);
   text-decoration: none;
-  font-size: 12px;
-  padding: 4px 0;
+  padding: 5px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
 }
-.sidebar__footer a:hover { color: var(--accent); }
-
-.layout__main { flex: 1; min-width: 0; }
+.topnav-links a:hover { background: var(--muted); color: var(--text); }
+.topnav-links a.is-active { background: #e8f0ff; color: var(--accent); }
 
 /* ── Контент страницы: по центру, отступы 48px (как p-12) ── */
 
@@ -149,6 +101,14 @@ body {
 /* ── Секции ──────────────────────────────────────────────── */
 
 section { margin-bottom: 40px; }
+/* разделители между секциями — как hr в Figma Site */
+.comp-panel section + section,
+.comp-panel section + div,
+.comp-panel div + section {
+  border-top: 1px solid var(--border);
+  padding-top: 40px;
+  margin-top: 0;
+}
 section > h2 {
   font-size: 24px;
   font-weight: 700;
@@ -839,14 +799,5 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 /* ── Адаптив: на узких экранах сайдбар уходит наверх ─────── */
 
 @media (max-width: 1020px) {
-  .layout { flex-direction: column; }
-  .sidebar {
-    position: static;
-    width: 100%;
-    height: auto;
-    max-height: 42vh;
-    overflow-y: auto;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
+  .topnav { flex-wrap: wrap; }
 }
