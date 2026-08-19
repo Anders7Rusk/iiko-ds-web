@@ -1358,8 +1358,13 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .code-html .c-str { color: #16a34a; }
 
 /* ── Блок HTML | CSS | Tokens под превью ─────────────────── */
+.cc-title {
+  font-size: 13px;
+  color: var(--muted-fg);
+  margin: 12px 16px 0;
+}
 .component-code {
-  margin-top: 16px;
+  margin: 8px 16px 0;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   overflow: hidden;
