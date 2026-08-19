@@ -637,11 +637,29 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   font-size: 12px;
   line-height: 1.625;
   color: #4b5563;
+  background: #ffffff;
   padding: 24px;
   margin: 0;
-  white-space: pre-wrap;
+  overflow-y: auto;
+  max-height: 600px;
   word-break: break-word;
 }
+.po-css__row { display: flex; }
+.po-css__nums {
+  display: flex;
+  flex-direction: column;
+  color: #d1d5db;               /* gray-300 оригинала */
+  padding-right: 16px;
+  text-align: right;
+  border-right: 1px solid #f3f4f6;
+  margin-right: 16px;
+  user-select: none;
+}
+.po-css__code { flex: 1; }
+.po-css__code > div { white-space: nowrap; }
+.po-css .c-key { color: #1f2937; }    /* gray-800 — ключи */
+.po-css .c-var { color: #9333ea; }    /* purple-600 — var() */
+.po-css .c-val { color: #db2777; }    /* pink-600 — значения inline-flex/center */
 /* превью при открытом инспекторе: сжимается до 150px (как в оригинале) */
 .interactive-stage.is-collapsed { min-height: 150px; }
 .interactive-stage.is-collapsed .props-chip {
