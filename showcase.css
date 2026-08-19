@@ -377,12 +377,12 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 /* Выпадающее окно «Свойства компонента» (popover с инспектором токенов) */
 .props-popover {
   position: absolute;
-  top: 50%;
+  bottom: 76px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   width: 400px;
   max-width: calc(100% - 32px);
-  max-height: calc(100% - 48px);
+  max-height: calc(100% - 100px);
   overflow-y: auto;
   background: #ffffff;
   border: 1px solid #e5e7eb;
