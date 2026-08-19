@@ -16,21 +16,22 @@
 
 <div class="layout">
 
-  <aside class="sidebar" id="sidebar"></aside>
-
   <div class="layout__main">
+      <nav class="topnav">
+        <a class="topnav-brand" href="index.html">iiko DS</a>
+        <span class="topnav-links">
+          <a href="index.html">Каталог</a>
+          <a href="button.html">Button</a>
+          <a href="input.html">Input</a>
+          <a href="checkbox.html" class="is-active">Checkbox</a>
+          <a href="radio.html">Radio</a>
+          <a href="badge.html">Badge</a>
+          <a href="guides/guide-components.md">📘 Гайд: компоненты</a>
+          <a href="guides/guide-prototyping.md">🧩 Гайд: прототипы</a>
+        </span>
+      </nav>
 
-    <div class="canvas-head">
-      <a class="page-tab" href="index.html"><span class="material-icons" aria-hidden="true">apps</span> Каталог</a>
-      <a class="page-tab" href="button.html"><span class="material-icons" aria-hidden="true">smart_button</span> Button</a>
-      <a class="page-tab" href="input.html"><span class="material-icons" aria-hidden="true">text_fields</span> Input</a>
-      <a class="page-tab is-active" href="checkbox.html"><span class="material-icons" aria-hidden="true">check_box</span> Checkbox</a>
-      <a class="page-tab" href="radio.html"><span class="material-icons" aria-hidden="true">radio_button_checked</span> Radio</a>
-      <a class="page-tab" href="badge.html"><span class="material-icons" aria-hidden="true">circle</span> Badge</a>
-      <span class="spacer"></span>
-      <a class="guide-link" href="guides/guide-components.md">Гайд: компоненты</a>
-      <a class="guide-link" href="guides/guide-prototyping.md">Гайд: прототипы</a>
-    </div>
+
 
     <main>
 
@@ -217,7 +218,6 @@
 
 </div>
 
-<script src="sidebar.js"></script>
 <script>
   document.getElementById('cb-indet').indeterminate = true;
   document.querySelectorAll('.copy-btn').forEach(function (btn) {
