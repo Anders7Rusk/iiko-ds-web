@@ -926,7 +926,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   display: grid;
   grid-template-columns: minmax(0, 1fr) 360px;
   gap: 24px;
-  align-items: stretch;
+  align-items: start;
 }
 @media (max-width: 1250px) { .matrix-layout { grid-template-columns: 1fr; } }
 
@@ -1440,9 +1440,9 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   overflow: hidden;
   background: #ffffff;
 }
-/* инспектор в «Вариантах» (правая колонка матрицы) — фиксируется при прокрутке */
-.matrix-insp { min-width: 0; }
-.component-code--inspector { margin: 0; position: sticky; top: 24px; }
+/* инспектор в «Вариантах» (правая колонка матрицы) — фиксируется при прокрутке ВМЕСТЕ с заголовком */
+.matrix-insp { min-width: 0; position: sticky; top: 24px; }
+.component-code--inspector { margin: 0; }
 /* в узкой панели путь не влезает рядом с заголовком — опускаем ниже с отступом */
 .component-code--inspector .po-title-row {
   flex-direction: column;
@@ -1512,6 +1512,11 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   font-family: 'Roboto Mono', ui-monospace, Consolas, monospace;
   font-size: 12px;
   line-height: 1.625;
+}
+/* адаптив: в узкой панели «Вариантов» код переносится (без горизонтального скролла) */
+#vc-html .po-css__code, #vc-css .po-css__code {
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 #cc-html .c-tag, #vc-html .c-tag { color: #2563eb; }
 #cc-html .c-attr, #vc-html .c-attr { color: #9333ea; }
