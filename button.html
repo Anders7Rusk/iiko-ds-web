@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button · iiko DS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components/button.css">
+<link rel="stylesheet" href="components/badge.css">
+<link rel="stylesheet" href="showcase.css">
+</head>
+<body>
+
+<header class="showcase-header">
+  <div class="brand">
+    <h1>iiko DS · Компоненты в коде</h1>
+    <span class="sub">v0.1</span>
+  </div>
+  <nav class="showcase-nav">
+    <a href="index.html">Каталог</a>
+    <a href="button.html" class="active">Button</a>
+    <a href="input.html">Input</a>
+    <a href="checkbox.html">Checkbox</a>
+    <a href="radio.html">Radio</a>
+    <a href="badge.html">Badge</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="page-head">
+    <p class="crumbs">iiko DS → Button</p>
+    <h2>Button</h2>
+    <p class="desc">Стандартные кнопки с иконками слева и справа. Размеры XS / S / M, стили Accent / Neutral / Positive / Negative / Warning, типы Filled / Outlined / Text.
+    Hover и Press — нативные (наведите курсор), Disabled — атрибут <code>disabled</code>.</p>
+  </div>
+
+  <!-- ===== Варианты ===== -->
+  <section>
+    <h2>Варианты</h2>
+    <p class="desc">Сетка: размеры × стили × типы. В Figma — страница «Button», компонент Button (Size × Style × Type × State).</p>
+
+    <div class="card">
+      <h3>Size M</h3>
+      <p class="variant-caption">Filled / Outlined / Text × Accent / Neutral / Positive / Negative / Warning</p>
+      <div class="row">
+        <span class="row-label">Filled</span>
+        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">Button</button>
+        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled">Button</button>
+        <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--filled">Button</button>
+        <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--filled">Button</button>
+        <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--filled">Button</button>
+      </div>
+      <div class="row">
+        <span class="row-label">Outlined</span>
+        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined">Button</button>
+        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">Button</button>
+        <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--outlined">Button</button>
+        <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--outlined">Button</button>
+        <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--outlined">Button</button>
+      </div>
+      <div class="row">
+        <span class="row-label">Text</span>
+        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--text">Button</button>
+        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text">Button</button>
+        <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--text">Button</button>
+        <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--text">Button</button>
+        <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--text">Button</button>
+      </div>
+      <div class="row">
+        <span class="row-label">Disabled</span>
+        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" disabled>Button</button>
+        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled" disabled>Button</button>
+        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" disabled>Button</button>
+        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--text" disabled>Button</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Size S / XS</h3>
+      <div class="row">
+        <span class="row-label">S · 28px</span>
+        <button class="ds-btn ds-btn--s ds-btn--accent ds-btn--filled">Button</button>
+        <button class="ds-btn ds-btn--s ds-btn--neutral ds-btn--filled">Button</button>
+        <button class="ds-btn ds-btn--s ds-btn--positive ds-btn--filled">Button</button>
+        <button class="ds-btn ds-btn--s ds-btn--negative ds-btn--filled">Button</button>
+        <button class="ds-btn ds-btn--s ds-btn--warning ds-btn--filled">Button</button>
+      </div>
+      <div class="row">
+        <span class="row-label">XS · 24px</span>
+        <button class="ds-btn ds-btn--xs ds-btn--accent ds-btn--filled">Button</button>
+        <button class="ds-btn ds-btn--xs ds-btn--neutral ds-btn--filled">Button</button>
+        <button class="ds-btn ds-btn--xs ds-btn--positive ds-btn--filled">Button</button>
+        <button class="ds-btn ds-btn--xs ds-btn--negative ds-btn--filled">Button</button>
+        <button class="ds-btn ds-btn--xs ds-btn--warning ds-btn--filled">Button</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>С иконками</h3>
+      <div class="row">
+        <span class="row-label">M</span>
+        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
+          <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
+          <span class="ds-btn__label">Button</span>
+        </button>
+        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
+          <span class="ds-btn__label">Button</span>
+          <span class="ds-btn__icon material-icons" aria-hidden="true">arrow_forward</span>
+        </button>
+        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">
+          <span class="ds-btn__icon material-icons" aria-hidden="true">settings</span>
+          <span class="ds-btn__label">Button</span>
+          <span class="ds-btn__icon material-icons" aria-hidden="true">arrow_drop_down</span>
+        </button>
+        <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--filled">
+          <span class="ds-btn__icon material-icons" aria-hidden="true">delete</span>
+          <span class="ds-btn__label">Button</span>
+        </button>
+      </div>
+      <div class="row">
+        <span class="row-label">S / XS</span>
+        <button class="ds-btn ds-btn--s ds-btn--accent ds-btn--filled">
+          <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
+          <span class="ds-btn__label">Button</span>
+        </button>
+        <button class="ds-btn ds-btn--xs ds-btn--neutral ds-btn--filled">
+          <span class="ds-btn__icon material-icons" aria-hidden="true">more_vert</span>
+        </button>
+      </div>
+      <div class="code-block">
+        <button class="copy-btn" data-copy="code-btn">Копировать</button>
+        <pre id="code-btn"><code>&lt;button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"&gt;
+  &lt;span class="ds-btn__icon material-icons" aria-hidden="true"&gt;add&lt;/span&gt;
+  &lt;span class="ds-btn__label"&gt;Button&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- типы: --filled / --outlined / --text · стили: --accent / --neutral /
+     --positive / --negative / --warning · размеры: --xs / --s / --m --&gt;</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Button group ===== -->
+  <section>
+    <h2>Button group</h2>
+    <p class="desc">Группа кнопок (в Figma — компонент Button group, Orientation × Margins).</p>
+
+    <div class="card">
+      <h3>Горизонтально</h3>
+      <div class="ds-btn-group ds-btn-group--horizontal">
+        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
+          <span class="ds-btn__label">Button</span>
+        </button>
+        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">
+          <span class="ds-btn__label">Button</span>
+        </button>
+        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text">
+          <span class="ds-btn__label">Button</span>
+        </button>
+      </div>
+      <h3 style="margin-top:24px">Вертикально</h3>
+      <div class="ds-btn-group ds-btn-group--vertical" style="max-width:220px">
+        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled">
+          <span class="ds-btn__label">Button</span>
+        </button>
+        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled">
+          <span class="ds-btn__label">Button</span>
+        </button>
+      </div>
+      <div class="code-block">
+        <button class="copy-btn" data-copy="code-btn-group">Копировать</button>
+        <pre id="code-btn-group"><code>&lt;div class="ds-btn-group ds-btn-group--horizontal"&gt;
+  &lt;button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"&gt;…&lt;/button&gt;
+  &lt;button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined"&gt;…&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- ориентация: --horizontal / --vertical (gap 8px) --&gt;</code></pre>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  document.querySelectorAll('.copy-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = document.getElementById(btn.dataset.copy).textContent.trim();
+      navigator.clipboard.writeText(text).then(function () {
+        btn.textContent = 'Скопировано ✓';
+        btn.classList.add('copied');
+        setTimeout(function () { btn.textContent = 'Копировать'; btn.classList.remove('copied'); }, 1500);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
