@@ -544,6 +544,23 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .demo-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
 .demo-caption { font-size: 11px; color: var(--muted-fg); text-transform: uppercase; letter-spacing: 0.5px; }
 
+/* Поведение: двухколоночные карточки состояний (как Figma Site) */
+.behavior-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px;
+  align-items: start;
+}
+@media (max-width: 760px) { .behavior-grid { grid-template-columns: 1fr; } }
+.demo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 220px;
+}
+.demo-box .demo-caption { text-transform: uppercase; }
+
 .ds-spinner {
   display: inline-block;
   width: 16px;
