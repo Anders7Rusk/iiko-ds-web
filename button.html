@@ -48,8 +48,8 @@
               <div>
                 <div class="interactive-stage" id="stage">
                   <div id="stage-btn-wrap"></div>
-                  <div class="stage-caption" id="stage-caption">Interactive Preview</div>
                 </div>
+                <div class="stage-caption" id="stage-caption">Interactive Preview</div>
                 <div class="interactive-code">
                   <div class="code-block">
                     <button class="copy-btn" data-copy="code-interactive">Копировать</button>
@@ -57,12 +57,8 @@
                   </div>
                 </div>
               </div>
-              <div class="props-accordion" id="props-accordion">
-                <button class="props-trigger" id="props-trigger" type="button">
-                  <span>Свойства компонента</span>
-                  <span class="material-icons" aria-hidden="true">expand_less</span>
-                </button>
-                <div class="props-panel" id="props-panel">
+              <div class="props-panel" id="props-panel">
+                <div class="props-title">Свойства компонента</div>
                   <label class="control-switch">
                     <span>Dark Mode</span>
                     <span class="toggle">
@@ -114,7 +110,6 @@
                     <input class="control-input" id="ctl-textval" type="text" value="Button">
                   </div>
                 </div>
-              </div>
             </div>
           </div>
         </section>
@@ -931,11 +926,6 @@ buildTokenTables(Object.keys(BTN.styles)[0], 'filled'); // стартовая т
 /* ============================================================
    Поведение: loader
    ============================================================ */
-// аккордеон «Свойства компонента»
-document.getElementById('props-trigger').addEventListener('click', function () {
-  document.getElementById('props-accordion').classList.toggle('is-collapsed');
-});
-
 document.getElementById('demo-loader').addEventListener('click', function () {
   var btn = this;
   if (btn.dataset.loading) return;
