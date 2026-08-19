@@ -59,6 +59,7 @@
                 </div>
               </div>
               <div class="interactive-controls">
+                <div class="control-label" style="font-size:14px;color:var(--text);font-weight:600;margin-bottom:2px">Свойства компонента</div>
                 <label class="control-switch">
                   <span>Dark Mode</span>
                   <input type="checkbox" id="ctl-dark">
@@ -113,13 +114,46 @@
 
         <section>
           <h2>Варианты компонента</h2>
-          <p class="desc">Интерактивная матрица: нажмите на любую кнопку, чтобы увидеть токены этого состояния.</p>
+          <p class="desc">Интерактивная матрица: нажмите на любую кнопку, чтобы увидеть дизайн-токены этого состояния в инспекторе справа.</p>
           <div class="card">
-            <div id="matrix-root"></div>
-            <div class="state-info" id="state-info">
-              <p class="state-info__title" id="state-info-title"></p>
-              <p class="state-info__hint">Дизайн-токены этого состояния (значения из DS.json):</p>
-              <div class="token-grid" id="state-info-tokens"></div>
+            <div class="matrix-layout">
+              <div id="matrix-root"></div>
+
+              <div class="inspector" id="inspector">
+                <div class="inspector__header">
+                  <div>
+                    <div class="inspector__title">Component Inspect Token</div>
+                    <div class="inspector__label" id="inspector-label">—</div>
+                  </div>
+                  <div class="inspector__seg">
+                    <button class="is-active" data-view="tokens">Tokens</button>
+                    <button data-view="css">CSS</button>
+                  </div>
+                </div>
+                <div class="inspector__body">
+                  <div class="inspector__empty" id="inspector-empty">Выберите вариант в матрице — инспектор покажет дизайн-токены этого состояния</div>
+
+                  <div id="inspector-tokens" style="display:none">
+                    <div class="insp-section"><h4>Layout</h4>
+                      <div class="insp-row"><span class="prop">height</span><span class="var" id="ins-h-var"></span><span class="val" id="ins-h-val"></span></div>
+                      <div class="insp-row"><span class="prop">padding</span><span class="var" id="ins-pad-var"></span><span class="val" id="ins-pad-val"></span></div>
+                      <div class="insp-row"><span class="prop">gap</span><span class="var" id="ins-gap-var"></span><span class="val" id="ins-gap-val"></span></div>
+                    </div>
+                    <div class="insp-section"><h4>Style</h4>
+                      <div class="insp-row"><span class="prop">border-radius</span><span class="var" id="ins-r-var"></span><span class="val" id="ins-r-val"></span></div>
+                      <div class="insp-row"><span class="prop">background</span><span class="var" id="ins-bg-var"></span><span class="val" id="ins-bg-val"></span><span class="swatch" id="ins-bg-swatch"></span></div>
+                      <div class="insp-row"><span class="prop">box-shadow</span><span class="var">—</span><span class="val">none</span></div>
+                    </div>
+                    <div class="insp-section"><h4>Colors</h4>
+                      <div class="insp-row"><span class="prop">background</span><span class="var" id="ins-cbg-var"></span><span class="val" id="ins-cbg-val"></span><span class="swatch" id="ins-cbg-swatch"></span></div>
+                      <div class="insp-row"><span class="prop">border</span><span class="var" id="ins-cbd-var"></span><span class="val" id="ins-cbd-val"></span><span class="swatch" id="ins-cbd-swatch"></span></div>
+                      <div class="insp-row"><span class="prop">text</span><span class="var" id="ins-ctl-var"></span><span class="val" id="ins-ctl-val"></span><span class="swatch" id="ins-ctl-swatch"></span></div>
+                    </div>
+                  </div>
+
+                  <div id="inspector-css" style="display:none"><pre class="insp-css" id="ins-css"></pre></div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -632,26 +666,54 @@ function matrixBtn(style, type, size, state) {
   Object.keys(BTN.styles).forEach(function (style) {
     html += '<div class="matrix-block">';
     html += '<div class="matrix-title">' + BTN.styles[style].label + ' <span class="chip">' +
-            (style === 'disable' ? 'только Disabled' : 'Filled · Outlined · Text × M/S × Default/Hover/Press') + '</span></div>';
+            (style === 'disable' ? 'только Disabled' : 'Filled · Outlined · Text × normal/compact × Default/Hover/Press') + '</span></div>';
     html += '<div class="matrix-grid">';
     html += '<span></span>';
     TYPES.forEach(function (t) { html += '<span class="matrix-head">' + t + '</span>'; });
     SIZES.forEach(function (size) {
-      html += '<span class="matrix-rowlabel">' + BTN.sizes[size].label + '</span>';
+      html += '<span class="matrix-rowlabel">' + (size === 'm' ? 'normal' : 'compact') + '</span>';
       TYPES.forEach(function (t) {
         html += '<span class="matrix-cell">' + matrixBtn(style, t, size, 'default') + '</span>';
       });
-      html += '<span class="matrix-rowlabel" style="font-size:10px;color:#bdbdbd">hover</span>';
+      html += '<span class="matrix-rowlabel" style="font-size:10px;color:#c4c4cc">hover</span>';
       TYPES.forEach(function (t) {
         html += '<span class="matrix-cell">' + matrixBtn(style, t, size, 'hover') + '</span>';
       });
-      html += '<span class="matrix-rowlabel" style="font-size:10px;color:#bdbdbd">press</span>';
+      html += '<span class="matrix-rowlabel" style="font-size:10px;color:#c4c4cc">press</span>';
       TYPES.forEach(function (t) {
         html += '<span class="matrix-cell">' + matrixBtn(style, t, size, 'press') + '</span>';
       });
     });
     html += '</div></div>';
   });
+
+  // Disabled
+  html += '<div class="matrix-block">';
+  html += '<div class="matrix-title">Disabled <span class="chip">Filled · Outlined · Text × normal/compact</span></div>';
+  html += '<div class="matrix-grid">';
+  html += '<span></span>';
+  TYPES.forEach(function (t) { html += '<span class="matrix-head">' + t + '</span>'; });
+  SIZES.forEach(function (size) {
+    html += '<span class="matrix-rowlabel">' + (size === 'm' ? 'normal' : 'compact') + '</span>';
+    TYPES.forEach(function (t) {
+      html += '<span class="matrix-cell">' + matrixBtn('disable', t, size, 'disable') + '</span>';
+    });
+  });
+  html += '</div></div>';
+
+  // Loader
+  html += '<div class="matrix-block">';
+  html += '<div class="matrix-title">Loader <span class="chip">Filled × normal/compact</span></div>';
+  html += '<div class="matrix-grid">';
+  html += '<span></span><span class="matrix-head">Filled</span><span></span><span></span>';
+  SIZES.forEach(function (size) {
+    html += '<span class="matrix-rowlabel">' + (size === 'm' ? 'normal' : 'compact') + '</span>';
+    html += '<span class="matrix-cell"><button class="ds-btn ds-btn--' + size + ' ds-btn--neutral ds-btn--filled" disabled style="gap:8px">' +
+            '<span class="ds-spinner" aria-hidden="true"></span><span class="ds-btn__label">Button</span></button></span>';
+    html += '<span></span><span></span>';
+  });
+  html += '</div></div>';
+
   root.innerHTML = html;
 
   root.addEventListener('click', function (e) {
@@ -660,31 +722,82 @@ function matrixBtn(style, type, size, state) {
     if (selectedBtn) selectedBtn.classList.remove('is-selected');
     btn.classList.add('is-selected');
     selectedBtn = btn;
-    showStateInfo(btn.dataset);
+    fillInspector(btn.dataset);
   });
 })();
 
-function showStateInfo(d) {
+function fillInspector(d) {
   var colors = BTN.colors[d.style][d.type][d.state];
   var vars = BTN.vars(d.style, d.type, d.state);
-  var info = document.getElementById('state-info');
-  document.getElementById('state-info-title').textContent =
-    BTN.styles[d.style].label + ' / ' + d.type + ' / ' + BTN.sizes[d.size].label + ' / ' + STATE_LABEL[d.state];
-  var chips = [
-    ['bg', vars.bg, colors.bg],
-    ['border', vars.border, colors.border],
-    ['label', vars.label, colors.label]
-  ];
-  var html = '';
-  chips.forEach(function (c) {
-    var isColor = /^#/.test(c[2]);
-    html += '<span class="token-item"><span class="token-prop">' + c[0] + '</span><code class="token-var">' + c[1] +
-            '</code><span class="token-val' + (isColor ? '' : ' token-val--text') + '"' +
-            (isColor ? ' style="--token-sample:' + c[2] + '"' : '') + '>' + (isColor ? '' : c[2]) + '</span></span>';
-  });
-  document.getElementById('state-info-tokens').innerHTML = html;
-  info.classList.add('is-visible');
+  var sz = BTN.sizes[d.size];
+  var label = BTN.styles[d.style].label + ' / ' + d.type + ' / ' +
+              (d.size === 'm' ? 'normal' : 'compact') + ' / ' + STATE_LABEL[d.state];
+  document.getElementById('inspector-label').textContent =
+    'button / ' + d.style + ' / ' + d.type + ' / ' + d.state;
+
+  // Layout
+  var hVar = { xs: '--ds-size-6x', s: '--ds-size-7x', m: '--ds-size-9x' }[d.size];
+  setRow('ins-h-var', hVar, sz.height + 'px');
+  var padVar = d.size === 'm' ? '--ds-space-3x' : d.size === 's' ? '--ds-space-2x' : '--ds-space-1-5x';
+  var padVal = d.size === 'm' ? '12px' : d.size === 's' ? '8px' : '6px';
+  setRow('ins-pad-var', padVar + ' / ' + '--ds-space-2x', padVal + ' / 8px');
+  setRow('ins-gap-var', '--ds-space-2x', '8px');
+
+  // Style
+  setRow('ins-r-var', '--ds-radius-2x', '8px');
+  setRowColor('ins-bg-var', 'ins-bg-val', 'ins-bg-swatch', vars.bg, colors.bg);
+  // Colors
+  setRowColor('ins-cbg-var', 'ins-cbg-val', 'ins-cbg-swatch', vars.bg, colors.bg);
+  setRowColor('ins-cbd-var', 'ins-cbd-val', 'ins-cbd-swatch', vars.border, colors.border);
+  setRowColor('ins-ctl-var', 'ins-ctl-val', 'ins-ctl-swatch', vars.label, colors.label);
+
+  // CSS
+  var cssSel = '.ds-btn--' + d.size + '.ds-btn--' + d.style + '.ds-btn--' + d.type;
+  document.getElementById('ins-css').textContent =
+    cssSel + ' {\n' +
+    '  height: var(' + hVar + ', ' + sz.height + 'px);\n' +
+    '  padding: var(' + padVar + ', ' + padVal + ') var(--ds-space-2x, 8px);\n' +
+    '  gap: var(--ds-space-2x, 8px);\n' +
+    '  border: 1px solid ' + (colors.border === 'transparent' ? 'transparent' : 'var(' + vars.border + ', ' + colors.border + ')') + ';\n' +
+    '  border-radius: var(--ds-radius-2x, 8px);\n' +
+    '  background: var(' + vars.bg + ', ' + colors.bg + ');\n' +
+    '  color: var(' + vars.label + ', ' + colors.label + ');\n' +
+    '  font: var(--ds-typography-font-size-3-5x, 14px) / var(--ds-typography-font-weight-medium, 500) Roboto;\n' +
+    '  box-shadow: none;\n' +
+    '}';
+
+  // показать панель
+  document.getElementById('inspector-empty').style.display = 'none';
+  document.getElementById('inspector-tokens').style.display = 'block';
+  document.getElementById('inspector-css').style.display = 'none';
+  var activeView = document.querySelector('.inspector__seg button.is-active');
+  if (activeView && activeView.dataset.view === 'css') {
+    document.getElementById('inspector-tokens').style.display = 'none';
+    document.getElementById('inspector-css').style.display = 'block';
+  }
 }
+
+function setRow(varId, varName, val) {
+  document.getElementById(varId).textContent = 'var(' + varName + ')';
+  document.getElementById(varId + '' === 'ins-h-val' ? 'ins-h-val' : varId.replace('-var', '-val')).textContent = val;
+}
+function setRowColor(varId, valId, swId, varName, val) {
+  document.getElementById(varId).textContent = varName;
+  document.getElementById(valId).textContent = val;
+  var sw = document.getElementById(swId);
+  if (sw) sw.style.setProperty('--swatch', val);
+}
+
+// переключатель Tokens / CSS в инспекторе
+document.querySelectorAll('.inspector__seg button').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('.inspector__seg button').forEach(function (b) { b.classList.remove('is-active'); });
+    btn.classList.add('is-active');
+    var isCss = btn.dataset.view === 'css';
+    document.getElementById('inspector-tokens').style.display = isCss ? 'none' : 'block';
+    document.getElementById('inspector-css').style.display = isCss ? 'block' : 'none';
+  });
+});
 
 /* ============================================================
    Токены → Варианты: табы стилей → типов → таблица
