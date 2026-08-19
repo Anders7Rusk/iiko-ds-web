@@ -14,127 +14,150 @@
 </head>
 <body>
 
-<header class="showcase-header">
-  <div class="brand">
-    <h1>iiko DS · Компоненты в коде</h1>
-    <span class="sub">v0.1</span>
-  </div>
-  <nav class="showcase-nav">
-    <a href="index.html">Каталог</a>
-    <a href="button.html">Button</a>
-    <a href="input.html" class="active">Input</a>
-    <a href="checkbox.html">Checkbox</a>
-    <a href="radio.html">Radio</a>
-    <a href="badge.html">Badge</a>
-  </nav>
-</header>
+<div class="layout">
 
-<main>
+  <aside class="sidebar" id="sidebar"></aside>
 
-  <div class="page-head">
-    <p class="crumbs">iiko DS → Form field + Input</p>
-    <h2>Input</h2>
-    <p class="desc">Поле ввода. Внутренние элементы настраиваются отдельно внутри компонента.
-    Размеры M (лейбл сверху) / S / XS (без лейбла). Состояния: default, hover, focus, error, disabled. Под полем — support text.</p>
-  </div>
+  <div class="layout__main">
 
-  <!-- ===== Варианты ===== -->
-  <section>
-    <h2>Варианты</h2>
-    <p class="desc">В Figma — страница «Form field+Input», компонент Input (Size × Variant × State).</p>
-
-    <div class="card">
-      <h3>Size M · Populated</h3>
-      <div class="state-grid state-grid--2">
-
-        <div>
-          <p class="variant-caption">Default</p>
-          <div class="ds-input ds-input--m">
-            <div class="ds-input__frame">
-              <span class="ds-input__icon material-icons" aria-hidden="true">info</span>
-              <div class="ds-input__content">
-                <label class="ds-input__label" for="inp-m">Label</label>
-                <input class="ds-input__field" id="inp-m" type="text" value="Input text">
-              </div>
-              <span class="ds-input__icon material-icons" aria-hidden="true">close</span>
-            </div>
-            <div class="ds-input__support">Support text</div>
-          </div>
-        </div>
-
-        <div>
-          <p class="variant-caption">Empty (placeholder)</p>
-          <div class="ds-input ds-input--m">
-            <div class="ds-input__frame">
-              <div class="ds-input__content">
-                <label class="ds-input__label" for="inp-empty">Label</label>
-                <input class="ds-input__field" id="inp-empty" type="text" placeholder="Input text">
-              </div>
-            </div>
-            <div class="ds-input__support">Support text</div>
-          </div>
-        </div>
-
-        <div>
-          <p class="variant-caption">Error</p>
-          <div class="ds-input ds-input--m ds-input--error">
-            <div class="ds-input__frame">
-              <div class="ds-input__content">
-                <label class="ds-input__label" for="inp-err">Label</label>
-                <input class="ds-input__field" id="inp-err" type="text" value="Input text">
-              </div>
-            </div>
-            <div class="ds-input__support">Support/Error text</div>
-          </div>
-        </div>
-
-        <div>
-          <p class="variant-caption">Disabled</p>
-          <div class="ds-input ds-input--m ds-input--disabled">
-            <div class="ds-input__frame">
-              <div class="ds-input__content">
-                <label class="ds-input__label" for="inp-dis">Label</label>
-                <input class="ds-input__field" id="inp-dis" type="text" value="Input text" disabled>
-              </div>
-            </div>
-            <div class="ds-input__support">Support text</div>
-          </div>
-        </div>
-
-      </div>
-      <p class="variant-caption" style="margin-top:16px">Hover и Focus — нативные: наведите курсор и кликните в поле.</p>
+    <div class="canvas-head">
+      <a class="page-tab" href="index.html"><span class="material-icons" aria-hidden="true">apps</span> Каталог</a>
+      <a class="page-tab" href="button.html"><span class="material-icons" aria-hidden="true">smart_button</span> Button</a>
+      <a class="page-tab is-active" href="input.html"><span class="material-icons" aria-hidden="true">text_fields</span> Input</a>
+      <a class="page-tab" href="checkbox.html"><span class="material-icons" aria-hidden="true">check_box</span> Checkbox</a>
+      <a class="page-tab" href="radio.html"><span class="material-icons" aria-hidden="true">radio_button_checked</span> Radio</a>
+      <a class="page-tab" href="badge.html"><span class="material-icons" aria-hidden="true">circle</span> Badge</a>
+      <span class="spacer"></span>
+      <a class="guide-link" href="guides/guide-components.md">Гайд: компоненты</a>
+      <a class="guide-link" href="guides/guide-prototyping.md">Гайд: прототипы</a>
     </div>
 
-    <div class="card">
-      <h3>Size S · 36px, без лейбла</h3>
-      <div class="row" style="max-width:420px">
-        <div class="ds-input ds-input--s">
-          <div class="ds-input__frame">
-            <span class="ds-input__icon material-icons" aria-hidden="true">search</span>
-            <div class="ds-input__content">
-              <input class="ds-input__field" type="text" placeholder="Search">
-            </div>
-          </div>
-        </div>
-      </div>
-      <h3 style="margin-top:24px">Size XS · 28px, без лейбла</h3>
-      <div class="row" style="max-width:340px">
-        <div class="ds-input ds-input--xs">
-          <div class="ds-input__frame">
-            <div class="ds-input__content">
-              <input class="ds-input__field" type="text" value="Input text">
-            </div>
-            <span class="ds-input__icon material-icons" aria-hidden="true">close</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    <main>
 
-    <div class="card">
-      <h3>Код</h3>
-      <div class="code-block">
-        <button class="copy-btn" data-copy="code-input">Копировать</button>
-        <pre id="code-input"><code>&lt;div class="ds-input ds-input--m"&gt;
+      <div class="page-head">
+        <h2>Form field + Input</h2>
+        <p class="desc">Поле ввода. Внутренние элементы настраиваются отдельно внутри компонента.
+        В Figma — страница «Form field+Input», компонент Input (Size × Variant × State).
+        Размеры M (лейбл сверху) / S / XS (без лейбла), состояния default / hover / focus / error / disabled.</p>
+      </div>
+
+      <section>
+        <h2>Варианты</h2>
+
+        <div class="card">
+          <h3>Size M · 48px · Populated / Empty</h3>
+          <div class="state-grid state-grid--2">
+
+            <div>
+              <p class="variant-caption">Populated · Default</p>
+              <div class="ds-input ds-input--m">
+                <div class="ds-input__frame">
+                  <span class="ds-input__icon material-icons" aria-hidden="true">info</span>
+                  <div class="ds-input__content">
+                    <label class="ds-input__label" for="inp-m">Label</label>
+                    <input class="ds-input__field" id="inp-m" type="text" value="Input text">
+                  </div>
+                  <span class="ds-input__icon material-icons" aria-hidden="true">close</span>
+                </div>
+                <div class="ds-input__support">Support text</div>
+              </div>
+            </div>
+
+            <div>
+              <p class="variant-caption">Empty · Default</p>
+              <div class="ds-input ds-input--m">
+                <div class="ds-input__frame">
+                  <div class="ds-input__content">
+                    <label class="ds-input__label" for="inp-empty">Label</label>
+                    <input class="ds-input__field" id="inp-empty" type="text" placeholder="Input text">
+                  </div>
+                </div>
+                <div class="ds-input__support">Support text</div>
+              </div>
+            </div>
+
+            <div>
+              <p class="variant-caption">Error</p>
+              <div class="ds-input ds-input--m ds-input--error">
+                <div class="ds-input__frame">
+                  <div class="ds-input__content">
+                    <label class="ds-input__label" for="inp-err">Label</label>
+                    <input class="ds-input__field" id="inp-err" type="text" value="Input text">
+                  </div>
+                </div>
+                <div class="ds-input__support">Support/Error text</div>
+              </div>
+            </div>
+
+            <div>
+              <p class="variant-caption">Disabled</p>
+              <div class="ds-input ds-input--m ds-input--disabled">
+                <div class="ds-input__frame">
+                  <div class="ds-input__content">
+                    <label class="ds-input__label" for="inp-dis">Label</label>
+                    <input class="ds-input__field" id="inp-dis" type="text" value="Input text" disabled>
+                  </div>
+                </div>
+                <div class="ds-input__support">Support text</div>
+              </div>
+            </div>
+
+          </div>
+          <p class="variant-caption" style="margin-top:16px">Hover и Focus — нативные: наведите курсор, кликните в поле.</p>
+          <div class="tokens-panel">
+            <div class="tokens-panel__title">Токены вида (M / Populated / Default)</div>
+            <div class="token-grid">
+              <span class="token-item"><span class="token-prop">bg</span><code class="token-var">--ds-color-shapes-default-variant</code><span class="token-val" style="--token-sample:#F8F9FC"></span></span>
+              <span class="token-item"><span class="token-prop">border</span><code class="token-var">--ds-color-stroke-default</code><span class="token-val" style="--token-sample:#E0E0E0"></span></span>
+              <span class="token-item"><span class="token-prop">hover</span><code class="token-var">--ds-color-stroke-hover</code><span class="token-val" style="--token-sample:#9E9E9E"></span></span>
+              <span class="token-item"><span class="token-prop">focus</span><code class="token-var">--ds-color-stroke-accent</code><span class="token-val" style="--token-sample:#448AFF"></span></span>
+              <span class="token-item"><span class="token-prop">error</span><code class="token-var">--ds-color-stroke-negative</code><span class="token-val" style="--token-sample:#FF5252"></span></span>
+              <span class="token-item"><span class="token-prop">label</span><code class="token-var">--ds-color-text-secondary</code><span class="token-val" style="--token-sample:#616161"></span></span>
+              <span class="token-item"><span class="token-prop">value</span><code class="token-var">--ds-color-text-primary</code><span class="token-val" style="--token-sample:#333333"></span></span>
+              <span class="token-item"><span class="token-prop">placeholder</span><code class="token-var">--ds-color-text-placeholder</code><span class="token-val" style="--token-sample:#D6D6D6"></span></span>
+              <span class="token-item"><span class="token-prop">radius</span><code class="token-var">--ds-radius-3x</code><span class="token-val token-val--text">12px</span></span>
+              <span class="token-item"><span class="token-prop">font</span><code class="token-var">--ds-typography-font-size-4x / --ds-typography-font-size-3x</code><span class="token-val token-val--text">16px / 12px</span></span>
+              <span class="token-item"><span class="token-prop">padding</span><code class="token-var">--ds-space-3x</code><span class="token-val token-val--text">12px</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Size S · 36px и XS · 28px, без лейбла</h3>
+          <div class="row" style="max-width:440px">
+            <div class="ds-input ds-input--s">
+              <div class="ds-input__frame">
+                <span class="ds-input__icon material-icons" aria-hidden="true">search</span>
+                <div class="ds-input__content">
+                  <input class="ds-input__field" type="text" placeholder="Search">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="max-width:360px; margin-top:16px">
+            <div class="ds-input ds-input--xs">
+              <div class="ds-input__frame">
+                <div class="ds-input__content">
+                  <input class="ds-input__field" type="text" value="Input text">
+                </div>
+                <span class="ds-input__icon material-icons" aria-hidden="true">close</span>
+              </div>
+            </div>
+          </div>
+          <div class="tokens-panel">
+            <div class="tokens-panel__title">Токены размеров</div>
+            <div class="token-grid">
+              <span class="token-item"><span class="token-prop">S</span><code class="token-var">height 36px · padding 12px · font 16px</code><span class="token-val token-val--text">--ds-radius-3x</span></span>
+              <span class="token-item"><span class="token-prop">XS</span><code class="token-var">height 28px · padding 4px 8px · font 14px</code><span class="token-val token-val--text">--ds-typography-font-size-3-5x</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Код</h3>
+          <div class="code-block">
+            <button class="copy-btn" data-copy="code-input">Копировать</button>
+            <pre id="code-input"><code>&lt;div class="ds-input ds-input--m"&gt;
   &lt;div class="ds-input__frame"&gt;
     &lt;span class="ds-input__icon material-icons" aria-hidden="true"&gt;info&lt;/span&gt;
     &lt;div class="ds-input__content"&gt;
@@ -144,16 +167,18 @@
     &lt;span class="ds-input__icon material-icons" aria-hidden="true"&gt;close&lt;/span&gt;
   &lt;/div&gt;
   &lt;div class="ds-input__support"&gt;Support text&lt;/div&gt;
-&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
 
-&lt;!-- размеры: --m (48px) / --s (36px) / --xs (28px)
-     состояния: --error, --disabled · hover/focus — нативные --&gt;</code></pre>
-      </div>
-    </div>
-  </section>
+    </main>
 
-</main>
+  </div>
 
+</div>
+
+<script src="sidebar.js"></script>
 <script>
   document.querySelectorAll('.copy-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
