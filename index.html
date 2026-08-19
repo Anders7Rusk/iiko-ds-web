@@ -17,74 +17,84 @@
 </head>
 <body>
 
-<header class="showcase-header">
-  <div class="brand">
-    <h1>iiko DS · Компоненты в коде</h1>
-    <span class="sub">чистые HTML/CSS из дизайн-системы · токены из Figma · v0.1</span>
-  </div>
-  <nav class="showcase-nav">
-    <a href="guides/guide-components.md" class="small">Гайд: компоненты</a>
-    <a href="guides/guide-prototyping.md" class="small">Гайд: прототипы</a>
-  </nav>
-</header>
+<div class="layout">
 
-<main>
+  <!-- меню слева, как панель Pages в Figma -->
+  <aside class="sidebar" id="sidebar"></aside>
 
-  <div class="page-head">
-    <h2>🔵 Готово</h2>
-    <p class="desc">Компоненты дизайн-системы со статусом «готово» — переведены в чистый HTML/CSS.
-    Каждый компонент — отдельная страница (как в Figma). Все стили — только через токены <code>tokens.css</code>.</p>
-  </div>
+  <div class="layout__main">
 
-  <div class="catalog-group">
-    <div class="catalog-grid">
-
-      <a class="catalog-item" href="button.html">
-        <div class="catalog-preview">
-          <span class="mini-btn">Button</span>
-        </div>
-        <span class="name">Button</span>
-        <span class="badge-status badge-status--ready">готово</span>
+    <div class="canvas-head">
+      <a class="page-tab is-active" href="index.html">
+        <span class="material-icons" aria-hidden="true">apps</span> Каталог
       </a>
-
-      <a class="catalog-item" href="input.html">
-        <div class="catalog-preview">
-          <span class="mini-input"></span>
-        </div>
-        <span class="name">Form field + Input</span>
-        <span class="badge-status badge-status--ready">готово</span>
-      </a>
-
-      <a class="catalog-item" href="checkbox.html">
-        <div class="catalog-preview">
-          <span class="mini-cb material-icons" aria-hidden="true">check_box</span>
-          <span class="mini-cb material-icons" aria-hidden="true">check_box_outline_blank</span>
-        </div>
-        <span class="name">Checkbox</span>
-        <span class="badge-status badge-status--ready">готово</span>
-      </a>
-
-      <a class="catalog-item" href="radio.html">
-        <div class="catalog-preview">
-          <span class="mini-cb material-icons" aria-hidden="true">radio_button_checked</span>
-          <span class="mini-cb material-icons" aria-hidden="true">radio_button_unchecked</span>
-        </div>
-        <span class="name">Radio button</span>
-        <span class="badge-status badge-status--ready">готово</span>
-      </a>
-
-      <a class="catalog-item" href="badge.html">
-        <div class="catalog-preview">
-          <span class="mini-badge">7</span>
-        </div>
-        <span class="name">Badge</span>
-        <span class="badge-status badge-status--ready">готово</span>
-      </a>
-
+      <span class="spacer"></span>
+      <a class="guide-link" href="guides/guide-components.md">Гайд: компоненты</a>
+      <a class="guide-link" href="guides/guide-prototyping.md">Гайд: прототипы</a>
     </div>
+
+    <main>
+
+      <div class="page-head">
+        <h2>🔵 Готово 🧾</h2>
+        <p class="desc">Компоненты дизайн-системы со статусом «готово», переведённые в чистый HTML/CSS.
+        Каждый компонент — отдельная страница, как в Figma. Все стили — только через токены <code>tokens.css</code>:
+        под каждым видом компонента — панель токенов для проверки соответствия ДС.</p>
+      </div>
+
+      <div class="catalog-grid">
+
+        <a class="catalog-item" href="button.html">
+          <div class="catalog-preview">
+            <span class="mini-btn">Button</span>
+          </div>
+          <span class="name">Button</span>
+          <span class="badge-status badge-status--ready">готово</span>
+        </a>
+
+        <a class="catalog-item" href="input.html">
+          <div class="catalog-preview">
+            <span class="mini-input"></span>
+          </div>
+          <span class="name">Form field + Input</span>
+          <span class="badge-status badge-status--ready">готово</span>
+        </a>
+
+        <a class="catalog-item" href="checkbox.html">
+          <div class="catalog-preview">
+            <span class="mini-cb material-icons" aria-hidden="true">check_box</span>
+            <span class="mini-cb material-icons" aria-hidden="true">check_box_outline_blank</span>
+          </div>
+          <span class="name">Checkbox</span>
+          <span class="badge-status badge-status--ready">готово</span>
+        </a>
+
+        <a class="catalog-item" href="radio.html">
+          <div class="catalog-preview">
+            <span class="mini-cb material-icons" aria-hidden="true">radio_button_checked</span>
+            <span class="mini-cb material-icons" aria-hidden="true">radio_button_unchecked</span>
+          </div>
+          <span class="name">Radio button</span>
+          <span class="badge-status badge-status--ready">готово</span>
+        </a>
+
+        <a class="catalog-item" href="badge.html">
+          <div class="catalog-preview">
+            <span class="mini-badge">7</span>
+          </div>
+          <span class="name">Badge</span>
+          <span class="badge-status badge-status--ready">готово</span>
+        </a>
+
+      </div>
+
+    </main>
+
   </div>
 
-</main>
+</div>
+
+<script src="sidebar.js"></script>
 
 </body>
 </html>
