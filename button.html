@@ -113,40 +113,64 @@
                   </div>
                   <div class="props-divider"></div>
                   <div class="control-row">
-                    <label class="control-label" for="ctl-size">Size</label>
-                    <select class="control-select" id="ctl-size">
-                      <option value="m" selected>Normal · 36px</option>
-                      <option value="s">Compact · 28px</option>
-                      <option value="xs">XS · 24px</option>
-                    </select>
+                    <span class="control-label">Size</span>
+                    <div class="ds-select" data-sel="size" data-value="m">
+                      <button type="button" class="ds-select__trigger" aria-expanded="false">
+                        <span class="ds-select__value">Normal · 36px</span>
+                        <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                      </button>
+                      <div class="ds-select__menu" role="listbox">
+                        <div class="ds-select__item is-selected" data-value="m" role="option">Normal · 36px<span class="ds-select__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="s" role="option">Compact · 28px<span class="ds-select__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="xs" role="option">XS · 24px<span class="ds-select__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      </div>
+                    </div>
                   </div>
                   <div class="control-row">
-                    <label class="control-label" for="ctl-style">Style</label>
-                    <select class="control-select" id="ctl-style">
-                      <option value="neutral" selected>Neutral</option>
-                      <option value="accent">Accent</option>
-                      <option value="positive">Positive</option>
-                      <option value="negative">Negative</option>
-                      <option value="warning">Warning</option>
-                      <option value="disable">Disable</option>
-                    </select>
+                    <span class="control-label">Style</span>
+                    <div class="ds-select" data-sel="style" data-value="neutral">
+                      <button type="button" class="ds-select__trigger" aria-expanded="false">
+                        <span class="ds-select__value">Neutral</span>
+                        <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                      </button>
+                      <div class="ds-select__menu" role="listbox">
+                        <div class="ds-select__item is-selected" data-value="neutral" role="option">Neutral<span class="ds-select__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="accent" role="option">Accent<span class="ds-select__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="positive" role="option">Positive<span class="ds-select__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="negative" role="option">Negative<span class="ds-select__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="warning" role="option">Warning<span class="ds-select__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="disable" role="option">Disable<span class="ds-select__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      </div>
+                    </div>
                   </div>
                   <div class="control-row">
-                    <label class="control-label" for="ctl-type">Type</label>
-                    <select class="control-select" id="ctl-type">
-                      <option value="filled" selected>Filled</option>
-                      <option value="outlined">Outlined</option>
-                      <option value="text">Text</option>
-                    </select>
+                    <span class="control-label">Type</span>
+                    <div class="ds-select" data-sel="type" data-value="filled">
+                      <button type="button" class="ds-select__trigger" aria-expanded="false">
+                        <span class="ds-select__value">Filled</span>
+                        <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                      </button>
+                      <div class="ds-select__menu" role="listbox">
+                        <div class="ds-select__item is-selected" data-value="filled" role="option">Filled<span class="ds-select__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="outlined" role="option">Outlined<span class="ds-select__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="text" role="option">Text<span class="ds-select__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      </div>
+                    </div>
                   </div>
                   <div class="control-row">
-                    <label class="control-label" for="ctl-state">State</label>
-                    <select class="control-select" id="ctl-state">
-                      <option value="default" selected>Default</option>
-                      <option value="hover">Hover</option>
-                      <option value="press">Press</option>
-                      <option value="disabled">Disabled</option>
-                    </select>
+                    <span class="control-label">State</span>
+                    <div class="ds-select" data-sel="state" data-value="default">
+                      <button type="button" class="ds-select__trigger" aria-expanded="false">
+                        <span class="ds-select__value">Default</span>
+                        <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                      </button>
+                      <div class="ds-select__menu" role="listbox">
+                        <div class="ds-select__item is-selected" data-value="default" role="option">Default<span class="ds-select__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="hover" role="option">Hover<span class="ds-select__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="press" role="option">Press<span class="ds-select__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="disabled" role="option">Disabled<span class="ds-select__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      </div>
+                    </div>
                   </div>
                   <div class="props-divider"></div>
                   <div class="control-row">
@@ -692,10 +716,10 @@ document.querySelectorAll('.comp-tab[data-panel]').forEach(function (tab) {
    Интерактивный компонент
    ============================================================ */
 function renderStage() {
-  var size = document.getElementById('ctl-size').value;
-  var style = document.getElementById('ctl-style').value;
-  var type = document.getElementById('ctl-type').value;
-  var state = document.getElementById('ctl-state').value;
+  var size = selVal('size');
+  var style = selVal('style');
+  var type = selVal('type');
+  var state = selVal('state');
   var iconL = document.getElementById('ctl-icon-left').checked;
   var iconR = document.getElementById('ctl-icon-right').checked;
   var showText = document.getElementById('ctl-text').checked;
@@ -724,10 +748,49 @@ function renderStage() {
   document.getElementById('code-interactive').textContent = code;
   document.getElementById('stage-caption').textContent = 'Interactive Preview';
 }
-['ctl-size','ctl-style','ctl-type','ctl-state','ctl-icon-left','ctl-icon-right','ctl-text','ctl-textval','ctl-dark'].forEach(function (id) {
+['ctl-icon-left','ctl-icon-right','ctl-text','ctl-textval','ctl-dark'].forEach(function (id) {
   var el = document.getElementById(id);
-  el.addEventListener(el.tagName === 'SELECT' || el.tagName === 'INPUT' ? 'input' : 'change', renderStage);
+  el.addEventListener('input', renderStage);
 });
+
+/* Кастомные селекты (как Radix Select в оригинале: кнопка + выпадающая панель) */
+function selVal(id) {
+  var d = document.querySelector('.ds-select[data-sel="' + id + '"]');
+  return d ? d.dataset.value : '';
+}
+function closeSelects() {
+  document.querySelectorAll('.ds-select__menu.is-open').forEach(function (m) { m.classList.remove('is-open'); });
+  document.querySelectorAll('.ds-select__trigger[aria-expanded="true"]').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); });
+}
+document.querySelectorAll('.ds-select').forEach(function (sel) {
+  var btn = sel.querySelector('.ds-select__trigger');
+  var menu = sel.querySelector('.ds-select__menu');
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var open = menu.classList.contains('is-open');
+    closeSelects();
+    if (!open) {
+      menu.classList.add('is-open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+  sel.querySelectorAll('.ds-select__item').forEach(function (item) {
+    item.addEventListener('click', function (e) {
+      e.stopPropagation();
+      sel.dataset.value = item.dataset.value;
+      sel.querySelector('.ds-select__value').textContent = item.textContent.replace(/\s*$/, '');
+      sel.querySelectorAll('.ds-select__item').forEach(function (i) {
+        i.classList.remove('is-selected');
+        i.querySelector('.ds-select__check').style.display = 'none';
+      });
+      item.classList.add('is-selected');
+      item.querySelector('.ds-select__check').style.display = 'inline-flex';
+      closeSelects();
+      renderStage();
+    });
+  });
+});
+document.addEventListener('click', closeSelects);
 renderStage();
 
 /* ============================================================
@@ -1007,10 +1070,10 @@ buildTokenTables(Object.keys(BTN.styles)[0], 'filled'); // стартовая т
    ============================================================ */
 // чип «Свойства компонента» → выпадающее окно с инспектором токенов
 function fillPopover() {
-  var style = document.getElementById('ctl-style').value;
-  var type = document.getElementById('ctl-type').value;
-  var state = document.getElementById('ctl-state').value;
-  var size = document.getElementById('ctl-size').value;
+  var style = selVal('style');
+  var type = selVal('type');
+  var state = selVal('state');
+  var size = selVal('size');
   var d = { style: style, type: type, state: state, size: size };
   var colors = BTN.colors[style][type][state];
   var vars = BTN.vars(style, type, state);
