@@ -15,177 +15,205 @@
 </head>
 <body>
 
-<header class="showcase-header">
-  <div class="brand">
-    <h1>iiko DS · Компоненты в коде</h1>
-    <span class="sub">v0.1</span>
-  </div>
-  <nav class="showcase-nav">
-    <a href="index.html">Каталог</a>
-    <a href="button.html" class="active">Button</a>
-    <a href="input.html">Input</a>
-    <a href="checkbox.html">Checkbox</a>
-    <a href="radio.html">Radio</a>
-    <a href="badge.html">Badge</a>
-  </nav>
-</header>
+<div class="layout">
 
-<main>
+  <!-- меню слева, как панель Pages в Figma -->
+  <aside class="sidebar" id="sidebar"></aside>
 
-  <div class="page-head">
-    <p class="crumbs">iiko DS → Button</p>
-    <h2>Button</h2>
-    <p class="desc">Стандартные кнопки с иконками слева и справа. Размеры XS / S / M, стили Accent / Neutral / Positive / Negative / Warning, типы Filled / Outlined / Text.
-    Hover и Press — нативные (наведите курсор), Disabled — атрибут <code>disabled</code>.</p>
-  </div>
+  <div class="layout__main">
 
-  <!-- ===== Варианты ===== -->
-  <section>
-    <h2>Варианты</h2>
-    <p class="desc">Сетка: размеры × стили × типы. В Figma — страница «Button», компонент Button (Size × Style × Type × State).</p>
-
-    <div class="card">
-      <h3>Size M</h3>
-      <p class="variant-caption">Filled / Outlined / Text × Accent / Neutral / Positive / Negative / Warning</p>
-      <div class="row">
-        <span class="row-label">Filled</span>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--filled">Button</button>
-      </div>
-      <div class="row">
-        <span class="row-label">Outlined</span>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--outlined">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--outlined">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--outlined">Button</button>
-      </div>
-      <div class="row">
-        <span class="row-label">Text</span>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--text">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--text">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--text">Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--text">Button</button>
-      </div>
-      <div class="row">
-        <span class="row-label">Disabled</span>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" disabled>Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled" disabled>Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" disabled>Button</button>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--text" disabled>Button</button>
-      </div>
+    <div class="canvas-head">
+      <a class="page-tab" href="index.html"><span class="material-icons" aria-hidden="true">apps</span> Каталог</a>
+      <a class="page-tab is-active" href="button.html"><span class="material-icons" aria-hidden="true">smart_button</span> Button</a>
+      <a class="page-tab" href="input.html"><span class="material-icons" aria-hidden="true">text_fields</span> Input</a>
+      <a class="page-tab" href="checkbox.html"><span class="material-icons" aria-hidden="true">check_box</span> Checkbox</a>
+      <a class="page-tab" href="radio.html"><span class="material-icons" aria-hidden="true">radio_button_checked</span> Radio</a>
+      <a class="page-tab" href="badge.html"><span class="material-icons" aria-hidden="true">circle</span> Badge</a>
+      <span class="spacer"></span>
+      <a class="guide-link" href="guides/guide-components.md">Гайд: компоненты</a>
+      <a class="guide-link" href="guides/guide-prototyping.md">Гайд: прототипы</a>
     </div>
 
-    <div class="card">
-      <h3>Size S / XS</h3>
-      <div class="row">
-        <span class="row-label">S · 28px</span>
-        <button class="ds-btn ds-btn--s ds-btn--accent ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--s ds-btn--neutral ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--s ds-btn--positive ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--s ds-btn--negative ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--s ds-btn--warning ds-btn--filled">Button</button>
-      </div>
-      <div class="row">
-        <span class="row-label">XS · 24px</span>
-        <button class="ds-btn ds-btn--xs ds-btn--accent ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--xs ds-btn--neutral ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--xs ds-btn--positive ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--xs ds-btn--negative ds-btn--filled">Button</button>
-        <button class="ds-btn ds-btn--xs ds-btn--warning ds-btn--filled">Button</button>
-      </div>
-    </div>
+    <main>
 
-    <div class="card">
-      <h3>С иконками</h3>
-      <div class="row">
-        <span class="row-label">M</span>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
-          <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
-          <span class="ds-btn__label">Button</span>
-        </button>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
-          <span class="ds-btn__label">Button</span>
-          <span class="ds-btn__icon material-icons" aria-hidden="true">arrow_forward</span>
-        </button>
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">
-          <span class="ds-btn__icon material-icons" aria-hidden="true">settings</span>
-          <span class="ds-btn__label">Button</span>
-          <span class="ds-btn__icon material-icons" aria-hidden="true">arrow_drop_down</span>
-        </button>
-        <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--filled">
-          <span class="ds-btn__icon material-icons" aria-hidden="true">delete</span>
-          <span class="ds-btn__label">Button</span>
-        </button>
+      <div class="page-head">
+        <h2>Button</h2>
+        <p class="desc">Стандартные кнопки с иконками слева и справа.
+        В Figma — страница «Button», компонент Button (Size × Style × Type × State).
+        Hover и Press — нативные, Disabled — атрибут <code>disabled</code>. Под каждым блоком — токены для сверки с ДС.</p>
       </div>
-      <div class="row">
-        <span class="row-label">S / XS</span>
-        <button class="ds-btn ds-btn--s ds-btn--accent ds-btn--filled">
-          <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
-          <span class="ds-btn__label">Button</span>
-        </button>
-        <button class="ds-btn ds-btn--xs ds-btn--neutral ds-btn--filled">
-          <span class="ds-btn__icon material-icons" aria-hidden="true">more_vert</span>
-        </button>
-      </div>
-      <div class="code-block">
-        <button class="copy-btn" data-copy="code-btn">Копировать</button>
-        <pre id="code-btn"><code>&lt;button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"&gt;
+
+      <!-- ===== Варианты ===== -->
+      <section>
+        <h2>Варианты</h2>
+
+        <div class="card">
+          <h3>Size M · 36px · Filled</h3>
+          <p class="variant-caption">Accent / Neutral / Positive / Negative / Warning · Default / Hover / Press / Disabled</p>
+          <div class="row">
+            <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">Button</button>
+            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled">Button</button>
+            <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--filled">Button</button>
+            <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--filled">Button</button>
+            <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--filled">Button</button>
+          </div>
+          <div class="row">
+            <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" disabled>Button</button>
+            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled" disabled>Button</button>
+            <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--filled" disabled>Button</button>
+            <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--filled" disabled>Button</button>
+            <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--filled" disabled>Button</button>
+          </div>
+          <div class="tokens-panel">
+            <div class="tokens-panel__title">Токены вида (Filled / Accent / Default)</div>
+            <div class="token-grid">
+              <span class="token-item"><span class="token-prop">bg</span><code class="token-var">--ds-color-button-accent-default</code><span class="token-val" style="--token-sample:#448AFF"></span></span>
+              <span class="token-item"><span class="token-prop">hover</span><code class="token-var">--ds-color-button-accent-hover</code><span class="token-val" style="--token-sample:#3969D5"></span></span>
+              <span class="token-item"><span class="token-prop">press</span><code class="token-var">--ds-color-button-accent-press</code><span class="token-val" style="--token-sample:#2651B5"></span></span>
+              <span class="token-item"><span class="token-prop">text</span><code class="token-var">--ds-color-text-inversive</code><span class="token-val" style="--token-sample:#FFFFFF"></span></span>
+              <span class="token-item"><span class="token-prop">radius</span><code class="token-var">--ds-radius-2x</code><span class="token-val token-val--text">8px</span></span>
+              <span class="token-item"><span class="token-prop">font</span><code class="token-var">--ds-typography-font-size-3-5x / --ds-typography-font-weight-medium</code><span class="token-val token-val--text">14px / 500</span></span>
+              <span class="token-item"><span class="token-prop">padding</span><code class="token-var">--ds-space-3x / --ds-space-2x</code><span class="token-val token-val--text">12px 8px</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Size M · Outlined и Text</h3>
+          <div class="row">
+            <span class="row-label">Outlined</span>
+            <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined">Button</button>
+            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">Button</button>
+            <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--outlined">Button</button>
+            <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--outlined">Button</button>
+            <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--outlined">Button</button>
+          </div>
+          <div class="row">
+            <span class="row-label">Text</span>
+            <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--text">Button</button>
+            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text">Button</button>
+            <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--text">Button</button>
+            <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--text">Button</button>
+            <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--text">Button</button>
+          </div>
+          <div class="tokens-panel">
+            <div class="tokens-panel__title">Токены вида (Outlined / Accent / Default)</div>
+            <div class="token-grid">
+              <span class="token-item"><span class="token-prop">bg</span><code class="token-var">--ds-color-button-accent-lite-default</code><span class="token-val" style="--token-sample:#FFFFFF"></span></span>
+              <span class="token-item"><span class="token-prop">border</span><code class="token-var">--ds-color-button-accent-default</code><span class="token-val" style="--token-sample:#448AFF"></span></span>
+              <span class="token-item"><span class="token-prop">text</span><code class="token-var">--ds-color-button-accent-default</code><span class="token-val" style="--token-sample:#448AFF"></span></span>
+              <span class="token-item"><span class="token-prop">hover</span><code class="token-var">--ds-color-button-accent-lite-hover</code><span class="token-val" style="--token-sample:#F5F9FF"></span></span>
+              <span class="token-item"><span class="token-prop">press</span><code class="token-var">--ds-color-button-accent-lite-press</code><span class="token-val" style="--token-sample:#E8F0FF"></span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Size S · 28px и XS · 24px</h3>
+          <div class="row">
+            <span class="row-label">S</span>
+            <button class="ds-btn ds-btn--s ds-btn--accent ds-btn--filled">Button</button>
+            <button class="ds-btn ds-btn--s ds-btn--neutral ds-btn--filled">Button</button>
+            <button class="ds-btn ds-btn--s ds-btn--positive ds-btn--filled">Button</button>
+            <button class="ds-btn ds-btn--s ds-btn--negative ds-btn--filled">Button</button>
+            <button class="ds-btn ds-btn--s ds-btn--warning ds-btn--filled">Button</button>
+          </div>
+          <div class="row">
+            <span class="row-label">XS</span>
+            <button class="ds-btn ds-btn--xs ds-btn--accent ds-btn--filled">Button</button>
+            <button class="ds-btn ds-btn--xs ds-btn--neutral ds-btn--filled">Button</button>
+            <button class="ds-btn ds-btn--xs ds-btn--positive ds-btn--filled">Button</button>
+            <button class="ds-btn ds-btn--xs ds-btn--negative ds-btn--filled">Button</button>
+            <button class="ds-btn ds-btn--xs ds-btn--warning ds-btn--filled">Button</button>
+          </div>
+          <div class="tokens-panel">
+            <div class="tokens-panel__title">Токены размеров</div>
+            <div class="token-grid">
+              <span class="token-item"><span class="token-prop">S</span><code class="token-var">height 28px · padding 4px 8px · gap 4px</code><span class="token-val token-val--text">--ds-space-1x</span></span>
+              <span class="token-item"><span class="token-prop">XS</span><code class="token-var">height 24px · padding 4px 6px · gap 4px · font 12px</code><span class="token-val token-val--text">--ds-typography-font-size-3x</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>С иконками</h3>
+          <div class="row">
+            <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
+              <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
+              <span class="ds-btn__label">Button</span>
+            </button>
+            <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
+              <span class="ds-btn__label">Button</span>
+              <span class="ds-btn__icon material-icons" aria-hidden="true">arrow_forward</span>
+            </button>
+            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">
+              <span class="ds-btn__icon material-icons" aria-hidden="true">settings</span>
+              <span class="ds-btn__label">Button</span>
+              <span class="ds-btn__icon material-icons" aria-hidden="true">arrow_drop_down</span>
+            </button>
+            <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--filled">
+              <span class="ds-btn__icon material-icons" aria-hidden="true">delete</span>
+              <span class="ds-btn__label">Button</span>
+            </button>
+          </div>
+          <div class="tokens-panel">
+            <div class="tokens-panel__title">Токены иконок</div>
+            <div class="token-grid">
+              <span class="token-item"><span class="token-prop">icon</span><code class="token-var">--ds-size-5x</code><span class="token-val token-val--text">20px · Material Icons</span></span>
+              <span class="token-item"><span class="token-prop">gap icon↔text</span><code class="token-var">--ds-space-2x</code><span class="token-val token-val--text">8px</span></span>
+            </div>
+          </div>
+          <div class="code-block">
+            <button class="copy-btn" data-copy="code-btn">Копировать</button>
+            <pre id="code-btn"><code>&lt;button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"&gt;
   &lt;span class="ds-btn__icon material-icons" aria-hidden="true"&gt;add&lt;/span&gt;
   &lt;span class="ds-btn__label"&gt;Button&lt;/span&gt;
-&lt;/button&gt;
+&lt;/button&gt;</code></pre>
+          </div>
+        </div>
+      </section>
 
-&lt;!-- типы: --filled / --outlined / --text · стили: --accent / --neutral /
-     --positive / --negative / --warning · размеры: --xs / --s / --m --&gt;</code></pre>
-      </div>
-    </div>
-  </section>
+      <!-- ===== Button group ===== -->
+      <section>
+        <h2>Button group</h2>
+        <p class="desc">В Figma — компонент Button group (Orientation × Margins).</p>
 
-  <!-- ===== Button group ===== -->
-  <section>
-    <h2>Button group</h2>
-    <p class="desc">Группа кнопок (в Figma — компонент Button group, Orientation × Margins).</p>
-
-    <div class="card">
-      <h3>Горизонтально</h3>
-      <div class="ds-btn-group ds-btn-group--horizontal">
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
-          <span class="ds-btn__label">Button</span>
-        </button>
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">
-          <span class="ds-btn__label">Button</span>
-        </button>
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text">
-          <span class="ds-btn__label">Button</span>
-        </button>
-      </div>
-      <h3 style="margin-top:24px">Вертикально</h3>
-      <div class="ds-btn-group ds-btn-group--vertical" style="max-width:220px">
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled">
-          <span class="ds-btn__label">Button</span>
-        </button>
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled">
-          <span class="ds-btn__label">Button</span>
-        </button>
-      </div>
-      <div class="code-block">
-        <button class="copy-btn" data-copy="code-btn-group">Копировать</button>
-        <pre id="code-btn-group"><code>&lt;div class="ds-btn-group ds-btn-group--horizontal"&gt;
+        <div class="card">
+          <h3>Горизонтально</h3>
+          <div class="ds-btn-group ds-btn-group--horizontal">
+            <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Button</span></button>
+            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined"><span class="ds-btn__label">Button</span></button>
+            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text"><span class="ds-btn__label">Button</span></button>
+          </div>
+          <h3 style="margin-top:24px">Вертикально</h3>
+          <div class="ds-btn-group ds-btn-group--vertical" style="max-width:220px">
+            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled"><span class="ds-btn__label">Button</span></button>
+            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled"><span class="ds-btn__label">Button</span></button>
+          </div>
+          <div class="tokens-panel">
+            <div class="tokens-panel__title">Токены группы</div>
+            <div class="token-grid">
+              <span class="token-item"><span class="token-prop">gap</span><code class="token-var">--ds-space-2x</code><span class="token-val token-val--text">8px</span></span>
+              <span class="token-item"><span class="token-prop">margins</span><code class="token-var">--ds-space-2x / --ds-space-4x</code><span class="token-val token-val--text">8px 16px</span></span>
+            </div>
+          </div>
+          <div class="code-block">
+            <button class="copy-btn" data-copy="code-btn-group">Копировать</button>
+            <pre id="code-btn-group"><code>&lt;div class="ds-btn-group ds-btn-group--horizontal"&gt;
   &lt;button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"&gt;…&lt;/button&gt;
   &lt;button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined"&gt;…&lt;/button&gt;
-&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
 
-&lt;!-- ориентация: --horizontal / --vertical (gap 8px) --&gt;</code></pre>
-      </div>
-    </div>
-  </section>
+    </main>
 
-</main>
+  </div>
 
+</div>
+
+<script src="sidebar.js"></script>
 <script>
   document.querySelectorAll('.copy-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
