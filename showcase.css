@@ -859,7 +859,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 12px;
   padding-top: 48px; /* выравнивание под ряды кнопок (заголовок размера + состояния) */
 }
 .matrix-type {
@@ -885,14 +885,14 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   background: rgba(248, 250, 252, 0.5);
   border: 1px solid #f1f5f9;
   border-radius: 14px;
-  padding: 6px;
+  padding: 16px;
 }
 /* подписи состояний (сверху, по центру) */
 .matrix-states {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-  margin-bottom: 6px;
+  gap: 12px;
+  margin-bottom: 8px;
 }
 .matrix-state {
   font-size: 12px;
@@ -904,7 +904,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .matrix-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
+  gap: 12px;
   height: 48px;
   align-items: center;
 }
