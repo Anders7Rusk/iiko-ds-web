@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radio button · iiko DS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components/selection.css">
+<link rel="stylesheet" href="showcase.css">
+</head>
+<body>
+
+<header class="showcase-header">
+  <div class="brand">
+    <h1>iiko DS · Компоненты в коде</h1>
+    <span class="sub">v0.1</span>
+  </div>
+  <nav class="showcase-nav">
+    <a href="index.html">Каталог</a>
+    <a href="button.html">Button</a>
+    <a href="input.html">Input</a>
+    <a href="checkbox.html">Checkbox</a>
+    <a href="radio.html" class="active">Radio</a>
+    <a href="badge.html">Badge</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="page-head">
+    <p class="crumbs">iiko DS → Radio button</p>
+    <h2>Radio button</h2>
+    <p class="desc">Радиокнопка. Варианты: Normal / Error / Disable, типы Selected / Deselected.
+    Для группы используйте одинаковый <code>name</code>. Иконки Material 20px, подставляются автоматически.</p>
+  </div>
+
+  <!-- ===== Radio button ===== -->
+  <section>
+    <h2>Radio button</h2>
+    <p class="desc">В Figma — страница «Radio button», компонент Radio button (Variant × Type × State).</p>
+
+    <div class="card">
+      <div class="row">
+        <span class="row-label">Normal</span>
+        <label class="ds-radio">
+          <input type="radio" name="demo-radio" class="ds-radio__input" checked>
+          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
+          <span class="ds-radio__label">Radio button label</span>
+        </label>
+        <label class="ds-radio">
+          <input type="radio" name="demo-radio" class="ds-radio__input">
+          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
+          <span class="ds-radio__label">Radio button label</span>
+        </label>
+      </div>
+      <div class="row">
+        <span class="row-label">Error</span>
+        <label class="ds-radio ds-radio--error">
+          <input type="radio" name="demo-radio-err" class="ds-radio__input" checked>
+          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
+          <span class="ds-radio__label">Radio button label</span>
+        </label>
+        <label class="ds-radio ds-radio--error">
+          <input type="radio" name="demo-radio-err" class="ds-radio__input">
+          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
+          <span class="ds-radio__label">Radio button label</span>
+        </label>
+      </div>
+      <div class="row">
+        <span class="row-label">Disable</span>
+        <label class="ds-radio ds-radio--disabled">
+          <input type="radio" name="demo-radio-dis" class="ds-radio__input" checked disabled>
+          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
+          <span class="ds-radio__label">Radio button label</span>
+        </label>
+        <label class="ds-radio ds-radio--disabled">
+          <input type="radio" name="demo-radio-dis" class="ds-radio__input" disabled>
+          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
+          <span class="ds-radio__label">Radio button label</span>
+        </label>
+      </div>
+      <div class="code-block">
+        <button class="copy-btn" data-copy="code-radio">Копировать</button>
+        <pre id="code-radio"><code>&lt;label class="ds-radio"&gt;
+  &lt;input type="radio" name="group" class="ds-radio__input" checked&gt;
+  &lt;span class="ds-radio__box material-icons" aria-hidden="true"&gt;&lt;/span&gt;
+  &lt;span class="ds-radio__label"&gt;Radio button label&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;!-- варианты: --error / --disabled
+     типы: checked / unchecked · группа — одинаковый name --&gt;</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Radio button label ===== -->
+  <section>
+    <h2>Radio button label</h2>
+    <p class="desc">Радиокнопка с лейблом и подписью Support/Error (в Figma — компонент Radio button label).</p>
+
+    <div class="card">
+      <div class="row">
+        <div>
+          <label class="ds-radio">
+            <input type="radio" name="demo-label" class="ds-radio__input" checked>
+            <span class="ds-radio__box material-icons" aria-hidden="true"></span>
+            <span class="ds-radio__label">Radio button label</span>
+          </label>
+          <span class="ds-radio__support">Support text</span>
+        </div>
+        <div>
+          <label class="ds-radio ds-radio--error">
+            <input type="radio" name="demo-label-err" class="ds-radio__input">
+            <span class="ds-radio__box material-icons" aria-hidden="true"></span>
+            <span class="ds-radio__label">Radio button label</span>
+          </label>
+          <span class="ds-radio__support">Support/Error text</span>
+        </div>
+        <div>
+          <label class="ds-radio ds-radio--disabled">
+            <input type="radio" name="demo-label-dis" class="ds-radio__input" checked disabled>
+            <span class="ds-radio__box material-icons" aria-hidden="true"></span>
+            <span class="ds-radio__label">Radio button label</span>
+          </label>
+          <span class="ds-radio__support">Support text</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Radio button group ===== -->
+  <section>
+    <h2>Radio button group</h2>
+    <p class="desc">Группа радиокнопок (в Figma — компонент Radio button group, Orientation × Slot).</p>
+
+    <div class="card">
+      <h3>Вертикально · gap 8px</h3>
+      <div class="ds-radio-group ds-radio-group--vertical">
+        <label class="ds-radio">
+          <input type="radio" name="group-v" class="ds-radio__input" checked>
+          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
+          <span class="ds-radio__label">Radio button label</span>
+        </label>
+        <label class="ds-radio">
+          <input type="radio" name="group-v" class="ds-radio__input">
+          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
+          <span class="ds-radio__label">Radio button label</span>
+        </label>
+        <label class="ds-radio">
+          <input type="radio" name="group-v" class="ds-radio__input">
+          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
+          <span class="ds-radio__label">Radio button label</span>
+        </label>
+      </div>
+      <h3 style="margin-top:24px">Горизонтально · gap 32px</h3>
+      <div class="ds-radio-group ds-radio-group--horizontal">
+        <label class="ds-radio">
+          <input type="radio" name="group-h" class="ds-radio__input" checked>
+          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
+          <span class="ds-radio__label">Radio button label</span>
+        </label>
+        <label class="ds-radio">
+          <input type="radio" name="group-h" class="ds-radio__input">
+          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
+          <span class="ds-radio__label">Radio button label</span>
+        </label>
+        <label class="ds-radio">
+          <input type="radio" name="group-h" class="ds-radio__input">
+          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
+          <span class="ds-radio__label">Radio button label</span>
+        </label>
+      </div>
+      <div class="code-block">
+        <button class="copy-btn" data-copy="code-radio-group">Копировать</button>
+        <pre id="code-radio-group"><code>&lt;div class="ds-radio-group ds-radio-group--vertical"&gt;
+  &lt;label class="ds-radio"&gt;…&lt;/label&gt;
+  &lt;label class="ds-radio"&gt;…&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- ориентация: --vertical (gap 8px) / --horizontal (gap 32px) --&gt;</code></pre>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  document.querySelectorAll('.copy-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = document.getElementById(btn.dataset.copy).textContent.trim();
+      navigator.clipboard.writeText(text).then(function () {
+        btn.textContent = 'Скопировано ✓';
+        btn.classList.add('copied');
+        setTimeout(function () { btn.textContent = 'Копировать'; btn.classList.remove('copied'); }, 1500);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
