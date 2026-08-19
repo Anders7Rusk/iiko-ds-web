@@ -892,7 +892,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .matrix-states {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 16px;
   margin-bottom: 8px;
 }
 .matrix-state {
@@ -905,7 +905,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .matrix-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 16px;
   height: 48px;
   align-items: center;
 }
