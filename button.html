@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=23">
-<link rel="stylesheet" href="components/button.css?v=23">
-<link rel="stylesheet" href="components/badge.css?v=23">
-<link rel="stylesheet" href="showcase.css?v=23">
+<link rel="stylesheet" href="tokens.css?v=24">
+<link rel="stylesheet" href="components/button.css?v=24">
+<link rel="stylesheet" href="components/badge.css?v=24">
+<link rel="stylesheet" href="showcase.css?v=24">
 </head>
 <body>
 
@@ -137,9 +137,12 @@
 
                 <div class="stage-caption" id="stage-caption">Interactive Preview</div>
                 <div class="interactive-code">
-                  <div class="code-block">
-                    <button class="copy-btn" data-copy="code-interactive">Копировать</button>
-                    <pre id="code-interactive"><code></code></pre>
+                  <div class="code-block code-block--html">
+                    <div class="code-head">
+                      <span class="code-title">HTML</span>
+                      <button class="copy-btn" data-copy="code-interactive">Копировать</button>
+                    </div>
+                    <div class="code-html" id="code-interactive"></div>
                   </div>
                 </div>
               </div>
@@ -758,6 +761,25 @@ document.querySelectorAll('.comp-tab[data-panel]').forEach(function (tab) {
   });
 });
 
+// HTML-блок под превью: код с номерами строк и подсветкой тегов (как CSS-вкладка инспектора)
+function renderHtml(lines) {
+  var nums = lines.map(function (_, i) { return '<span>' + (i + 1) + '</span>'; }).join('');
+  var code = lines.map(function (line) {
+    var esc = line.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    // атрибуты — через плейсхолдеры, чтобы не ломать последующие замены
+    var parts = [];
+    esc = esc.replace(/([\w-]+)="([^"]*)"/g, function (m, a, v) {
+      parts.push('<span class="c-attr">' + a + '</span>="<span class="c-str">' + v + '</span>"');
+      return '\u0001' + (parts.length - 1) + '\u0002';
+    });
+    esc = esc.replace(/&lt;(\/?)([\w-]+)/g, '<span class="c-tag">&lt;$1$2</span>');
+    esc = esc.replace(/(&gt;)/g, '<span class="c-tag">&gt;</span>');
+    esc = esc.replace(/\u0001(\d+)\u0002/g, function (m, i) { return parts[+i]; });
+    return '<div>' + esc + '</div>';
+  }).join('');
+  return '<div class="po-css__row"><div class="po-css__nums">' + nums + '</div><div class="po-css__code">' + code + '</div></div>';
+}
+
 /* ============================================================
    Интерактивный компонент
    ============================================================ */
@@ -793,7 +815,7 @@ function renderStage() {
   if (showText) code += '  <span class="ds-btn__label">' + text.replace(/</g, '&lt;') + '</span>\n';
   if (iconR) code += '  <span class="ds-btn__icon material-icons" aria-hidden="true">arrow_forward</span>\n';
   code += '</button>';
-  document.getElementById('code-interactive').textContent = code;
+  document.getElementById('code-interactive').innerHTML = renderHtml(code.split('\n'));
   document.getElementById('stage-caption').textContent = 'Interactive Preview';
 
   // инспектор «Свойства компонента» должен отражать текущие настройки (Size/Style/Type/State)
@@ -1297,16 +1319,21 @@ document.getElementById('demo-focus').addEventListener('click', function () {
    ============================================================ */
 document.querySelectorAll('.copy-btn').forEach(function (btn) {
   btn.addEventListener('click', function () {
-    var text = document.getElementById(btn.dataset.copy).textContent.trim();
-    navigator.clipboard.writeText(text).then(function () {
+    var target = document.getElementById(btn.dataset.copy);
+    var codeEl = target.querySelector ? target.querySelector('.po-css__code') : null;
+    var text = (codeEl ? codeEl.textContent : target.textContent).trim();
+    function done() {
       btn.textContent = 'Скопировано ✓';
       btn.classList.add('copied');
       setTimeout(function () { btn.textContent = 'Копировать'; btn.classList.remove('copied'); }, 1500);
-    });
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(function () { fallbackCopy(text); done(); });
+    } else { fallbackCopy(text); done(); }
   });
 });
 </script>
 
-<script src="sidebar.js?v=23"></script>
+<script src="sidebar.js?v=24"></script>
 </body>
 </html>
