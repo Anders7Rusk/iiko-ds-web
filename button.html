@@ -55,7 +55,7 @@
               <div>
                 <div class="interactive-stage" id="stage">
                   <div id="stage-btn-wrap"></div>
-                  <div class="props-chip">Свойства компонента <span class="material-icons" aria-hidden="true">expand_more</span></div>
+                  <button class="props-chip" id="props-chip" type="button">Свойства компонента <span class="material-icons" aria-hidden="true">expand_more</span></button>
                 </div>
                 <div class="stage-caption" id="stage-caption">Interactive Preview</div>
                 <div class="interactive-code">
@@ -67,7 +67,7 @@
               </div>
               <div class="props-panel" id="props-panel">
                 <div class="props-title">
-                  <h3>Свойства компонента</h3>
+                  <h3>Button</h3>
                   <p class="props-caption">Interactive Preview</p>
                 </div>
                   <div class="control-row">
@@ -968,6 +968,14 @@ buildTokenTables(Object.keys(BTN.styles)[0], 'filled'); // стартовая т
 /* ============================================================
    Поведение: loader
    ============================================================ */
+// чип «Свойства компонента» → плавный скролл к панели свойств + подсветка
+document.getElementById('props-chip').addEventListener('click', function () {
+  var panel = document.getElementById('props-panel');
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  panel.classList.add('is-highlight');
+  setTimeout(function () { panel.classList.remove('is-highlight'); }, 1600);
+});
+
 document.getElementById('demo-loader').addEventListener('click', function () {
   var btn = this;
   if (btn.dataset.loading) return;
