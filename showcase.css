@@ -288,6 +288,33 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   background: #ffffff;
   color: var(--text);
 }
+
+/* Подтабы (Интерактивный компонент / Варианты) — подчёркнутые, как в Figma Site */
+.comp-tabs--sub {
+  background: transparent;
+  border-bottom: 1px solid #e5e7eb;
+  border-radius: 0;
+  padding: 0;
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 32px;
+  flex-wrap: nowrap;
+}
+.comp-tabs--sub .comp-tab {
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 4px 4px 10px;
+  height: auto;
+  font-size: 16px;
+  background: transparent;
+}
+.comp-tabs--sub .comp-tab:hover { background: transparent; color: var(--text); }
+.comp-tabs--sub .comp-tab.is-active {
+  background: transparent;
+  border-bottom-color: #448aff;
+  color: var(--text);
+}
 .comp-panel { display: none; }
 .comp-panel.is-active { display: block; }
 
@@ -295,12 +322,18 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 
 .interactive-wrap {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
-  gap: 32px;
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  gap: 0;
+  align-items: stretch;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
 @media (max-width: 900px) { .interactive-wrap { grid-template-columns: 1fr; } }
 .interactive-stage {
+  position: relative;
   background: #f5f5f5;
   border-radius: 0;
   padding: 56px 24px;
@@ -309,11 +342,53 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   align-items: center;
   justify-content: center;
   gap: 16px;
-  min-height: 240px;
+  min-height: 400px;
 }
 .interactive-stage.is-dark { background: #18181b; }
 .interactive-stage.is-dark .stage-caption { color: #a1a1aa; }
-.stage-caption { font-size: 13px; color: var(--muted-fg); }
+.stage-caption { font-size: 13px; color: var(--muted-fg); margin-top: 12px; }
+
+/* Плавающий чип «Свойства компонента» внизу превью (как в Figma Site) */
+.props-chip {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  padding: 10px 24px;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-size: 14px;
+  font-weight: 400;
+  color: #475569;
+  white-space: nowrap;
+  transition: box-shadow 0.2s ease;
+}
+.props-chip:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); }
+.props-chip .material-icons { font-size: 16px; color: #94a3b8; }
+
+/* Панель свойств справа 350px с border-l (как инспектор Figma) */
+.props-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  border-left: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+.props-title h3 { font-size: 18px; font-weight: 600; color: var(--text); margin: 0 0 2px; }
+.props-title .props-caption { font-size: 14px; color: var(--muted-fg); margin: 0; }
+.props-divider { height: 1px; background: #f3f4f6; width: 100%; }
+.control-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 16px;
+}
+.control-row > .control-label { margin: 0; }
 .interactive-controls { display: flex; flex-direction: column; gap: 14px; }
 .control-group { display: flex; flex-direction: column; gap: 4px; }
 .control-label { font-size: 13px; font-weight: 500; color: var(--muted-fg); }
@@ -458,6 +533,58 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   font-family: 'Roboto Mono', ui-monospace, Consolas, monospace;
   margin-top: 2px;
 }
+
+/* Свойства в инспекторе: мини-кнопка + чипы (Border/Padding/Label) */
+.inspector__props {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(249, 249, 251, 0.6);
+}
+.mini-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 64px;
+  height: 28px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: #e5e7eb;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: #1c1c1c;
+  transition: background 0.2s ease;
+}
+.mini-btn__label { position: relative; z-index: 1; }
+.mini-btn.hl-border { outline: 2px solid #448aff; outline-offset: 2px; }
+.mini-btn.hl-padding::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: rgba(68, 138, 255, 0.35);
+}
+.mini-btn.hl-label .mini-btn__label { background: rgba(68, 138, 255, 0.35); border-radius: 4px; }
+.prop-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.prop-chip {
+  border: none;
+  background: var(--muted-2);
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.prop-chip:hover { background: #e0e0e0; }
+.prop-chip.is-active { background: #448aff; color: #ffffff; }
+
 .inspector__seg {
   display: flex;
   gap: 2px;
