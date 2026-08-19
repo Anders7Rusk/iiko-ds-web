@@ -846,11 +846,29 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   border-radius: 999px;
   padding: 2px 10px;
 }
-/* размеры в строчку (M / S / XS рядом) */
-.matrix-sizes {
+/* тело: колонка типов + размеры в строчку */
+.matrix-body {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   align-items: flex-start;
+  overflow-x: auto;
+}
+/* колонка типов — один раз слева для всех размеров */
+.matrix-types {
+  width: 48px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 48px; /* выравнивание под ряды кнопок (заголовок размера + состояния) */
+}
+.matrix-type {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted-fg);
+  height: 48px;
+  display: flex;
+  align-items: center;
 }
 /* колонка размера */
 .matrix-size {
@@ -870,22 +888,29 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   border-radius: 14px;
   padding: 6px;
 }
-.matrix-grid {
+/* подписи состояний (сверху, по центру) */
+.matrix-states {
   display: grid;
-  grid-template-columns: 32px repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 6px;
-  align-items: center;
+  margin-bottom: 6px;
 }
-.matrix-head {
+.matrix-state {
   font-size: 12px;
   font-weight: 400;
   color: var(--muted-fg);
   text-align: center;
 }
-.matrix-rowlabel { font-size: 12px; color: var(--muted-fg); font-weight: 400; text-align: right; }
+/* ряды кнопок: типы (строки) × состояния (колонки) */
+.matrix-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  height: 48px;
+  align-items: center;
+}
 .matrix-cell { display: flex; justify-content: center; }
-.matrix-btn { cursor: pointer; min-width: 0; padding: 0 5px; }
-.matrix-btn .ds-btn__label { font-size: 10px; }
+.matrix-btn { cursor: pointer; }
 .matrix-btn.is-selected { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
 .matrix-note { font-size: 13px; color: var(--muted-fg); margin: 8px 0 0; }
 .matrix-caption {
@@ -899,7 +924,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 
 .matrix-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
+  grid-template-columns: minmax(0, 1fr) 320px;
   gap: 24px;
   align-items: start;
 }
