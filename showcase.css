@@ -29,11 +29,84 @@ body {
   line-height: 24px;
 }
 
-/* ── Лейаут: как Figma Site — контент по центру, без сайдбара ─ */
+/* ── Лейаут: сайдбар + контент по центру ─────────────────── */
 
-.layout { display: block; }
-.layout__main { min-width: 0; }
-.sidebar { display: none; }
+.layout { display: flex; align-items: flex-start; }
+
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+  padding: 12px 0 24px;
+  font-size: 13px;
+}
+.sidebar__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 12px 8px;
+  color: var(--muted-fg);
+}
+.sidebar__title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; }
+.sidebar__group { margin-top: 12px; }
+.sidebar__group-name {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted-fg);
+  cursor: default;
+  user-select: none;
+}
+.sidebar__group-name .material-icons { font-size: 14px; }
+.sidebar__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px 5px 28px;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 0 8px 8px 0;
+  margin-right: 8px;
+}
+.sidebar__item:hover { background: var(--muted); }
+.sidebar__item.is-active {
+  background: var(--muted);
+  color: var(--accent);
+  font-weight: 500;
+}
+.sidebar__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); flex-shrink: 0; }
+.sidebar__item.is-active .sidebar__dot { background: var(--accent); }
+.sidebar__item.is-soon { color: #a1a1aa; cursor: default; }
+.sidebar__item.is-soon:hover { background: transparent; }
+.sidebar__soon { font-size: 10px; color: #c4c4cc; margin-left: auto; padding-right: 4px; }
+.sidebar__footer {
+  margin-top: 16px;
+  padding: 8px 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.sidebar__footer a {
+  color: var(--muted-fg);
+  text-decoration: none;
+  font-size: 12px;
+  padding: 4px 0;
+}
+.sidebar__footer a:hover { color: var(--accent); }
+
+.layout__main { flex: 1; min-width: 0; }
 
 /* ── Верхняя навигация (минимум, чтобы не ломать вид) ────── */
 
@@ -268,8 +341,8 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   font-size: 14px;
   color: var(--text);
 }
-/* Тумблер (switch) — как в Figma Site: трек 36×20, кноб 16px */
-.toggle { position: relative; width: 36px; height: 20px; flex-shrink: 0; }
+/* Тумблер (switch) — как shadcn в Figma Site: трек 32×18.4, кноб 16px */
+.toggle { position: relative; width: 32px; height: 18.4px; flex-shrink: 0; }
 .toggle input {
   position: absolute;
   inset: 0;
@@ -287,8 +360,8 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 }
 .toggle .thumb {
   position: absolute;
-  top: 2px;
-  left: 2px;
+  top: 1.2px;
+  left: 1.2px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -298,7 +371,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   pointer-events: none;
 }
 .toggle input:checked + .track { background: var(--accent); }
-.toggle input:checked + .track + .thumb { transform: translateX(16px); }
+.toggle input:checked + .track + .thumb { transform: translateX(13.6px); }
 .toggle input:focus-visible + .track { outline: 2px solid #a8c9ff; outline-offset: 2px; }
 .interactive-code { margin-top: 16px; }
 
