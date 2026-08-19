@@ -58,54 +58,59 @@
                   </div>
                 </div>
               </div>
-              <div class="interactive-controls">
-                <div class="control-label" style="font-size:14px;color:var(--text);font-weight:600;margin-bottom:2px">Свойства компонента</div>
-                <label class="control-switch">
-                  <span>Dark Mode</span>
-                  <input type="checkbox" id="ctl-dark">
-                </label>
-                <div class="control-group">
-                  <label class="control-label" for="ctl-size">Size</label>
-                  <select class="control-select" id="ctl-size">
-                    <option value="m" selected>M · 36px</option>
-                    <option value="s">S · 28px</option>
-                    <option value="xs">XS · 24px</option>
-                  </select>
-                </div>
-                <div class="control-group">
-                  <label class="control-label" for="ctl-style">Style</label>
-                  <select class="control-select" id="ctl-style">
-                    <option value="accent" selected>Accent</option>
-                    <option value="neutral">Neutral</option>
-                    <option value="positive">Positive</option>
-                    <option value="negative">Negative</option>
-                    <option value="warning">Warning</option>
-                    <option value="disable">Disable</option>
-                  </select>
-                </div>
-                <div class="control-group">
-                  <label class="control-label" for="ctl-type">Type</label>
-                  <select class="control-select" id="ctl-type">
-                    <option value="filled" selected>Filled</option>
-                    <option value="outlined">Outlined</option>
-                    <option value="text">Text</option>
-                  </select>
-                </div>
-                <div class="control-group">
-                  <label class="control-label" for="ctl-state">State</label>
-                  <select class="control-select" id="ctl-state">
-                    <option value="default" selected>Default</option>
-                    <option value="hover">Hover</option>
-                    <option value="press">Press</option>
-                    <option value="disabled">Disabled</option>
-                  </select>
-                </div>
-                <label class="control-switch"><span>Icon left</span><input type="checkbox" id="ctl-icon-left" checked></label>
-                <label class="control-switch"><span>Icon right</span><input type="checkbox" id="ctl-icon-right" checked></label>
-                <label class="control-switch"><span>Text</span><input type="checkbox" id="ctl-text" checked></label>
-                <div class="control-group">
-                  <label class="control-label" for="ctl-textval">Button text</label>
-                  <input class="control-input" id="ctl-textval" type="text" value="Button">
+              <div class="props-accordion" id="props-accordion">
+                <button class="props-trigger" id="props-trigger" type="button">
+                  <span>Свойства компонента</span>
+                  <span class="material-icons" aria-hidden="true">expand_less</span>
+                </button>
+                <div class="props-panel" id="props-panel">
+                  <label class="control-switch">
+                    <span>Dark Mode</span>
+                    <input type="checkbox" id="ctl-dark">
+                  </label>
+                  <div class="control-group">
+                    <label class="control-label" for="ctl-size">Size</label>
+                    <select class="control-select" id="ctl-size">
+                      <option value="m" selected>Normal · 36px</option>
+                      <option value="s">Compact · 28px</option>
+                      <option value="xs">XS · 24px</option>
+                    </select>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="ctl-style">Style</label>
+                    <select class="control-select" id="ctl-style">
+                      <option value="accent" selected>Accent</option>
+                      <option value="neutral">Neutral</option>
+                      <option value="positive">Positive</option>
+                      <option value="negative">Negative</option>
+                      <option value="warning">Warning</option>
+                      <option value="disable">Disable</option>
+                    </select>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="ctl-type">Type</label>
+                    <select class="control-select" id="ctl-type">
+                      <option value="filled" selected>Filled</option>
+                      <option value="outlined">Outlined</option>
+                      <option value="text">Text</option>
+                    </select>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="ctl-state">State</label>
+                    <select class="control-select" id="ctl-state">
+                      <option value="default" selected>Default</option>
+                      <option value="hover">Hover</option>
+                      <option value="press">Press</option>
+                      <option value="disabled">Disabled</option>
+                    </select>
+                  </div>
+                  <label class="control-switch"><span>Icon left</span><input type="checkbox" id="ctl-icon-left" checked></label>
+                  <label class="control-switch"><span>Icon right</span><input type="checkbox" id="ctl-icon-right" checked></label>
+                  <label class="control-switch"><span>Text</span><input type="checkbox" id="ctl-text" checked></label>
+                  <div class="control-group">
+                    <label class="control-label" for="ctl-textval">Button text</label>
+                    <input class="control-input" id="ctl-textval" type="text" value="Button">
+                  </div>
                 </div>
               </div>
             </div>
@@ -172,6 +177,16 @@
           <h2>Варианты</h2>
 
           <div class="card">
+            <h3>Neutral variant</h3>
+            <p class="desc">Нейтральная кнопка имеет низкий визуальный вес и предназначена для второстепенных действий. Она часто используется в паре с другими типами кнопок (например, для действия «Отмена») или для опций, которые не требуют активного привлечения внимания. Старайтесь не использовать её как единственную кнопку в группе, если это не контекст навигации.</p>
+            <div class="row">
+              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled">Action</button>
+              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">Action</button>
+              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text">Action</button>
+            </div>
+          </div>
+
+          <div class="card">
             <h3>Accent variant</h3>
             <p class="desc">Основная кнопка сообщает о высоком приоритете и предназначена для ключевых действий в интерфейсе. Не используйте более одной основной кнопки в одной области просмотра. Они выделяют самые важные действия (например, «Сохранить», «Опубликовать») и устанавливают чёткую визуальную иерархию.</p>
             <div class="row">
@@ -181,18 +196,8 @@
           </div>
 
           <div class="card">
-            <h3>Neutral variant</h3>
-            <p class="desc">Нейтральная кнопка имеет низкий визуальный вес и предназначена для второстепенных действий. Она часто используется в паре с другими типами кнопок (например, для действия «Отмена») или для опций, которые не требуют активного привлечения внимания.</p>
-            <div class="row">
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled">Action</button>
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">Action</button>
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text">Action</button>
-            </div>
-          </div>
-
-          <div class="card">
             <h3>Positive variant</h3>
-            <p class="desc">Позитивная кнопка используется для действий, означающих успех, добавление или подтверждение (например, «Добавить», «Подтвердить»). Зелёный цвет сигнализирует о благоприятном исходе.</p>
+            <p class="desc">Позитивная кнопка используется для действий среднего приоритета с благоприятным исходом. Она подходит для ситуаций, когда действие важно, но не является основным целевым действием страницы. Также может использоваться для позитивных альтернативных действий, чтобы отделить их от основного потока.</p>
             <div class="row">
               <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--filled">Action</button>
               <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--outlined">Action</button>
@@ -201,7 +206,7 @@
 
           <div class="card">
             <h3>Warning variant</h3>
-            <p class="desc">Предупреждающий вариант используется для действий, которые требуют осторожности, но не являются разрушительными. Оранжевый цвет привлекает внимание, сигнализируя о необходимости проверки перед продолжением (например, «Выйти из аккаунта», «Изменить статус»).</p>
+            <p class="desc">Предупреждающий вариант используется для действий, которые требуют осторожности, но не являются разрушительными. Оранжевый цвет привлекает внимание пользователя, сигнализируя о необходимости проверки перед продолжением (например, «Выйти из аккаунта», «Изменить статус»).</p>
             <div class="row">
               <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--filled">Action</button>
               <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--outlined">Action</button>
@@ -210,7 +215,7 @@
 
           <div class="card">
             <h3>Negative variant</h3>
-            <p class="desc">Этот вариант предназначен для акцентирования внимания на разрушительных действиях или действиях с негативными последствиями (например, «Удалить», «Заблокировать»). Красный цвет служит сигналом опасности. Используйте этот стиль экономно.</p>
+            <p class="desc">Этот вариант предназначен для акцентирования внимания на разрушительных действиях или действиях с негативными последствиями (например, «Удалить», «Заблокировать»). Красный цвет служит сигналом опасности, заставляя пользователя задуматься перед нажатием. Используйте этот стиль экономно.</p>
             <div class="row">
               <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--filled">Action</button>
               <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--outlined">Action</button>
@@ -277,13 +282,14 @@
 
         <section>
           <h2>Анатомия</h2>
-          <p class="desc">Геометрия компонента по размерам. Значения — из токенов ДС (см. вкладку «Токены → Размеры»).</p>
+          <p class="desc">Геометрия компонента по размерам (Normal · 36px / Compact · 28px). Значения — из токенов ДС (см. вкладку «Токены → Размеры»).</p>
 
           <div class="card">
-            <h3>Horizontal Padding</h3>
+            <h3>Filled / Default · Outlined / Default · Text / Default</h3>
+            <h4>Horizontal Padding</h4>
             <div class="anatomy-visual">
               <div class="anatomy-item">
-                <span class="anatomy-name">Normal · M</span>
+                <span class="anatomy-name">Normal</span>
                 <div class="anatomy-measure">
                   <span class="measure-label">12px</span>
                   <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Button</span></button>
@@ -291,7 +297,7 @@
                 </div>
               </div>
               <div class="anatomy-item">
-                <span class="anatomy-name">Compact · S</span>
+                <span class="anatomy-name">Compact</span>
                 <div class="anatomy-measure">
                   <span class="measure-label">8px</span>
                   <button class="ds-btn ds-btn--s ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Button</span></button>
@@ -303,10 +309,11 @@
           </div>
 
           <div class="card">
-            <h3>Vertical Padding &amp; Height</h3>
+            <h3>Filled / Default · Outlined / Default · Text / Default</h3>
+            <h4>Vertical Padding &amp; Height</h4>
             <div class="anatomy-visual">
               <div class="anatomy-item">
-                <span class="anatomy-name">Normal · M</span>
+                <span class="anatomy-name">Normal</span>
                 <div class="anatomy-measure">
                   <span class="measure-label">8px</span>
                   <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Button</span></button>
@@ -315,7 +322,7 @@
                 <span class="measure-label">height 36px</span>
               </div>
               <div class="anatomy-item">
-                <span class="anatomy-name">Compact · S</span>
+                <span class="anatomy-name">Compact</span>
                 <div class="anatomy-measure">
                   <span class="measure-label">4px</span>
                   <button class="ds-btn ds-btn--s ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Button</span></button>
@@ -328,15 +335,16 @@
           </div>
 
           <div class="card">
-            <h3>Border Radius</h3>
+            <h3>Filled / Default · Outlined / Default · Text / Default</h3>
+            <h4>Border Radius</h4>
             <div class="anatomy-visual">
               <div class="anatomy-item">
-                <span class="anatomy-name">Normal · M</span>
+                <span class="anatomy-name">Normal</span>
                 <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Button</span></button>
                 <span class="measure-label">radius 8px</span>
               </div>
               <div class="anatomy-item">
-                <span class="anatomy-name">Compact · S</span>
+                <span class="anatomy-name">Compact</span>
                 <button class="ds-btn ds-btn--s ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Button</span></button>
                 <span class="measure-label">radius 8px</span>
               </div>
@@ -345,34 +353,27 @@
           </div>
 
           <div class="card">
-            <h3>Состав (с иконками)</h3>
-            <div class="anatomy-visual">
-              <div class="anatomy-item">
-                <span class="anatomy-name">Иконка слева</span>
-                <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
-                  <span class="anatomy-part">1</span>
-                  <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
-                  <span class="anatomy-part">2</span>
-                  <span class="ds-btn__label">Label</span>
-                </button>
-              </div>
-              <div class="anatomy-item">
-                <span class="anatomy-name">Иконки с двух сторон</span>
-                <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">
-                  <span class="anatomy-part">1</span>
-                  <span class="ds-btn__icon material-icons" aria-hidden="true">settings</span>
-                  <span class="anatomy-part">2</span>
-                  <span class="ds-btn__label">Label</span>
-                  <span class="anatomy-part">3</span>
-                  <span class="ds-btn__icon material-icons" aria-hidden="true">arrow_drop_down</span>
-                </button>
-              </div>
-            </div>
-            <ol class="anatomy-legend">
-              <li><b>1.</b> Иконка слева (может не использоваться) — Material 20px, gap 8px.</li>
-              <li><b>2.</b> Label: текст, обозначающий действие кнопки (14px / 500).</li>
-              <li><b>3.</b> Иконка справа (может не использоваться) — для навигации.</li>
-            </ol>
+            <h3>Filled / Icon Left · Outlined / Icon Left</h3>
+            <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
+              <span class="anatomy-part">1</span>
+              <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
+              <span class="anatomy-part">2</span>
+              <span class="ds-btn__label">Label</span>
+            </button>
+            <p class="anatomy-legend"><b>1.</b> Иконка — Material 20px, отступ до лейбла 8px.<br><b>2.</b> Label: текст, обозначающий действие кнопки.</p>
+          </div>
+
+          <div class="card">
+            <h3>Text / Icon Left Right · Text / Invert / Icon Left Right</h3>
+            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">
+              <span class="anatomy-part">1</span>
+              <span class="ds-btn__icon material-icons" aria-hidden="true">settings</span>
+              <span class="anatomy-part">2</span>
+              <span class="ds-btn__label">Label</span>
+              <span class="anatomy-part">3</span>
+              <span class="ds-btn__icon material-icons" aria-hidden="true">arrow_drop_down</span>
+            </button>
+            <p class="anatomy-legend"><b>1.</b> Иконка слева (может не использоваться).<br><b>2.</b> Label: действие кнопки.<br><b>3.</b> Иконка справа (может не использоваться) — для навигации.</p>
           </div>
         </section>
 
@@ -388,7 +389,7 @@
 
         <section>
           <div class="card behavior-section">
-            <h3>Интерактивная песочница</h3>
+            <h3>Интерактивная песочница <span class="demo-caption" style="margin-left:8px">Try it yourself</span></h3>
             <p>Попробуйте навести курсор и нажать на кнопки ниже. Они реагируют на ваши действия, демонстрируя реальную скорость анимации и смену цветов.</p>
             <div class="demo-row">
               <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Primary Button</span></button>
@@ -400,40 +401,40 @@
 
         <section>
           <div class="card behavior-section">
-            <h3>Hover (Наведение)</h3>
+            <h4>Hover (Наведение)</h4>
             <p>Состояние Hover показывает, что элемент интерактивен. Плавный переход (transition) важен для ощущения качества интерфейса. Обычно длится 150–200ms.</p>
             <ul>
               <li>Изменяется фон (становится темнее/светлее).</li>
               <li>Курсор меняется на pointer.</li>
             </ul>
-            <p class="demo-caption" style="margin-top:12px">ANIMATION DEMO</p>
+            <p class="demo-caption" style="margin-top:12px">Animation Demo</p>
             <div class="demo-row">
               <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Hover Me</span></button>
-              <span class="demo-caption">default → hover</span>
+              <span class="demo-caption">hover</span>
             </div>
           </div>
 
           <div class="card behavior-section">
-            <h3>Press / Active (Нажатие)</h3>
+            <h4>Press / Active (Нажатие)</h4>
             <p>Момент клика. Даёт немедленную тактильную обратную связь. Переход в это состояние должен быть мгновенным или очень быстрым (50–100ms).</p>
             <ul>
               <li>Цвет становится ещё более насыщенным.</li>
               <li>Может меняться тень или масштаб (scale).</li>
             </ul>
-            <p class="demo-caption" style="margin-top:12px">ANIMATION DEMO</p>
+            <p class="demo-caption" style="margin-top:12px">Animation Demo</p>
             <div class="demo-row">
               <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Click Me</span></button>
-              <span class="demo-caption">default → press</span>
+              <span class="demo-caption">press</span>
             </div>
           </div>
 
           <div class="card behavior-section">
-            <h3>Focus (Фокус)</h3>
+            <h4>Focus (Фокус)</h4>
             <p>Визуальный маркер для навигации с клавиатуры (Tab). Никогда не убирайте outline без замены на другой стиль фокуса.</p>
             <div class="demo-row">
               <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" id="demo-focus"><span class="ds-btn__label">Focused Button</span></button>
-              <span class="demo-caption">Focus ring: outline 2px Accent/300 (#A8C9FF), offset 2px</span>
             </div>
+            <p class="demo-caption" style="margin-top:8px">Focus ring styling: outline 2px Accent/300 (#A8C9FF), offset 2px</p>
           </div>
 
           <div class="card behavior-section">
@@ -911,6 +912,11 @@ buildTokenTables(Object.keys(BTN.styles)[0], 'filled'); // стартовая т
 /* ============================================================
    Поведение: loader
    ============================================================ */
+// аккордеон «Свойства компонента»
+document.getElementById('props-trigger').addEventListener('click', function () {
+  document.getElementById('props-accordion').classList.toggle('is-collapsed');
+});
+
 document.getElementById('demo-loader').addEventListener('click', function () {
   var btn = this;
   if (btn.dataset.loading) return;
