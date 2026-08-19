@@ -858,6 +858,12 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .matrix-btn { cursor: pointer; }
 .matrix-btn.is-selected { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
 .matrix-note { font-size: 13px; color: var(--muted-fg); margin: 8px 0 0; }
+.matrix-caption {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted-fg);
+  margin: 0 0 4px;
+}
 
 /* ── Инспектор токенов (выезжает справа от матрицы) ──────── */
 
@@ -886,6 +892,62 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   border-bottom: 1px solid var(--border);
   background: rgba(249, 249, 251, 0.6);
 }
+/* вкладки HTML | CSS | TOKENS — как в блоке «Свойства компонента» */
+.inspector__tabs {
+  display: flex;
+  gap: 2px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 4px;
+}
+.inspector__tabs button {
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.inspector__tabs button:hover { color: #111827; }
+.inspector__tabs button.is-active { background: #ffffff; color: #111827; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); }
+.inspector__copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  color: #6b7280;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.inspector__copy:hover { background: #e5e7eb; }
+.inspector__copy.copied { color: #448aff; }
+.inspector__copy.copied svg { stroke: #448aff; }
+/* HTML и CSS панели инспектора — код с номерами строк */
+#inspector-html, #inspector-css {
+  padding: 16px;
+  font-family: 'Roboto Mono', ui-monospace, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.625;
+  color: #4b5563;
+  overflow-x: auto;
+}
+#inspector-html .po-css__code, #inspector-css .po-css__code { white-space: pre; }
+#inspector-html .c-tag { color: #2563eb; }
+#inspector-html .c-attr { color: #9333ea; }
+#inspector-html .c-str { color: #16a34a; }
+#inspector-css .c-key { color: #1f2937; }
+#inspector-css .c-var { color: #9333ea; }
+#inspector-css .c-val { color: #db2777; }
 .inspector__title { font-size: 13px; font-weight: 600; color: var(--text); }
 .inspector__title-row {
   display: flex;
