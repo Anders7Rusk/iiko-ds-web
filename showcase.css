@@ -606,8 +606,8 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .props-popover .insp-row .v .fn { color: #2563eb; }
 .props-popover .insp-row .v .dot {
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 12px;      /* w-3 h-3 оригинала (было 8px) */
+  height: 12px;
   border-radius: 999px;
   border: 1px solid #e5e7eb;
   vertical-align: middle;
