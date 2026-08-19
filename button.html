@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=14">
-<link rel="stylesheet" href="components/button.css?v=14">
-<link rel="stylesheet" href="components/badge.css?v=14">
-<link rel="stylesheet" href="showcase.css?v=14">
+<link rel="stylesheet" href="tokens.css?v=15">
+<link rel="stylesheet" href="components/button.css?v=15">
+<link rel="stylesheet" href="components/badge.css?v=15">
+<link rel="stylesheet" href="showcase.css?v=15">
 </head>
 <body>
 
@@ -127,7 +127,7 @@
                       </div>
                     </div>
                   </div>
-                  <pre class="po-css" id="po-css" style="display:none"></pre>
+                  <div class="po-css" id="po-css" style="display:none"></div>
                 </div>
 
                 <div class="stage-caption" id="stage-caption">Interactive Preview</div>
@@ -1112,7 +1112,21 @@ buildTokenTables(Object.keys(BTN.styles)[0], 'filled'); // стартовая т
    Поведение: loader
    ============================================================ */
 // чип «Свойства компонента» → панель-инспектор внизу (как в оригинале: превью сжимается до 150px)
+function esc(t) { return t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 function escVar(t) { return t.replace(/var/g, '<span class="fn">var</span>'); }
+
+// CSS-вкладка инспектора: код с номерами строк и подсветкой (как в оригинале)
+function renderCss(lines) {
+  var nums = lines.map(function (_, i) { return '<span>' + (i + 1) + '</span>'; }).join('');
+  var code = lines.map(function (line) {
+    var m = line.match(/^([a-z-]+):\s*(.*);$/);
+    if (!m) return '<div>' + esc(line) + '</div>';
+    var val = esc(m[2]).replace(/var/g, '<span class="c-var">var</span>');
+    if (m[2] === 'inline-flex' || m[2] === 'center') val = '<span class="c-val">' + val + '</span>';
+    return '<div><span class="c-key">' + m[1] + ':</span> ' + val + ';</div>';
+  }).join('');
+  return '<div class="po-css__row"><div class="po-css__nums">' + nums + '</div><div class="po-css__code">' + code + '</div></div>';
+}
 
 function fillPopover() {
   var style = selVal('style');
@@ -1150,7 +1164,8 @@ function fillPopover() {
   document.getElementById('po-r-v').innerHTML = escVar('var(--ds-radius-2x, 8px);');
   document.getElementById('po-bg-v').innerHTML =
     '<span class="fn">var</span>(' + vars.bg + ', <span class="dot" style="background:' + colors.bg + '"></span> ' + colors.bg + ');';
-  document.getElementById('po-sh-v').textContent = 'none;';
+  var shadow = type === 'text' ? 'none' : '0px 2px 2px #E0E0E0...';
+  document.getElementById('po-sh-v').textContent = shadow + ';';
 
   // Colors
   document.getElementById('po-cbg-var').textContent = vars.bg;
@@ -1160,18 +1175,20 @@ function fillPopover() {
   document.getElementById('po-ctl-val').textContent = colors.label;
   document.getElementById('po-ctl-swatch').style.background = colors.label;
 
-  // CSS
-  var css = 'display: inline-flex;\n' +
-    'padding: var(' + pyVar + ', ' + pyVal + ') var(' + padVar + ', ' + padVal + ');\n' +
-    'justify-content: center;\n' +
-    'align-items: center;\n' +
-    'gap: var(' + gapVar + ', ' + gapVal + ');\n' +
-    'border-radius: var(--ds-radius-2x, 8px);\n' +
-    'background: var(' + vars.bg + ', ' + colors.bg + ');\n' +
-    (type === 'outlined' ? 'border: 1px solid var(' + vars.border + ', ' + colors.border + ');\n' : '') +
-    'box-shadow: none;\n' +
-    'color: var(' + vars.label + ', ' + colors.label + ');';
-  document.getElementById('po-css').textContent = css;
+  // CSS — код с номерами строк и подсветкой (как в оригинале)
+  var lines = [
+    'display: inline-flex;',
+    'padding: var(' + pyVar + ', ' + pyVal + ') var(' + padVar + ', ' + padVal + ');',
+    'justify-content: center;',
+    'align-items: center;',
+    'gap: var(' + gapVar + ', ' + gapVal + ');',
+    'border-radius: var(--ds-radius-2x, 8px);',
+    'background: var(' + vars.bg + ', ' + colors.bg + ');'
+  ];
+  if (type === 'outlined') lines.push('border: 1px solid var(' + vars.border + ', ' + colors.border + ');');
+  lines.push('box-shadow: ' + shadow + ';');
+  lines.push('color: var(' + vars.label + ', ' + colors.label + ');');
+  document.getElementById('po-css').innerHTML = renderCss(lines);
 }
 
 function setPreviewMode(open) {
@@ -1242,6 +1259,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=14"></script>
+<script src="sidebar.js?v=15"></script>
 </body>
 </html>
