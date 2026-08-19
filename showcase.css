@@ -926,7 +926,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   display: grid;
   grid-template-columns: minmax(0, 1fr) 360px;
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
 }
 @media (max-width: 1250px) { .matrix-layout { grid-template-columns: 1fr; } }
 
@@ -1440,8 +1440,9 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   overflow: hidden;
   background: #ffffff;
 }
-/* инспектор в «Вариантах» (правая колонка матрицы) — без внешних отступов */
-.component-code--inspector { margin: 0; }
+/* инспектор в «Вариантах» (правая колонка матрицы) — фиксируется при прокрутке */
+.matrix-insp { min-width: 0; }
+.component-code--inspector { margin: 0; position: sticky; top: 24px; }
 /* в узкой панели путь не влезает рядом с заголовком — опускаем ниже с отступом */
 .component-code--inspector .po-title-row {
   flex-direction: column;
