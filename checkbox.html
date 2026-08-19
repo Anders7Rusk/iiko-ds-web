@@ -14,185 +14,210 @@
 </head>
 <body>
 
-<header class="showcase-header">
-  <div class="brand">
-    <h1>iiko DS · Компоненты в коде</h1>
-    <span class="sub">v0.1</span>
-  </div>
-  <nav class="showcase-nav">
-    <a href="index.html">Каталог</a>
-    <a href="button.html">Button</a>
-    <a href="input.html">Input</a>
-    <a href="checkbox.html" class="active">Checkbox</a>
-    <a href="radio.html">Radio</a>
-    <a href="badge.html">Badge</a>
-  </nav>
-</header>
+<div class="layout">
 
-<main>
+  <aside class="sidebar" id="sidebar"></aside>
 
-  <div class="page-head">
-    <p class="crumbs">iiko DS → Checkbox</p>
-    <h2>Checkbox</h2>
-    <p class="desc">Чекбокс. Варианты: Normal / Error / Disable, типы Selected / Deselected / Indeterminate.
-    Иконки Material 20px, подставляются автоматически по состоянию. Indeterminate задаётся в JS: <code>input.indeterminate = true</code>.</p>
-  </div>
+  <div class="layout__main">
 
-  <!-- ===== Checkbox ===== -->
-  <section>
-    <h2>Checkbox</h2>
-    <p class="desc">В Figma — страница «Checkbox», компонент Checkbox (Variant × Type × State).</p>
+    <div class="canvas-head">
+      <a class="page-tab" href="index.html"><span class="material-icons" aria-hidden="true">apps</span> Каталог</a>
+      <a class="page-tab" href="button.html"><span class="material-icons" aria-hidden="true">smart_button</span> Button</a>
+      <a class="page-tab" href="input.html"><span class="material-icons" aria-hidden="true">text_fields</span> Input</a>
+      <a class="page-tab is-active" href="checkbox.html"><span class="material-icons" aria-hidden="true">check_box</span> Checkbox</a>
+      <a class="page-tab" href="radio.html"><span class="material-icons" aria-hidden="true">radio_button_checked</span> Radio</a>
+      <a class="page-tab" href="badge.html"><span class="material-icons" aria-hidden="true">circle</span> Badge</a>
+      <span class="spacer"></span>
+      <a class="guide-link" href="guides/guide-components.md">Гайд: компоненты</a>
+      <a class="guide-link" href="guides/guide-prototyping.md">Гайд: прототипы</a>
+    </div>
 
-    <div class="card">
-      <div class="row">
-        <span class="row-label">Normal</span>
-        <label class="ds-checkbox">
-          <input type="checkbox" class="ds-checkbox__input" checked>
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-        <label class="ds-checkbox">
-          <input type="checkbox" class="ds-checkbox__input">
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-        <label class="ds-checkbox">
-          <input type="checkbox" class="ds-checkbox__input" id="cb-indet">
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Indeterminate</span>
-        </label>
+    <main>
+
+      <div class="page-head">
+        <h2>Checkbox</h2>
+        <p class="desc">Чекбокс. В Figma — страница «Checkbox»: компоненты Checkbox, Checkbox label, Checkbox group.
+        Варианты Normal / Error / Disable, типы Selected / Deselected / Indeterminate.
+        Иконки Material 20px, подставляются автоматически; indeterminate — <code>input.indeterminate = true</code>.</p>
       </div>
-      <div class="row">
-        <span class="row-label">Error</span>
-        <label class="ds-checkbox ds-checkbox--error">
-          <input type="checkbox" class="ds-checkbox__input" checked>
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-        <label class="ds-checkbox ds-checkbox--error">
-          <input type="checkbox" class="ds-checkbox__input">
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-      </div>
-      <div class="row">
-        <span class="row-label">Disable</span>
-        <label class="ds-checkbox ds-checkbox--disabled">
-          <input type="checkbox" class="ds-checkbox__input" checked disabled>
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-        <label class="ds-checkbox ds-checkbox--disabled">
-          <input type="checkbox" class="ds-checkbox__input" disabled>
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-      </div>
-      <div class="code-block">
-        <button class="copy-btn" data-copy="code-cb">Копировать</button>
-        <pre id="code-cb"><code>&lt;label class="ds-checkbox"&gt;
+
+      <!-- ===== Checkbox ===== -->
+      <section>
+        <h2>Checkbox</h2>
+
+        <div class="card">
+          <h3>Variant × Type</h3>
+          <div class="row">
+            <span class="row-label">Normal</span>
+            <label class="ds-checkbox">
+              <input type="checkbox" class="ds-checkbox__input" checked>
+              <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+              <span class="ds-checkbox__label">Checkbox label</span>
+            </label>
+            <label class="ds-checkbox">
+              <input type="checkbox" class="ds-checkbox__input">
+              <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+              <span class="ds-checkbox__label">Checkbox label</span>
+            </label>
+            <label class="ds-checkbox">
+              <input type="checkbox" class="ds-checkbox__input" id="cb-indet">
+              <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+              <span class="ds-checkbox__label">Indeterminate</span>
+            </label>
+          </div>
+          <div class="row">
+            <span class="row-label">Error</span>
+            <label class="ds-checkbox ds-checkbox--error">
+              <input type="checkbox" class="ds-checkbox__input" checked>
+              <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+              <span class="ds-checkbox__label">Checkbox label</span>
+            </label>
+            <label class="ds-checkbox ds-checkbox--error">
+              <input type="checkbox" class="ds-checkbox__input">
+              <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+              <span class="ds-checkbox__label">Checkbox label</span>
+            </label>
+          </div>
+          <div class="row">
+            <span class="row-label">Disable</span>
+            <label class="ds-checkbox ds-checkbox--disabled">
+              <input type="checkbox" class="ds-checkbox__input" checked disabled>
+              <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+              <span class="ds-checkbox__label">Checkbox label</span>
+            </label>
+            <label class="ds-checkbox ds-checkbox--disabled">
+              <input type="checkbox" class="ds-checkbox__input" disabled>
+              <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+              <span class="ds-checkbox__label">Checkbox label</span>
+            </label>
+          </div>
+          <div class="tokens-panel">
+            <div class="tokens-panel__title">Токены вида</div>
+            <div class="token-grid">
+              <span class="token-item"><span class="token-prop">size</span><code class="token-var">--ds-size-5x</code><span class="token-val token-val--text">20px · Material Icons</span></span>
+              <span class="token-item"><span class="token-prop">deselected</span><code class="token-var">--ds-color-icon-primary</code><span class="token-val" style="--token-sample:#616161"></span></span>
+              <span class="token-item"><span class="token-prop">selected</span><code class="token-var">--ds-color-text-accent</code><span class="token-val" style="--token-sample:#448AFF"></span></span>
+              <span class="token-item"><span class="token-prop">indeterminate</span><code class="token-var">--ds-color-text-accent</code><span class="token-val" style="--token-sample:#448AFF"></span></span>
+              <span class="token-item"><span class="token-prop">error</span><code class="token-var">--ds-color-text-negative</code><span class="token-val" style="--token-sample:#FF5252"></span></span>
+              <span class="token-item"><span class="token-prop">disabled</span><code class="token-var">--ds-color-text-disable</code><span class="token-val" style="--token-sample:#9E9E9E"></span></span>
+              <span class="token-item"><span class="token-prop">label</span><code class="token-var">--ds-color-text-primary</code><span class="token-val" style="--token-sample:#333333"></span></span>
+              <span class="token-item"><span class="token-prop">gap</span><code class="token-var">--ds-space-2x</code><span class="token-val token-val--text">8px</span></span>
+            </div>
+          </div>
+          <div class="code-block">
+            <button class="copy-btn" data-copy="code-cb">Копировать</button>
+            <pre id="code-cb"><code>&lt;label class="ds-checkbox"&gt;
   &lt;input type="checkbox" class="ds-checkbox__input" checked&gt;
   &lt;span class="ds-checkbox__box material-icons" aria-hidden="true"&gt;&lt;/span&gt;
   &lt;span class="ds-checkbox__label"&gt;Checkbox label&lt;/span&gt;
-&lt;/label&gt;
-
-&lt;!-- варианты: --error / --disabled
-     типы: checked / unchecked / indeterminate (JS) --&gt;</code></pre>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Checkbox label ===== -->
-  <section>
-    <h2>Checkbox label</h2>
-    <p class="desc">Чекбокс с лейблом и подписью Support/Error (в Figma — компонент Checkbox label).</p>
-
-    <div class="card">
-      <div class="row">
-        <div>
-          <label class="ds-checkbox">
-            <input type="checkbox" class="ds-checkbox__input" checked>
-            <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-            <span class="ds-checkbox__label">Checkbox label</span>
-          </label>
-          <span class="ds-checkbox__support">Support text</span>
+&lt;/label&gt;</code></pre>
+          </div>
         </div>
-        <div>
-          <label class="ds-checkbox ds-checkbox--error">
-            <input type="checkbox" class="ds-checkbox__input">
-            <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-            <span class="ds-checkbox__label">Checkbox label</span>
-          </label>
-          <span class="ds-checkbox__support">Support/Error text</span>
+      </section>
+
+      <!-- ===== Checkbox label ===== -->
+      <section>
+        <h2>Checkbox label</h2>
+        <p class="desc">Чекбокс с лейблом и подписью Support/Error.</p>
+
+        <div class="card">
+          <div class="row">
+            <div>
+              <label class="ds-checkbox">
+                <input type="checkbox" class="ds-checkbox__input" checked>
+                <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+                <span class="ds-checkbox__label">Checkbox label</span>
+              </label>
+              <span class="ds-checkbox__support">Support text</span>
+            </div>
+            <div>
+              <label class="ds-checkbox ds-checkbox--error">
+                <input type="checkbox" class="ds-checkbox__input">
+                <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+                <span class="ds-checkbox__label">Checkbox label</span>
+              </label>
+              <span class="ds-checkbox__support">Support/Error text</span>
+            </div>
+            <div>
+              <label class="ds-checkbox ds-checkbox--disabled">
+                <input type="checkbox" class="ds-checkbox__input" checked disabled>
+                <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+                <span class="ds-checkbox__label">Checkbox label</span>
+              </label>
+              <span class="ds-checkbox__support">Support text</span>
+            </div>
+          </div>
+          <div class="tokens-panel">
+            <div class="tokens-panel__title">Токены подписи</div>
+            <div class="token-grid">
+              <span class="token-item"><span class="token-prop">support</span><code class="token-var">--ds-color-text-secondary</code><span class="token-val" style="--token-sample:#616161"></span></span>
+              <span class="token-item"><span class="token-prop">error text</span><code class="token-var">--ds-color-text-negative</code><span class="token-val" style="--token-sample:#FF5252"></span></span>
+              <span class="token-item"><span class="token-prop">font</span><code class="token-var">--ds-typography-font-size-3x</code><span class="token-val token-val--text">12px</span></span>
+              <span class="token-item"><span class="token-prop">label font</span><code class="token-var">--ds-typography-font-size-3-5x</code><span class="token-val token-val--text">14px · ls 0.25px</span></span>
+            </div>
+          </div>
         </div>
-        <div>
-          <label class="ds-checkbox ds-checkbox--disabled">
-            <input type="checkbox" class="ds-checkbox__input" checked disabled>
-            <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-            <span class="ds-checkbox__label">Checkbox label</span>
-          </label>
-          <span class="ds-checkbox__support">Support text</span>
+      </section>
+
+      <!-- ===== Checkbox group ===== -->
+      <section>
+        <h2>Checkbox group</h2>
+        <p class="desc">Группа чекбоксов: вертикально (gap 8px) и горизонтально (gap 32px).</p>
+
+        <div class="card">
+          <h3>Вертикально</h3>
+          <div class="ds-checkbox-group ds-checkbox-group--vertical">
+            <label class="ds-checkbox">
+              <input type="checkbox" class="ds-checkbox__input" checked>
+              <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+              <span class="ds-checkbox__label">Checkbox label</span>
+            </label>
+            <label class="ds-checkbox">
+              <input type="checkbox" class="ds-checkbox__input">
+              <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+              <span class="ds-checkbox__label">Checkbox label</span>
+            </label>
+            <label class="ds-checkbox">
+              <input type="checkbox" class="ds-checkbox__input">
+              <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+              <span class="ds-checkbox__label">Checkbox label</span>
+            </label>
+          </div>
+          <h3 style="margin-top:24px">Горизонтально</h3>
+          <div class="ds-checkbox-group ds-checkbox-group--horizontal">
+            <label class="ds-checkbox">
+              <input type="checkbox" class="ds-checkbox__input" checked>
+              <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+              <span class="ds-checkbox__label">Checkbox label</span>
+            </label>
+            <label class="ds-checkbox">
+              <input type="checkbox" class="ds-checkbox__input">
+              <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+              <span class="ds-checkbox__label">Checkbox label</span>
+            </label>
+            <label class="ds-checkbox">
+              <input type="checkbox" class="ds-checkbox__input">
+              <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+              <span class="ds-checkbox__label">Checkbox label</span>
+            </label>
+          </div>
+          <div class="tokens-panel">
+            <div class="tokens-panel__title">Токены группы</div>
+            <div class="token-grid">
+              <span class="token-item"><span class="token-prop">vertical gap</span><code class="token-var">--ds-space-2x</code><span class="token-val token-val--text">8px</span></span>
+              <span class="token-item"><span class="token-prop">horizontal gap</span><code class="token-var">--ds-space-8x</code><span class="token-val token-val--text">32px</span></span>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- ===== Checkbox group ===== -->
-  <section>
-    <h2>Checkbox group</h2>
-    <p class="desc">Группа чекбоксов (в Figma — компонент Checkbox group, Orientation × Slot).</p>
+    </main>
 
-    <div class="card">
-      <h3>Вертикально · gap 8px</h3>
-      <div class="ds-checkbox-group ds-checkbox-group--vertical">
-        <label class="ds-checkbox">
-          <input type="checkbox" class="ds-checkbox__input" checked>
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-        <label class="ds-checkbox">
-          <input type="checkbox" class="ds-checkbox__input">
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-        <label class="ds-checkbox">
-          <input type="checkbox" class="ds-checkbox__input">
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-      </div>
-      <h3 style="margin-top:24px">Горизонтально · gap 32px</h3>
-      <div class="ds-checkbox-group ds-checkbox-group--horizontal">
-        <label class="ds-checkbox">
-          <input type="checkbox" class="ds-checkbox__input" checked>
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-        <label class="ds-checkbox">
-          <input type="checkbox" class="ds-checkbox__input">
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-        <label class="ds-checkbox">
-          <input type="checkbox" class="ds-checkbox__input">
-          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
-          <span class="ds-checkbox__label">Checkbox label</span>
-        </label>
-      </div>
-      <div class="code-block">
-        <button class="copy-btn" data-copy="code-cb-group">Копировать</button>
-        <pre id="code-cb-group"><code>&lt;div class="ds-checkbox-group ds-checkbox-group--vertical"&gt;
-  &lt;label class="ds-checkbox"&gt;…&lt;/label&gt;
-  &lt;label class="ds-checkbox"&gt;…&lt;/label&gt;
-&lt;/div&gt;
+  </div>
 
-&lt;!-- ориентация: --vertical (gap 8px) / --horizontal (gap 32px) --&gt;</code></pre>
-      </div>
-    </div>
-  </section>
+</div>
 
-</main>
-
+<script src="sidebar.js"></script>
 <script>
   document.getElementById('cb-indet').indeterminate = true;
   document.querySelectorAll('.copy-btn').forEach(function (btn) {
