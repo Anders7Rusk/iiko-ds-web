@@ -78,8 +78,8 @@
 
 ## Где взять файлы
 
-- Витрина и компоненты: [ссылка на GitHub Pages]
-- Исходники: репозиторий библиотеки (tokens.css, components/, guides/)
+- Витрина и компоненты: https://anders7rusk.github.io/iiko-ds-web/
+- Исходники: https://github.com/Anders7Rusk/iiko-ds-web (tokens.css, components/, guides/)
 
 ## Показ коллегам
 
