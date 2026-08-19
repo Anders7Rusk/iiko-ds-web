@@ -538,10 +538,10 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 }
 /* радиус — по углам карточки */
 .pf-r { top: 8px; }
-#pf-r-tl { left: 8px; }
-#pf-r-tr { right: 8px; }
-#pf-r-bl { bottom: 8px; left: 8px; top: auto; }
-#pf-r-br { bottom: 8px; right: 8px; top: auto; }
+#pf-r-tl, #vc-r-tl { left: 8px; }
+#pf-r-tr, #vc-r-tr { right: 8px; }
+#pf-r-bl, #vc-r-bl { bottom: 8px; left: 8px; top: auto; }
+#pf-r-br, #vc-r-br { bottom: 8px; right: 8px; top: auto; }
 /* border-width — по серединам сторон карточки */
 .pf-bw--t { top: 8px; left: 50%; transform: translateX(-50%); }
 .pf-bw--b { bottom: 8px; left: 50%; transform: translateX(-50%); }
