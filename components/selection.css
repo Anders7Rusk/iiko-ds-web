@@ -98,6 +98,17 @@
   color: var(--ds-color-text-disable);            /* #9E9E9E */
 }
 
+/* ── Группа контролов (Checkbox group / Radio button group) ─ */
+
+.ds-checkbox-group,
+.ds-radio-group {
+  display: flex;
+}
+.ds-checkbox-group--vertical,
+.ds-radio-group--vertical { flex-direction: column; gap: var(--ds-space-2x); }  /* 8px */
+.ds-checkbox-group--horizontal,
+.ds-radio-group--horizontal { flex-direction: row; gap: var(--ds-space-8x); }  /* 32px */
+
 /* ── Подпись под контролом (Support/Error text) ──────────── */
 
 .ds-checkbox__support,
