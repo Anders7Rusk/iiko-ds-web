@@ -1378,12 +1378,6 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   padding: 10px 16px;
   border-bottom: 1px solid #f3f4f6;
 }
-.cc-head-right {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.cc-head-right .po-label { margin: 0; }
 .cc-tabs {
   display: flex;
   gap: 2px;
