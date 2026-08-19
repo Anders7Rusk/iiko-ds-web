@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=36">
-<link rel="stylesheet" href="components/button.css?v=36">
-<link rel="stylesheet" href="components/badge.css?v=36">
-<link rel="stylesheet" href="showcase.css?v=36">
+<link rel="stylesheet" href="tokens.css?v=37">
+<link rel="stylesheet" href="components/button.css?v=37">
+<link rel="stylesheet" href="components/badge.css?v=37">
+<link rel="stylesheet" href="showcase.css?v=37">
 </head>
 <body>
 
@@ -913,6 +913,7 @@ function matrixBtn(style, type, size, state) {
     TYPES.forEach(function (t) { html += '<span class="matrix-head">' + t + '</span>'; });
     SIZES.forEach(function (size) {
       html += '<span class="matrix-rowlabel">' + BTN.sizes[size].label + '</span>';
+      html += '<span class="matrix-rowlabel" style="font-size:10px;color:#c4c4cc">default</span>';
       TYPES.forEach(function (t) {
         html += '<span class="matrix-cell">' + matrixBtn(style, t, size, 'default') + '</span>';
       });
@@ -1358,6 +1359,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=36"></script>
+<script src="sidebar.js?v=37"></script>
 </body>
 </html>
