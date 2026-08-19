@@ -1442,7 +1442,6 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 }
 /* инспектор в «Вариантах» (правая колонка матрицы) — без внешних отступов */
 .component-code--inspector { margin: 0; }
-.component-code--inspector .po-label { font-size: 11px; white-space: nowrap; }
 .cc-head {
   display: flex;
   align-items: center;
@@ -1500,15 +1499,21 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   color: #4b5563;
   overflow-x: auto;
 }
-#cc-html .po-css__code, #cc-css .po-css__code { white-space: pre; }
-#cc-html .c-tag { color: #2563eb; }
-#cc-html .c-attr { color: #9333ea; }
-#cc-html .c-str { color: #16a34a; }
-#cc-css .c-key { color: #1f2937; }
-#cc-css .c-var { color: #9333ea; }
-#cc-css .c-val { color: #db2777; }
+#cc-html .po-css__code, #cc-css .po-css__code,
+#vc-html .po-css__code, #vc-css .po-css__code {
+  white-space: pre;
+  font-family: 'Roboto Mono', ui-monospace, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.625;
+}
+#cc-html .c-tag, #vc-html .c-tag { color: #2563eb; }
+#cc-html .c-attr, #vc-html .c-attr { color: #9333ea; }
+#cc-html .c-str, #vc-html .c-str { color: #16a34a; }
+#cc-css .c-key, #vc-css .c-key { color: #1f2937; }
+#cc-css .c-var, #vc-css .c-var { color: #9333ea; }
+#cc-css .c-val, #vc-css .c-val { color: #db2777; }
 /* Tokens-панель: инспектор */
-#cc-tokens .po-title-row { margin: 0; }
+#cc-tokens .po-title-row, #vc-tokens .po-title-row { margin: 0; }
 
 /* ── Каталог (index) ─────────────────────────────────────── */
 
