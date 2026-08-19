@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=15">
-<link rel="stylesheet" href="components/button.css?v=15">
-<link rel="stylesheet" href="components/badge.css?v=15">
-<link rel="stylesheet" href="showcase.css?v=15">
+<link rel="stylesheet" href="tokens.css?v=16">
+<link rel="stylesheet" href="components/button.css?v=16">
+<link rel="stylesheet" href="components/badge.css?v=16">
+<link rel="stylesheet" href="showcase.css?v=16">
 </head>
 <body>
 
@@ -69,7 +69,12 @@
                     </button>
                   </div>
                   <div class="po-title-row">
-                    <div class="po-title">COMPONENT INSPECT TOKEN</div>
+                    <div class="po-title-wrap">
+                      <div class="po-title" id="po-title">COMPONENT INSPECT TOKEN</div>
+                      <button class="po-copy" id="po-copy" type="button" title="Copy CSS" aria-label="Copy CSS" style="display:none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                      </button>
+                    </div>
                     <div class="po-label" id="po-label">button / neutral / filled / default</div>
                   </div>
                   <div class="po-figure">
@@ -1188,6 +1193,7 @@ function fillPopover() {
   if (type === 'outlined') lines.push('border: 1px solid var(' + vars.border + ', ' + colors.border + ');');
   lines.push('box-shadow: ' + shadow + ';');
   lines.push('color: var(' + vars.label + ', ' + colors.label + ');');
+  lastCssLines = lines;
   document.getElementById('po-css').innerHTML = renderCss(lines);
 }
 
@@ -1213,7 +1219,8 @@ document.addEventListener('click', function (e) {
     setPreviewMode(false);
   }
 });
-// сегменты Tokens / CSS
+// сегменты Tokens / CSS — шапка инспектора меняется по вкладке (как в оригинале)
+var lastCssLines = [];
 document.querySelectorAll('#props-popover .po-seg button').forEach(function (btn) {
   btn.addEventListener('click', function () {
     document.querySelectorAll('#props-popover .po-seg button').forEach(function (b) { b.classList.remove('is-active'); });
@@ -1221,8 +1228,42 @@ document.querySelectorAll('#props-popover .po-seg button').forEach(function (btn
     var isCss = btn.dataset.view === 'css';
     document.getElementById('po-tokens').style.display = isCss ? 'none' : 'block';
     document.getElementById('po-css').style.display = isCss ? 'block' : 'none';
+    // шапка: Tokens → «COMPONENT INSPECT TOKEN» + подпись; CSS → «Layout» + copy + «CSS»
+    var title = document.getElementById('po-title');
+    var label = document.getElementById('po-label');
+    var copy = document.getElementById('po-copy');
+    if (isCss) {
+      title.textContent = 'Layout';
+      label.textContent = 'CSS';
+      copy.style.display = 'inline-flex';
+    } else {
+      title.textContent = 'COMPONENT INSPECT TOKEN';
+      label.textContent = 'button / ' + selVal('style') + ' / ' + selVal('type') + ' / ' + selVal('state');
+      copy.style.display = 'none';
+    }
   });
 });
+document.getElementById('po-copy').addEventListener('click', function () {
+  var text = lastCssLines.join('\n');
+  function done() {
+    var copy = document.getElementById('po-copy');
+    copy.classList.add('copied');
+    setTimeout(function () { copy.classList.remove('copied'); }, 1500);
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(function () { fallbackCopy(text); done(); });
+  } else { fallbackCopy(text); done(); }
+});
+function fallbackCopy(text) {
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); } catch (e) {}
+  document.body.removeChild(ta);
+}
 
 document.getElementById('demo-loader').addEventListener('click', function () {
   var btn = this;
@@ -1259,6 +1300,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=15"></script>
+<script src="sidebar.js?v=16"></script>
 </body>
 </html>
