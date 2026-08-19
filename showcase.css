@@ -1365,7 +1365,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   margin: 12px 16px 0;
 }
 .component-code {
-  margin: 8px 16px 0;
+  margin: 8px 16px 16px;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   overflow: hidden;
