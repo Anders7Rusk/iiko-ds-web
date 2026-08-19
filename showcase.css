@@ -100,7 +100,9 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 32px;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  padding: 10px 24px;
   background: #ffffff;
   border-bottom: 1px solid var(--showcase-border);
   position: sticky;
@@ -117,6 +119,7 @@ body {
   font-weight: 500;
   color: var(--showcase-text-secondary);
   text-decoration: none;
+  white-space: nowrap;
 }
 .canvas-head .page-tab:hover { background: var(--showcase-bg); color: #333333; }
 .canvas-head .page-tab.is-active { background: #f0f5ff; color: #448aff; }
@@ -128,6 +131,7 @@ body {
   text-decoration: none;
   padding: 6px 10px;
   border-radius: 6px;
+  white-space: nowrap;
 }
 .canvas-head .guide-link:hover { background: var(--showcase-bg); }
 
@@ -168,7 +172,23 @@ body {
 /* ── Контент ─────────────────────────────────────────────── */
 
 main { max-width: 1200px; margin: 0 auto; padding: 24px 32px 64px; }
-.layout__main main { max-width: none; padding: 28px 40px 80px; }
+.layout__main main { max-width: none; padding: 28px 32px 80px; }
+
+/* ── Адаптив: на узких экранах сайдбар уходит наверх ─────── */
+
+@media (max-width: 1020px) {
+  .layout { flex-direction: column; }
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    max-height: 42vh;
+    overflow-y: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--showcase-border);
+  }
+  .canvas-head { top: 0; }
+}
 .page-head { margin-bottom: 24px; }
 .page-head .crumbs { color: var(--showcase-text-secondary); font-size: 12px; margin: 0 0 4px; }
 .page-head h2 { font-size: 28px; font-weight: 500; margin: 0 0 4px; }
