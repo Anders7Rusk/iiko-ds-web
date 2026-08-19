@@ -501,6 +501,33 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .anatomy-visual { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
 .anatomy-item { display: flex; flex-direction: column; gap: 8px; }
 .anatomy-item .anatomy-name { font-size: 13px; font-weight: 500; color: var(--muted-fg); }
+
+/* Анатомия: таблица Normal | Compact (как Figma Site) */
+.anatomy-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  max-width: 680px;
+}
+.anatomy-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.anatomy-col-title { font-size: 15px; font-weight: 600; color: var(--text); }
+.anatomy-state { font-size: 13px; color: var(--muted-fg); }
+.anatomy-pad-h { display: flex; align-items: center; gap: 8px; }
+.anatomy-pad-v { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.anatomy-size-label {
+  font-size: 12px;
+  color: var(--muted-fg);
+  background: #e8f0ff;
+  border-radius: 6px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
 .anatomy-measure { display: flex; align-items: center; gap: 8px; }
 .anatomy-measure .measure-label {
   font-size: 12px;
