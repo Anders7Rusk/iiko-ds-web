@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=43">
-<link rel="stylesheet" href="components/button.css?v=43">
-<link rel="stylesheet" href="components/badge.css?v=43">
-<link rel="stylesheet" href="showcase.css?v=43">
+<link rel="stylesheet" href="tokens.css?v=44">
+<link rel="stylesheet" href="components/button.css?v=44">
+<link rel="stylesheet" href="components/badge.css?v=44">
+<link rel="stylesheet" href="showcase.css?v=44">
 </head>
 <body>
 
@@ -908,8 +908,10 @@ function matrixBtn(style, type, size, state) {
   ['neutral', 'accent', 'positive', 'warning', 'negative', 'disable'].forEach(function (style) {
     html += '<div class="matrix-block">';
     html += '<div class="matrix-headwrap"><h3 class="matrix-title">' + BTN.styles[style].label + '</h3></div>';
+    // размеры в строчку (как в Figma): M | S | XS
+    html += '<div class="matrix-sizes">';
     SIZES.forEach(function (size) {
-      // секция размера (M / S / XS) — вертикально: заголовок + карточка
+      // колонка размера (M / S / XS): заголовок + карточка
       html += '<div class="matrix-size">';
       html += '<div class="matrix-size__title">' + BTN.sizes[size].label + '</div>';
       html += '<div class="matrix-card">';
@@ -927,11 +929,13 @@ function matrixBtn(style, type, size, state) {
       html += '</div></div></div>';
     });
     html += '</div>';
+    html += '</div>';
   });
 
   // Loader
   html += '<div class="matrix-block">';
   html += '<div class="matrix-headwrap"><h3 class="matrix-title">Loader</h3></div>';
+  html += '<div class="matrix-sizes">';
   SIZES.forEach(function (size) {
     html += '<div class="matrix-size">';
     html += '<div class="matrix-size__title">' + BTN.sizes[size].label + '</div>';
@@ -944,7 +948,7 @@ function matrixBtn(style, type, size, state) {
     html += '<span></span><span></span>';
     html += '</div></div></div>';
   });
-  html += '</div>';
+  html += '</div></div>';
 
   root.innerHTML = html;
 
@@ -1351,6 +1355,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=43"></script>
+<script src="sidebar.js?v=44"></script>
 </body>
 </html>
