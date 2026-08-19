@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=34">
-<link rel="stylesheet" href="components/button.css?v=34">
-<link rel="stylesheet" href="components/badge.css?v=34">
-<link rel="stylesheet" href="showcase.css?v=34">
+<link rel="stylesheet" href="tokens.css?v=35">
+<link rel="stylesheet" href="components/button.css?v=35">
+<link rel="stylesheet" href="components/badge.css?v=35">
+<link rel="stylesheet" href="showcase.css?v=35">
 </head>
 <body>
 
@@ -233,39 +233,45 @@
         <div class="comp-panel" id="tab-variants">
 
         <section>
+          <p class="matrix-caption">Интерактивная матрица</p>
+          <p class="desc">Нажмите на любую кнопку в таблице ниже, чтобы увидеть подробную информацию о используемых дизайн-токенах для этого состояния.</p>
           <h2>Варианты компонента</h2>
-          <p class="desc">Интерактивная матрица: нажмите на любую кнопку, чтобы увидеть дизайн-токены этого состояния в инспекторе справа.</p>
           <div class="card">
             <div class="matrix-layout">
               <div id="matrix-root"></div>
 
               <div class="inspector" id="inspector">
                 <div class="inspector__header">
-                  <div class="inspector__seg">
-                    <button class="is-active" data-view="tokens">Tokens</button>
-                    <button data-view="css">CSS</button>
+                  <div class="inspector__tabs" role="tablist">
+                    <button class="is-active" data-iv="html" role="tab">HTML</button>
+                    <button data-iv="css" role="tab">CSS</button>
+                    <button data-iv="tokens" role="tab">TOKENS</button>
                   </div>
-                  <div class="inspector__title-row">
-                    <div class="inspector__title">COMPONENT INSPECT TOKEN</div>
-                    <div class="inspector__label" id="inspector-label">—</div>
-                  </div>
+                  <button class="inspector__copy" id="ins-copy" type="button" title="Copy code" aria-label="Copy code">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                  </button>
                 </div>
-                <div class="inspector__props">
-                  <div class="prop-figure">
-                    <span class="pf-label pf-top">8</span>
-                    <span class="pf-label pf-bottom">8</span>
-                    <span class="pf-label pf-left">12</span>
-                    <span class="pf-label pf-right">12</span>
-                    <span class="pf-radius-label">8</span>
-                    <span class="pf-btn-wrap">
-                      <span class="mini-btn" id="insp-mini-btn"><span class="mini-btn__label">Label</span><span class="pf-label-text">Label × 20</span></span>
-                    </span>
-                  </div>
+                <div class="inspector__title-row">
+                  <div class="inspector__title" id="ins-title">HTML</div>
+                  <div class="inspector__label" id="inspector-label">—</div>
                 </div>
                 <div class="inspector__body">
                   <div class="inspector__empty" id="inspector-empty">Выберите вариант в матрице — инспектор покажет дизайн-токены этого состояния</div>
 
+                  <div id="inspector-html" style="display:none"></div>
+                  <div id="inspector-css" style="display:none"></div>
+
                   <div id="inspector-tokens" style="display:none">
+                    <div class="prop-figure">
+                      <span class="pf-label pf-top">8</span>
+                      <span class="pf-label pf-bottom">8</span>
+                      <span class="pf-label pf-left">12</span>
+                      <span class="pf-label pf-right">12</span>
+                      <span class="pf-radius-label">8</span>
+                      <span class="pf-btn-wrap">
+                        <span class="mini-btn" id="insp-mini-btn"><span class="mini-btn__label">Label</span><span class="pf-label-text">Label × 20</span></span>
+                      </span>
+                    </div>
                     <div class="insp-section"><h4>Layout</h4>
                       <div class="insp-row"><span class="prop">height</span><span class="var" id="ins-h-var"></span><span class="val" id="ins-h-val"></span></div>
                       <div class="insp-row"><span class="prop">padding</span><span class="var" id="ins-pad-var"></span><span class="val" id="ins-pad-val"></span></div>
@@ -285,8 +291,6 @@
                       </div>
                     </div>
                   </div>
-
-                  <div id="inspector-css" style="display:none"><pre class="insp-css" id="ins-css"></pre></div>
                 </div>
               </div>
             </div>
@@ -858,28 +862,29 @@ renderStage();
 /* ============================================================
    Матрица вариантов
    ============================================================ */
-var TYPES = ['Filled', 'Outlined', 'Text'];
+var TYPES = ['filled', 'outlined', 'text'];
 var SIZES = ['m', 's'];
 var STATES = ['default', 'hover', 'press'];
 var STATE_LABEL = { default: 'Default', hover: 'Hover', press: 'Press' };
 var selectedBtn = null;
 
 function matrixBtn(style, type, size, state) {
-  var colors = BTN.colors[style][type.toLowerCase()][state];
-  var cls = 'ds-btn ds-btn--' + size + ' ds-btn--' + style + ' ds-btn--' + type.toLowerCase();
+  var colors = BTN.colors[style][type][state];
+  var cls = 'ds-btn ds-btn--' + size + ' ds-btn--' + style + ' ds-btn--' + type;
   var styleAttr = 'background:' + colors.bg + ';border-color:' + colors.border + ';color:' + colors.label + ';';
-  return '<button class="' + cls + ' matrix-btn" data-style="' + style + '" data-type="' + type.toLowerCase() +
-         '" data-size="' + size + '" data-state="' + state + '" style="' + styleAttr + '">' +
+  var dis = state === 'disable' ? ' disabled' : '';
+  return '<button class="' + cls + ' matrix-btn" data-style="' + style + '" data-type="' + type +
+         '" data-size="' + size + '" data-state="' + state + '" style="' + styleAttr + '"' + dis + '>' +
          '<span class="ds-btn__label">Button</span></button>';
 }
 
 (function buildMatrix() {
   var root = document.getElementById('matrix-root');
   var html = '';
-  Object.keys(BTN.styles).forEach(function (style) {
+  // порядок блоков — как в Figma: Neutral, Accent, Positive, Warning, Negative, Disable
+  ['neutral', 'accent', 'positive', 'warning', 'negative', 'disable'].forEach(function (style) {
     html += '<div class="matrix-block">';
-    html += '<div class="matrix-title">' + BTN.styles[style].label + ' <span class="chip">' +
-            (style === 'disable' ? 'только Disabled' : 'Filled · Outlined · Text × normal/compact × Default/Hover/Press') + '</span></div>';
+    html += '<div class="matrix-title">' + BTN.styles[style].label + '</div>';
     html += '<div class="matrix-grid">';
     html += '<span></span>';
     TYPES.forEach(function (t) { html += '<span class="matrix-head">' + t + '</span>'; });
@@ -900,23 +905,21 @@ function matrixBtn(style, type, size, state) {
     html += '</div></div>';
   });
 
-  // Disabled
+  // Disabled (состояние) — как в оригинале: только filled, disabled-кнопки
   html += '<div class="matrix-block">';
-  html += '<div class="matrix-title">Disabled <span class="chip">Filled · Outlined · Text × normal/compact</span></div>';
+  html += '<div class="matrix-title">Disabled</div>';
   html += '<div class="matrix-grid">';
-  html += '<span></span>';
-  TYPES.forEach(function (t) { html += '<span class="matrix-head">' + t + '</span>'; });
+  html += '<span></span><span class="matrix-head">filled</span><span></span><span></span>';
   SIZES.forEach(function (size) {
     html += '<span class="matrix-rowlabel">' + (size === 'm' ? 'normal' : 'compact') + '</span>';
-    TYPES.forEach(function (t) {
-      html += '<span class="matrix-cell">' + matrixBtn('disable', t, size, 'disable') + '</span>';
-    });
+    html += '<span class="matrix-cell">' + matrixBtn('neutral', 'filled', size, 'disable') + '</span>';
+    html += '<span></span><span></span>';
   });
   html += '</div></div>';
 
   // Loader
   html += '<div class="matrix-block">';
-  html += '<div class="matrix-title">Loader <span class="chip">Filled × normal/compact</span></div>';
+  html += '<div class="matrix-title">Loader</div>';
   html += '<div class="matrix-grid">';
   html += '<span></span><span class="matrix-head">Filled</span><span></span><span></span>';
   SIZES.forEach(function (size) {
@@ -940,15 +943,23 @@ function matrixBtn(style, type, size, state) {
 })();
 
 function fillInspector(d) {
-  var colors = BTN.colors[d.style][d.type][d.state];
+  var colors = BTN.colors[d.style][d.type][d.state] || BTN.colors[d.style][d.type]['default'];
   var vars = BTN.vars(d.style, d.type, d.state);
   var sz = BTN.sizes[d.size];
-  var label = BTN.styles[d.style].label + ' / ' + d.type + ' / ' +
-              (d.size === 'm' ? 'normal' : 'compact') + ' / ' + STATE_LABEL[d.state];
-  document.getElementById('inspector-label').textContent =
-    'button / ' + d.style + ' / ' + d.type + ' / ' + d.state;
 
-  // Layout
+  // подпись — единый формат с блоком «Компонент»: button / SIZE / style / type / state
+  document.getElementById('inspector-label').textContent =
+    'button / ' + d.size.toUpperCase() + ' / ' + d.style + ' / ' + d.type + ' / ' + d.state;
+
+  // HTML-панель
+  var htmlCode = '<button class="ds-btn ds-btn--' + d.size + ' ds-btn--' + d.style + ' ds-btn--' + d.type + '"' +
+                 (d.state === 'disable' ? ' disabled' : '') + '>\n' +
+                 '  <span class="ds-btn__label">Button</span>\n' +
+                 '</button>';
+  document.getElementById('inspector-html').innerHTML = renderHtml(htmlCode.split('\n'));
+  lastInspHtml = htmlCode.split('\n');
+
+  // Tokens: Layout
   var hVar = { xs: '--ds-size-6x', s: '--ds-size-7x', m: '--ds-size-9x' }[d.size];
   setRow('ins-h-var', hVar, sz.height + 'px');
   var padVar = d.size === 'm' ? '--ds-space-3x' : d.size === 's' ? '--ds-space-2x' : '--ds-space-1-5x';
@@ -956,44 +967,44 @@ function fillInspector(d) {
   setRow('ins-pad-var', padVar + ' / ' + '--ds-space-2x', padVal + ' / 8px');
   setRow('ins-gap-var', '--ds-space-2x', '8px');
 
-  // Style
+  // Tokens: Style
   setRow('ins-r-var', '--ds-radius-2x', '8px');
   setRowColor('ins-bg-var', 'ins-bg-val', 'ins-bg-swatch', vars.bg, colors.bg);
-  // Colors
+  // Tokens: Colors
   setRowColor('ins-cbg-var', 'ins-cbg-val', 'ins-cbg-swatch', vars.bg, colors.bg);
   setRowColor('ins-ctl-var', 'ins-ctl-val', 'ins-ctl-swatch', vars.label, colors.label);
 
-  // CSS
-  var cssSel = '.ds-btn--' + d.size + '.ds-btn--' + d.style + '.ds-btn--' + d.type;
-  document.getElementById('ins-css').textContent =
-    cssSel + ' {\n' +
-    '  height: var(' + hVar + ', ' + sz.height + 'px);\n' +
-    '  padding: var(' + padVar + ', ' + padVal + ') var(--ds-space-2x, 8px);\n' +
-    '  gap: var(--ds-space-2x, 8px);\n' +
-    '  border: 1px solid ' + (colors.border === 'transparent' ? 'transparent' : 'var(' + vars.border + ', ' + colors.border + ')') + ';\n' +
-    '  border-radius: var(--ds-radius-2x, 8px);\n' +
-    '  background: var(' + vars.bg + ', ' + colors.bg + ');\n' +
-    '  color: var(' + vars.label + ', ' + colors.label + ');\n' +
-    '  font: var(--ds-typography-font-size-3-5x, 14px) / var(--ds-typography-font-weight-medium, 500) Roboto;\n' +
-    '  box-shadow: none;\n' +
-    '}';
-
-  // мини-кнопка в шапке инспектора — в цветах выбранного варианта
+  // мини-кнопка в фигуре — в цветах выбранного варианта
   var mini = document.getElementById('insp-mini-btn');
-  var mc = BTN.colors[d.style][d.type][d.state];
+  var mc = BTN.colors[d.style][d.type][d.state] || BTN.colors[d.style][d.type]['default'];
   mini.style.background = mc.bg;
   mini.style.border = (mc.border && mc.border !== 'transparent') ? '1px solid ' + mc.border : '1px solid transparent';
   mini.style.color = mc.label;
 
-  // показать панель
+  // CSS-панель — единый формат с блоком «Компонент» (9 строк с var-токенами)
+  var pyVar = d.size === 'm' ? '--ds-space-2x' : '--ds-space-1x';
+  var pyVal = d.size === 'm' ? '8px' : '4px';
+  var gapVar = d.size === 'm' ? '--ds-space-2x' : '--ds-space-1x';
+  var gapVal = d.size === 'm' ? '8px' : '4px';
+  var shadow = d.type === 'text' ? 'none' : '0px 2px 2px #E0E0E0...';
+  var lines = [
+    'display: inline-flex;',
+    'padding: var(' + pyVar + ', ' + pyVal + ') var(' + padVar + ', ' + padVal + ');',
+    'justify-content: center;',
+    'align-items: center;',
+    'gap: var(' + gapVar + ', ' + gapVal + ');',
+    'border-radius: var(--ds-radius-2x, 8px);',
+    'background: var(' + vars.bg + ', ' + colors.bg + ');'
+  ];
+  if (d.type === 'outlined') lines.push('border: 1px solid var(' + vars.border + ', ' + colors.border + ');');
+  lines.push('box-shadow: ' + shadow + ';');
+  lines.push('color: var(' + vars.label + ', ' + colors.label + ');');
+  lastInspCss = lines;
+  document.getElementById('inspector-css').innerHTML = renderCss(lines);
+
+  // показать активную панель
   document.getElementById('inspector-empty').style.display = 'none';
-  document.getElementById('inspector-tokens').style.display = 'block';
-  document.getElementById('inspector-css').style.display = 'none';
-  var activeView = document.querySelector('.inspector__seg button.is-active');
-  if (activeView && activeView.dataset.view === 'css') {
-    document.getElementById('inspector-tokens').style.display = 'none';
-    document.getElementById('inspector-css').style.display = 'block';
-  }
+  showInspPanel(insActive);
 }
 
 function setRow(varId, varName, val) {
@@ -1007,15 +1018,38 @@ function setRowColor(varId, valId, swId, varName, val) {
   if (sw) sw.style.setProperty('--swatch', val);
 }
 
-// переключатель Tokens / CSS в инспекторе
-document.querySelectorAll('.inspector__seg button').forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    document.querySelectorAll('.inspector__seg button').forEach(function (b) { b.classList.remove('is-active'); });
-    btn.classList.add('is-active');
-    var isCss = btn.dataset.view === 'css';
-    document.getElementById('inspector-tokens').style.display = isCss ? 'none' : 'block';
-    document.getElementById('inspector-css').style.display = isCss ? 'block' : 'none';
+// вкладки HTML | CSS | TOKENS в инспекторе «Вариантов»
+var insActive = 'html';
+var lastInspHtml = [];
+var lastInspCss = [];
+function showInspPanel(view) {
+  ['html', 'css', 'tokens'].forEach(function (v) {
+    document.getElementById('inspector-' + v).style.display = (v === view) ? 'block' : 'none';
   });
+  // заголовок = название активной вкладки (как в «Компоненте»)
+  document.getElementById('ins-title').textContent = view === 'tokens' ? 'TOKENS' : view.toUpperCase();
+  // иконка копирования — только для HTML/CSS
+  document.getElementById('ins-copy').style.display = (view === 'tokens') ? 'none' : 'inline-flex';
+}
+document.querySelectorAll('.inspector__tabs button').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('.inspector__tabs button').forEach(function (b) { b.classList.remove('is-active'); });
+    btn.classList.add('is-active');
+    insActive = btn.dataset.iv;
+    showInspPanel(insActive);
+  });
+});
+// копирование активной вкладки
+document.getElementById('ins-copy').addEventListener('click', function () {
+  var text = insActive === 'html' ? lastInspHtml.join('\n') : lastInspCss.join('\n');
+  function done() {
+    var copy = document.getElementById('ins-copy');
+    copy.classList.add('copied');
+    setTimeout(function () { copy.classList.remove('copied'); }, 1500);
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(function () { fallbackCopy(text); done(); });
+  } else { fallbackCopy(text); done(); }
 });
 
 /* ============================================================
@@ -1294,6 +1328,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=34"></script>
+<script src="sidebar.js?v=35"></script>
 </body>
 </html>
