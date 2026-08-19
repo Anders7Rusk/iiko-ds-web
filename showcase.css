@@ -259,9 +259,10 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 /* ── Табы страницы компонента (капсула-пилюли, как Figma Site) ─ */
 
 .comp-tabs {
-  display: inline-flex;
-  gap: 4px;
-  background: var(--muted);
+  display: flex;
+  width: 100%;
+  gap: 0;
+  background: #f3f4f6;   /* gray-100 оригинала */
   border-radius: 10px;
   padding: 4px;
   margin-bottom: 32px;
@@ -270,7 +271,9 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .comp-tab {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  flex: 1 1 0%;          /* равная ширина на всю ширину контейнера, как в оригинале */
+  gap: 8px;
   padding: 4px 8px;
   border: none;
   background: transparent;
@@ -304,6 +307,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   border: none;
   border-bottom: 2px solid transparent;
   border-radius: 0;
+  flex: 0 0 auto;        /* подтабы — по содержимому (как в оригинале) */
   padding: 4px 4px 10px;
   height: auto;
   font-size: 16px;
