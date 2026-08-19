@@ -332,6 +332,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   overflow: hidden;
 }
 @media (max-width: 900px) { .interactive-wrap { grid-template-columns: 1fr; } }
+@media (max-width: 1250px) { .interactive-wrap { grid-template-columns: 1fr; } .props-panel { border-left: none; border-top: 1px solid #e5e7eb; } }
 .interactive-stage {
   position: relative;
   background: #f5f5f5;
@@ -458,7 +459,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 
 /* ── Панель «Свойства компонента» (справа, как в Figma Site) ─ */
 
-.props-panel { display: flex; flex-direction: column; gap: 14px; padding: 0; }
+.props-panel { display: flex; flex-direction: column; gap: 20px; padding: 24px; border-left: 1px solid #e5e7eb; background: #ffffff; }
 .props-title {
   font-size: 14px;
   font-weight: 400;
