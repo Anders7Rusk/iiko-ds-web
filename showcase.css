@@ -1516,6 +1516,9 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 /* адаптив: в узкой панели «Вариантов» код переносится (без горизонтального скролла) */
 #vc-html .po-css__code, #vc-css .po-css__code {
   white-space: pre-wrap;
+}
+#vc-html .po-css__code > div, #vc-css .po-css__code > div {
+  white-space: pre-wrap;
   word-break: break-all;
 }
 #cc-html .c-tag, #vc-html .c-tag { color: #2563eb; }
