@@ -15,116 +15,133 @@
 </head>
 <body>
 
-<header class="showcase-header">
-  <div class="brand">
-    <h1>iiko DS · Компоненты в коде</h1>
-    <span class="sub">v0.1</span>
-  </div>
-  <nav class="showcase-nav">
-    <a href="index.html">Каталог</a>
-    <a href="button.html">Button</a>
-    <a href="input.html">Input</a>
-    <a href="checkbox.html">Checkbox</a>
-    <a href="radio.html">Radio</a>
-    <a href="badge.html" class="active">Badge</a>
-  </nav>
-</header>
+<div class="layout">
 
-<main>
+  <aside class="sidebar" id="sidebar"></aside>
 
-  <div class="page-head">
-    <p class="crumbs">iiko DS → Badge</p>
-    <h2>Badge</h2>
-    <p class="desc">Счётчик (19×18, полное скругление) и точка (8×8). Стили: Accent / Positive / Warning / Negative.</p>
-  </div>
+  <div class="layout__main">
 
-  <!-- ===== Badge ===== -->
-  <section>
-    <h2>Badge</h2>
-    <p class="desc">В Figma — страница «Badge», компонент Badge (Style × Type).</p>
-
-    <div class="card">
-      <h3>Counter · 19×18</h3>
-      <div class="row">
-        <span class="row-label">Accent</span>
-        <span class="ds-badge ds-badge--counter ds-badge--accent">7</span>
-        <span class="ds-badge ds-badge--counter ds-badge--accent">99</span>
-      </div>
-      <div class="row">
-        <span class="row-label">Positive</span>
-        <span class="ds-badge ds-badge--counter ds-badge--positive">7</span>
-      </div>
-      <div class="row">
-        <span class="row-label">Warning</span>
-        <span class="ds-badge ds-badge--counter ds-badge--warning">7</span>
-      </div>
-      <div class="row">
-        <span class="row-label">Negative</span>
-        <span class="ds-badge ds-badge--counter ds-badge--negative">7</span>
-      </div>
-      <h3 style="margin-top:24px">Point · 8×8</h3>
-      <div class="row">
-        <span class="row-label">Стили</span>
-        <span class="ds-badge ds-badge--point ds-badge--accent"></span>
-        <span class="ds-badge ds-badge--point ds-badge--positive"></span>
-        <span class="ds-badge ds-badge--point ds-badge--warning"></span>
-        <span class="ds-badge ds-badge--point ds-badge--negative"></span>
-      </div>
-      <div class="code-block">
-        <button class="copy-btn" data-copy="code-badge">Копировать</button>
-        <pre id="code-badge"><code>&lt;span class="ds-badge ds-badge--counter ds-badge--accent"&gt;7&lt;/span&gt;
-&lt;span class="ds-badge ds-badge--point ds-badge--negative"&gt;&lt;/span&gt;
-
-&lt;!-- типы: --counter / --point
-     стили: --accent / --positive / --warning / --negative --&gt;</code></pre>
-      </div>
+    <div class="canvas-head">
+      <a class="page-tab" href="index.html"><span class="material-icons" aria-hidden="true">apps</span> Каталог</a>
+      <a class="page-tab" href="button.html"><span class="material-icons" aria-hidden="true">smart_button</span> Button</a>
+      <a class="page-tab" href="input.html"><span class="material-icons" aria-hidden="true">text_fields</span> Input</a>
+      <a class="page-tab" href="checkbox.html"><span class="material-icons" aria-hidden="true">check_box</span> Checkbox</a>
+      <a class="page-tab" href="radio.html"><span class="material-icons" aria-hidden="true">radio_button_checked</span> Radio</a>
+      <a class="page-tab is-active" href="badge.html"><span class="material-icons" aria-hidden="true">circle</span> Badge</a>
+      <span class="spacer"></span>
+      <a class="guide-link" href="guides/guide-components.md">Гайд: компоненты</a>
+      <a class="guide-link" href="guides/guide-prototyping.md">Гайд: прототипы</a>
     </div>
-  </section>
 
-  <!-- ===== Примеры ===== -->
-  <section>
-    <h2>Примеры использования</h2>
-    <p class="desc">Как в Figma: badge на кнопках и иконках (страница Badge, фрейм «Badge examples»).</p>
+    <main>
 
-    <div class="card">
-      <div class="row">
-        <span class="row-label">Кнопка</span>
-        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" style="position:relative">
-          <span class="ds-btn__label">Button</span>
-          <span class="ds-badge ds-badge--counter ds-badge--negative" style="position:absolute; top:-9px; right:-9px">7</span>
-        </button>
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" style="position:relative">
-          <span class="ds-btn__label">Button</span>
-          <span class="ds-badge ds-badge--counter ds-badge--accent" style="position:absolute; top:-9px; right:-9px">7</span>
-        </button>
+      <div class="page-head">
+        <h2>Badge</h2>
+        <p class="desc">Счётчик (19×18, полное скругление) и точка (8×8).
+        В Figma — страница «Badge», компонент Badge (Style × Type): Accent / Positive / Warning / Negative.</p>
       </div>
-      <div class="row">
-        <span class="row-label">Кнопка-иконка</span>
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" style="position:relative; padding:8px">
-          <span class="ds-btn__icon material-icons" aria-hidden="true">notifications</span>
-          <span class="ds-badge ds-badge--counter ds-badge--negative" style="position:absolute; top:-9px; right:-9px">7</span>
-        </button>
-        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" style="position:relative; padding:8px">
-          <span class="ds-btn__icon material-icons" aria-hidden="true">shopping_cart</span>
-          <span class="ds-badge ds-badge--counter ds-badge--accent" style="position:absolute; top:-9px; right:-9px">3</span>
-        </button>
-      </div>
-      <div class="row">
-        <span class="row-label">Точка</span>
-        <span style="position:relative; display:inline-flex">
-          <span class="material-icons" style="font-size:20px; color:#616161">notifications</span>
-          <span class="ds-badge ds-badge--point ds-badge--negative" style="position:absolute; top:0; right:0"></span>
-        </span>
-        <span style="position:relative; display:inline-flex">
-          <span class="material-icons" style="font-size:20px; color:#616161">favorite</span>
-          <span class="ds-badge ds-badge--point ds-badge--accent" style="position:absolute; top:0; right:0"></span>
-        </span>
-      </div>
-    </div>
-  </section>
 
-</main>
+      <!-- ===== Badge ===== -->
+      <section>
+        <h2>Badge</h2>
 
+        <div class="card">
+          <h3>Counter · 19×18</h3>
+          <div class="row">
+            <span class="row-label">Accent</span>
+            <span class="ds-badge ds-badge--counter ds-badge--accent">7</span>
+            <span class="ds-badge ds-badge--counter ds-badge--accent">99</span>
+          </div>
+          <div class="row">
+            <span class="row-label">Positive</span>
+            <span class="ds-badge ds-badge--counter ds-badge--positive">7</span>
+          </div>
+          <div class="row">
+            <span class="row-label">Warning</span>
+            <span class="ds-badge ds-badge--counter ds-badge--warning">7</span>
+          </div>
+          <div class="row">
+            <span class="row-label">Negative</span>
+            <span class="ds-badge ds-badge--counter ds-badge--negative">7</span>
+          </div>
+          <h3 style="margin-top:24px">Point · 8×8</h3>
+          <div class="row">
+            <span class="row-label">Стили</span>
+            <span class="ds-badge ds-badge--point ds-badge--accent"></span>
+            <span class="ds-badge ds-badge--point ds-badge--positive"></span>
+            <span class="ds-badge ds-badge--point ds-badge--warning"></span>
+            <span class="ds-badge ds-badge--point ds-badge--negative"></span>
+          </div>
+          <div class="tokens-panel">
+            <div class="tokens-panel__title">Токены вида</div>
+            <div class="token-grid">
+              <span class="token-item"><span class="token-prop">counter bg accent</span><code class="token-var">--ds-color-badge-accent-background</code><span class="token-val" style="--token-sample:#448AFF"></span></span>
+              <span class="token-item"><span class="token-prop">positive</span><code class="token-var">--ds-color-badge-positive-background</code><span class="token-val" style="--token-sample:#14B456"></span></span>
+              <span class="token-item"><span class="token-prop">warning</span><code class="token-var">--ds-color-badge-warning-background</code><span class="token-val" style="--token-sample:#FFAB40"></span></span>
+              <span class="token-item"><span class="token-prop">negative</span><code class="token-var">--ds-color-badge-negative-background</code><span class="token-val" style="--token-sample:#FF5252"></span></span>
+              <span class="token-item"><span class="token-prop">text</span><code class="token-var">--ds-color-text-inversive</code><span class="token-val" style="--token-sample:#FFFFFF"></span></span>
+              <span class="token-item"><span class="token-prop">counter</span><code class="token-var">19×18 · radius --ds-radius-circular</code><span class="token-val token-val--text">9999px</span></span>
+              <span class="token-item"><span class="token-prop">point</span><code class="token-var">8×8 · radius 50%</code><span class="token-val token-val--text"></span></span>
+              <span class="token-item"><span class="token-prop">font</span><code class="token-var">--ds-typography-font-size-3x / --ds-typography-font-weight-medium</code><span class="token-val token-val--text">12px / 500</span></span>
+            </div>
+          </div>
+          <div class="code-block">
+            <button class="copy-btn" data-copy="code-badge">Копировать</button>
+            <pre id="code-badge"><code>&lt;span class="ds-badge ds-badge--counter ds-badge--accent"&gt;7&lt;/span&gt;
+&lt;span class="ds-badge ds-badge--point ds-badge--negative"&gt;&lt;/span&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Примеры ===== -->
+      <section>
+        <h2>Примеры использования</h2>
+        <p class="desc">Как в Figma (страница Badge, фрейм «Badge examples»): badge на кнопках и иконках.</p>
+
+        <div class="card">
+          <div class="row">
+            <span class="row-label">Кнопка</span>
+            <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" style="position:relative">
+              <span class="ds-btn__label">Button</span>
+              <span class="ds-badge ds-badge--counter ds-badge--negative" style="position:absolute; top:-9px; right:-9px">7</span>
+            </button>
+            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" style="position:relative">
+              <span class="ds-btn__label">Button</span>
+              <span class="ds-badge ds-badge--counter ds-badge--accent" style="position:absolute; top:-9px; right:-9px">7</span>
+            </button>
+          </div>
+          <div class="row">
+            <span class="row-label">Кнопка-иконка</span>
+            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" style="position:relative; padding:8px">
+              <span class="ds-btn__icon material-icons" aria-hidden="true">notifications</span>
+              <span class="ds-badge ds-badge--counter ds-badge--negative" style="position:absolute; top:-9px; right:-9px">7</span>
+            </button>
+            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" style="position:relative; padding:8px">
+              <span class="ds-btn__icon material-icons" aria-hidden="true">shopping_cart</span>
+              <span class="ds-badge ds-badge--counter ds-badge--accent" style="position:absolute; top:-9px; right:-9px">3</span>
+            </button>
+          </div>
+          <div class="row">
+            <span class="row-label">Точка</span>
+            <span style="position:relative; display:inline-flex">
+              <span class="material-icons" style="font-size:20px; color:#616161">notifications</span>
+              <span class="ds-badge ds-badge--point ds-badge--negative" style="position:absolute; top:0; right:0"></span>
+            </span>
+            <span style="position:relative; display:inline-flex">
+              <span class="material-icons" style="font-size:20px; color:#616161">favorite</span>
+              <span class="ds-badge ds-badge--point ds-badge--accent" style="position:absolute; top:0; right:0"></span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+</div>
+
+<script src="sidebar.js"></script>
 <script>
   document.querySelectorAll('.copy-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
