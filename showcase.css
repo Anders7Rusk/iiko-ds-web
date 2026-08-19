@@ -584,20 +584,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   color: #111827;
   padding-bottom: 8px;
   border-bottom: 1px solid #f3f4f6;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
-.props-popover .insp-title--layout { font-size: 10px; padding-bottom: 0; border-bottom: none; }
-.props-popover .insp-title__css {
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 0;
-  color: #9ca3af;
-  opacity: 0;
-  transition: opacity 0.15s ease;
-}
-.props-popover .insp-title--layout:hover .insp-title__css { opacity: 1; }
 .props-popover .insp-rows {
   display: flex;
   flex-direction: column;
