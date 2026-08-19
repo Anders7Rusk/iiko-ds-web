@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=38">
-<link rel="stylesheet" href="components/button.css?v=38">
-<link rel="stylesheet" href="components/badge.css?v=38">
-<link rel="stylesheet" href="showcase.css?v=38">
+<link rel="stylesheet" href="tokens.css?v=39">
+<link rel="stylesheet" href="components/button.css?v=39">
+<link rel="stylesheet" href="components/badge.css?v=39">
+<link rel="stylesheet" href="showcase.css?v=39">
 </head>
 <body>
 
@@ -912,18 +912,15 @@ function matrixBtn(style, type, size, state) {
     html += '<span></span>';
     TYPES.forEach(function (t) { html += '<span class="matrix-head">' + t + '</span>'; });
     SIZES.forEach(function (size) {
+      // подпись размера — отдельная строка (как в оригинале: заголовок над состояниями)
       html += '<span class="matrix-rowlabel">' + BTN.sizes[size].label + '</span>';
-      html += '<span class="matrix-rowlabel" style="font-size:10px;color:#c4c4cc">default</span>';
-      TYPES.forEach(function (t) {
-        html += '<span class="matrix-cell">' + matrixBtn(style, t, size, 'default') + '</span>';
-      });
-      html += '<span class="matrix-rowlabel" style="font-size:10px;color:#c4c4cc">hover</span>';
-      TYPES.forEach(function (t) {
-        html += '<span class="matrix-cell">' + matrixBtn(style, t, size, 'hover') + '</span>';
-      });
-      html += '<span class="matrix-rowlabel" style="font-size:10px;color:#c4c4cc">press</span>';
-      TYPES.forEach(function (t) {
-        html += '<span class="matrix-cell">' + matrixBtn(style, t, size, 'press') + '</span>';
+      html += '<span></span><span></span><span></span>';
+      // подписи состояний: default / hover / press
+      STATES.forEach(function (st) {
+        html += '<span class="matrix-rowlabel" style="font-size:10px;color:#c4c4cc">' + st + '</span>';
+        TYPES.forEach(function (t) {
+          html += '<span class="matrix-cell">' + matrixBtn(style, t, size, st) + '</span>';
+        });
       });
     });
     html += '</div></div>';
@@ -1347,6 +1344,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=38"></script>
+<script src="sidebar.js?v=39"></script>
 </body>
 </html>
