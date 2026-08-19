@@ -29,15 +29,22 @@
 
       <!-- ===== Вкладки страницы ===== -->
       <div class="comp-tabs" role="tablist">
-        <button class="comp-tab is-active" data-panel="tab-component" role="tab">Компонент</button>
-        <button class="comp-tab" data-panel="tab-description" role="tab">Описание</button>
-        <button class="comp-tab" data-panel="tab-anatomy" role="tab">Анатомия</button>
-        <button class="comp-tab" data-panel="tab-behavior" role="tab">Поведение</button>
-        <button class="comp-tab" data-panel="tab-tokens" role="tab">Токены</button>
+        <button class="comp-tab is-active" data-panel="tab-component" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>Компонент</button>
+        <button class="comp-tab" data-panel="tab-description" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Описание</button>
+        <button class="comp-tab" data-panel="tab-anatomy" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>Анатомия</button>
+        <button class="comp-tab" data-panel="tab-behavior" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>Поведение</button>
+        <button class="comp-tab" data-panel="tab-tokens" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>Токены</button>
       </div>
 
       <!-- ===== КОМПОНЕНТ ===== -->
       <div class="comp-panel is-active" id="tab-component">
+
+        <div class="comp-tabs comp-tabs--sub" role="tablist">
+          <button class="comp-tab is-active" data-panel="tab-interactive" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z"/><circle cx="12" cy="12" r="10"/></svg>Интерактивный компонент</button>
+          <button class="comp-tab" data-panel="tab-variants" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>Варианты компонента</button>
+        </div>
+
+        <div class="comp-panel is-active" id="tab-interactive">
 
         <section>
           <h2>Интерактивный компонент</h2>
@@ -48,6 +55,7 @@
               <div>
                 <div class="interactive-stage" id="stage">
                   <div id="stage-btn-wrap"></div>
+                  <div class="props-chip">Свойства компонента <span class="material-icons" aria-hidden="true">expand_more</span></div>
                 </div>
                 <div class="stage-caption" id="stage-caption">Interactive Preview</div>
                 <div class="interactive-code">
@@ -58,15 +66,16 @@
                 </div>
               </div>
               <div class="props-panel" id="props-panel">
-                <div class="props-title">Свойства компонента</div>
-                  <label class="control-switch">
-                    <span>Dark Mode</span>
-                    <span class="toggle">
-                      <input type="checkbox" id="ctl-dark">
-                      <span class="track"></span><span class="thumb"></span>
-                    </span>
-                  </label>
-                  <div class="control-group">
+                <div class="props-title">
+                  <h3>Button</h3>
+                  <p class="props-caption">Interactive Preview</p>
+                </div>
+                  <div class="control-row">
+                    <span class="control-label">Dark Mode</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-dark"><span class="track"></span><span class="thumb"></span></span></label>
+                  </div>
+                  <div class="props-divider"></div>
+                  <div class="control-row">
                     <label class="control-label" for="ctl-size">Size</label>
                     <select class="control-select" id="ctl-size">
                       <option value="m" selected>Normal · 36px</option>
@@ -74,7 +83,7 @@
                       <option value="xs">XS · 24px</option>
                     </select>
                   </div>
-                  <div class="control-group">
+                  <div class="control-row">
                     <label class="control-label" for="ctl-style">Style</label>
                     <select class="control-select" id="ctl-style">
                       <option value="neutral" selected>Neutral</option>
@@ -85,7 +94,7 @@
                       <option value="disable">Disable</option>
                     </select>
                   </div>
-                  <div class="control-group">
+                  <div class="control-row">
                     <label class="control-label" for="ctl-type">Type</label>
                     <select class="control-select" id="ctl-type">
                       <option value="filled" selected>Filled</option>
@@ -93,7 +102,7 @@
                       <option value="text">Text</option>
                     </select>
                   </div>
-                  <div class="control-group">
+                  <div class="control-row">
                     <label class="control-label" for="ctl-state">State</label>
                     <select class="control-select" id="ctl-state">
                       <option value="default" selected>Default</option>
@@ -102,10 +111,20 @@
                       <option value="disabled">Disabled</option>
                     </select>
                   </div>
-                  <label class="control-switch"><span>Icon left</span><span class="toggle"><input type="checkbox" id="ctl-icon-left" checked><span class="track"></span><span class="thumb"></span></span></label>
-                  <label class="control-switch"><span>Icon right</span><span class="toggle"><input type="checkbox" id="ctl-icon-right" checked><span class="track"></span><span class="thumb"></span></span></label>
-                  <label class="control-switch"><span>Text</span><span class="toggle"><input type="checkbox" id="ctl-text" checked><span class="track"></span><span class="thumb"></span></span></label>
-                  <div class="control-group">
+                  <div class="props-divider"></div>
+                  <div class="control-row">
+                    <span class="control-label">Icon left</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-icon-left" checked><span class="track"></span><span class="thumb"></span></span></label>
+                  </div>
+                  <div class="control-row">
+                    <span class="control-label">Icon right</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-icon-right" checked><span class="track"></span><span class="thumb"></span></span></label>
+                  </div>
+                  <div class="control-row">
+                    <span class="control-label">Text</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-text" checked><span class="track"></span><span class="thumb"></span></span></label>
+                  </div>
+                  <div class="control-row">
                     <label class="control-label" for="ctl-textval">Button text</label>
                     <input class="control-input" id="ctl-textval" type="text" value="Button">
                   </div>
@@ -113,6 +132,10 @@
             </div>
           </div>
         </section>
+
+        </div>
+
+        <div class="comp-panel" id="tab-variants">
 
         <section>
           <h2>Варианты компонента</h2>
@@ -130,6 +153,14 @@
                   <div class="inspector__seg">
                     <button class="is-active" data-view="tokens">Tokens</button>
                     <button data-view="css">CSS</button>
+                  </div>
+                </div>
+                <div class="inspector__props">
+                  <span class="mini-btn" id="insp-mini-btn"><span class="mini-btn__label">Button</span></span>
+                  <div class="prop-chips">
+                    <button class="prop-chip" data-prop="border">Border</button>
+                    <button class="prop-chip" data-prop="padding">Padding</button>
+                    <button class="prop-chip" data-prop="label">Label</button>
                   </div>
                 </div>
                 <div class="inspector__body">
@@ -160,6 +191,7 @@
           </div>
         </section>
 
+        </div>
       </div>
 
       <!-- ===== ОПИСАНИЕ ===== -->
@@ -781,6 +813,13 @@ function fillInspector(d) {
     '  box-shadow: none;\n' +
     '}';
 
+  // мини-кнопка в шапке инспектора — в цветах выбранного варианта
+  var mini = document.getElementById('insp-mini-btn');
+  var mc = BTN.colors[d.style][d.type][d.state];
+  mini.style.background = mc.bg;
+  mini.style.border = (mc.border && mc.border !== 'transparent') ? '1px solid ' + mc.border : '1px solid transparent';
+  mini.style.color = mc.label;
+
   // показать панель
   document.getElementById('inspector-empty').style.display = 'none';
   document.getElementById('inspector-tokens').style.display = 'block';
@@ -811,6 +850,21 @@ document.querySelectorAll('.inspector__seg button').forEach(function (btn) {
     var isCss = btn.dataset.view === 'css';
     document.getElementById('inspector-tokens').style.display = isCss ? 'none' : 'block';
     document.getElementById('inspector-css').style.display = isCss ? 'block' : 'none';
+  });
+});
+
+// чипы свойств (Border / Padding / Label) — подсветка части кнопки
+document.querySelectorAll('.prop-chip').forEach(function (chip) {
+  chip.addEventListener('click', function () {
+    var prop = chip.dataset.prop;
+    var wasActive = chip.classList.contains('is-active');
+    document.querySelectorAll('.prop-chip').forEach(function (c) { c.classList.remove('is-active'); });
+    var mini = document.getElementById('insp-mini-btn');
+    mini.classList.remove('hl-border', 'hl-padding', 'hl-label');
+    if (!wasActive) {
+      chip.classList.add('is-active');
+      mini.classList.add('hl-' + prop);
+    }
   });
 });
 
