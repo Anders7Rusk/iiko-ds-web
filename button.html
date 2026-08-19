@@ -78,7 +78,10 @@
                 <div class="props-panel" id="props-panel">
                   <label class="control-switch">
                     <span>Dark Mode</span>
-                    <input type="checkbox" id="ctl-dark">
+                    <span class="toggle">
+                      <input type="checkbox" id="ctl-dark">
+                      <span class="track"></span><span class="thumb"></span>
+                    </span>
                   </label>
                   <div class="control-group">
                     <label class="control-label" for="ctl-size">Size</label>
@@ -116,9 +119,9 @@
                       <option value="disabled">Disabled</option>
                     </select>
                   </div>
-                  <label class="control-switch"><span>Icon left</span><input type="checkbox" id="ctl-icon-left" checked></label>
-                  <label class="control-switch"><span>Icon right</span><input type="checkbox" id="ctl-icon-right" checked></label>
-                  <label class="control-switch"><span>Text</span><input type="checkbox" id="ctl-text" checked></label>
+                  <label class="control-switch"><span>Icon left</span><span class="toggle"><input type="checkbox" id="ctl-icon-left" checked><span class="track"></span><span class="thumb"></span></span></label>
+                  <label class="control-switch"><span>Icon right</span><span class="toggle"><input type="checkbox" id="ctl-icon-right" checked><span class="track"></span><span class="thumb"></span></span></label>
+                  <label class="control-switch"><span>Text</span><span class="toggle"><input type="checkbox" id="ctl-text" checked><span class="track"></span><span class="thumb"></span></span></label>
                   <div class="control-group">
                     <label class="control-label" for="ctl-textval">Button text</label>
                     <input class="control-input" id="ctl-textval" type="text" value="Button">
