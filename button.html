@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=48">
-<link rel="stylesheet" href="components/button.css?v=48">
-<link rel="stylesheet" href="components/badge.css?v=48">
-<link rel="stylesheet" href="showcase.css?v=48">
+<link rel="stylesheet" href="tokens.css?v=49">
+<link rel="stylesheet" href="components/button.css?v=49">
+<link rel="stylesheet" href="components/badge.css?v=49">
+<link rel="stylesheet" href="showcase.css?v=49">
 </head>
 <body>
 
@@ -393,7 +393,7 @@
               </button>
               <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
                 <span class="ds-btn__label">Next Step</span>
-                <span class="ds-btn__icon material-icons" aria-hidden="true">arrow_forward</span>
+                <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
               </button>
             </div>
           </div>
@@ -818,7 +818,7 @@ function renderStage() {
   if (state === 'loading') html += '<span class="ds-spinner" aria-hidden="true"></span>';
   else if (iconL) html += '<span class="ds-btn__icon material-icons" aria-hidden="true">add</span>';
   if (showText) html += '<span class="ds-btn__label">' + text.replace(/</g, '&lt;') + '</span>';
-  if (iconR) html += '<span class="ds-btn__icon material-icons" aria-hidden="true">arrow_forward</span>';
+  if (iconR) html += '<span class="ds-btn__icon material-icons" aria-hidden="true">add</span>';
   html += '</button>';
   document.getElementById('stage-btn-wrap').innerHTML = html;
   document.getElementById('stage').classList.toggle('is-dark', dark);
@@ -828,7 +828,7 @@ function renderStage() {
   if (state === 'loading') code += '  <span class="ds-spinner" aria-hidden="true"></span>\n';
   else if (iconL) code += '  <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>\n';
   if (showText) code += '  <span class="ds-btn__label">' + text.replace(/</g, '&lt;') + '</span>\n';
-  if (iconR) code += '  <span class="ds-btn__icon material-icons" aria-hidden="true">arrow_forward</span>\n';
+  if (iconR) code += '  <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>\n';
   code += '</button>';
   document.getElementById('cc-html').innerHTML = renderHtml(code.split('\n'));
   lastHtmlLines = code.split('\n');
@@ -1363,6 +1363,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=48"></script>
+<script src="sidebar.js?v=49"></script>
 </body>
 </html>
