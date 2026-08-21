@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=81">
-<link rel="stylesheet" href="components/button.css?v=81">
-<link rel="stylesheet" href="components/badge.css?v=81">
-<link rel="stylesheet" href="showcase.css?v=81">
+<link rel="stylesheet" href="tokens.css?v=82">
+<link rel="stylesheet" href="components/button.css?v=82">
+<link rel="stylesheet" href="components/badge.css?v=82">
+<link rel="stylesheet" href="showcase.css?v=82">
 </head>
 <body>
 
@@ -374,101 +374,122 @@
 
       </div>
 
-      <!-- ===== ПОВЕДЕНИЕ ===== -->
+      <!-- ===== ПОВЕДЕНИЕ (точная копия figma.site; кнопки — наши токены) ===== -->
       <div class="comp-panel" id="tab-behavior">
 
-        <section>
-          <h2>Поведение</h2>
-          <p class="desc">Кнопки должны обеспечивать чёткую обратную связь. Ниже — реальные интерактивные примеры и демонстрации переходов между состояниями.</p>
+        <section class="beh-intro">
+          <p class="beh-lead">Кнопки должны обеспечивать чёткую обратную связь. Ниже представлены реальные интерактивные примеры и демонстрации анимаций перехода между состояниями.</p>
         </section>
 
         <section>
-          <div class="card behavior-section">
-            <h3>Интерактивная песочница <span class="demo-caption" style="margin-left:8px">Try it yourself</span></h3>
-            <p>Попробуйте навести курсор и нажать на кнопки ниже. Они реагируют на ваши действия, демонстрируя реальную скорость анимации и смену цветов.</p>
-            <div class="demo-row">
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Primary Button</span></button>
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined"><span class="ds-btn__label">Secondary Button</span></button>
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text"><span class="ds-btn__label">Action</span></button>
+          <div class="beh-block">
+            <div class="beh-head">
+              <h3>Интерактивная песочница</h3>
+              <span class="beh-badge">Try it yourself</span>
+            </div>
+            <p class="beh-sub">Попробуйте навести курсор и нажать на кнопки ниже. Они реагируют на ваши действия, демонстрируя реальную скорость анимации и смену цветов.</p>
+            <div class="beh-sandbox">
+              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Primary Button</span></button>
+              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" type="button"><span class="ds-btn__label">Secondary Button</span></button>
+              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text" type="button"><span class="ds-btn__icon material-icons" aria-hidden="true">add</span><span class="ds-btn__label">Action</span></button>
             </div>
           </div>
         </section>
 
         <section>
-          <div class="card behavior-section">
-            <div class="behavior-grid">
-              <div>
-                <h4>Hover (Наведение)</h4>
-                <p>Состояние Hover показывает, что элемент интерактивен. Плавный переход (transition) важен для ощущения качества интерфейса. Обычно длится 150–200ms.</p>
+          <div class="beh-states">
+
+            <div class="beh-row">
+              <div class="beh-info">
+                <h4><span class="beh-dot beh-dot--blue" aria-hidden="true"></span>Hover (Наведение)</h4>
+                <p>Состояние Hover показывает, что элемент интерактивен. Плавный переход (transition) важен для ощущения качества интерфейса. Обычно длится 150-200ms.</p>
                 <ul>
                   <li>Изменяется фон (становится темнее/светлее).</li>
                   <li>Курсор меняется на pointer.</li>
                 </ul>
               </div>
-              <div class="demo-box">
-                <span class="demo-caption">Animation Demo</span>
-                <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Hover Me</span></button>
-                <span class="demo-caption">default</span>
+              <div class="beh-demo">
+                <p class="beh-demo__label">Animation Demo</p>
+                <div class="beh-demo__stage">
+                  <div class="beh-cursor-wrap">
+                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button" data-beh-anim="hover"><span class="ds-btn__label">Hover Me</span></button>
+                    <span class="beh-cursor beh-cursor--hover" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg></span>
+                  </div>
+                  <span class="beh-state">default</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="card behavior-section">
-            <div class="behavior-grid">
-              <div>
-                <h4>Press / Active (Нажатие)</h4>
-                <p>Момент клика. Даёт немедленную тактильную обратную связь. Переход в это состояние должен быть мгновенным или очень быстрым (50–100ms).</p>
+            <div class="beh-row">
+              <div class="beh-info">
+                <h4><span class="beh-dot beh-dot--indigo" aria-hidden="true"></span>Press / Active (Нажатие)</h4>
+                <p>Момент клика. Даёт немедленную тактильную обратную связь. Переход в это состояние должен быть мгновенным или очень быстрым (50-100ms).</p>
                 <ul>
                   <li>Цвет становится ещё более насыщенным.</li>
                   <li>Может меняться тень или масштаб (scale).</li>
                 </ul>
               </div>
-              <div class="demo-box">
-                <span class="demo-caption">Animation Demo</span>
-                <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Click Me</span></button>
-                <span class="demo-caption">default</span>
+              <div class="beh-demo">
+                <p class="beh-demo__label">Animation Demo</p>
+                <div class="beh-demo__stage">
+                  <div class="beh-cursor-wrap">
+                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button" data-beh-anim="press"><span class="ds-btn__label">Click Me</span></button>
+                    <span class="beh-cursor beh-cursor--press" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg></span>
+                  </div>
+                  <span class="beh-state">default</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="card behavior-section">
-            <div class="behavior-grid">
-              <div>
-                <h4>Focus (Фокус)</h4>
+            <div class="beh-row">
+              <div class="beh-info">
+                <h4><span class="beh-dot beh-dot--purple" aria-hidden="true"></span>Focus (Фокус)</h4>
                 <p>Визуальный маркер для навигации с клавиатуры (Tab). Никогда не убирайте outline без замены на другой стиль фокуса.</p>
               </div>
-              <div class="demo-box">
-                <span class="demo-caption">Focus ring styling</span>
-                <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" id="demo-focus"><span class="ds-btn__label">Focused Button</span></button>
+              <div class="beh-demo">
+                <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled beh-focus-ring" type="button"><span class="ds-btn__label">Focused Button</span></button>
+                <p class="beh-demo__caption">Focus ring styling</p>
               </div>
             </div>
-          </div>
 
-          <div class="card behavior-section">
+          </div>
+        </section>
+
+        <section>
+          <div class="beh-block">
             <h3>Интерактивный Loader</h3>
-            <p>Нажмите на кнопку, чтобы увидеть симуляцию загрузки. Состояние загрузки предотвращает повторную отправку формы и информирует пользователя о прогрессе.</p>
-            <div class="demo-row">
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" id="demo-loader">
-                <span class="ds-btn__icon material-icons" aria-hidden="true">save</span>
-                <span class="ds-btn__label">Save Changes</span>
-              </button>
-              <span class="demo-caption">Click to test loader</span>
+            <div class="beh-loader">
+              <div class="beh-loader__text">
+                <p>Нажмите на кнопку справа, чтобы увидеть симуляцию загрузки. Состояние загрузки предотвращает повторную отправку формы и информирует пользователя о прогрессе.</p>
+              </div>
+              <div class="beh-loader__panel">
+                <div class="beh-demo__stage">
+                  <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled beh-loader__btn" id="beh-loader-btn" type="button"><span class="ds-btn__label">Save Changes</span></button>
+                  <p class="beh-demo__caption beh-loader__cap">Click to test loader</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         <section>
-          <div class="card">
+          <div class="beh-block">
             <h3>Группировка</h3>
-            <h4>Горизонтальная</h4>
-            <div class="ds-btn-group ds-btn-group--horizontal" style="margin-bottom:20px">
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined"><span class="ds-btn__label">Cancel</span></button>
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Confirm</span></button>
-            </div>
-            <h4>Вертикальная</h4>
-            <div class="ds-btn-group ds-btn-group--vertical" style="max-width:220px">
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Sign In</span></button>
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined"><span class="ds-btn__label">Create Account</span></button>
+            <div class="beh-group">
+              <div class="beh-group__card">
+                <h4>Горизонтальная</h4>
+                <div class="beh-group__h">
+                  <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" type="button"><span class="ds-btn__label">Cancel</span></button>
+                  <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Confirm</span></button>
+                </div>
+              </div>
+              <div class="beh-group__card">
+                <h4>Вертикальная</h4>
+                <div class="beh-group__v">
+                  <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Sign In</span></button>
+                  <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text" type="button"><span class="ds-btn__label">Create Account</span></button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -1213,25 +1234,65 @@ function fallbackCopy(text) {
   document.body.removeChild(ta);
 }
 
-document.getElementById('demo-loader').addEventListener('click', function () {
-  var btn = this;
-  if (btn.dataset.loading) return;
-  btn.dataset.loading = '1';
-  btn.classList.add('ds-btn--filled'); btn.classList.remove('ds-btn--accent');
-  btn.classList.add('ds-btn--neutral'); btn.style.pointerEvents = 'none';
-  btn.innerHTML = '<span class="ds-spinner" aria-hidden="true"></span><span class="ds-btn__label">Saving…</span>';
-  setTimeout(function () {
-    btn.classList.add('ds-btn--accent'); btn.classList.remove('ds-btn--neutral');
-    btn.style.pointerEvents = '';
-    btn.innerHTML = '<span class="ds-btn__icon material-icons" aria-hidden="true">save</span><span class="ds-btn__label">Save Changes</span>';
-    delete btn.dataset.loading;
-  }, 1600);
-});
+/* ============================================================
+   Поведение: авто-демо состояний и курсор (как в figma.site)
+   ============================================================ */
+(function () {
+  var panel = document.getElementById('tab-behavior');
+  var demos = document.querySelectorAll('[data-beh-anim]');
+  if (!panel || !demos.length) return;
+  demos.forEach(function (btn) {
+    var wrap = btn.parentElement;
+    var cursor = wrap.querySelector('.beh-cursor');
+    var svg = cursor.querySelector('svg');
+    var label = wrap.parentElement.querySelector('.beh-state');
+    var isHover = btn.dataset.behAnim === 'hover';
+    var seq = isHover ? ['default', 'default', 'hover', 'hover'] : ['default', 'hover', 'press'];
+    var interval = isHover ? 800 : 1200;
+    var colors = BTN.colors.accent[isHover ? 'filled' : 'outlined'];
+    var i = 0;
+    setInterval(function () {
+      if (!panel.classList.contains('is-active')) return; // анимация только на открытой вкладке
+      i = (i + 1) % seq.length;
+      var st = seq[i];
+      var c = colors[st];
+      btn.style.background = c.bg;
+      btn.style.borderColor = c.border;
+      btn.style.color = c.label;
+      cursor.classList.toggle('is-on', st === 'hover' || st === 'press');
+      svg.classList.toggle('is-press', st === 'press');
+      label.textContent = st;
+    }, interval);
+  });
+})();
 
-// фокус-демо: подсветить по клику
-document.getElementById('demo-focus').addEventListener('click', function () {
-  this.focus();
-});
+// лоадер: клик → «Saving data...» 2с → «Saved!» + галочка 2с → сброс (как в figma.site)
+var loaderBtn = document.getElementById('beh-loader-btn');
+var loaderCap = document.querySelector('.beh-loader__cap');
+if (loaderBtn && loaderCap) {
+  var loading = false;
+  loaderBtn.addEventListener('click', function () {
+    if (loading) return;
+    loading = true;
+    loaderBtn.style.pointerEvents = 'none';
+    loaderBtn.innerHTML = '<span class="ds-spinner" aria-hidden="true"></span><span class="ds-btn__label">Save Changes</span>';
+    loaderCap.textContent = 'Saving data...';
+    setTimeout(function () {
+      loaderBtn.classList.remove('ds-btn--accent');
+      loaderBtn.classList.add('ds-btn--neutral');
+      loaderBtn.innerHTML = '<span class="ds-btn__icon material-icons" aria-hidden="true">check</span><span class="ds-btn__label">Saved!</span>';
+      loaderCap.textContent = 'Done!';
+      setTimeout(function () {
+        loaderBtn.classList.add('ds-btn--accent');
+        loaderBtn.classList.remove('ds-btn--neutral');
+        loaderBtn.innerHTML = '<span class="ds-btn__label">Save Changes</span>';
+        loaderCap.textContent = 'Click to test loader';
+        loaderBtn.style.pointerEvents = '';
+        loading = false;
+      }, 2000);
+    }, 2000);
+  });
+}
 
 /* ============================================================
    Копирование кода
@@ -1253,6 +1314,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=81"></script>
+<script src="sidebar.js?v=82"></script>
 </body>
 </html>
