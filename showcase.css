@@ -1135,73 +1135,266 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .state-info__title { font-size: 14px; font-weight: 600; margin: 0 0 4px; }
 .state-info__hint { font-size: 13px; color: var(--muted-fg); margin: 0 0 12px; }
 
-/* ── Анатомия ────────────────────────────────────────────── */
+/* ── Анатомия (точная копия figma.site) ─────────────────── */
 
-.anatomy-block { margin-bottom: 32px; }
-.anatomy-block h4 { margin: 0 0 12px; }
-.anatomy-visual { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
-.anatomy-item { display: flex; flex-direction: column; gap: 8px; }
-.anatomy-item .anatomy-name { font-size: 13px; font-weight: 500; color: var(--muted-fg); }
+.anatomy { max-width: 896px; }                          /* max-w-4xl */
+.anatomy > .anatomy-sec + .anatomy-sec { margin-top: 64px; }  /* gap-16 */
+.anatomy-sec { display: flex; flex-direction: column; gap: 48px; }  /* gap-12 / gap-6 */
+.anatomy-sub { display: flex; flex-direction: column; gap: 16px; }  /* gap-4 */
 
-/* Анатомия: таблица Normal | Compact (как Figma Site) */
-.anatomy-table {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 32px;
-  max-width: 680px;
+.anatomy h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
 }
-.anatomy-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-.anatomy-col-title { font-size: 15px; font-weight: 600; color: var(--text); }
-.anatomy-state { font-size: 13px; color: var(--muted-fg); }
-.anatomy-pad-h { display: flex; align-items: center; gap: 8px; }
-.anatomy-pad-v { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-.anatomy-size-label {
-  font-size: 12px;
-  color: var(--muted-fg);
-  background: #e8f0ff;
-  border-radius: 6px;
-  padding: 2px 8px;
-  white-space: nowrap;
+.anatomy h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
 }
 
-.anatomy-measure { display: flex; align-items: center; gap: 8px; }
-.anatomy-measure .measure-label {
-  font-size: 12px;
-  color: var(--muted-fg);
-  background: #e8f0ff;
-  border-radius: 6px;
-  padding: 2px 8px;
-  white-space: nowrap;
-}
-.anatomy-css {
-  font-family: 'Roboto Mono', ui-monospace, Consolas, monospace;
-  font-size: 13px;
-  color: var(--muted-fg);
-  background: var(--muted);
+/* зона-подложка (dashed indigo-200, slate-50/50, rounded-lg) */
+.anatomy-stage {
+  position: relative;
+  width: 100%;
+  padding: 80px 0;                                     /* py-20 */
+  border: 1px dashed #c7d2fe;                          /* indigo-200 */
+  background: rgba(248, 250, 252, 0.5);                /* slate-50/50 */
   border-radius: 8px;
-  padding: 10px 14px;
-  margin: 12px 0 0;
-  display: inline-block;
-  line-height: 22px;
+  display: flex;
+  flex-direction: row;
+  gap: 192px;                                           /* gap-48 */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.anatomy-parts { display: flex; align-items: center; gap: 4px; margin-top: 8px; }
-.anatomy-part {
+.anatomy-stage--tall { height: 300px; padding: 0; }     /* h-[300px] */
+.anatomy-cell { position: relative; display: flex; align-items: center; }
+.anatomy-cell__name {
+  position: absolute;
+  top: -40px;                                            /* -top-10 */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b7280;                                        /* gray-500 */
+}
+.anatomy-center { position: relative; }
+
+/* кнопка-демо (как в оригинале: M 36/S 28, тень, radius 8) */
+.an-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--code-fg);
-  background: var(--code-bg);
-  border-radius: 4px;
-  padding: 2px 6px;
+  white-space: nowrap;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 2px #E0E0E0, 0 1px 1px #D6D6D6;
+  position: relative;
+  cursor: default;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1;
 }
-.anatomy-legend { margin: 8px 0 0; font-size: 14px; color: var(--text); }
+.an-btn--m { height: 36px; padding: 8px 12px; gap: 8px; }
+.an-btn--s { height: 28px; padding: 4px 8px; gap: 4px; }
+.an-btn--primary { background: #448AFF; color: #fff; }
+.an-btn--neutral { background: #fff; color: #333333; border-color: rgba(0, 0, 0, 0.1); }
+.an-btn__ic { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.an-btn__ic svg { width: 16px; height: 16px; }
+
+/* подсветка паддинга (indigo-500/10 + border indigo-500/20) */
+.an-pad {
+  position: absolute;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  pointer-events: none;
+}
+
+/* размерная линия горизонтальная (индиго, засечки по краям) */
+.an-measure-h {
+  position: absolute;
+  bottom: -32px;                                         /* -bottom-8 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.an-measure-h .an-line {
+  width: 100%;
+  height: 1px;
+  background: #818cf8;                                   /* indigo-400 */
+  position: relative;
+}
+.an-measure-h .an-line::before,
+.an-measure-h .an-line::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8px;
+  width: 1px;
+  background: #818cf8;
+}
+.an-measure-h .an-line::before { left: 0; }
+.an-measure-h .an-line::after  { right: 0; }
+.an-measure-h > span:last-child {
+  font-size: 10px;
+  color: #64748b;                                        /* slate-500 */
+  margin-top: 4px;
+  line-height: 1;
+}
+
+/* размерная линия вертикальная */
+.an-measure-v {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+.an-measure-v .an-line {
+  height: 100%;
+  width: 1px;
+  background: #818cf8;
+  position: relative;
+}
+.an-measure-v .an-line::before,
+.an-measure-v .an-line::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 1px;
+  background: #818cf8;
+}
+.an-measure-v .an-line::before { top: 0; }
+.an-measure-v .an-line::after  { bottom: 0; }
+.an-measure-v > span:not(.an-line) { font-size: 10px; color: #64748b; line-height: 1; }
+.an-measure-v > span:first-child:not(.an-line) { margin-right: 8px; }
+.an-measure-v > span:last-child:not(.an-line) { margin-left: 8px; }
+
+/* пунктирная рамка иконки (indigo-300) */
+.an-icon-box {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 1px dotted #a5b4fc;
+  pointer-events: none;
+}
+
+/* радиус-уголок (розовый) */
+.an-radius { position: absolute; z-index: 20; left: 0; bottom: 0; pointer-events: none; }
+.an-radius-corner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: rgba(236, 72, 153, 0.2);                  /* pink-500/20 */
+  border-top: 1px solid rgba(236, 72, 153, 0.4);        /* pink-500/40 */
+  border-right: 1px solid rgba(236, 72, 153, 0.4);
+  border-bottom-left-radius: 8px;
+}
+.an-radius-tail {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 12px;
+  border-left: 1px dashed #f472b6;                      /* pink-400 */
+  margin-left: 1px;
+}
+.an-radius > span:last-child {
+  position: absolute;
+  top: 12px;
+  left: 4px;
+  font-size: 10px;
+  color: #64748b;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* нумерация частей (кружок #0052CC) */
+.an-num {
+  position: absolute;
+  z-index: 10;
+  top: -40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.an-num-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0052CC;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.an-num-stem {
+  width: 1px;
+  height: 16px;
+  background: #0052CC;
+  border-left: 1px dashed rgba(255, 255, 255, 0.5);
+}
+.an-num-tip {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #0052CC;
+}
+
+/* код-блок (slate-50, моноширинный) */
+.an-code {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: #f8fafc;                                   /* slate-50 */
+  border: 1px solid #f1f5f9;                             /* slate-100 */
+  border-radius: 8px;
+}
+.an-code-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-family: 'Roboto Mono', ui-monospace, Consolas, monospace;
+  font-size: 12px;
+}
+.an-code-tag {
+  color: #9ca3af;                                        /* gray-400 */
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: 56px;
+  flex-shrink: 0;
+  user-select: none;
+}
+.an-code-prop { color: #9333ea; }                        /* purple-600 */
+.an-code-colon { color: #000; }
+.an-code-val { color: #111827; }                         /* gray-900 */
+
+/* легенда частей */
+.an-legend {
+  font-size: 14px;
+  color: #4b5563;                                        /* gray-600 */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.an-legend p { margin: 0; }
+.an-legend b { color: #0052CC; font-weight: 700; }
 
 /* ── Поведение: песочница и демо ─────────────────────────── */
 
