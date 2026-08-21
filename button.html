@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=70">
-<link rel="stylesheet" href="components/button.css?v=70">
-<link rel="stylesheet" href="components/badge.css?v=70">
-<link rel="stylesheet" href="showcase.css?v=70">
+<link rel="stylesheet" href="tokens.css?v=71">
+<link rel="stylesheet" href="components/button.css?v=71">
+<link rel="stylesheet" href="components/badge.css?v=71">
+<link rel="stylesheet" href="showcase.css?v=71">
 </head>
 <body>
 
@@ -366,108 +366,143 @@
       <!-- ===== АНАТОМИЯ ===== -->
       <div class="comp-panel" id="tab-anatomy">
 
-        <section>
-          <h2>Анатомия</h2>
-          <p class="desc">Геометрия компонента по размерам (Normal · 36px / Compact · 28px). Значения — из токенов ДС (см. вкладку «Токены → Размеры»).</p>
+        <div class="anatomy">
 
-          <div class="card">
-            <h3>Filled / Default · Outlined / Default · Text / Default</h3>
-            <h4>Horizontal Padding</h4>
-            <div class="anatomy-table">
-              <div class="anatomy-col">
-                <span class="anatomy-col-title">Normal</span>
-                <div class="anatomy-pad-h">
-                  <span class="anatomy-size-label">12px</span>
-                  <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Button</span></button>
-                  <span class="anatomy-size-label">12px</span>
+          <div class="anatomy-sec">
+            <h3>Primary / Default , Secondary / Default, Tertiary / Default</h3>
+
+            <div class="anatomy-sub">
+              <h4>Horizontal Padding</h4>
+              <div class="anatomy-stage">
+                <div class="anatomy-cell">
+                  <span class="anatomy-cell__name">Normal</span>
+                  <button class="an-btn an-btn--m an-btn--primary"><span>Default</span></button>
+                  <span class="an-pad" style="left:0;top:0;width:12px;height:100%"></span>
+                  <span class="an-measure-h" style="left:0;width:12px"><span class="an-line"></span><span>12px</span></span>
+                  <span class="an-pad" style="right:0;top:0;width:12px;height:100%"></span>
+                  <span class="an-measure-h" style="right:0;width:12px"><span class="an-line"></span><span>12px</span></span>
                 </div>
-                <span class="anatomy-state">Default</span>
+                <div class="anatomy-cell">
+                  <span class="anatomy-cell__name">Compact</span>
+                  <button class="an-btn an-btn--s an-btn--primary"><span>Default</span></button>
+                  <span class="an-pad" style="left:0;top:0;width:8px;height:100%"></span>
+                  <span class="an-measure-h" style="left:0;width:8px"><span class="an-line"></span><span>8px</span></span>
+                  <span class="an-pad" style="right:0;top:0;width:8px;height:100%"></span>
+                  <span class="an-measure-h" style="right:0;width:8px"><span class="an-line"></span><span>8px</span></span>
+                </div>
               </div>
-              <div class="anatomy-col">
-                <span class="anatomy-col-title">Compact</span>
-                <div class="anatomy-pad-h">
-                  <span class="anatomy-size-label">8px</span>
-                  <button class="ds-btn ds-btn--s ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Button</span></button>
-                  <span class="anatomy-size-label">8px</span>
-                </div>
-                <span class="anatomy-state">Default</span>
+              <div class="an-code">
+                <div class="an-code-row"><span class="an-code-tag">Normal</span><span><span class="an-code-prop">padding-inline</span><span class="an-code-colon">:</span> <span class="an-code-val">12px;</span></span></div>
+                <div class="an-code-row"><span class="an-code-tag">Compact</span><span><span class="an-code-prop">padding-inline</span><span class="an-code-colon">:</span> <span class="an-code-val">8px;</span></span></div>
               </div>
             </div>
-            <code class="anatomy-css"><span class="css-label">NORMAL</span>padding-inline: 12px;<br><span class="css-label">COMPACT</span>padding-inline: 8px;</code>
-          </div>
 
-          <div class="card">
-            <h3>Filled / Default · Outlined / Default · Text / Default</h3>
-            <h4>Vertical Padding &amp; Height</h4>
-            <div class="anatomy-table">
-              <div class="anatomy-col">
-                <span class="anatomy-col-title">Normal</span>
-                <div class="anatomy-pad-v">
-                  <span class="anatomy-size-label">8px</span>
-                  <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Button</span></button>
-                  <span class="anatomy-size-label">8px</span>
-                  <span class="anatomy-size-label">height 36px</span>
+            <div class="anatomy-sub">
+              <h4>Vertical Padding &amp; Height</h4>
+              <div class="anatomy-stage">
+                <div class="anatomy-cell">
+                  <span class="anatomy-cell__name">Normal</span>
+                  <button class="an-btn an-btn--m an-btn--primary"><span>Default</span></button>
+                  <span class="an-measure-v" style="left:-48px;top:0;height:36px"><span>36px</span><span class="an-line"></span></span>
+                  <span class="an-pad" style="left:0;top:0;width:100%;height:8px"></span>
+                  <span class="an-measure-v" style="right:-48px;top:0;height:8px"><span class="an-line"></span><span>8px</span></span>
+                  <span class="an-pad" style="left:0;bottom:0;width:100%;height:8px"></span>
+                  <span class="an-measure-v" style="right:-48px;bottom:0;height:8px"><span class="an-line"></span><span>8px</span></span>
                 </div>
-                <span class="anatomy-state">Default</span>
+                <div class="anatomy-cell">
+                  <span class="anatomy-cell__name">Compact</span>
+                  <button class="an-btn an-btn--s an-btn--primary"><span>Default</span></button>
+                  <span class="an-measure-v" style="left:-48px;top:0;height:28px"><span>28px</span><span class="an-line"></span></span>
+                  <span class="an-pad" style="left:0;top:0;width:100%;height:4px"></span>
+                  <span class="an-measure-v" style="right:-48px;top:0;height:4px"><span class="an-line"></span><span>4px</span></span>
+                  <span class="an-pad" style="left:0;bottom:0;width:100%;height:4px"></span>
+                  <span class="an-measure-v" style="right:-48px;bottom:0;height:4px"><span class="an-line"></span><span>4px</span></span>
+                </div>
               </div>
-              <div class="anatomy-col">
-                <span class="anatomy-col-title">Compact</span>
-                <div class="anatomy-pad-v">
-                  <span class="anatomy-size-label">4px</span>
-                  <button class="ds-btn ds-btn--s ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Button</span></button>
-                  <span class="anatomy-size-label">4px</span>
-                  <span class="anatomy-size-label">height 28px</span>
-                </div>
-                <span class="anatomy-state">Default</span>
+              <div class="an-code">
+                <div class="an-code-row"><span class="an-code-tag">Normal</span><span><span class="an-code-prop">padding-block</span><span class="an-code-colon">:</span> <span class="an-code-val">8px;</span></span></div>
+                <div class="an-code-row"><span class="an-code-tag">Normal</span><span><span class="an-code-prop">height</span><span class="an-code-colon">:</span> <span class="an-code-val">36px;</span></span></div>
+                <div class="an-code-row"><span class="an-code-tag">Compact</span><span><span class="an-code-prop">padding-block</span><span class="an-code-colon">:</span> <span class="an-code-val">4px;</span></span></div>
+                <div class="an-code-row"><span class="an-code-tag">Compact</span><span><span class="an-code-prop">height</span><span class="an-code-colon">:</span> <span class="an-code-val">28px;</span></span></div>
               </div>
             </div>
-            <code class="anatomy-css"><span class="css-label">NORMAL</span>height: 36px; padding-block: 8px;<br><span class="css-label">COMPACT</span>height: 28px; padding-block: 4px;</code>
-          </div>
 
-          <div class="card">
-            <h3>Filled / Default · Outlined / Default · Text / Default</h3>
-            <h4>Border Radius</h4>
-            <div class="anatomy-table">
-              <div class="anatomy-col">
-                <span class="anatomy-col-title">Normal</span>
-                <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Button</span></button>
-                <span class="anatomy-size-label">8px</span>
-                <span class="anatomy-state">Default</span>
+            <div class="anatomy-sub">
+              <h4>Border Radius</h4>
+              <div class="anatomy-stage">
+                <div class="anatomy-cell">
+                  <span class="anatomy-cell__name">Normal</span>
+                  <button class="an-btn an-btn--m an-btn--primary"><span>Default</span></button>
+                  <span class="an-radius"><span class="an-radius-corner"></span><span class="an-radius-tail"></span><span>8px</span></span>
+                </div>
+                <div class="anatomy-cell">
+                  <span class="anatomy-cell__name">Compact</span>
+                  <button class="an-btn an-btn--s an-btn--primary"><span>Default</span></button>
+                  <span class="an-radius"><span class="an-radius-corner"></span><span class="an-radius-tail"></span><span>8px</span></span>
+                </div>
               </div>
-              <div class="anatomy-col">
-                <span class="anatomy-col-title">Compact</span>
-                <button class="ds-btn ds-btn--s ds-btn--accent ds-btn--filled"><span class="ds-btn__label">Button</span></button>
-                <span class="anatomy-size-label">8px</span>
-                <span class="anatomy-state">Default</span>
+              <div class="an-code">
+                <div class="an-code-row"><span class="an-code-tag">Normal</span><span><span class="an-code-prop">border-radius</span><span class="an-code-colon">:</span> <span class="an-code-val">8px;</span></span></div>
+                <div class="an-code-row"><span class="an-code-tag">Compact</span><span><span class="an-code-prop">border-radius</span><span class="an-code-colon">:</span> <span class="an-code-val">8px;</span></span></div>
               </div>
             </div>
-            <code class="anatomy-css"><span class="css-label">NORMAL</span>border-radius: 8px;<br><span class="css-label">COMPACT</span>border-radius: 8px;</code>
           </div>
 
-          <div class="card">
-            <h3>Filled / Icon Left · Outlined / Icon Left</h3>
-            <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
-              <span class="anatomy-part">1</span>
-              <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
-              <span class="anatomy-part">2</span>
-              <span class="ds-btn__label">Label</span>
-            </button>
-            <p class="anatomy-legend"><b>1.</b> Иконка — Material 20px, отступ до лейбла 8px.<br><b>2.</b> Label: текст, обозначающий действие кнопки.</p>
+          <div class="anatomy-sec">
+            <h3>Primary / Icon Left, Secondary / Icon Left</h3>
+            <div class="anatomy-stage anatomy-stage--tall">
+              <div class="anatomy-center">
+                <button class="an-btn an-btn--m an-btn--primary">
+                  <span class="an-btn__ic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></span>
+                  <span>Default</span>
+                </button>
+                <span class="an-pad" style="left:0;top:0;width:12px;height:100%"></span>
+                <span class="an-measure-h" style="left:0;width:12px"><span class="an-line"></span><span>12px</span></span>
+                <span class="an-icon-box" style="left:12px"></span>
+                <span class="an-pad" style="left:28px;top:0;width:8px;height:100%"></span>
+                <span class="an-measure-h" style="left:28px;width:8px"><span class="an-line"></span><span>8px</span></span>
+                <span class="an-pad" style="right:0;top:0;width:12px;height:100%"></span>
+                <span class="an-measure-h" style="right:0;width:12px"><span class="an-line"></span><span>12px</span></span>
+                <span class="an-num" style="left:20px;transform:translateX(-50%)"><span class="an-num-dot">1</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span>
+                <span class="an-num" style="right:30px"><span class="an-num-dot">2</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span>
+              </div>
+            </div>
+            <div class="an-legend">
+              <p><b>1.</b> Иконка</p>
+              <p><b>2.</b> Label: текст, обозначающий действие кнопки</p>
+            </div>
           </div>
 
-          <div class="card">
-            <h3>Text / Icon Left Right · Text / Invert / Icon Left Right</h3>
-            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">
-              <span class="anatomy-part">1</span>
-              <span class="ds-btn__icon material-icons" aria-hidden="true">settings</span>
-              <span class="anatomy-part">2</span>
-              <span class="ds-btn__label">Label</span>
-              <span class="anatomy-part">3</span>
-              <span class="ds-btn__icon material-icons" aria-hidden="true">arrow_drop_down</span>
-            </button>
-            <p class="anatomy-legend"><b>1.</b> Иконка слева (может не использоваться).<br><b>2.</b> Label: действие кнопки.<br><b>3.</b> Иконка справа (может не использоваться) — для навигации.</p>
+          <div class="anatomy-sec">
+            <h3>Tertiary / Icon Left Right, Tertiary / Invert / Icon Left Right</h3>
+            <div class="anatomy-stage anatomy-stage--tall">
+              <div class="anatomy-center">
+                <button class="an-btn an-btn--m an-btn--neutral">
+                  <span class="an-btn__ic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></span>
+                  <span>Default</span>
+                  <span class="an-btn__ic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></span>
+                </button>
+                <span class="an-pad" style="left:0;top:0;width:12px;height:100%"></span>
+                <span class="an-measure-h" style="left:0;width:12px"><span class="an-line"></span><span>12px</span></span>
+                <span class="an-pad" style="left:28px;top:0;width:8px;height:100%"></span>
+                <span class="an-measure-h" style="left:28px;width:8px"><span class="an-line"></span><span>8px</span></span>
+                <span class="an-pad" style="right:28px;top:0;width:8px;height:100%"></span>
+                <span class="an-measure-h" style="right:28px;width:8px"><span class="an-line"></span><span>8px</span></span>
+                <span class="an-pad" style="right:0;top:0;width:12px;height:100%"></span>
+                <span class="an-measure-h" style="right:0;width:12px"><span class="an-line"></span><span>12px</span></span>
+                <span class="an-num" style="left:20px;transform:translateX(-50%)"><span class="an-num-dot">1</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span>
+                <span class="an-num" style="left:50%;transform:translateX(-50%)"><span class="an-num-dot">2</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span>
+                <span class="an-num" style="right:20px;transform:translateX(-50%)"><span class="an-num-dot">3</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span>
+              </div>
+            </div>
+            <div class="an-legend">
+              <p><b>1.</b> Иконка слева (может не использоваться)</p>
+              <p><b>2.</b> Label: действие кнопки</p>
+              <p><b>3.</b> Иконка справа (может не использоваться)</p>
+            </div>
           </div>
-        </section>
+
+        </div>
 
       </div>
 
@@ -1319,6 +1354,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=70"></script>
+<script src="sidebar.js?v=71"></script>
 </body>
 </html>
