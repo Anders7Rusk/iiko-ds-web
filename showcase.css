@@ -1418,31 +1418,191 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .an-legend p { margin: 0; }
 .an-legend b { color: #0052CC; font-weight: 700; }
 
-/* ── Поведение: песочница и демо ─────────────────────────── */
+/* ── Поведение (точная копия figma.site; кнопки — наши токены) ── */
 
-.behavior-section { margin-bottom: 24px; }
-.behavior-section h4 { margin: 0 0 8px; }
-.behavior-section p { margin: 0 0 12px; color: var(--muted-fg); font-size: 14px; line-height: 22px; }
-.behavior-section ul { color: var(--muted-fg); font-size: 14px; line-height: 22px; }
-.demo-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
-.demo-caption { font-size: 11px; color: var(--muted-fg); text-transform: uppercase; letter-spacing: 0.5px; }
-
-/* Поведение: двухколоночные карточки состояний (как Figma Site) */
-.behavior-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+.beh-lead {
+  font-size: 18px;
+  line-height: 1.625;
+  color: #111827;
+  margin: 0;
+  max-width: 768px;
+}
+.beh-block { display: flex; flex-direction: column; gap: 24px; }
+.beh-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.beh-block h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+.beh-badge {
+  background: #DCFCE7;
+  color: #166534;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.beh-sub { color: #4B5563; margin: 0; max-width: 672px; }
+.beh-sandbox {
+  display: flex;
+  flex-wrap: wrap;
   gap: 32px;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+}
+
+/* состояния Hover / Press / Focus */
+.beh-states { display: flex; flex-direction: column; gap: 48px; }
+.beh-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px;
   align-items: start;
 }
-@media (max-width: 760px) { .behavior-grid { grid-template-columns: 1fr; } }
-.demo-box {
+@media (max-width: 1024px) { .beh-row { grid-template-columns: 1fr; } }
+.beh-info { display: flex; flex-direction: column; gap: 16px; }
+.beh-info h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+.beh-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+.beh-dot--blue   { background: #3B82F6; }
+.beh-dot--indigo { background: #4F46E5; }
+.beh-dot--purple { background: #A855F7; }
+.beh-info p { color: #4B5563; margin: 0; line-height: 1.625; }
+.beh-info ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #6B7280;
+  font-size: 14px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.beh-demo {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  min-width: 220px;
+  justify-content: center;
+  gap: 24px;
 }
-.demo-box .demo-caption { text-transform: uppercase; }
+.beh-demo__label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+.beh-demo__stage { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.beh-cursor-wrap { position: relative; display: inline-flex; }
+.beh-cursor {
+  position: absolute;
+  top: 150%;
+  left: 150%;
+  z-index: 10;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+.beh-cursor.is-on {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.beh-cursor svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  color: #000;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+  transition: transform 0.2s ease;
+}
+.beh-cursor svg.is-press { transform: scale(0.9); }
+.beh-state {
+  font-size: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #9CA3AF;
+  min-width: 60px;
+  text-align: center;
+}
+.beh-demo__caption { font-size: 12px; color: #9CA3AF; margin: 0; }
+.beh-focus-ring {
+  outline: none;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--ds-color-button-accent-default);
+}
+
+/* Loader */
+.beh-loader { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+@media (max-width: 760px) { .beh-loader { grid-template-columns: 1fr; } }
+.beh-loader__text p { color: #374151; margin: 0; line-height: 1.5; }
+.beh-loader__panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 32px;
+  background: #F9FAFB;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.beh-loader__btn { min-width: 140px; }
+.beh-loader__cap { height: 16px; }
+
+/* Группировка */
+.beh-group { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+@media (max-width: 760px) { .beh-group { grid-template-columns: 1fr; } }
+.beh-group__card {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.beh-group__card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+.beh-group__h {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  padding: 16px;
+  background: #F9FAFB;
+  border-radius: 8px;
+}
+.beh-group__v {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: #F9FAFB;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.beh-group__v .ds-btn { width: 100%; }
 
 .ds-spinner {
   display: inline-block;
