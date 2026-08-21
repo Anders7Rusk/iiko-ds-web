@@ -1385,6 +1385,10 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   user-select: none;
 }
 .an-code-head { margin-bottom: 2px; }
+.an-code-divider {
+  border-top: 1px solid #eceef0;
+  margin: 6px 0;
+}
 .an-code-head .an-code-tag {
   color: #6b7280;                                        /* gray-500 */
   font-weight: 400;
