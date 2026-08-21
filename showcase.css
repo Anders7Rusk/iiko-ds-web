@@ -1384,6 +1384,19 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   flex-shrink: 0;
   user-select: none;
 }
+.an-code-head { margin-bottom: 2px; }
+.an-code-head .an-code-tag {
+  color: #6b7280;                                        /* gray-500 */
+  font-weight: 600;
+}
+.an-code-head-val {
+  color: #6b7280;                                        /* gray-500 */
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
 .an-code-prop { color: #9333ea; }                        /* purple-600 */
 .an-code-colon { color: #000; }
 .an-code-val { color: #111827; }                         /* gray-900 */
