@@ -173,13 +173,13 @@ body {
 
 /* ── Секции ──────────────────────────────────────────────── */
 
-section { margin-bottom: 40px; }
+section { margin-bottom: 30px; }
 /* разделители между секциями — как hr в Figma Site */
 .comp-panel section + section,
 .comp-panel section + div,
 .comp-panel div + section {
   border-top: 1px solid var(--border);
-  padding-top: 40px;
+  padding-top: 30px;
   margin-top: 0;
 }
 section > h2 {
@@ -194,7 +194,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 
 /* ── Карточки: прозрачные (как в Figma Site) ─────────────── */
 
-.card { margin-bottom: 32px; }
+.card { margin-bottom: 24px; }
 .card h3 {
   font-size: 18px;
   font-weight: 600;
@@ -1138,9 +1138,9 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 /* ── Анатомия (точная копия figma.site) ─────────────────── */
 
 .anatomy { max-width: 896px; }                          /* max-w-4xl */
-.anatomy > .anatomy-sec + .anatomy-sec { margin-top: 64px; }  /* gap-16 */
-.anatomy-sec { display: flex; flex-direction: column; gap: 48px; }  /* gap-12 / gap-6 */
-.anatomy-sub { display: flex; flex-direction: column; gap: 16px; }  /* gap-4 */
+.anatomy > .anatomy-sec + .anatomy-sec { margin-top: 48px; }  /* gap-16 → меньше */
+.anatomy-sec { display: flex; flex-direction: column; gap: 36px; }  /* gap-12 / gap-6 */
+.anatomy-sub { display: flex; flex-direction: column; gap: 12px; }  /* gap-4 */
 
 .anatomy h3 {
   font-size: 18px;
@@ -1159,7 +1159,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .anatomy-stage {
   position: relative;
   width: 100%;
-  padding: 80px 0;                                     /* py-20 */
+  padding: 60px 0;                                     /* py-20 → меньше */
   border: 1px dashed #c7d2fe;                          /* indigo-200 */
   background: rgba(248, 250, 252, 0.5);                /* slate-50/50 */
   border-radius: 8px;
@@ -1362,7 +1362,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 16px;
+  padding: 12px;
   background: #f8fafc;                                   /* slate-50 */
   border: 1px solid #f1f5f9;                             /* slate-100 */
   border-radius: 8px;
@@ -1387,13 +1387,13 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .an-code-head { margin-bottom: 2px; }
 .an-code-head .an-code-tag {
   color: #6b7280;                                        /* gray-500 */
-  font-weight: 600;
+  font-weight: 400;
 }
 .an-code-head-val {
   color: #6b7280;                                        /* gray-500 */
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
