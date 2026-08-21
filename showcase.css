@@ -1202,9 +1202,12 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 }
 .an-btn--m { height: 36px; padding: 8px 12px; gap: 8px; }
 .an-btn--s { height: 28px; padding: 4px 8px; gap: 4px; }
+.an-btn--xs { height: 24px; padding: 4px 6px; gap: 4px; }
+.an-btn--accent,
 .an-btn--primary { background: #448AFF; color: #fff; }
-.an-btn--neutral { background: #fff; color: #333333; border-color: rgba(0, 0, 0, 0.1); }
-.an-btn__ic { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.an-btn--neutral { background: #fff; color: #333333; border-color: #E0E0E0; }
+.an-btn__ic { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 20px; line-height: 1; }
+.an-btn--xs .an-btn__ic { font-size: 16px; }
 .an-btn__ic svg { width: 16px; height: 16px; }
 
 /* подсветка паддинга (indigo-500/10 + border indigo-500/20) */
