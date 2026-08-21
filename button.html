@@ -924,7 +924,6 @@ function showVcPanel(view) {
     document.getElementById('vc-' + v).classList.toggle('is-active', v === view);
   });
   document.getElementById('vc-title').textContent = view === 'tokens' ? 'TOKENS' : view.toUpperCase();
-  document.getElementById('vc-copy').style.display = (view === 'tokens') ? 'none' : 'inline-flex';
 }
 document.querySelectorAll('#var-code .cc-tabs button').forEach(function (btn) {
   btn.addEventListener('click', function () {
@@ -936,7 +935,10 @@ document.querySelectorAll('#var-code .cc-tabs button').forEach(function (btn) {
 });
 // копирование активной вкладки
 document.getElementById('vc-copy').addEventListener('click', function () {
-  var text = vcActive === 'html' ? lastVcHtml.join('\n') : lastVcCss.join('\n');
+  var text;
+  if (vcActive === 'html') text = lastVcHtml.join('\n');
+  else if (vcActive === 'css') text = lastVcCss.join('\n');
+  else text = collectTokensText('vc-tokens');
   function done() {
     var copy = document.getElementById('vc-copy');
     copy.classList.add('copied');
@@ -1152,17 +1154,46 @@ document.querySelectorAll('#component-code .cc-tabs button').forEach(function (b
     ccActive = btn.dataset.cc;
     document.querySelectorAll('#component-code .cc-panel').forEach(function (p) { p.classList.remove('is-active'); });
     document.getElementById('cc-' + ccActive).classList.add('is-active');
-    // иконка копирования — только для HTML/CSS (у Tokens кода для копирования нет)
-    document.getElementById('cc-copy').style.display = (ccActive === 'tokens') ? 'none' : 'inline-flex';
     // заголовок — название активной вкладки (HTML → «HTML», CSS → «CSS», Tokens → «TOKENS»)
     document.getElementById('po-title').textContent =
       ccActive === 'tokens' ? 'TOKENS' : ccActive.toUpperCase();
   });
 });
 
+// сбор текста вкладки Tokens (Layout/Style/Colors) для копирования
+function collectTokensText(panelId) {
+  var panel = document.getElementById(panelId);
+  if (!panel) return '';
+  var out = [];
+  panel.querySelectorAll('.insp-section').forEach(function (sec) {
+    var title = sec.querySelector('.insp-title');
+    if (title) out.push(title.textContent);
+    // идём по DOM-порядку: строки, подписи и свотчи чередуются как на экране
+    sec.querySelectorAll('.insp-row, .insp-sub, .insp-swatch').forEach(function (el) {
+      var line;
+      if (el.classList.contains('insp-row')) {
+        var k = el.querySelector('.k');
+        var v = el.querySelector('.v');
+        line = (k ? k.textContent : '') + (v ? ' ' + v.textContent : '');
+      } else if (el.classList.contains('insp-sub')) {
+        line = el.textContent;
+      } else {
+        var t = el.querySelector('.t');
+        var hex = el.querySelector('.hex');
+        line = (t ? t.textContent : '') + (hex ? ' ' + hex.textContent : '');
+      }
+      out.push(line.replace(/\s+/g, ' ').trim());
+    });
+  });
+  return out.join('\n');
+}
+
 // копирование активной вкладки через иконку
 document.getElementById('cc-copy').addEventListener('click', function () {
-  var text = ccActive === 'html' ? lastHtmlLines.join('\n') : lastCssLines.join('\n');
+  var text;
+  if (ccActive === 'html') text = lastHtmlLines.join('\n');
+  else if (ccActive === 'css') text = lastCssLines.join('\n');
+  else text = collectTokensText('cc-tokens');
   function done() {
     var copy = document.getElementById('cc-copy');
     copy.classList.add('copied');
