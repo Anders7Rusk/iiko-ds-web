@@ -1361,7 +1361,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .an-code {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
   padding: 12px;
   background: #f8fafc;                                   /* slate-50 */
   border: 1px solid #f1f5f9;                             /* slate-100 */
@@ -1373,6 +1373,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   gap: 12px;
   font-family: 'Roboto Mono', ui-monospace, Consolas, monospace;
   font-size: 12px;
+  line-height: 1.3;
 }
 .an-code-tag {
   color: #9ca3af;                                        /* gray-400 */
