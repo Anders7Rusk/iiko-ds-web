@@ -122,15 +122,9 @@
                       </div>
                       <div class="insp-section">
                         <div class="insp-title">Colors</div>
-                        <div class="insp-sub">Background colors</div>
-                        <div class="insp-swatch">
-                          <span class="sw" id="po-cbg-swatch"></span>
-                          <span class="sw-info"><span class="t" id="po-cbg-var"></span><span class="hex" id="po-cbg-val"></span></span>
-                        </div>
-                        <div class="insp-sub">Selection colors</div>
-                        <div class="insp-swatch">
-                          <span class="sw" id="po-ctl-swatch"></span>
-                          <span class="sw-info"><span class="t" id="po-ctl-var"></span><span class="hex" id="po-ctl-val"></span></span>
+                        <div class="insp-rows">
+                          <div class="insp-row"><span class="k">background:</span><span class="v" id="po-cbg-v"></span></div>
+                          <div class="insp-row"><span class="k">color:</span><span class="v" id="po-ctl-v"></span></div>
                         </div>
                       </div>
                     </div>
@@ -508,16 +502,19 @@
           <section>
             <h2>Токены вариантов</h2>
             <div class="token-notation">
-              <code>[style]</code> = accent, neutral, positive, negative, warning, disable &nbsp;·&nbsp;
-              <code>[type]</code> = filled, outlined, text &nbsp;·&nbsp;
-              <code>[state]</code> = default, hover, press, disable<br>
-              Пример итогового токена: <code>button.accent.filled.bg.color.default</code><br>
-              Пример Figma-переменной: <code>Button/Accent/Filled/Default/Background</code><br>
-              Пример CSS-переменной: <code>--ds-color-button-accent-default</code>
+              <p>[style] = accent, neutral, positive, negative, warning, disable</p>
+              <p>[type] = filled, outlined, text</p>
+              <p>[state] = default, hover, press, disable</p>
+            </div>
+            <div class="token-examples">
+              <div class="token-example-row"><span>Пример итогового токена:</span><code>button.accent.filled.bg.color.default</code></div>
+              <div class="token-example-row"><span>Пример Figma-переменной:</span><code>Button/Accent/Filled/Default/Background</code></div>
+              <div class="token-example-row"><span>Пример CSS-переменной:</span><code>--ds-color-button-accent-default</code></div>
             </div>
 
-            <div class="card">
-              <div class="sub-tabs" id="style-tabs"></div>
+            <div class="comp-tabs comp-tabs--pills" id="style-tabs" role="tablist"></div>
+
+            <div class="token-card">
               <div id="token-tables"></div>
             </div>
           </section>
@@ -526,7 +523,7 @@
         <div class="comp-panel" id="tokens-sizes">
           <section>
             <h2>Токены размеров</h2>
-            <div class="card">
+            <div class="token-card">
               <table class="token-table" id="sizes-table"></table>
             </div>
           </section>
@@ -903,13 +900,9 @@ function updateVarInspector(d) {
   var shadow = type === 'text' ? 'none' : '0px 2px 2px #E0E0E0...';
   document.getElementById('vc-sh-v').textContent = shadow + ';';
 
-  // Colors
-  document.getElementById('vc-cbg-var').textContent = vars.bg;
-  document.getElementById('vc-cbg-val').textContent = colors.bg;
-  document.getElementById('vc-cbg-swatch').style.background = colors.bg;
-  document.getElementById('vc-ctl-var').textContent = vars.label;
-  document.getElementById('vc-ctl-val').textContent = colors.label;
-  document.getElementById('vc-ctl-swatch').style.background = colors.label;
+  // Colors (как Layout/Style — строки с var())
+  document.getElementById('vc-cbg-v').innerHTML = escVar('var(' + vars.bg + ', ' + colors.bg + ');');
+  document.getElementById('vc-ctl-v').innerHTML = escVar('var(' + vars.label + ', ' + colors.label + ');');
 
   // CSS
   var lines = [
@@ -973,30 +966,52 @@ document.getElementById('vc-copy').addEventListener('click', function () {
    Токены → Варианты: табы стилей → типов → таблица
    ============================================================ */
 var GROUPS = [
-  { key: 'bg', label: 'Background (Фон)' },
-  { key: 'border', label: 'Border (Обводка)' },
-  { key: 'label', label: 'Label (Текст)' },
-  { key: 'icon', label: 'Icon (Иконка)' },
-  { key: 'shadow', label: 'Shadow (Тень)' }
+  { key: 'bg', label: 'Background (Фон)', row: 'Background' },
+  { key: 'border', label: 'Border (Обводка)', row: 'Border' },
+  { key: 'label', label: 'Label (Текст)', row: 'Label' },
+  { key: 'icon', label: 'Icon (Иконка)', row: 'Icon' }
 ];
 var TOKEN_STATES = [
-  { key: 'default', label: 'Default' },
-  { key: 'hover', label: 'Hover' },
-  { key: 'press', label: 'Press' },
-  { key: 'disable', label: 'Disabled' }
+  { key: 'default', label: 'в состоянии покоя' },
+  { key: 'hover', label: 'при hover' },
+  { key: 'press', label: 'при press' },
+  { key: 'disable', label: 'при disable' }
 ];
+// Цвета иконок — из DS.json (Button/[Style]/[Type]/[State]/Icon color)
+var BTN_ICONS = {
+  accent:   { filled: '#FFFFFF', outlined: '#448AFF', text: '#448AFF' },
+  neutral:  { filled: '#616161', outlined: '#616161', text: '#616161' },
+  positive: { filled: '#FFFFFF', outlined: '#14B456', text: '#14B456' },
+  negative: { filled: '#FFFFFF', outlined: '#FF5252', text: '#FF5252' },
+  warning:  { filled: '#FFFFFF', outlined: '#EA7806', text: '#EA7806' },
+  disable:  { filled: '#9E9E9E', outlined: '#9E9E9E', text: '#9E9E9E' }
+};
+
+// Значение токена для таблицы (по DS.json; disable — группа Button/Disable)
+function tokenValue(style, type, group, state) {
+  var c = BTN.colors[style][type][state] || BTN.colors[style][type].default;
+  if (state === 'disable') {
+    if (group === 'bg') return type === 'filled' ? '#EBEBEB' : 'transparent';
+    if (group === 'border') return '#EBEBEB';
+    return '#9E9E9E'; // label, icon
+  }
+  if (group === 'bg') return c.bg;
+  if (group === 'border') return c.border;
+  if (group === 'label') return c.label;
+  return (BTN_ICONS[style] || BTN_ICONS.neutral)[type];
+}
 
 function buildTokenTabs() {
   var wrap = document.getElementById('style-tabs');
   var html = '';
   Object.keys(BTN.styles).forEach(function (style, i) {
-    html += '<button class="sub-tab' + (i === 0 ? ' is-active' : '') + '" data-style="' + style + '">' + BTN.styles[style].label + '</button>';
+    html += '<button class="comp-tab' + (i === 0 ? ' is-active' : '') + '" data-style="' + style + '" role="tab">' + BTN.styles[style].label + '</button>';
   });
   wrap.innerHTML = html;
   wrap.addEventListener('click', function (e) {
-    var tab = e.target.closest('.sub-tab');
+    var tab = e.target.closest('.comp-tab');
     if (!tab) return;
-    wrap.querySelectorAll('.sub-tab').forEach(function (t) { t.classList.remove('is-active'); });
+    wrap.querySelectorAll('.comp-tab').forEach(function (t) { t.classList.remove('is-active'); });
     tab.classList.add('is-active');
     buildTokenTables(tab.dataset.style, 'filled');
   });
@@ -1004,15 +1019,15 @@ function buildTokenTabs() {
 
 function buildTokenTables(style, type) {
   var wrap = document.getElementById('token-tables');
-  var html = '<div class="sub-tabs" id="type-tabs">';
+  var html = '<div class="type-tabs" id="type-tabs">';
   TYPES.forEach(function (t, i) {
-    html += '<button class="sub-tab' + (t.toLowerCase() === type ? ' is-active' : '') + '" data-type="' + t.toLowerCase() + '">' + t + '</button>';
+    html += '<button class="type-tab' + (t.toLowerCase() === type ? ' is-active' : '') + '" data-type="' + t.toLowerCase() + '">' + t + '</button>';
   });
   html += '</div><div id="type-table"></div>';
   wrap.innerHTML = html;
-  wrap.querySelectorAll('#type-tabs .sub-tab').forEach(function (t) {
+  wrap.querySelectorAll('#type-tabs .type-tab').forEach(function (t) {
     t.addEventListener('click', function () {
-      wrap.querySelectorAll('#type-tabs .sub-tab').forEach(function (x) { x.classList.remove('is-active'); });
+      wrap.querySelectorAll('#type-tabs .type-tab').forEach(function (x) { x.classList.remove('is-active'); });
       t.classList.add('is-active');
       buildTokenTable(style, t.dataset.type);
     });
@@ -1028,24 +1043,21 @@ function tokenRow(desc, varname, value, exampleHtml) {
 function buildTokenTable(style, type) {
   var table = document.getElementById('type-table');
   var colors = BTN.colors[style][type];
-  var vars = BTN.vars(style, type, 'default');
   var rows = '';
 
-  TOKEN_STATES.forEach(function (st) {
-    var c = colors[st.key];
-    if (!c) return;
-    var isTransparent = c.bg === 'transparent';
-    var exBg = '<button class="ds-btn ds-btn--m ds-btn--' + style + ' ds-btn--' + type + '"' +
-               (st.key === 'disable' ? ' disabled' : '') + ' style="background:' + c.bg +
-               ';border-color:' + c.border + ';color:' + c.label + ';' +
-               (st.key === 'hover' ? 'cursor:default' : '') + '">' +
-               '<span class="ds-btn__label">Label</span></button>';
-    var v = BTN.vars(style, type, st.key);
-    rows += tokenRow(st.label + ' — фон', v.bg, c.bg, exBg);
-    rows += tokenRow(st.label + ' — обводка', v.border, c.border, exBg);
-    rows += tokenRow(st.label + ' — текст', v.label, c.label, exBg);
-    rows += tokenRow(st.label + ' — иконка', v.label, c.label, exBg);
-    rows += tokenRow(st.label + ' — тень', '—', 'none', exBg);
+  GROUPS.forEach(function (g) {
+    rows += '<tr class="group-row"><td colspan="4">' + g.label + '</td></tr>';
+    TOKEN_STATES.forEach(function (st) {
+      var c = colors[st.key];
+      if (!c) return;
+      var exBg = '<button class="ds-btn ds-btn--m ds-btn--' + style + ' ds-btn--' + type + '"' +
+                 (st.key === 'disable' ? ' disabled' : '') + ' style="background:' + c.bg +
+                 ';border-color:' + c.border + ';color:' + c.label + ';' +
+                 (st.key === 'hover' ? 'cursor:default' : '') + '">' +
+                 '<span class="ds-btn__label">Label</span></button>';
+      var tok = 'button.' + style + '.' + type + '.' + g.key + '.color.' + st.key;
+      rows += tokenRow(g.row + ' ' + st.label, tok, tokenValue(style, type, g.key, st.key), exBg);
+    });
   });
 
   table.innerHTML =
@@ -1140,13 +1152,9 @@ function updateCodePanels() {
   var shadow = type === 'text' ? 'none' : '0px 2px 2px #E0E0E0...';
   document.getElementById('po-sh-v').textContent = shadow + ';';
 
-  // Tokens: Colors
-  document.getElementById('po-cbg-var').textContent = vars.bg;
-  document.getElementById('po-cbg-val').textContent = colors.bg;
-  document.getElementById('po-cbg-swatch').style.background = colors.bg;
-  document.getElementById('po-ctl-var').textContent = vars.label;
-  document.getElementById('po-ctl-val').textContent = colors.label;
-  document.getElementById('po-ctl-swatch').style.background = colors.label;
+  // Tokens: Colors (как Layout/Style — строки с var())
+  document.getElementById('po-cbg-v').innerHTML = escVar('var(' + vars.bg + ', ' + colors.bg + ');');
+  document.getElementById('po-ctl-v').innerHTML = escVar('var(' + vars.label + ', ' + colors.label + ');');
 
   // CSS: код с номерами строк и подсветкой
   var lines = [
