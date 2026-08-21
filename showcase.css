@@ -449,7 +449,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   background: rgba(249, 250, 251, 0.5);
 }
 .po-title { font-size: 14px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #111827; }
-.po-title-wrap { display: flex; align-items: center; gap: 2px; }
+.po-title-wrap { display: flex; align-items: center; gap: 8px; }
 .po-copy {
   display: inline-flex;
   align-items: center;
@@ -1361,7 +1361,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .an-code {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
   padding: 16px;
   background: #f8fafc;                                   /* slate-50 */
   border: 1px solid #f1f5f9;                             /* slate-100 */
