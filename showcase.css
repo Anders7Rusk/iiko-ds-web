@@ -1585,7 +1585,6 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 }
 .beh-group__h {
   display: flex;
-  gap: 16px;
   justify-content: flex-end;
   padding: 16px;
   background: #F9FAFB;
@@ -1593,8 +1592,6 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 }
 .beh-group__v {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
   padding: 16px;
   background: #F9FAFB;
   border-radius: 8px;
@@ -1602,6 +1599,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   max-width: 320px;
   margin: 0 auto;
 }
+.beh-group__v .ds-btn-group { width: 100%; }
 .beh-group__v .ds-btn { width: 100%; }
 
 .ds-spinner {
