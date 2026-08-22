@@ -198,28 +198,12 @@
                 </div>
                 <div class="props-divider"></div>
                 <div class="control-row">
-                  <span class="control-label">Label</span>
-                  <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-label" checked><span class="track"></span><span class="thumb"></span></span></label>
-                </div>
-                <div class="control-row">
                   <span class="control-label">Element left</span>
                   <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-icon-left" checked><span class="track"></span><span class="thumb"></span></span></label>
                 </div>
                 <div class="control-row">
                   <span class="control-label">Element right</span>
                   <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-icon-right" checked><span class="track"></span><span class="thumb"></span></span></label>
-                </div>
-                <div class="control-row">
-                  <span class="control-label">Support text</span>
-                  <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-support-text" checked><span class="track"></span><span class="thumb"></span></span></label>
-                </div>
-                <div class="control-row">
-                  <span class="control-label">Input text</span>
-                  <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-input-text" checked><span class="track"></span><span class="thumb"></span></span></label>
-                </div>
-                <div class="control-row">
-                  <span class="control-label">Hint text</span>
-                  <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-hint-text" checked><span class="track"></span><span class="thumb"></span></span></label>
                 </div>
                 <div class="control-row">
                   <span class="control-label">Support</span>
@@ -229,18 +213,6 @@
                 <div class="control-row">
                   <label class="control-label" for="ctl-labeltext">Label text</label>
                   <input class="control-input" id="ctl-labeltext" type="text" value="Label">
-                </div>
-                <div class="control-row">
-                  <label class="control-label" for="ctl-inputtext">Input text</label>
-                  <input class="control-input" id="ctl-inputtext" type="text" value="Input text">
-                </div>
-                <div class="control-row">
-                  <label class="control-label" for="ctl-supporttext">Support text</label>
-                  <input class="control-input" id="ctl-supporttext" type="text" value="Support text">
-                </div>
-                <div class="control-row">
-                  <label class="control-label" for="ctl-hinttext">Hint text</label>
-                  <input class="control-input" id="ctl-hinttext" type="text" value="Hint text">
                 </div>
               </div>
             </div>
@@ -654,17 +626,18 @@ function renderStage() {
   var dark = document.getElementById('ctl-dark').checked;
   var opts = {
     size: size, variant: variant, state: state,
-    showLabel: document.getElementById('ctl-label').checked,
+    // значения — по Figma-панели инстанса: Label/Input text/Support text/Hint text управляются вариантом/дефолтами
+    showLabel: variant === 'populated',
     iconL: document.getElementById('ctl-icon-left').checked,
     iconR: document.getElementById('ctl-icon-right').checked,
-    showValue: document.getElementById('ctl-input-text').checked,
+    showValue: true,
     showSupport: document.getElementById('ctl-support').checked,
-    showSupportText: document.getElementById('ctl-support-text').checked,
-    showHint: document.getElementById('ctl-hint-text').checked,
+    showSupportText: true,
+    showHint: true,
     labelText: document.getElementById('ctl-labeltext').value,
-    inputText: document.getElementById('ctl-inputtext').value,
-    supportText: document.getElementById('ctl-supporttext').value,
-    hintText: document.getElementById('ctl-hinttext').value
+    inputText: 'Input text',
+    supportText: 'Support text',
+    hintText: 'Hint text'
   };
   document.getElementById('stage-input-wrap').innerHTML = inputMarkup(opts);
   document.getElementById('stage').classList.toggle('is-dark', dark);
@@ -702,7 +675,7 @@ function renderStage() {
   updateCodePanels();
 }
 
-['ctl-dark', 'ctl-label', 'ctl-icon-left', 'ctl-icon-right', 'ctl-input-text', 'ctl-support', 'ctl-support-text', 'ctl-hint-text', 'ctl-labeltext', 'ctl-inputtext', 'ctl-supporttext', 'ctl-hinttext'].forEach(function (id) {
+['ctl-dark', 'ctl-icon-left', 'ctl-icon-right', 'ctl-support', 'ctl-labeltext'].forEach(function (id) {
   var el = document.getElementById(id);
   if (el) el.addEventListener('input', renderStage);
 });
