@@ -46,7 +46,9 @@
 
 /* ── Матрица вариантов Badge (страница badge.html) ────────────────
    У Badge нет размеров и состояний (только Style × Type), поэтому:
-   подписи типов без сдвига под шапку размера, ряд — 2 колонки. */
+   подписи типов без сдвига под шапку размера, ряд — 2 колонки.
+   Скоуплено под .page-badge, чтобы не протекать на другие страницы
+   (у Button/Checkbox 3 состояния → ряд должен быть 3-колоночным). */
 
-#matrix-root .matrix-types { padding-top: 16px; }
-#matrix-root .matrix-row { grid-template-columns: repeat(2, 1fr); }
+.page-badge #matrix-root .matrix-types { padding-top: 16px; }
+.page-badge #matrix-root .matrix-row { grid-template-columns: repeat(2, 1fr); }
