@@ -1627,32 +1627,35 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   font-size: 14px;
   font-weight: 500;
   color: var(--muted-fg);
-  padding: 4px 8px 8px 32px;
+  padding: 0 8px;
   white-space: nowrap;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+.token-table th:first-child { padding-left: 32px; }
 .token-table td {
   padding: 10px 16px 10px 24px;
   vertical-align: middle;
-  border-bottom: 1px solid #f4f4f5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  color: #3f3f46;
 }
+.token-table tr.group-row { background: #f9fafb; }
 .token-table tr.group-row td {
-  font-weight: 600;
-  font-size: 13px;
-  color: var(--muted-fg);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding-top: 14px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text);
+  text-transform: none;
+  letter-spacing: normal;
 }
 .token-table .tok-var {
   font-family: 'Roboto Mono', ui-monospace, Consolas, monospace;
-  font-size: 13px;
-  color: var(--code-fg);
+  font-size: 12px;
+  color: var(--muted-fg);
 }
 .token-table .tok-val {
   font-family: 'Roboto Mono', ui-monospace, Consolas, monospace;
-  font-size: 13px;
-  color: var(--muted-fg);
+  font-size: 12px;
+  color: #3f3f46;
   font-weight: 400;
 }
 .token-table .tok-example { display: flex; justify-content: center; }
@@ -1680,19 +1683,77 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 /* ── Токен-нотация (пояснение форматов) ──────────────────── */
 
 .token-notation {
-  margin-bottom: 24px;
-  font-size: 14px;
-  line-height: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
   color: var(--text);
 }
-.token-notation code {
+.token-notation p { margin: 0; }
+
+/* Примеры форматов токенов (подпись 224px + чип-код) — как в оригинале */
+
+.token-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 8px 0 16px;
+}
+.token-example-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+.token-example-row span {
+  color: var(--muted-fg);
+  width: 224px;
+  flex-shrink: 0;
+}
+.token-example-row code {
   font-family: 'Roboto Mono', ui-monospace, Consolas, monospace;
-  font-size: 13px;
+  font-size: 12px;
   background: var(--code-bg);
   color: var(--code-fg);
   border-radius: 4px;
-  padding: 2px 8px;
+  padding: 4px 8px;
 }
+
+/* Карточка таблицы токенов (border + radius 8, overflow hidden — как в оригинале) */
+
+.token-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* Капсула табов стилей в «Токенах» (как верхние табы, но по контенту) */
+
+.comp-tabs--pills { margin-bottom: 16px; justify-content: flex-start; }
+.comp-tabs--pills .comp-tab { flex: 0 0 auto; height: auto; }
+
+/* Табы типов (Filled/Outlined/Text) — подчёркнутые 16px, как в оригинале */
+
+.type-tabs { display: flex; gap: 24px; flex-wrap: wrap; }
+.type-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 12px 4px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--muted-fg);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.type-tab:hover { color: var(--text); }
+.type-tab.is-active { border-bottom-color: var(--accent); color: var(--text); }
 
 /* ── Панели токенов под примерами (старый вид, совместимо) ─ */
 
