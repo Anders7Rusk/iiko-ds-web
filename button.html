@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=89">
-<link rel="stylesheet" href="components/button.css?v=89">
-<link rel="stylesheet" href="components/badge.css?v=89">
-<link rel="stylesheet" href="showcase.css?v=89">
+<link rel="stylesheet" href="tokens.css?v=90">
+<link rel="stylesheet" href="components/button.css?v=90">
+<link rel="stylesheet" href="components/badge.css?v=90">
+<link rel="stylesheet" href="showcase.css?v=90">
 </head>
 <body>
 
@@ -1054,6 +1054,8 @@ function tokenRow(desc, varname, value, exampleHtml) {
          '<td class="tok-example">' + exampleHtml + '</td></tr>';
 }
 
+var STAR_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>';
+
 function buildTokenTable(style, type) {
   var table = document.getElementById('type-table');
   var colors = BTN.colors[style][type];
@@ -1064,11 +1066,12 @@ function buildTokenTable(style, type) {
     TOKEN_STATES.forEach(function (st) {
       var c = colors[st.key];
       if (!c) return;
+      var icon = g.key === 'icon' ? '<span class="ds-btn__icon" style="display:inline-flex;align-items:center;justify-content:center;margin-right:8px">' + STAR_SVG + '</span>' : '';
       var exBg = '<button class="ds-btn ds-btn--m ds-btn--' + style + ' ds-btn--' + type + '"' +
                  (st.key === 'disable' ? ' disabled' : '') + ' style="background:' + c.bg +
-                 ';border-color:' + c.border + ';color:' + c.label + ';' +
+                 ';border-color:' + c.border + ';color:' + c.label + ';box-shadow:0px 2px 2px #E0E0E0,0px 1px 1px #D6D6D6;' +
                  (st.key === 'hover' ? 'cursor:default' : '') + '">' +
-                 '<span class="ds-btn__label">Label</span></button>';
+                 icon + '<span class="ds-btn__label">Label</span></button>';
       var tok = 'button.' + style + '.' + type + '.' + g.key + '.color.' + st.key;
       rows += tokenRow(g.row + ' ' + st.label, tok, tokenValue(style, type, g.key, st.key), exBg);
     });
@@ -1332,6 +1335,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=89"></script>
+<script src="sidebar.js?v=90"></script>
 </body>
 </html>
