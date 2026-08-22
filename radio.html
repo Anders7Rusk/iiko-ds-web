@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=114">
-<link rel="stylesheet" href="showcase.css?v=114">
-<link rel="stylesheet" href="components/selection.css?v=114">
+<link rel="stylesheet" href="tokens.css?v=115">
+<link rel="stylesheet" href="showcase.css?v=115">
+<link rel="stylesheet" href="components/selection.css?v=115">
 <style>
 /* ── Локальные стили страницы Radio button ─────────────────── */
 /* фигура радио во вкладке Tokens: круг-подложка 28 + иконка 20 + лейбл */
@@ -121,7 +121,7 @@
                           <span class="pf-cap pf-cap--border">Icon</span>
                           <div class="pf-cb">
                             <span class="pf-cb__bg">
-                              <span class="material-icons pf-cb__icon" aria-hidden="true">radio_button_checked</span>
+                              <span class="pf-cb__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 12.75C9.67583 12.75 10.6781 12.3356 11.5069 11.5069C12.3356 10.6781 12.75 9.67583 12.75 8.5C12.75 7.32416 12.3356 6.32187 11.5069 5.49312C10.6781 4.66437 9.67583 4.25 8.5 4.25C7.32416 4.25 6.32187 4.66437 5.49312 5.49312C4.66437 6.32187 4.25 7.32416 4.25 8.5C4.25 9.67583 4.66437 10.6781 5.49312 11.5069C6.32187 12.3356 7.32416 12.75 8.5 12.75ZM8.5 17C7.32416 17 6.21916 16.7769 5.185 16.3306C4.15083 15.8844 3.25125 15.2787 2.48625 14.5137C1.72125 13.7487 1.11562 12.8492 0.669375 11.815C0.223125 10.7808 0 9.67583 0 8.5C0 7.32416 0.223125 6.21916 0.669375 5.185C1.11562 4.15083 1.72125 3.25125 2.48625 2.48625C3.25125 1.72125 4.15083 1.11562 5.185 0.669375C6.21916 0.223125 7.32416 0 8.5 0C9.67583 0 10.7808 0.223125 11.815 0.669375C12.8492 1.11562 13.7487 1.72125 14.5137 2.48625C15.2787 3.25125 15.8844 4.15083 16.3306 5.185C16.7769 6.21916 17 7.32416 17 8.5C17 9.67583 16.7769 10.7808 16.3306 11.815C15.8844 12.8492 15.2787 13.7487 14.5137 14.5137C13.7487 15.2787 12.8492 15.8844 11.815 16.3306C10.7808 16.7769 9.67583 17 8.5 17ZM8.5 15.3C10.3983 15.3 12.0062 14.6412 13.3237 13.3237C14.6412 12.0062 15.3 10.3983 15.3 8.5C15.3 6.60166 14.6412 4.99375 13.3237 3.67625C12.0062 2.35875 10.3983 1.7 8.5 1.7C6.60166 1.7 4.99375 2.35875 3.67625 3.67625C2.35875 4.99375 1.7 6.60166 1.7 8.5C1.7 10.3983 2.35875 12.0062 3.67625 13.3237C4.99375 14.6412 6.60166 15.3 8.5 15.3Z" fill="#448AFF"/></svg></span>
                               <span class="pf-chip" id="pf-icon-sz">20</span>
                               <span class="pf-chip" id="pf-bg-sz">28</span>
                             </span>
@@ -210,8 +210,20 @@
                   </div>
                   <div class="props-divider"></div>
                   <div class="control-row">
-                    <label class="control-label" for="ctl-textval">Label text</label>
-                    <input class="control-input" id="ctl-textval" type="text" value="Radio button label">
+                    <span class="control-label">Icon left</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-icon-left" checked><span class="track"></span><span class="thumb"></span></span></label>
+                  </div>
+                  <div class="control-row">
+                    <span class="control-label">Icon right</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-icon-right" checked><span class="track"></span><span class="thumb"></span></span></label>
+                  </div>
+                  <div class="control-row">
+                    <span class="control-label">Label</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-label" checked><span class="track"></span><span class="thumb"></span></span></label>
+                  </div>
+                  <div class="control-row">
+                    <span class="control-label">Support</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-support"><span class="track"></span><span class="thumb"></span></span></label>
                   </div>
                 </div>
               </div>
@@ -444,13 +456,20 @@ document.querySelectorAll('.comp-tab[data-panel]').forEach(function (tab) {
 
 <script>
 /* ============================================================
-   Radio button — данные из Figma (DS.json / Figma API)
-   Вариант (Normal/Error/Disable) × Type (Deselected/Selected) × State (Default/Hover/Press)
-   Иконки Material 20px; подложка-круг 28×28 (Hover/Press; у Default — прозрачная, у Disable — нет).
+   Radio button — данные 1:1 из Figma (Figma API + DS.json + tokens.css)
+   Компоненты страницы «Radio button» в Figma:
+     Radio button (20×20): Variant × Type × State
+     Radio button label: Variant × Type + Icon left/Icon right/Label/Support
+     Radio button group: Orientation (Vertical/Horizontal)
+   Иконки — SVG-векторы из Figma (radio_button_unchecked/checked), fill: currentColor.
    ============================================================ */
+
+// SVG-векторы иконок (из Figma, viewBox 0 0 17 17, вставка 20px)
+var RD_ICON_UNCHECKED = '<svg width="20" height="20" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8.5 17C7.32417 17 6.21917 16.7769 5.185 16.3306C4.15083 15.8844 3.25125 15.2788 2.48625 14.5138C1.72125 13.7488 1.11563 12.8492 0.669375 11.815C0.223125 10.7808 0 9.67583 0 8.5C0 7.32417 0.223125 6.21917 0.669375 5.185C1.11563 4.15083 1.72125 3.25125 2.48625 2.48625C3.25125 1.72125 4.15083 1.11563 5.185 0.669375C6.21917 0.223125 7.32417 0 8.5 0C9.67583 0 10.7808 0.223125 11.815 0.669375C12.8492 1.11563 13.7488 1.72125 14.5138 2.48625C15.2788 3.25125 15.8844 4.15083 16.3306 5.185C16.7769 6.21917 17 7.32417 17 8.5C17 9.67583 16.7769 10.7808 16.3306 11.815C15.8844 12.8492 15.2788 13.7488 14.5138 14.5138C13.7488 15.2788 12.8492 15.8844 11.815 16.3306C10.7808 16.7769 9.67583 17 8.5 17ZM8.5 15.3C10.3983 15.3 12.0063 14.6413 13.3238 13.3238C14.6413 12.0063 15.3 10.3983 15.3 8.5C15.3 6.60167 14.6413 4.99375 13.3238 3.67625C12.0063 2.35875 10.3983 1.7 8.5 1.7C6.60167 1.7 4.99375 2.35875 3.67625 3.67625C2.35875 4.99375 1.7 6.60167 1.7 8.5C1.7 10.3983 2.35875 12.0063 3.67625 13.3238C4.99375 14.6413 6.60167 15.3 8.5 15.3Z" fill="currentColor"/></svg>';
+var RD_ICON_CHECKED = '<svg width="20" height="20" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8.5 12.75C9.67583 12.75 10.6781 12.3356 11.5069 11.5069C12.3356 10.6781 12.75 9.67583 12.75 8.5C12.75 7.32416 12.3356 6.32187 11.5069 5.49312C10.6781 4.66437 9.67583 4.25 8.5 4.25C7.32416 4.25 6.32187 4.66437 5.49312 5.49312C4.66437 6.32187 4.25 7.32416 4.25 8.5C4.25 9.67583 4.66437 10.6781 5.49312 11.5069C6.32187 12.3356 7.32416 12.75 8.5 12.75ZM8.5 17C7.32416 17 6.21916 16.7769 5.185 16.3306C4.15083 15.8844 3.25125 15.2787 2.48625 14.5137C1.72125 13.7487 1.11562 12.8492 0.669375 11.815C0.223125 10.7808 0 9.67583 0 8.5C0 7.32416 0.223125 6.21916 0.669375 5.185C1.11562 4.15083 1.72125 3.25125 2.48625 2.48625C3.25125 1.72125 4.15083 1.11562 5.185 0.669375C6.21916 0.223125 7.32416 0 8.5 0C9.67583 0 10.7808 0.223125 11.815 0.669375C12.8492 1.11562 13.7487 1.72125 14.5137 2.48625C15.2787 3.25125 15.8844 4.15083 16.3306 5.185C16.7769 6.21916 17 7.32416 17 8.5C17 9.67583 16.7769 10.7808 16.3306 11.815C15.8844 12.8492 15.2787 13.7487 14.5137 14.5137C13.7487 15.2787 12.8492 15.8844 11.815 16.3306C10.7808 16.7769 9.67583 17 8.5 17ZM8.5 15.3C10.3983 15.3 12.0062 14.6412 13.3237 13.3237C14.6412 12.0062 15.3 10.3983 15.3 8.5C15.3 6.60166 14.6412 4.99375 13.3237 3.67625C12.0062 2.35875 10.3983 1.7 8.5 1.7C6.60166 1.7 4.99375 2.35875 3.67625 3.67625C2.35875 4.99375 1.7 6.60166 1.7 8.5C1.7 10.3983 2.35875 12.0062 3.67625 13.3237C4.99375 14.6412 6.60166 15.3 8.5 15.3Z" fill="currentColor"/></svg>';
+
 var RD = {
-  icons: { Deselected: 'radio_button_unchecked', Selected: 'radio_button_checked' },
-  // [variant][type][state] → { bg: цвет подложки (круг 28×28), icon: цвет иконки }
+  // [variant][type][state] → { bg: подложка 28×28 (только Hover/Press; Default/Disable — transparent), icon: цвет иконки }
   colors: {
     Normal: {
       Deselected: { Default: { bg: '#ffffff00', icon: '#616161' }, Hover: { bg: '#ebebeb', icon: '#616161' }, Press: { bg: '#e0e0e0', icon: '#616161' } },
@@ -465,47 +484,18 @@ var RD = {
       Selected:   { Default: { bg: null, icon: '#9e9e9e' } }
     }
   },
-  // CSS-переменная цвета иконки по [variant][type]
-  iconVars: {
-    Normal:  { Deselected: '--ds-color-icon-primary',    Selected: '--ds-color-text-accent' },
-    Error:   { Deselected: '--ds-color-text-negative',   Selected: '--ds-color-text-negative' },
-    Disable: { Deselected: '--ds-color-text-disable',    Selected: '--ds-color-text-disable' }
+  // CSS-переменные 1:1 из tokens.css (--ds-color-radio-button-*)
+  iconVar: function (variant, type) {
+    if (variant === 'Disable') return '--ds-color-radio-button-disable-' + (type === 'Selected' ? 'selected' : 'deselected') + '-icon-color';
+    if (variant === 'Error') return '--ds-color-radio-button-error-icon-color';
+    return '--ds-color-radio-button-normal-' + (type === 'Selected' ? 'selected' : 'deselected') + '-icon-color';
   },
-  labelVar: { Normal: '--ds-color-text-primary', Error: '--ds-color-text-negative', Disable: '--ds-color-text-disable' },
-  labelHex: { Normal: '#333333', Error: '#ff5252', Disable: '#9e9e9e' },
-  // имя Figma-переменной подложки
-  bgVarName: function (v, t, s) {
-    if (v === 'Disable') return 'Radio button/Disable/Background';
-    return 'Radio button/' + v + '/' + t + '/' + s + '/Background';
+  labelVar: function (variant) {
+    return variant === 'Disable' ? '--ds-color-radio-button-label-text-disable-color' : '--ds-color-radio-button-label-text-color';
   },
-  bgAlias: function (v, t, s) {
-    var map = {
-      'Normal/Deselected/Default': 'Shapes/Default transparent',
-      'Normal/Deselected/Hover': 'Neutral/100',
-      'Normal/Deselected/Press': 'Neutral/200',
-      'Normal/Selected/Default': 'Shapes/Default transparent',
-      'Normal/Selected/Hover': 'Accent/100',
-      'Normal/Selected/Press': 'Accent/200',
-      'Error/Deselected/Default': 'Shapes/Default transparent',
-      'Error/Deselected/Hover': 'Negative/100',
-      'Error/Deselected/Press': 'Negative/200',
-      'Error/Selected/Default': 'Shapes/Default transparent',
-      'Error/Selected/Hover': 'Negative/100',
-      'Error/Selected/Press': 'Negative/200'
-    };
-    return map[v + '/' + t + '/' + s] || 'Shapes/Default transparent';
-  },
-  // имя Figma-переменной цвета иконки
-  iconVarName: function (v, t) {
-    if (v === 'Disable') return 'Radio button/Disable/' + t + '/Icon color';
-    if (v === 'Error') return 'Radio button/Error/Icon color';
-    return 'Radio button/Normal/' + t + '/Icon color';
-  },
-  iconAlias: function (v, t) {
-    if (v === 'Disable') return 'Icon/Disable';
-    if (v === 'Error') return 'Icon/Negative';
-    return t === 'Deselected' ? 'Icon/Primary' : 'Icon/Accent';
-  }
+  labelHex: function (variant) { return variant === 'Disable' ? '#9e9e9e' : '#333333'; },
+  supportVar: function (variant) { return '--ds-color-radio-button-label-text-support-color'; },
+  supportHex: function (variant) { return variant === 'Error' ? '#ff5252' : '#616161'; }
 };
 
 /* ============================================================
@@ -555,7 +545,7 @@ function fallbackCopy(text) {
 }
 
 /* ============================================================
-   Интерактивный компонент
+   Интерактивный компонент (Radio button label — полные настройки)
    ============================================================ */
 function selVal(id) {
   var d = document.querySelector('.ds-select[data-sel="' + id + '"]');
@@ -605,73 +595,91 @@ function rdClass(variant) {
   return cls;
 }
 
+// одна радио-иконка: подложка (по состоянию) + SVG-вектор
+function rdIcon(iconSvg, iconColor, stateBg) {
+  var st = stateBg
+    ? '<span class="ds-radio__state" style="background:' + stateBg + '"></span>'
+    : '';
+  return '<span class="ds-radio__box" style="color:' + iconColor + '">' + st + iconSvg + '</span>';
+}
+
 function renderStage() {
   var variant = selVal('variant');
   var type = selVal('type');
   var state = selVal('state');
-  var text = document.getElementById('ctl-textval').value || 'Radio button label';
   var dark = document.getElementById('ctl-dark').checked;
+  var iconL = document.getElementById('ctl-icon-left').checked;
+  var iconR = document.getElementById('ctl-icon-right').checked;
+  var showLabel = document.getElementById('ctl-label').checked;
+  var showSupport = document.getElementById('ctl-support').checked;
 
   var colors = RD.colors[variant][type][state] || RD.colors[variant][type].Default;
   var cls = rdClass(variant);
   var disabled = variant === 'Disable' ? ' disabled' : '';
   var checked = type === 'Selected' ? ' checked' : '';
+  var iconSvg = type === 'Selected' ? RD_ICON_CHECKED : RD_ICON_UNCHECKED;
+  var labelColor = RD.labelHex(variant);
+  var supportColor = variant === 'Error' ? '#ff5252' : RD.supportHex(variant);
+  // подложка 28×28 — только у Hover/Press (Default/Disable — transparent)
+  var stateBg = variant !== 'Disable' && state !== 'Default' ? colors.bg : null;
 
-  // подложка-круг 28×28 (в Figma она есть у всех состояний, кроме Disable)
-  var boxStyle = '';
-  if (variant !== 'Disable') {
-    boxStyle = ' style="width:28px;height:28px;border-radius:50%;background:' + colors.bg + ';"';
-  }
-
-  var html = '<label class="' + cls + '">\n' +
-             '  <input type="radio" name="group" class="ds-radio__input"' + (checked ? ' checked' : '') + disabled + '>\n' +
-             '  <span class="ds-radio__box material-icons" aria-hidden="true"' + boxStyle + '></span>\n' +
-             '  <span class="ds-radio__label">' + text.replace(/</g, '&lt;') + '</span>\n' +
-             '</label>';
+  var html = '<div class="rd-preview" style="display:inline-flex;flex-direction:column;gap:4px">\n' +
+             '<label class="' + cls + '">\n' +
+             '  <input type="radio" name="group" class="ds-radio__input"' + (checked ? ' checked' : '') + disabled + '>\n';
+  if (iconL) html += '  ' + rdIcon(iconSvg, colors.icon, stateBg) + '\n';
+  if (showLabel) html += '  <span class="ds-radio__label" style="color:' + labelColor + '">Radio button label</span>\n';
+  if (iconR) html += '  ' + rdIcon(iconSvg, colors.icon, stateBg) + '\n';
+  html += '</label>\n';
+  if (showSupport) html += '<span class="ds-radio__support" style="color:' + supportColor + '">Support/Error text</span>\n';
+  html += '</div>';
   document.getElementById('stage-radio-wrap').innerHTML = html;
   document.getElementById('stage').classList.toggle('is-dark', dark);
 
-  // код (HTML-вкладка)
+  // код (HTML-вкладка) — как в Figma: label.ds-radio + support
   var code = '<label class="' + cls + '">\n' +
-             '  <input type="radio" name="group" class="ds-radio__input"' + (checked ? ' checked' : '') + disabled + '>\n' +
-             '  <span class="ds-radio__box material-icons" aria-hidden="true"></span>\n' +
-             '  <span class="ds-radio__label">' + text.replace(/</g, '&lt;') + '</span>\n' +
-             '</label>';
+             '  <input type="radio" name="group" class="ds-radio__input"' + (checked ? ' checked' : '') + disabled + '>\n';
+  if (iconL) code += '  <span class="ds-radio__box" aria-hidden="true">' + (type === 'Selected' ? '<svg …/>' : '<svg …/>') + '</span>\n';
+  if (showLabel) code += '  <span class="ds-radio__label">Radio button label</span>\n';
+  if (iconR) code += '  <span class="ds-radio__box" aria-hidden="true"><svg …/></span>\n';
+  code += '</label>\n';
+  if (showSupport) code += '<span class="ds-radio__support">Support/Error text</span>\n';
   document.getElementById('cc-html').innerHTML = renderHtml(code.split('\n'));
   lastHtmlLines = code.split('\n');
 
   updateCodePanels();
 }
-['ctl-textval', 'ctl-dark'].forEach(function (id) {
+['ctl-dark', 'ctl-icon-left', 'ctl-icon-right', 'ctl-label', 'ctl-support'].forEach(function (id) {
   document.getElementById(id).addEventListener('input', renderStage);
 });
 
-// CSS-декларации радио по текущему состоянию
+// CSS-декларации (токены 1:1: Radio button label/Gap 8, Text size 14/400, Gap support 4, Pad left support 28)
 function rdCssLines(variant, type, state) {
   var colors = RD.colors[variant][type][state] || RD.colors[variant][type].Default;
-  var iconVar = RD.iconVars[variant][type];
-  var labelVar = RD.labelVar[variant];
-  var labelHex = RD.labelHex[variant];
+  var iconVar = RD.iconVar(variant, type);
+  var labelVar = RD.labelVar(variant);
+  var labelHex = RD.labelHex(variant);
+  var supportVar = RD.supportVar(variant);
   var lines = [
-    '/* .ds-radio */',
+    '/* .ds-radio — Form */',
     'display: inline-flex;',
     'align-items: center;',
-    'gap: var(--ds-space-2x, 8px);',
-    'cursor: pointer;',
-    'user-select: none;',
-    '/* .ds-radio__box */',
-    'display: inline-flex;',
-    'align-items: center;',
-    'justify-content: center;',
+    'gap: var(--ds-space-2x, 8px); /* Radio button label/Gap */',
+    '/* .ds-radio__box — Radio button / Icon size 20px */',
     'width: var(--ds-size-5x, 20px);',
     'height: var(--ds-size-5x, 20px);',
-    'font-size: var(--ds-size-5x, 20px);',
     'color: var(' + iconVar + ', ' + colors.icon + ');',
-    '/* .ds-radio__label */',
+    '/* .ds-radio__label — Text size 14px / Text weight 400 */',
     'font-size: var(--ds-typography-font-size-3-5x, 14px);',
+    'font-weight: var(--ds-typography-font-weight-regular, 400);',
     'letter-spacing: 0.25px;',
     'line-height: 20px;',
-    'color: var(' + labelVar + ', ' + labelHex + ');'
+    'color: var(' + labelVar + ', ' + labelHex + ');',
+    '/* .ds-radio__support — Gap support 4px / Pad left support 28px */',
+    'margin-top: var(--ds-space-1x, 4px);',
+    'margin-left: var(--ds-space-7x, 28px);',
+    'font-size: var(--ds-typography-font-size-3x, 12px);',
+    'line-height: 16px;',
+    'color: var(' + supportVar + ', ' + RD.supportHex(variant) + ');'
   ];
   return lines;
 }
@@ -681,20 +689,20 @@ function updateCodePanels() {
   var type = selVal('type');
   var state = selVal('state');
   var colors = RD.colors[variant][type][state] || RD.colors[variant][type].Default;
-  var iconVar = RD.iconVars[variant][type];
-  var labelVar = RD.labelVar[variant];
-  var labelHex = RD.labelHex[variant];
+  var iconVar = RD.iconVar(variant, type);
+  var labelVar = RD.labelVar(variant);
+  var labelHex = RD.labelHex(variant);
 
   // подпись
   document.getElementById('po-label').textContent = 'radio / ' + variant + ' / ' + type + ' / ' + state;
 
   // Layout
-  document.getElementById('po-gap-v').innerHTML = escVar('var(--ds-space-2x, 8px);');
-  document.getElementById('po-icon-v').innerHTML = escVar('var(--ds-size-5x, 20px);');
-  document.getElementById('po-bgsz-v').innerHTML = escVar('var(--ds-size-7x, 28px);');
+  document.getElementById('po-gap-v').innerHTML = escVar('var(--ds-space-2x, 8px); /* Gap */');
+  document.getElementById('po-icon-v').innerHTML = escVar('var(--ds-size-5x, 20px); /* Icon size */');
+  document.getElementById('po-bgsz-v').innerHTML = escVar('var(--ds-size-7x, 28px); /* State hit-area */');
 
-  // Style: подложка (круг 28×28) — цвет по состоянию; у Disable подложки нет
-  var bgText = variant === 'Disable'
+  // Style: подложка (круг 28×28) — цвет по состоянию; у Disable/Default подложки нет
+  var bgText = variant === 'Disable' || state === 'Default'
     ? 'none (transparent)'
     : '<span class="dot" style="background:' + colors.bg + '"></span> ' + colors.bg.toUpperCase();
   document.getElementById('po-bg-v').innerHTML = bgText;
@@ -785,7 +793,7 @@ document.getElementById('cc-copy').addEventListener('click', function () {
 renderStage();
 
 /* ============================================================
-   Матрица вариантов
+   Матрица вариантов (Radio button: Variant × Type × State, 14 вариантов)
    ============================================================ */
 var VARIANTS = ['Normal', 'Error', 'Disable'];
 var TYPES = ['Deselected', 'Selected'];
@@ -795,13 +803,15 @@ var selectedRd = null;
 function matrixRadio(variant, type, state) {
   var colors = RD.colors[variant][type][state] || RD.colors[variant][type].Default;
   var isDisable = variant === 'Disable';
-  var size = isDisable ? '20px' : '28px';
-  var bg = isDisable ? '' : 'background:' + colors.bg + ';';
-  var radius = isDisable ? '' : 'border-radius:50%;';
+  // подложка 28×28 (Hover/Press); Default/Disable — иконка 20×20
+  var size = isDisable || state === 'Default' ? '20px' : '28px';
+  var bg = isDisable || state === 'Default' ? '' : 'background:' + colors.bg + ';';
+  var radius = isDisable || state === 'Default' ? '' : 'border-radius:50%;';
+  var iconSvg = type === 'Selected' ? RD_ICON_CHECKED : RD_ICON_UNCHECKED;
   return '<span class="mc-radio matrix-btn" data-variant="' + variant + '" data-type="' + type + '" data-state="' + state +
          '" style="width:' + size + ';height:' + size + ';' + radius + bg +
          'display:inline-flex;align-items:center;justify-content:center;cursor:pointer;" title="' + variant + ' / ' + type + ' / ' + state + '">' +
-         '<span class="material-icons" style="font-size:20px;line-height:1;color:' + colors.icon + ';">' + RD.icons[type] + '</span></span>';
+         '<span style="display:inline-flex;color:' + colors.icon + '">' + iconSvg + '</span></span>';
 }
 
 (function buildMatrix() {
@@ -817,7 +827,7 @@ function matrixRadio(variant, type, state) {
     TYPES.forEach(function (t) { html += '<span class="matrix-type">' + t + '</span>'; });
     html += '</div>';
     html += '<div class="matrix-size">';
-    html += '<div class="matrix-size__title">20px · Material Icons</div>';
+    html += '<div class="matrix-size__title">20px · Icon size 5x</div>';
     html += '<div class="matrix-card">';
     html += '<div class="matrix-states" style="grid-template-columns:repeat(' + cols + ', 1fr)">';
     states.forEach(function (st) { html += '<span class="matrix-state">' + st + '</span>'; });
@@ -865,20 +875,20 @@ function updateVarInspector(d) {
   var type = d.type;
   var state = d.state;
   var colors = RD.colors[variant][type][state] || RD.colors[variant][type].Default;
-  var iconVar = RD.iconVars[variant][type];
-  var labelVar = RD.labelVar[variant];
-  var labelHex = RD.labelHex[variant];
+  var iconVar = RD.iconVar(variant, type);
+  var labelVar = RD.labelVar(variant);
+  var labelHex = RD.labelHex(variant);
 
   // подпись
   document.getElementById('vc-label').textContent = 'radio / ' + variant + ' / ' + type + ' / ' + state;
 
   // Layout
-  document.getElementById('vc-gap-v').innerHTML = escVar('var(--ds-space-2x, 8px);');
-  document.getElementById('vc-icon-v').innerHTML = escVar('var(--ds-size-5x, 20px);');
-  document.getElementById('vc-bgsz-v').innerHTML = escVar('var(--ds-size-7x, 28px);');
+  document.getElementById('vc-gap-v').innerHTML = escVar('var(--ds-space-2x, 8px); /* Gap */');
+  document.getElementById('vc-icon-v').innerHTML = escVar('var(--ds-size-5x, 20px); /* Icon size */');
+  document.getElementById('vc-bgsz-v').innerHTML = escVar('var(--ds-size-7x, 28px); /* State hit-area */');
 
   // Style
-  var bgText = variant === 'Disable'
+  var bgText = variant === 'Disable' || state === 'Default'
     ? 'none (transparent)'
     : '<span class="dot" style="background:' + colors.bg + '"></span> ' + colors.bg.toUpperCase();
   document.getElementById('vc-bg-v').innerHTML = bgText;
@@ -901,9 +911,11 @@ function updateVarInspector(d) {
   var checked = type === 'Selected' ? ' checked' : '';
   var htmlCode = '<label class="' + cls + '">\n' +
                  '  <input type="radio" name="group" class="ds-radio__input"' + (checked ? ' checked' : '') + disabled + '>\n' +
-                 '  <span class="ds-radio__box material-icons" aria-hidden="true"></span>\n' +
+                 '  <span class="ds-radio__box" aria-hidden="true"><svg …/></span>\n' +
                  '  <span class="ds-radio__label">Radio button label</span>\n' +
-                 '</label>';
+                 '  <span class="ds-radio__box" aria-hidden="true"><svg …/></span>\n' +
+                 '</label>\n' +
+                 '<span class="ds-radio__support">Support/Error text</span>';
   lastVcHtml = htmlCode.split('\n');
   document.getElementById('vc-html').innerHTML = renderHtml(htmlCode.split('\n'));
 }
