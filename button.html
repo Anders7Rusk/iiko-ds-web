@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=109">
-<link rel="stylesheet" href="components/button.css?v=109">
-<link rel="stylesheet" href="components/badge.css?v=109">
-<link rel="stylesheet" href="showcase.css?v=109">
+<link rel="stylesheet" href="tokens.css?v=110">
+<link rel="stylesheet" href="components/button.css?v=110">
+<link rel="stylesheet" href="components/badge.css?v=110">
+<link rel="stylesheet" href="showcase.css?v=110">
 </head>
 <body>
 
@@ -1863,24 +1863,29 @@ function buildFigmaTable() {
       var path = prefix ? prefix + '/' + seg : seg;
       var child = node[seg];
       if (child.__v !== undefined) {
-        var r = parseVar(child.__parts);
-        var ex = '';
-        if (r && r.group) { try { ex = stateButton(r.style, r.type, r.state, r.group); } catch (err) { ex = ''; } }
-        flat.push({ type:'var', seg:seg, depth:depth, path:path, val:child.__v, alias:child.__a, ex:ex });
+        flat.push({ type:'var', seg:seg, depth:depth, path:path, val:child.__v, alias:child.__a, ex:'' });
       } else {
-        var folder = { type:'folder', seg:seg, depth:depth, path:path, index:flat.length, count:0 };
+        var folder = { type:'folder', seg:seg, depth:depth, path:path, index:flat.length, count:0, btn:'' };
+        // одна кнопка на состояние: если все дети папки — свойства (листья), это группа состояния
+        var childSegs = Object.keys(child);
+        var leafSms = childSegs.filter(function (k) { return child[k].__v !== undefined; });
+        if (leafSms.length && leafSms.length === childSegs.length) {
+          var samp = child[leafSms[0]];
+          var rr = parseVar(samp.__parts);
+          if (rr && rr.group) { try { folder.btn = stateButton(rr.style, rr.type, rr.state, rr.group); } catch (e) { folder.btn = ''; } }
+        }
         flat.push(folder);
         render(child, depth + 1, path);
         folder.count = flat.length - folder.index - 1;
       }
     });
   })(tree, 0, '');
-  var html = '<table class="token-table figma-table"><thead><tr><th>Переменная</th><th>Значение</th><th>Алиас</th><th>Пример</th></tr></thead><tbody>';
+  var html = '<table class="token-table figma-table"><thead><tr><th>Переменная</th><th>Алиас</th><th>Значение</th><th>Пример</th></tr></thead><tbody>';
   flat.forEach(function (r) {
     if (r.type === 'folder') {
-      html += '<tr class="group-row figma-group" data-count="' + r.count + '"><td style="padding-left:' + (r.depth * 14 + 8) + 'px" colspan="4"><span class="fold-tri"></span>' + r.seg + '</td></tr>';
+      html += '<tr class="group-row figma-group" data-count="' + r.count + '"><td style="padding-left:' + (r.depth * 14 + 8) + 'px" colspan="3"><span class="fold-tri"></span>' + r.seg + '</td><td class="tok-example">' + r.btn + '</td></tr>';
     } else {
-      html += '<tr class="figma-var"><td class="figma-path" style="padding-left:' + (r.depth * 14 + 24) + 'px">' + r.seg + '</td><td class="tok-val">' + r.val + '</td><td class="tok-alias">' + r.alias + '</td><td class="tok-example">' + r.ex + '</td></tr>';
+      html += '<tr class="figma-var"><td class="figma-path" style="padding-left:' + (r.depth * 14 + 24) + 'px">' + r.seg + '</td><td class="tok-alias">' + r.alias + '</td><td class="tok-val">' + r.val + '</td><td class="tok-example">' + r.ex + '</td></tr>';
     }
   });
   html += '</tbody></table>';
@@ -1907,6 +1912,6 @@ buildFigmaTable();
 
 </script>
 
-<script src="sidebar.js?v=109"></script>
+<script src="sidebar.js?v=110"></script>
 </body>
 </html>
