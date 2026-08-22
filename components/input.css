@@ -99,6 +99,7 @@
 .ds-input__support-row {
   display: flex;
   align-items: center;
+  justify-content: space-between;   /* как в Figma: Support text слева, Hint text справа (фреймы 176/74) */
 }
 
 .ds-input__support,
