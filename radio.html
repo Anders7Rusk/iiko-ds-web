@@ -63,7 +63,6 @@
         <button class="comp-tab" data-panel="tab-anatomy" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>Анатомия</button>
         <button class="comp-tab" data-panel="tab-behavior" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>Поведение</button>
         <button class="comp-tab" data-panel="tab-tokens" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>Токены</button>
-        <button class="comp-tab" data-panel="tab-figma" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>Figma</button>
       </div>
 
       <!-- ============================================================
@@ -359,7 +358,8 @@
 
         <div class="comp-tabs comp-tabs--sub" role="tablist">
           <button class="comp-tab is-active" data-panel="tokens-variants" role="tab">Варианты</button>
-          <button class="comp-tab" data-panel="tokens-sizes" role="tab">Размеры</button>
+<button class="comp-tab" data-panel="tokens-sizes" role="tab">Размеры</button>
+          <button class="comp-tab" data-panel="tokens-figma" role="tab">Figma</button>
         </div>
 
         <div class="comp-panel is-active" id="tokens-variants">
@@ -393,26 +393,23 @@
           </section>
         </div>
 
-      </div>
+  <div class="comp-panel" id="tokens-figma">
 
-      <!-- ============================================================
-           ВКЛАДКА: FIGMA
-           Переменные Figma для компонента (из DS.json / Figma API).
-           ============================================================ -->
-      <div class="comp-panel" id="tab-figma">
+          <section>
+            <h2>Токены Radio button — переменные Figma</h2>
+            <div class="token-card">
+              <!-- СЮДА: дерево переменных Figma (Переменная / Значение / Алиас).
+                   Генерируется скриптом из данных Figma. -->
+              <div id="figma-table"></div>
+            </div>
+          </section>
 
-        <section>
-          <h2>Токены Radio button — переменные Figma</h2>
-          <div class="token-card">
-            <!-- СЮДА: дерево переменных Figma (Переменная / Значение / Алиас).
-                 Генерируется скриптом из данных Figma. -->
-            <div id="figma-table"></div>
-          </div>
-        </section>
+        </div>
+
 
       </div>
 
-    </main>
+          </main>
 
   </div>
 
