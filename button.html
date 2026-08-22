@@ -991,6 +991,16 @@ var BTN_ICONS = {
   disable:  { filled: '#9E9E9E', outlined: '#9E9E9E', text: '#9E9E9E' }
 };
 
+// Цвета маркеров (свотчей) для табов стилей — из DS.json (характерный цвет стиля)
+var BTN_SWATCH = {
+  accent:   '#448AFF',
+  neutral:  '#E0E0E0',
+  positive: '#14B456',
+  negative: '#FF5252',
+  warning:  '#FFAB40',
+  disable:  '#EBEBEB'
+};
+
 // Значение токена для таблицы (по DS.json; disable — группа Button/Disable)
 function tokenValue(style, type, group, state) {
   var c = BTN.colors[style][type][state] || BTN.colors[style][type].default;
@@ -1009,7 +1019,7 @@ function buildTokenTabs() {
   var wrap = document.getElementById('style-tabs');
   var html = '';
   Object.keys(BTN.styles).forEach(function (style, i) {
-    html += '<button class="comp-tab' + (i === 0 ? ' is-active' : '') + '" data-style="' + style + '" role="tab">' + BTN.styles[style].label + '</button>';
+    html += '<button class="comp-tab' + (i === 0 ? ' is-active' : '') + '" data-style="' + style + '" role="tab"><span class="cap-swatch" style="background:' + BTN_SWATCH[style] + '"></span>' + BTN.styles[style].label + '</button>';
   });
   wrap.innerHTML = html;
   wrap.addEventListener('click', function (e) {
