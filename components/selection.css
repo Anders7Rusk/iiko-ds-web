@@ -124,3 +124,26 @@
 .ds-radio--error .ds-radio__support {
   color: var(--ds-color-text-negative);           /* #FF5252 */
 }
+
+/* ── Подложка состояния (State 28×28) — hover/press в Figma ──
+   Внутри .ds-radio__box: круг под иконкой 20px. Используется
+   в превью «Интерактивного компонента» и матрице вариантов. */
+
+.ds-radio__box {
+  position: relative;
+}
+.ds-radio__state {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.ds-radio__box::before {
+  position: relative;
+  z-index: 1;
+}
