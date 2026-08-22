@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=84">
-<link rel="stylesheet" href="components/button.css?v=84">
-<link rel="stylesheet" href="components/badge.css?v=84">
-<link rel="stylesheet" href="showcase.css?v=84">
+<link rel="stylesheet" href="tokens.css?v=85">
+<link rel="stylesheet" href="components/button.css?v=85">
+<link rel="stylesheet" href="components/badge.css?v=85">
+<link rel="stylesheet" href="showcase.css?v=85">
 </head>
 <body>
 
@@ -384,8 +384,8 @@
             <p class="beh-sub">Попробуйте навести курсор и нажать на кнопки ниже. Они реагируют на ваши действия, демонстрируя реальную скорость анимации и смену цветов.</p>
             <div class="beh-sandbox">
               <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Primary Button</span></button>
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" type="button"><span class="ds-btn__label">Secondary Button</span></button>
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text" type="button"><span class="ds-btn__icon material-icons" aria-hidden="true">add</span><span class="ds-btn__label">Action</span></button>
+              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button"><span class="ds-btn__label">Secondary Button</span></button>
+              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--text" type="button"><span class="ds-btn__icon material-icons" aria-hidden="true">add</span><span class="ds-btn__label">Action</span></button>
             </div>
           </div>
         </section>
@@ -473,15 +473,19 @@
               <div class="beh-group__card">
                 <h4>Горизонтальная</h4>
                 <div class="beh-group__h">
-                  <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" type="button"><span class="ds-btn__label">Cancel</span></button>
-                  <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Confirm</span></button>
+                  <div class="ds-btn-group ds-btn-group--horizontal">
+                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button"><span class="ds-btn__label">Cancel</span></button>
+                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Confirm</span></button>
+                  </div>
                 </div>
               </div>
               <div class="beh-group__card">
                 <h4>Вертикальная</h4>
                 <div class="beh-group__v">
-                  <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Sign In</span></button>
-                  <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text" type="button"><span class="ds-btn__label">Create Account</span></button>
+                  <div class="ds-btn-group ds-btn-group--vertical">
+                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Sign In</span></button>
+                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--text" type="button"><span class="ds-btn__label">Create Account</span></button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1286,13 +1290,9 @@ if (loaderBtn && loaderCap) {
     loaderBtn.innerHTML = '<span class="ds-spinner" aria-hidden="true"></span><span class="ds-btn__label">Save Changes</span>';
     loaderCap.textContent = 'Saving data...';
     setTimeout(function () {
-      loaderBtn.classList.remove('ds-btn--accent');
-      loaderBtn.classList.add('ds-btn--neutral');
       loaderBtn.innerHTML = '<span class="ds-btn__icon material-icons" aria-hidden="true">check</span><span class="ds-btn__label">Saved!</span>';
       loaderCap.textContent = 'Done!';
       setTimeout(function () {
-        loaderBtn.classList.add('ds-btn--accent');
-        loaderBtn.classList.remove('ds-btn--neutral');
         loaderBtn.innerHTML = '<span class="ds-btn__label">Save Changes</span>';
         loaderCap.textContent = 'Click to test loader';
         loaderBtn.style.pointerEvents = '';
@@ -1322,6 +1322,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=84"></script>
+<script src="sidebar.js?v=85"></script>
 </body>
 </html>
