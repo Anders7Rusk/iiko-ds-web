@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=96">
-<link rel="stylesheet" href="components/button.css?v=96">
-<link rel="stylesheet" href="components/badge.css?v=96">
-<link rel="stylesheet" href="showcase.css?v=96">
+<link rel="stylesheet" href="tokens.css?v=97">
+<link rel="stylesheet" href="components/button.css?v=97">
+<link rel="stylesheet" href="components/badge.css?v=97">
+<link rel="stylesheet" href="showcase.css?v=97">
 </head>
 <body>
 
@@ -1315,7 +1315,7 @@ function buildTokenTable(style, type) {
     TOKEN_STATES.forEach(function (st) {
       var name = figmaVarName(style, type, g.key, st.key);
       if (!FIGMA[name]) return; // токена нет в переменных — строку не показываем
-      var ex = stateButton(style, type, st.key, g.key === 'icon');
+      var ex = stateButton(style, type, st.key, true);
       groupRows += tokenRow(st.label, name, FIGMA[name], ex);
     });
     if (groupRows) rows += '<tr class="group-row"><td colspan="4">' + g.label + '</td></tr>' + groupRows;
@@ -1579,6 +1579,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=96"></script>
+<script src="sidebar.js?v=97"></script>
 </body>
 </html>
