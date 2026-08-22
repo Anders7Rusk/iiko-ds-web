@@ -8,12 +8,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=70">
-<link rel="stylesheet" href="components/badge.css?v=70">
-<link rel="stylesheet" href="components/button.css?v=70">
-<link rel="stylesheet" href="showcase.css?v=70">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="showcase.css">
+<link rel="stylesheet" href="components/badge.css?v=1">
+<!-- ПРИ ГЕНЕРАЦИИ СТРАНИЦЫ: добавить сюда ссылку на CSS компонента, например:
+     <link rel="stylesheet" href="components/<name>.css"> -->
 </head>
 <body>
+
+<!-- ==========================================================================
+  РЫБА (каркас) страницы компонента iiko DS.
+  button.html — эталон с реальным наполнением (см. его для образца секций).
+
+  КАК ПОЛЬЗОВАТЬСЯ:
+  1. Скопировать файл в <component>.html (напр. badge.html).
+  2. Заменить {{Component}} на имя компонента (title, h1, вкладка Figma).
+  3. Заполнить секции внутри вкладок (маркеры «СЮДА:»).
+  4. Подключить components/<name>.css в head и добавить страницу в sidebar.js.
+  Вкладки можно править по одной — каждая отдельная панель.
+=========================================================================== -->
 
 <div class="layout">
 
@@ -21,109 +34,360 @@
 
   <div class="layout__main">
 
-
-
     <main>
 
       <div class="page-head">
-        <h2>Badge</h2>
-        <p class="desc">Счётчик (19×18, полное скругление) и точка (8×8).
-        В Figma — страница «Badge», компонент Badge (Style × Type): Accent / Positive / Warning / Negative.</p>
+        <h1>Badge</h1>
+        <!-- СЮДА: краткое описание компонента (1–2 строки) -->
+        <p class="desc">Счётчик (19×18, полное скругление) и точка (8×8). В Figma — компонент Badge (Style × Type): Accent / Positive / Warning / Negative.</p>
       </div>
 
-      <!-- ===== Badge ===== -->
-      <section>
-        <h2>Badge</h2>
+      <!-- ===== Вкладки страницы (не удалять, не менять порядок) ===== -->
+      <div class="comp-tabs" role="tablist">
+        <button class="comp-tab is-active" data-panel="tab-component" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>Компонент</button>
+        <button class="comp-tab" data-panel="tab-description" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Описание</button>
+        <button class="comp-tab" data-panel="tab-anatomy" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>Анатомия</button>
+        <button class="comp-tab" data-panel="tab-behavior" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>Поведение</button>
+        <button class="comp-tab" data-panel="tab-tokens" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>Токены</button>
+        <button class="comp-tab" data-panel="tab-figma" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>Figma</button>
+      </div>
 
-        <div class="card">
-          <h3>Counter · 19×18</h3>
-          <div class="row">
-            <span class="row-label">Accent</span>
-            <span class="ds-badge ds-badge--counter ds-badge--accent">7</span>
-            <span class="ds-badge ds-badge--counter ds-badge--accent">99</span>
-          </div>
-          <div class="row">
-            <span class="row-label">Positive</span>
-            <span class="ds-badge ds-badge--counter ds-badge--positive">7</span>
-          </div>
-          <div class="row">
-            <span class="row-label">Warning</span>
-            <span class="ds-badge ds-badge--counter ds-badge--warning">7</span>
-          </div>
-          <div class="row">
-            <span class="row-label">Negative</span>
-            <span class="ds-badge ds-badge--counter ds-badge--negative">7</span>
-          </div>
-          <h3 style="margin-top:24px">Point · 8×8</h3>
-          <div class="row">
-            <span class="row-label">Стили</span>
-            <span class="ds-badge ds-badge--point ds-badge--accent"></span>
-            <span class="ds-badge ds-badge--point ds-badge--positive"></span>
-            <span class="ds-badge ds-badge--point ds-badge--warning"></span>
-            <span class="ds-badge ds-badge--point ds-badge--negative"></span>
-          </div>
-          <div class="tokens-panel">
-            <div class="tokens-panel__title">Токены вида</div>
-            <div class="token-grid">
-              <span class="token-item"><span class="token-prop">counter bg accent</span><code class="token-var">--ds-color-badge-accent-background</code><span class="token-val" style="--token-sample:#448AFF"></span></span>
-              <span class="token-item"><span class="token-prop">positive</span><code class="token-var">--ds-color-badge-positive-background</code><span class="token-val" style="--token-sample:#14B456"></span></span>
-              <span class="token-item"><span class="token-prop">warning</span><code class="token-var">--ds-color-badge-warning-background</code><span class="token-val" style="--token-sample:#FFAB40"></span></span>
-              <span class="token-item"><span class="token-prop">negative</span><code class="token-var">--ds-color-badge-negative-background</code><span class="token-val" style="--token-sample:#FF5252"></span></span>
-              <span class="token-item"><span class="token-prop">text</span><code class="token-var">--ds-color-text-inversive</code><span class="token-val" style="--token-sample:#FFFFFF"></span></span>
-              <span class="token-item"><span class="token-prop">counter</span><code class="token-var">19×18 · radius --ds-radius-circular</code><span class="token-val token-val--text">9999px</span></span>
-              <span class="token-item"><span class="token-prop">point</span><code class="token-var">8×8 · radius 50%</code><span class="token-val token-val--text"></span></span>
-              <span class="token-item"><span class="token-prop">font</span><code class="token-var">--ds-typography-font-size-3x / --ds-typography-font-weight-medium</code><span class="token-val token-val--text">12px / 500</span></span>
+      <!-- ============================================================
+           ВКЛАДКА: КОМПОНЕНТ
+           Живое превью + свойства + генерация кода + матрица вариантов.
+           Образец наполнения — вкладка «Компонент» в button.html.
+           ============================================================ -->
+      <div class="comp-panel is-active" id="tab-component">
+
+        <div class="comp-tabs comp-tabs--sub" role="tablist">
+          <button class="comp-tab is-active" data-panel="tab-interactive" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z"/><circle cx="12" cy="12" r="10"/></svg>Интерактивный компонент</button>
+          <button class="comp-tab" data-panel="tab-variants" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>Варианты компонента</button>
+        </div>
+
+        <!-- --- Подвкладка: Интерактивный компонент --- -->
+        <div class="comp-panel is-active" id="tab-interactive">
+
+          <section>
+            <h2>Интерактивный компонент</h2>
+            <p class="desc">Настройте свойства Badge (Style × Type) и скопируйте код.</p>
+
+            <div class="card">
+              <div class="interactive-wrap">
+                <div>
+                  <div class="interactive-stage" id="stage">
+                    <div id="stage-badge-wrap"></div>
+                  </div>
+
+                  <div class="cc-title">Свойства компонента</div>
+
+                  <div class="component-code" id="component-code">
+                    <div class="cc-head">
+                      <div class="cc-tabs" role="tablist">
+                        <button class="is-active" data-cc="html" role="tab">HTML</button>
+                        <button data-cc="css" role="tab">CSS</button>
+                        <button data-cc="tokens" role="tab">Tokens</button>
+                      </div>
+                    </div>
+                    <div class="po-title-row">
+                      <div class="po-title-wrap">
+                        <div class="po-title" id="po-title">HTML</div>
+                        <button class="cc-copy" id="cc-copy" type="button" title="Copy code" aria-label="Copy code">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                        </button>
+                      </div>
+                      <div class="po-label" id="po-label">badge / point / accent</div>
+                    </div>
+                    <div class="cc-panel is-active" id="cc-html"></div>
+                    <div class="cc-panel" id="cc-css"></div>
+                    <div class="cc-panel" id="cc-tokens">
+                      <div class="po-figure">
+                        <span class="pf-corner pf-c-tl"></span>
+                        <span class="pf-corner pf-c-tr"></span>
+                        <span class="pf-corner pf-c-bl"></span>
+                        <span class="pf-corner pf-c-br"></span>
+                        <div class="pf-card">
+                          <span class="pf-cap pf-cap--border">Border</span>
+                          <span class="pf-chip pf-r" id="pf-r-tl">9999</span>
+                          <span class="pf-chip pf-r" id="pf-r-tr">9999</span>
+                          <span class="pf-chip pf-r" id="pf-r-bl">9999</span>
+                          <span class="pf-chip pf-r" id="pf-r-br">9999</span>
+                          <span class="pf-chip pf-bw pf-bw--t" id="pf-bw-t">0</span>
+                          <span class="pf-chip pf-bw pf-bw--b" id="pf-bw-b">0</span>
+                          <span class="pf-chip pf-bw pf-bw--l" id="pf-bw-l">0</span>
+                          <span class="pf-chip pf-bw pf-bw--r" id="pf-bw-r">0</span>
+                          <div class="pf-inner">
+                            <span class="pf-cap pf-cap--padding">Padding</span>
+                            <span class="pf-chip pf-py pf-py--t" id="pf-py-t">1</span>
+                            <span class="pf-chip pf-py pf-py--b" id="pf-py-b">1</span>
+                            <span class="pf-chip pf-px pf-px--l" id="pf-px-l">6</span>
+                            <span class="pf-chip pf-px pf-px--r" id="pf-px-r">6</span>
+                            <span class="pf-labelbox"><span class="pf-labelbox__text" id="po-label-text">Label × 16</span></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="po-code">
+                        <div class="insp-section">
+                          <div class="insp-title">Layout</div>
+                          <div class="insp-rows">
+                            <div class="insp-row"><span class="k">padding:</span><span class="v" id="po-pad-v"></span></div>
+                            <div class="insp-row"><span class="k">gap:</span><span class="v" id="po-gap-v"></span></div>
+                          </div>
+                        </div>
+                        <div class="insp-section">
+                          <div class="insp-title">Style</div>
+                          <div class="insp-rows">
+                            <div class="insp-row"><span class="k">border-radius:</span><span class="v" id="po-r-v"></span></div>
+                            <div class="insp-row"><span class="k">background:</span><span class="v" id="po-bg-v"></span></div>
+                            <div class="insp-row"><span class="k">box-shadow:</span><span class="v" id="po-sh-v"></span></div>
+                          </div>
+                        </div>
+                        <div class="insp-section">
+                          <div class="insp-title">Colors</div>
+                          <div class="insp-rows">
+                            <div class="insp-row"><span class="k">background:</span><span class="v" id="po-cbg-v"></span></div>
+                            <div class="insp-row"><span class="k">color:</span><span class="v" id="po-ctl-v"></span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="props-panel" id="props-panel">
+                  <div class="props-title">
+                    <h3>Badge</h3>
+                    <p class="props-caption">Настройки</p>
+                  </div>
+                  <div class="control-row">
+                    <span class="control-label">Dark Mode</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-dark"><span class="track"></span><span class="thumb"></span></span></label>
+                  </div>
+                  <div class="props-divider"></div>
+                  <div class="control-row">
+                    <span class="control-label">Style</span>
+                    <div class="ds-select" data-sel="style" data-value="accent">
+                      <button type="button" class="ds-select__trigger" aria-expanded="false">
+                        <span class="ds-select__value">Accent</span>
+                        <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                      </button>
+                      <div class="ds-select__menu" role="listbox">
+                        <div class="ds-select__item is-selected" data-value="accent" role="option">Accent<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="positive" role="option">Positive<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="warning" role="option">Warning<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="negative" role="option">Negative<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="control-row">
+                    <span class="control-label">Type</span>
+                    <div class="ds-select" data-sel="type" data-value="point">
+                      <button type="button" class="ds-select__trigger" aria-expanded="false">
+                        <span class="ds-select__value">Point</span>
+                        <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                      </button>
+                      <div class="ds-select__menu" role="listbox">
+                        <div class="ds-select__item" data-value="counter" role="option">Counter<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item is-selected" data-value="point" role="option">Point<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- --- Подвкладка: Варианты компонента --- -->
+        <div class="comp-panel" id="tab-variants">
+
+          <section>
+            <p class="matrix-caption">Интерактивная матрица</p>
+            <p class="desc">Нажмите на любой вариант в таблице ниже, чтобы увидеть подробную информацию о используемых дизайн-токенах.</p>
+            <h2>Варианты компонента</h2>
+            <div class="card">
+              <div class="matrix-layout">
+                <div id="matrix-root"></div>
+
+                <div class="matrix-insp">
+                  <div class="cc-title">Свойства компонента</div>
+                  <div class="component-code component-code--inspector" id="var-code"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+
+      <!-- ============================================================
+           ВКЛАДКА: ОПИСАНИЕ
+           Что это, варианты, примеры использования, рекомендации.
+           ============================================================ -->
+      <div class="comp-panel" id="tab-description">
+
+        <section>
+          <h2>Описание</h2>
+          <!-- СЮДА: 1–2 абзаца о назначении компонента (из Figma / текстов описания) -->
+          <p class="desc">{{component-description}}</p>
+        </section>
+
+        <section>
+          <h2>Варианты</h2>
+          <!-- СЮДА: карточка на каждый вариант (h3 + desc + ряд демо-элементов).
+               Скопировать блок .card под каждый вариант. Образец — button.html. -->
+          <div class="card">
+            <h3>{{Variant name}}</h3>
+            <p class="desc">{{variant-description}}</p>
+            <div class="row">
+              <!-- СЮДА: демо-элементы варианта -->
             </div>
           </div>
-          <div class="code-block">
-            <button class="copy-btn" data-copy="code-badge">Копировать</button>
-            <pre id="code-badge"><code>&lt;span class="ds-badge ds-badge--counter ds-badge--accent"&gt;7&lt;/span&gt;
-&lt;span class="ds-badge ds-badge--point ds-badge--negative"&gt;&lt;/span&gt;</code></pre>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- ===== Примеры ===== -->
-      <section>
-        <h2>Примеры использования</h2>
-        <p class="desc">Как в Figma (страница Badge, фрейм «Badge examples»): badge на кнопках и иконках.</p>
+        <section>
+          <h2>Примеры использования</h2>
+          <!-- СЮДА: карточка на каждый пример (h3 + desc + ряд демо). -->
+          <div class="card">
+            <h3>{{Example name}}</h3>
+            <p class="desc">{{example-description}}</p>
+            <div class="row">
+              <!-- СЮДА: демо-элементы примера -->
+            </div>
+          </div>
+        </section>
 
-        <div class="card">
-          <div class="row">
-            <span class="row-label">Кнопка</span>
-            <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" style="position:relative">
-              <span class="ds-btn__label">Button</span>
-              <span class="ds-badge ds-badge--counter ds-badge--negative" style="position:absolute; top:-9px; right:-9px">7</span>
-            </button>
-            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" style="position:relative">
-              <span class="ds-btn__label">Button</span>
-              <span class="ds-badge ds-badge--counter ds-badge--accent" style="position:absolute; top:-9px; right:-9px">7</span>
-            </button>
+        <section>
+          <h2>Рекомендации</h2>
+          <div class="card">
+            <h3>✓ Делайте</h3>
+            <ul>
+              <!-- СЮДА: пункты «делайте» -->
+              <li>{{do-1}}</li>
+            </ul>
+            <h3 style="margin-top:20px">✕ Не делайте</h3>
+            <ul>
+              <!-- СЮДА: пункты «не делайте» -->
+              <li>{{dont-1}}</li>
+            </ul>
           </div>
-          <div class="row">
-            <span class="row-label">Кнопка-иконка</span>
-            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" style="position:relative; padding:8px">
-              <span class="ds-btn__icon material-icons" aria-hidden="true">notifications</span>
-              <span class="ds-badge ds-badge--counter ds-badge--negative" style="position:absolute; top:-9px; right:-9px">7</span>
-            </button>
-            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" style="position:relative; padding:8px">
-              <span class="ds-btn__icon material-icons" aria-hidden="true">shopping_cart</span>
-              <span class="ds-badge ds-badge--counter ds-badge--accent" style="position:absolute; top:-9px; right:-9px">3</span>
-            </button>
-          </div>
-          <div class="row">
-            <span class="row-label">Точка</span>
-            <span style="position:relative; display:inline-flex">
-              <span class="material-icons" style="font-size:20px; color:#616161">notifications</span>
-              <span class="ds-badge ds-badge--point ds-badge--negative" style="position:absolute; top:0; right:0"></span>
-            </span>
-            <span style="position:relative; display:inline-flex">
-              <span class="material-icons" style="font-size:20px; color:#616161">favorite</span>
-              <span class="ds-badge ds-badge--point ds-badge--accent" style="position:absolute; top:0; right:0"></span>
-            </span>
-          </div>
+        </section>
+
+      </div>
+
+      <!-- ============================================================
+           ВКЛАДКА: АНАТОМИЯ
+           Размеры/отступы/радиусы с визуальными замерами и таблицами значений.
+           ============================================================ -->
+      <div class="comp-panel" id="tab-anatomy">
+
+        <div class="anatomy">
+          <!-- СЮДА: блоки .anatomy-sec на каждый разрез компонента.
+               Внутри: .anatomy-sub (h4) + .anatomy-stage (ячейки с замерами)
+               + .an-code (таблица значений). Образец — вкладка «Анатомия» в button.html. -->
         </div>
-      </section>
+
+      </div>
+
+      <!-- ============================================================
+           ВКЛАДКА: ПОВЕДЕНИЕ
+           Интерактивные демо состояний и анимаций.
+           ============================================================ -->
+      <div class="comp-panel" id="tab-behavior">
+
+        <section class="beh-intro">
+          <p class="beh-lead">{{behavior-lead}}</p>
+        </section>
+
+        <section>
+          <div class="beh-block">
+            <div class="beh-head">
+              <h3>Интерактивная песочница</h3>
+              <span class="beh-badge">Try it yourself</span>
+            </div>
+            <p class="beh-sub">{{behavior-sandbox-sub}}</p>
+            <div class="beh-sandbox">
+              <!-- СЮДА: живые демо-элементы (hover/press работают из коробки) -->
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="beh-states">
+            <!-- СЮДА: блок .beh-row на каждое состояние (Hover / Press / Focus / ...):
+                 .beh-info (h4 + p + ul) + .beh-demo (демо + подпись). -->
+          </div>
+        </section>
+
+        <section>
+          <div class="beh-block">
+            <h3>{{Extra demo name}}</h3>
+            <!-- СЮДА: дополнительные демо (loader, группировка и т.п.) -->
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ============================================================
+           ВКЛАДКА: ТОКЕНЫ
+           Таблицы токенов по вариантам и размерам.
+           ============================================================ -->
+      <div class="comp-panel" id="tab-tokens">
+
+        <div class="comp-tabs comp-tabs--sub" role="tablist">
+          <button class="comp-tab is-active" data-panel="tokens-variants" role="tab">Варианты</button>
+          <button class="comp-tab" data-panel="tokens-sizes" role="tab">Размеры</button>
+        </div>
+
+        <div class="comp-panel is-active" id="tokens-variants">
+          <section>
+            <h2>Токены вариантов</h2>
+            <div class="token-notation">
+              <!-- СЮДА: обозначения плейсхолдеров токенов (стили/типы/состояния) -->
+              <p>{{notation}}</p>
+            </div>
+            <div class="token-examples">
+              <!-- СЮДА: примеры итоговых токенов (итоговый / Figma / CSS) -->
+              <div class="token-example-row"><span>Пример итогового токена:</span><code>{{token-example}}</code></div>
+            </div>
+            <div class="comp-tabs comp-tabs--pills" id="style-tabs" role="tablist">
+              <!-- СЮДА: пиллы стилей (генерируются скриптом или статично) -->
+            </div>
+            <div class="token-card">
+              <!-- СЮДА: таблицы токенов по вариантам -->
+              <div id="token-tables"></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="comp-panel" id="tokens-sizes">
+          <section>
+            <h2>Токены размеров</h2>
+            <div class="token-card">
+              <!-- СЮДА: таблица размеров (M/S/XS: отступы, высоты, радиусы, типографика) -->
+              <table class="token-table" id="sizes-table"></table>
+            </div>
+          </section>
+        </div>
+
+      </div>
+
+      <!-- ============================================================
+           ВКЛАДКА: FIGMA
+           Переменные Figma для компонента (из DS.json / Figma API).
+           ============================================================ -->
+      <div class="comp-panel" id="tab-figma">
+
+        <section>
+          <h2>Токены Badge — переменные Figma</h2>
+          <div class="token-card">
+            <!-- СЮДА: дерево переменных Figma (Переменная / Значение / Алиас).
+                 Генерируется скриптом из данных Figma. -->
+            <div id="figma-table"></div>
+          </div>
+        </section>
+
+      </div>
 
     </main>
 
@@ -132,18 +396,450 @@
 </div>
 
 <script>
-  document.querySelectorAll('.copy-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var text = document.getElementById(btn.dataset.copy).textContent.trim();
-      navigator.clipboard.writeText(text).then(function () {
-        btn.textContent = 'Скопировано ✓';
-        btn.classList.add('copied');
-        setTimeout(function () { btn.textContent = 'Копировать'; btn.classList.remove('copied'); }, 1500);
+/* ============================================================
+   Данные Badge — из DS.json / Figma API (файл CJBjyS1OnRXqiOqaXYVCVd)
+   Компонент Badge: Style (Accent/Positive/Warning/Negative) × Type (Counter/Point)
+   Counter: 19×18, скругление circular (9999px), текст 12px/500 Roboto
+   Point: 8×8, скругление 50%
+   ============================================================ */
+var BADGE = {
+  label: '7',
+  styles: {
+    accent:   { label: 'Accent' },
+    positive: { label: 'Positive' },
+    warning:  { label: 'Warning' },
+    negative: { label: 'Negative' }
+  },
+  types: {
+    counter: { label: 'Counter', width: 19, height: 18, labelH: 16, radius: 'var(--ds-radius-circular, 9999px)', radiusChip: '9999', padX: 6, padY: 1 },
+    point:   { label: 'Point',   width: 8,  height: 8,  radius: 'var(--ds-radius-circular, 9999px)', radiusChip: '9999', padX: 0, padY: 0 }
+  },
+  colors: {
+    accent:   '#448AFF',
+    positive: '#14B456',
+    warning:  '#FFAB40',
+    negative: '#FF5252'
+  },
+  text: '#FFFFFF',
+  textVar: '--ds-color-text-inversive'
+};
+
+/* ============================================================
+   Вкладки страницы (общий механизм — НЕ удалять)
+   ============================================================ */
+document.querySelectorAll('.comp-tab[data-panel]').forEach(function (tab) {
+  tab.addEventListener('click', function () {
+    var group = tab.closest('.comp-tabs');
+    group.querySelectorAll('.comp-tab').forEach(function (t) { t.classList.remove('is-active'); });
+    tab.classList.add('is-active');
+    var panel = document.getElementById(tab.dataset.panel);
+    if (!panel) return;
+    var parentPanel = panel.parentElement.closest('.comp-panel');
+    var scope = parentPanel || panel.closest('main') || document;
+    scope.querySelectorAll(':scope > .comp-panel').forEach(function (p) { p.classList.remove('is-active'); });
+    var chain = [];
+    var cur = panel;
+    while (cur && cur.classList.contains('comp-panel')) {
+      chain.unshift(cur);
+      cur = cur.parentElement.closest('.comp-panel');
+    }
+    chain.forEach(function (p) { p.classList.add('is-active'); });
+  });
+});
+
+/* ============================================================
+   Хелперы подсветки кода
+   ============================================================ */
+function esc(t) { return t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+function escVar(t) { return t.replace(/var/g, '<span class="fn">var</span>'); }
+
+function renderHtml(lines) {
+  var nums = lines.map(function (_, i) { return '<span>' + (i + 1) + '</span>'; }).join('');
+  var code = lines.map(function (line) {
+    var esc = line.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    var parts = [];
+    esc = esc.replace(/([\w-]+)="([^"]*)"/g, function (m, a, v) {
+      parts.push('<span class="c-attr">' + a + '</span>="<span class="c-str">' + v + '</span>"');
+      return '\u0001' + (parts.length - 1) + '\u0002';
+    });
+    esc = esc.replace(/&lt;(\/?)([\w-]+)/g, '<span class="c-tag">&lt;$1$2</span>');
+    esc = esc.replace(/(&gt;)/g, '<span class="c-tag">&gt;</span>');
+    esc = esc.replace(/\u0001(\d+)\u0002/g, function (m, i) { return parts[+i]; });
+    return '<div>' + esc + '</div>';
+  }).join('');
+  return '<div class="po-css__row"><div class="po-css__nums">' + nums + '</div><div class="po-css__code">' + code + '</div></div>';
+}
+
+function renderCss(lines) {
+  var nums = lines.map(function (_, i) { return '<span>' + (i + 1) + '</span>'; }).join('');
+  var code = lines.map(function (line) {
+    var m = line.match(/^([a-z-]+):\s*(.*);$/);
+    if (!m) return '<div>' + esc(line) + '</div>';
+    var val = esc(m[2]).replace(/var/g, '<span class="c-var">var</span>');
+    if (m[2] === 'inline-flex' || m[2] === 'center') val = '<span class="c-val">' + val + '</span>';
+    return '<div><span class="c-key">' + m[1] + ':</span> ' + val + ';</div>';
+  }).join('');
+  return '<div class="po-css__row"><div class="po-css__nums">' + nums + '</div><div class="po-css__code">' + code + '</div></div>';
+}
+
+function fallbackCopy(text) {
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); } catch (e) {}
+  document.body.removeChild(ta);
+}
+
+var lastHtmlLines = [];
+var lastCssLines = [];
+
+/* Кастомные селекты (кнопка + выпадающая панель) */
+function selVal(id) {
+  var d = document.querySelector('.ds-select[data-sel="' + id + '"]');
+  return d ? d.dataset.value : '';
+}
+function closeSelects() {
+  document.querySelectorAll('.ds-select__menu.is-open').forEach(function (m) { m.classList.remove('is-open'); });
+  document.querySelectorAll('.ds-select__trigger[aria-expanded="true"]').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); });
+}
+document.querySelectorAll('.ds-select').forEach(function (sel) {
+  var btn = sel.querySelector('.ds-select__trigger');
+  var menu = sel.querySelector('.ds-select__menu');
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var open = menu.classList.contains('is-open');
+    closeSelects();
+    if (!open) {
+      menu.classList.add('is-open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+  sel.querySelectorAll('.ds-select__item').forEach(function (item) {
+    item.addEventListener('click', function (e) {
+      e.stopPropagation();
+      sel.dataset.value = item.dataset.value;
+      sel.querySelector('.ds-select__value').textContent = item.textContent.replace(/\s*$/, '');
+      sel.querySelectorAll('.ds-select__item').forEach(function (i) {
+        i.classList.remove('is-selected');
+        i.querySelector('.ds-select__check').style.display = 'none';
       });
+      item.classList.add('is-selected');
+      item.querySelector('.ds-select__check').style.display = 'inline-flex';
+      closeSelects();
+      renderStage();
     });
   });
+});
+document.addEventListener('click', closeSelects);
+
+/* ============================================================
+   Интерактивный компонент
+   ============================================================ */
+function badgeBgVar(style) { return '--ds-color-badge-' + style + '-background'; }
+
+function renderStage() {
+  var style = selVal('style');
+  var type = selVal('type');
+  var dark = document.getElementById('ctl-dark').checked;
+  var cls = 'ds-badge ds-badge--' + type + ' ds-badge--' + style;
+  var html = type === 'counter'
+    ? '<span class="' + cls + '">' + BADGE.label + '</span>'
+    : '<span class="' + cls + '"></span>';
+  document.getElementById('stage-badge-wrap').innerHTML = html;
+  document.getElementById('stage').classList.toggle('is-dark', dark);
+
+  var code = html;
+  document.getElementById('cc-html').innerHTML = renderHtml(code.split('\n'));
+  lastHtmlLines = code.split('\n');
+
+  updateCodePanels();
+}
+var darkCtrl = document.getElementById('ctl-dark');
+if (darkCtrl) darkCtrl.addEventListener('input', renderStage);
+
+function updateCodePanels() {
+  var style = selVal('style');
+  var type = selVal('type');
+  var t = BADGE.types[type];
+  var bgVar = badgeBgVar(style);
+  var bgVal = BADGE.colors[style];
+  var padYVar = 'var(--ds-size-0-25x, 1px)';   /* Badge/Counter/Pad top/bottom */
+  var padXVar = t.padX ? 'var(--ds-space-1-5x, 6px)' : 'var(--ds-space-0, 0px)'; /* Badge/Counter/Pad left/right */
+  var padCss = t.padX ? (t.padY + 'px ' + t.padX + 'px') : '0';
+
+  // Tokens: подпись
+  document.getElementById('po-label').textContent = 'badge / ' + type + ' / ' + style;
+
+  // Tokens: фигура
+  document.querySelectorAll('.pf-r').forEach(function (c) { c.textContent = t.radiusChip; });
+  document.querySelectorAll('.pf-bw').forEach(function (c) { c.textContent = '0'; });
+  document.getElementById('pf-py-t').textContent = t.padY;
+  document.getElementById('pf-py-b').textContent = t.padY;
+  document.getElementById('pf-px-l').textContent = t.padX;
+  document.getElementById('pf-px-r').textContent = t.padX;
+  var lt = document.getElementById('po-label-text');
+  if (lt) {
+    if (type === 'counter') { lt.textContent = 'Label × ' + t.labelH; lt.style.display = ''; }
+    else { lt.style.display = 'none'; }
+  }
+
+  // Tokens: Layout
+  document.getElementById('po-pad-v').innerHTML = escVar((t.padX ? padYVar + ' ' + padXVar : padYVar) + ';');
+  document.getElementById('po-gap-v').textContent = '—;';
+
+  // Tokens: Style
+  document.getElementById('po-r-v').innerHTML = escVar(t.radius + ';');
+  document.getElementById('po-bg-v').innerHTML =
+    '<span class="fn">var</span>(' + bgVar + ', <span class="dot" style="background:' + bgVal + '"></span> ' + bgVal + ');';
+  document.getElementById('po-sh-v').textContent = 'none;';
+
+  // Tokens: Colors
+  document.getElementById('po-cbg-v').innerHTML = escVar('var(' + bgVar + ', ' + bgVal + ');');
+  document.getElementById('po-ctl-v').innerHTML = escVar('var(' + BADGE.textVar + ', ' + BADGE.text + ');');
+
+  // CSS
+  var lines = [
+    'display: inline-flex;',
+    'align-items: center;',
+    'justify-content: center;',
+    type === 'counter' ? 'min-width: ' + t.width + 'px;' : 'width: ' + t.width + 'px;',
+    'height: ' + t.height + 'px;',
+    'padding: ' + padCss + ';',
+    'border-radius: ' + t.radius + ';',
+    'background: var(' + bgVar + ', ' + bgVal + ');',
+    'color: var(' + BADGE.textVar + ', ' + BADGE.text + ');'
+  ];
+  lastCssLines = lines;
+  document.getElementById('cc-css').innerHTML = renderCss(lines);
+}
+
+renderStage();
+
+/* вкладки HTML | CSS | Tokens (блок «Компонента») */
+var ccActive = 'html';
+document.querySelectorAll('#component-code .cc-tabs button').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('#component-code .cc-tabs button').forEach(function (b) { b.classList.remove('is-active'); });
+    btn.classList.add('is-active');
+    ccActive = btn.dataset.cc;
+    document.querySelectorAll('#component-code .cc-panel').forEach(function (p) { p.classList.remove('is-active'); });
+    document.getElementById('cc-' + ccActive).classList.add('is-active');
+    document.getElementById('po-title').textContent =
+      ccActive === 'tokens' ? 'TOKENS' : ccActive.toUpperCase();
+  });
+});
+
+function collectTokensText(panelId) {
+  var panel = document.getElementById(panelId);
+  if (!panel) return '';
+  var out = [];
+  panel.querySelectorAll('.insp-section').forEach(function (sec) {
+    var title = sec.querySelector('.insp-title');
+    if (title) out.push(title.textContent);
+    sec.querySelectorAll('.insp-row, .insp-sub, .insp-swatch').forEach(function (el) {
+      var line;
+      if (el.classList.contains('insp-row')) {
+        var k = el.querySelector('.k');
+        var v = el.querySelector('.v');
+        line = (k ? k.textContent : '') + (v ? ' ' + v.textContent : '');
+      } else if (el.classList.contains('insp-sub')) {
+        line = el.textContent;
+      } else {
+        var t = el.querySelector('.t');
+        var hex = el.querySelector('.hex');
+        line = (t ? t.textContent : '') + (hex ? ' ' + hex.textContent : '');
+      }
+      out.push(line.replace(/\s+/g, ' ').trim());
+    });
+  });
+  return out.join('\n');
+}
+
+document.getElementById('cc-copy').addEventListener('click', function () {
+  var text;
+  if (ccActive === 'html') text = lastHtmlLines.join('\n');
+  else if (ccActive === 'css') text = lastCssLines.join('\n');
+  else text = collectTokensText('cc-tokens');
+  function done() {
+    var copy = document.getElementById('cc-copy');
+    copy.classList.add('copied');
+    setTimeout(function () { copy.classList.remove('copied'); }, 1500);
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(function () { fallbackCopy(text); done(); });
+  } else { fallbackCopy(text); done(); }
+});
+
+/* ============================================================
+   Матрица вариантов (Style × Type)
+   ============================================================ */
+var STYLES = ['accent', 'positive', 'warning', 'negative'];
+var TYPES = ['counter', 'point'];
+var selectedBadge = null;
+
+function matrixBadge(style, type) {
+  var cls = 'ds-badge ds-badge--' + type + ' ds-badge--' + style + ' matrix-btn';
+  return type === 'counter'
+    ? '<span class="' + cls + '" data-style="' + style + '" data-type="' + type + '">' + BADGE.label + '</span>'
+    : '<span class="' + cls + '" data-style="' + style + '" data-type="' + type + '"></span>';
+}
+
+// инспектор «Вариантов» — копия блока «Свойства компонента» (id vc-*)
+// ДОЛЖЕН выполняться до buildMatrix: авто-выбор варианта сразу заполняет инспектор
+var vcActive = 'html';
+var lastVcHtml = [];
+var lastVcCss = [];
+
+(function clonePropsPanel() {
+  var src = document.getElementById('component-code');
+  var dst = document.getElementById('var-code');
+  if (!src || !dst) return;
+  dst.innerHTML = src.innerHTML;
+  dst.querySelectorAll('[id]').forEach(function (el) {
+    var id = el.id;
+    if (id.indexOf('cc-') === 0) el.id = 'vc-' + id.slice(3);
+    else if (id.indexOf('po-') === 0) el.id = 'vc-' + id.slice(3);
+    else if (id.indexOf('pf-') === 0) el.id = 'vc-' + id.slice(3);
+  });
+  dst.querySelectorAll('[data-cc]').forEach(function (el) {
+    el.dataset.vc = el.dataset.cc;
+    delete el.dataset.cc;
+  });
+  var lt = dst.querySelector('.pf-labelbox__text');
+  if (lt) lt.id = 'vc-label-text';
+  dst.querySelectorAll('.cc-panel').forEach(function (p, i) { p.classList.toggle('is-active', i === 0); });
+})();
+
+(function buildMatrix() {
+  var root = document.getElementById('matrix-root');
+  var html = '';
+  STYLES.forEach(function (style) {
+    html += '<div class="matrix-block">';
+    html += '<div class="matrix-headwrap"><h3 class="matrix-title">' + BADGE.styles[style].label + '</h3></div>';
+    html += '<div class="matrix-body">';
+    html += '<div class="matrix-types">';
+    TYPES.forEach(function (t) { html += '<span class="matrix-type">' + t + '</span>'; });
+    html += '</div>';
+    html += '<div class="matrix-card">';
+    html += '<div class="matrix-row">';
+    TYPES.forEach(function (t) {
+      html += '<span class="matrix-cell">' + matrixBadge(style, t) + '</span>';
+    });
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+  });
+  root.innerHTML = html;
+
+  root.addEventListener('click', function (e) {
+    var b = e.target.closest('.matrix-btn');
+    if (!b) return;
+    if (selectedBadge) selectedBadge.classList.remove('is-selected');
+    b.classList.add('is-selected');
+    selectedBadge = b;
+    updateVarInspector(b.dataset);
+  });
+
+  // автовыбор первого варианта — инспектор справа сразу заполнен
+  var first = root.querySelector('.matrix-btn');
+  if (first) {
+    first.classList.add('is-selected');
+    selectedBadge = first;
+    updateVarInspector(first.dataset);
+  }
+})();
+
+// обновление инспектора «Вариантов» по выбранному варианту матрицы
+function updateVarInspector(d) {
+  var style = d.style;
+  var type = d.type;
+  var t = BADGE.types[type];
+  var bgVar = badgeBgVar(style);
+  var bgVal = BADGE.colors[style];
+  var padYVar = 'var(--ds-size-0-25x, 1px)';   /* Badge/Counter/Pad top/bottom */
+  var padXVar = t.padX ? 'var(--ds-space-1-5x, 6px)' : 'var(--ds-space-0, 0px)'; /* Badge/Counter/Pad left/right */
+  var padCss = t.padX ? (t.padY + 'px ' + t.padX + 'px') : '0';
+
+  document.getElementById('vc-label').textContent = 'badge / ' + type + ' / ' + style;
+
+  document.querySelectorAll('#vc-tokens .pf-r').forEach(function (c) { c.textContent = t.radiusChip; });
+  document.querySelectorAll('#vc-tokens .pf-bw').forEach(function (c) { c.textContent = '0'; });
+  document.getElementById('vc-py-t').textContent = t.padY;
+  document.getElementById('vc-py-b').textContent = t.padY;
+  document.getElementById('vc-px-l').textContent = t.padX;
+  document.getElementById('vc-px-r').textContent = t.padX;
+  var lt = document.getElementById('vc-label-text');
+  if (lt) {
+    if (type === 'counter') { lt.textContent = 'Label × ' + t.labelH; lt.style.display = ''; }
+    else { lt.style.display = 'none'; }
+  }
+
+  document.getElementById('vc-pad-v').innerHTML = escVar((t.padX ? padYVar + ' ' + padXVar : padYVar) + ';');
+  document.getElementById('vc-gap-v').textContent = '—;';
+
+  document.getElementById('vc-r-v').innerHTML = escVar(t.radius + ';');
+  document.getElementById('vc-bg-v').innerHTML =
+    '<span class="fn">var</span>(' + bgVar + ', <span class="dot" style="background:' + bgVal + '"></span> ' + bgVal + ');';
+  document.getElementById('vc-sh-v').textContent = 'none;';
+
+  document.getElementById('vc-cbg-v').innerHTML = escVar('var(' + bgVar + ', ' + bgVal + ');');
+  document.getElementById('vc-ctl-v').innerHTML = escVar('var(' + BADGE.textVar + ', ' + BADGE.text + ');');
+
+  var lines = [
+    'display: inline-flex;',
+    'align-items: center;',
+    'justify-content: center;',
+    type === 'counter' ? 'min-width: ' + t.width + 'px;' : 'width: ' + t.width + 'px;',
+    'height: ' + t.height + 'px;',
+    'padding: ' + padCss + ';',
+    'border-radius: ' + t.radius + ';',
+    'background: var(' + bgVar + ', ' + bgVal + ');',
+    'color: var(' + BADGE.textVar + ', ' + BADGE.text + ');'
+  ];
+  lastVcCss = lines;
+  document.getElementById('vc-css').innerHTML = renderCss(lines);
+
+  var htmlCode = type === 'counter'
+    ? '<span class="ds-badge ds-badge--' + type + ' ds-badge--' + style + '">' + BADGE.label + '</span>'
+    : '<span class="ds-badge ds-badge--' + type + ' ds-badge--' + style + '"></span>';
+  lastVcHtml = htmlCode.split('\n');
+  document.getElementById('vc-html').innerHTML = renderHtml(htmlCode.split('\n'));
+}
+
+function showVcPanel(view) {
+  ['html', 'css', 'tokens'].forEach(function (v) {
+    document.getElementById('vc-' + v).classList.toggle('is-active', v === view);
+  });
+  document.getElementById('vc-title').textContent = view === 'tokens' ? 'TOKENS' : view.toUpperCase();
+}
+document.querySelectorAll('#var-code .cc-tabs button').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('#var-code .cc-tabs button').forEach(function (b) { b.classList.remove('is-active'); });
+    btn.classList.add('is-active');
+    vcActive = btn.dataset.vc;
+    showVcPanel(vcActive);
+  });
+});
+document.getElementById('vc-copy').addEventListener('click', function () {
+  var text;
+  if (vcActive === 'html') text = lastVcHtml.join('\n');
+  else if (vcActive === 'css') text = lastVcCss.join('\n');
+  else text = collectTokensText('vc-tokens');
+  function done() {
+    var copy = document.getElementById('vc-copy');
+    copy.classList.add('copied');
+    setTimeout(function () { copy.classList.remove('copied'); }, 1500);
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(function () { fallbackCopy(text); done(); });
+  } else { fallbackCopy(text); done(); }
+});
 </script>
 
-<script src="sidebar.js?v=70"></script>
+<script src="sidebar.js"></script>
 </body>
 </html>
