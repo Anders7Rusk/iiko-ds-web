@@ -308,7 +308,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   border-bottom: 2px solid transparent;
   border-radius: 0;
   flex: 0 0 auto;        /* подтабы — по содержимому (как в оригинале) */
-  padding: 4px 4px 10px;
+  padding: 8px 4px;
   height: auto;
   font-size: 16px;
   background: transparent;
@@ -1658,8 +1658,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   color: #3f3f46;
   font-weight: 400;
 }
-.token-table .tok-example { display: flex; justify-content: center; }
-.token-table td:last-child { text-align: center; }
+.token-table .tok-example { display: flex; align-items: center; justify-content: center; }
 
 /* ── Вторичные табы (стили → типы в «Токенах») ───────────── */
 
@@ -1686,7 +1685,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 8px;
+  margin: 16px 0 0;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
@@ -1700,7 +1699,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin: 8px 0 16px;
+  margin: 24px 0 0;
 }
 .token-example-row {
   display: flex;
@@ -1734,7 +1733,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 
 /* Капсула табов стилей в «Токенах» (как верхние табы, но по контенту) */
 
-.comp-tabs--pills { margin-bottom: 16px; justify-content: flex-start; }
+.comp-tabs--pills { margin: 32px 0 24px; justify-content: flex-start; align-items: center; }
 .comp-tabs--pills .comp-tab { flex: 0 0 auto; height: auto; }
 
 /* Табы типов (Filled/Outlined/Text) — подчёркнутые 16px, как в оригинале */
