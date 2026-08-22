@@ -471,8 +471,8 @@ var RD = {
     Error:   { Deselected: '--ds-color-text-negative',   Selected: '--ds-color-text-negative' },
     Disable: { Deselected: '--ds-color-text-disable',    Selected: '--ds-color-text-disable' }
   },
-  labelVar: { Normal: '--ds-color-text-primary', Error: '--ds-color-text-primary', Disable: '--ds-color-text-disable' },
-  labelHex: { Normal: '#333333', Error: '#333333', Disable: '#9e9e9e' },
+  labelVar: { Normal: '--ds-color-text-primary', Error: '--ds-color-text-negative', Disable: '--ds-color-text-disable' },
+  labelHex: { Normal: '#333333', Error: '#ff5252', Disable: '#9e9e9e' },
   // имя Figma-переменной подложки
   bgVarName: function (v, t, s) {
     if (v === 'Disable') return 'Radio button/Disable/Background';
