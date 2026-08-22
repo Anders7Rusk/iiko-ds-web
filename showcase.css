@@ -1663,6 +1663,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   font-size: 12px;
   color: var(--muted-fg);
 }
+.token-table td:first-child { padding-left: 24px; } /* для таблиц без #type-table (напр. «Размеры») — ряды по отступу как «Описание» */
 .token-table .tok-alias {
   font-family: 'Roboto Mono', ui-monospace, Consolas, monospace;
   font-size: 12px;
