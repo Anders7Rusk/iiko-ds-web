@@ -1763,6 +1763,8 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 }
 .type-tab:hover { color: var(--text); }
 .type-tab.is-active { border-bottom-color: var(--accent); color: var(--text); }
+/* зазор между баром вкладок и таблицей — как в оригинале (~20px до текста «Описание») */
+#type-table { margin-top: 16px; }
 
 /* ── Панели токенов под примерами (старый вид, совместимо) ─ */
 
