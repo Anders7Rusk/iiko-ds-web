@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=97">
-<link rel="stylesheet" href="components/button.css?v=97">
-<link rel="stylesheet" href="components/badge.css?v=97">
-<link rel="stylesheet" href="showcase.css?v=97">
+<link rel="stylesheet" href="tokens.css?v=98">
+<link rel="stylesheet" href="components/button.css?v=98">
+<link rel="stylesheet" href="components/badge.css?v=98">
+<link rel="stylesheet" href="showcase.css?v=98">
 </head>
 <body>
 
@@ -1311,6 +1311,7 @@ function buildTokenTable(style, type) {
   var rows = '';
 
   GROUPS.forEach(function (g) {
+    if (g.key === 'border' && type !== 'outlined') return; // у Filled/Text нет обводки — Border-группа только для Outlined
     var groupRows = '';
     TOKEN_STATES.forEach(function (st) {
       var name = figmaVarName(style, type, g.key, st.key);
@@ -1579,6 +1580,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=97"></script>
+<script src="sidebar.js?v=98"></script>
 </body>
 </html>
