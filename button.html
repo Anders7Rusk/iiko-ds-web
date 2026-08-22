@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=99">
-<link rel="stylesheet" href="components/button.css?v=99">
-<link rel="stylesheet" href="components/badge.css?v=99">
-<link rel="stylesheet" href="showcase.css?v=99">
+<link rel="stylesheet" href="tokens.css?v=100">
+<link rel="stylesheet" href="components/button.css?v=100">
+<link rel="stylesheet" href="components/badge.css?v=100">
+<link rel="stylesheet" href="showcase.css?v=100">
 </head>
 <body>
 
@@ -1253,13 +1253,19 @@ var ICON_PLUS = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" str
 function stateButton(style, type, state, group) {
   var st = stateColors(style, type, state);
   var def = stateColors(style, type, 'default');
-  // Изолируем показываемое свойство (фон/обводка/текст/иконка), остальное — из дефолт-состояния
-  var c = {
-    bg: group === 'bg' ? st.bg : def.bg,
-    border: type === 'outlined' ? (group === 'border' ? st.border : def.border) : 'transparent',
-    text: group === 'label' ? st.text : def.text,
-    icon: group === 'icon' ? st.icon : def.icon
-  };
+  var c;
+  if (state === 'disable') {
+    // disable — кнопка целиком в disabled-виде (все свойства из стейта), изоляция не нужна
+    c = { bg: st.bg, border: st.border, text: st.text, icon: st.icon };
+  } else {
+    // Изолируем показываемое свойство (фон/обводка/текст/иконка), остальное — из дефолт-состояния
+    c = {
+      bg: group === 'bg' ? st.bg : def.bg,
+      border: type === 'outlined' ? (group === 'border' ? st.border : def.border) : 'transparent',
+      text: group === 'label' ? st.text : def.text,
+      icon: group === 'icon' ? st.icon : def.icon
+    };
+  }
   var icon = '<span style="display:inline-flex;align-items:center;justify-content:center;color:' + c.icon + '">' + ICON_PLUS + '</span>';
   var border = type === 'outlined' ? ('border:1px solid ' + c.border + ';') : 'border:1px solid transparent;';
   return '<button type="button" tabindex="-1"' + (state==='disable' ? ' disabled' : '') +
@@ -1588,6 +1594,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=99"></script>
+<script src="sidebar.js?v=100"></script>
 </body>
 </html>
