@@ -1544,8 +1544,8 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 }
 .beh-demo__caption { font-size: 12px; color: #9CA3AF; margin: 0; }
 .beh-focus-ring {
-  outline: none;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--ds-color-button-accent-default);
+  outline: 2px solid var(--ds-palette-accent-300); /* наш фокус ДС: как .ds-btn:focus-visible */
+  outline-offset: 2px;
 }
 
 /* Loader */
