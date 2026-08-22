@@ -1631,14 +1631,17 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 }
 .token-table th:first-child { padding-left: 32px; }
 .token-table td {
-  padding: 10px 16px 10px 24px;
+  padding: 12px 8px;
   vertical-align: middle;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 14px;
   color: #3f3f46;
 }
+.token-table td:first-child { padding-left: 32px; }
+.token-table td:last-child { padding: 8px 16px; }
 .token-table tr.group-row { background: #f9fafb; }
 .token-table tr.group-row td {
+  padding: 10px 16px 10px 24px;
   font-weight: 700;
   font-size: 14px;
   color: var(--text);
