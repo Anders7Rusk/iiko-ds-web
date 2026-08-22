@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=106">
-<link rel="stylesheet" href="components/button.css?v=106">
-<link rel="stylesheet" href="components/badge.css?v=106">
-<link rel="stylesheet" href="showcase.css?v=106">
+<link rel="stylesheet" href="tokens.css?v=107">
+<link rel="stylesheet" href="components/button.css?v=107">
+<link rel="stylesheet" href="components/badge.css?v=107">
+<link rel="stylesheet" href="showcase.css?v=107">
 </head>
 <body>
 
@@ -34,6 +34,7 @@
         <button class="comp-tab" data-panel="tab-anatomy" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>Анатомия</button>
         <button class="comp-tab" data-panel="tab-behavior" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>Поведение</button>
         <button class="comp-tab" data-panel="tab-tokens" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>Токены</button>
+        <button class="comp-tab" data-panel="tab-figma" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>Figma</button>
       </div>
 
       <!-- ===== КОМПОНЕНТ ===== -->
@@ -533,6 +534,15 @@
           </section>
         </div>
 
+      </div>
+
+      <div class="comp-panel" id="tab-figma">
+        <section>
+          <h2>Токены Button — переменные Figma</h2>
+          <div class="token-card">
+            <div id="figma-table"></div>
+          </div>
+        </section>
       </div>
 
     </main>
@@ -1805,8 +1815,63 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
     } else { fallbackCopy(text); done(); }
   });
 });
+
+// ============================================================
+// Вкладка «Figma» — таблица токенов Button в иерархии переменных Figma
+// ============================================================
+function buildFigmaTable() {
+  var host = document.getElementById('figma-table');
+  if (!host) return;
+  var keys = Object.keys(FIGMA).filter(function (k) { return k.indexOf('Button/') === 0; });
+  var SO = { Accent:0, Negative:1, Neutral:2, Positive:3, Warning:4, Disable:5, 'M size':6, 'S size':7, 'XS size':8, 'Border radius':9, 'Border size':10 };
+  var TO = { Filled:0, Outlined:1, Text:2 };
+  var STO = { Default:0, Hover:1, Press:2 };
+  var PO = { 'Background':0, 'Border color':1, 'Text color':2, 'Icon color':3 };
+  function segOrder(seg, idx) {
+    if (idx === 0) return 0;
+    if (idx === 1) return SO[seg] !== undefined ? SO[seg] : 99;
+    if (idx === 2) return TO[seg] !== undefined ? TO[seg] : 99;
+    if (idx === 3) return STO[seg] !== undefined ? STO[seg] : 99;
+    if (idx === 4) return PO[seg] !== undefined ? PO[seg] : 99;
+    return 99;
+  }
+  keys.sort(function (a, b) {
+    var pa = a.split('/'), pb = b.split('/');
+    var n = Math.max(pa.length, pb.length);
+    for (var i = 0; i < n; i++) {
+      var oa = segOrder(pa[i], i), ob = segOrder(pb[i], i);
+      if (oa !== ob) return oa - ob;
+    }
+    return 0;
+  });
+  var tree = {};
+  keys.forEach(function (k) {
+    var parts = k.split('/'), node = tree;
+    for (var i = 0; i < parts.length; i++) {
+      var seg = parts[i];
+      if (i === parts.length - 1) { node[seg] = { __v: FIGMA[k], __a: (FIGMA_ALIAS[k] || '') }; }
+      else { node[seg] = node[seg] || {}; node = node[seg]; }
+    }
+  });
+  var html = '<table class="token-table figma-table"><thead><tr><th>Переменная</th><th>Значение</th><th>Алиас</th></tr></thead><tbody>';
+  (function render(node, depth) {
+    Object.keys(node).forEach(function (seg) {
+      var child = node[seg];
+      if (child.__v !== undefined) {
+        html += '<tr><td class="figma-path" style="padding-left:' + (depth * 14 + 24) + 'px">' + seg + '</td><td class="tok-val">' + child.__v + '</td><td class="tok-alias">' + child.__a + '</td></tr>';
+      } else {
+        html += '<tr class="group-row"><td class="figma-path" style="padding-left:' + (depth * 14 + 8) + 'px" colspan="3">' + seg + '</td></tr>';
+        render(child, depth + 1);
+      }
+    });
+  })(tree, 0);
+  html += '</tbody></table>';
+  host.innerHTML = html;
+}
+buildFigmaTable();
+
 </script>
 
-<script src="sidebar.js?v=106"></script>
+<script src="sidebar.js?v=107"></script>
 </body>
 </html>
