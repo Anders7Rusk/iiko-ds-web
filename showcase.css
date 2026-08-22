@@ -1697,10 +1697,12 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   border-left: 4px solid transparent; border-right: 4px solid transparent;
   border-top: 6px solid #9e9e9e;
   margin-right: 8px; vertical-align: middle; cursor: pointer;
+  font-size: 0; line-height: 0;
   transition: transform .15s ease;
 }
 .figma-table .figma-group.collapsed .fold-tri { transform: rotate(-90deg); }
-.figma-table .tok-example { display: flex; align-items: center; justify-content: center; }
+.figma-table .tok-example { position: relative; height: 44px; }
+.figma-table .tok-example button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0; }
 .figma-table .figma-path { overflow: hidden; text-overflow: ellipsis; }
 
 /* ── Вторичные табы (стили → типы в «Токенах») ───────────── */
