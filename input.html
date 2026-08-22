@@ -8,23 +8,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css">
-<link rel="stylesheet" href="showcase.css">
-<link rel="stylesheet" href="components/input.css?v=2">
+<link rel="stylesheet" href="tokens.css?v=112">
+<link rel="stylesheet" href="components/input.css?v=112">
+<link rel="stylesheet" href="showcase.css?v=112">
 </head>
 <body>
-
-<!-- ==========================================================================
-  РЫБА (каркас) страницы компонента iiko DS.
-  button.html — эталон с реальным наполнением (см. его для образца секций).
-
-  КАК ПОЛЬЗОВАТЬСЯ:
-  1. Скопировать файл в <component>.html (напр. badge.html).
-  2. Заменить {{Component}} на имя компонента (title, h1, вкладка Figma).
-  3. Заполнить секции внутри вкладок (маркеры «СЮДА:»).
-  4. Подключить components/<name>.css в head и добавить страницу в sidebar.js.
-  Вкладки можно править по одной — каждая отдельная панель.
-=========================================================================== -->
 
 <div class="layout">
 
@@ -38,7 +26,7 @@
         <h1>Form field+Input</h1>
         <p class="desc">Поле ввода. Внутренние элементы настраиваются отдельно внутри компонента.
         В Figma — страница «Form field+Input», компонент Input (Size × Variant × State).
-        Размеры M (лейбл сверху) / S / XS (без лейбла), состояния default / hover / focus / error / disabled.</p>
+        Размеры M (лейбл сверху) / S / XS (без лейбла), состояния Default / Hover / Focus / Focus+Placeholder / Focus+Value / Error / Error+Hover / Disable.</p>
       </div>
 
       <!-- ===== Вкладки страницы (не удалять, не менять порядок) ===== -->
@@ -48,235 +36,242 @@
         <button class="comp-tab" data-panel="tab-anatomy" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>Анатомия</button>
         <button class="comp-tab" data-panel="tab-behavior" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>Поведение</button>
         <button class="comp-tab" data-panel="tab-tokens" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>Токены</button>
+        <button class="comp-tab" data-panel="tab-figma" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>Figma</button>
       </div>
 
       <!-- ============================================================
            ВКЛАДКА: КОМПОНЕНТ
-           Живое превью + свойства + генерация кода + матрица вариантов.
-           Данные — компонент Input из Figma (страница «Form field+Input»).
            ============================================================ -->
       <div class="comp-panel is-active" id="tab-component">
 
         <div class="comp-tabs comp-tabs--sub" role="tablist">
-          <button class="comp-tab is-active" data-panel="tab-interactive" role="tab">Интерактивный компонент</button>
-          <button class="comp-tab" data-panel="tab-variants" role="tab">Варианты компонента</button>
+          <button class="comp-tab is-active" data-panel="tab-interactive" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z"/><circle cx="12" cy="12" r="10"/></svg>Интерактивный компонент</button>
+          <button class="comp-tab" data-panel="tab-variants" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>Варианты компонента</button>
         </div>
 
-        <!-- --- Подвкладка: Интерактивный компонент --- -->
         <div class="comp-panel is-active" id="tab-interactive">
 
-          <section>
-            <h2>Интерактивный компонент</h2>
-            <p class="desc">Настройте свойства поля ввода и скопируйте код.</p>
+        <section>
+          <h2>Интерактивный компонент</h2>
+          <p class="desc">Настройте свойства поля ввода и скопируйте код.</p>
 
-            <div class="card">
-              <div class="interactive-wrap">
-                <div>
-                  <div class="interactive-stage" id="stage">
-                    <div id="stage-input-wrap" style="width:100%;max-width:280px"></div>
-                  </div>
-
-                  <div class="cc-title">Свойства компонента</div>
-
-                  <div class="component-code" id="component-code">
-                    <div class="cc-head">
-                      <div class="cc-tabs" role="tablist">
-                        <button class="is-active" data-cc="html" role="tab">HTML</button>
-                        <button data-cc="css" role="tab">CSS</button>
-                        <button data-cc="tokens" role="tab">Tokens</button>
-                      </div>
-                    </div>
-                    <div class="po-title-row">
-                      <div class="po-title-wrap">
-                        <div class="po-title" id="po-title">HTML</div>
-                        <button class="cc-copy" id="cc-copy" type="button" title="Copy code" aria-label="Copy code">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-                        </button>
-                      </div>
-                      <div class="po-label" id="po-label">input / M / empty / default</div>
-                    </div>
-                    <div class="cc-panel is-active" id="cc-html"></div>
-                    <div class="cc-panel" id="cc-css"></div>
-                    <div class="cc-panel" id="cc-tokens">
-                      <div class="po-figure">
-                        <span class="pf-corner pf-c-tl"></span>
-                        <span class="pf-corner pf-c-tr"></span>
-                        <span class="pf-corner pf-c-bl"></span>
-                        <span class="pf-corner pf-c-br"></span>
-                        <div class="pf-card">
-                          <span class="pf-cap pf-cap--border">Border</span>
-                          <span class="pf-chip pf-r" id="pf-r-tl">12</span>
-                          <span class="pf-chip pf-r" id="pf-r-tr">12</span>
-                          <span class="pf-chip pf-r" id="pf-r-bl">12</span>
-                          <span class="pf-chip pf-r" id="pf-r-br">12</span>
-                          <span class="pf-chip pf-bw pf-bw--t" id="pf-bw-t">1</span>
-                          <span class="pf-chip pf-bw pf-bw--b" id="pf-bw-b">1</span>
-                          <span class="pf-chip pf-bw pf-bw--l" id="pf-bw-l">1</span>
-                          <span class="pf-chip pf-bw pf-bw--r" id="pf-bw-r">1</span>
-                          <div class="pf-inner">
-                            <span class="pf-cap pf-cap--padding">Padding</span>
-                            <span class="pf-chip pf-py pf-py--t" id="pf-py-t">12</span>
-                            <span class="pf-chip pf-py pf-py--b" id="pf-py-b">12</span>
-                            <span class="pf-chip pf-px pf-px--l" id="pf-px-l">12</span>
-                            <span class="pf-chip pf-px pf-px--r" id="pf-px-r">12</span>
-                            <span class="pf-labelbox"><span class="pf-labelbox__text" id="pf-labelbox__text">Label × 16</span></span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="po-code">
-                        <div class="insp-section">
-                          <div class="insp-title">Layout</div>
-                          <div class="insp-rows">
-                            <div class="insp-row"><span class="k">padding:</span><span class="v" id="po-pad-v"></span></div>
-                            <div class="insp-row"><span class="k">gap:</span><span class="v" id="po-gap-v"></span></div>
-                            <div class="insp-row"><span class="k">gap support:</span><span class="v" id="po-gaps-v"></span></div>
-                          </div>
-                        </div>
-                        <div class="insp-section">
-                          <div class="insp-title">Style</div>
-                          <div class="insp-rows">
-                            <div class="insp-row"><span class="k">border-radius:</span><span class="v" id="po-r-v"></span></div>
-                            <div class="insp-row"><span class="k">border:</span><span class="v" id="po-b-v"></span></div>
-                            <div class="insp-row"><span class="k">background:</span><span class="v" id="po-bg-v"></span></div>
-                          </div>
-                        </div>
-                        <div class="insp-section">
-                          <div class="insp-title">Colors</div>
-                          <div class="insp-rows">
-                            <div class="insp-row"><span class="k">background:</span><span class="v" id="po-cbg-v"></span></div>
-                            <div class="insp-row"><span class="k">label:</span><span class="v" id="po-cl-v"></span></div>
-                            <div class="insp-row"><span class="k">text:</span><span class="v" id="po-ct-v"></span></div>
-                            <div class="insp-row"><span class="k">support:</span><span class="v" id="po-cs-v"></span></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+          <div class="card">
+            <div class="interactive-wrap">
+              <div>
+                <div class="interactive-stage" id="stage">
+                  <div id="stage-input-wrap" style="width:100%;max-width:280px"></div>
                 </div>
-                <div class="props-panel" id="props-panel">
-                  <div class="props-title">
-                    <h3>Form field+Input</h3>
-                    <p class="props-caption">Настройки</p>
-                  </div>
-                  <div class="control-row">
-                    <span class="control-label">Dark Mode</span>
-                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-dark"><span class="track"></span><span class="thumb"></span></span></label>
-                  </div>
-                  <div class="props-divider"></div>
-                  <div class="control-row">
-                    <span class="control-label">Size</span>
-                    <div class="ds-select" data-sel="size" data-value="m">
-                      <button type="button" class="ds-select__trigger" aria-expanded="false">
-                        <span class="ds-select__value">M</span>
-                        <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
-                      </button>
-                      <div class="ds-select__menu" role="listbox">
-                        <div class="ds-select__item is-selected" data-value="m" role="option">M<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="s" role="option">S<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="xs" role="option">XS<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                      </div>
+
+                <div class="cc-title">Свойства компонента</div>
+
+                <div class="component-code" id="component-code">
+                  <div class="cc-head">
+                    <div class="cc-tabs" role="tablist">
+                      <button class="is-active" data-cc="html" role="tab">HTML</button>
+                      <button data-cc="css" role="tab">CSS</button>
+                      <button data-cc="tokens" role="tab">Tokens</button>
                     </div>
                   </div>
-                  <div class="control-row">
-                    <span class="control-label">Variant</span>
-                    <div class="ds-select" data-sel="variant" data-value="empty">
-                      <button type="button" class="ds-select__trigger" aria-expanded="false">
-                        <span class="ds-select__value">Empty</span>
-                        <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                  <div class="po-title-row">
+                    <div class="po-title-wrap">
+                      <div class="po-title" id="po-title">HTML</div>
+                      <button class="cc-copy" id="cc-copy" type="button" title="Copy code" aria-label="Copy code">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
                       </button>
-                      <div class="ds-select__menu" role="listbox">
-                        <div class="ds-select__item is-selected" data-value="empty" role="option">Empty<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="populated" role="option">Populated<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="nolabel" role="option">No label up<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                    </div>
+                    <div class="po-label" id="po-label">input / M / empty / default</div>
+                  </div>
+                  <div class="cc-panel is-active" id="cc-html"></div>
+                  <div class="cc-panel" id="cc-css"></div>
+                  <div class="cc-panel" id="cc-tokens">
+                    <div class="po-figure">
+                      <span class="pf-corner pf-c-tl"></span>
+                      <span class="pf-corner pf-c-tr"></span>
+                      <span class="pf-corner pf-c-bl"></span>
+                      <span class="pf-corner pf-c-br"></span>
+                      <div class="pf-card">
+                        <span class="pf-cap pf-cap--border">Border</span>
+                        <span class="pf-chip pf-r" id="pf-r-tl">12</span>
+                        <span class="pf-chip pf-r" id="pf-r-tr">12</span>
+                        <span class="pf-chip pf-r" id="pf-r-bl">12</span>
+                        <span class="pf-chip pf-r" id="pf-r-br">12</span>
+                        <span class="pf-chip pf-bw pf-bw--t" id="pf-bw-t">1</span>
+                        <span class="pf-chip pf-bw pf-bw--b" id="pf-bw-b">1</span>
+                        <span class="pf-chip pf-bw pf-bw--l" id="pf-bw-l">1</span>
+                        <span class="pf-chip pf-bw pf-bw--r" id="pf-bw-r">1</span>
+                        <div class="pf-inner">
+                          <span class="pf-cap pf-cap--padding">Padding</span>
+                          <span class="pf-chip pf-py pf-py--t" id="pf-py-t">12</span>
+                          <span class="pf-chip pf-py pf-py--b" id="pf-py-b">12</span>
+                          <span class="pf-chip pf-px pf-px--l" id="pf-px-l">12</span>
+                          <span class="pf-chip pf-px pf-px--r" id="pf-px-r">12</span>
+                          <span class="pf-labelbox"><span class="pf-labelbox__text" id="pf-labelbox__text">Label × 16</span></span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="control-row">
-                    <span class="control-label">State</span>
-                    <div class="ds-select" data-sel="state" data-value="default">
-                      <button type="button" class="ds-select__trigger" aria-expanded="false">
-                        <span class="ds-select__value">Default</span>
-                        <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
-                      </button>
-                      <div class="ds-select__menu" role="listbox">
-                        <div class="ds-select__item is-selected" data-value="default" role="option">Default<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="hover" role="option">Hover<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="focus" role="option">Focus<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="focus-ph" role="option">Focus+Placeholder<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="focus-val" role="option">Focus+Value<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="error" role="option">Error<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="error-hover" role="option">Error+Hover<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="disable" role="option">Disable<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                    <div class="po-code">
+                      <div class="insp-section">
+                        <div class="insp-title">Layout</div>
+                        <div class="insp-rows">
+                          <div class="insp-row"><span class="k">padding:</span><span class="v" id="po-pad-v"></span></div>
+                          <div class="insp-row"><span class="k">gap:</span><span class="v" id="po-gap-v"></span></div>
+                          <div class="insp-row"><span class="k">gap support:</span><span class="v" id="po-gaps-v"></span></div>
+                        </div>
+                      </div>
+                      <div class="insp-section">
+                        <div class="insp-title">Style</div>
+                        <div class="insp-rows">
+                          <div class="insp-row"><span class="k">border-radius:</span><span class="v" id="po-r-v"></span></div>
+                          <div class="insp-row"><span class="k">border:</span><span class="v" id="po-b-v"></span></div>
+                          <div class="insp-row"><span class="k">background:</span><span class="v" id="po-bg-v"></span></div>
+                        </div>
+                      </div>
+                      <div class="insp-section">
+                        <div class="insp-title">Colors</div>
+                        <div class="insp-rows">
+                          <div class="insp-row"><span class="k">background:</span><span class="v" id="po-cbg-v"></span></div>
+                          <div class="insp-row"><span class="k">label:</span><span class="v" id="po-cl-v"></span></div>
+                          <div class="insp-row"><span class="k">text:</span><span class="v" id="po-ct-v"></span></div>
+                          <div class="insp-row"><span class="k">support:</span><span class="v" id="po-cs-v"></span></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="props-divider"></div>
-                  <div class="control-row">
-                    <span class="control-label">Label</span>
-                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-label" checked><span class="track"></span><span class="thumb"></span></span></label>
-                  </div>
-                  <div class="control-row">
-                    <span class="control-label">Element left</span>
-                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-icon-left" checked><span class="track"></span><span class="thumb"></span></span></label>
-                  </div>
-                  <div class="control-row">
-                    <span class="control-label">Element right</span>
-                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-icon-right" checked><span class="track"></span><span class="thumb"></span></span></label>
-                  </div>
-                  <div class="control-row">
-                    <span class="control-label">Input text</span>
-                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-input-text" checked><span class="track"></span><span class="thumb"></span></span></label>
-                  </div>
-                  <div class="control-row">
-                    <span class="control-label">Support text</span>
-                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-support" checked><span class="track"></span><span class="thumb"></span></span></label>
-                  </div>
-                  <div class="props-divider"></div>
-                  <div class="control-row">
-                    <label class="control-label" for="ctl-labeltext">Label text</label>
-                    <input class="control-input" id="ctl-labeltext" type="text" value="Label">
-                  </div>
-                  <div class="control-row">
-                    <label class="control-label" for="ctl-inputtext">Input text</label>
-                    <input class="control-input" id="ctl-inputtext" type="text" value="Input text">
-                  </div>
-                  <div class="control-row">
-                    <label class="control-label" for="ctl-supporttext">Support text</label>
-                    <input class="control-input" id="ctl-supporttext" type="text" value="Support text">
                   </div>
                 </div>
               </div>
+              <div class="props-panel" id="props-panel">
+                <div class="props-title">
+                  <h3>Form field+Input</h3>
+                  <p class="props-caption">Настройки</p>
+                </div>
+                <div class="control-row">
+                  <span class="control-label">Dark Mode</span>
+                  <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-dark"><span class="track"></span><span class="thumb"></span></span></label>
+                </div>
+                <div class="props-divider"></div>
+                <div class="control-row">
+                  <span class="control-label">Size</span>
+                  <div class="ds-select" data-sel="size" data-value="m">
+                    <button type="button" class="ds-select__trigger" aria-expanded="false">
+                      <span class="ds-select__value">M</span>
+                      <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="ds-select__menu" role="listbox">
+                      <div class="ds-select__item is-selected" data-value="m" role="option">M<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      <div class="ds-select__item" data-value="s" role="option">S<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      <div class="ds-select__item" data-value="xs" role="option">XS<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="control-row">
+                  <span class="control-label">Variant</span>
+                  <div class="ds-select" data-sel="variant" data-value="empty">
+                    <button type="button" class="ds-select__trigger" aria-expanded="false">
+                      <span class="ds-select__value">Empty</span>
+                      <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="ds-select__menu" role="listbox">
+                      <div class="ds-select__item is-selected" data-value="empty" role="option">Empty<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      <div class="ds-select__item" data-value="populated" role="option">Populated<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      <div class="ds-select__item" data-value="nolabel" role="option">No label up<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="control-row">
+                  <span class="control-label">State</span>
+                  <div class="ds-select" data-sel="state" data-value="default">
+                    <button type="button" class="ds-select__trigger" aria-expanded="false">
+                      <span class="ds-select__value">Default</span>
+                      <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="ds-select__menu" role="listbox">
+                      <div class="ds-select__item is-selected" data-value="default" role="option">Default<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      <div class="ds-select__item" data-value="hover" role="option">Hover<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      <div class="ds-select__item" data-value="focus" role="option">Focus<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      <div class="ds-select__item" data-value="focus-ph" role="option">Focus+Placeholder<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      <div class="ds-select__item" data-value="focus-val" role="option">Focus+Value<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      <div class="ds-select__item" data-value="error" role="option">Error<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      <div class="ds-select__item" data-value="error-hover" role="option">Error+Hover<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                      <div class="ds-select__item" data-value="disable" role="option">Disable<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="props-divider"></div>
+                <div class="control-row">
+                  <span class="control-label">Label</span>
+                  <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-label" checked><span class="track"></span><span class="thumb"></span></span></label>
+                </div>
+                <div class="control-row">
+                  <span class="control-label">Element left</span>
+                  <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-icon-left" checked><span class="track"></span><span class="thumb"></span></span></label>
+                </div>
+                <div class="control-row">
+                  <span class="control-label">Element right</span>
+                  <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-icon-right" checked><span class="track"></span><span class="thumb"></span></span></label>
+                </div>
+                <div class="control-row">
+                  <span class="control-label">Support text</span>
+                  <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-support-text" checked><span class="track"></span><span class="thumb"></span></span></label>
+                </div>
+                <div class="control-row">
+                  <span class="control-label">Input text</span>
+                  <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-input-text" checked><span class="track"></span><span class="thumb"></span></span></label>
+                </div>
+                <div class="control-row">
+                  <span class="control-label">Hint text</span>
+                  <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-hint-text" checked><span class="track"></span><span class="thumb"></span></span></label>
+                </div>
+                <div class="control-row">
+                  <span class="control-label">Support</span>
+                  <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-support"><span class="track"></span><span class="thumb"></span></span></label>
+                </div>
+                <div class="props-divider"></div>
+                <div class="control-row">
+                  <label class="control-label" for="ctl-labeltext">Label text</label>
+                  <input class="control-input" id="ctl-labeltext" type="text" value="Label">
+                </div>
+                <div class="control-row">
+                  <label class="control-label" for="ctl-inputtext">Input text</label>
+                  <input class="control-input" id="ctl-inputtext" type="text" value="Input text">
+                </div>
+                <div class="control-row">
+                  <label class="control-label" for="ctl-supporttext">Support text</label>
+                  <input class="control-input" id="ctl-supporttext" type="text" value="Support text">
+                </div>
+                <div class="control-row">
+                  <label class="control-label" for="ctl-hinttext">Hint text</label>
+                  <input class="control-input" id="ctl-hinttext" type="text" value="Hint text">
+                </div>
+              </div>
             </div>
-          </section>
+          </div>
+        </section>
 
         </div>
 
-        <!-- --- Подвкладка: Варианты компонента --- -->
         <div class="comp-panel" id="tab-variants">
 
-          <section>
-            <p class="matrix-caption">Интерактивная матрица</p>
-            <p class="desc">Нажмите на любой вариант в таблице ниже, чтобы увидеть подробную информацию о используемых дизайн-токенах.</p>
-            <h2>Варианты компонента</h2>
-            <div class="card">
-              <div class="matrix-layout">
-                <div id="matrix-root"></div>
+        <section>
+          <p class="matrix-caption">Интерактивная матрица</p>
+          <p class="desc">Нажмите на любой вариант в таблице ниже, чтобы увидеть подробную информацию о используемых дизайн-токенах для этого состояния.</p>
+          <h2>Варианты компонента</h2>
+          <div class="card">
+            <div class="matrix-layout">
+              <div id="matrix-root"></div>
 
-                <div class="matrix-insp">
-                  <div class="cc-title">Свойства компонента</div>
-                  <div class="component-code component-code--inspector" id="var-code"></div>
-                </div>
+              <div class="matrix-insp">
+                <div class="cc-title">Свойства компонента</div>
+                <div class="component-code component-code--inspector" id="var-code"></div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
         </div>
-
       </div>
 
       <!-- ============================================================
            ВКЛАДКА: ОПИСАНИЕ
-           Что это, варианты, примеры использования, рекомендации.
            ============================================================ -->
       <div class="comp-panel" id="tab-description">
 
@@ -288,8 +283,7 @@
 
         <section>
           <h2>Варианты</h2>
-          <!-- СЮДА: карточка на каждый вариант (h3 + desc + ряд демо-элементов).
-               Скопировать блок .card под каждый вариант. Образец — button.html. -->
+          <!-- СЮДА: карточка на каждый вариант (h3 + desc + ряд демо-элементов) -->
           <div class="card">
             <h3>{{Variant name}}</h3>
             <p class="desc">{{variant-description}}</p>
@@ -301,7 +295,7 @@
 
         <section>
           <h2>Примеры использования</h2>
-          <!-- СЮДА: карточка на каждый пример (h3 + desc + ряд демо). -->
+          <!-- СЮДА: карточка на каждый пример (h3 + desc + ряд демо) -->
           <div class="card">
             <h3>{{Example name}}</h3>
             <p class="desc">{{example-description}}</p>
@@ -331,21 +325,17 @@
 
       <!-- ============================================================
            ВКЛАДКА: АНАТОМИЯ
-           Размеры/отступы/радиусы с визуальными замерами и таблицами значений.
            ============================================================ -->
       <div class="comp-panel" id="tab-anatomy">
 
         <div class="anatomy">
-          <!-- СЮДА: блоки .anatomy-sec на каждый разрез компонента.
-               Внутри: .anatomy-sub (h4) + .anatomy-stage (ячейки с замерами)
-               + .an-code (таблица значений). Образец — вкладка «Анатомия» в button.html. -->
+          <!-- СЮДА: блоки .anatomy-sec на каждый разрез компонента -->
         </div>
 
       </div>
 
       <!-- ============================================================
            ВКЛАДКА: ПОВЕДЕНИЕ
-           Интерактивные демо состояний и анимаций.
            ============================================================ -->
       <div class="comp-panel" id="tab-behavior">
 
@@ -368,15 +358,14 @@
 
         <section>
           <div class="beh-states">
-            <!-- СЮДА: блок .beh-row на каждое состояние (Hover / Press / Focus / ...):
-                 .beh-info (h4 + p + ul) + .beh-demo (демо + подпись). -->
+            <!-- СЮДА: блок .beh-row на каждое состояние -->
           </div>
         </section>
 
         <section>
           <div class="beh-block">
             <h3>{{Extra demo name}}</h3>
-            <!-- СЮДА: дополнительные демо (loader, группировка и т.п.) -->
+            <!-- СЮДА: дополнительные демо -->
           </div>
         </section>
 
@@ -384,32 +373,29 @@
 
       <!-- ============================================================
            ВКЛАДКА: ТОКЕНЫ
-           Таблицы токенов по вариантам и размерам.
            ============================================================ -->
       <div class="comp-panel" id="tab-tokens">
 
         <div class="comp-tabs comp-tabs--sub" role="tablist">
           <button class="comp-tab is-active" data-panel="tokens-variants" role="tab">Варианты</button>
-<button class="comp-tab" data-panel="tokens-sizes" role="tab">Размеры</button>
-          <button class="comp-tab" data-panel="tokens-figma" role="tab">Figma</button>
+          <button class="comp-tab" data-panel="tokens-sizes" role="tab">Размеры</button>
         </div>
 
         <div class="comp-panel is-active" id="tokens-variants">
           <section>
             <h2>Токены вариантов</h2>
             <div class="token-notation">
-              <!-- СЮДА: обозначения плейсхолдеров токенов (стили/типы/состояния) -->
+              <!-- СЮДА: обозначения плейсхолдеров токенов -->
               <p>{{notation}}</p>
             </div>
             <div class="token-examples">
-              <!-- СЮДА: примеры итоговых токенов (итоговый / Figma / CSS) -->
+              <!-- СЮДА: примеры итоговых токенов -->
               <div class="token-example-row"><span>Пример итогового токена:</span><code>{{token-example}}</code></div>
             </div>
             <div class="comp-tabs comp-tabs--pills" id="style-tabs" role="tablist">
-              <!-- СЮДА: пиллы стилей (генерируются скриптом или статично) -->
+              <!-- СЮДА: пиллы стилей -->
             </div>
             <div class="token-card">
-              <!-- СЮДА: таблицы токенов по вариантам -->
               <div id="token-tables"></div>
             </div>
           </section>
@@ -419,29 +405,29 @@
           <section>
             <h2>Токены размеров</h2>
             <div class="token-card">
-              <!-- СЮДА: таблица размеров (M/S/XS: отступы, высоты, радиусы, типографика) -->
               <table class="token-table" id="sizes-table"></table>
             </div>
           </section>
         </div>
 
-  <div class="comp-panel" id="tokens-figma">
+      </div>
 
-          <section>
-            <h2>Токены Form field+Input — переменные Figma</h2>
-            <div class="token-card">
-              <!-- СЮДА: дерево переменных Figma (Переменная / Значение / Алиас).
-                   Генерируется скриптом из данных Figma. -->
-              <div id="figma-table"></div>
-            </div>
-          </section>
+      <!-- ============================================================
+           ВКЛАДКА: FIGMA
+           ============================================================ -->
+      <div class="comp-panel" id="tab-figma">
 
-        </div>
-
+        <section>
+          <h2>Токены Form field+Input — переменные Figma</h2>
+          <div class="token-card">
+            <!-- СЮДА: дерево переменных Figma -->
+            <div id="figma-table"></div>
+          </div>
+        </section>
 
       </div>
 
-          </main>
+    </main>
 
   </div>
 
@@ -474,19 +460,24 @@ document.querySelectorAll('.comp-tab[data-panel]').forEach(function (tab) {
 });
 
 /* ============================================================
-   Данные Input — Figma, страница «Form field+Input», компонент Input
-   (Size × Variant × State). Переменные — выгрузка DS.json (группа Component):
-   Input/Filled/[State]/... — значения 1:1.
+   Данные Input — Figma, COMPONENT_SET «Input»
+   (Size × Variant × State), страница «     Form field+Input».
+   Свойства — componentPropertyDefinitions 1:1.
+   Значения — переменные Input/* из DS.json (выгрузка Figma) + узлы.
    ============================================================ */
 var INP = {
-  // Размеры из Figma-переменных Input/[M|S|XS] size (Space, Radius, Font Size)
+  // Размеры: высоты/паддинги из узлов вариантов, радиус/шрифты из переменных
+  // Input/[M|S|XS] size/* (M/S: Border radius 12px, XS: Border radius 0px)
   sizes: {
-    m:  { label: 'M',  height: 48, padT: 12, padL: 12, font: 16, radius: 'var(--ds-radius-3x, 12px)',
-          pad: 'var(--ds-space-3x, 12px)' },
-    s:  { label: 'S',  height: 36, padT: 6,  padL: 12, font: 16, radius: 'var(--ds-radius-3x, 12px)',
-          pad: 'var(--ds-space-1-5x, 6px) var(--ds-space-3x, 12px)' },
-    xs: { label: 'XS', height: 28, padT: 4,  padL: 8,  font: 14, radius: 'var(--ds-radius-3x, 12px)',
-          pad: 'var(--ds-space-1x, 4px) var(--ds-space-2x, 8px)' }
+    m:  { label: 'M',  height: 48, padT: 12, padL: 12, font: 16,
+          radius: 'var(--ds-radius-3x, 12px)', radiusVal: '12',
+          pad: 'var(--ds-space-3x, 12px)', padVal: '12px' },
+    s:  { label: 'S',  height: 36, padT: 6,  padL: 12, font: 16,
+          radius: 'var(--ds-radius-3x, 12px)', radiusVal: '12',
+          pad: 'var(--ds-space-1-5x, 6px) var(--ds-space-3x, 12px)', padVal: '6px 12px' },
+    xs: { label: 'XS', height: 28, padT: 4,  padL: 8,  font: 14,
+          radius: 'var(--ds-radius-0, 0px)', radiusVal: '0',
+          pad: 'var(--ds-space-1x, 4px) var(--ds-space-2x, 8px)', padVal: '4px 8px' }
   },
   variants: { empty: 'Empty', populated: 'Populated', nolabel: 'No label up' },
   states: {
@@ -494,14 +485,19 @@ var INP = {
     'focus-ph': 'Focus+Placeholder', 'focus-val': 'Focus+Value',
     error: 'Error', 'error-hover': 'Error+Hover', disable: 'Disable'
   },
-  // Цвета состояний — Input/Filled/* из DS.json
+  // Цвета состояний — переменные Input/Filled/[State]/* из DS.json:
+  // Background #F8F9FC (Shapes/Default variant), Hover #F5F5F5 (Shapes/Hover),
+  // Border: Default #E0E0E0 / Hover #9E9E9E / Focus #448AFF / Error #FF5252 / Disable #EBEBEB,
+  // Label: Default-Hover #616161 / Focus #448AFF / Error #FF5252 / Disable #9E9E9E,
+  // Text: #333333 (Disable #9E9E9E), Support: #616161 (Error #FF5252, Disable #9E9E9E),
+  // Icon: default #616161 / error (right) #FF5252 / disable #9E9E9E
   colors: {
-    default:      { bg:'#F8F9FC', bgVar:'--ds-color-shapes-default-variant', border:'#E0E0E0', borderVar:'--ds-color-stroke-default', label:'#616161', labelVar:'--ds-color-text-secondary', text:'#333333', textVar:'--ds-color-text-primary', support:'#616161', supportVar:'--ds-color-text-secondary', icon:'#616161', ph:'#D6D6D6' },
-    hover:        { bg:'#F5F5F5', bgVar:'--ds-color-shapes-hover', border:'#9E9E9E', borderVar:'--ds-color-stroke-hover', label:'#616161', labelVar:'--ds-color-text-secondary', text:'#333333', textVar:'--ds-color-text-primary', support:'#616161', supportVar:'--ds-color-text-secondary', icon:'#616161', ph:'#D6D6D6' },
-    focus:        { bg:'#F8F9FC', bgVar:'--ds-color-shapes-default-variant', border:'#448AFF', borderVar:'--ds-color-stroke-accent', label:'#448AFF', labelVar:'--ds-color-text-accent', text:'#333333', textVar:'--ds-color-text-primary', support:'#616161', supportVar:'--ds-color-text-secondary', icon:'#616161', ph:'#D6D6D6' },
-    error:        { bg:'#F8F9FC', bgVar:'--ds-color-shapes-default-variant', border:'#FF5252', borderVar:'--ds-color-stroke-negative', label:'#FF5252', labelVar:'--ds-color-text-negative', text:'#333333', textVar:'--ds-color-text-primary', support:'#FF5252', supportVar:'--ds-color-text-negative', icon:'#FF5252', ph:'#D6D6D6' },
-    'error-hover':{ bg:'#F5F5F5', bgVar:'--ds-color-shapes-hover', border:'#FF5252', borderVar:'--ds-color-stroke-negative', label:'#FF5252', labelVar:'--ds-color-text-negative', text:'#333333', textVar:'--ds-color-text-primary', support:'#FF5252', supportVar:'--ds-color-text-negative', icon:'#FF5252', ph:'#D6D6D6' },
-    disable:      { bg:'#F5F5F5', bgVar:'--ds-color-surface-disable', border:'#EBEBEB', borderVar:'--ds-color-stroke-disable', label:'#9E9E9E', labelVar:'--ds-color-text-disable', text:'#9E9E9E', textVar:'--ds-color-text-disable', support:'#9E9E9E', supportVar:'--ds-color-text-disable', icon:'#9E9E9E', ph:'#9E9E9E' }
+    default:      { bg:'#F8F9FC', bgVar:'--ds-color-shapes-default-variant', border:'#E0E0E0', borderVar:'--ds-color-stroke-default', label:'#616161', labelVar:'--ds-color-text-secondary', text:'#333333', textVar:'--ds-color-text-primary', support:'#616161', supportVar:'--ds-color-text-secondary', iconL:'#616161', iconR:'#616161', iconVar:'--ds-color-icon-primary', ph:'#D6D6D6' },
+    hover:        { bg:'#F5F5F5', bgVar:'--ds-color-shapes-hover', border:'#9E9E9E', borderVar:'--ds-color-stroke-hover', label:'#616161', labelVar:'--ds-color-text-secondary', text:'#333333', textVar:'--ds-color-text-primary', support:'#616161', supportVar:'--ds-color-text-secondary', iconL:'#616161', iconR:'#616161', iconVar:'--ds-color-icon-primary', ph:'#D6D6D6' },
+    focus:        { bg:'#F8F9FC', bgVar:'--ds-color-shapes-default-variant', border:'#448AFF', borderVar:'--ds-color-stroke-accent', label:'#448AFF', labelVar:'--ds-color-text-accent', text:'#333333', textVar:'--ds-color-text-primary', support:'#616161', supportVar:'--ds-color-text-secondary', iconL:'#616161', iconR:'#616161', iconVar:'--ds-color-icon-primary', ph:'#D6D6D6' },
+    error:        { bg:'#F8F9FC', bgVar:'--ds-color-shapes-default-variant', border:'#FF5252', borderVar:'--ds-color-stroke-negative', label:'#FF5252', labelVar:'--ds-color-text-negative', text:'#333333', textVar:'--ds-color-text-primary', support:'#FF5252', supportVar:'--ds-color-text-negative', iconL:'#616161', iconR:'#FF5252', iconVar:'--ds-color-icon-negative', ph:'#D6D6D6' },
+    'error-hover':{ bg:'#F5F5F5', bgVar:'--ds-color-shapes-hover', border:'#FF5252', borderVar:'--ds-color-stroke-negative', label:'#FF5252', labelVar:'--ds-color-text-negative', text:'#333333', textVar:'--ds-color-text-primary', support:'#FF5252', supportVar:'--ds-color-text-negative', iconL:'#616161', iconR:'#FF5252', iconVar:'--ds-color-icon-negative', ph:'#D6D6D6' },
+    disable:      { bg:'#F5F5F5', bgVar:'--ds-color-surface-disable', border:'#EBEBEB', borderVar:'--ds-color-stroke-disable', label:'#9E9E9E', labelVar:'--ds-color-text-disable', text:'#9E9E9E', textVar:'--ds-color-text-disable', support:'#9E9E9E', supportVar:'--ds-color-text-disable', iconL:'#9E9E9E', iconR:'#9E9E9E', iconVar:'--ds-color-icon-disable', ph:'#9E9E9E' }
   }
 };
 // Focus+Placeholder / Focus+Value — те же цвета, что у Focus (отличается только контент)
@@ -511,7 +507,22 @@ INP.colors['focus-val'] = INP.colors.focus;
 function esc(t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 function escVar(t) { return t.replace(/var/g, '<span class="fn">var</span>'); }
 
-// Кастомные селекты (как Radix Select в оригинале: кнопка + выпадающая панель)
+/* Иконки — SVG-вектор из Figma (компонент «info», 56968:11854 / «close», 56539:3742).
+   Слева всегда info; справа info или close (состояния Focus у M+Populated).
+   Цвет — через currentColor (перекрашивается по состоянию: #616161 / #FF5252 / #9E9E9E). */
+var ICON_INFO = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M9.16666 14.1667H10.8333V9.16667H9.16666V14.1667ZM10 7.5C10.2361 7.5 10.434 7.42014 10.5937 7.26042C10.7535 7.1007 10.8333 6.90278 10.8333 6.66667C10.8333 6.43056 10.7535 6.23264 10.5937 6.07292C10.434 5.9132 10.2361 5.83334 10 5.83334C9.76389 5.83334 9.56597 5.9132 9.40625 6.07292C9.24652 6.23264 9.16666 6.43056 9.16666 6.66667C9.16666 6.90278 9.24652 7.1007 9.40625 7.26042C9.56597 7.42014 9.76389 7.5 10 7.5ZM10 18.3333C8.84722 18.3333 7.76389 18.1146 6.75 17.6771C5.73611 17.2396 4.85416 16.6458 4.10416 15.8958C3.35416 15.1458 2.76041 14.2639 2.32291 13.25C1.88541 12.2361 1.66666 11.1528 1.66666 10C1.66666 8.84723 1.88541 7.76389 2.32291 6.75C2.76041 5.73612 3.35416 4.85417 4.10416 4.10417C4.85416 3.35417 5.73611 2.76042 6.75 2.32292C7.76389 1.88542 8.84722 1.66667 10 1.66667C11.1528 1.66667 12.2361 1.88542 13.25 2.32292C14.2639 2.76042 15.1458 3.35417 15.8958 4.10417C16.6458 4.85417 17.2396 5.73612 17.6771 6.75C18.1146 7.76389 18.3333 8.84723 18.3333 10C18.3333 11.1528 18.1146 12.2361 17.6771 13.25C17.2396 14.2639 16.6458 15.1458 15.8958 15.8958C15.1458 16.6458 14.2639 17.2396 13.25 17.6771C12.2361 18.1146 11.1528 18.3333 10 18.3333ZM10 16.6667C11.8611 16.6667 13.4375 16.0208 14.7292 14.7292C16.0208 13.4375 16.6667 11.8611 16.6667 10C16.6667 8.13889 16.0208 6.5625 14.7292 5.27084C13.4375 3.97917 11.8611 3.33334 10 3.33334C8.13889 3.33334 6.5625 3.97917 5.27083 5.27084C3.97916 6.5625 3.33333 8.13889 3.33333 10C3.33333 11.8611 3.97916 13.4375 5.27083 14.7292C6.5625 16.0208 8.13889 16.6667 10 16.6667Z" fill="currentColor"/></svg>';
+function iconEl(name, color) {
+  if (name === 'close') return '<span class="ds-input__icon material-icons" style="color:' + color + '" aria-hidden="true">close</span>';
+  return '<span class="ds-input__icon" style="color:' + color + '" aria-hidden="true">' + ICON_INFO + '</span>';
+}
+function iconElCode(name) {
+  if (name === 'close') return '<span class="ds-input__icon material-icons" aria-hidden="true">close</span>';
+  return '<span class="ds-input__icon" aria-hidden="true">' + ICON_INFO + '</span>';
+}
+
+/* ============================================================
+   Кастомные селекты (как Radix Select в оригинале)
+   ============================================================ */
 function selVal(id) {
   var d = document.querySelector('.ds-select[data-sel="' + id + '"]');
   return d ? d.dataset.value : '';
@@ -590,30 +601,44 @@ function stateClass(state) {
   if (state === 'disable') return ' ds-input--disabled';
   return '';
 }
-function isPlaceholder(variant, state, showValue) {
-  return variant === 'empty' || state === 'focus-ph' || !showValue;
+// Правая иконка: в Figma у M+Populated в состояниях Focus* — «close» (очистить), в остальных — «info»
+function rightIcon(size, variant, state) {
+  return (size === 'm' && variant === 'populated' && (state === 'focus' || state === 'focus-ph' || state === 'focus-val')) ? 'close' : 'info';
 }
 
 // Разметка превью: размеры/состояния — 1:1 из Figma, цвета состояний — inline (детерминированно)
 function inputMarkup(opts) {
   var c = INP.colors[opts.state] || INP.colors.default;
-  var sizeCls = 'ds-input--' + opts.size;
-  var showLabel = opts.showLabel && opts.size === 'm' && opts.variant !== 'nolabel';
-  var ph = isPlaceholder(opts.variant, opts.state, opts.showValue);
-  var val = ph ? '' : esc(opts.inputText || 'Input text');
-  var place = ph ? esc(opts.inputText || 'Input text') : '';
-  var disabled = opts.state === 'disable' ? ' disabled' : '';
-  var html = '<div class="ds-input ' + sizeCls + stateClass(opts.state) + '">';
-  html += '<div class="ds-input__frame" style="background:' + c.bg + ';border-color:' + c.border + '">';
-  if (opts.iconL) html += '<span class="ds-input__icon material-icons" style="color:' + c.icon + '" aria-hidden="true">info</span>';
+  var size = opts.size;
+  var variant = opts.variant;
+  var state = opts.state;
+  var isFocusPh = state === 'focus-ph';
+  var isEmpty = variant === 'empty';
+  // внешний лейбл — только у Populated (в Figma Empty: текст «Label» 16px внутри поля, без лейбла сверху)
+  var showLabel = opts.showLabel && size === 'm' && variant === 'populated';
+  var disabled = state === 'disable' ? ' disabled' : '';
+  // контент поля (1:1 Figma): Empty → «Label» 16px #616161; Focus+Placeholder → placeholder; иначе значение
+  var val = '', place = '', fieldColor = c.text;
+  if (isFocusPh) { place = opts.inputText || 'Input text'; fieldColor = c.ph; }
+  else if (isEmpty) { val = opts.labelText || 'Label'; fieldColor = c.label; }
+  else if (opts.showValue) { val = opts.inputText || 'Input text'; fieldColor = c.text; }
+  else { place = opts.inputText || 'Input text'; fieldColor = c.ph; }
+
+  var html = '<div class="ds-input ds-input--' + size + stateClass(state) + '">';
+  html += '<div class="ds-input__frame" style="background:' + (size === 'xs' ? 'transparent' : c.bg) + ';border-color:' + c.border + '">';
+  if (opts.iconL) html += iconEl('info', c.iconL);
   html += '<div class="ds-input__content">';
-  if (showLabel) html += '<label class="ds-input__label" style="color:' + c.label + '" for="' + opts.id + '">' + esc(opts.labelText || 'Label') + '</label>';
-  html += '<input class="ds-input__field" id="' + opts.id + '" type="text" style="color:' + c.text + '" value="' + val + '" placeholder="' + place + '"' + disabled + '>';
+  if (showLabel) html += '<label class="ds-input__label" style="color:' + c.label + '">' + esc(opts.labelText || 'Label') + '</label>';
+  html += '<input class="ds-input__field" type="text" style="color:' + fieldColor + '" value="' + val + '" placeholder="' + place + '"' + disabled + '>';
   html += '</div>';
-  if (opts.iconR) html += '<span class="ds-input__icon material-icons" style="color:' + c.icon + '" aria-hidden="true">close</span>';
+  if (opts.iconR) html += iconEl(rightIcon(size, variant, state), c.iconR);
   html += '</div>';
-  if (opts.showSupport && opts.supportText) {
-    html += '<div class="ds-input__support" style="color:' + c.support + '">' + esc(opts.supportText) + '</div>';
+  // Support-блок (свойство Support, по умолчанию выключено — как в Figma)
+  if (opts.showSupport) {
+    html += '<div class="ds-input__support-row">';
+    if (opts.showSupportText) html += '<span class="ds-input__support" style="color:' + c.support + '">' + esc(opts.supportText || 'Support text') + '</span>';
+    if (opts.showHint) html += '<span class="ds-input__hint" style="color:' + c.support + '">' + esc(opts.hintText || 'Hint text') + '</span>';
+    html += '</div>';
   }
   html += '</div>';
   return html;
@@ -634,29 +659,41 @@ function renderStage() {
     iconR: document.getElementById('ctl-icon-right').checked,
     showValue: document.getElementById('ctl-input-text').checked,
     showSupport: document.getElementById('ctl-support').checked,
+    showSupportText: document.getElementById('ctl-support-text').checked,
+    showHint: document.getElementById('ctl-hint-text').checked,
     labelText: document.getElementById('ctl-labeltext').value,
     inputText: document.getElementById('ctl-inputtext').value,
     supportText: document.getElementById('ctl-supporttext').value,
-    id: 'preview-input'
+    hintText: document.getElementById('ctl-hinttext').value
   };
   document.getElementById('stage-input-wrap').innerHTML = inputMarkup(opts);
   document.getElementById('stage').classList.toggle('is-dark', dark);
 
   // HTML-код (без inline-стилей — как в документации)
-  var showLabel = opts.showLabel && size === 'm' && variant !== 'nolabel';
-  var ph = isPlaceholder(variant, state, opts.showValue);
+  var isFocusPh = state === 'focus-ph';
+  var isEmpty = variant === 'empty';
+  var showLabel = opts.showLabel && size === 'm' && variant === 'populated';
   var code = '<div class="ds-input ds-input--' + size + stateClass(state) + '">';
   code += '\n  <div class="ds-input__frame">';
-  if (opts.iconL) code += '\n    <span class="ds-input__icon material-icons" aria-hidden="true">info</span>';
+  if (opts.iconL) code += '\n    ' + iconElCode('info');
   code += '\n    <div class="ds-input__content">';
   if (showLabel) code += '\n      <label class="ds-input__label" for="my-input">' + esc(opts.labelText || 'Label') + '</label>';
-  code += '\n      <input class="ds-input__field" id="my-input" type="text"' +
-          (ph ? ' placeholder="' + esc(opts.inputText || 'Input text') + '"' : ' value="' + esc(opts.inputText || 'Input text') + '"') +
-          (state === 'disable' ? ' disabled' : '') + '>';
+  if (isFocusPh || (!opts.showValue && !isEmpty)) {
+    code += '\n      <input class="ds-input__field" id="my-input" type="text" placeholder="' + esc(opts.inputText || 'Input text') + '"' + (state === 'disable' ? ' disabled' : '') + '>';
+  } else if (isEmpty) {
+    code += '\n      <input class="ds-input__field" id="my-input" type="text" value="' + esc(opts.labelText || 'Label') + '"' + (state === 'disable' ? ' disabled' : '') + '>';
+  } else {
+    code += '\n      <input class="ds-input__field" id="my-input" type="text" value="' + esc(opts.inputText || 'Input text') + '"' + (state === 'disable' ? ' disabled' : '') + '>';
+  }
   code += '\n    </div>';
-  if (opts.iconR) code += '\n    <span class="ds-input__icon material-icons" aria-hidden="true">close</span>';
+  if (opts.iconR) code += '\n    ' + iconElCode(rightIcon(size, variant, state));
   code += '\n  </div>';
-  if (opts.showSupport && opts.supportText) code += '\n  <div class="ds-input__support">' + esc(opts.supportText) + '</div>';
+  if (opts.showSupport) {
+    code += '\n  <div class="ds-input__support-row">';
+    if (opts.showSupportText) code += '\n    <span class="ds-input__support">' + esc(opts.supportText || 'Support text') + '</span>';
+    if (opts.showHint) code += '\n    <span class="ds-input__hint">' + esc(opts.hintText || 'Hint text') + '</span>';
+    code += '\n  </div>';
+  }
   code += '\n</div>';
   document.getElementById('cc-html').innerHTML = renderHtml(code.split('\n'));
   lastHtmlLines = code.split('\n');
@@ -665,7 +702,7 @@ function renderStage() {
   updateCodePanels();
 }
 
-['ctl-dark', 'ctl-label', 'ctl-icon-left', 'ctl-icon-right', 'ctl-input-text', 'ctl-support', 'ctl-labeltext', 'ctl-inputtext', 'ctl-supporttext'].forEach(function (id) {
+['ctl-dark', 'ctl-label', 'ctl-icon-left', 'ctl-icon-right', 'ctl-input-text', 'ctl-support', 'ctl-support-text', 'ctl-hint-text', 'ctl-labeltext', 'ctl-inputtext', 'ctl-supporttext', 'ctl-hinttext'].forEach(function (id) {
   var el = document.getElementById(id);
   if (el) el.addEventListener('input', renderStage);
 });
@@ -690,7 +727,7 @@ function updateCodePanels() {
     'input / ' + s.label + ' / ' + (INP.variants[selVal('variant')] || 'empty').toLowerCase() + ' / ' + (INP.states[selVal('state')] || 'default').toLowerCase();
 
   // Tokens: фигура
-  document.querySelectorAll('#cc-tokens .pf-r').forEach(function (chip) { chip.textContent = '12'; });
+  document.querySelectorAll('#cc-tokens .pf-r').forEach(function (chip) { chip.textContent = s.radiusVal; });
   document.querySelectorAll('#cc-tokens .pf-bw').forEach(function (chip) { chip.textContent = '1'; });
   document.getElementById('pf-py-t').textContent = s.padT;
   document.getElementById('pf-py-b').textContent = s.padT;
@@ -724,7 +761,7 @@ function updateCodePanels() {
     'padding: ' + s.pad + ';',
     'gap: var(--ds-space-2x, 8px);',
     'border: 1px solid var(' + c.borderVar + ', ' + c.border + ');',
-    'border-radius: var(--ds-radius-3x, 12px);',
+    'border-radius: ' + s.radius + ';',
     'background: var(' + c.bgVar + ', ' + c.bg + ');'
   ];
   lastCssLines = lines;
@@ -812,40 +849,57 @@ document.getElementById('cc-copy').addEventListener('click', function () {
 renderStage();
 
 /* ============================================================
-   Матрица вариантов (размеры × состояния, как в Figma)
-   M: Populated/Empty · S/XS: No label up
+   Матрица вариантов (размеры × варианты × состояния, как в Figma)
+   M: Populated/Empty · S/XS: No label up · 8 состояний
    ============================================================ */
-var MSTATES = ['default', 'hover', 'focus', 'error', 'error-hover', 'disable'];
-var MSTATE_LABEL = { default: 'Default', hover: 'Hover', focus: 'Focus', error: 'Error', 'error-hover': 'Error+Hover', disable: 'Disable' };
+var MSTATES = [
+  { k: 'default', l: 'Default' }, { k: 'hover', l: 'Hover' }, { k: 'focus', l: 'Focus' },
+  { k: 'focus-ph', l: 'Focus+Ph' }, { k: 'focus-val', l: 'Focus+Val' },
+  { k: 'error', l: 'Error' }, { k: 'error-hover', l: 'Error+Hov' }, { k: 'disable', l: 'Disable' }
+];
 var MROWS = [
-  { size: 'm', title: 'M · 48px', rows: [ { v: 'populated', label: 'Populated' }, { v: 'empty', label: 'Empty' } ] },
-  { size: 's', title: 'S · 36px', rows: [ { v: 'nolabel', label: 'No label up' } ] },
-  { size: 'xs', title: 'XS · 28px', rows: [ { v: 'nolabel', label: 'No label up' } ] }
+  { size: 'm', title: 'M · 48px', rows: [
+      { v: 'populated', label: 'Populated', states: 'all' },
+      // В Figma у Variant=Empty ТОЛЬКО 5 состояний (Default/Hover/Error/Error+Hover/Disable) — фокусных НЕТ
+      { v: 'empty', label: 'Empty', states: ['default', 'hover', 'error', 'error-hover', 'disable'] }
+  ] },
+  { size: 's', title: 'S · 36px', rows: [ { v: 'nolabel', label: 'No label up', states: 'all' } ] },
+  { size: 'xs', title: 'XS · 28px', rows: [ { v: 'nolabel', label: 'No label up', states: 'all' } ] }
 ];
 var selectedCell = null;
 
 function matrixInput(size, variant, state) {
   var c = INP.colors[state] || INP.colors.default;
-  var ph = variant === 'empty';
+  var isEmpty = variant === 'empty';
   var html = '<div class="ds-input ds-input--' + size + stateClass(state) + '" style="pointer-events:none">';
-  html += '<div class="ds-input__frame" style="background:' + c.bg + ';border-color:' + c.border + '">';
+  html += '<div class="ds-input__frame" style="background:' + (size === 'xs' ? 'transparent' : c.bg) + ';border-color:' + c.border + '">';
+  html += iconEl('info', c.iconL);
   html += '<div class="ds-input__content">';
-  if (size === 'm') html += '<label class="ds-input__label" style="color:' + c.label + '">Label</label>';
-  html += '<input class="ds-input__field" style="color:' + c.text + '" type="text" tabindex="-1" readonly' +
-          (ph ? ' placeholder="Input text"' : ' value="Input text"') + '>';
-  html += '</div></div>';
-  if (size === 'm') html += '<div class="ds-input__support" style="color:' + c.support + '">Support text</div>';
+  if (size === 'm' && variant === 'populated') html += '<label class="ds-input__label" style="color:' + c.label + '">Label</label>';
+  if (isEmpty) html += '<input class="ds-input__field" type="text" tabindex="-1" readonly style="color:' + c.label + '" value="Label">';
+  else html += '<input class="ds-input__field" type="text" tabindex="-1" readonly style="color:' + c.text + '" value="Input text">';
   html += '</div>';
+  html += iconEl(rightIcon(size, variant, state), c.iconR);
+  html += '</div></div>';
   return html;
 }
 
-function matrixCell(size, variant, state) {
+function cellAllowed(states, st) {
+  return states === 'all' || states.indexOf(st) !== -1;
+}
+
+function matrixCell(size, variant, state, allowed) {
+  if (allowed && !allowed[state]) {
+    // комбинации нет в Figma — не кликабельная заглушка
+    return '<div class="matrix-none" title="Нет такого варианта в Figma" style="width:100%;text-align:left">—</div>';
+  }
   return '<div class="matrix-btn" role="button" tabindex="0" data-size="' + size + '" data-variant="' + variant + '" data-state="' + state + '"' +
          ' title="' + INP.sizes[size].label + ' · ' + INP.variants[variant] + ' · ' + INP.states[state] + '"' +
          ' style="width:100%;text-align:left">' + matrixInput(size, variant, state) + '</div>';
 }
 
-var GRID_TPL = '130px repeat(' + MSTATES.length + ', minmax(112px, 1fr))';
+// 8 состояний × ~150px (минимальная ширина M-инпута с двумя иконками) — карточка со внутренним скроллом
+var GRID_TPL = '140px repeat(' + MSTATES.length + ', minmax(156px, 1fr))';
 
 (function buildMatrix() {
   var root = document.getElementById('matrix-root');
@@ -858,15 +912,18 @@ var GRID_TPL = '130px repeat(' + MSTATES.length + ', minmax(112px, 1fr))';
     html += '<div style="display:grid;grid-template-columns:' + GRID_TPL + ';gap:12px;align-items:end">';
     html += '<div></div>';
     MSTATES.forEach(function (st) {
-      html += '<div class="matrix-state" style="font-weight:600">' + MSTATE_LABEL[st] + '</div>';
+      html += '<div class="matrix-state" style="font-weight:500">' + st.l + '</div>';
     });
     html += '</div>';
     // ряды вариантов
     b.rows.forEach(function (r) {
+      // допустимые состояния этого варианта (HashMap state -> bool)
+      var allowed = {};
+      MSTATES.forEach(function (st) { allowed[st.k] = cellAllowed(r.states, st.k); });
       html += '<div style="display:grid;grid-template-columns:' + GRID_TPL + ';gap:12px;align-items:start;margin-top:14px">';
       html += '<div class="matrix-size__title" style="margin:0;padding-top:4px;white-space:nowrap">' + r.label + '</div>';
       MSTATES.forEach(function (st) {
-        html += '<div style="min-width:0">' + matrixCell(b.size, r.v, st) + '</div>';
+        html += '<div style="min-width:0">' + matrixCell(b.size, r.v, st.k, allowed) + '</div>';
       });
       html += '</div>';
     });
@@ -910,7 +967,7 @@ function updateVarInspector(d) {
     'input / ' + s.label + ' / ' + variantLabel + ' / ' + (INP.states[d.state] || d.state).toLowerCase();
 
   // фигура
-  document.querySelectorAll('#vc-tokens .pf-r').forEach(function (chip) { chip.textContent = '12'; });
+  document.querySelectorAll('#vc-tokens .pf-r').forEach(function (chip) { chip.textContent = s.radiusVal; });
   document.querySelectorAll('#vc-tokens .pf-bw').forEach(function (chip) { chip.textContent = '1'; });
   document.getElementById('vc-py-t').textContent = s.padT;
   document.getElementById('vc-py-b').textContent = s.padT;
@@ -944,26 +1001,24 @@ function updateVarInspector(d) {
     'padding: ' + s.pad + ';',
     'gap: var(--ds-space-2x, 8px);',
     'border: 1px solid var(' + c.borderVar + ', ' + c.border + ');',
-    'border-radius: var(--ds-radius-3x, 12px);',
+    'border-radius: ' + s.radius + ';',
     'background: var(' + c.bgVar + ', ' + c.bg + ');'
   ];
   lastVcCss = lines;
   document.getElementById('vc-css').innerHTML = renderCss(lines);
 
   // HTML
-  var ph = d.variant === 'empty';
+  var isEmpty = d.variant === 'empty';
   var htmlCode = '<div class="ds-input ds-input--' + d.size + stateClass(d.state) + '">';
   htmlCode += '\n  <div class="ds-input__frame">';
-  htmlCode += '\n    <span class="ds-input__icon material-icons" aria-hidden="true">info</span>';
+  htmlCode += '\n    ' + iconElCode('info');
   htmlCode += '\n    <div class="ds-input__content">';
-  if (d.size === 'm') htmlCode += '\n      <label class="ds-input__label" for="my-input">Label</label>';
-  htmlCode += '\n      <input class="ds-input__field" id="my-input" type="text"' +
-              (ph ? ' placeholder="Input text"' : ' value="Input text"') +
-              (d.state === 'disable' ? ' disabled' : '') + '>';
+  if (d.size === 'm' && d.variant === 'populated') htmlCode += '\n      <label class="ds-input__label" for="my-input">Label</label>';
+  if (isEmpty) htmlCode += '\n      <input class="ds-input__field" id="my-input" type="text" value="Label"' + (d.state === 'disable' ? ' disabled' : '') + '>';
+  else htmlCode += '\n      <input class="ds-input__field" id="my-input" type="text" value="Input text"' + (d.state === 'disable' ? ' disabled' : '') + '>';
   htmlCode += '\n    </div>';
-  htmlCode += '\n    <span class="ds-input__icon material-icons" aria-hidden="true">close</span>';
+  htmlCode += '\n    ' + iconElCode(rightIcon(d.size, d.variant, d.state));
   htmlCode += '\n  </div>';
-  if (d.size === 'm') htmlCode += '\n  <div class="ds-input__support">Support text</div>';
   htmlCode += '\n</div>';
   lastVcHtml = htmlCode.split('\n');
   document.getElementById('vc-html').innerHTML = renderHtml(htmlCode.split('\n'));
@@ -1000,6 +1055,6 @@ document.getElementById('vc-copy').addEventListener('click', function () {
 });
 </script>
 
-<script src="sidebar.js"></script>
+<script src="sidebar.js?v=112"></script>
 </body>
 </html>
