@@ -205,6 +205,17 @@
                   <span class="control-label">Element right</span>
                   <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-icon-right" checked><span class="track"></span><span class="thumb"></span></span></label>
                 </div>
+                <!-- условная группа: при Variant=Populated (в Figma есть слои Label и Input text) -->
+                <div id="pop-toggles" style="display:none">
+                  <div class="control-row">
+                    <span class="control-label">Label</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-label" checked><span class="track"></span><span class="thumb"></span></span></label>
+                  </div>
+                  <div class="control-row">
+                    <span class="control-label">Input text</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-input-text" checked><span class="track"></span><span class="thumb"></span></span></label>
+                  </div>
+                </div>
                 <div class="control-row">
                   <span class="control-label">Support</span>
                   <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-support"><span class="track"></span><span class="thumb"></span></span></label>
@@ -224,6 +235,12 @@
                 <div class="control-row">
                   <label class="control-label" for="ctl-labeltext">Label text</label>
                   <input class="control-input" id="ctl-labeltext" type="text" value="Label">
+                </div>
+                <div id="pop-texts" style="display:none">
+                  <div class="control-row">
+                    <label class="control-label" for="ctl-inputtext">Input text</label>
+                    <input class="control-input" id="ctl-inputtext" type="text" value="Input text">
+                  </div>
                 </div>
                 <div id="sup-texts" style="display:none">
                   <div class="control-row">
@@ -548,7 +565,8 @@ document.querySelectorAll('.ds-select').forEach(function (sel) {
       item.classList.add('is-selected');
       item.querySelector('.ds-select__check').style.display = 'inline-flex';
       closeSelects();
-      renderStage();
+      if (sel.dataset.sel === 'variant') togglePopDetails();
+      else renderStage();
     });
   });
 });
@@ -647,16 +665,16 @@ function renderStage() {
   var dark = document.getElementById('ctl-dark').checked;
   var opts = {
     size: size, variant: variant, state: state,
-    // значения — по Figma-панели инстанса: Label управляется вариантом, Support раскрывает Support text/Hint text
-    showLabel: variant === 'populated',
+    // значения — по Figma-панели инстанса: Label/Input text у Populated, Support раскрывает Support text/Hint text
+    showLabel: variant === 'populated' && document.getElementById('ctl-label').checked,
     iconL: document.getElementById('ctl-icon-left').checked,
     iconR: document.getElementById('ctl-icon-right').checked,
-    showValue: true,
+    showValue: variant === 'populated' ? document.getElementById('ctl-input-text').checked : true,
     showSupport: document.getElementById('ctl-support').checked,
     showSupportText: document.getElementById('ctl-support-text').checked,
     showHint: document.getElementById('ctl-hint-text').checked,
     labelText: document.getElementById('ctl-labeltext').value,
-    inputText: 'Input text',
+    inputText: variant === 'populated' ? document.getElementById('ctl-inputtext').value : document.getElementById('ctl-labeltext').value,
     supportText: document.getElementById('ctl-supporttext').value,
     hintText: document.getElementById('ctl-hinttext').value
   };
@@ -696,6 +714,14 @@ function renderStage() {
   updateCodePanels();
 }
 
+function togglePopDetails() {
+  var on = (selVal('variant') || 'empty') === 'populated';
+  var tg = document.getElementById('pop-toggles');
+  var tx = document.getElementById('pop-texts');
+  if (tg) tg.style.display = on ? '' : 'none';
+  if (tx) tx.style.display = on ? '' : 'none';
+  renderStage();
+}
 function toggleSupportDetails() {
   var on = document.getElementById('ctl-support').checked;
   var tg = document.getElementById('sup-toggles');
@@ -705,7 +731,7 @@ function toggleSupportDetails() {
   renderStage();
 }
 
-['ctl-dark', 'ctl-icon-left', 'ctl-icon-right', 'ctl-support-text', 'ctl-hint-text', 'ctl-labeltext', 'ctl-supporttext', 'ctl-hinttext'].forEach(function (id) {
+['ctl-dark', 'ctl-icon-left', 'ctl-icon-right', 'ctl-label', 'ctl-input-text', 'ctl-support-text', 'ctl-hint-text', 'ctl-labeltext', 'ctl-inputtext', 'ctl-supporttext', 'ctl-hinttext'].forEach(function (id) {
   var el = document.getElementById(id);
   if (el) el.addEventListener('input', renderStage);
 });
