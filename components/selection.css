@@ -77,9 +77,12 @@
 .ds-radio--error .ds-radio__input:checked + .ds-radio__box {
   color: var(--ds-color-text-negative);           /* #FF5252 */
 }
-.ds-checkbox--error .ds-checkbox__label,
-.ds-radio--error .ds-radio__label {
+.ds-checkbox--error .ds-checkbox__label {
   color: var(--ds-color-text-primary);
+}
+/* Radio: у «Radio button label» есть Text error color = #FF5252 (var: Text/Negative) */
+.ds-radio--error .ds-radio__label {
+  color: var(--ds-color-text-negative);
 }
 
 /* ── Disabled ────────────────────────────────────────────── */
