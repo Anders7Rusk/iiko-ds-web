@@ -1681,7 +1681,8 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 
 /* ── Вкладка «Figma» — иерархия переменных ─────────────── */
 .figma-table { border-collapse: collapse; width: 100%; table-layout: fixed; }
-.figma-table th, .figma-table td { padding: 6px 10px; }
+.figma-table th, .figma-table td { padding: 4px 10px; vertical-align: middle; }
+.figma-table tbody tr { height: 44px; }
 .figma-table th { font-size: 13px; }
 .figma-table th:first-child { width: 26%; }
 .figma-table th:nth-child(2) { width: 30%; }
