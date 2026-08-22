@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=101">
-<link rel="stylesheet" href="components/button.css?v=101">
-<link rel="stylesheet" href="components/badge.css?v=101">
-<link rel="stylesheet" href="showcase.css?v=101">
+<link rel="stylesheet" href="tokens.css?v=102">
+<link rel="stylesheet" href="components/button.css?v=102">
+<link rel="stylesheet" href="components/badge.css?v=102">
+<link rel="stylesheet" href="showcase.css?v=102">
 </head>
 <body>
 
@@ -1256,7 +1256,7 @@ function stateButton(style, type, state, group) {
   var border = type === 'outlined' ? ('border:1px solid ' + c.border + ';') : 'border:1px solid transparent;';
   return '<button type="button" tabindex="-1"' + (state==='disable' ? ' disabled' : '') +
          ' style="display:inline-flex;align-items:center;justify-content:center;height:36px;padding:8px 12px;gap:8px;border-radius:8px;font-size:14px;font-weight:500;color:' + c.text + ';background:' + c.bg + ';' + border +
-         'font-family:inherit;cursor:default;pointer-events:none">' +
+         'box-shadow:0 0 4px rgba(33,33,33,0.12),0 2px 2px rgba(33,33,33,0.04);font-family:inherit;cursor:default;pointer-events:none">' +
          icon + '<span>Label</span>' + icon + '</button>';
 }
 
@@ -1580,6 +1580,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=101"></script>
+<script src="sidebar.js?v=102"></script>
 </body>
 </html>
