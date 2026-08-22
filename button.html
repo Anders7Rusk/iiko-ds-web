@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=112">
-<link rel="stylesheet" href="components/button.css?v=112">
-<link rel="stylesheet" href="components/badge.css?v=112">
-<link rel="stylesheet" href="showcase.css?v=112">
+<link rel="stylesheet" href="tokens.css?v=113">
+<link rel="stylesheet" href="components/button.css?v=113">
+<link rel="stylesheet" href="components/badge.css?v=113">
+<link rel="stylesheet" href="showcase.css?v=113">
 </head>
 <body>
 
@@ -1883,13 +1883,22 @@ function buildFigmaTable() {
   var html = '<table class="token-table figma-table"><thead><tr><th>Переменная</th><th>Алиас</th><th>Значение</th><th>Пример</th></tr></thead><tbody>';
   flat.forEach(function (r) {
     if (r.type === 'folder') {
-      html += '<tr class="group-row figma-group" data-count="' + r.count + '"><td style="padding-left:' + (r.depth * 14 + 8) + 'px" colspan="3"><span class="fold-tri"></span>' + r.seg + '</td><td class="tok-example">' + r.btn + '</td></tr>';
+      html += '<tr class="group-row figma-group' + (r.btn ? ' is-folded' : '') + '" data-count="' + r.count + '"><td style="padding-left:' + (r.depth * 14 + 8) + 'px" colspan="3"><span class="fold-tri"></span>' + r.seg + '</td><td class="tok-example">' + r.btn + '</td></tr>';
     } else {
       html += '<tr class="figma-var"><td class="figma-path" style="padding-left:' + (r.depth * 14 + 24) + 'px">' + r.seg + '</td><td class="tok-alias">' + r.alias + '</td><td class="tok-val">' + r.val + '</td><td class="tok-example">' + r.ex + '</td></tr>';
     }
   });
   html += '</tbody></table>';
   host.innerHTML = html;
+  // свернуть состояния по умолчанию (строки-свойства у них скрыты) — компактное дерево, значения по клику
+  host.querySelectorAll('tr.figma-group.is-folded').forEach(function (tr) {
+    var tbody = tr.parentElement;
+    var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+    var idx = rows.indexOf(tr);
+    var count = +tr.getAttribute('data-count');
+    for (var j = idx + 1; j <= idx + count; j++) { if (rows[j]) rows[j].style.display = 'none'; }
+    tr.classList.add('collapsed');
+  });
   host.querySelectorAll('.figma-group .fold-tri').forEach(function (tri) {
     tri.addEventListener('click', function (e) {
       e.stopPropagation();
@@ -1912,6 +1921,6 @@ buildFigmaTable();
 
 </script>
 
-<script src="sidebar.js?v=112"></script>
+<script src="sidebar.js?v=113"></script>
 </body>
 </html>
