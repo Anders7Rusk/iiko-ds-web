@@ -43,3 +43,10 @@
 .ds-badge--positive { background: var(--ds-color-badge-positive-background); } /* #14B456 */
 .ds-badge--warning  { background: var(--ds-color-badge-warning-background); }  /* #FFAB40 */
 .ds-badge--negative { background: var(--ds-color-badge-negative-background); } /* #FF5252 */
+
+/* ── Матрица вариантов Badge (страница badge.html) ────────────────
+   У Badge нет размеров и состояний (только Style × Type), поэтому:
+   подписи типов без сдвига под шапку размера, ряд — 2 колонки. */
+
+#matrix-root .matrix-types { padding-top: 16px; }
+#matrix-root .matrix-row { grid-template-columns: repeat(2, 1fr); }
