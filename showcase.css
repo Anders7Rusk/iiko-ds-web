@@ -1675,6 +1675,8 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   color: #3f3f46;
   font-weight: 400;
 }
+/* «Размеры» — отступ заголовок→таблица такой же, как в «Вариантах» (16px) */
+#tokens-sizes .token-card { margin-top: 16px; }
 .token-table .tok-example { display: flex; align-items: center; justify-content: center; width: 100%; }
 
 /* ── Вкладка «Figma» — иерархия переменных ─────────────── */
