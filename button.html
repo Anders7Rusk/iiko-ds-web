@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=98">
-<link rel="stylesheet" href="components/button.css?v=98">
-<link rel="stylesheet" href="components/badge.css?v=98">
-<link rel="stylesheet" href="showcase.css?v=98">
+<link rel="stylesheet" href="tokens.css?v=99">
+<link rel="stylesheet" href="components/button.css?v=99">
+<link rel="stylesheet" href="components/badge.css?v=99">
+<link rel="stylesheet" href="showcase.css?v=99">
 </head>
 <body>
 
@@ -1250,14 +1250,22 @@ function stateColors(style, type, state) {
 // Кнопка-пример, отрисованная по DS (размер M: pad 8/12, gap 8, радиус 8, текст 14/500, иконка 20)
 // Иконка кнопки из Figma — «+» (add), как в DS; размер M 20px
 var ICON_PLUS = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0" aria-hidden="true"><path d="M5 12h14M12 5v14"/></svg>';
-function stateButton(style, type, state, withIcon) {
-  var c = stateColors(style, type, state);
-  var icon = withIcon ? '<span style="display:inline-flex;align-items:center;justify-content:center;color:' + c.icon + '">' + ICON_PLUS + '</span>' : '';
+function stateButton(style, type, state, group) {
+  var st = stateColors(style, type, state);
+  var def = stateColors(style, type, 'default');
+  // Изолируем показываемое свойство (фон/обводка/текст/иконка), остальное — из дефолт-состояния
+  var c = {
+    bg: group === 'bg' ? st.bg : def.bg,
+    border: type === 'outlined' ? (group === 'border' ? st.border : def.border) : 'transparent',
+    text: group === 'label' ? st.text : def.text,
+    icon: group === 'icon' ? st.icon : def.icon
+  };
+  var icon = '<span style="display:inline-flex;align-items:center;justify-content:center;color:' + c.icon + '">' + ICON_PLUS + '</span>';
   var border = type === 'outlined' ? ('border:1px solid ' + c.border + ';') : 'border:1px solid transparent;';
   return '<button type="button" tabindex="-1"' + (state==='disable' ? ' disabled' : '') +
          ' style="display:inline-flex;align-items:center;justify-content:center;height:36px;padding:8px 12px;gap:8px;border-radius:8px;font-size:14px;font-weight:500;color:' + c.text + ';background:' + c.bg + ';' + border +
          'box-shadow:0px 2px 2px #E0E0E0,0px 1px 1px #D6D6D6;font-family:inherit;cursor:default;pointer-events:none">' +
-         icon + '<span>Label</span>' + (icon || '') + '</button>';
+         icon + '<span>Label</span>' + icon + '</button>';
 }
 
 // Значение токена для таблицы — реальное значение переменной Figma
@@ -1316,7 +1324,7 @@ function buildTokenTable(style, type) {
     TOKEN_STATES.forEach(function (st) {
       var name = figmaVarName(style, type, g.key, st.key);
       if (!FIGMA[name]) return; // токена нет в переменных — строку не показываем
-      var ex = stateButton(style, type, st.key, true);
+      var ex = stateButton(style, type, st.key, g.key);
       groupRows += tokenRow(st.label, name, FIGMA[name], ex);
     });
     if (groupRows) rows += '<tr class="group-row"><td colspan="4">' + g.label + '</td></tr>' + groupRows;
@@ -1580,6 +1588,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=98"></script>
+<script src="sidebar.js?v=99"></script>
 </body>
 </html>
