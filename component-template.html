@@ -4,7 +4,7 @@
 
   КАК СОЗДАТЬ ИНСТАНС (страницу компонента X):
   1. Скопировать этот файл в <component>.html.
-  2. Заменить {{Component}} / {{component}} на имя компонента
+  2. Заменить Мастер страница / мастер страница на имя компонента
      (title, h1, заголовок панели свойств, подписи, вкладка Figma).
   3. Заменить примерные данные Button (var BTN, матрица, токены, интерактив)
      на данные компонента X — ТОЛЬКО 1:1 из Figma (Figma API / DS.json),
@@ -19,15 +19,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{Component}} · iiko DS</title>
+<title>Мастер страница · iiko DS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=114">
-<link rel="stylesheet" href="components/button.css?v=114">
-<link rel="stylesheet" href="components/badge.css?v=114">
-<link rel="stylesheet" href="showcase.css?v=114">
+<link rel="stylesheet" href="tokens.css?v=115">
+<link rel="stylesheet" href="components/button.css?v=115">
+<link rel="stylesheet" href="components/badge.css?v=115">
+<link rel="stylesheet" href="showcase.css?v=115">
 </head>
 <body>
 
@@ -40,7 +40,7 @@
     <main>
 
       <div class="page-head">
-        <h1>{{Component}}</h1>
+        <h1>Мастер страница</h1>
       </div>
 
       <!-- ===== Вкладки страницы ===== -->
@@ -90,7 +90,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
                       </button>
                     </div>
-                    <div class="po-label" id="po-label">{{component}} / M / neutral / filled / default</div>
+                    <div class="po-label" id="po-label">мастер страница / M / neutral / filled / default</div>
                   </div>
                   <div class="cc-panel is-active" id="cc-html"></div>
                   <div class="cc-panel" id="cc-css"></div>
@@ -149,7 +149,7 @@
               </div>
               <div class="props-panel" id="props-panel">
                 <div class="props-title">
-                  <h3>{{Component}}</h3>
+                  <h3>Мастер страница</h3>
                   <p class="props-caption">Настройки</p>
                 </div>
                   <div class="control-row">
@@ -552,7 +552,7 @@
 
         <div class="comp-panel" id="tokens-figma">
           <section>
-            <h2>Токены {{Component}} — переменные Figma</h2>
+            <h2>Токены Мастер страница — переменные Figma</h2>
             <div class="token-card">
               <div id="figma-table"></div>
             </div>
@@ -568,7 +568,7 @@
 
 <script>
 /* ============================================================
-   Данные токенов {{Component}} — ПРИМЕР: Button (заменить на данные компонента из Figma)
+   Данные токенов Мастер страница — ПРИМЕР: Button (заменить на данные компонента из Figma)
    ============================================================ */
 var BTN = {
   sizes: {
@@ -903,7 +903,7 @@ function updateVarInspector(d) {
   var bw = type === 'outlined' ? '1' : '0';
 
   // подпись
-  document.getElementById('vc-label').textContent = '{{component}} / ' + size.toUpperCase() + ' / ' + style + ' / ' + type + ' / ' + state;
+  document.getElementById('vc-label').textContent = 'мастер страница / ' + size.toUpperCase() + ' / ' + style + ' / ' + type + ' / ' + state;
 
   // фигура
   document.querySelectorAll('#vc-tokens .pf-r').forEach(function (c) { c.textContent = '8'; });
@@ -1643,7 +1643,7 @@ function updateCodePanels() {
   var bw = type === 'outlined' ? '1' : '0';
 
   // Tokens: подпись
-  document.getElementById('po-label').textContent = '{{component}} / ' + size.toUpperCase() + ' / ' + style + ' / ' + type + ' / ' + state;
+  document.getElementById('po-label').textContent = 'мастер страница / ' + size.toUpperCase() + ' / ' + style + ' / ' + type + ' / ' + state;
 
   // Tokens: фигура
   document.querySelectorAll('.pf-r').forEach(function (c) { c.textContent = '8'; });
@@ -1937,6 +1937,6 @@ buildFigmaTable();
 
 </script>
 
-<script src="sidebar.js?v=114"></script>
+<script src="sidebar.js?v=115"></script>
 </body>
 </html>
