@@ -196,18 +196,20 @@
                     </div>
                   </div>
                   <div class="control-row">
-                    <span class="control-label">State</span>
-                    <div class="ds-select" data-sel="state" data-value="Default">
-                      <button type="button" class="ds-select__trigger" aria-expanded="false">
-                        <span class="ds-select__value">Default</span>
-                        <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
-                      </button>
-                      <div class="ds-select__menu" role="listbox">
-                        <div class="ds-select__item is-selected" data-value="Default" role="option">Default<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="Hover" role="option">Hover<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="Press" role="option">Press<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                      </div>
-                    </div>
+                    <span class="control-label">Checkbox left</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-cbleft" checked><span class="track"></span><span class="thumb"></span></span></label>
+                  </div>
+                  <div class="control-row">
+                    <span class="control-label">Checkbox right</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-cbright" checked><span class="track"></span><span class="thumb"></span></span></label>
+                  </div>
+                  <div class="control-row">
+                    <span class="control-label">Label</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-label" checked><span class="track"></span><span class="thumb"></span></span></label>
+                  </div>
+                  <div class="control-row">
+                    <span class="control-label">Support text</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-support"><span class="track"></span><span class="thumb"></span></span></label>
                   </div>
                   <div class="props-divider"></div>
                   <div class="control-row">
@@ -620,57 +622,63 @@ function cbClass(variant) {
 function renderStage() {
   var variant = selVal('variant');
   var type = selVal('type');
-  var state = selVal('state');
   var text = document.getElementById('ctl-textval').value || 'Checkbox label';
   var dark = document.getElementById('ctl-dark').checked;
+  var cbleft = document.getElementById('ctl-cbleft').checked;
+  var cbright = document.getElementById('ctl-cbright').checked;
+  var showlabel = document.getElementById('ctl-label').checked;
+  var showSupport = document.getElementById('ctl-support').checked;
 
-  var colors = CB.colors[variant][type][state] || CB.colors[variant][type].Default;
+  var colors = CB.colors[variant][type].Default;
   var cls = cbClass(variant);
   var disabled = variant === 'Disable' ? ' disabled' : '';
   var checked = type === 'Selected' ? ' checked' : '';
   var indeterminate = type === 'Indeterminate';
+  var icon = CB.icons[type];
 
-  // подложка-круг 28×28 (в Figma она есть у всех состояний, кроме Disable)
-  var boxStyle = '';
-  if (variant !== 'Disable') {
-    boxStyle = ' style="width:28px;height:28px;border-radius:50%;background:' + colors.bg + ';"';
-  }
+  var left = cbleft  ? '<span class="ds-checkbox__box material-icons" aria-hidden="true"></span>' : '';
+  var right = cbright ? '<span class="ds-checkbox__box material-icons" aria-hidden="true"></span>' : '';
+  var label = showlabel ? '<span class="ds-checkbox__label">' + text.replace(/</g, '&lt;') + '</span>' : '';
+  var sup = showSupport ? '<span class="ds-checkbox__support">Support text</span>' : '';
 
   var html = '<label class="' + cls + '">\n' +
              '  <input type="checkbox" class="ds-checkbox__input"' + (checked ? ' checked' : '') +
              (indeterminate ? ' id="stage-cb-indet"' : '') + disabled + '>\n' +
-             '  <span class="ds-checkbox__box material-icons" aria-hidden="true"' + boxStyle + '></span>\n' +
-             '  <span class="ds-checkbox__label">' + text.replace(/</g, '&lt;') + '</span>\n' +
-             '</label>';
+             (left ? left + '\n' : '') +
+             (label ? label + '\n' : '') +
+             (right ? right + '\n' : '') +
+             '</label>' + (sup ? '\n' + sup : '');
   document.getElementById('stage-cb-wrap').innerHTML = html;
   document.getElementById('stage').classList.toggle('is-dark', dark);
   if (indeterminate) document.getElementById('stage-cb-indet').indeterminate = true;
 
-  // код (HTML-вкладка)
+  // код (HTML-вкладка) — компонент Checkbox label
   var code = '<label class="' + cls + '">\n' +
              '  <input type="checkbox" class="ds-checkbox__input"' + (checked ? ' checked' : '') +
              (indeterminate ? ' id="cb"' : '') + disabled + '>\n' +
-             '  <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>\n' +
-             '  <span class="ds-checkbox__label">' + text.replace(/</g, '&lt;') + '</span>\n' +
-             '</label>';
+             (left ? left + '\n' : '') +
+             (label ? label + '\n' : '') +
+             (right ? right + '\n' : '') +
+             '</label>' + (sup ? '\n' + sup : '');
   if (indeterminate) code += '\n<script>document.getElementById("cb").indeterminate = true;</scr' + 'ipt>';
   document.getElementById('cc-html').innerHTML = renderHtml(code.split('\n'));
   lastHtmlLines = code.split('\n');
 
   updateCodePanels();
 }
-['ctl-textval', 'ctl-dark'].forEach(function (id) {
-  document.getElementById(id).addEventListener('input', renderStage);
+['ctl-textval', 'ctl-dark', 'ctl-cbleft', 'ctl-cbright', 'ctl-label', 'ctl-support'].forEach(function (id) {
+  var el = document.getElementById(id);
+  if (el) el.addEventListener('input', renderStage);
 });
 
-// CSS-декларации чекбокса по текущему состоянию
-function cbCssLines(variant, type, state) {
-  var colors = CB.colors[variant][type][state] || CB.colors[variant][type].Default;
+// CSS-декларации Checkbox label по выбранному типу
+function cbCssLines(variant, type) {
+  var colors = CB.colors[variant][type].Default;
   var iconVar = CB.iconVars[variant][type];
   var labelVar = CB.labelVar[variant];
   var labelHex = CB.labelHex[variant];
   var lines = [
-    '/* .ds-checkbox */',
+    '/* .ds-checkbox (Checkbox label) */',
     'display: inline-flex;',
     'align-items: center;',
     'gap: var(--ds-space-2x, 8px);',
@@ -688,7 +696,10 @@ function cbCssLines(variant, type, state) {
     'font-size: var(--ds-typography-font-size-3-5x, 14px);',
     'letter-spacing: 0.25px;',
     'line-height: 20px;',
-    'color: var(' + labelVar + ', ' + labelHex + ');'
+    'color: var(' + labelVar + ', ' + labelHex + ');',
+    '/* .ds-checkbox__support */',
+    'font-size: var(--ds-typography-font-size-3x, 12px);',
+    'color: var(--ds-color-text-secondary, #616161);'
   ];
   return lines;
 }
@@ -696,25 +707,21 @@ function cbCssLines(variant, type, state) {
 function updateCodePanels() {
   var variant = selVal('variant');
   var type = selVal('type');
-  var state = selVal('state');
-  var colors = CB.colors[variant][type][state] || CB.colors[variant][type].Default;
+  var colors = CB.colors[variant][type].Default;
   var iconVar = CB.iconVars[variant][type];
   var labelVar = CB.labelVar[variant];
   var labelHex = CB.labelHex[variant];
 
-  // подпись
-  document.getElementById('po-label').textContent = 'checkbox / ' + variant + ' / ' + type + ' / ' + state;
+  // подпись (компонент Checkbox label: без State)
+  document.getElementById('po-label').textContent = 'checkbox / ' + variant + ' / ' + type;
 
   // Layout
   document.getElementById('po-gap-v').innerHTML = escVar('var(--ds-space-2x, 8px);');
   document.getElementById('po-icon-v').innerHTML = escVar('var(--ds-size-5x, 20px);');
   document.getElementById('po-bgsz-v').innerHTML = escVar('var(--ds-size-7x, 28px);');
 
-  // Style: подложка (круг 28×28) — цвет по состоянию; у Disable подложки нет
-  var bgText = variant === 'Disable'
-    ? 'none (transparent)'
-    : '<span class="dot" style="background:' + colors.bg + '"></span> ' + colors.bg.toUpperCase();
-  document.getElementById('po-bg-v').innerHTML = bgText;
+  // Style: подложка Default — transparent (у label нет состояний hover/press)
+  document.getElementById('po-bg-v').innerHTML = 'transparent (Default)';
   document.getElementById('po-r-v').innerHTML = escVar('var(--ds-radius-circular, 9999px); /* ELLIPSE 28×28 */');
 
   // Colors
@@ -724,7 +731,7 @@ function updateCodePanels() {
     '<span class="fn">var</span>(' + labelVar + ', <span class="dot" style="background:' + labelHex + '"></span> ' + labelHex + ');';
 
   // CSS
-  var lines = cbCssLines(variant, type, state);
+  var lines = cbCssLines(variant, type);
   lastCssLines = lines;
   document.getElementById('cc-css').innerHTML = renderCss(lines);
 }
@@ -806,27 +813,24 @@ renderStage();
    ============================================================ */
 var VARIANTS = ['Normal', 'Error', 'Disable'];
 var TYPES = ['Deselected', 'Selected', 'Indeterminate'];
-var STATES = ['Default', 'Hover', 'Press'];
 var selectedCb = null;
 
-function matrixCb(variant, type, state) {
-  var colors = CB.colors[variant][type][state] || CB.colors[variant][type].Default;
+function matrixCb(variant, type) {
+  var colors = CB.colors[variant][type].Default;
+  var icon = CB.icons[type];
   var isDisable = variant === 'Disable';
-  var size = isDisable ? '20px' : '28px';
-  var bg = isDisable ? '' : 'background:' + colors.bg + ';';
-  var radius = isDisable ? '' : 'border-radius:50%;';
-  return '<span class="mc-cb matrix-btn" data-variant="' + variant + '" data-type="' + type + '" data-state="' + state +
-         '" style="width:' + size + ';height:' + size + ';' + radius + bg +
-         'display:inline-flex;align-items:center;justify-content:center;cursor:pointer;" title="' + variant + ' / ' + type + ' / ' + state + '">' +
-         '<span class="material-icons" style="font-size:20px;line-height:1;color:' + colors.icon + ';">' + CB.icons[type] + '</span></span>';
+  var labelColor = isDisable ? 'var(--ds-color-checkbox-label-text-disable-color)' : 'var(--ds-color-checkbox-label-text-color)';
+  return '<span class="mc-cb matrix-btn" data-variant="' + variant + '" data-type="' + type + '" ' +
+         'title="' + variant + ' / ' + type + '" style="display:inline-flex;align-items:center;gap:8px;cursor:pointer;color:' + colors.icon + ';">' +
+         '<span class="material-icons" aria-hidden="true" style="font-size:20px;line-height:1;">' + icon + '</span>' +
+         '<span class="mc-label" style="color:' + labelColor + ';">Checkbox label</span>' +
+         '<span class="material-icons" aria-hidden="true" style="font-size:20px;line-height:1;">' + icon + '</span></span>';
 }
 
 (function buildMatrix() {
   var root = document.getElementById('matrix-root');
   var html = '';
   VARIANTS.forEach(function (variant) {
-    var states = variant === 'Disable' ? ['Default'] : STATES;
-    var cols = states.length;
     html += '<div class="matrix-block">';
     html += '<div class="matrix-headwrap"><h3 class="matrix-title">' + variant + '</h3></div>';
     html += '<div class="matrix-body">';
@@ -836,15 +840,8 @@ function matrixCb(variant, type, state) {
     html += '<div class="matrix-size">';
     html += '<div class="matrix-size__title">20px · Material Icons</div>';
     html += '<div class="matrix-card">';
-    html += '<div class="matrix-states" style="grid-template-columns:repeat(' + cols + ', 1fr)">';
-    states.forEach(function (st) { html += '<span class="matrix-state">' + st + '</span>'; });
-    html += '</div>';
     TYPES.forEach(function (t) {
-      html += '<div class="matrix-row" style="grid-template-columns:repeat(' + cols + ', 1fr)">';
-      states.forEach(function (st) {
-        html += '<span class="matrix-cell">' + matrixCb(variant, t, st) + '</span>';
-      });
-      html += '</div>';
+      html += '<div class="matrix-row"><span class="matrix-cell">' + matrixCb(variant, t) + '</span></div>';
     });
     html += '</div></div>';
     html += '</div>';
@@ -880,25 +877,21 @@ var lastVcCss = [];
 function updateVarInspector(d) {
   var variant = d.variant;
   var type = d.type;
-  var state = d.state;
-  var colors = CB.colors[variant][type][state] || CB.colors[variant][type].Default;
+  var colors = CB.colors[variant][type].Default;
   var iconVar = CB.iconVars[variant][type];
   var labelVar = CB.labelVar[variant];
   var labelHex = CB.labelHex[variant];
 
-  // подпись
-  document.getElementById('vc-label').textContent = 'checkbox / ' + variant + ' / ' + type + ' / ' + state;
+  // подпись (компонент Checkbox label: без State)
+  document.getElementById('vc-label').textContent = 'checkbox / ' + variant + ' / ' + type;
 
   // Layout
   document.getElementById('vc-gap-v').innerHTML = escVar('var(--ds-space-2x, 8px);');
   document.getElementById('vc-icon-v').innerHTML = escVar('var(--ds-size-5x, 20px);');
   document.getElementById('vc-bgsz-v').innerHTML = escVar('var(--ds-size-7x, 28px);');
 
-  // Style
-  var bgText = variant === 'Disable'
-    ? 'none (transparent)'
-    : '<span class="dot" style="background:' + colors.bg + '"></span> ' + colors.bg.toUpperCase();
-  document.getElementById('vc-bg-v').innerHTML = bgText;
+  // Style: подложка Default — transparent (у label нет состояний hover/press)
+  document.getElementById('vc-bg-v').innerHTML = 'transparent (Default)';
   document.getElementById('vc-r-v').innerHTML = escVar('var(--ds-radius-circular, 9999px); /* ELLIPSE 28×28 */');
 
   // Colors
@@ -908,11 +901,11 @@ function updateVarInspector(d) {
     '<span class="fn">var</span>(' + labelVar + ', <span class="dot" style="background:' + labelHex + '"></span> ' + labelHex + ');';
 
   // CSS
-  var lines = cbCssLines(variant, type, state);
+  var lines = cbCssLines(variant, type);
   lastVcCss = lines;
   document.getElementById('vc-css').innerHTML = renderCss(lines);
 
-  // HTML
+  // HTML — Checkbox label: [left][label][right]
   var cls = cbClass(variant);
   var disabled = variant === 'Disable' ? ' disabled' : '';
   var checked = type === 'Selected' ? ' checked' : '';
@@ -922,6 +915,7 @@ function updateVarInspector(d) {
                  (indeterminate ? ' id="cb"' : '') + disabled + '>\n' +
                  '  <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>\n' +
                  '  <span class="ds-checkbox__label">Checkbox label</span>\n' +
+                 '  <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>\n' +
                  '</label>';
   if (indeterminate) htmlCode += '\n<script>document.getElementById("cb").indeterminate = true;</scr' + 'ipt>';
   lastVcHtml = htmlCode.split('\n');
