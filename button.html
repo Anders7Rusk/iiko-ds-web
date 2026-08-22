@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=94">
-<link rel="stylesheet" href="components/button.css?v=94">
-<link rel="stylesheet" href="components/badge.css?v=94">
-<link rel="stylesheet" href="showcase.css?v=94">
+<link rel="stylesheet" href="tokens.css?v=95">
+<link rel="stylesheet" href="components/button.css?v=95">
+<link rel="stylesheet" href="components/badge.css?v=95">
+<link rel="stylesheet" href="showcase.css?v=95">
 </head>
 <body>
 
@@ -1257,7 +1257,7 @@ function stateButton(style, type, state, withIcon) {
   return '<button type="button" tabindex="-1"' + (state==='disable' ? ' disabled' : '') +
          ' style="display:inline-flex;align-items:center;justify-content:center;height:36px;padding:8px 12px;gap:8px;border-radius:8px;font-size:14px;font-weight:500;color:' + c.text + ';background:' + c.bg + ';' + border +
          'box-shadow:0px 2px 2px #E0E0E0,0px 1px 1px #D6D6D6;font-family:inherit;cursor:default;pointer-events:none">' +
-         icon + '<span>Label</span></button>';
+         icon + '<span>Label</span>' + (icon || '') + '</button>';
 }
 
 // Значение токена для таблицы — реальное значение переменной Figma
@@ -1579,6 +1579,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=94"></script>
+<script src="sidebar.js?v=95"></script>
 </body>
 </html>
