@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=108">
-<link rel="stylesheet" href="components/button.css?v=108">
-<link rel="stylesheet" href="components/badge.css?v=108">
-<link rel="stylesheet" href="showcase.css?v=108">
+<link rel="stylesheet" href="tokens.css?v=109">
+<link rel="stylesheet" href="components/button.css?v=109">
+<link rel="stylesheet" href="components/badge.css?v=109">
+<link rel="stylesheet" href="showcase.css?v=109">
 </head>
 <body>
 
@@ -1837,40 +1837,76 @@ function buildFigmaTable() {
   keys.sort(function (a, b) {
     var pa = a.split('/'), pb = b.split('/');
     var n = Math.max(pa.length, pb.length);
-    for (var i = 0; i < n; i++) {
-      var oa = segOrder(pa[i], i), ob = segOrder(pb[i], i);
-      if (oa !== ob) return oa - ob;
-    }
+    for (var i = 0; i < n; i++) { var oa = segOrder(pa[i], i), ob = segOrder(pb[i], i); if (oa !== ob) return oa - ob; }
     return 0;
   });
+  function propGroup(p) {
+    if (/^Background/.test(p)) return 'bg';
+    if (/^Border/.test(p)) return 'border';
+    if (/^Text color/.test(p)) return 'label';
+    if (/^Icon color/.test(p)) return 'icon';
+    return null;
+  }
+  function parseVar(parts) {
+    if (parts.length === 5) return { style: parts[1].toLowerCase(), type: parts[2].toLowerCase(), state: parts[3].toLowerCase(), group: propGroup(parts[4]) };
+    if (parts.length >= 3 && parts[1].toLowerCase() === 'disable') return { style: 'disable', type: parts.length >= 3 && /^Background/.test(parts[2]) ? parts[2].split(' ')[1] : 'filled', state: 'disable', group: propGroup(parts[2]) };
+    return null;
+  }
   var tree = {};
   keys.forEach(function (k) {
     var parts = k.split('/'), node = tree;
-    for (var i = 0; i < parts.length; i++) {
-      var seg = parts[i];
-      if (i === parts.length - 1) { node[seg] = { __v: FIGMA[k], __a: (FIGMA_ALIAS[k] || '') }; }
-      else { node[seg] = node[seg] || {}; node = node[seg]; }
-    }
+    for (var i = 0; i < parts.length; i++) { var seg = parts[i]; if (i === parts.length - 1) { node[seg] = { __v: FIGMA[k], __a: (FIGMA_ALIAS[k] || ''), __parts: parts }; } else { node[seg] = node[seg] || {}; node = node[seg]; } }
   });
-  var html = '<table class="token-table figma-table"><thead><tr><th>Переменная</th><th>Значение</th><th>Алиас</th></tr></thead><tbody>';
-  (function render(node, depth) {
+  var flat = [];
+  (function render(node, depth, prefix) {
     Object.keys(node).forEach(function (seg) {
+      var path = prefix ? prefix + '/' + seg : seg;
       var child = node[seg];
       if (child.__v !== undefined) {
-        html += '<tr><td class="figma-path" style="padding-left:' + (depth * 14 + 24) + 'px">' + seg + '</td><td class="tok-val">' + child.__v + '</td><td class="tok-alias">' + child.__a + '</td></tr>';
+        var r = parseVar(child.__parts);
+        var ex = '';
+        if (r && r.group) { try { ex = stateButton(r.style, r.type, r.state, r.group); } catch (err) { ex = ''; } }
+        flat.push({ type:'var', seg:seg, depth:depth, path:path, val:child.__v, alias:child.__a, ex:ex });
       } else {
-        html += '<tr class="group-row"><td class="figma-path" style="padding-left:' + (depth * 14 + 8) + 'px" colspan="3">' + seg + '</td></tr>';
-        render(child, depth + 1);
+        var folder = { type:'folder', seg:seg, depth:depth, path:path, index:flat.length, count:0 };
+        flat.push(folder);
+        render(child, depth + 1, path);
+        folder.count = flat.length - folder.index - 1;
       }
     });
-  })(tree, 0);
+  })(tree, 0, '');
+  var html = '<table class="token-table figma-table"><thead><tr><th>Переменная</th><th>Значение</th><th>Алиас</th><th>Пример</th></tr></thead><tbody>';
+  flat.forEach(function (r) {
+    if (r.type === 'folder') {
+      html += '<tr class="group-row figma-group" data-count="' + r.count + '"><td style="padding-left:' + (r.depth * 14 + 8) + 'px" colspan="4"><span class="fold-tri"></span>' + r.seg + '</td></tr>';
+    } else {
+      html += '<tr class="figma-var"><td class="figma-path" style="padding-left:' + (r.depth * 14 + 24) + 'px">' + r.seg + '</td><td class="tok-val">' + r.val + '</td><td class="tok-alias">' + r.alias + '</td><td class="tok-example">' + r.ex + '</td></tr>';
+    }
+  });
   html += '</tbody></table>';
   host.innerHTML = html;
+  host.querySelectorAll('.figma-group .fold-tri').forEach(function (tri) {
+    tri.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var tr = tri.closest('tr');
+      var tbody = tr.parentElement;
+      var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+      var idx = rows.indexOf(tr);
+      var count = +tr.getAttribute('data-count');
+      var collapse = !tr.classList.contains('collapsed');
+      for (var j = idx + 1; j <= idx + count; j++) {
+        if (!rows[j]) break;
+        rows[j].style.display = collapse ? 'none' : '';
+        if (collapse) rows[j].classList.add('collapsed');
+      }
+      tr.classList.toggle('collapsed', collapse);
+    });
+  });
 }
 buildFigmaTable();
 
 </script>
 
-<script src="sidebar.js?v=108"></script>
+<script src="sidebar.js?v=109"></script>
 </body>
 </html>
