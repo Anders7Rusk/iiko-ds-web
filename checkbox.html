@@ -628,6 +628,7 @@ function renderStage() {
   var cbright = document.getElementById('ctl-cbright').checked;
   var showlabel = document.getElementById('ctl-label').checked;
   var showSupport = document.getElementById('ctl-support').checked;
+  var supportText = 'Support/Error text';
 
   var colors = CB.colors[variant][type].Default;
   var cls = cbClass(variant);
@@ -639,27 +640,30 @@ function renderStage() {
   var left = cbleft  ? '<span class="ds-checkbox__box material-icons" aria-hidden="true"></span>' : '';
   var right = cbright ? '<span class="ds-checkbox__box material-icons" aria-hidden="true"></span>' : '';
   var label = showlabel ? '<span class="ds-checkbox__label">' + text.replace(/</g, '&lt;') + '</span>' : '';
-  var sup = showSupport ? '<span class="ds-checkbox__support">Support text</span>' : '';
+  var sup = showSupport ? '<span class="ds-checkbox__support">' + (supportText || 'Support text') + '</span>' : '';
 
-  var html = '<label class="' + cls + '">\n' +
+  // обёртка flex-колонкой: Form (20) + gap 4 + Support (16) = 40, как в Figma
+  var html = '<div class="ds-checkbox-wrap">\n' +
+             '<label class="' + cls + '">\n' +
              '  <input type="checkbox" class="ds-checkbox__input"' + (checked ? ' checked' : '') +
              (indeterminate ? ' id="stage-cb-indet"' : '') + disabled + '>\n' +
              (left ? left + '\n' : '') +
              (label ? label + '\n' : '') +
              (right ? right + '\n' : '') +
-             '</label>' + (sup ? '\n' + sup : '');
+             '</label>' + (sup ? '\n' + sup : '') + '\n</div>';
   document.getElementById('stage-cb-wrap').innerHTML = html;
   document.getElementById('stage').classList.toggle('is-dark', dark);
   if (indeterminate) document.getElementById('stage-cb-indet').indeterminate = true;
 
   // код (HTML-вкладка) — компонент Checkbox label
-  var code = '<label class="' + cls + '">\n' +
+  var code = '<div class="ds-checkbox-wrap">\n' +
+             '<label class="' + cls + '">\n' +
              '  <input type="checkbox" class="ds-checkbox__input"' + (checked ? ' checked' : '') +
              (indeterminate ? ' id="cb"' : '') + disabled + '>\n' +
              (left ? left + '\n' : '') +
              (label ? label + '\n' : '') +
              (right ? right + '\n' : '') +
-             '</label>' + (sup ? '\n' + sup : '');
+             '</label>' + (sup ? '\n' + sup : '') + '\n</div>';
   if (indeterminate) code += '\n<script>document.getElementById("cb").indeterminate = true;</scr' + 'ipt>';
   document.getElementById('cc-html').innerHTML = renderHtml(code.split('\n'));
   lastHtmlLines = code.split('\n');
