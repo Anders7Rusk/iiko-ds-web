@@ -1680,12 +1680,12 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .token-table .tok-example { display: flex; align-items: center; justify-content: center; width: 100%; }
 
 /* ── Вкладка «Figma» — иерархия переменных ─────────────── */
-.figma-table { table-layout: fixed; width: 100%; }
-.figma-table th:first-child { width: 26%; }
-.figma-table th:nth-child(2) { width: 30%; }
-.figma-table th:nth-child(3) { width: 20%; }
-.figma-table th:last-child { width: 24%; }
-.figma-table .figma-group td { cursor: default; padding: 6px 4px; }
+.figma-table { border-collapse: collapse; width: auto; }
+.figma-table th, .figma-table td { padding: 6px 8px; }
+.figma-table th { font-size: 13px; }
+.figma-table .figma-path, .figma-table .tok-val { white-space: nowrap; }
+.figma-table .tok-alias { white-space: normal; overflow-wrap: break-word; }
+.figma-table .figma-group td { cursor: default; }
 .figma-table .fold-tri {
   display: inline-block; width: 0; height: 0;
   border-left: 4px solid transparent; border-right: 4px solid transparent;
@@ -1695,8 +1695,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 }
 .figma-table .figma-group.collapsed .fold-tri { transform: rotate(-90deg); }
 .figma-table .tok-example { display: flex; align-items: center; justify-content: center; }
-.figma-var td { padding: 6px 4px; }
-.figma-table .figma-path { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.figma-table .figma-path { overflow: hidden; text-overflow: ellipsis; max-width: 260px; }
 
 /* ── Вторичные табы (стили → типы в «Токенах») ───────────── */
 
