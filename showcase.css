@@ -1732,7 +1732,8 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 /* Капсула табов стилей в «Токенах» (как верхние табы, но по контенту) */
 
 .comp-tabs--pills { margin: 32px 0 24px; justify-content: flex-start; align-items: center; }
-.comp-tabs--pills .comp-tab { flex: 0 0 auto; height: auto; }
+.comp-tabs--pills .comp-tab { flex: 1 1 0%; gap: 8px; justify-content: center; height: auto; }
+.comp-tabs--pills .cap-swatch { width: 16px; height: 16px; border-radius: 2px; flex-shrink: 0; }
 
 /* Табы типов (Filled/Outlined/Text) — подчёркнутые 16px, как в оригинале */
 
