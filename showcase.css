@@ -1689,7 +1689,8 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .figma-table th:nth-child(3) { width: 18%; }
 .figma-table th:last-child { width: 26%; }
 .figma-table .figma-path, .figma-table .tok-val { white-space: nowrap; }
-.figma-table .tok-alias { white-space: normal; overflow-wrap: break-word; }
+.figma-table .tok-alias { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.figma-table .tok-val { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .figma-table .figma-group td { cursor: default; }
 .figma-table .fold-tri {
   display: inline-block; width: 0; height: 0;
