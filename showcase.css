@@ -1627,6 +1627,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   color: var(--muted-fg);
   padding: 0 8px;
   white-space: nowrap;
+  height: 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .token-table th:first-child { padding-left: 32px; }
@@ -1637,11 +1638,19 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   font-size: 14px;
   color: #3f3f46;
 }
-.token-table td:first-child { padding-left: 32px; }
-.token-table td:last-child { padding: 8px 16px; }
+/* колонки таблицы «Варианты» — как в оригинале (30/40/20/10%) */
+#type-table .token-table { table-layout: fixed; }
+#type-table .token-table th:first-child { width: 30%; }
+#type-table .token-table th:nth-child(2) { width: 40%; }
+#type-table .token-table th:nth-child(3) { width: 20%; }
+#type-table .token-table th:last-child { width: 10%; }
+#type-table .token-table td:first-child { padding: 12px 8px 12px 32px; }
+#type-table .token-table td:nth-child(2) { overflow-wrap: break-word; word-break: break-all; }
+#type-table .token-table td:last-child { padding: 8px 16px; }
 .token-table tr.group-row { background: #f9fafb; }
-.token-table tr.group-row td {
-  padding: 10px 16px 10px 32px;
+#type-table .token-table tr.group-row td {
+  width: 100%;
+  padding: 10px 16px 10px 24px;
   font-weight: 700;
   font-size: 14px;
   color: var(--text);
@@ -1659,7 +1668,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   color: #3f3f46;
   font-weight: 400;
 }
-.token-table .tok-example { display: flex; align-items: center; justify-content: center; }
+.token-table .tok-example { display: flex; align-items: center; justify-content: center; width: 100%; }
 
 /* ── Вторичные табы (стили → типы в «Токенах») ───────────── */
 
