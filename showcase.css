@@ -1738,10 +1738,13 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .comp-tabs--pills .comp-tab { flex: 1 1 0%; gap: 8px; justify-content: center; height: auto; }
 .comp-tabs--pills .cap-swatch { width: 16px; height: 16px; border-radius: 2px; flex-shrink: 0; }
 
-/* Табы типов (Filled/Outlined/Text) — подчёркнутые 16px, как в оригинале */
+/* Табы типов (Filled/Outlined/Text) — равной ширины по карточке, как в оригинале */
 
-.type-tabs { display: flex; gap: 24px; flex-wrap: wrap; }
+.type-tabs { display: flex; width: 100%; }
 .type-tab {
+  flex: 1 1 0%;
+  justify-content: center;
+  text-align: center;
   background: none;
   border: none;
   border-bottom: 2px solid transparent;
