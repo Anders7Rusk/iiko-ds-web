@@ -65,6 +65,14 @@
 .ds-checkbox__input:checked ~ .ds-checkbox__box::before { content: 'check_box'; }
 .ds-checkbox__input:indeterminate ~ .ds-checkbox__box::before { content: 'indeterminate_check_box'; }
 
+/* Checkbox label — обёртка (Form + Support) как авто-лейаут Figma: 20 + 4 + 16 = 40 */
+.ds-checkbox-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ds-checkbox-wrap .ds-checkbox { align-self: flex-start; }
+
 /* ── Radio: выбран / не выбран ───────────────────────────── */
 
 .ds-radio__box { color: var(--ds-color-radio-button-normal-deselected-icon-color); }  /* #616161 */
@@ -129,9 +137,9 @@
 }
 .ds-checkbox__support { color: var(--ds-color-checkbox-label-text-support-color); }  /* #616161 */
 .ds-radio__support { color: var(--ds-color-radio-button-label-text-support-color); } /* #616161 */
-.ds-checkbox--error .ds-checkbox__support,
+.ds-checkbox--error ~ .ds-checkbox__support,
 .ds-radio--error .ds-radio__support {
-  color: var(--ds-color-text-negative);           /* #FF5252 — Text support error color */
+  color: var(--ds-color-text-negative);           /* #FF5252 */
 }
 
 /* ── Подложка состояния (State 28×28) — hover/press в Figma ──
