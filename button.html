@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=104">
-<link rel="stylesheet" href="components/button.css?v=104">
-<link rel="stylesheet" href="components/badge.css?v=104">
-<link rel="stylesheet" href="showcase.css?v=104">
+<link rel="stylesheet" href="tokens.css?v=105">
+<link rel="stylesheet" href="components/button.css?v=105">
+<link rel="stylesheet" href="components/badge.css?v=105">
+<link rel="stylesheet" href="showcase.css?v=105">
 </head>
 <body>
 
@@ -1478,7 +1478,7 @@ function stateButton(style, type, state, group) {
   var c = stateColors(style, type, state); // ТОЛЬКО реальные значения этого состояния, без подстановок
   var icon = '<span style="display:inline-flex;align-items:center;justify-content:center;color:' + c.icon + '">' + ICON_PLUS + '</span>';
   var border = type === 'outlined' ? ('border:1px solid ' + c.border + ';') : 'border:1px solid transparent;';
-  var shadow = state === 'disable' ? '' : 'box-shadow:0 0 4px rgba(33,33,33,0.12),0 2px 2px rgba(33,33,33,0.04);';
+  var shadow = (state !== 'disable' && type === 'filled') ? 'box-shadow:0 0 4px rgba(33,33,33,0.12),0 2px 2px rgba(33,33,33,0.04);' : '';
   return '<button type="button" tabindex="-1"' + (state==='disable' ? ' disabled' : '') +
          ' style="display:inline-flex;align-items:center;justify-content:center;height:36px;padding:8px 12px;gap:8px;border-radius:8px;font-size:14px;font-weight:500;color:' + c.text + ';background:' + c.bg + ';' + border +
          shadow + 'font-family:inherit;cursor:default;pointer-events:none">' +
@@ -1538,6 +1538,7 @@ function buildTokenTable(style, type) {
 
   GROUPS.forEach(function (g) {
     if (g.key === 'border' && type !== 'outlined') return; // у Filled/Text нет обводки — Border-группа только для Outlined
+    if (g.key === 'shadow' && type !== 'filled') return; // тень только у Filled — Shadow-группа только для Filled
     var groupRows = '';
     TOKEN_STATES.forEach(function (st) {
       var name = figmaVarName(style, type, g.key, st.key);
@@ -1806,6 +1807,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=104"></script>
+<script src="sidebar.js?v=105"></script>
 </body>
 </html>
