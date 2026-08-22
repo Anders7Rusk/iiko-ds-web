@@ -1641,7 +1641,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .token-table td:last-child { padding: 8px 16px; }
 .token-table tr.group-row { background: #f9fafb; }
 .token-table tr.group-row td {
-  padding: 10px 16px 10px 24px;
+  padding: 10px 16px 10px 32px;
   font-weight: 700;
   font-size: 14px;
   color: var(--text);
@@ -1738,13 +1738,17 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
 .comp-tabs--pills .comp-tab { flex: 1 1 0%; gap: 8px; justify-content: center; height: auto; }
 .comp-tabs--pills .cap-swatch { width: 16px; height: 16px; border-radius: 2px; flex-shrink: 0; }
 
-/* Табы типов (Filled/Outlined/Text) — равной ширины по карточке, как в оригинале */
+/* Табы типов (Filled/Outlined/Text) — бар с отступами px-6 + разделитель border-b, вкладки прижаты влево, как в оригинале */
 
-.type-tabs { display: flex; width: 100%; }
+.type-tabs {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-start;
+  padding: 0 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
 .type-tab {
-  flex: 1 1 0%;
-  justify-content: center;
-  text-align: center;
+  flex: 0 0 auto;
   background: none;
   border: none;
   border-bottom: 2px solid transparent;
@@ -1755,6 +1759,7 @@ section > .desc { color: var(--muted-fg); margin: 0 0 20px; font-size: 14px; lin
   color: var(--muted-fg);
   cursor: pointer;
   white-space: nowrap;
+  text-transform: capitalize;
 }
 .type-tab:hover { color: var(--text); }
 .type-tab.is-active { border-bottom-color: var(--accent); color: var(--text); }
