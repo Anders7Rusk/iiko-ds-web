@@ -40,9 +40,12 @@
   html += '</div>';
   html += '<div class="sidebar__group">';
   html +=   '<div class="sidebar__group-name"><span class="material-icons" aria-hidden="true">menu</span> Каталог</div>';
-  html +=   '<a class="sidebar__item' + (current === 'index.html' ? ' is-active' : '') + '" href="index.html">';
+  html += '<a class="sidebar__item' + (current === 'index.html' ? ' is-active' : '') + '" href="index.html">';
   html +=     '<span class="sidebar__dot" style="background:#448aff"></span> Все компоненты';
-  html +=   '</a>';
+  html += '</a>';
+  html += '<a class="sidebar__item' + (current === 'component-template.html' ? ' is-active' : '') + '" href="component-template.html">';
+  html +=     '<span class="sidebar__dot" style="background:#448aff"></span> Мастер страница';
+  html += '</a>';
   html += '</div>';
   html += '<div class="sidebar__group">';
   html +=   '<div class="sidebar__group-name"><span class="material-icons" aria-hidden="true">menu</span> 🔵 Готово 🧾</div>';
