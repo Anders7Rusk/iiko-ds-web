@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=103">
-<link rel="stylesheet" href="components/button.css?v=103">
-<link rel="stylesheet" href="components/badge.css?v=103">
-<link rel="stylesheet" href="showcase.css?v=103">
+<link rel="stylesheet" href="tokens.css?v=104">
+<link rel="stylesheet" href="components/button.css?v=104">
+<link rel="stylesheet" href="components/badge.css?v=104">
+<link rel="stylesheet" href="showcase.css?v=104">
 </head>
 <body>
 
@@ -1221,6 +1221,223 @@ var FIGMA = {
 };
 
 // Имя реальной переменной Figma: Button/[Стиль]/[Тип]/[Состояние]/[Свойство]
+var FIGMA_ALIAS = {
+  'Button/Accent/Default': 'Accent/500',
+  'Button/Accent/Hover': 'Accent/600',
+  'Button/Accent/Lite default': 'Neutral/0',
+  'Button/Accent/Lite default transparent': 'Neutral/Transparent',
+  'Button/Accent/Lite hover': 'Accent/10',
+  'Button/Accent/Lite press': 'Accent/100',
+  'Button/Accent/Press': 'Accent/700',
+  'Button/Negative/Default': 'Negative/500',
+  'Button/Negative/Hover': 'Negative/600',
+  'Button/Negative/Lite default': 'Neutral/0',
+  'Button/Negative/Lite default transparent': 'Neutral/Transparent',
+  'Button/Negative/Lite hover': 'Negative/10',
+  'Button/Negative/Lite press': 'Negative/100',
+  'Button/Negative/Press': 'Negative/700',
+  'Button/Neutral/Default': 'Neutral/0',
+  'Button/Neutral/Default transparent': 'Neutral/Transparent',
+  'Button/Neutral/Disable': 'Neutral/100',
+  'Button/Neutral/Hover': 'Neutral/10',
+  'Button/Neutral/Press': 'Neutral/100',
+  'Button/Positive/Default': 'Positive/500',
+  'Button/Positive/Hover': 'Positive/600',
+  'Button/Positive/Lite default': 'Neutral/0',
+  'Button/Positive/Lite default transparent': 'Neutral/Transparent',
+  'Button/Positive/Lite hover': 'Positive/10',
+  'Button/Positive/Lite press': 'Positive/100',
+  'Button/Positive/Press': 'Positive/700',
+  'Button/Warning/Default': 'Warning/500',
+  'Button/Warning/Hover': 'Warning/600',
+  'Button/Warning/Lite default': 'Neutral/0',
+  'Button/Warning/Lite default transparent': 'Neutral/Transparent',
+  'Button/Warning/Lite hover': 'Warning/10',
+  'Button/Warning/Lite press': 'Warning/100',
+  'Button/Warning/Press': 'Warning/700',
+  'Button/Accent/Filled/Default/Background': 'Button/Accent/Default',
+  'Button/Accent/Filled/Default/Icon color': 'Icon/Inversive',
+  'Button/Accent/Filled/Default/Text color': 'Text/Inversive',
+  'Button/Accent/Filled/Hover/Background': 'Button/Accent/Hover',
+  'Button/Accent/Filled/Hover/Icon color': 'Icon/Inversive',
+  'Button/Accent/Filled/Hover/Text color': 'Text/Inversive',
+  'Button/Accent/Filled/Press/Background': 'Button/Accent/Press',
+  'Button/Accent/Filled/Press/Icon color': 'Icon/Inversive',
+  'Button/Accent/Filled/Press/Text color': 'Text/Inversive',
+  'Button/Accent/Outlined/Default/Background': 'Button/Accent/Lite default transparent',
+  'Button/Accent/Outlined/Default/Border color': 'Stroke/Accent',
+  'Button/Accent/Outlined/Default/Icon color': 'Icon/Accent',
+  'Button/Accent/Outlined/Default/Text color': 'Text/Accent',
+  'Button/Accent/Outlined/Hover/Background': 'Button/Accent/Lite hover',
+  'Button/Accent/Outlined/Hover/Border color': 'Stroke/Accent',
+  'Button/Accent/Outlined/Hover/Icon color': 'Icon/Accent',
+  'Button/Accent/Outlined/Hover/Text color': 'Text/Accent',
+  'Button/Accent/Outlined/Press/Background': 'Button/Accent/Lite press',
+  'Button/Accent/Outlined/Press/Border color': 'Stroke/Accent',
+  'Button/Accent/Outlined/Press/Icon color': 'Icon/Accent',
+  'Button/Accent/Outlined/Press/Text color': 'Text/Accent',
+  'Button/Accent/Text/Default/Background': 'Button/Accent/Lite default transparent',
+  'Button/Accent/Text/Default/Icon color': 'Icon/Accent',
+  'Button/Accent/Text/Default/Text color': 'Text/Accent',
+  'Button/Accent/Text/Hover/Background': 'Button/Accent/Lite hover',
+  'Button/Accent/Text/Hover/Icon color': 'Icon/Accent',
+  'Button/Accent/Text/Hover/Text color': 'Text/Accent',
+  'Button/Accent/Text/Press/Background': 'Button/Accent/Lite press',
+  'Button/Accent/Text/Press/Icon color': 'Icon/Accent',
+  'Button/Accent/Text/Press/Text color': 'Text/Accent',
+  'Button/Disable/Background filled': 'Button/Neutral/Disable',
+  'Button/Disable/Background outlined': 'Button/Neutral/Default transparent',
+  'Button/Disable/Background text': 'Button/Neutral/Default transparent',
+  'Button/Disable/Border color': 'Stroke/Disable',
+  'Button/Disable/Icon color': 'Icon/Disable',
+  'Button/Disable/Text color': 'Text/Disable',
+  'Button/Negative/Filled/Default/Background': 'Button/Negative/Default',
+  'Button/Negative/Filled/Default/Icon color': 'Icon/Inversive',
+  'Button/Negative/Filled/Default/Text color': 'Text/Inversive',
+  'Button/Negative/Filled/Hover/Background': 'Button/Negative/Hover',
+  'Button/Negative/Filled/Hover/Icon color': 'Icon/Inversive',
+  'Button/Negative/Filled/Hover/Text color': 'Text/Inversive',
+  'Button/Negative/Filled/Press/Background': 'Button/Negative/Press',
+  'Button/Negative/Filled/Press/Icon color': 'Icon/Inversive',
+  'Button/Negative/Filled/Press/Text color': 'Text/Inversive',
+  'Button/Negative/Outlined/Default/Background': 'Button/Negative/Lite default transparent',
+  'Button/Negative/Outlined/Default/Border color': 'Stroke/Negative',
+  'Button/Negative/Outlined/Default/Icon color': 'Icon/Negative',
+  'Button/Negative/Outlined/Default/Text color': 'Text/Negative',
+  'Button/Negative/Outlined/Hover/Background': 'Button/Negative/Lite hover',
+  'Button/Negative/Outlined/Hover/Border color': 'Stroke/Negative',
+  'Button/Negative/Outlined/Hover/Icon color': 'Icon/Negative',
+  'Button/Negative/Outlined/Hover/Text color': 'Text/Negative',
+  'Button/Negative/Outlined/Press/Background': 'Button/Negative/Lite press',
+  'Button/Negative/Outlined/Press/Border color': 'Stroke/Negative',
+  'Button/Negative/Outlined/Press/Icon color': 'Icon/Negative',
+  'Button/Negative/Outlined/Press/Text color': 'Text/Negative',
+  'Button/Negative/Text/Default/Background': 'Button/Negative/Lite default transparent',
+  'Button/Negative/Text/Default/Icon color': 'Icon/Negative',
+  'Button/Negative/Text/Default/Text color': 'Text/Negative',
+  'Button/Negative/Text/Hover/Background': 'Button/Negative/Lite hover',
+  'Button/Negative/Text/Hover/Icon color': 'Icon/Negative',
+  'Button/Negative/Text/Hover/Text color': 'Text/Negative',
+  'Button/Negative/Text/Press/Background': 'Button/Negative/Lite press',
+  'Button/Negative/Text/Press/Icon color': 'Icon/Negative',
+  'Button/Negative/Text/Press/Text color': 'Text/Negative',
+  'Button/Neutral/Filled/Default/Background': 'Button/Neutral/Default',
+  'Button/Neutral/Filled/Default/Icon color': 'Icon/Primary',
+  'Button/Neutral/Filled/Default/Text color': 'Text/Primary',
+  'Button/Neutral/Filled/Hover/Background': 'Button/Neutral/Hover',
+  'Button/Neutral/Filled/Hover/Icon color': 'Icon/Primary',
+  'Button/Neutral/Filled/Hover/Text color': 'Text/Primary',
+  'Button/Neutral/Filled/Press/Background': 'Button/Neutral/Press',
+  'Button/Neutral/Filled/Press/Icon color': 'Icon/Primary',
+  'Button/Neutral/Filled/Press/Text color': 'Text/Primary',
+  'Button/Neutral/Outlined/Default/Background': 'Button/Neutral/Default transparent',
+  'Button/Neutral/Outlined/Default/Border color': 'Stroke/Default',
+  'Button/Neutral/Outlined/Default/Icon color': 'Icon/Primary',
+  'Button/Neutral/Outlined/Default/Text color': 'Text/Primary',
+  'Button/Neutral/Outlined/Hover/Background': 'Button/Neutral/Hover',
+  'Button/Neutral/Outlined/Hover/Border color': 'Stroke/Default',
+  'Button/Neutral/Outlined/Hover/Icon color': 'Icon/Primary',
+  'Button/Neutral/Outlined/Hover/Text color': 'Text/Primary',
+  'Button/Neutral/Outlined/Press/Background': 'Button/Neutral/Press',
+  'Button/Neutral/Outlined/Press/Border color': 'Stroke/Default',
+  'Button/Neutral/Outlined/Press/Icon color': 'Icon/Primary',
+  'Button/Neutral/Outlined/Press/Text color': 'Text/Primary',
+  'Button/Neutral/Text/Default/Background': 'Button/Neutral/Default transparent',
+  'Button/Neutral/Text/Default/Icon color': 'Icon/Primary',
+  'Button/Neutral/Text/Default/Text color': 'Text/Primary',
+  'Button/Neutral/Text/Hover/Background': 'Button/Neutral/Hover',
+  'Button/Neutral/Text/Hover/Icon color': 'Icon/Primary',
+  'Button/Neutral/Text/Hover/Text color': 'Text/Primary',
+  'Button/Neutral/Text/Press/Background': 'Button/Neutral/Press',
+  'Button/Neutral/Text/Press/Icon color': 'Icon/Primary',
+  'Button/Neutral/Text/Press/Text color': 'Text/Primary',
+  'Button/Positive/Filled/Default/Background': 'Button/Positive/Default',
+  'Button/Positive/Filled/Default/Icon color': 'Icon/Inversive',
+  'Button/Positive/Filled/Default/Text color': 'Text/Inversive',
+  'Button/Positive/Filled/Hover/Background': 'Button/Positive/Hover',
+  'Button/Positive/Filled/Hover/Icon color': 'Icon/Inversive',
+  'Button/Positive/Filled/Hover/Text color': 'Text/Inversive',
+  'Button/Positive/Filled/Press/Background': 'Button/Positive/Press',
+  'Button/Positive/Filled/Press/Icon color': 'Icon/Inversive',
+  'Button/Positive/Filled/Press/Text color': 'Text/Inversive',
+  'Button/Positive/Outlined/Default/Background': 'Button/Neutral/Default transparent',
+  'Button/Positive/Outlined/Default/Border color': 'Stroke/Positive',
+  'Button/Positive/Outlined/Default/Icon color': 'Icon/Positive',
+  'Button/Positive/Outlined/Default/Text color': 'Text/Positive',
+  'Button/Positive/Outlined/Hover/Background': 'Button/Positive/Lite hover',
+  'Button/Positive/Outlined/Hover/Border color': 'Stroke/Positive',
+  'Button/Positive/Outlined/Hover/Icon color': 'Icon/Positive',
+  'Button/Positive/Outlined/Hover/Text color': 'Text/Positive',
+  'Button/Positive/Outlined/Press/Background': 'Button/Positive/Lite press',
+  'Button/Positive/Outlined/Press/Border color': 'Stroke/Positive',
+  'Button/Positive/Outlined/Press/Icon color': 'Icon/Positive',
+  'Button/Positive/Outlined/Press/Text color': 'Text/Positive',
+  'Button/Positive/Text/Default/Background': 'Button/Positive/Lite default transparent',
+  'Button/Positive/Text/Default/Icon color': 'Icon/Positive',
+  'Button/Positive/Text/Default/Text color': 'Text/Positive',
+  'Button/Positive/Text/Hover/Background': 'Button/Positive/Lite hover',
+  'Button/Positive/Text/Hover/Icon color': 'Icon/Positive',
+  'Button/Positive/Text/Hover/Text color': 'Text/Positive',
+  'Button/Positive/Text/Press/Background': 'Button/Positive/Lite press',
+  'Button/Positive/Text/Press/Icon color': 'Icon/Positive',
+  'Button/Positive/Text/Press/Text color': 'Text/Positive',
+  'Button/Warning/Filled/Default/Background': 'Button/Warning/Default',
+  'Button/Warning/Filled/Default/Icon color': 'Icon/Inversive',
+  'Button/Warning/Filled/Default/Text color': 'Text/Inversive',
+  'Button/Warning/Filled/Hover/Background': 'Button/Warning/Hover',
+  'Button/Warning/Filled/Hover/Icon color': 'Icon/Inversive',
+  'Button/Warning/Filled/Hover/Text color': 'Text/Inversive',
+  'Button/Warning/Filled/Press/Background': 'Button/Warning/Press',
+  'Button/Warning/Filled/Press/Icon color': 'Icon/Inversive',
+  'Button/Warning/Filled/Press/Text color': 'Text/Inversive',
+  'Button/Warning/Outlined/Default/Background': 'Button/Warning/Lite default transparent',
+  'Button/Warning/Outlined/Default/Border color': 'Stroke/Warning',
+  'Button/Warning/Outlined/Default/Icon color': 'Icon/Warning',
+  'Button/Warning/Outlined/Default/Text color': 'Text/Warning',
+  'Button/Warning/Outlined/Hover/Background': 'Button/Warning/Lite hover',
+  'Button/Warning/Outlined/Hover/Border color': 'Stroke/Warning',
+  'Button/Warning/Outlined/Hover/Icon color': 'Icon/Warning',
+  'Button/Warning/Outlined/Hover/Text color': 'Text/Warning',
+  'Button/Warning/Outlined/Press/Background': 'Button/Warning/Lite press',
+  'Button/Warning/Outlined/Press/Border color': 'Stroke/Warning',
+  'Button/Warning/Outlined/Press/Icon color': 'Icon/Warning',
+  'Button/Warning/Outlined/Press/Text color': 'Text/Warning',
+  'Button/Warning/Text/Default/Background': 'Button/Warning/Lite default transparent',
+  'Button/Warning/Text/Default/Icon color': 'Icon/Warning',
+  'Button/Warning/Text/Default/Text color': 'Text/Warning',
+  'Button/Warning/Text/Hover/Background': 'Button/Warning/Lite hover',
+  'Button/Warning/Text/Hover/Icon color': 'Icon/Warning',
+  'Button/Warning/Text/Hover/Text color': 'Text/Warning',
+  'Button/Warning/Text/Press/Background': 'Button/Warning/Lite press',
+  'Button/Warning/Text/Press/Icon color': 'Icon/Warning',
+  'Button/Warning/Text/Press/Text color': 'Text/Warning',
+  'Button/Border size': 'Stroke/0,25x',
+  'Button/Border radius': 'Radius/2x',
+  'Button/M size/Gap': 'Space/2x',
+  'Button/M size/Pad bottom': 'Space/2x',
+  'Button/M size/Pad top': 'Space/2x',
+  'Button/M size/Pad left': 'Space/3x',
+  'Button/M size/Pad right': 'Space/3x',
+  'Button/M size/Text size': 'Body/Font size/S',
+  'Button/M size/Icon size': 'Icon size/Size 5x',
+  'Button/M size/Text weight': 'Font Weight/Medium',
+  'Button/S size/Gap': 'Space/1x',
+  'Button/S size/Pad bottom': 'Space/1x',
+  'Button/S size/Pad top': 'Space/1x',
+  'Button/S size/Pad left': 'Space/2x',
+  'Button/S size/Pad right': 'Space/2x',
+  'Button/S size/Text size': 'Body/Font size/S',
+  'Button/S size/Icon size': 'Icon size/Size 5x',
+  'Button/S size/Text weight': 'Font Weight/Medium',
+  'Button/XS size/Gap': 'Space/1x',
+  'Button/XS size/Pad bottom': 'Space/1x',
+  'Button/XS size/Pad top': 'Space/1x',
+  'Button/XS size/Pad left': 'Space/1,5x',
+  'Button/XS size/Pad right': 'Space/1,5x',
+  'Button/XS size/Text size': 'Caption/Font size/L',
+  'Button/XS size/Icon size': 'Icon size/Size 4x',
+  'Button/XS size/Text weight': 'Font Weight/Medium',
+};
 var FIGMA_CAPS = { accent:'Accent', neutral:'Neutral', positive:'Positive', negative:'Negative', warning:'Warning', disable:'Disable' };
 function figmaCap(s){ return s.charAt(0).toUpperCase() + s.slice(1); }
 function figmaVarName(style, type, group, state) {
@@ -1230,6 +1447,11 @@ function figmaVarName(style, type, group, state) {
     return (group === 'bg') ? ('Button/Disable/Background ' + type) : ('Button/Disable/' + prop);
   }
   return 'Button/' + figmaCap(style) + '/' + figmaCap(type) + '/' + figmaCap(state) + '/' + prop;
+}
+// Алиас токена (ссылка на исходную переменную) — из поля var в DS
+function figmaAlias(style, type, group, state) {
+  if (group === 'shadow') return ''; // у глобальной тени нет алиаса
+  return FIGMA_ALIAS[figmaVarName(style, type, group, state)] || '';
 }
 // Цвета кнопки для состояния (bg/border/text/icon) — из реальных переменных
 function stateColors(style, type, state) {
@@ -1304,8 +1526,8 @@ function buildTokenTables(style, type) {
   buildTokenTable(style, type);
 }
 
-function tokenRow(desc, varname, value, exampleHtml) {
-  return '<tr><td>' + desc + '</td><td class="tok-var">' + varname + '</td><td class="tok-val">' + value + '</td>' +
+function tokenRow(desc, varname, alias, value, exampleHtml) {
+  return '<tr><td>' + desc + '</td><td class="tok-var">' + varname + '</td><td class="tok-alias">' + alias + '</td><td class="tok-val">' + value + '</td>' +
          '<td class="tok-example">' + exampleHtml + '</td></tr>';
 }
 
@@ -1321,13 +1543,13 @@ function buildTokenTable(style, type) {
       var name = figmaVarName(style, type, g.key, st.key);
       if (g.key !== 'shadow' && !FIGMA[name]) return; // токена нет в переменных — строку не показываем (shadow — глобальный токен Shadows/Sl)
       var ex = stateButton(style, type, st.key, g.key);
-      groupRows += tokenRow(st.label, name, tokenValue(style, type, g.key, st.key), ex);
+      groupRows += tokenRow(st.label, name, figmaAlias(style, type, g.key, st.key), tokenValue(style, type, g.key, st.key), ex);
     });
-    if (groupRows) rows += '<tr class="group-row"><td colspan="4">' + g.label + '</td></tr>' + groupRows;
+    if (groupRows) rows += '<tr class="group-row"><td colspan="5">' + g.label + '</td></tr>' + groupRows;
   });
 
   table.innerHTML =
-    '<table class="token-table"><thead><tr><th>Описание</th><th>Токен</th><th>Значение</th><th>Пример</th></tr></thead>' +
+    '<table class="token-table"><thead><tr><th>Описание</th><th>Токен</th><th>Алиасы</th><th>Значение</th><th>Пример</th></tr></thead>' +
     '<tbody>' + rows + '</tbody></table>';
 }
 
@@ -1584,6 +1806,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=103"></script>
+<script src="sidebar.js?v=104"></script>
 </body>
 </html>
