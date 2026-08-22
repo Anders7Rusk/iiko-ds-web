@@ -209,10 +209,31 @@
                   <span class="control-label">Support</span>
                   <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-support"><span class="track"></span><span class="thumb"></span></span></label>
                 </div>
+                <!-- условная группа: раскрывается при Support=ON (как в Figma, скриншот 9) -->
+                <div id="sup-toggles" style="display:none">
+                  <div class="control-row">
+                    <span class="control-label">Support text</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-support-text" checked><span class="track"></span><span class="thumb"></span></span></label>
+                  </div>
+                  <div class="control-row">
+                    <span class="control-label">Hint text</span>
+                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-hint-text" checked><span class="track"></span><span class="thumb"></span></span></label>
+                  </div>
+                </div>
                 <div class="props-divider"></div>
                 <div class="control-row">
                   <label class="control-label" for="ctl-labeltext">Label text</label>
                   <input class="control-input" id="ctl-labeltext" type="text" value="Label">
+                </div>
+                <div id="sup-texts" style="display:none">
+                  <div class="control-row">
+                    <label class="control-label" for="ctl-supporttext">Support text</label>
+                    <input class="control-input" id="ctl-supporttext" type="text" value="Support text">
+                  </div>
+                  <div class="control-row">
+                    <label class="control-label" for="ctl-hinttext">Hint text</label>
+                    <input class="control-input" id="ctl-hinttext" type="text" value="Hint text">
+                  </div>
                 </div>
               </div>
             </div>
@@ -626,18 +647,18 @@ function renderStage() {
   var dark = document.getElementById('ctl-dark').checked;
   var opts = {
     size: size, variant: variant, state: state,
-    // значения — по Figma-панели инстанса: Label/Input text/Support text/Hint text управляются вариантом/дефолтами
+    // значения — по Figma-панели инстанса: Label управляется вариантом, Support раскрывает Support text/Hint text
     showLabel: variant === 'populated',
     iconL: document.getElementById('ctl-icon-left').checked,
     iconR: document.getElementById('ctl-icon-right').checked,
     showValue: true,
     showSupport: document.getElementById('ctl-support').checked,
-    showSupportText: true,
-    showHint: true,
+    showSupportText: document.getElementById('ctl-support-text').checked,
+    showHint: document.getElementById('ctl-hint-text').checked,
     labelText: document.getElementById('ctl-labeltext').value,
     inputText: 'Input text',
-    supportText: 'Support text',
-    hintText: 'Hint text'
+    supportText: document.getElementById('ctl-supporttext').value,
+    hintText: document.getElementById('ctl-hinttext').value
   };
   document.getElementById('stage-input-wrap').innerHTML = inputMarkup(opts);
   document.getElementById('stage').classList.toggle('is-dark', dark);
@@ -675,10 +696,21 @@ function renderStage() {
   updateCodePanels();
 }
 
-['ctl-dark', 'ctl-icon-left', 'ctl-icon-right', 'ctl-support', 'ctl-labeltext'].forEach(function (id) {
+function toggleSupportDetails() {
+  var on = document.getElementById('ctl-support').checked;
+  var tg = document.getElementById('sup-toggles');
+  var tx = document.getElementById('sup-texts');
+  if (tg) tg.style.display = on ? '' : 'none';
+  if (tx) tx.style.display = on ? '' : 'none';
+  renderStage();
+}
+
+['ctl-dark', 'ctl-icon-left', 'ctl-icon-right', 'ctl-support-text', 'ctl-hint-text', 'ctl-labeltext', 'ctl-supporttext', 'ctl-hinttext'].forEach(function (id) {
   var el = document.getElementById(id);
   if (el) el.addEventListener('input', renderStage);
 });
+var supEl = document.getElementById('ctl-support');
+if (supEl) { supEl.addEventListener('change', toggleSupportDetails); supEl.addEventListener('click', toggleSupportDetails); }
 
 /* ============================================================
    Блок HTML | CSS | Tokens под превью
