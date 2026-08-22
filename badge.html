@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="showcase.css?v=2">
 <link rel="stylesheet" href="components/badge.css?v=2">
 </head>
-<body>
+<body class="page-badge">
 
 <!-- ==========================================================================
   РЫБА (каркас) страницы компонента iiko DS.
@@ -182,8 +182,8 @@
                         <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
                       </button>
                       <div class="ds-select__menu" role="listbox">
-                        <div class="ds-select__item" data-value="counter" role="option">Counter<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
                         <div class="ds-select__item is-selected" data-value="point" role="option">Point<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+                        <div class="ds-select__item" data-value="counter" role="option">Counter<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
                       </div>
                     </div>
                   </div>
@@ -672,7 +672,7 @@ document.getElementById('cc-copy').addEventListener('click', function () {
    Матрица вариантов (Style × Type)
    ============================================================ */
 var STYLES = ['accent', 'positive', 'warning', 'negative'];
-var TYPES = ['counter', 'point'];
+var TYPES = ['point', 'counter'];
 var selectedBadge = null;
 
 function matrixBadge(style, type) {
