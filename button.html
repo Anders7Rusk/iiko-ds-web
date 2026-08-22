@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=82">
-<link rel="stylesheet" href="components/button.css?v=82">
-<link rel="stylesheet" href="components/badge.css?v=82">
-<link rel="stylesheet" href="showcase.css?v=82">
+<link rel="stylesheet" href="tokens.css?v=83">
+<link rel="stylesheet" href="components/button.css?v=83">
+<link rel="stylesheet" href="components/badge.css?v=83">
+<link rel="stylesheet" href="showcase.css?v=83">
 </head>
 <body>
 
@@ -1074,13 +1074,13 @@ buildTokenTables(Object.keys(BTN.styles)[0], 'filled'); // стартовая т
 (function buildSizesTable() {
   var rows = '';
   var rowsDef = [
-    { desc: 'Высота', tok: 'button.[size].height', xs: 24, s: 28, m: 36 },
-    { desc: 'Минимальная ширина', tok: 'button.[size].min-width', xs: 24, s: 28, m: 36 },
-    { desc: 'Отступ между лейблом и иконкой', tok: 'button.[size].spacing', xs: 4, s: 4, m: 8 },
-    { desc: 'Padding слева', tok: 'button.[size].padding-left', xs: 6, s: 8, m: 12 },
-    { desc: 'Padding справа', tok: 'button.[size].padding-right', xs: 6, s: 8, m: 12 },
+    { desc: 'Высота', tok: 'button.[size].height', xs: '24px', s: '28px', m: '36px' },
+    { desc: 'Минимальная ширина', tok: 'button.[size].min-width', xs: '24px', s: '28px', m: '36px' },
+    { desc: 'Отступ между лейблом и иконкой', tok: 'button.[size].spacing', xs: '4px', s: '4px', m: '8px' },
+    { desc: 'Padding слева', tok: 'button.[size].padding-left', xs: '6px', s: '8px', m: '12px' },
+    { desc: 'Padding справа', tok: 'button.[size].padding-right', xs: '6px', s: '8px', m: '12px' },
     { desc: 'Скругление углов', tok: 'button.[size].border-radius', xs: 'var(--ds-radius-2x)', s: 'var(--ds-radius-2x)', m: 'var(--ds-radius-2x)' },
-    { desc: 'Толщина обводки', tok: 'button.[size].border-width', xs: 1, s: 1, m: 1 },
+    { desc: 'Толщина обводки', tok: 'button.[size].border-width', xs: '1px', s: '1px', m: '1px' },
     { desc: 'Типографика лейбла', tok: 'button.[size].font', xs: '12px / 500', s: '14px / 500', m: '14px / 500' }
   ];
   rowsDef.forEach(function (r) {
@@ -1322,6 +1322,6 @@ document.querySelectorAll('.copy-btn').forEach(function (btn) {
 });
 </script>
 
-<script src="sidebar.js?v=82"></script>
+<script src="sidebar.js?v=83"></script>
 </body>
 </html>
