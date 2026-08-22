@@ -8,11 +8,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css">
-<link rel="stylesheet" href="showcase.css">
+<link rel="stylesheet" href="tokens.css?v=1">
+<link rel="stylesheet" href="showcase.css?v=1">
 <link rel="stylesheet" href="components/badge.css?v=1">
-<!-- ПРИ ГЕНЕРАЦИИ СТРАНИЦЫ: добавить сюда ссылку на CSS компонента, например:
-     <link rel="stylesheet" href="components/<name>.css"> -->
 </head>
 <body>
 
@@ -587,7 +585,7 @@ function updateCodePanels() {
   }
 
   // Tokens: Layout
-  document.getElementById('po-pad-v').innerHTML = escVar((t.padX ? padYVar + ' ' + padXVar : padYVar) + ';');
+  document.getElementById('po-pad-v').innerHTML = escVar((t.padX ? padYVar + ' ' + padXVar : '0') + ';');
   document.getElementById('po-gap-v').textContent = '—;';
 
   // Tokens: Style
@@ -778,7 +776,7 @@ function updateVarInspector(d) {
     else { lt.style.display = 'none'; }
   }
 
-  document.getElementById('vc-pad-v').innerHTML = escVar((t.padX ? padYVar + ' ' + padXVar : padYVar) + ';');
+  document.getElementById('vc-pad-v').innerHTML = escVar((t.padX ? padYVar + ' ' + padXVar : '0') + ';');
   document.getElementById('vc-gap-v').textContent = '—;';
 
   document.getElementById('vc-r-v').innerHTML = escVar(t.radius + ';');
