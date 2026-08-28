@@ -1,5 +1,17 @@
 # iiko Design System — база компонентов и токенов
 
+## ⚡ Как этим пользоваться
+
+Скопируйте строку ниже и отправьте своему ИИ (Hermes, ChatGPT, Claude, Copilot — любому):
+
+> **Собери прототип по дизайн-системе iiko, используя этот файл: https://anders7rusk.github.io/iiko-ds-web/iiko-ds-spec.md**
+
+Дальше просто опишите экран словами или приложите скриншот/макет. ИИ прочитает этот файл и соберёт прототип на компонентах ДС: возьмёт классы из [карты классов](#карта-классов-css-библиотеки), стили — из раздела [Полные CSS-стили](#полные-css-стили-всех-компонентов), значения — из таблиц токенов. **Скачивать ничего не нужно — всё внутри этого файла.**
+
+Главное правило для ИИ: референс задаёт структуру и тексты, **внешний вид — только из этой ДС** (см. [Общие правила](#общие-правила), пункт 0).
+
+---
+
 Единый источник для сборки прототипов: **токены + компоненты + иконки + правила**.
 Любой человек или ИИ, используя этот файл как инструкцию, собирает прототипы, которые выглядят одинаково — общая база компонентов и токенов.
 
@@ -5279,6 +5291,8 @@
 
 Готовые стили для **всех компонентов** ДС лежат в `components/components.css` (сгенерировано из Figma, все значения — токены). Паттерн: контейнер `.ds-<компонент>` + модификаторы вариантов `--<значение>` + элементы `__label` / `__icon`.
 
+**✓ выверено по узлам Figma вручную** (размеры, шрифты, состояния сняты поштучно): Button, Input, Checkbox, Radio button, Badge, Tabs (Lvl 1/2), Divider, Banners, Card view (+header/content/footer), Expansion panel (+content), Stepper (+Step), Slide toggle. Остальные — сгенерированы автоматически: цвета/размеры/радиусы на токенах верные, структура упрощённая (при первом использовании стоит сверить с макетом).
+
 Подключение:
 
 ```html
@@ -5305,9 +5319,9 @@
 | Checkbox label | `.ds-checkbox-label` |
 | Chips | `.ds-chips` · `--m` `--s` `--filled` `--outlined` `--default` `--disable` `--focus` `--hover` `--press` `--disabled` · :active, :disabled, :focus, :hover |
 | Chips group | `.ds-chips-group` · `--s` |
-| Chips Input | `.ds-chips-input` · `--s` `--disabled` |
-| Chips Input | `.ds-chips-input-2` · `--s` `--disabled` |
-| Chips input cell | `.ds-chips-input-cell` · `--error` `--error-hover` `--focus` `--focus-placeholder` `--focus-value` `--hover` `--disabled` · :focus, :hover |
+| Chips Input | `.ds-chips-input` · `--s` `--disabled` · :disabled, :focus |
+| Chips Input | `.ds-chips-input-2` · `--s` `--disabled` · :disabled, :focus |
+| Chips input cell | `.ds-chips-input-cell` · `--error` `--error-hover` `--hover` `--disabled` · :hover |
 | Chrome Header desktop | `.ds-chrome-header-desktop` |
 | Chrome Header mobile | `.ds-chrome-header-mobile` · `--on` |
 | Content | `.ds-content` |
@@ -5328,10 +5342,10 @@
 | Element menu | `.ds-element-menu` · `--checkbox` `--counter` `--icon-size` `--radio-button` `--slide-toggle` `--text-default` |
 | Element select | `.ds-element-select` · `--checkbox` `--counter` `--icon-size` `--radio-button` `--slide-toggle` `--text-default` |
 | Element sidenav | `.ds-element-sidenav` · `--avatar` |
-| Element step | `.ds-element-step` · `--disabled` |
+| Element step | `.ds-element-step` · `--disabled` · :active, :disabled, :hover |
 | Elementare cell | `.ds-elementare-cell` · `--button` `--button-icon` `--chips` `--icon-group` `--input-number` `--slide-toggle` `--status` `--text-ui` |
 | Elements | `.ds-elements` · `--cell` `--month` `--year` `--default` `--range` `--selected` `--today` `--default` `--disable` `--hover` `--press` `--disabled` · :active, :disabled, :hover |
-| Elements | `.ds-elements-2` · `--default` `--selected` `--default` `--disable` `--hover` `--press` `--range` `--disabled` · :active, :hover |
+| Elements | `.ds-elements-2` · `--default` `--selected` `--default` `--disable` `--hover` `--press` `--range` `--disabled` · :active, :disabled, :hover |
 | Expansion content | `.ds-expansion-content` · `--false` |
 | Expansion group panel | `.ds-expansion-group-panel` · `--expand` |
 | Form field cell | `.ds-form-field-cell` |
@@ -5343,56 +5357,80 @@
 | Icon group | `.ds-icon-group` · `--4x` |
 | Icon size | `.ds-icon-size` · `--20` `--24` `--32` `--36` `--40` |
 | Icon size_Draft | `.ds-icon-size-draft` · `--20` `--24` `--32` `--36` `--40` |
-| Input cell | `.ds-input-cell` · `--error` `--error-hover` `--focus` `--focus-placeholder` `--hover` `--vocus-value` `--disabled` · :focus, :hover |
+| Input cell | `.ds-input-cell` · `--error` `--error-hover` `--hover` `--disabled` · :hover |
 | Input Datepicker | `.ds-input-datepicker` |
-| Input for number | `.ds-input-for-number` · `--compact` `--normal` `--default` `--disable` `--error` `--focus` `--hover` `--disabled` · :disabled, :focus, :hover |
+| Input for number | `.ds-input-for-number` · `--compact` `--normal` `--default` `--disable` `--error` `--focus` `--hover` `--disabled` · :disabled, :hover |
 | Input number | `.ds-input-number` · `--s` `--xs` `--no-label-up` `--disable` `--error` `--error-hover` `--focus` `--focus-placeholder` `--focus-value` `--hover` `--disabled` · :disabled, :focus, :hover |
 | Input number_but icon | `.ds-input-number-but-icon` |
 | Input Timepicker | `.ds-input-timepicker` |
-| List (Сontainer) | `.ds-list-ontainer` |
-| List item | `.ds-list-item` · `--back-selected` `--hover` `--press` `--disabled` · :active, :hover |
+| List (Сontainer) | `.ds-list-container` |
+| List item | `.ds-list-item` · `--back-selected` `--hover` `--press` `--disabled` · :active, :disabled, :hover |
 | Logo iiko | `.ds-logo-iiko` |
 | Logo Syrve | `.ds-logo-syrve` · `--small` |
 | Menu (Container) | `.ds-menu-container` |
-| Menu item | `.ds-menu-item` · `--back-selected` `--hover` `--press` `--disabled` · :active, :hover |
+| Menu item | `.ds-menu-item` · `--back-selected` `--hover` `--press` `--disabled` · :active, :disabled, :hover |
 | Navigation Bar | `.ds-navigation-bar` |
 | Picture | `.ds-picture` |
 | Preview | `.ds-preview` |
 | Radio button label | `.ds-radio-button-label` |
 | Scroll | `.ds-scroll` · `--s` |
 | Scroll tabs | `.ds-scroll-tabs` · `--left` |
-| Search | `.ds-search` · `--s` `--xs` `--disable` `--focus` `--focus-value` `--hover` `--disabled` · :disabled, :focus, :hover |
-| Select (Сontainer) | `.ds-select-ontainer` |
-| Select cell | `.ds-select-cell` · `--error` `--error-hover` `--focus` `--focus-value` `--hover` `--disabled` · :focus, :hover |
+| Search | `.ds-search` · `--s` `--xs` `--disable` `--hover` `--disabled` · :disabled, :focus, :hover |
+| Select (Сontainer) | `.ds-select-container` |
+| Select cell | `.ds-select-cell` · `--error` `--error-hover` `--hover` `--disabled` · :hover |
 | Select form | `.ds-select-form` · `--s` `--xs` `--disabled` |
-| Select item | `.ds-select-item` · `--back-selected` `--disable` `--error` `--hover` `--press` `--selected` `--false` `--disabled` · :active, :hover |
+| Select item | `.ds-select-item` · `--back-selected` `--disable` `--error` `--hover` `--press` `--selected` `--false` `--disabled` · :active, :disabled, :hover |
 | Sidenav control | `.ds-sidenav-control` · `--collapsed` `--hover` `--press` · :active, :hover |
 | Sidenav Footer | `.ds-sidenav-footer` · `--l1` `--collapsed` |
 | Sidenav header | `.ds-sidenav-header` · `--l2` `--collapsed` |
 | Sidenav item | `.ds-sidenav-item` · `--l1` `--l2` `--collapsed` `--active` `--hover` `--selected` · :hover |
 | Sidenav View | `.ds-sidenav-view` · `--l2` `--collapsed` |
-| Slide toggle | `.ds-slide-toggle` · `--off` `--on` `--default` `--disable` `--hover` `--disabled` |
 | Snackbar | `.ds-snackbar` · `--complex` `--light` |
 | State | `.ds-state` |
 | Status | `.ds-status` · `--accent` `--contrast-1` `--contrast-2` `--contrast-3` `--contrast-4` `--negative` `--neutral` `--positive` `--warning` `--filled` `--text` |
 | Status Bar | `.ds-status-bar` |
-| Step | `.ds-step` · `--off` `--on` `--default` `--disable` `--error` `--hover` `--press` `--selected` `--disabled` · :active, :hover |
-| Stepper button | `.ds-stepper-button` · `--icon` |
-| Stepper line | `.ds-stepper-line` · `--on` |
 | Table 2 lvl | `.ds-table-2-lvl` |
 | Table Chips Input | `.ds-table-chips-input` |
-| Table content cell | `.ds-table-content-cell` · `--edit` `--error` `--focus` `--hover` `--disabled` · :focus, :hover |
+| Table content cell | `.ds-table-content-cell` · `--error` `--hover` `--disabled` · :hover |
 | Table content row | `.ds-table-content-row` · `--hover` `--selected` `--zebra` `--disabled` · :hover |
 | Table footer | `.ds-table-footer` |
 | Table header cell | `.ds-table-header-cell` · `--hover` `--disabled` · :hover |
 | Table header row | `.ds-table-header-row` |
-| Text UI | `.ds-text-ui` · `--disabled` |
-| Textarea | `.ds-textarea` · `--disabled` |
+| Text UI | `.ds-text-ui` · `--disabled` · :disabled |
+| Textarea | `.ds-textarea` · `--disabled` · :disabled |
 | Timepicker | `.ds-timepicker` · `--time-line` |
 | Title variant | `.ds-title-variant` |
 | Toggle buttons | `.ds-toggle-buttons` · `--2-buttons` `--3-buttons` `--3-text` `--text` |
 | Tree | `.ds-tree` · `--3` `--off` |
 | Tree item | `.ds-tree-item` · `--end-long` `--middle` `--middle-long` `--start` |
+
+#### Ручные (выверенные по Figma) файлы — их классы
+
+Эти компоненты сняты с узлов Figma поштучно и живут в отдельных файлах (`button, input, selection, selection-icons, badge, navigation, card, expansion, stepper, toggle`). Имена классов КОРОЧЕ имени компонента в Figma — писать в разметке именно их.
+
+| Класс | Модификаторы | Элементы |
+|---|---|---|
+| `.ds-btn` | `--accent` `--disabled` `--filled` `--m` `--negative` `--neutral` `--outlined` `--positive` `--s` `--text` `--warning` `--xs` | `__icon` |
+| `.ds-btn-group` | `--horizontal` `--margins` `--vertical` | — |
+| `.ds-input` | `--disabled` `--error` `--m` `--s` `--xs` | `__content` `__field` `__frame` `__hint` `__icon` `__label` `__stepper` `__support` `__support-row` |
+| `.ds-checkbox` | `--disabled` `--error` | `__box` `__input` `__label` `__support` |
+| `.ds-radio` | `--disabled` `--error` | `__box` `__input` `__label` `__state` `__support` |
+| `.ds-checkbox-wrap` | — | — |
+| `.ds-checkbox-group` | `--horizontal` `--vertical` | — |
+| `.ds-radio-group` | `--horizontal` `--vertical` | — |
+| `.ds-badge` | `--accent` `--counter` `--negative` `--point` `--positive` `--warning` | — |
+| `.ds-tabs` | `--lvl2` | — |
+| `.ds-tab` | `--active` `--disabled` | `__counter` `__icon` |
+| `.ds-divider` | `--dashed` `--disable` `--l` `--lite` `--m` `--selected` | — |
+| `.ds-divider-line` | `--dashed` `--disable` `--lite` `--selected` | — |
+| `.ds-banner` | `--accent` `--horizontal` `--negative` `--neutral` `--positive` `--vertical` `--warning` | `__buttons` `__icon` `__row` `__text` |
+| `.ds-field-label` | — | — |
+| `.ds-card` | `--filled` `--outlined` `--shadow` | `__content` `__footer` `__footer--right` `__header` `__label-down` `__label-up` `__title` |
+| `.ds-expansion` | `--disabled` `--info` `--open` | `__actions` `__arrow` `__content` `__content--no-padding` `__header` `__icon` `__title` |
+| `.ds-stepper` | — | `__divider` |
+| `.ds-step` | `--bg` `--disabled` `--error` `--selected` | `__icon` `__num` |
+| `.ds-stepper-button` | — | `__counter` `__group` |
+| `.ds-slide-toggle` | `--disabled` `--error` | `__icon` `__input` `__row` `__support` `__title` `__track` |
 
 
 ### Реализованные компоненты (готовая разметка)
@@ -7996,6 +8034,61 @@ CSS-правила компонента:
 }
 
 /* ============================================================
+   iiko DS — иконки Checkbox / Radio (SVG из файла иконок ДС)
+   Сгенерировано scripts/gen_selection_icons.py
+   Цвета — компонентные токены; шрифт Material Icons не нужен
+   ============================================================ */
+
+.ds-checkbox__box::before, .ds-radio__box::before { content: none !important; }
+.ds-checkbox__box, .ds-radio__box { background-repeat: no-repeat; background-position: center; background-size: 20px 20px; }
+
+.ds-checkbox__box {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23616161%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-normal-deselected-icon-color */
+}
+.ds-checkbox__input:checked ~ .ds-checkbox__box {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10.6%2016.2L17.65%209.15L16.25%207.75L10.6%2013.4L7.75%2010.55L6.35%2011.95L10.6%2016.2ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23448aff%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-normal-selected-icon-color */
+}
+.ds-checkbox__input:indeterminate ~ .ds-checkbox__box {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2013H17V11H7V13ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23448aff%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-normal-inderterminate-icon-color */
+}
+.ds-checkbox--error .ds-checkbox__box {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23ff5252%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-error-icon-color */
+}
+.ds-checkbox--error .ds-checkbox__input:checked ~ .ds-checkbox__box {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10.6%2016.2L17.65%209.15L16.25%207.75L10.6%2013.4L7.75%2010.55L6.35%2011.95L10.6%2016.2ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23ff5252%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-error-icon-color */
+}
+.ds-checkbox--error .ds-checkbox__input:indeterminate ~ .ds-checkbox__box {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2013H17V11H7V13ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23ff5252%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-error-icon-color */
+}
+.ds-checkbox--disabled .ds-checkbox__box {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%239e9e9e%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-disable-deselected-icon-color */
+}
+.ds-checkbox--disabled .ds-checkbox__input:checked ~ .ds-checkbox__box {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10.6%2016.2L17.65%209.15L16.25%207.75L10.6%2013.4L7.75%2010.55L6.35%2011.95L10.6%2016.2ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%239e9e9e%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-disable-selected-icon-color */
+}
+.ds-checkbox--disabled .ds-checkbox__input:indeterminate ~ .ds-checkbox__box {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2013H17V11H7V13ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%239e9e9e%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-disable-inderterminate-icon-color */
+}
+.ds-radio__box {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%23616161%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-radio-button-normal-deselected-icon-color */
+}
+.ds-radio__input:checked + .ds-radio__box {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2017C13.3833%2017%2014.5625%2016.5125%2015.5375%2015.5375C16.5125%2014.5625%2017%2013.3833%2017%2012C17%2010.6167%2016.5125%209.4375%2015.5375%208.4625C14.5625%207.4875%2013.3833%207%2012%207C10.6167%207%209.4375%207.4875%208.4625%208.4625C7.4875%209.4375%207%2010.6167%207%2012C7%2013.3833%207.4875%2014.5625%208.4625%2015.5375C9.4375%2016.5125%2010.6167%2017%2012%2017ZM12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%23448aff%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-radio-button-normal-selected-icon-color */
+}
+.ds-radio--error .ds-radio__box {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%23ff5252%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-radio-button-error-icon-color */
+}
+.ds-radio--error .ds-radio__input:checked + .ds-radio__box {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2017C13.3833%2017%2014.5625%2016.5125%2015.5375%2015.5375C16.5125%2014.5625%2017%2013.3833%2017%2012C17%2010.6167%2016.5125%209.4375%2015.5375%208.4625C14.5625%207.4875%2013.3833%207%2012%207C10.6167%207%209.4375%207.4875%208.4625%208.4625C7.4875%209.4375%207%2010.6167%207%2012C7%2013.3833%207.4875%2014.5625%208.4625%2015.5375C9.4375%2016.5125%2010.6167%2017%2012%2017ZM12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%23ff5252%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-radio-button-error-icon-color */
+}
+.ds-radio--disabled .ds-radio__box {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%239e9e9e%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-radio-button-disable-deselected-icon-color */
+}
+.ds-radio--disabled .ds-radio__input:checked + .ds-radio__box {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2017C13.3833%2017%2014.5625%2016.5125%2015.5375%2015.5375C16.5125%2014.5625%2017%2013.3833%2017%2012C17%2010.6167%2016.5125%209.4375%2015.5375%208.4625C14.5625%207.4875%2013.3833%207%2012%207C10.6167%207%209.4375%207.4875%208.4625%208.4625C7.4875%209.4375%207%2010.6167%207%2012C7%2013.3833%207.4875%2014.5625%208.4625%2015.5375C9.4375%2016.5125%2010.6167%2017%2012%2017ZM12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%239e9e9e%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-radio-button-disable-selected-icon-color */
+}
+
+/* ============================================================
    iiko DS — Badge (счётчик / точка)
    Источник: Figma, страница «🔵Готово 🧾 → Badge»
    Варианты: Style Accent/Positive/Warning/Negative
@@ -8135,6 +8228,33 @@ CSS-правила компонента:
 
 /* ── Divider ──────────────────────────────────────────────── */
 
+/* ── Divider (Figma 58320:441 — 16 вариантов; 53556:7964 — Type=Solid) ──
+   Size=M → 1px, Size=L → 2px
+   Solid:  Default/Lite #E0E0E0 · Hover/Selected #448AFF · Disable #EBEBEB
+   Dashed: линия 1px dash 4/4, те же цвета по состояниям              */
+
+.ds-divider {
+  height: 1px;                                              /* Size=M */
+  border: none;
+  margin: 0;
+  background: var(--ds-color-divider-solid-default-color);  /* #E0E0E0 */
+}
+.ds-divider--m            { height: 1px; }
+.ds-divider--l            { height: 2px; }                  /* Size=L */
+.ds-divider--lite         { background: var(--ds-color-divider-solid-lite-color); }
+.ds-divider:hover         { background: var(--ds-color-divider-solid-hover-color); }     /* #448AFF */
+.ds-divider--selected     { background: var(--ds-color-divider-solid-selected-color); }  /* #448AFF */
+.ds-divider--disable      { background: var(--ds-color-divider-solid-disable-color); }   /* #EBEBEB */
+.ds-divider--dashed {
+  height: 0;
+  background: none;
+  border-top: 1px dashed var(--ds-color-divider-dashed-default-color);
+}
+.ds-divider--dashed.ds-divider--l        { border-top-width: 2px; }
+.ds-divider--dashed.ds-divider--selected { border-top-color: var(--ds-color-divider-dashed-selected-color); }
+.ds-divider--dashed.ds-divider--disable  { border-top-color: var(--ds-color-divider-dashed-disable-color); }
+
+/* совместимость: раньше класс назывался .ds-divider-line */
 .ds-divider-line {
   height: 1px;
   border: none;
@@ -8209,6 +8329,25 @@ CSS-правила компонента:
 .ds-banner__buttons {
   display: flex;
   gap: var(--ds-space-2x);
+}
+
+/* ── Иконки в инпутах: SVG из файла иконок ДС ─────────────── */
+
+.ds-input__icon svg { width: 20px; height: 20px; display: block; }
+.ds-input__icon svg path { fill: currentColor; }
+
+/* контрол числа (стрелки вверх/вниз, как Control number button в ДС) */
+.ds-input__stepper {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: var(--ds-color-icon-primary);                     /* #616161 */
+}
+.ds-input__stepper svg { width: 20px; height: 12px; display: block; }
+.ds-input__stepper svg path { fill: currentColor; }
+.ds-input__stepper button {
+  border: none; background: none; padding: 0; margin: 0;
+  display: flex; cursor: pointer; color: inherit;
 }
 
 /* ── Подпись группы полей (label над полем) ───────────────── */
@@ -8309,10 +8448,19 @@ CSS-правила компонента:
   flex-direction: column;
   box-sizing: border-box;
   border-radius: var(--ds-radius-3x);                    /* 12px */
+  border: 1px solid var(--ds-color-stroke-default);      /* Default: #E0E0E0 — рамка вокруг шапки И контента */
+  background: var(--ds-color-surface-default);           /* #FFFFFF */
+  overflow: hidden;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* ── Шапка панели ─────────────────────────────────────────── */
+/* Variant=Info — пунктирная акцентная рамка вокруг всей панели */
+.ds-expansion--info {
+  border: 1px dashed var(--ds-color-stroke-accent);      /* #448AFF, пунктир */
+  background: var(--ds-palette-accent-10);               /* #F5F9FF */
+}
+
+/* ── Шапка панели (44px, рамки нет — она у контейнера) ────── */
 
 .ds-expansion__header {
   display: flex;
@@ -8321,25 +8469,19 @@ CSS-правила компонента:
   box-sizing: border-box;
   min-height: 44px;
   padding: var(--ds-space-3x) var(--ds-space-4x);         /* 12px 16px */
-  border-radius: var(--ds-radius-3x);                    /* 12px */
-  border: 1px solid var(--ds-color-stroke-default);      /* Default: #E0E0E0 */
-  background: var(--ds-color-surface-default-variant);   /* Default: #F8F9FC */
+  background: transparent;
   cursor: pointer;
-  transition: background-color .15s ease, border-color .15s ease;
-}
-
-/* Variant=Info — пунктирная акцентная рамка */
-.ds-expansion--info .ds-expansion__header {
-  border: 1px dashed var(--ds-color-stroke-accent);      /* #448AFF, пунктир */
-  background: var(--ds-palette-accent-10);               /* #F5F9FF */
+  transition: background-color .15s ease;
 }
 
 .ds-expansion__header:hover  { background: var(--ds-color-shapes-hover); }   /* #F5F5F5 */
 .ds-expansion__header:active { background: var(--ds-color-shapes-press); }   /* #E0E0E0 */
 
-.ds-expansion--disabled .ds-expansion__header {
+.ds-expansion--disabled {
   border-color: var(--ds-color-stroke-disable);          /* #EBEBEB */
   background: var(--ds-color-surface-disable);           /* #F5F5F5 */
+}
+.ds-expansion--disabled .ds-expansion__header {
   color: var(--ds-color-text-disable);
   pointer-events: none;
 }
@@ -8399,8 +8541,276 @@ CSS-правила компонента:
 }
 .ds-expansion__content--no-padding { padding: 0; }
 
-/* закрытая панель — контент скрыт */
+/* иконки из файла иконок ДС приходят с fill из ДС — красим токеном компонента */
+.ds-expansion__icon svg path,
+.ds-expansion__arrow svg path { fill: currentColor; }
 .ds-expansion:not(.ds-expansion--open) .ds-expansion__content { display: none; }
+
+/* ============================================================
+   iiko DS — Stepper (Step + Stepper line)
+   Источник: Figma, страница «Stepper»
+   Step: h24 (Background=Off) / h32 r8 fill #FAFAFA (Background=On)
+         gap 8, Element left 24×24, текст 14/400
+   Selected: текст #448AFF, иконка #448AFF
+   ============================================================ */
+
+.ds-stepper {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2x);                                  /* 8px */
+  background: var(--ds-color-stepper-background);
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ── Шаг ──────────────────────────────────────────────────── */
+
+.ds-step {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ds-space-2x);                                  /* 8px */
+  box-sizing: border-box;
+  min-height: 24px;
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--ds-color-stepper-default-text-color);        /* #333333 */
+  font-family: inherit;
+  font-size: var(--ds-typography-body-font-size-s);         /* 14px */
+  font-weight: var(--ds-typography-font-weight-regular);    /* 400 */
+  line-height: var(--ds-typography-body-line-height-s);     /* 20px */
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Background=On — подложка */
+.ds-step--bg {
+  min-height: 32px;
+  padding: var(--ds-space-1x) var(--ds-space-2x);
+  border-radius: var(--ds-radius-2x);                       /* 8px */
+  background: var(--ds-color-stepper-default-background);   /* #FAFAFA */
+}
+
+.ds-step:hover {
+  color: var(--ds-color-stepper-hover-text-color);          /* #448AFF */
+}
+.ds-step--bg:hover { background: var(--ds-color-stepper-hover-background); }
+
+.ds-step--selected {
+  color: var(--ds-color-stepper-selected-text-color);       /* #448AFF */
+}
+.ds-step--bg.ds-step--selected {
+  background: var(--ds-color-stepper-selected-background);  /* #F5F9FF */
+  border: 1px solid var(--ds-color-stepper-selected-border-color);
+}
+
+.ds-step--disabled,
+.ds-step:disabled {
+  color: var(--ds-color-stepper-disable-text-color);        /* #9E9E9E */
+  pointer-events: none;
+}
+
+.ds-step--error { color: var(--ds-color-stepper-error-text-color); }
+
+/* ── Номер / иконка шага (Element left 24×24) ─────────────── */
+
+.ds-step__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--ds-radius-circular);                 /* 9999px */
+  color: var(--ds-color-stepper-default-icon-color);        /* #616161 */
+  font-size: var(--ds-typography-body-font-size-s);         /* 14px */
+  line-height: 20px;
+}
+
+/* выбранный шаг — залитый акцентный круг с белой цифрой */
+.ds-step--selected .ds-step__num {
+  background: var(--ds-color-brand-accent-default);         /* #448AFF */
+  color: var(--ds-color-text-inversive);                    /* #FFFFFF */
+}
+.ds-step--disabled .ds-step__num { color: var(--ds-color-stepper-disable-icon-color); }
+.ds-step--error .ds-step__num    { color: var(--ds-color-stepper-error-icon-color); }
+
+.ds-step__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--ds-color-stepper-icon-color);
+}
+.ds-step__icon svg { width: 24px; height: 24px; display: block; }
+.ds-step__icon svg path { fill: currentColor; }
+
+/* ── Разделитель между шагами (Stepper divider) ───────────── */
+
+.ds-stepper__divider {
+  flex-shrink: 0;
+  width: 8px;
+  height: 1px;
+  background: var(--ds-color-stepper-divider-color);         /* #616161 */
+}
+
+/* ============================================================
+   Stepper button (Figma 55419:7330) — счётчик шагов + кнопки навигации
+   12 вариантов: Type=Filled|Outlined × Position=First|Middle|Last
+                 × Content=Text|Icon      (высота ряда 36, gap 16)
+   Состав из Figma (что писать в разметке):
+     Position=First  → одна кнопка «Далее» (иконка справа keyboard_arrow_right)
+     Position=Middle → Button group (gap 8): «Назад» (keyboard_arrow_left слева)
+                       + «Далее» (keyboard_arrow_right справа)
+     Position=Last   → одна кнопка «Назад» (keyboard_arrow_left слева)
+     Content=Text    → .ds-btn.ds-btn--m ; Content=Icon → .ds-button-icon (36×36)
+     Type=Filled     → .ds-btn--accent.ds-btn--filled  (#448AFF + тень)
+     Type=Outlined   → .ds-btn--accent.ds-btn--outlined (рамка 1px #448AFF)
+   ============================================================ */
+
+.ds-stepper-button {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-4x);                                  /* 16px */
+  min-height: 36px;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* «N из M» — TEXT 14/500 lh20 #333333 */
+.ds-stepper-button__counter {
+  flex-shrink: 0;
+  color: var(--ds-color-text-primary);                      /* #333333 */
+  font-size: var(--ds-typography-body-font-size-s);         /* 14px */
+  font-weight: var(--ds-typography-font-weight-medium);     /* 500 */
+  line-height: var(--ds-typography-body-line-height-s);     /* 20px */
+  white-space: nowrap;
+}
+
+/* Button group / Button icon group внутри — gap 8 */
+.ds-stepper-button__group {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2x);                                  /* 8px */
+}
+
+/* ============================================================
+   iiko DS — Slide toggle
+   Источник: Figma, страница «Slide toggle»
+   Трек 34×20 r12; кнопка (Oval) 16×16 r9999 белая
+   Off: фон #9E9E9E (hover #757575) · On: #448AFF (hover #3969D5)
+   Disable: #E0E0E0, текст #9E9E9E
+   Title 14/400 #333333 · Support down 12px #616161
+   ============================================================ */
+
+.ds-slide-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--ds-space-1x);                                    /* 4px */
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* строка: переключатель + заголовок + иконка */
+.ds-slide-toggle__row {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2x);                                    /* 8px */
+  cursor: pointer;
+}
+
+/* нативный чекбокс скрыт */
+.ds-slide-toggle__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+/* трек */
+.ds-slide-toggle__track {
+  position: relative;
+  flex-shrink: 0;
+  width: 34px;
+  height: 20px;
+  border-radius: var(--ds-radius-3x);                         /* 12px */
+  background: var(--ds-color-slide-toggle-deselected-default-background); /* #9E9E9E */
+  transition: background-color .15s ease;
+}
+
+/* кнопка-кружок */
+.ds-slide-toggle__track::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: var(--ds-radius-circular);                   /* 9999px */
+  background: var(--ds-color-slide-toggle-knob-color);        /* #FFFFFF */
+  transition: transform .15s ease;
+}
+
+.ds-slide-toggle__row:hover .ds-slide-toggle__track {
+  background: var(--ds-color-slide-toggle-deselected-hover-background);   /* #757575 */
+}
+
+/* включён */
+.ds-slide-toggle__input:checked + .ds-slide-toggle__track {
+  background: var(--ds-color-slide-toggle-selected-default-background);   /* #448AFF */
+}
+.ds-slide-toggle__input:checked + .ds-slide-toggle__track::after {
+  transform: translateX(14px);
+}
+.ds-slide-toggle__row:hover .ds-slide-toggle__input:checked + .ds-slide-toggle__track {
+  background: var(--ds-color-slide-toggle-selected-hover-background);     /* #3969D5 */
+}
+
+/* disabled */
+.ds-slide-toggle__input:disabled + .ds-slide-toggle__track {
+  background: var(--ds-color-slide-toggle-deselected-disable-background); /* #E0E0E0 */
+}
+.ds-slide-toggle__input:checked:disabled + .ds-slide-toggle__track {
+  background: var(--ds-color-slide-toggle-selected-disable-background);
+}
+.ds-slide-toggle--disabled { pointer-events: none; }
+.ds-slide-toggle--disabled .ds-slide-toggle__title {
+  color: var(--ds-color-slide-toggle-deselected-disable-text-color);      /* #9E9E9E */
+}
+
+/* тексты */
+.ds-slide-toggle__title {
+  color: var(--ds-color-slide-toggle-text-color);             /* #333333 */
+  font-size: var(--ds-typography-body-font-size-s);           /* 14px */
+  font-weight: var(--ds-typography-font-weight-regular);      /* 400 */
+  line-height: var(--ds-typography-body-line-height-s);       /* 20px */
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+}
+
+.ds-slide-toggle__support {
+  color: var(--ds-color-slide-toggle-text-support-color);      /* #616161 */
+  font-size: var(--ds-typography-caption-font-size-l);         /* 12px */
+  line-height: var(--ds-typography-caption-line-height-l);     /* 16px */
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  padding-left: 42px;                                          /* под текст: трек 34 + gap 8 */
+}
+.ds-slide-toggle--error .ds-slide-toggle__support {
+  color: var(--ds-color-slide-toggle-text-error-color);        /* #FF5252 */
+}
+
+/* иконка-подсказка в строке */
+.ds-slide-toggle__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--ds-color-icon-primary);                         /* #616161 */
+}
+.ds-slide-toggle__icon svg { width: 20px; height: 20px; display: block; }
+.ds-slide-toggle__icon svg path { fill: currentColor; }
 
 /* ============================================================
    iiko DS — компоненты (все 111, сгенерировано из Figma)
@@ -8420,11 +8830,19 @@ CSS-правила компонента:
 }
 .ds-arrow__icon {
   flex-shrink: 0;
-  width: 24.0px;
-  height: 24.0px;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-arrow__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-arrow__icon svg path {
+  fill: currentColor;
 }
 
 /* Arrow list [55939:13307] — 13 вариантов */
@@ -8439,11 +8857,19 @@ CSS-правила компонента:
 }
 .ds-arrow-list__icon {
   flex-shrink: 0;
-  width: 24.0px;
-  height: 24.0px;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-arrow-list__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-arrow-list__icon svg path {
+  fill: currentColor;
 }
 
 /* Arrow menu [56090:1628] — 13 вариантов */
@@ -8458,11 +8884,19 @@ CSS-правила компонента:
 }
 .ds-arrow-menu__icon {
   flex-shrink: 0;
-  width: 24.0px;
-  height: 24.0px;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-arrow-menu__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-arrow-menu__icon svg path {
+  fill: currentColor;
 }
 
 /* Arrow select [57735:17989] — 13 вариантов */
@@ -8477,11 +8911,19 @@ CSS-правила компонента:
 }
 .ds-arrow-select__icon {
   flex-shrink: 0;
-  width: 24.0px;
-  height: 24.0px;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-arrow-select__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-arrow-select__icon svg path {
+  fill: currentColor;
 }
 
 /* Autocomplete form [58107:8230] — 10 вариантов */
@@ -8495,11 +8937,19 @@ CSS-правила компонента:
 }
 .ds-autocomplete-form__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-autocomplete-form__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-autocomplete-form__icon svg path {
+  fill: currentColor;
 }
 .ds-autocomplete-form--disabled {
   pointer-events: none;
@@ -8533,11 +8983,19 @@ CSS-правила компонента:
 }
 .ds-button-icon__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-button-icon__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-button-icon__icon svg path {
+  fill: currentColor;
 }
 .ds-button-icon--m {
   background: var(--ds-color-button-accent-lite-default);
@@ -8571,7 +9029,7 @@ CSS-правила компонента:
 }
 .ds-button-icon--outlined {
   background: var(--ds-color-button-accent-lite-default);
-  border: 1.0px solid var(--ds-color-button-icon-neutral-outlined-border-color);
+  border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
 }
 .ds-button-icon--default {
   background: var(--ds-color-button-accent-lite-default);
@@ -8617,11 +9075,19 @@ CSS-правила компонента:
 }
 .ds-button-icon-group__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-button-icon-group__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-button-icon-group__icon svg path {
+  fill: currentColor;
 }
 .ds-button-icon-group--vertically {
   height: 124px;
@@ -8641,9 +9107,11 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-button-new__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: 1.25px;
+  color: var(--ds-palette-neutral-950);
   white-space: nowrap;
 }
 .ds-button-new--btn-28 {
@@ -8671,28 +9139,36 @@ CSS-правила компонента:
 }
 .ds-button-toggle__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
+.ds-button-toggle__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-button-toggle__icon svg path {
+  fill: currentColor;
+}
 .ds-button-toggle--s {
   height: var(--ds-size-9x);
   width: 100px;
-  border: 1.0px solid var(--ds-color-button-icon-neutral-outlined-border-color);
+  border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
 }
 .ds-button-toggle--xs {
   height: var(--ds-size-8x);
   width: 88px;
-  border: 1.0px solid var(--ds-color-button-icon-neutral-outlined-border-color);
+  border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
 }
 .ds-button-toggle--outlined {
-  border: 1.0px solid var(--ds-color-button-icon-neutral-outlined-border-color);
+  border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
 }
 .ds-button-toggle--icon {
   width: 124px;
-  border: 1.0px solid var(--ds-color-button-icon-neutral-outlined-border-color);
+  border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
 }
 
 /* Checkbox label [53810:880] — 9 вариантов */
@@ -8705,18 +9181,28 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-checkbox-label__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: 0.25px;
+  color: var(--ds-color-checkbox-group-text-color);
   white-space: nowrap;
 }
 .ds-checkbox-label__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-checkbox-label__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-checkbox-label__icon svg path {
+  fill: currentColor;
 }
 
 /* Chips [17168:83542] — 18 вариантов */
@@ -8733,23 +9219,34 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-chips-text-color);
   white-space: nowrap;
 }
 .ds-chips__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-chips__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-chips__icon svg path {
+  fill: currentColor;
 }
 .ds-chips--m {
   width: 132px;
   background: var(--ds-color-chips-disable-background-outlined);
-  border: 1.0px solid var(--ds-color-chips-input-default-border-color);
+  border: 1px solid var(--ds-color-chips-input-default-border-color);
 }
 .ds-chips--s {
   height: var(--ds-size-6x);
@@ -8758,7 +9255,7 @@ CSS-правила компонента:
   padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1x) var(--ds-size-1x);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-chips-disable-background-outlined);
-  border: 1.0px solid var(--ds-color-chips-input-default-border-color);
+  border: 1px solid var(--ds-color-chips-input-default-border-color);
 }
 .ds-chips--filled {
   width: 132px;
@@ -8766,48 +9263,47 @@ CSS-правила компонента:
 .ds-chips--outlined {
   width: 132px;
   background: var(--ds-color-chips-disable-background-outlined);
-  border: 1.0px solid var(--ds-color-chips-input-default-border-color);
+  border: 1px solid var(--ds-color-chips-input-default-border-color);
 }
 .ds-chips--default {
   width: 132px;
   background: var(--ds-color-chips-disable-background-outlined);
-  border: 1.0px solid var(--ds-color-chips-input-default-border-color);
+  border: 1px solid var(--ds-color-chips-input-default-border-color);
 }
 .ds-chips--disable {
   width: 132px;
   background: var(--ds-color-chips-disable-background-outlined);
-  border: 1.0px solid var(--ds-color-chips-input-disable-border-color);
+  border: 1px solid var(--ds-color-chips-input-disable-border-color);
 }
 .ds-chips--focus {
   width: 136px;
   background: var(--ds-color-chips-disable-background-outlined);
-  border: 1.0px solid var(--ds-color-chips-input-focus-border-color);
 }
 .ds-chips--hover {
   width: 132px;
   background: var(--ds-color-chips-disable-background-outlined);
-  border: 1.0px solid var(--ds-color-chips-input-disable-action-text-color);
+  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
 }
 .ds-chips--press {
   width: 132px;
   background: var(--ds-color-chips-input-default-border-color);
-  border: 1.0px solid var(--ds-color-chips-input-default-border-color);
+  border: 1px solid var(--ds-color-chips-input-default-border-color);
 }
 .ds-chips:hover {
   background: var(--ds-color-chips-disable-background-outlined);
-  border: 1.0px solid var(--ds-color-chips-input-disable-action-text-color);
+  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
 }
 .ds-chips:active {
   background: var(--ds-color-chips-input-default-border-color);
-  border: 1.0px solid var(--ds-color-chips-input-default-border-color);
+  border: 1px solid var(--ds-color-chips-input-default-border-color);
 }
 .ds-chips:disabled {
   background: var(--ds-color-chips-disable-background-outlined);
-  border: 1.0px solid var(--ds-color-chips-input-disable-border-color);
+  border: 1px solid var(--ds-color-chips-input-disable-border-color);
+  color: var(--ds-color-chips-input-disable-action-text-color);
 }
 .ds-chips:focus-visible {
   background: var(--ds-color-chips-disable-background-outlined);
-  border: 1.0px solid var(--ds-color-chips-input-focus-border-color);
 }
 .ds-chips--disabled {
   pointer-events: none;
@@ -8826,11 +9322,20 @@ CSS-правила компонента:
 }
 .ds-chips-group__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-chips-group__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-chips-group__icon svg path {
+  fill: currentColor;
 }
 .ds-chips-group--s {
   height: var(--ds-size-6x);
@@ -8846,28 +9351,46 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-chips-icon-color);
   white-space: nowrap;
 }
 .ds-chips-input__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-chips-input__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-chips-input__icon svg path {
+  fill: currentColor;
 }
 .ds-chips-input--s {
   height: var(--ds-size-9x);
+}
+.ds-chips-input:disabled {
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips-input:focus-visible {
+  color: var(--ds-color-chips-input-focus-border-color);
 }
 .ds-chips-input--disabled {
   pointer-events: none;
   opacity: 1;
 }
 
-/* Chips Input [61382:55775] — 16 вариантов */
+/* Chips Input [61382:55775] — 16 вариантов (ДУБЛЬ имени: второй сет «Chips Input»,
+   первый — [52916:14622] → .ds-chips-input; различать по node_id) */
 .ds-chips-input-2 {
   height: 80px;
   display: flex;
@@ -8877,21 +9400,38 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input-2__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-chips-icon-color);
   white-space: nowrap;
 }
 .ds-chips-input-2__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-chips-input-2__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-chips-input-2__icon svg path {
+  fill: currentColor;
 }
 .ds-chips-input-2--s {
   height: var(--ds-size-9x);
+}
+.ds-chips-input-2:disabled {
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips-input-2:focus-visible {
+  color: var(--ds-color-chips-input-focus-border-color);
 }
 .ds-chips-input-2--disabled {
   pointer-events: none;
@@ -8911,36 +9451,33 @@ CSS-правила компонента:
 }
 .ds-chips-input-cell__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-chips-input-cell__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-chips-input-cell__icon svg path {
+  fill: currentColor;
 }
 .ds-chips-input-cell--error {
-  border: 1.0px solid var(--ds-color-chips-input-error-border-color);
+  border: 1px solid var(--ds-color-chips-input-error-border-color);
 }
 .ds-chips-input-cell--error-hover {
   background: var(--ds-color-chips-input-disable-background);
-  border: 1.0px solid var(--ds-color-chips-input-error-border-color);
-}
-.ds-chips-input-cell--focus {
-  border: 1.0px solid var(--ds-color-chips-input-focus-border-color);
-}
-.ds-chips-input-cell--focus-placeholder {
-  border: 1.0px solid var(--ds-color-chips-input-focus-border-color);
-}
-.ds-chips-input-cell--focus-value {
-  border: 1.0px solid var(--ds-color-chips-input-focus-border-color);
+  border: 1px solid var(--ds-color-chips-input-error-border-color);
 }
 .ds-chips-input-cell--hover {
-  border: 1.0px solid var(--ds-color-chips-input-disable-action-text-color);
+  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
 }
 .ds-chips-input-cell:hover {
-  border: 1.0px solid var(--ds-color-chips-input-disable-action-text-color);
-}
-.ds-chips-input-cell:focus-visible {
-  border: 1.0px solid var(--ds-color-chips-input-focus-border-color);
+  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
 }
 .ds-chips-input-cell--disabled {
   pointer-events: none;
@@ -8966,9 +9503,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chrome-header-mobile__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-caption-font-size-m);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: 13px;
+  color: var(--ds-color-brand-neutral-super-dark);
   white-space: nowrap;
 }
 .ds-chrome-header-mobile--on {
@@ -8986,9 +9524,11 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-content__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-header-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-header-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
   white-space: nowrap;
 }
 
@@ -9004,11 +9544,19 @@ CSS-правила компонента:
 }
 .ds-control-arrow-button__icon {
   flex-shrink: 0;
-  width: 12.0px;
-  height: 12.0px;
+  width: var(--ds-size-3x);
+  height: var(--ds-size-3x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-control-arrow-button__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-control-arrow-button__icon svg path {
+  fill: currentColor;
 }
 .ds-control-arrow-button--s {
   height: var(--ds-size-8x);
@@ -9029,17 +9577,25 @@ CSS-правила компонента:
   gap: var(--ds-size-0-25x);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-brand-neutral-super-light);
-  border: 1.0px solid var(--ds-color-button-icon-neutral-outlined-border-color);
+  border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-control-group-number-button__icon {
   flex-shrink: 0;
-  width: 16.0px;
-  height: 16.0px;
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-control-group-number-button__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-control-group-number-button__icon svg path {
+  fill: currentColor;
 }
 .ds-control-group-number-button--xs {
   height: var(--ds-size-6x);
@@ -9061,11 +9617,19 @@ CSS-правила компонента:
 }
 .ds-control-number-button__icon {
   flex-shrink: 0;
-  width: 16.0px;
-  height: 16.0px;
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-control-number-button__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-control-number-button__icon svg path {
+  fill: currentColor;
 }
 .ds-control-number-button--s {
   height: var(--ds-size-9x);
@@ -9107,18 +9671,28 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-control-panel__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
   white-space: nowrap;
 }
 .ds-control-panel__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-control-panel__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-control-panel__icon svg path {
+  fill: currentColor;
 }
 .ds-control-panel--calendar {
   height: 228px;
@@ -9129,7 +9703,8 @@ CSS-правила компонента:
   padding: 0 0 var(--ds-size-0-5x) var(--ds-size-0-5x);
 }
 
-/* Control Panel [58982:11018] — 2 вариантов */
+/* Control Panel [58982:11018] — 2 вариантов (ДУБЛЬ имени: второй сет «Control Panel»,
+   первый — [58501:4052] → .ds-control-panel; различать по node_id) */
 .ds-control-panel-2 {
   height: 48px;
   display: flex;
@@ -9141,18 +9716,28 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-control-panel-2__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
   white-space: nowrap;
 }
 .ds-control-panel-2__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-control-panel-2__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-control-panel-2__icon svg path {
+  fill: currentColor;
 }
 .ds-control-panel-2--time {
   height: 44px;
@@ -9167,23 +9752,33 @@ CSS-правила компонента:
   align-items: center;
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
   border-radius: var(--ds-size-3x);
-  border: 1.0px solid var(--ds-color-brand-neutral-lighter);
+  border: 1px solid var(--ds-color-brand-neutral-lighter);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-datepicker__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
   white-space: nowrap;
 }
 .ds-datepicker__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-datepicker__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-datepicker__icon svg path {
+  fill: currentColor;
 }
 .ds-datepicker--month {
   height: 248px;
@@ -9202,9 +9797,11 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-dialog-content__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-dialog-content-title-color);
   white-space: nowrap;
 }
 .ds-dialog-content__icon {
@@ -9214,6 +9811,14 @@ CSS-правила компонента:
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-dialog-content__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-dialog-content__icon svg path {
+  fill: currentColor;
 }
 
 /* Dialog footer [53749:638] — 1 вариантов */
@@ -9227,11 +9832,19 @@ CSS-правила компонента:
 }
 .ds-dialog-footer__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-dialog-footer__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-dialog-footer__icon svg path {
+  fill: currentColor;
 }
 
 /* Dialog header [53535:1322] — 2 вариантов */
@@ -9244,18 +9857,28 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-dialog-header__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-header-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-header-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-dialog-content-title-color);
   white-space: nowrap;
 }
 .ds-dialog-header__icon {
   flex-shrink: 0;
-  width: 24.0px;
-  height: 24.0px;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-dialog-header__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-dialog-header__icon svg path {
+  fill: currentColor;
 }
 .ds-dialog-header--picture {
   height: 200px;
@@ -9273,9 +9896,11 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-dialog-view__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-dialog-content-text-color);
   white-space: nowrap;
 }
 .ds-dialog-view__icon {
@@ -9285,6 +9910,14 @@ CSS-правила компонента:
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-dialog-view__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-dialog-view__icon svg path {
+  fill: currentColor;
 }
 
 /* Element [54104:20956] — 9 вариантов */
@@ -9301,11 +9934,19 @@ CSS-правила компонента:
 }
 .ds-element__icon {
   flex-shrink: 0;
-  width: 24.0px;
-  height: 24.0px;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-element__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-element__icon svg path {
+  fill: currentColor;
 }
 .ds-element--checkbox {
   height: var(--ds-size-5x);
@@ -9349,11 +9990,19 @@ CSS-правила компонента:
 }
 .ds-element-cell__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-element-cell__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-element-cell__icon svg path {
+  fill: currentColor;
 }
 .ds-element-cell--button {
   height: var(--ds-size-6x);
@@ -9411,11 +10060,19 @@ CSS-правила компонента:
 }
 .ds-element-left__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-element-left__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-element-left__icon svg path {
+  fill: currentColor;
 }
 
 /* Element menu [56090:1611] — 8 вариантов */
@@ -9432,11 +10089,19 @@ CSS-правила компонента:
 }
 .ds-element-menu__icon {
   flex-shrink: 0;
-  width: 24.0px;
-  height: 24.0px;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-element-menu__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-element-menu__icon svg path {
+  fill: currentColor;
 }
 .ds-element-menu--checkbox {
   height: var(--ds-size-5x);
@@ -9477,11 +10142,19 @@ CSS-правила компонента:
 }
 .ds-element-select__icon {
   flex-shrink: 0;
-  width: 24.0px;
-  height: 24.0px;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-element-select__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-element-select__icon svg path {
+  fill: currentColor;
 }
 .ds-element-select--checkbox {
   height: var(--ds-size-5x);
@@ -9521,11 +10194,19 @@ CSS-правила компонента:
 }
 .ds-element-sidenav__icon {
   flex-shrink: 0;
-  width: 16.0px;
-  height: 16.0px;
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-element-sidenav__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-element-sidenav__icon svg path {
+  fill: currentColor;
 }
 .ds-element-sidenav--avatar {
   gap: var(--ds-size-2-5x);
@@ -9546,11 +10227,28 @@ CSS-правила компонента:
 }
 .ds-element-step__icon {
   flex-shrink: 0;
-  width: 24.0px;
-  height: 24.0px;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-element-step__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-element-step__icon svg path {
+  fill: currentColor;
+}
+.ds-element-step:hover {
+  color: var(--ds-color-brand-neutral-default);
+}
+.ds-element-step:active {
+  color: var(--ds-color-brand-neutral-default);
+}
+.ds-element-step:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
 }
 .ds-element-step--disabled {
   pointer-events: none;
@@ -9570,11 +10268,19 @@ CSS-правила компонента:
 }
 .ds-elementare-cell__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-elementare-cell__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-elementare-cell__icon svg path {
+  fill: currentColor;
 }
 .ds-elementare-cell--button {
   height: var(--ds-size-6x);
@@ -9618,9 +10324,11 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-elements__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
   white-space: nowrap;
 }
 .ds-elements--cell {
@@ -9648,7 +10356,7 @@ CSS-правила компонента:
 .ds-elements--today {
   width: var(--ds-size-10x);
   gap: var(--ds-size-2-5x);
-  border: 1.0px solid var(--ds-color-brand-neutral-neutral);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
 }
 .ds-elements--default {
   width: var(--ds-size-10x);
@@ -9657,7 +10365,7 @@ CSS-правила компонента:
   width: var(--ds-size-10x);
   gap: var(--ds-size-2-5x);
   background: var(--ds-color-brand-neutral-lighter);
-  border: 1.0px solid var(--ds-color-brand-neutral-neutral);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
 }
 .ds-elements--hover {
   width: var(--ds-size-10x);
@@ -9666,22 +10374,24 @@ CSS-правила компонента:
   width: var(--ds-size-10x);
 }
 .ds-elements:hover {
-  background: var(--ds-color-brand-neutral-super-light);
-  border: 1.0px solid var(--ds-color-brand-neutral-neutral);
+  color: var(--ds-color-brand-neutral-default);
 }
 .ds-elements:active {
   background: var(--ds-color-brand-accent-darker);
+  color: var(--ds-color-brand-neutral-default);
 }
 .ds-elements:disabled {
   background: var(--ds-color-brand-neutral-lighter);
-  border: 1.0px solid var(--ds-color-brand-neutral-neutral);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
+  color: var(--ds-color-brand-neutral-neutral);
 }
 .ds-elements--disabled {
   pointer-events: none;
   opacity: 1;
 }
 
-/* Elements [58982:9594] — 8 вариантов */
+/* Elements [58982:9594] — 8 вариантов (ДУБЛЬ имени: второй сет «Elements»,
+   первый — [58501:4220] → .ds-elements; различать по node_id) */
 .ds-elements-2 {
   height: var(--ds-size-10x);
   display: flex;
@@ -9691,9 +10401,11 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-elements-2__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-default);
   white-space: nowrap;
 }
 .ds-elements-2--default {
@@ -9728,9 +10440,14 @@ CSS-правила компонента:
 }
 .ds-elements-2:hover {
   background: var(--ds-color-brand-neutral-super-light);
+  color: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-elements-2:active {
   background: var(--ds-color-brand-neutral-lighter);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-elements-2:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
 }
 .ds-elements-2--disabled {
   pointer-events: none;
@@ -9748,9 +10465,11 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-expansion-content__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
   white-space: nowrap;
 }
 .ds-expansion-content--false {
@@ -9792,9 +10511,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-header-components__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-header-font-size-l);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-header-line-height-l);
+  color: var(--ds-color-brand-neutral-super-dark);
   white-space: nowrap;
 }
 .ds-header-components--mini {
@@ -9816,18 +10536,28 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-hint-container__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-hint-content-icon-color);
   white-space: nowrap;
 }
 .ds-hint-container__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-hint-container__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-hint-container__icon svg path {
+  fill: currentColor;
 }
 .ds-hint-container--single {
   height: var(--ds-size-10x);
@@ -9854,18 +10584,28 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-hint-content__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-hint-content-icon-color);
   white-space: nowrap;
 }
 .ds-hint-content__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-hint-content__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-hint-content__icon svg path {
+  fill: currentColor;
 }
 .ds-hint-content--single-content {
   height: var(--ds-size-9x);
@@ -9884,18 +10624,28 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-hint-footer__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-hint-content-icon-color);
   white-space: nowrap;
 }
 .ds-hint-footer__icon {
   flex-shrink: 0;
-  width: 28.0px;
-  height: 28.0px;
+  width: var(--ds-size-7x);
+  height: var(--ds-size-7x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-hint-footer__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-hint-footer__icon svg path {
+  fill: currentColor;
 }
 
 /* Hint header [54594:2219] — 5 вариантов */
@@ -9910,18 +10660,28 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-hint-header__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-hint-content-icon-color);
   white-space: nowrap;
 }
 .ds-hint-header__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-hint-header__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-hint-header__icon svg path {
+  fill: currentColor;
 }
 
 /* Icon group [53467:1060] — 2 вариантов */
@@ -9937,11 +10697,19 @@ CSS-правила компонента:
 }
 .ds-icon-group__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-icon-group__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-icon-group__icon svg path {
+  fill: currentColor;
 }
 .ds-icon-group--4x {
   width: 92px;
@@ -9959,11 +10727,19 @@ CSS-правила компонента:
 }
 .ds-icon-size__icon {
   flex-shrink: 0;
-  width: 16.0px;
-  height: 16.0px;
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-icon-size__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-icon-size__icon svg path {
+  fill: currentColor;
 }
 .ds-icon-size--20 {
   height: var(--ds-size-5x);
@@ -9997,11 +10773,19 @@ CSS-правила компонента:
 }
 .ds-icon-size-draft__icon {
   flex-shrink: 0;
-  width: 16.0px;
-  height: 16.0px;
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-icon-size-draft__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-icon-size-draft__icon svg path {
+  fill: currentColor;
 }
 .ds-icon-size-draft--20 {
   height: var(--ds-size-5x);
@@ -10037,38 +10821,34 @@ CSS-правила компонента:
 }
 .ds-input-cell__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
+.ds-input-cell__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-input-cell__icon svg path {
+  fill: currentColor;
+}
 .ds-input-cell--error {
-  border: 1.0px solid var(--ds-color-input-number-control-error-border-color);
+  border: 1px solid var(--ds-color-input-number-control-error-border-color);
 }
 .ds-input-cell--error-hover {
   background: var(--ds-color-input-filled-disable-input-background);
-  border: 1.0px solid var(--ds-color-input-number-control-error-border-color);
-}
-.ds-input-cell--focus {
-  border: 1.0px solid var(--ds-color-input-number-control-focus-border-color);
-}
-.ds-input-cell--focus-placeholder {
-  border: 1.0px solid var(--ds-color-input-number-control-focus-border-color);
+  border: 1px solid var(--ds-color-input-number-control-error-border-color);
 }
 .ds-input-cell--hover {
   background: var(--ds-color-input-filled-disable-input-background);
-  border: 1.0px solid var(--ds-color-input-number-control-disable-icon-color);
-}
-.ds-input-cell--vocus-value {
-  border: 1.0px solid var(--ds-color-input-number-control-focus-border-color);
+  border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
 }
 .ds-input-cell:hover {
   background: var(--ds-color-input-filled-disable-input-background);
-  border: 1.0px solid var(--ds-color-input-number-control-disable-icon-color);
-}
-.ds-input-cell:focus-visible {
-  border: 1.0px solid var(--ds-color-input-number-control-focus-border-color);
+  border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
 }
 .ds-input-cell--disabled {
   pointer-events: none;
@@ -10086,11 +10866,19 @@ CSS-правила компонента:
 }
 .ds-input-datepicker__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-input-datepicker__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-input-datepicker__icon svg path {
+  fill: currentColor;
 }
 
 /* Input for number [53827:5155] — 10 вариантов */
@@ -10103,23 +10891,33 @@ CSS-правила компонента:
   padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-input-input-outlined-background);
-  border: 1.0px solid var(--ds-color-input-number-control-default-border-color);
+  border: 1px solid var(--ds-color-input-number-control-default-border-color);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-for-number__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-input-number-control-text-color);
   white-space: nowrap;
 }
 .ds-input-for-number__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-input-for-number__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-input-for-number__icon svg path {
+  fill: currentColor;
 }
 .ds-input-for-number--compact {
   height: var(--ds-size-7x);
@@ -10134,28 +10932,25 @@ CSS-правила компонента:
 }
 .ds-input-for-number--disable {
   width: 101px;
-  border: 1.0px solid var(--ds-color-input-number-control-disable-border-color);
+  border: 1px solid var(--ds-color-input-number-control-disable-border-color);
 }
 .ds-input-for-number--error {
   width: 101px;
-  border: 1.0px solid var(--ds-color-input-number-control-error-border-color);
+  border: 1px solid var(--ds-color-input-number-control-error-border-color);
 }
 .ds-input-for-number--focus {
   width: 101px;
-  border: 1.0px solid var(--ds-color-input-number-control-focus-border-color);
 }
 .ds-input-for-number--hover {
   width: 101px;
-  border: 1.0px solid var(--ds-color-input-number-control-disable-icon-color);
+  border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
 }
 .ds-input-for-number:hover {
-  border: 1.0px solid var(--ds-color-input-number-control-disable-icon-color);
+  border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
 }
 .ds-input-for-number:disabled {
-  border: 1.0px solid var(--ds-color-input-number-control-disable-border-color);
-}
-.ds-input-for-number:focus-visible {
-  border: 1.0px solid var(--ds-color-input-number-control-focus-border-color);
+  border: 1px solid var(--ds-color-input-number-control-disable-border-color);
+  color: var(--ds-color-input-number-control-disable-icon-color);
 }
 .ds-input-for-number--disabled {
   pointer-events: none;
@@ -10175,11 +10970,19 @@ CSS-правила компонента:
 }
 .ds-input-number__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-input-number__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-input-number__icon svg path {
+  fill: currentColor;
 }
 .ds-input-number--s {
   height: var(--ds-size-9x);
@@ -10217,12 +11020,15 @@ CSS-правила компонента:
 }
 .ds-input-number:hover {
   background: var(--ds-color-input-input-outlined-background);
+  color: var(--ds-color-input-input-label-text-color);
 }
 .ds-input-number:disabled {
   background: var(--ds-color-input-input-outlined-background);
+  color: var(--ds-color-input-input-label-text-color);
 }
 .ds-input-number:focus-visible {
   background: var(--ds-color-input-input-outlined-background);
+  color: var(--ds-color-input-input-label-text-color);
 }
 .ds-input-number--disabled {
   pointer-events: none;
@@ -10239,18 +11045,28 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-number-but-icon__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-input-input-label-text-color);
   white-space: nowrap;
 }
 .ds-input-number-but-icon__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-input-number-but-icon__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-input-number-but-icon__icon svg path {
+  fill: currentColor;
 }
 
 /* Input Timepicker [58982:9561] — 2 вариантов */
@@ -10264,15 +11080,23 @@ CSS-правила компонента:
 }
 .ds-input-timepicker__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
+.ds-input-timepicker__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-input-timepicker__icon svg path {
+  fill: currentColor;
+}
 
 /* List (Сontainer) [57604:4762] — 1 вариантов */
-.ds-list-ontainer {
+.ds-list-container {
   height: 257px;
   display: flex;
   flex-direction: column;
@@ -10281,19 +11105,29 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
-.ds-list-ontainer__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+.ds-list-container__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-list-item-icon-color);
   white-space: nowrap;
 }
-.ds-list-ontainer__icon {
+.ds-list-container__icon {
   flex-shrink: 0;
-  width: 12.0px;
-  height: 204.0px;
+  width: var(--ds-size-3x);
+  height: 204px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-list-container__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-list-container__icon svg path {
+  fill: currentColor;
 }
 
 /* List item [54101:7922] — 8 вариантов */
@@ -10308,18 +11142,28 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-list-item__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-list-item-icon-color);
   white-space: nowrap;
 }
 .ds-list-item__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-list-item__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-list-item__icon svg path {
+  fill: currentColor;
 }
 .ds-list-item--back-selected {
   background: var(--ds-color-list-item-selected-back-selected);
@@ -10335,6 +11179,9 @@ CSS-правила компонента:
 }
 .ds-list-item:active {
   background: var(--ds-color-list-item-press-background);
+}
+.ds-list-item:disabled {
+  color: var(--ds-color-list-item-disable-icon-color);
 }
 .ds-list-item--disabled {
   pointer-events: none;
@@ -10378,18 +11225,28 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-menu-container__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-light);
   white-space: nowrap;
 }
 .ds-menu-container__icon {
   flex-shrink: 0;
   width: 12.000000000000057px;
-  height: 272.0px;
+  height: 272px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-menu-container__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-menu-container__icon svg path {
+  fill: currentColor;
 }
 
 /* Menu item [56090:1476] — 7 вариантов */
@@ -10404,18 +11261,28 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-menu-item__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-menu-item-icon-color);
   white-space: nowrap;
 }
 .ds-menu-item__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-menu-item__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-menu-item__icon svg path {
+  fill: currentColor;
 }
 .ds-menu-item--back-selected {
   background: var(--ds-color-menu-item-selected-back-selected);
@@ -10431,6 +11298,9 @@ CSS-правила компонента:
 }
 .ds-menu-item:active {
   background: var(--ds-color-menu-item-press-background);
+}
+.ds-menu-item:disabled {
+  color: var(--ds-color-menu-item-disable-icon-color);
 }
 .ds-menu-item--disabled {
   pointer-events: none;
@@ -10473,11 +11343,19 @@ CSS-правила компонента:
 }
 .ds-preview__icon {
   flex-shrink: 0;
-  width: 16.0px;
-  height: 16.0px;
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-preview__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-preview__icon svg path {
+  fill: currentColor;
 }
 
 /* Radio button label [54095:4306] — 6 вариантов */
@@ -10490,18 +11368,28 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-radio-button-label__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: 0.25px;
+  color: var(--ds-color-button-neutral-filled-default-text-color);
   white-space: nowrap;
 }
 .ds-radio-button-label__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-radio-button-label__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-radio-button-label__icon svg path {
+  fill: currentColor;
 }
 
 /* Scroll [53615:15339] — 12 вариантов */
@@ -10532,11 +11420,19 @@ CSS-правила компонента:
 }
 .ds-scroll-tabs__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-scroll-tabs__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-scroll-tabs__icon svg path {
+  fill: currentColor;
 }
 .ds-scroll-tabs--left {
   padding: 0 48px 0 0;
@@ -10552,23 +11448,33 @@ CSS-правила компонента:
   padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
   border-radius: var(--ds-size-3x);
   background: var(--ds-color-search-background);
-  border: 1.0px solid var(--ds-color-search-completed-border-color);
+  border: 1px solid var(--ds-color-search-completed-border-color);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-search__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-search-default-text-color);
   white-space: nowrap;
 }
 .ds-search__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-search__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-search__icon svg path {
+  fill: currentColor;
 }
 .ds-search--s {
   height: var(--ds-size-9x);
@@ -10584,23 +11490,18 @@ CSS-правила компонента:
 .ds-search--disable {
   background: var(--ds-color-search-disable-background);
 }
-.ds-search--focus {
-  border: 1.0px solid var(--ds-color-search-focus-border-color);
-}
-.ds-search--focus-value {
-  border: 1.0px solid var(--ds-color-search-focus-border-color);
-}
 .ds-search--hover {
-  border: 1.0px solid var(--ds-color-search-disable-icon-color);
+  border: 1px solid var(--ds-color-search-disable-icon-color);
 }
 .ds-search:hover {
-  border: 1.0px solid var(--ds-color-search-disable-icon-color);
+  border: 1px solid var(--ds-color-search-disable-icon-color);
 }
 .ds-search:disabled {
   background: var(--ds-color-search-disable-background);
+  color: var(--ds-color-search-disable-icon-color);
 }
 .ds-search:focus-visible {
-  border: 1.0px solid var(--ds-color-search-focus-border-color);
+  color: var(--ds-color-search-completed-text-color);
 }
 .ds-search--disabled {
   pointer-events: none;
@@ -10608,7 +11509,7 @@ CSS-правила компонента:
 }
 
 /* Select (Сontainer) [57735:17612] — 1 вариантов */
-.ds-select-ontainer {
+.ds-select-container {
   height: 406px;
   display: flex;
   flex-direction: column;
@@ -10619,19 +11520,29 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
-.ds-select-ontainer__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+.ds-select-container__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-light);
   white-space: nowrap;
 }
-.ds-select-ontainer__icon {
+.ds-select-container__icon {
   flex-shrink: 0;
-  width: 12.0px;
-  height: 272.0px;
+  width: var(--ds-size-3x);
+  height: 272px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-select-container__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-select-container__icon svg path {
+  fill: currentColor;
 }
 
 /* Select cell [60231:74976] — 7 вариантов */
@@ -10647,35 +11558,34 @@ CSS-правила компонента:
 }
 .ds-select-cell__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
+.ds-select-cell__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-select-cell__icon svg path {
+  fill: currentColor;
+}
 .ds-select-cell--error {
-  border: 1.0px solid var(--ds-color-brand-negative-default);
+  border: 1px solid var(--ds-color-brand-negative-default);
 }
 .ds-select-cell--error-hover {
   background: var(--ds-color-brand-neutral-super-light);
-  border: 1.0px solid var(--ds-color-brand-negative-default);
-}
-.ds-select-cell--focus {
-  border: 1.0px solid var(--ds-color-brand-accent-default);
-}
-.ds-select-cell--focus-value {
-  border: 1.0px solid var(--ds-color-brand-accent-default);
+  border: 1px solid var(--ds-color-brand-negative-default);
 }
 .ds-select-cell--hover {
   background: var(--ds-color-brand-neutral-super-light);
-  border: 1.0px solid var(--ds-color-brand-neutral-neutral);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
 }
 .ds-select-cell:hover {
   background: var(--ds-color-brand-neutral-super-light);
-  border: 1.0px solid var(--ds-color-brand-neutral-neutral);
-}
-.ds-select-cell:focus-visible {
-  border: 1.0px solid var(--ds-color-brand-accent-default);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
 }
 .ds-select-cell--disabled {
   pointer-events: none;
@@ -10693,11 +11603,19 @@ CSS-правила компонента:
 }
 .ds-select-form__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-select-form__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-select-form__icon svg path {
+  fill: currentColor;
 }
 .ds-select-form--s {
   height: var(--ds-size-9x);
@@ -10723,18 +11641,28 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-select-item__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-darker);
   white-space: nowrap;
 }
 .ds-select-item__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-select-item__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-select-item__icon svg path {
+  fill: currentColor;
 }
 .ds-select-item--back-selected {
   height: 68px;
@@ -10773,6 +11701,9 @@ CSS-правила компонента:
 .ds-select-item:active {
   background: var(--ds-color-brand-neutral-lighter);
 }
+.ds-select-item:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
 .ds-select-item--disabled {
   pointer-events: none;
   opacity: 1;
@@ -10788,18 +11719,28 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-control__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-caption-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-m);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-sidenav-control-text-color);
   white-space: nowrap;
 }
 .ds-sidenav-control__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-sidenav-control__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-sidenav-control__icon svg path {
+  fill: currentColor;
 }
 .ds-sidenav-control--collapsed {
   width: 52px;
@@ -10831,9 +11772,11 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-footer__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-sidenav-footer-l2-text-color);
   white-space: nowrap;
 }
 .ds-sidenav-footer--l1 {
@@ -10858,11 +11801,19 @@ CSS-правила компонента:
 }
 .ds-sidenav-header__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-sidenav-header__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-sidenav-header__icon svg path {
+  fill: currentColor;
 }
 .ds-sidenav-header--l2 {
   gap: var(--ds-size-2x);
@@ -10886,9 +11837,11 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-item__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-sidenav-header-l2-text-color);
   white-space: nowrap;
 }
 .ds-sidenav-item--l1 {
@@ -10936,54 +11889,19 @@ CSS-правила компонента:
   align-items: center;
   justify-content: center;
 }
+.ds-sidenav-view__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-sidenav-view__icon svg path {
+  fill: currentColor;
+}
 .ds-sidenav-view--l2 {
   background: var(--ds-color-sidenav-control-text-color);
 }
 .ds-sidenav-view--collapsed {
   width: 52px;
-}
-
-/* Slide toggle [52887:2592] — 6 вариантов */
-.ds-slide-toggle {
-  height: var(--ds-size-5x);
-  display: flex;
-  flex-direction: column;
-  gap: var(--ds-size-1x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-slide-toggle__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-}
-.ds-slide-toggle__icon {
-  flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-slide-toggle--off {
-  width: 72px;
-}
-.ds-slide-toggle--on {
-  width: 72px;
-}
-.ds-slide-toggle--default {
-  width: 72px;
-}
-.ds-slide-toggle--disable {
-  width: 72px;
-}
-.ds-slide-toggle--hover {
-  width: 72px;
-}
-.ds-slide-toggle--disabled {
-  pointer-events: none;
-  opacity: 1;
 }
 
 /* Snackbar [54373:10303] — 4 вариантов */
@@ -10998,18 +11916,28 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-snackbar__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-snackbar-dark-text-color);
   white-space: nowrap;
 }
 .ds-snackbar__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-snackbar__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-snackbar__icon svg path {
+  fill: currentColor;
 }
 .ds-snackbar--complex {
   height: 108px;
@@ -11042,18 +11970,29 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-status__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-status-accent-filled-text-color);
   white-space: nowrap;
 }
 .ds-status__icon {
   flex-shrink: 0;
-  width: 16.0px;
-  height: 16.0px;
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  color: var(--ds-color-status-icon-color);
+}
+.ds-status__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-status__icon svg path {
+  fill: currentColor;
 }
 .ds-status--accent {
   width: 116px;
@@ -11108,128 +12047,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-status-bar__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: 15px;
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: 18.28499984741211px;
   white-space: nowrap;
-}
-
-/* Step [54800:3659] — 12 вариантов */
-.ds-step {
-  height: var(--ds-size-8x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2x);
-  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-1x);
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-button-neutral-hover);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-step__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-}
-.ds-step__icon {
-  flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-step--off {
-  height: var(--ds-size-6x);
-  width: 75px;
-}
-.ds-step--on {
-  width: 91px;
-}
-.ds-step--default {
-  width: 91px;
-}
-.ds-step--disable {
-  width: 91px;
-}
-.ds-step--error {
-  width: 91px;
-  background: var(--ds-color-brand-negative-lightest);
-}
-.ds-step--hover {
-  width: 91px;
-  background: var(--ds-color-brand-accent-lightest);
-}
-.ds-step--press {
-  width: 91px;
-  background: var(--ds-color-brand-accent-lighter);
-}
-.ds-step--selected {
-  width: 91px;
-  background: var(--ds-color-brand-accent-lightest);
-  border: 1.0px solid var(--ds-color-brand-accent-default);
-}
-.ds-step:hover {
-  background: var(--ds-color-brand-accent-lightest);
-}
-.ds-step:active {
-  background: var(--ds-color-brand-accent-lighter);
-}
-.ds-step--disabled {
-  pointer-events: none;
-  opacity: 1;
-}
-
-/* Stepper button [55419:7330] — 12 вариантов */
-.ds-stepper-button {
-  height: var(--ds-size-9x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-4x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-stepper-button__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-}
-.ds-stepper-button__icon {
-  flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-stepper-button--icon {
-  width: 93px;
-}
-
-/* Stepper line [54689:3072] — 4 вариантов */
-.ds-stepper-line {
-  height: var(--ds-size-6x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-stepper-line__icon {
-  flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-stepper-line--on {
-  height: var(--ds-size-8x);
 }
 
 /* Table 2 lvl [60074:44684] — 2 вариантов */
@@ -11237,7 +12058,7 @@ CSS-правила компонента:
   height: 72px;
   display: flex;
   flex-direction: column;
-  border: 1.0px solid var(--ds-color-tab-active-press-background);
+  border: 1px solid var(--ds-color-tab-active-press-background);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -11253,11 +12074,20 @@ CSS-правила компонента:
 }
 .ds-table-chips-input__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-table-chips-input__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-table-chips-input__icon svg path {
+  fill: currentColor;
 }
 
 /* Table content cell [52954:1253] — 8 вариантов */
@@ -11274,29 +12104,28 @@ CSS-правила компонента:
 }
 .ds-table-content-cell__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
-.ds-table-content-cell--edit {
-  border: 1.0px solid var(--ds-color-tab-active-counter-text-color);
+.ds-table-content-cell__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-table-content-cell__icon svg path {
+  fill: currentColor;
 }
 .ds-table-content-cell--error {
-  border: 1.0px solid var(--ds-color-table-cell-content-error-border-color);
-}
-.ds-table-content-cell--focus {
-  border: 1.0px solid var(--ds-color-tab-active-counter-text-color);
+  border: 1px solid var(--ds-color-table-cell-content-error-border-color);
 }
 .ds-table-content-cell--hover {
-  border: 1.0px solid var(--ds-color-tab-disable-icon-color);
+  border: 1px solid var(--ds-color-tab-disable-icon-color);
 }
 .ds-table-content-cell:hover {
-  border: 1.0px solid var(--ds-color-tab-disable-icon-color);
-}
-.ds-table-content-cell:focus-visible {
-  border: 1.0px solid var(--ds-color-tab-active-counter-text-color);
+  border: 1px solid var(--ds-color-tab-disable-icon-color);
 }
 .ds-table-content-cell--disabled {
   pointer-events: none;
@@ -11309,7 +12138,7 @@ CSS-правила компонента:
   display: flex;
   flex-direction: column;
   background: var(--ds-color-table-surfase-default);
-  border: 1.0px solid var(--ds-color-tab-active-press-background);
+  border: 1px solid var(--ds-color-tab-active-press-background);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -11341,9 +12170,11 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-footer__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-tab-innactive-counter-text-color);
   white-space: nowrap;
 }
 
@@ -11357,17 +12188,25 @@ CSS-правила компонента:
   gap: var(--ds-size-2x);
   padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
   background: var(--ds-color-table-surfase-head);
-  border: 1.0px solid var(--ds-color-tab-active-press-background);
+  border: 1px solid var(--ds-color-tab-active-press-background);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-header-cell__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-table-header-cell__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-table-header-cell__icon svg path {
+  fill: currentColor;
 }
 .ds-table-header-cell--hover {
   background: var(--ds-color-table-cell-header-hover-background);
@@ -11386,7 +12225,7 @@ CSS-правила компонента:
   display: flex;
   flex-direction: column;
   background: var(--ds-color-table-surfase-head);
-  border: 1.0px solid var(--ds-color-tab-active-press-background);
+  border: 1px solid var(--ds-color-tab-active-press-background);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -11401,18 +12240,31 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-text-ui__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-darker);
   white-space: nowrap;
 }
 .ds-text-ui__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-text-ui__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-text-ui__icon svg path {
+  fill: currentColor;
+}
+.ds-text-ui:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
 }
 .ds-text-ui--disabled {
   pointer-events: none;
@@ -11429,18 +12281,31 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-textarea__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-darker);
   white-space: nowrap;
 }
 .ds-textarea__icon {
   flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-textarea__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-textarea__icon svg path {
+  fill: currentColor;
+}
+.ds-textarea:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
 }
 .ds-textarea--disabled {
   pointer-events: none;
@@ -11456,18 +12321,26 @@ CSS-правила компонента:
   padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
   border-radius: var(--ds-size-3x);
   background: var(--ds-color-brand-neutral-default);
-  border: 1.0px solid var(--ds-color-brand-neutral-lighter);
+  border: 1px solid var(--ds-color-brand-neutral-lighter);
   box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-timepicker__icon {
   flex-shrink: 0;
-  width: 12.0px;
-  height: 228.0px;
+  width: var(--ds-size-3x);
+  height: 228px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-timepicker__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-timepicker__icon svg path {
+  fill: currentColor;
 }
 .ds-timepicker--time-line {
   height: 256px;
@@ -11483,9 +12356,11 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-title-variant__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: var(--ds-typography-header-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-header-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
   white-space: nowrap;
 }
 
@@ -11504,11 +12379,19 @@ CSS-правила компонента:
 }
 .ds-toggle-buttons__icon {
   flex-shrink: 0;
-  width: 24.0px;
-  height: 24.0px;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-toggle-buttons__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-toggle-buttons__icon svg path {
+  fill: currentColor;
 }
 .ds-toggle-buttons--2-buttons {
   width: 76px;
@@ -11520,7 +12403,7 @@ CSS-правила компонента:
 }
 .ds-toggle-buttons--3-text {
   border-radius: var(--ds-size-1x);
-  border: 1.0px solid var(--ds-color-button-icon-neutral-outlined-border-color);
+  border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
 }
 .ds-toggle-buttons--text {
   width: 53px;
@@ -11540,10 +12423,18 @@ CSS-правила компонента:
 .ds-tree__icon {
   flex-shrink: 0;
   width: 24.000001907348633px;
-  height: 44.0px;
+  height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.ds-tree__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-tree__icon svg path {
+  fill: currentColor;
 }
 .ds-tree--3 {
   width: 48px;
