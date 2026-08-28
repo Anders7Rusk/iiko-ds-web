@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Подтверждение заказа — iiko DS</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/button.css">
+<link rel="stylesheet" href="../components/input.css">
+<link rel="stylesheet" href="../components/selection.css">
+<link rel="stylesheet" href="../components/selection-icons.css">
+<link rel="stylesheet" href="../components/badge.css">
+<link rel="stylesheet" href="../components/navigation.css">
+<link rel="stylesheet" href="../components/card.css">
+<link rel="stylesheet" href="../components/expansion.css">
+<link rel="stylesheet" href="../components/stepper.css">
+<link rel="stylesheet" href="../components/toggle.css">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ds-color-surface-default);
+    color: var(--ds-color-text-primary);
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: var(--ds-typography-body-font-size-s);
+    line-height: var(--ds-typography-body-line-height-s);
+  }
+  .app-bar {
+    display: flex; align-items: center; gap: var(--ds-space-3x);
+    height: 56px; padding: 0 var(--ds-space-4x);
+    border-bottom: 1px solid var(--ds-color-stroke-default);
+  }
+  .app-bar__spacer { flex: 1; }
+  .app-bar__logo { display: inline-flex; align-items: center; }
+  .app-bar__user { display: inline-flex; align-items: center; gap: var(--ds-space-2x); }
+  .page { padding: var(--ds-space-6x); max-width: 1020px; }
+  .page__head { display: flex; align-items: center; gap: var(--ds-space-3x); margin-bottom: var(--ds-space-5x); }
+  .page__title {
+    margin: 0; flex: 1;
+    font-size: var(--ds-typography-header-font-size-m);
+    line-height: var(--ds-typography-header-line-height-m);
+    font-weight: var(--ds-typography-font-weight-medium);
+  }
+  .section-title {
+    margin: var(--ds-space-6x) 0 var(--ds-space-4x);
+    font-size: var(--ds-typography-header-font-size-s);
+    line-height: var(--ds-typography-header-line-height-s);
+    font-weight: var(--ds-typography-font-weight-medium);
+  }
+  .content { max-width: 770px; }
+  .card-stack { display: flex; flex-direction: column; gap: var(--ds-space-4x); }
+  .card-title-row { display: flex; align-items: center; gap: var(--ds-space-2x); }
+  .card-title-row .ds-card__title {
+    font-size: var(--ds-typography-body-font-size-m);
+    line-height: var(--ds-typography-body-line-height-m);
+  }
+  .stack-16 { display: flex; flex-direction: column; gap: var(--ds-space-4x); }
+  .stack-12 { display: flex; flex-direction: column; gap: var(--ds-space-3x); }
+  .footer-nav {
+    display: flex; align-items: center; justify-content: flex-end;
+    gap: var(--ds-space-4x); margin-top: var(--ds-space-6x);
+  }
+  .footer-nav__counter { color: var(--ds-color-text-primary); font-weight: var(--ds-typography-font-weight-medium); }
+  .hint-icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 20px; height: 20px; flex-shrink: 0;
+    color: var(--ds-color-icon-primary);
+  }
+  .hint-icon svg { width: 20px; height: 20px; display: block; }
+  .hint-icon svg path { fill: currentColor; }
+  .w-280 { width: 280px; }
+</style>
+</head>
+<body>
+
+<header class="app-bar">
+  <button class="ds-btn ds-btn--s ds-btn--neutral ds-btn--text" type="button" aria-label="Меню">
+    <span class="ds-btn__icon" data-icon="menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill="#616161"/>
+</svg></span>
+  </button>
+  <span class="app-bar__logo"><svg width="66" height="28" viewBox="0 0 169 72" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_55332_22289)"><path d="M142.121 27.4503C125.935 27.4503 115.721 35.7723 115.721 49.5734C115.721 63.3744 125.935 71.6712 142.121 71.6712C158.308 71.6712 168.521 63.3491 168.521 49.5734C168.521 35.7976 158.282 27.4503 142.121 27.4503ZM142.121 59.5548C137.728 59.5548 137.626 53.9089 137.626 49.5734C137.626 45.2378 137.723 39.5666 142.121 39.5666C146.519 39.5666 146.58 45.2125 146.58 49.5734C146.58 53.9342 146.514 59.5548 142.121 59.5548Z" fill="#FF5252"/><path d="M20.0802 28.4165H1.73282C1.14173 28.4165 0.662552 28.8922 0.662552 29.4789V69.6324C0.662552 70.2191 1.14173 70.6948 1.73282 70.6948H20.0802C20.6713 70.6948 21.1505 70.2191 21.1505 69.6324V29.4789C21.1505 28.8922 20.6713 28.4165 20.0802 28.4165Z" fill="#FF5252"/><path d="M20.0802 9.87015H1.73282C1.14173 9.87015 0.662552 10.3458 0.662552 10.9325V22.9325C0.662552 23.5193 1.14173 23.9949 1.73282 23.9949H20.0802C20.6713 23.9949 21.1505 23.5193 21.1505 22.9325V10.9325C21.1505 10.3458 20.6713 9.87015 20.0802 9.87015Z" fill="#FF5252"/><path d="M48.6869 28.4165H30.3395C29.7484 28.4165 29.2692 28.8922 29.2692 29.4789V69.6324C29.2692 70.2191 29.7484 70.6948 30.3395 70.6948H48.6869C49.278 70.6948 49.7571 70.2191 49.7571 69.6324V29.4789C49.7571 28.8922 49.278 28.4165 48.6869 28.4165Z" fill="#FF5252"/><path d="M48.6869 9.87015H30.3395C29.7484 9.87015 29.2692 10.3458 29.2692 10.9325V22.9325C29.2692 23.5193 29.7484 23.9949 30.3395 23.9949H48.6869C49.278 23.9949 49.7571 23.5193 49.7571 22.9325V10.9325C49.7571 10.3458 49.278 9.87015 48.6869 9.87015Z" fill="#FF5252"/><path d="M99.6825 48.0506C99.3002 47.4536 99.341 46.6897 99.7691 46.1282L111.338 31.1332C112.199 30.0253 111.394 28.4216 109.988 28.4216H91.1815C90.626 28.4216 90.096 28.6948 89.7851 29.1551L78.69 45.2175H78.3434V11.5599C78.3434 10.629 77.584 9.87521 76.6463 9.87521H59.5832C58.6454 9.87521 57.8861 10.629 57.8861 11.5599V69.0051C57.8861 69.9359 58.6454 70.6897 59.5832 70.6897H76.6463C77.584 70.6897 78.3434 69.9359 78.3434 69.0051V50.2007H78.69L89.6475 69.8246C89.9431 70.3609 90.519 70.6897 91.1356 70.6897H110.925C112.256 70.6897 113.071 69.2277 112.363 68.1045L99.6723 48.0455H99.6774L99.6825 48.0506Z" fill="#FF5252"/><path d="M133.595 11.2766C134.456 12.4098 135.618 13.2293 136.668 14.1956C137.876 15.3288 139.134 16.8364 139.038 18.5565C138.971 19.3457 138.691 20.0337 138.243 20.6863C137.636 21.597 136.933 22.371 136.184 23.1096C135.46 23.8128 135.48 24.9815 136.224 25.6644H136.209L137.31 26.6813C138.003 27.3187 139.094 27.3035 139.766 26.6408C140.169 26.2412 140.567 25.8213 140.944 25.4014C141.015 25.4975 141.097 25.5936 141.193 25.6745H141.188L142.305 26.6863C143.008 27.3238 144.088 27.2985 144.761 26.6358C145.164 26.2361 145.561 25.8263 145.938 25.4064C146.005 25.5025 146.081 25.5936 146.173 25.6695H146.168L147.258 26.6712C147.962 27.3086 149.042 27.2884 149.725 26.6206C150.388 25.968 151.035 25.3002 151.611 24.5818C152.182 23.8584 152.589 22.973 152.849 22.1332C153.068 21.511 153.043 20.7572 152.977 20.0944C152.91 19.5329 152.661 18.8752 152.375 18.3693C151.774 17.2361 150.79 16.2041 149.847 15.3187C148.522 14.0894 147.156 13.1231 146.428 11.3676C146.208 10.8668 146.045 10.2041 146.045 9.67286C146.015 9.01518 146.142 8.44351 146.392 7.85161C146.896 6.59191 147.702 5.63576 148.655 4.79596C149.419 4.10793 149.429 2.90894 148.67 2.20574L147.615 1.21417C146.953 0.596972 145.923 0.576736 145.24 1.15852C144.807 1.52783 144.379 1.91232 143.997 2.35751C143.976 2.37775 143.956 2.41316 143.93 2.43846C143.864 2.35751 143.803 2.27151 143.721 2.19562L142.666 1.20405C142.009 0.586854 140.995 0.566618 140.296 1.13829C139.843 1.51771 139.41 1.90726 139.012 2.35245C138.992 2.37269 138.961 2.4081 138.941 2.43846C138.875 2.35245 138.803 2.27151 138.722 2.19056L137.667 1.199C137.004 0.581795 135.975 0.561559 135.292 1.14335C134.859 1.51265 134.43 1.89714 134.048 2.34233C132.754 3.7538 131.734 5.79259 132.091 7.77572C132.31 9.03542 132.82 10.2243 133.61 11.2563L133.595 11.2664V11.2766ZM141.397 7.86679C141.555 7.4823 141.759 7.12817 141.968 6.78921C141.953 7.12817 141.968 7.46206 142.019 7.80102C142.238 9.06072 142.748 10.2496 143.538 11.2816C144.399 12.4148 145.561 13.2344 146.601 14.2007C147.809 15.3339 149.068 16.8415 148.976 18.5616C148.91 19.3508 148.629 20.0388 148.181 20.6914C148.13 20.7724 148.074 20.8331 148.023 20.914C148.023 20.6358 148.023 20.3626 148.002 20.0944C147.936 19.5329 147.686 18.8752 147.401 18.3693C146.8 17.2361 145.78 16.2041 144.873 15.3187C143.512 14.0894 142.182 13.1231 141.433 11.3676C141.244 10.8668 141.086 10.2041 141.051 9.67286C141.02 9.01518 141.148 8.44351 141.397 7.85161V7.86173V7.86679ZM136.433 7.85667C136.591 7.46206 136.79 7.11299 136.999 6.76392C136.984 7.10793 136.984 7.45195 137.04 7.79596C137.259 9.05566 137.799 10.2445 138.559 11.2766C139.445 12.4098 140.582 13.2293 141.632 14.1956C142.84 15.3288 144.098 16.8364 144.002 18.5565C143.971 19.3457 143.655 20.0337 143.242 20.6863C143.176 20.7723 143.115 20.8533 143.054 20.9444C143.054 20.656 143.038 20.3575 143.013 20.0843C142.947 19.5228 142.697 18.8651 142.412 18.3592C141.81 17.226 140.827 16.1939 139.884 15.3086C138.559 14.0793 137.193 13.113 136.464 11.3575C136.245 10.8567 136.082 10.1939 136.082 9.66274C136.051 9.00507 136.179 8.4334 136.428 7.84149V7.85161L136.433 7.85667Z" fill="#FF5252"/></g><defs><clipPath id="clip0_55332_22289"><rect width="169" height="72" fill="white"/></clipPath></defs></svg></span>
+  <span class="app-bar__spacer"></span>
+  <button class="ds-btn ds-btn--s ds-btn--neutral ds-btn--text" type="button" aria-label="Уведомления">
+    <span class="ds-btn__icon" data-icon="notifications"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 19V17H6V10C6 8.61667 6.41667 7.3875 7.25 6.3125C8.08333 5.2375 9.16667 4.53333 10.5 4.2V3.5C10.5 3.08333 10.6458 2.72917 10.9375 2.4375C11.2292 2.14583 11.5833 2 12 2C12.4167 2 12.7708 2.14583 13.0625 2.4375C13.3542 2.72917 13.5 3.08333 13.5 3.5V4.2C14.8333 4.53333 15.9167 5.2375 16.75 6.3125C17.5833 7.3875 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9792 21.8042 10.5875 21.4125C10.1958 21.0208 10 20.55 10 20H14C14 20.55 13.8042 21.0208 13.4125 21.4125C13.0208 21.8042 12.55 22 12 22ZM8 17H16V10C16 8.9 15.6083 7.95833 14.825 7.175C14.0417 6.39167 13.1 6 12 6C10.9 6 9.95833 6.39167 9.175 7.175C8.39167 7.95833 8 8.9 8 10V17Z" fill="#616161"/>
+</svg></span>
+  </button>
+  <button class="ds-btn ds-btn--s ds-btn--neutral ds-btn--text" type="button">
+    <span class="ds-btn__icon" data-icon="account_circle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.85 17.1C6.7 16.45 7.65 15.9375 8.7 15.5625C9.75 15.1875 10.85 15 12 15C13.15 15 14.25 15.1875 15.3 15.5625C16.35 15.9375 17.3 16.45 18.15 17.1C18.7333 16.4167 19.1875 15.6417 19.5125 14.775C19.8375 13.9083 20 12.9833 20 12C20 9.78333 19.2208 7.89583 17.6625 6.3375C16.1042 4.77917 14.2167 4 12 4C9.78333 4 7.89583 4.77917 6.3375 6.3375C4.77917 7.89583 4 9.78333 4 12C4 12.9833 4.1625 13.9083 4.4875 14.775C4.8125 15.6417 5.26667 16.4167 5.85 17.1ZM12 13C11.0167 13 10.1875 12.6625 9.5125 11.9875C8.8375 11.3125 8.5 10.4833 8.5 9.5C8.5 8.51667 8.8375 7.6875 9.5125 7.0125C10.1875 6.3375 11.0167 6 12 6C12.9833 6 13.8125 6.3375 14.4875 7.0125C15.1625 7.6875 15.5 8.51667 15.5 9.5C15.5 10.4833 15.1625 11.3125 14.4875 11.9875C13.8125 12.6625 12.9833 13 12 13ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22ZM12 20C12.8833 20 13.7167 19.8708 14.5 19.6125C15.2833 19.3542 16 18.9833 16.65 18.5C16 18.0167 15.2833 17.6458 14.5 17.3875C13.7167 17.1292 12.8833 17 12 17C11.1167 17 10.2833 17.1292 9.5 17.3875C8.71667 17.6458 8 18.0167 7.35 18.5C8 18.9833 8.71667 19.3542 9.5 19.6125C10.2833 19.8708 11.1167 20 12 20ZM12 11C12.4333 11 12.7917 10.8583 13.075 10.575C13.3583 10.2917 13.5 9.93333 13.5 9.5C13.5 9.06667 13.3583 8.70833 13.075 8.425C12.7917 8.14167 12.4333 8 12 8C11.5667 8 11.2083 8.14167 10.925 8.425C10.6417 8.70833 10.5 9.06667 10.5 9.5C10.5 9.93333 10.6417 10.2917 10.925 10.575C11.2083 10.8583 11.5667 11 12 11Z" fill="#616161"/>
+</svg></span>
+    <span class="ds-btn__label">Администратор</span>
+    <span class="ds-btn__icon" data-icon="arrow_drop_down"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 15L7 10H17L12 15Z" fill="#616161"/>
+</svg></span>
+  </button>
+</header>
+
+<main class="page">
+
+  <div class="page__head">
+    <button class="ds-btn ds-btn--s ds-btn--neutral ds-btn--text" type="button" aria-label="Назад">
+      <span class="ds-btn__icon" data-icon="arrow_back"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="#616161"/>
+</svg></span>
+    </button>
+    <h1 class="page__title">Метро</h1>
+    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button" disabled>
+      <span class="ds-btn__label">Сохранить</span>
+    </button>
+  </div>
+
+  <nav class="ds-stepper">
+    <button class="ds-step" type="button"><span class="ds-step__num">1</span>Общие настройки</button>
+    <span class="ds-stepper__divider"></span>
+    <button class="ds-step" type="button"><span class="ds-step__num">2</span>Создание заказа</button>
+    <span class="ds-stepper__divider"></span>
+    <button class="ds-step ds-step--selected" type="button" aria-current="step"><span class="ds-step__num">3</span>Подтверждение заказа</button>
+    <span class="ds-stepper__divider"></span>
+    <button class="ds-step" type="button"><span class="ds-step__num">4</span>Приёмка</button>
+  </nav>
+
+  <div class="content">
+
+    <div class="ds-banner ds-banner--negative ds-banner--horizontal" style="margin-top:24px">
+      <span class="ds-banner__icon" data-icon="warning"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 21L12 2L23 21H1ZM4.45 19H19.55L12 6L4.45 19ZM12 18C12.2833 18 12.5208 17.9042 12.7125 17.7125C12.9042 17.5208 13 17.2833 13 17C13 16.7167 12.9042 16.4792 12.7125 16.2875C12.5208 16.0958 12.2833 16 12 16C11.7167 16 11.4792 16.0958 11.2875 16.2875C11.0958 16.4792 11 16.7167 11 17C11 17.2833 11.0958 17.5208 11.2875 17.7125C11.4792 17.9042 11.7167 18 12 18ZM11 15H13V10H11V15Z" fill="#616161"/>
+</svg></span>
+      <span class="ds-banner__text">Недопустимые настройки. Заказ с такими настройками создастся отменённым и не может быть использован</span>
+    </div>
+
+    <h2 class="section-title">Подтверждение заказа</h2>
+
+    <div class="card-stack">
+      <!-- КАРТОЧКА 1 -->
+      <div class="ds-card ds-card--outlined">
+        <div class="ds-card__header">
+          <div class="card-title-row">
+            <h3 class="ds-card__title">Укажите кто должен подтверждать заказ</h3>
+            <span class="hint-icon" data-icon="info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 17H13V11H11V17ZM12 9C12.2833 9 12.5208 8.90417 12.7125 8.7125C12.9042 8.52083 13 8.28333 13 8C13 7.71667 12.9042 7.47917 12.7125 7.2875C12.5208 7.09583 12.2833 7 12 7C11.7167 7 11.4792 7.09583 11.2875 7.2875C11.0958 7.47917 11 7.71667 11 8C11 8.28333 11.0958 8.52083 11.2875 8.7125C11.4792 8.90417 11.7167 9 12 9ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z" fill="#616161"/>
+</svg></span>
+          </div>
+        </div>
+        <div class="ds-card__content">
+          <div class="stack-16" style="padding-bottom:16px">
+
+            <label class="ds-slide-toggle">
+              <span class="ds-slide-toggle__row">
+                <input type="checkbox" class="ds-slide-toggle__input">
+                <span class="ds-slide-toggle__track"></span>
+                <span class="ds-slide-toggle__title">Требуется подтверждение</span>
+              </span>
+            </label>
+
+            <div class="ds-radio-group ds-radio-group--vertical">
+              <label class="ds-radio">
+                <input type="radio" name="who" class="ds-radio__input" checked>
+                <span class="ds-radio__box"></span>
+                <span class="ds-radio__label">Любой сотрудник</span>
+              </label>
+              <label class="ds-radio">
+                <input type="radio" name="who" class="ds-radio__input">
+                <span class="ds-radio__box"></span>
+                <span class="ds-radio__label">Менеджер</span>
+              </label>
+              <label class="ds-radio">
+                <input type="radio" name="who" class="ds-radio__input">
+                <span class="ds-radio__box"></span>
+                <span class="ds-radio__label">Руководитель</span>
+              </label>
+            </div>
+
+            <div class="ds-input ds-input--m ds-input--disabled w-280">
+              <div class="ds-input__frame">
+                <div class="ds-input__content">
+                  <input class="ds-input__field" type="text" placeholder="Сумма для подтверждения, ₽" disabled>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- КАРТОЧКА 2 -->
+      <div class="ds-card ds-card--outlined">
+        <div class="ds-card__header">
+          <div class="card-title-row">
+            <h3 class="ds-card__title">Укажите, что сотрудник может изменять в заказе</h3>
+          </div>
+        </div>
+        <div class="ds-card__content">
+          <div class="stack-16" style="padding-bottom:16px">
+
+            <label class="ds-slide-toggle">
+              <span class="ds-slide-toggle__row">
+                <input type="checkbox" class="ds-slide-toggle__input" checked>
+                <span class="ds-slide-toggle__track"></span>
+                <span class="ds-slide-toggle__title">Разрешить изменять заказ после отправки поставщику</span>
+                <span class="ds-slide-toggle__icon" data-icon="info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 17H13V11H11V17ZM12 9C12.2833 9 12.5208 8.90417 12.7125 8.7125C12.9042 8.52083 13 8.28333 13 8C13 7.71667 12.9042 7.47917 12.7125 7.2875C12.5208 7.09583 12.2833 7 12 7C11.7167 7 11.4792 7.09583 11.2875 7.2875C11.0958 7.47917 11 7.71667 11 8C11 8.28333 11.0958 8.52083 11.2875 8.7125C11.4792 8.90417 11.7167 9 12 9ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z" fill="#616161"/>
+</svg></span>
+              </span>
+            </label>
+
+            <div class="ds-input ds-input--m w-280">
+              <div class="ds-input__frame">
+                <div class="ds-input__content">
+                  <label class="ds-input__label" for="t1">Ограничить время для изменений, ч</label>
+                  <input class="ds-input__field" id="t1" type="text" value="11:00">
+                </div>
+                <span class="ds-input__icon" data-icon="schedule"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.3 16.7L16.7 15.3L13 11.6V7H11V12.4L15.3 16.7ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22ZM12 20C14.2167 20 16.1042 19.2208 17.6625 17.6625C19.2208 16.1042 20 14.2167 20 12C20 9.78333 19.2208 7.89583 17.6625 6.3375C16.1042 4.77917 14.2167 4 12 4C9.78333 4 7.89583 4.77917 6.3375 6.3375C4.77917 7.89583 4 9.78333 4 12C4 14.2167 4.77917 16.1042 6.3375 17.6625C7.89583 19.2208 9.78333 20 12 20Z" fill="#616161"/>
+</svg></span>
+              </div>
+            </div>
+
+            <label class="ds-slide-toggle">
+              <span class="ds-slide-toggle__row">
+                <input type="checkbox" class="ds-slide-toggle__input">
+                <span class="ds-slide-toggle__track"></span>
+                <span class="ds-slide-toggle__title">Добавлять товары из выбранного списка товаров</span>
+              </span>
+              <span class="ds-slide-toggle__support">Заказ автоматически уходит в ПРК, как только получены все необходимые подтверждения</span>
+            </label>
+
+            <label class="ds-slide-toggle">
+              <span class="ds-slide-toggle__row">
+                <input type="checkbox" class="ds-slide-toggle__input">
+                <span class="ds-slide-toggle__track"></span>
+                <span class="ds-slide-toggle__title">Стоимость товаров в заказе видна сотруднику ресторана</span>
+              </span>
+            </label>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-nav">
+      <span class="footer-nav__counter">3 из 4</span>
+      <div class="ds-btn-group ds-btn-group--horizontal">
+        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button">
+          <span class="ds-btn__icon" data-icon="keyboard_arrow_left"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z" fill="#616161"/>
+</svg></span>
+          <span class="ds-btn__label">Назад</span>
+        </button>
+        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button">
+          <span class="ds-btn__label">Далее</span>
+          <span class="ds-btn__icon" data-icon="keyboard_arrow_right"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.58984 16.59L13.1698 12L8.58984 7.41L9.99984 6L15.9998 12L9.99984 18L8.58984 16.59Z" fill="#616161"/>
+</svg></span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>
