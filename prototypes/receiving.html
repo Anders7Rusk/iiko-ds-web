@@ -8,18 +8,19 @@
 <meta http-equiv="Expires" content="0">
 <title>Правила доставки и приёмка товара — iiko DS</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../tokens.css?v=301">
-<link rel="stylesheet" href="../components/button.css?v=301">
-<link rel="stylesheet" href="../components/input.css?v=301">
-<link rel="stylesheet" href="../components/selection.css?v=301">
-<link rel="stylesheet" href="../components/selection-icons.css?v=301">
-<link rel="stylesheet" href="../components/badge.css?v=301">
-<link rel="stylesheet" href="../components/navigation.css?v=301">
-<link rel="stylesheet" href="../components/card.css?v=301">
-<link rel="stylesheet" href="../components/expansion.css?v=301">
-<link rel="stylesheet" href="../components/stepper.css?v=301">
-<link rel="stylesheet" href="../components/toggle.css?v=301">
-<link rel="stylesheet" href="../components/components.css?v=301">
+<link rel="stylesheet" href="../tokens.css?v=302">
+<link rel="stylesheet" href="../components/components.css?v=302">
+<link rel="stylesheet" href="../components/button.css?v=302">
+<link rel="stylesheet" href="../components/button-icon.css?v=302">
+<link rel="stylesheet" href="../components/input.css?v=302">
+<link rel="stylesheet" href="../components/selection.css?v=302">
+<link rel="stylesheet" href="../components/selection-icons.css?v=302">
+<link rel="stylesheet" href="../components/badge.css?v=302">
+<link rel="stylesheet" href="../components/navigation.css?v=302">
+<link rel="stylesheet" href="../components/card.css?v=302">
+<link rel="stylesheet" href="../components/expansion.css?v=302">
+<link rel="stylesheet" href="../components/stepper.css?v=302">
+<link rel="stylesheet" href="../components/toggle.css?v=302">
 <style>
   /* каркас раскладки страницы (сетка/отступы). Вид элементов — только классы ds-* на токенах */
   * { box-sizing: border-box; }
@@ -71,8 +72,8 @@
   .hint-row__icon svg path { fill: currentColor; }
   .hint-row__text { color: var(--ds-color-text-secondary); }
   .page-footer {
-    display: flex; align-items: center; justify-content: space-between;
-    gap: var(--ds-space-4x); margin-top: var(--ds-space-6x);
+    display: flex; align-items: center;
+    margin-top: var(--ds-space-6x);
   }
   .w-280 { width: 280px; }
   .w-360 { width: 360px; }
@@ -84,7 +85,7 @@
 
   <!-- Верхняя панель: назад · заголовок · Сохранить -->
   <div class="page__head">
-    <button class="ds-button-icon ds-button-icon--s ds-button-icon--neutral ds-button-icon--text" type="button" aria-label="Назад">
+    <button class="ds-button-icon ds-button-icon--m ds-button-icon--neutral ds-button-icon--text" type="button" aria-label="Назад">
       <span class="ds-button-icon__icon" data-icon="arrow_back"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="#616161"/>
 </svg></span>
@@ -230,16 +231,18 @@
       </div>
     </div>
 
-    <!-- Нижняя панель: Stepper button, Position=Last (счётчик + «Назад») -->
+    <!-- Нижняя панель: Stepper button, Position=Last (счётчик + «Назад», gap 16 как в ДС) -->
     <div class="page-footer">
-      <span class="ds-stepper-button__counter">4 из 4</span>
-      <div class="ds-stepper-button__group">
+      <div class="ds-stepper-button">
+        <span class="ds-stepper-button__counter">4 из 4</span>
+        <div class="ds-stepper-button__group">
         <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button">
           <span class="ds-btn__icon" data-icon="keyboard_arrow_left"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z" fill="#616161"/>
 </svg></span>
           <span class="ds-btn__label">Назад</span>
         </button>
+        </div>
       </div>
     </div>
 
