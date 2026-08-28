@@ -13,10 +13,19 @@
   flex-direction: column;
   box-sizing: border-box;
   border-radius: var(--ds-radius-3x);                    /* 12px */
+  border: 1px solid var(--ds-color-stroke-default);      /* Default: #E0E0E0 — рамка вокруг шапки И контента */
+  background: var(--ds-color-surface-default);           /* #FFFFFF */
+  overflow: hidden;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* ── Шапка панели ─────────────────────────────────────────── */
+/* Variant=Info — пунктирная акцентная рамка вокруг всей панели */
+.ds-expansion--info {
+  border: 1px dashed var(--ds-color-stroke-accent);      /* #448AFF, пунктир */
+  background: var(--ds-palette-accent-10);               /* #F5F9FF */
+}
+
+/* ── Шапка панели (44px, рамки нет — она у контейнера) ────── */
 
 .ds-expansion__header {
   display: flex;
@@ -25,25 +34,19 @@
   box-sizing: border-box;
   min-height: 44px;
   padding: var(--ds-space-3x) var(--ds-space-4x);         /* 12px 16px */
-  border-radius: var(--ds-radius-3x);                    /* 12px */
-  border: 1px solid var(--ds-color-stroke-default);      /* Default: #E0E0E0 */
-  background: var(--ds-color-surface-default-variant);   /* Default: #F8F9FC */
+  background: transparent;
   cursor: pointer;
-  transition: background-color .15s ease, border-color .15s ease;
-}
-
-/* Variant=Info — пунктирная акцентная рамка */
-.ds-expansion--info .ds-expansion__header {
-  border: 1px dashed var(--ds-color-stroke-accent);      /* #448AFF, пунктир */
-  background: var(--ds-palette-accent-10);               /* #F5F9FF */
+  transition: background-color .15s ease;
 }
 
 .ds-expansion__header:hover  { background: var(--ds-color-shapes-hover); }   /* #F5F5F5 */
 .ds-expansion__header:active { background: var(--ds-color-shapes-press); }   /* #E0E0E0 */
 
-.ds-expansion--disabled .ds-expansion__header {
+.ds-expansion--disabled {
   border-color: var(--ds-color-stroke-disable);          /* #EBEBEB */
   background: var(--ds-color-surface-disable);           /* #F5F5F5 */
+}
+.ds-expansion--disabled .ds-expansion__header {
   color: var(--ds-color-text-disable);
   pointer-events: none;
 }
@@ -103,5 +106,7 @@
 }
 .ds-expansion__content--no-padding { padding: 0; }
 
-/* закрытая панель — контент скрыт */
+/* иконки из файла иконок ДС приходят с fill из ДС — красим токеном компонента */
+.ds-expansion__icon svg path,
+.ds-expansion__arrow svg path { fill: currentColor; }
 .ds-expansion:not(.ds-expansion--open) .ds-expansion__content { display: none; }
