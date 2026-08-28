@@ -11,123 +11,77 @@
 <link rel="stylesheet" href="../components/selection.css">
 <link rel="stylesheet" href="../components/badge.css">
 <link rel="stylesheet" href="../components/navigation.css">
+<link rel="stylesheet" href="../components/card.css">
+<link rel="stylesheet" href="../components/expansion.css">
 <style>
-  /* ── каркас страницы (не компоненты ДС, только раскладка) ── */
+  /* раскладка страницы (не компоненты — только сетка и отступы из токенов) */
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    background: var(--ds-color-surface-default);
+    background: var(--ds-color-surface-default-variant);
     color: var(--ds-color-text-primary);
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-    font-size: var(--ds-typography-font-size-3-5x);
-    line-height: 20px;
+    font-size: var(--ds-typography-body-font-size-s);
+    line-height: var(--ds-typography-body-line-height-s);
   }
-  /* шапка */
-  .app-header {
-    display: flex;
-    align-items: center;
-    gap: var(--ds-space-3x);
-    height: 70px;
-    padding: 0 var(--ds-space-6x);
-    border-bottom: 1px solid var(--ds-color-divider-solid-default-color);
+  .app-bar {
+    display: flex; align-items: center; gap: var(--ds-space-3x);
+    height: 56px; padding: 0 var(--ds-space-4x);
+    background: var(--ds-color-surface-default);
+    border-bottom: 1px solid var(--ds-color-stroke-default);
   }
-  .app-header__logo {
-    display: flex;
-    align-items: center;
-    gap: var(--ds-space-2x);
-    font-weight: var(--ds-typography-font-weight-medium);
-    color: var(--ds-color-text-primary);
-  }
-  .app-header__logo-mark {
-    width: 24px; height: 24px;
-    display: inline-flex; align-items: center; justify-content: center;
-    color: var(--ds-color-icon-primary);
-  }
-  .app-header__spacer { flex: 1; }
-  /* контент */
-  .page { padding: var(--ds-space-6x); max-width: 760px; }
-  .page__title-row {
-    display: flex;
-    align-items: center;
-    gap: var(--ds-space-2x);
-    margin-bottom: var(--ds-space-6x);
-  }
+  .app-bar__title { font-weight: var(--ds-typography-font-weight-medium); }
+  .app-bar__spacer { flex: 1; }
+  .page { padding: var(--ds-space-6x); max-width: 860px; }
+  .page__head { display: flex; align-items: center; gap: var(--ds-space-2x); margin-bottom: var(--ds-space-5x); }
   .page__title {
     margin: 0;
-    font-size: var(--ds-typography-header-font-size-s);      /* ДС: 20px */
-    line-height: var(--ds-typography-header-line-height-s);  /* ДС: 28px */
+    font-size: var(--ds-typography-header-font-size-s);
+    line-height: var(--ds-typography-header-line-height-s);
     font-weight: var(--ds-typography-font-weight-medium);
-    letter-spacing: var(--ds-typography-letter-spacing-none);
   }
-  .tabs-row { margin-bottom: var(--ds-space-4x); }
-  .section-head {
-    display: flex;
-    align-items: center;
-    gap: var(--ds-space-4x);
-    margin: var(--ds-space-6x) 0 var(--ds-space-4x);
-  }
-  .section-head__title {
-    flex: 1;
-    margin: 0;
-    font-size: var(--ds-typography-body-font-size-m);        /* ДС: 16px */
-    line-height: var(--ds-typography-body-line-height-m);    /* ДС: 24px */
-    font-weight: var(--ds-typography-font-weight-medium);
-    letter-spacing: var(--ds-typography-letter-spacing-s);
-  }
-  /* сетка полей: 2 колонки */
+  .tabs-row { margin-bottom: var(--ds-space-3x); }
   .form-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--ds-space-5x) var(--ds-space-7x);   /* 20px / 28px */
-    max-width: 420px;
+    display: grid; grid-template-columns: repeat(2, 250px);
+    gap: var(--ds-space-5x) var(--ds-space-6x);
+    padding: var(--ds-space-4x) 0;
   }
   .field { display: flex; flex-direction: column; gap: var(--ds-space-1-5x); }
   .field--wide { grid-column: 1 / -1; }
-  .icon-btn {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 24px; height: 24px;
-    border: none; background: none; padding: 0;
-    color: var(--ds-color-icon-secondary);
-    cursor: pointer;
-    border-radius: var(--ds-radius-2x);
-  }
-  .icon-btn:hover { background: var(--ds-color-shapes-hover); }
+  .field--wide .ds-input { max-width: 524px; }
+  .card-head-row { display: flex; align-items: center; gap: var(--ds-space-4x); }
+  .card-head-row .ds-card__title { flex: 1; font-size: var(--ds-typography-body-font-size-m); line-height: var(--ds-typography-body-line-height-m); }
+  .stack { display: flex; flex-direction: column; }
 </style>
 </head>
 <body>
 
-<!-- ═══ Шапка ═══ -->
-<header class="app-header">
-  <span class="app-header__logo">
-    <span class="app-header__logo-mark" aria-hidden="true">
-      <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M3,3h8v8H3V3zM13,3h8v8h-8V3zM3,13h8v8H3V13zM13,13h8v8h-8V13z"/></svg>
-    </span>
-    <span>Romashk...</span>
-  </span>
-  <span class="app-header__spacer"></span>
-  <!-- селектор точки: Button S Outlined -->
-  <button class="ds-btn ds-btn--s ds-btn--neutral ds-btn--outlined" type="button">
-    <span class="ds-btn__label">Донск...</span>
-    <span class="ds-btn__icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7,10l5,5 5,-5z"/></svg>
-    </span>
+<!-- Шапка: Button icon (меню) + название + Button S Outlined (точка) + Button icon (справка) -->
+<header class="app-bar">
+  <button class="ds-btn ds-btn--s ds-btn--neutral ds-btn--text" type="button" aria-label="Меню">
+    <span class="ds-btn__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3,3h8v8H3V3zM13,3h8v8h-8V3zM3,13h8v8H3V13zM13,13h8v8h-8V13z"/></svg></span>
   </button>
-  <button class="icon-btn" type="button" aria-label="Помощь">
-    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M11,18h2v-2h-2V18zM12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8zM12,6c-2.21,0 -4,1.79 -4,4h2c0,-1.1 0.9,-2 2,-2s2,0.9 2,2c0,2 -3,1.75 -3,5h2c0,-2.25 3,-2.5 3,-5 0,-2.21 -1.79,-4 -4,-4z"/></svg>
+  <span class="app-bar__title">Romashka</span>
+  <span class="app-bar__spacer"></span>
+  <button class="ds-btn ds-btn--s ds-btn--neutral ds-btn--outlined" type="button">
+    <span class="ds-btn__label">Донской</span>
+    <span class="ds-btn__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7,10l5,5 5,-5z"/></svg></span>
+  </button>
+  <button class="ds-btn ds-btn--s ds-btn--neutral ds-btn--text" type="button" aria-label="Справка">
+    <span class="ds-btn__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M11,18h2v-2h-2V18zM12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8zM12,6c-2.21,0 -4,1.79 -4,4h2c0,-1.1 0.9,-2 2,-2s2,0.9 2,2c0,2 -3,1.75 -3,5h2c0,-2.25 3,-2.5 3,-5 0,-2.21 -1.79,-4 -4,-4z"/></svg></span>
   </button>
 </header>
 
 <main class="page">
 
-  <!-- ═══ Заголовок страницы ═══ -->
-  <div class="page__title-row">
+  <div class="page__head">
     <h1 class="page__title">Настройки производства</h1>
-    <button class="icon-btn" type="button" aria-label="Справка">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M11,18h2v-2h-2V18zM12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8zM12,6c-2.21,0 -4,1.79 -4,4h2c0,-1.1 0.9,-2 2,-2s2,0.9 2,2c0,2 -3,1.75 -3,5h2c0,-2.25 3,-2.5 3,-5 0,-2.21 -1.79,-4 -4,-4z"/></svg>
+    <button class="ds-btn ds-btn--s ds-btn--neutral ds-btn--text" type="button" aria-label="Справка">
+      <span class="ds-btn__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M11,18h2v-2h-2V18zM12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8zM12,6c-2.21,0 -4,1.79 -4,4h2c0,-1.1 0.9,-2 2,-2s2,0.9 2,2c0,2 -3,1.75 -3,5h2c0,-2.25 3,-2.5 3,-5 0,-2.21 -1.79,-4 -4,-4z"/></svg></span>
     </button>
   </div>
 
-  <!-- ═══ Табы, уровень 1 ═══ -->
+  <!-- Tabs Lvl=1: 32px, 16/500 -->
   <div class="tabs-row">
     <nav class="ds-tabs" role="tablist">
       <button class="ds-tab" type="button" role="tab" aria-selected="false">Объединение заказов</button>
@@ -135,7 +89,7 @@
     </nav>
   </div>
 
-  <!-- ═══ Табы, уровень 2 ═══ -->
+  <!-- Tabs Lvl=2: 28px, 14/400 -->
   <div class="tabs-row">
     <nav class="ds-tabs ds-tabs--lvl2" role="tablist">
       <button class="ds-tab ds-tab--active" type="button" role="tab" aria-selected="true">Прием заказов в ЛК</button>
@@ -144,111 +98,133 @@
     </nav>
   </div>
 
-  <hr class="ds-divider-line">
+  <!-- Card view Type=Outlined: r8, рамка 1px #E0E0E0 -->
+  <div class="ds-card ds-card--outlined">
 
-  <!-- ═══ Секция: заголовок + кнопка ═══ -->
-  <div class="section-head">
-    <h2 class="section-head__title">Заказы из личного кабинета</h2>
-    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button">
-      <span class="ds-btn__label">Сохранить</span>
-    </button>
-  </div>
+    <div class="ds-card__header">
+      <div class="card-head-row">
+        <h2 class="ds-card__title">Заказы из личного кабинета</h2>
+        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button">
+          <span class="ds-btn__label">Сохранить</span>
+        </button>
+      </div>
+    </div>
 
-  <!-- ═══ Поля формы ═══ -->
-  <div class="form-grid">
+    <div class="ds-card__content">
+      <div class="form-grid">
 
-    <div class="field">
-      <span class="ds-field-label">Минимальная сумма заказа</span>
-      <div class="ds-input ds-input--m">
-        <div class="ds-input__frame">
-          <div class="ds-input__content">
-            <label class="ds-input__label" for="f-sum">Сумма в ₽</label>
-            <input class="ds-input__field" id="f-sum" type="text" value="0">
+        <div class="field">
+          <span class="ds-field-label">Минимальная сумма заказа</span>
+          <div class="ds-input ds-input--m">
+            <div class="ds-input__frame">
+              <div class="ds-input__content">
+                <label class="ds-input__label" for="f1">Сумма в ₽</label>
+                <input class="ds-input__field" id="f1" type="text" value="0">
+              </div>
+              <span class="ds-input__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7,4v8h4c2.21,0 4,-1.79 4,-4s-1.79,-4 -4,-4H7zM9,6h2c1.1,0 2,0.9 2,2s-0.9,2 -2,2H9V6zM5,14h10v2H5v-2zM5,18h10v2H5v-2z"/></svg></span>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="field">
-      <span class="ds-field-label">Срок поставки</span>
-      <div class="ds-input ds-input--m">
-        <div class="ds-input__frame">
-          <div class="ds-input__content">
-            <label class="ds-input__label" for="f-term">Не менее, дней</label>
-            <input class="ds-input__field" id="f-term" type="text" value="0">
+        <div class="field">
+          <span class="ds-field-label">Срок поставки</span>
+          <div class="ds-input ds-input--m">
+            <div class="ds-input__frame">
+              <div class="ds-input__content">
+                <label class="ds-input__label" for="f2">Не менее, дней</label>
+                <input class="ds-input__field" id="f2" type="text" value="0">
+              </div>
+              <span class="ds-input__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12,8l-6,6h12z" transform="translate(0,-2)"/><path d="M12,16l-6,-6h12z" transform="translate(0,2)"/></svg></span>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="field field--wide">
-      <span class="ds-field-label">Время отправки заказов на производство</span>
-      <div class="ds-input ds-input--m">
-        <div class="ds-input__frame">
-          <div class="ds-input__content">
-            <label class="ds-input__label" for="f-time">Время</label>
-            <input class="ds-input__field" id="f-time" type="text" value="13:00">
+        <div class="field field--wide">
+          <span class="ds-field-label">Время отправки заказов на производство</span>
+          <div class="ds-input ds-input--m">
+            <div class="ds-input__frame">
+              <div class="ds-input__content">
+                <label class="ds-input__label" for="f3">Время</label>
+                <input class="ds-input__field" id="f3" type="text" value="13:00">
+              </div>
+              <span class="ds-input__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12,2C6.5,2 2,6.5 2,12s4.5,10 10,10 10,-4.5 10,-10S17.5,2 12,2zM12,20c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8zM12.5,7H11v6l5.25,3.15 0.75,-1.23 -4.5,-2.67z"/></svg></span>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="field">
-      <span class="ds-field-label">Минимальный срок доставки</span>
-      <div class="ds-input ds-input--m">
-        <div class="ds-input__frame">
-          <div class="ds-input__content">
-            <label class="ds-input__label" for="f-min">Не менее, дней</label>
-            <input class="ds-input__field" id="f-min" type="text" value="2">
+        <div class="field">
+          <span class="ds-field-label">Минимальный срок доставки</span>
+          <div class="ds-input ds-input--m">
+            <div class="ds-input__frame">
+              <div class="ds-input__content">
+                <label class="ds-input__label" for="f4">Не менее, дней</label>
+                <input class="ds-input__field" id="f4" type="text" value="2">
+              </div>
+              <span class="ds-input__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12,8l-6,6h12z" transform="translate(0,-2)"/><path d="M12,16l-6,-6h12z" transform="translate(0,2)"/></svg></span>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="field">
-      <span class="ds-field-label">Максимальный срок доставки</span>
-      <div class="ds-input ds-input--m">
-        <div class="ds-input__frame">
-          <div class="ds-input__content">
-            <label class="ds-input__label" for="f-max">Не более, дней</label>
-            <input class="ds-input__field" id="f-max" type="text" value="2">
+        <div class="field">
+          <span class="ds-field-label">Максимальный срок доставки</span>
+          <div class="ds-input ds-input--m">
+            <div class="ds-input__frame">
+              <div class="ds-input__content">
+                <label class="ds-input__label" for="f5">Не более, дней</label>
+                <input class="ds-input__field" id="f5" type="text" value="2">
+              </div>
+              <span class="ds-input__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12,8l-6,6h12z" transform="translate(0,-2)"/><path d="M12,16l-6,-6h12z" transform="translate(0,2)"/></svg></span>
+            </div>
           </div>
         </div>
+
       </div>
+
+      <!-- Expansion panel Variant=Info: пунктир 1px #448AFF, фон #F5F9FF, r12 -->
+      <div class="ds-expansion ds-expansion--info ds-expansion--open">
+        <div class="ds-expansion__header">
+          <span class="ds-expansion__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M11,7h2v2h-2V7zM11,11h2v6h-2v-6zM12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8z"/></svg></span>
+          <span class="ds-expansion__title">Как рассчитывается дата заказа</span>
+          <span class="ds-expansion__actions">
+            <button class="ds-btn ds-btn--s ds-btn--accent ds-btn--text" type="button">
+              <span class="ds-btn__label">Подробнее</span>
+            </button>
+            <span class="ds-expansion__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7,10l5,5 5,-5z"/></svg></span>
+          </span>
+        </div>
+        <div class="ds-expansion__content">
+          <span>Сегодня: 30 апреля 2026</span>
+          <span>Срок поставки: 2 дня</span>
+          <span>Минимальный срок доставки: —</span>
+          <span>Максимальный срок доставки: —</span>
+          <span>&nbsp;</span>
+          <span>Заказчик может выбрать дату доставки в диапазоне:</span>
+          <span>от — до —</span>
+        </div>
+      </div>
+
     </div>
 
-  </div>
-
-  <!-- ═══ Пояснение: компонент ДС Banners (Style=Accent, Orientation=Vertical) ═══
-       На скриншоте была серая панель, но в нашей ДС для пояснений
-       предусмотрен Banners — берём его: фон #F0F5FF, r12, padding 12/16 -->
-  <div class="ds-banner ds-banner--accent ds-banner--vertical" style="margin-top: 24px; max-width: 670px;">
-    <div class="ds-banner__row">
-      <span class="ds-banner__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M11,7h2v2h-2V7zM11,11h2v6h-2v-6zM12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8z"/></svg>
-      </span>
-      <span class="ds-banner__text"><strong style="font-weight:500">Как рассчитывается дата заказа</strong></span>
-    </div>
-    <div class="ds-banner__row" style="align-items: flex-start;">
-      <div style="flex:1; display:flex; flex-direction:column;">
-        <span>Сегодня: 30 апреля 2026</span>
-        <span>Срок поставки: 2 дня</span>
-        <span>Минимальный срок доставки: —</span>
-        <span>Максимальный срок доставки: —</span>
-        <span style="margin-top: 8px;">Заказчик может выбрать дату доставки в диапазоне:</span>
-        <span>от — до —</span>
-      </div>
-    </div>
-    <div class="ds-banner__buttons">
-      <button class="ds-btn ds-btn--s ds-btn--accent ds-btn--text" type="button">
-        <span class="ds-btn__label">Подробнее</span>
+    <div class="ds-card__footer ds-card__footer--right">
+      <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" type="button">
+        <span class="ds-btn__label">Отмена</span>
+      </button>
+      <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button">
+        <span class="ds-btn__label">Сохранить</span>
       </button>
     </div>
-  </div>
 
-  <hr class="ds-divider-line" style="margin-top: 16px;">
+  </div>
 
 </main>
 
+<script>
+  document.querySelectorAll('.ds-expansion__header').forEach(function (h) {
+    h.addEventListener('click', function (e) {
+      if (e.target.closest('.ds-btn')) return;
+      h.parentElement.classList.toggle('ds-expansion--open');
+    });
+  });
+</script>
 </body>
 </html>
