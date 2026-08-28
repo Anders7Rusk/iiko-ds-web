@@ -159,6 +159,25 @@
   gap: var(--ds-space-2x);
 }
 
+/* ── Иконки в инпутах: SVG из файла иконок ДС ─────────────── */
+
+.ds-input__icon svg { width: 20px; height: 20px; display: block; }
+.ds-input__icon svg path { fill: currentColor; }
+
+/* контрол числа (стрелки вверх/вниз, как Control number button в ДС) */
+.ds-input__stepper {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: var(--ds-color-icon-primary);                     /* #616161 */
+}
+.ds-input__stepper svg { width: 20px; height: 12px; display: block; }
+.ds-input__stepper svg path { fill: currentColor; }
+.ds-input__stepper button {
+  border: none; background: none; padding: 0; margin: 0;
+  display: flex; cursor: pointer; color: inherit;
+}
+
 /* ── Подпись группы полей (label над полем) ───────────────── */
 
 .ds-field-label {
