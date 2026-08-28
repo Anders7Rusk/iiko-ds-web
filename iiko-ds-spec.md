@@ -25,6 +25,7 @@
 
 ## Общие правила
 
+0. **Приоритет ДС над референсом (главное правило).** Референс (скриншот, макет, описание) задаёт **структуру, состав блоков и тексты**. Внешний вид берётся **только из этой дизайн-системы**. Если компонент на референсе отличается от ДС (другой цвет, радиус, высота, шрифт, самодельная панель) — использовать компонент ДС, а не копировать референс. Ничего не подгонять «на глаз» под картинку: размеры, отступы, типографика — только из токенов и параметров компонентов ниже. Если подходящего компонента в ДС нет — взять ближайший из каталога и явно пометить это в результате.
 1. **Никаких хардкодов.** Цвета, радиусы, отступы, размеры и шрифты — только через токены `var(--ds-*)`.
 2. **Классы компонентов** — префикс `ds-`: `ds-btn`, `ds-input`, `ds-checkbox`, `ds-radio`, `ds-badge`. Модификаторы через `--`: `ds-btn--m`, `ds-btn--accent`, `ds-btn--filled`.
 3. **Шрифт** — Roboto 400/500 (размеры, веса, letter-spacing — из токенов типографики).
@@ -1786,11 +1787,7 @@
 | Arrow select | `.ds-arrow-select` |
 | Autocomplete form | `.ds-autocomplete-form` · `--disabled` |
 | Backdrop | `.ds-backdrop` |
-| Badge | `.ds-badge` · `--accent` `--negative` `--positive` `--warning` `--counter` `--point` |
 | Banners | `.ds-banners` · `--negative` `--neutral` `--positive` `--tip` `--warning` `--horizontal` `--vertical` |
-| Button | `.ds-button` · `--m` `--s` `--xs` `--accent` `--disable` `--negative` `--neutral` `--positive` `--warning` `--filled` `--outlined` `--text` `--default` `--disable` `--hover` `--loading` `--press` `--disabled` · :active, :disabled, :hover |
-| Button | `.ds-button-2` · `--icon-outlined` `--disable` `--error` `--primary` `--secondary` `--warning` `--disabled` · :disabled |
-| Button group | `.ds-button-group` · `--vertically` `--on` |
 | Button icon | `.ds-button-icon` · `--m` `--s` `--xs` `--negative` `--neutral` `--positive` `--warning` `--filled` `--outlined` `--default` `--disable` `--hover` `--loading` `--press` `--disabled` · :active, :disabled, :hover |
 | Button icon group | `.ds-button-icon-group` · `--vertically` |
 | Button New | `.ds-button-new` · `--btn-28` `--btn-36` |
@@ -1798,8 +1795,6 @@
 | Card content | `.ds-card-content` · `--custom` |
 | Card footer | `.ds-card-footer` |
 | Card header | `.ds-card-header` |
-| Checkbox | `.ds-checkbox` |
-| Checkbox group | `.ds-checkbox-group` · `--group` `--horizontal` `--vertical` |
 | Checkbox label | `.ds-checkbox-label` |
 | Chips | `.ds-chips` · `--m` `--s` `--filled` `--outlined` `--default` `--disable` `--focus` `--hover` `--press` `--disabled` · :active, :disabled, :focus, :hover |
 | Chips group | `.ds-chips-group` · `--s` |
@@ -1840,7 +1835,6 @@
 | Icon group | `.ds-icon-group` · `--4x` |
 | Icon size | `.ds-icon-size` · `--20` `--24` `--32` `--36` `--40` |
 | Icon size_Draft | `.ds-icon-size-draft` · `--20` `--24` `--32` `--36` `--40` |
-| Input | `.ds-input` · `--s` `--xs` `--no-label-up` `--disabled` |
 | Input cell | `.ds-input-cell` · `--error` `--error-hover` `--focus` `--focus-placeholder` `--hover` `--vocus-value` `--disabled` · :focus, :hover |
 | Input Datepicker | `.ds-input-datepicker` |
 | Input for number | `.ds-input-for-number` · `--compact` `--normal` `--default` `--disable` `--error` `--focus` `--hover` `--disabled` · :disabled, :focus, :hover |
@@ -1854,8 +1848,6 @@
 | Menu item | `.ds-menu-item` · `--back-selected` `--hover` `--press` `--disabled` · :active, :hover |
 | Navigation Bar | `.ds-navigation-bar` |
 | Preview | `.ds-preview` |
-| Radio button | `.ds-radio-button` |
-| Radio button group | `.ds-radio-button-group` · `--horizontal` |
 | Radio button label | `.ds-radio-button-label` |
 | Scroll | `.ds-scroll` · `--s` |
 | Scroll tabs | `.ds-scroll-tabs` · `--left` |
@@ -4548,6 +4540,175 @@ CSS-правила компонента:
 .page-badge #matrix-root .matrix-row { grid-template-columns: repeat(2, 1fr); }
 
 /* ============================================================
+   iiko DS — Tabs, Divider, Info panel (выверено по ДС и макету)
+   Автогенерация для этих компонентов давала артефакты
+   (рамка у .ds-tabs, белый фон у .ds-divider), поэтому правила
+   заданы точно: цвета/размеры — только токены из tokens.css
+   ============================================================ */
+
+/* ── Tabs (подчёркнутые: актив = акцент + 2px) ────────────── */
+
+.ds-tabs {
+  display: flex;
+  align-items: stretch;
+  gap: var(--ds-space-0);
+  border-bottom: 1px solid var(--ds-color-divider-solid-default-color); /* #E0E0E0 */
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.ds-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ds-space-2x);                                /* 8px */
+  box-sizing: border-box;
+  height: 32px;                                           /* ДС: Tab element = 32px */
+  padding: var(--ds-space-1x) var(--ds-space-6x);          /* ДС: 4px 24px */
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: var(--ds-color-tab-innactive-default-background);
+  color: var(--ds-color-tab-innactive-text-color);        /* #333333 */
+  font-family: inherit;
+  font-size: var(--ds-typography-font-size-3-5x);         /* 14px */
+  font-weight: var(--ds-typography-font-weight-medium);   /* 500 */
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  line-height: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+
+.ds-tab:hover  { background: var(--ds-color-tab-innactive-hover-background); }  /* #F5F5F5 */
+.ds-tab:active { background: var(--ds-color-tab-innactive-press-background); }  /* #E0E0E0 */
+
+.ds-tab__icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ds-color-tab-innactive-icon-color);        /* #616161 */
+}
+
+.ds-tab--active {
+  color: var(--ds-color-tab-active-text-color);           /* #448AFF */
+  border-bottom-color: var(--ds-color-tab-active-divider);/* #448AFF */
+}
+.ds-tab--active .ds-tab__icon { color: var(--ds-color-tab-active-icon-color); }
+.ds-tab--active:hover  { background: var(--ds-color-tab-active-hover-background); }
+.ds-tab--active:active { background: var(--ds-color-tab-active-press-background); }
+
+.ds-tab--disabled,
+.ds-tab:disabled {
+  color: var(--ds-color-tab-disable-text-color);          /* #9E9E9E */
+  pointer-events: none;
+}
+.ds-tab--disabled .ds-tab__icon { color: var(--ds-color-tab-disable-icon-color); }
+
+/* Уровень 2 — ДС: padding 4px 12px, высота та же 32px */
+.ds-tabs--lvl2 .ds-tab {
+  padding: var(--ds-space-1x) var(--ds-space-3x);
+}
+
+/* Счётчик в табе (Badge внутри) */
+.ds-tab__counter {
+  color: var(--ds-color-tab-innactive-counter-text-color);
+  font-size: var(--ds-typography-font-size-3x);
+}
+.ds-tab--active .ds-tab__counter { color: var(--ds-color-tab-active-counter-text-color); }
+
+/* ── Divider ──────────────────────────────────────────────── */
+
+.ds-divider-line {
+  height: 1px;
+  border: none;
+  margin: 0;
+  background: var(--ds-color-divider-solid-default-color);  /* #E0E0E0 */
+}
+.ds-divider-line--lite     { background: var(--ds-color-divider-solid-lite-color); }
+.ds-divider-line--selected { background: var(--ds-color-divider-solid-selected-color); } /* #448AFF */
+.ds-divider-line--disable  { background: var(--ds-color-divider-solid-disable-color); }
+.ds-divider-line--dashed {
+  height: 0;
+  background: none;
+  border-top: 1px dashed var(--ds-color-divider-dashed-default-color);
+}
+
+/* ── (было .ds-info-panel — удалено: в ДС для пояснений
+       используется компонент Banners, см. .ds-banner ниже) ── */
+
+/* ── Banners (компонент ДС для информационных сообщений) ───
+   Style: Accent / Positive / Warning / Negative / Neutral
+   ДС: padding 12px 16px, radius 12px, gap 8px, иконка 20px       */
+
+.ds-banner {
+  display: flex;
+  gap: var(--ds-space-2x);                                /* 8px */
+  box-sizing: border-box;
+  padding: var(--ds-space-3x) var(--ds-space-4x);          /* 12px 16px */
+  border-radius: var(--ds-radius-3x);                     /* 12px */
+  background: var(--ds-color-banners-accent-background);  /* #F0F5FF */
+  color: var(--ds-color-banners-text-color);              /* #333333 */
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-size: var(--ds-typography-body-font-size-s);       /* 14px */
+  line-height: var(--ds-typography-body-line-height-s);   /* 20px */
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+}
+
+.ds-banner--horizontal { flex-direction: row; align-items: center; }
+.ds-banner--vertical   { flex-direction: column; }
+
+.ds-banner--accent   { background: var(--ds-color-banners-accent-background); }
+.ds-banner--positive { background: var(--ds-color-banners-positive-background); }
+.ds-banner--warning  { background: var(--ds-color-banners-warning-background); }
+.ds-banner--negative { background: var(--ds-color-banners-negative-background); }
+.ds-banner--neutral  {
+  background: var(--ds-color-banners-neutral-background);
+  border: 1px solid var(--ds-color-banners-border-color);
+}
+
+.ds-banner__icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ds-color-banners-accent-icon-color);       /* #448AFF */
+}
+.ds-banner--positive .ds-banner__icon { color: var(--ds-color-banners-positive-icon-color); }
+.ds-banner--warning  .ds-banner__icon { color: var(--ds-color-banners-warning-icon-color); }
+.ds-banner--negative .ds-banner__icon { color: var(--ds-color-banners-negative-icon-color); }
+.ds-banner--neutral  .ds-banner__icon { color: var(--ds-color-banners-neutral-icon-color); }
+
+.ds-banner__row {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2x);
+  width: 100%;
+}
+
+.ds-banner__text { flex: 1; }
+
+.ds-banner__buttons {
+  display: flex;
+  gap: var(--ds-space-2x);
+}
+
+/* ── Подпись группы полей (label над полем) ───────────────── */
+
+.ds-field-label {
+  display: block;
+  color: var(--ds-color-text-primary);                    /* #333333 */
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-size: var(--ds-typography-font-size-3-5x);         /* 14px */
+  font-weight: var(--ds-typography-font-weight-medium);   /* 500 */
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  line-height: 20px;
+}
+
+/* ============================================================
    iiko DS — компоненты (все 111, сгенерировано из Figma)
    Классы: .ds-<компонент> + модификаторы --<вариант>
    Все значения — только токены из tokens.css
@@ -4661,47 +4822,6 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Badge [54428:187] — 8 вариантов */
-.ds-badge {
-  height: 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-0-25x) var(--ds-size-0-25x);
-  border-radius: var(--ds-size-circular);
-  background: var(--ds-color-badge-accent-background);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-badge__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-}
-.ds-badge--accent {
-  width: 19px;
-}
-.ds-badge--negative {
-  width: 19px;
-  background: var(--ds-color-badge-negative-background);
-}
-.ds-badge--positive {
-  width: 19px;
-  background: var(--ds-color-badge-positive-background);
-}
-.ds-badge--warning {
-  width: 19px;
-  background: var(--ds-color-badge-warning-background);
-}
-.ds-badge--counter {
-  width: 19px;
-}
-.ds-badge--point {
-  height: var(--ds-size-2x);
-  width: var(--ds-size-2x);
-}
-
 /* Banners [54367:2566] — 12 вариантов */
 .ds-banners {
   height: 52px;
@@ -4750,196 +4870,6 @@ CSS-правила компонента:
 .ds-banners--vertical {
   height: 80px;
   background: var(--ds-color-banners-neutral-background);
-}
-
-/* Button [17022:63091] — 153 вариантов */
-.ds-button {
-  height: var(--ds-size-9x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2x);
-  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-2x);
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-button-accent-default);
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-button__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-}
-.ds-button__icon {
-  flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-button--m {
-  width: 125px;
-  background: var(--ds-color-button-accent-lite-default);
-}
-.ds-button--s {
-  height: var(--ds-size-7x);
-  width: 109px;
-  gap: var(--ds-size-1x);
-  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-1x);
-  background: var(--ds-color-button-accent-lite-default);
-}
-.ds-button--xs {
-  height: var(--ds-size-6x);
-  width: 91px;
-  gap: var(--ds-size-1x);
-  padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1x) var(--ds-size-1x);
-  background: var(--ds-color-button-accent-lite-default);
-}
-.ds-button--accent {
-  width: 125px;
-}
-.ds-button--disable {
-  width: 125px;
-  background: var(--ds-color-button-neutral-disable);
-}
-.ds-button--negative {
-  width: 125px;
-  background: var(--ds-color-button-negative-default);
-}
-.ds-button--neutral {
-  width: 125px;
-  background: var(--ds-color-button-accent-lite-default);
-}
-.ds-button--positive {
-  width: 125px;
-  background: var(--ds-color-button-positive-default);
-}
-.ds-button--warning {
-  width: 125px;
-  background: var(--ds-color-button-warning-default);
-}
-.ds-button--filled {
-  width: 125px;
-  background: var(--ds-color-button-accent-lite-default);
-}
-.ds-button--outlined {
-  width: 125px;
-  border: 1.0px solid var(--ds-color-button-icon-neutral-outlined-border-color);
-}
-.ds-button--text {
-  width: 125px;
-}
-.ds-button--default {
-  width: 125px;
-  background: var(--ds-color-button-accent-lite-default);
-}
-.ds-button--disable {
-  width: 125px;
-  background: var(--ds-color-button-neutral-disable);
-}
-.ds-button--hover {
-  width: 125px;
-  background: var(--ds-color-button-neutral-hover);
-}
-.ds-button--loading {
-  width: 125px;
-  background: var(--ds-color-button-neutral-disable);
-}
-.ds-button--press {
-  width: 125px;
-  background: var(--ds-color-button-neutral-disable);
-}
-.ds-button:hover {
-  background: var(--ds-color-button-neutral-hover);
-}
-.ds-button:active {
-  background: var(--ds-color-button-neutral-disable);
-}
-.ds-button:disabled {
-  background: var(--ds-color-button-neutral-disable);
-}
-.ds-button--disabled {
-  pointer-events: none;
-  opacity: 1;
-}
-
-/* Button [16953:14851] — 13 вариантов */
-.ds-button-2 {
-  height: var(--ds-size-9x);
-  width: var(--ds-size-9x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2x);
-  padding: 9px 9px 9px 9px;
-  border-radius: var(--ds-size-1x);
-  background: var(--ds-color-button-accent-lite-default);
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-button-2__icon {
-  flex-shrink: 0;
-  width: 18.0px;
-  height: 18.0px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-button-2--icon-outlined {
-  border: 1.0px solid var(--ds-color-button-icon-neutral-outlined-border-color);
-}
-.ds-button-2--disable {
-  background: var(--ds-color-button-neutral-disable);
-}
-.ds-button-2--error {
-  background: var(--ds-color-button-negative-default);
-}
-.ds-button-2--primary {
-  background: var(--ds-color-button-accent-default);
-}
-.ds-button-2--secondary {
-  background: var(--ds-color-button-positive-default);
-}
-.ds-button-2--warning {
-  background: var(--ds-color-button-warning-default);
-}
-.ds-button-2:disabled {
-  background: var(--ds-color-button-neutral-disable);
-}
-.ds-button-2--disabled {
-  pointer-events: none;
-  opacity: 1;
-}
-
-/* Button group [53619:15772] — 4 вариантов */
-.ds-button-group {
-  height: var(--ds-size-9x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-button-group__icon {
-  flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-button-group--vertically {
-  height: 124px;
-  width: 125px;
-}
-.ds-button-group--on {
-  height: 52px;
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
 }
 
 /* Button icon [17123:81299] — 153 вариантов */
@@ -5174,50 +5104,6 @@ CSS-правила компонента:
   font-weight: 500;
   line-height: 1;
   white-space: nowrap;
-}
-
-/* Checkbox [53806:5694] — 21 вариантов */
-.ds-checkbox {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-checkbox__icon {
-  flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Checkbox group [53810:889] — 3 вариантов */
-.ds-checkbox-group {
-  height: 76px;
-  display: flex;
-  flex-direction: column;
-  gap: var(--ds-size-2x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-checkbox-group__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-}
-.ds-checkbox-group--group {
-  height: 104px;
-}
-.ds-checkbox-group--horizontal {
-  height: var(--ds-size-5x);
-}
-.ds-checkbox-group--vertical {
-  width: 126px;
 }
 
 /* Checkbox label [53810:880] — 9 вариантов */
@@ -6544,43 +6430,6 @@ CSS-правила компонента:
   width: var(--ds-size-10x);
 }
 
-/* Input [52670:7573] — 29 вариантов */
-.ds-input {
-  height: 48px;
-  display: flex;
-  flex-direction: column;
-  gap: var(--ds-size-1x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-input__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-}
-.ds-input__icon {
-  flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-input--s {
-  height: var(--ds-size-9x);
-}
-.ds-input--xs {
-  height: var(--ds-size-7x);
-}
-.ds-input--no-label-up {
-  height: var(--ds-size-9x);
-}
-.ds-input--disabled {
-  pointer-events: none;
-  opacity: 1;
-}
-
 /* Input cell [60229:74436] — 8 вариантов */
 .ds-input-cell {
   height: var(--ds-size-9x);
@@ -6998,44 +6847,6 @@ CSS-правила компонента:
   display: inline-flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Radio button [54095:4263] — 14 вариантов */
-.ds-radio-button {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-radio-button__icon {
-  flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Radio button group [54095:4392] — 2 вариантов */
-.ds-radio-button-group {
-  height: 76px;
-  display: flex;
-  flex-direction: column;
-  gap: var(--ds-size-2x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-radio-button-group__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-}
-.ds-radio-button-group--horizontal {
-  height: var(--ds-size-5x);
 }
 
 /* Radio button label [54095:4306] — 6 вариантов */
