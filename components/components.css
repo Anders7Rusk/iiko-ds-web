@@ -112,56 +112,6 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Banners [54367:2566] — 12 вариантов */
-.ds-banners {
-  height: 52px;
-  display: flex;
-  flex-direction: row;
-  gap: var(--ds-size-2x);
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-banners-accent-background);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-banners__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-}
-.ds-banners__icon {
-  flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-banners--negative {
-  background: var(--ds-color-banners-negative-background);
-}
-.ds-banners--neutral {
-  background: var(--ds-color-banners-neutral-background);
-}
-.ds-banners--positive {
-  background: var(--ds-color-banners-positive-background);
-}
-.ds-banners--tip {
-  background: var(--ds-color-brand-accent-lightest);
-  border: 1.0px solid var(--ds-color-banners-border-color);
-}
-.ds-banners--warning {
-  background: var(--ds-color-banners-warning-background);
-}
-.ds-banners--horizontal {
-  background: var(--ds-color-banners-neutral-background);
-}
-.ds-banners--vertical {
-  height: 80px;
-  background: var(--ds-color-banners-neutral-background);
-}
-
 /* Button icon [17123:81299] — 153 вариантов */
 .ds-button-icon {
   height: var(--ds-size-9x);
@@ -341,61 +291,6 @@
   border: 1.0px solid var(--ds-color-button-icon-neutral-outlined-border-color);
 }
 
-/* Card content [53744:3079] — 2 вариантов */
-.ds-card-content {
-  height: 72px;
-  display: flex;
-  flex-direction: column;
-  padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-2x) var(--ds-size-2x);
-  background: var(--ds-color-card-background);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-card-content__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-}
-.ds-card-content--custom {
-  height: 88px;
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-4x);
-}
-
-/* Card footer [53744:3139] — 1 вариантов */
-.ds-card-footer {
-  height: 69px;
-  display: flex;
-  flex-direction: column;
-  background: var(--ds-color-card-background);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-card-footer__icon {
-  flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Card header [52916:15126] — 1 вариантов */
-.ds-card-header {
-  height: 125px;
-  display: flex;
-  flex-direction: column;
-  background: var(--ds-color-card-background);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-card-header__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-}
-
 /* Checkbox label [53810:880] — 9 вариантов */
 .ds-checkbox-label {
   height: var(--ds-size-5x);
@@ -568,6 +463,37 @@
   opacity: 1;
 }
 
+/* Chips Input [61382:55775] — 16 вариантов */
+.ds-chips-input-2 {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-chips-input-2__label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+.ds-chips-input-2__icon {
+  flex-shrink: 0;
+  width: 20.0px;
+  height: 20.0px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-chips-input-2--s {
+  height: var(--ds-size-9x);
+}
+.ds-chips-input-2--disabled {
+  pointer-events: none;
+  opacity: 1;
+}
+
 /* Chips input cell [60231:75648] — 8 вариантов */
 .ds-chips-input-cell {
   height: var(--ds-size-10x);
@@ -617,6 +543,15 @@
   opacity: 1;
 }
 
+/* Chrome Header desktop [56564:1013] — 1 вариантов */
+.ds-chrome-header-desktop {
+  height: 86px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
 /* Chrome Header mobile [56564:1062] — 2 вариантов */
 .ds-chrome-header-mobile {
   height: 66px;
@@ -634,6 +569,23 @@
 }
 .ds-chrome-header-mobile--on {
   background: var(--ds-color-brand-neutral-super-dark);
+}
+
+/* Content [57375:12699] — 1 вариантов */
+.ds-content {
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-4x);
+  padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-4x) var(--ds-size-6x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-content__label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 /* Control arrow button [52868:3935] — 3 вариантов */
@@ -803,6 +755,39 @@
   padding: 0 0 var(--ds-size-0-5x) var(--ds-size-0-5x);
 }
 
+/* Datepicker [58509:5439] — 3 вариантов */
+.ds-datepicker {
+  height: 337px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  border-radius: var(--ds-size-3x);
+  border: 1.0px solid var(--ds-color-brand-neutral-lighter);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-datepicker__label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+.ds-datepicker__icon {
+  flex-shrink: 0;
+  width: 20.0px;
+  height: 20.0px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-datepicker--month {
+  height: 248px;
+}
+.ds-datepicker--year {
+  height: 292px;
+}
+
 /* Dialog content [53535:1369] — 1 вариантов */
 .ds-dialog-content {
   height: 204px;
@@ -896,33 +881,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Divider [58320:441] — 16 вариантов */
-.ds-divider {
-  height: var(--ds-size-0-25x);
-  display: flex;
-  flex-direction: column;
-  background: var(--ds-color-brand-neutral-default);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-divider--l {
-  height: var(--ds-size-0-5x);
-}
-.ds-divider--disabled {
-  pointer-events: none;
-  opacity: 1;
-}
-
-/* Divider [53556:7964] — 1 вариантов */
-.ds-divider-2 {
-  height: var(--ds-size-0-25x);
-  display: flex;
-  flex-direction: column;
-  background: var(--ds-color-brand-neutral-default);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* Element [54104:20956] — 9 вариантов */
@@ -1408,64 +1366,6 @@
   height: 408px;
 }
 
-/* Expansion panel  [52937:1329] — 12 вариантов */
-.ds-expansion-panel {
-  height: 44px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2x);
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-expansion-panel-block-expand-header-default-background);
-  border: 1.0px solid var(--ds-color-expansion-panel-block-collaps-border-color);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-expansion-panel__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-}
-.ds-expansion-panel__icon {
-  flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-expansion-panel--info {
-  background: var(--ds-color-brand-accent-lightest);
-  border: 1.0px solid var(--ds-color-brand-accent-default);
-}
-.ds-expansion-panel--on {
-  height: 96px;
-}
-.ds-expansion-panel--disable {
-  background: var(--ds-color-expansion-panel-block-expand-header-disable-background);
-}
-.ds-expansion-panel--hover {
-  background: var(--ds-color-expansion-panel-block-expand-header-disable-background);
-}
-.ds-expansion-panel--press {
-  background: var(--ds-color-expansion-panel-block-collaps-border-color);
-}
-.ds-expansion-panel:hover {
-  background: var(--ds-color-expansion-panel-block-expand-header-disable-background);
-}
-.ds-expansion-panel:active {
-  background: var(--ds-color-expansion-panel-block-collaps-border-color);
-}
-.ds-expansion-panel:disabled {
-  background: var(--ds-color-expansion-panel-block-expand-header-disable-background);
-}
-.ds-expansion-panel--disabled {
-  pointer-events: none;
-  opacity: 1;
-}
-
 /* Form field cell [60220:72732] — 1 вариантов */
 .ds-form-field-cell {
   height: var(--ds-size-10x);
@@ -1925,6 +1825,30 @@
   opacity: 1;
 }
 
+/* Input number_but icon [56967:10506] — 1 вариантов */
+.ds-input-number-but-icon {
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-input-number-but-icon__label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+.ds-input-number-but-icon__icon {
+  flex-shrink: 0;
+  width: 20.0px;
+  height: 20.0px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Input Timepicker [58982:9561] — 2 вариантов */
 .ds-input-timepicker {
   height: 48px;
@@ -2114,6 +2038,19 @@
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Picture [58937:3985] — 1 вариантов */
+.ds-picture {
+  height: 189px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-brand-accent-super-lightest);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -2758,6 +2695,21 @@
   width: 104px;
 }
 
+/* Status Bar [56564:1236] — 1 вариантов */
+.ds-status-bar {
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-status-bar__label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 /* Step [54800:3659] — 12 вариантов */
 .ds-step {
   height: var(--ds-size-8x);
@@ -2874,73 +2826,6 @@
 }
 .ds-stepper-line--on {
   height: var(--ds-size-8x);
-}
-
-/* Tab element [54404:200] — 16 вариантов */
-.ds-tab-element {
-  height: var(--ds-size-8x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2x);
-  padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-1x) var(--ds-size-1x);
-  border: 1.0px solid var(--ds-color-tab-active-counter-text-color);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-tab-element__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-}
-.ds-tab-element__icon {
-  flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-tab-element--1 {
-  width: 116px;
-}
-.ds-tab-element--2 {
-  height: var(--ds-size-7x);
-  width: 85px;
-  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1x) var(--ds-size-1x);
-}
-.ds-tab-element--default {
-  width: 116px;
-}
-.ds-tab-element--disable {
-  width: 116px;
-}
-.ds-tab-element--hover {
-  width: 116px;
-  background: var(--ds-color-tab-active-hover-background);
-}
-.ds-tab-element--press {
-  width: 116px;
-  background: var(--ds-color-tab-active-press-background);
-  border: 2.0px solid var(--ds-color-tab-active-counter-text-color);
-}
-.ds-tab-element--off {
-  width: 116px;
-}
-.ds-tab-element--on {
-  width: 116px;
-}
-.ds-tab-element:hover {
-  background: var(--ds-color-tab-active-hover-background);
-}
-.ds-tab-element:active {
-  background: var(--ds-color-tab-active-press-background);
-  border: 2.0px solid var(--ds-color-tab-active-counter-text-color);
-}
-.ds-tab-element--disabled {
-  pointer-events: none;
-  opacity: 1;
 }
 
 /* Table 2 lvl [60074:44684] — 2 вариантов */
@@ -3102,30 +2987,6 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Tabs [54854:3052] — 4 вариантов */
-.ds-tabs {
-  height: var(--ds-size-8x);
-  display: flex;
-  flex-direction: column;
-  border: 1.0px solid var(--ds-color-tab-active-press-background);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-tabs__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-}
-.ds-tabs__icon {
-  flex-shrink: 0;
-  width: 20.0px;
-  height: 20.0px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* Text UI [57938:18290] — 7 вариантов */
 .ds-text-ui {
   height: 52px;
@@ -3150,6 +3011,34 @@
   justify-content: center;
 }
 .ds-text-ui--disabled {
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* Textarea [57916:9023] — 13 вариантов */
+.ds-textarea {
+  height: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-textarea__label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+.ds-textarea__icon {
+  flex-shrink: 0;
+  width: 20.0px;
+  height: 20.0px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-textarea--disabled {
   pointer-events: none;
   opacity: 1;
 }
@@ -3179,6 +3068,21 @@
 .ds-timepicker--time-line {
   height: 256px;
   width: 102px;
+}
+
+/* Title variant [17034:68611] — 1 вариантов */
+.ds-title-variant {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-title-variant__label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 /* Toggle buttons [16992:8639] — 5 вариантов */
