@@ -5382,7 +5382,7 @@
 | Datepicker | `.ds-datepicker` · `--day` `--year` `--month` |
 | Dialog content | `.ds-dialog-content` |
 | Dialog footer | `.ds-dialog-footer` |
-| Dialog header | `.ds-dialog-header` · `--text` `--picture` |
+| Dialog header | `.ds-dialog-header` · `--text` |
 | Dialog view | `.ds-dialog-view` |
 | Element | `.ds-element` · `--image-size` `--icon-size` `--icon-group` `--text-default` `--checkbox` `--radio-button` `--indicator` `--slide-toggle` `--counter` |
 | Element cell | `.ds-element-cell` · `--icon-size` `--icon-group` `--button` `--button-icon` `--status` `--text-ui` `--input-number` `--checkbox` `--slide-toggle` `--chips` `--cell-input` |
@@ -5396,7 +5396,7 @@
 | Elements | `.ds-elements` · `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--year` `--cell` `--cell` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--month` `--month` `--month` `--month` `--month` `--disabled` · :active, :disabled, :hover |
 | Elements | `.ds-elements-2` · `--selected` `--default` `--default` `--default` `--default` `--default` `--disabled` · :active, :disabled, :hover |
 | Expansion content | `.ds-expansion-content` · `--true` `--false` |
-| Expansion group panel | `.ds-expansion-group-panel` · `--expand` |
+| Expansion group panel | `.ds-expansion-group-panel` |
 | Form field cell | `.ds-form-field-cell` |
 | Header components | `.ds-header-components` · `--default` `--mini` |
 | Hint container | `.ds-hint-container` · `--up` `--down` `--right` `--left` `--default` |
@@ -7680,8 +7680,8 @@ CSS-правила компонента:
 }
 
 /* Backdrop [53623:806] — 1 вариантов; оси: Type */
+/* height из макета Figma: 240px — размер примера, задавайте по месту */
 .ds-backdrop {
-  height: 240px;
   display: flex;
   flex-direction: row;
   background: var(--ds-color-backdrop-background);
@@ -8136,8 +8136,8 @@ CSS-правила компонента:
 }
 
 /* Content [57375:12699] — 1 вариантов; оси: — */
+/* height из макета Figma: 750px — размер примера, задавайте по месту */
 .ds-content {
-  height: 750px;
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-4x);
@@ -8348,7 +8348,6 @@ CSS-правила компонента:
   color: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-control-panel--calendar {
-  height: 228px;
   flex-direction: column;
   align-items: center;
   background: var(--ds-color-brand-neutral-default);
@@ -8399,6 +8398,7 @@ CSS-правила компонента:
 }
 
 /* Datepicker [58509:5439] — 3 вариантов; оси: Type */
+/* height из макета Figma: 337px — размер примера, задавайте по месту */
 .ds-datepicker {
   display: flex;
   flex-direction: column;
@@ -8406,7 +8406,6 @@ CSS-правила компонента:
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
   border-radius: var(--ds-size-3x);
   border: 1px solid var(--ds-color-brand-neutral-lighter);
-  height: 337px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8438,17 +8437,15 @@ CSS-правила компонента:
   color: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-datepicker--year {
-  height: 292px;
   color: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-datepicker--month {
-  height: 248px;
   color: var(--ds-color-brand-neutral-super-dark);
 }
 
 /* Dialog content [53535:1369] — 1 вариантов; оси: State */
+/* height из макета Figma: 204px — размер примера, задавайте по месту */
 .ds-dialog-content {
-  height: 204px;
   display: flex;
   flex-direction: row;
   background: var(--ds-color-dialog-background);
@@ -8542,13 +8539,10 @@ CSS-правила компонента:
 .ds-dialog-header--text {
   color: var(--ds-color-dialog-content-title-color);
 }
-.ds-dialog-header--picture {
-  height: 200px;
-}
 
 /* Dialog view [52952:1285] — 1 вариантов; оси: State */
+/* height из макета Figma: 364px — размер примера, задавайте по месту */
 .ds-dialog-view {
-  height: 364px;
   display: flex;
   flex-direction: column;
   border-radius: var(--ds-size-3x);
@@ -9292,16 +9286,13 @@ CSS-правила компонента:
 }
 
 /* Expansion group panel [56155:1676] — 2 вариантов; оси: Type ? */
+/* height из макета Figma: 200px — размер примера, задавайте по месту */
 .ds-expansion-group-panel {
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-2x);
-  height: 200px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-expansion-group-panel--expand {
-  height: 408px;
 }
 
 /* Form field cell [60220:72732] — 1 вариантов; оси: Variant */
@@ -9315,10 +9306,10 @@ CSS-правила компонента:
 }
 
 /* Header components [53535:1244] — 2 вариантов; оси: Type */
+/* height из макета Figma: 136px — размер примера, задавайте по месту */
 .ds-header-components {
   display: flex;
   padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x);
-  height: 136px;
   border-radius: var(--ds-size-8x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -9345,11 +9336,11 @@ CSS-правила компонента:
 }
 
 /* Hint container [54593:479] — 10 вариантов; оси: Size, Orientation */
+/* height из макета Figma: 124px — размер примера, задавайте по месту */
 .ds-hint-container {
   display: flex;
   align-items: center;
   box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
-  height: 124px;
   border-radius: var(--ds-size-2x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -9387,17 +9378,14 @@ CSS-правила компонента:
   color: var(--ds-color-hint-content-icon-color);
 }
 .ds-hint-container--right {
-  height: 120px;
   flex-direction: row;
   color: var(--ds-color-hint-content-icon-color);
 }
 .ds-hint-container--left {
-  height: 120px;
   flex-direction: row;
   color: var(--ds-color-hint-content-icon-color);
 }
 .ds-hint-container--default {
-  height: 120px;
   flex-direction: column;
   color: var(--ds-color-hint-content-icon-color);
 }
@@ -9842,8 +9830,8 @@ CSS-правила компонента:
 }
 
 /* List (Сontainer) [57604:4762] — 1 вариантов; оси: Type */
+/* height из макета Figma: 257px — размер примера, задавайте по месту */
 .ds-list-container {
-  height: 257px;
   display: flex;
   flex-direction: column;
   padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
@@ -9952,8 +9940,8 @@ CSS-правила компонента:
 }
 
 /* Menu (Container) [54163:6705] — 1 вариантов; оси: Type */
+/* height из макета Figma: 418px — размер примера, задавайте по месту */
 .ds-menu-container {
-  height: 418px;
   display: flex;
   flex-direction: column;
   padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
@@ -10052,8 +10040,8 @@ CSS-правила компонента:
 }
 
 /* Picture [58937:3985] — 1 вариантов; оси: — */
+/* height из макета Figma: 189px — размер примера, задавайте по месту */
 .ds-picture {
-  height: 189px;
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-2-5x);
@@ -10269,8 +10257,8 @@ CSS-правила компонента:
 }
 
 /* Select (Сontainer) [57735:17612] — 1 вариантов; оси: Type */
+/* height из макета Figma: 406px — размер примера, задавайте по месту */
 .ds-select-container {
-  height: 406px;
   display: flex;
   flex-direction: column;
   padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
@@ -10520,11 +10508,9 @@ CSS-правила компонента:
   color: var(--ds-color-sidenav-footer-l2-text-color);
 }
 .ds-sidenav-footer--l1.ds-sidenav-footer--expanded {
-  height: 133px;
   flex-direction: column;
 }
 .ds-sidenav-footer--l1.ds-sidenav-footer--collapsed {
-  height: 133px;
   width: 52px;
   flex-direction: column;
 }
@@ -10630,8 +10616,8 @@ CSS-правила компонента:
 }
 
 /* Sidenav View [55074:393] — 3 вариантов; оси: Type, State */
+/* height из макета Figma: 1024px — размер примера, задавайте по месту */
 .ds-sidenav-view {
-  height: 1024px;
   display: flex;
   flex-direction: column;
   padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
@@ -10698,12 +10684,10 @@ CSS-правила компонента:
   color: var(--ds-color-snackbar-light-text-color);
 }
 .ds-snackbar--complex.ds-snackbar--dark {
-  height: 108px;
   background: var(--ds-color-snackbar-dark-background);
   color: var(--ds-color-snackbar-dark-text-color);
 }
 .ds-snackbar--complex.ds-snackbar--light {
-  height: 108px;
   background: var(--ds-color-snackbar-dark-text-color);
   color: var(--ds-color-snackbar-light-text-color);
 }
@@ -11107,6 +11091,7 @@ CSS-правила компонента:
 }
 
 /* Timepicker [58982:9858] — 2 вариантов; оси: Type */
+/* height из макета Figma: 244px — размер примера, задавайте по месту */
 .ds-timepicker {
   display: flex;
   padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
@@ -11114,7 +11099,6 @@ CSS-правила компонента:
   background: var(--ds-color-brand-neutral-default);
   border: 1px solid var(--ds-color-brand-neutral-lighter);
   box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
-  height: 244px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -11139,14 +11123,13 @@ CSS-правила компонента:
   align-items: center;
 }
 .ds-timepicker--time-line {
-  height: 256px;
   flex-direction: row;
   color: var(--ds-color-brand-neutral-super-dark);
 }
 
 /* Title variant [17034:68611] — 1 вариантов; оси: — */
+/* height из макета Figma: 140px — размер примера, задавайте по месту */
 .ds-title-variant {
-  height: 140px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
