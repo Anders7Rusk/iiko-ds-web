@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Правила доставки и приёмка товара — iiko DS</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css?v=301">
+<link rel="stylesheet" href="../components/button.css?v=301">
+<link rel="stylesheet" href="../components/input.css?v=301">
+<link rel="stylesheet" href="../components/selection.css?v=301">
+<link rel="stylesheet" href="../components/selection-icons.css?v=301">
+<link rel="stylesheet" href="../components/badge.css?v=301">
+<link rel="stylesheet" href="../components/navigation.css?v=301">
+<link rel="stylesheet" href="../components/card.css?v=301">
+<link rel="stylesheet" href="../components/expansion.css?v=301">
+<link rel="stylesheet" href="../components/stepper.css?v=301">
+<link rel="stylesheet" href="../components/toggle.css?v=301">
+<link rel="stylesheet" href="../components/components.css?v=301">
+<style>
+  /* каркас раскладки страницы (сетка/отступы). Вид элементов — только классы ds-* на токенах */
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ds-color-surface-default);
+    color: var(--ds-color-text-primary);
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: var(--ds-typography-body-font-size-s);
+    line-height: var(--ds-typography-body-line-height-s);
+  }
+  .page { padding: var(--ds-space-6x); max-width: 1020px; }
+  .page__head { display: flex; align-items: center; gap: var(--ds-space-3x); margin-bottom: var(--ds-space-5x); }
+  .page__title {
+    margin: 0; flex: 1;
+    font-size: var(--ds-typography-header-font-size-m);
+    line-height: var(--ds-typography-header-line-height-m);
+    font-weight: var(--ds-typography-font-weight-medium);
+  }
+  .content { max-width: 770px; }
+  .section-head { margin: var(--ds-space-6x) 0 var(--ds-space-4x); }
+  .section-head__title {
+    margin: 0 0 var(--ds-space-1x);
+    font-size: var(--ds-typography-header-font-size-s);
+    line-height: var(--ds-typography-header-line-height-s);
+    font-weight: var(--ds-typography-font-weight-medium);
+  }
+  .section-head__subtitle { margin: 0; color: var(--ds-color-text-secondary); }
+  .card-stack { display: flex; flex-direction: column; gap: var(--ds-space-4x); }
+  .card-title-row { display: flex; align-items: center; gap: var(--ds-space-2x); }
+  .card-title-row .ds-card__title {
+    margin: 0;
+    font-size: var(--ds-typography-body-font-size-m);
+    line-height: var(--ds-typography-body-line-height-m);
+    font-weight: var(--ds-typography-font-weight-medium);
+  }
+  .card-subtitle { margin: var(--ds-space-1x) 0 0; color: var(--ds-color-text-secondary); }
+  .stack-16 { display: flex; flex-direction: column; gap: var(--ds-space-4x); }
+  .stack-12 { display: flex; flex-direction: column; gap: var(--ds-space-3x); }
+  .group { display: flex; flex-direction: column; gap: var(--ds-space-3x); }
+  .group__title { font-weight: var(--ds-typography-font-weight-medium); }
+  .hint-row { display: flex; align-items: flex-start; gap: var(--ds-space-2x); }
+  .hint-row__icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 20px; height: 20px; flex-shrink: 0;
+    color: var(--ds-color-icon-primary);
+  }
+  .hint-row__icon svg { width: 20px; height: 20px; display: block; }
+  .hint-row__icon svg path { fill: currentColor; }
+  .hint-row__text { color: var(--ds-color-text-secondary); }
+  .page-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: var(--ds-space-4x); margin-top: var(--ds-space-6x);
+  }
+  .w-280 { width: 280px; }
+  .w-360 { width: 360px; }
+</style>
+</head>
+<body>
+
+<main class="page">
+
+  <!-- Верхняя панель: назад · заголовок · Сохранить -->
+  <div class="page__head">
+    <button class="ds-button-icon ds-button-icon--s ds-button-icon--neutral ds-button-icon--text" type="button" aria-label="Назад">
+      <span class="ds-button-icon__icon" data-icon="arrow_back"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.825 13L13.425 18.6L12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825Z" fill="#616161"/>
+</svg></span>
+    </button>
+    <h1 class="page__title">Метро</h1>
+    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button">
+      <span class="ds-btn__label">Сохранить</span>
+    </button>
+  </div>
+
+  <!-- Шаги (Stepper line + Step; активный — 4) -->
+  <nav class="ds-stepper">
+    <button class="ds-step" type="button"><span class="ds-step__num">1</span>Общие настройки</button>
+    <span class="ds-stepper__divider"></span>
+    <button class="ds-step" type="button"><span class="ds-step__num">2</span>Создание заказа</button>
+    <span class="ds-stepper__divider"></span>
+    <button class="ds-step" type="button"><span class="ds-step__num">3</span>Подтверждение заказа</button>
+    <span class="ds-stepper__divider"></span>
+    <button class="ds-step ds-step--selected" type="button" aria-current="step"><span class="ds-step__num">4</span>Приёмка</button>
+  </nav>
+
+  <div class="content">
+
+    <!-- Заголовок и подзаголовок раздела -->
+    <div class="section-head">
+      <h2 class="section-head__title">Правила доставки и приёмка товара</h2>
+      <p class="section-head__subtitle">Настройте процесс приёмки: права сотрудников, склад и уведомления о расхождениях</p>
+    </div>
+
+    <div class="card-stack">
+
+      <!-- Блок 1 -->
+      <div class="ds-card ds-card--outlined">
+        <div class="ds-card__content">
+          <div class="stack-16">
+
+            <!-- Поле со списком (Select form = Input + arrow_drop_down справа) -->
+            <div class="ds-input ds-input--m w-360">
+              <div class="ds-input__frame">
+                <div class="ds-input__content">
+                  <label class="ds-input__label" for="stock">Тип склад для приходной накладной *</label>
+                  <input class="ds-input__field" id="stock" type="text" value="Основной" readonly>
+                </div>
+                <span class="ds-input__icon" data-icon="arrow_drop_down"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 15L7 10H17L12 15Z" fill="#616161"/>
+</svg></span>
+              </div>
+            </div>
+
+            <!-- Пояснение с иконкой i -->
+            <div class="hint-row">
+              <span class="hint-row__icon" data-icon="info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 17H13V11H11V17ZM12 9C12.2833 9 12.5208 8.90417 12.7125 8.7125C12.9042 8.52083 13 8.28333 13 8C13 7.71667 12.9042 7.47917 12.7125 7.2875C12.5208 7.09583 12.2833 7 12 7C11.7167 7 11.4792 7.09583 11.2875 7.2875C11.0958 7.47917 11 7.71667 11 8C11 8.28333 11.0958 8.52083 11.2875 8.7125C11.4792 8.90417 11.7167 9 12 9ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z" fill="#616161"/>
+</svg></span>
+              <span class="hint-row__text">Укажите, нужно ли сотруднику подтверждать приёмку товаров в заказе</span>
+            </div>
+
+            <!-- Тумблер -->
+            <label class="ds-slide-toggle">
+              <span class="ds-slide-toggle__row">
+                <input type="checkbox" class="ds-slide-toggle__input">
+                <span class="ds-slide-toggle__track"></span>
+                <span class="ds-slide-toggle__title">Сотрудник ресторана отмечает факт приёмки товаров</span>
+              </span>
+            </label>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Блок 2 -->
+      <div class="ds-card ds-card--outlined">
+        <div class="ds-card__header">
+          <div class="card-title-row">
+            <h3 class="ds-card__title">Укажите, что может изменять сотрудник при приеме товара</h3>
+          </div>
+          <p class="card-subtitle">Разрешите сотруднику вносить следующие правки в заказ во время приёмки</p>
+        </div>
+        <div class="ds-card__content">
+          <div class="stack-16">
+
+            <!-- Секция: Товары и склад -->
+            <div class="group">
+              <span class="group__title">Товары и склад</span>
+              <div class="ds-checkbox-group ds-checkbox-group--vertical">
+                <label class="ds-checkbox">
+                  <input type="checkbox" class="ds-checkbox__input">
+                  <span class="ds-checkbox__box"></span>
+                  <span class="ds-checkbox__label">Фасовки у товаров</span>
+                </label>
+                <label class="ds-checkbox">
+                  <input type="checkbox" class="ds-checkbox__input">
+                  <span class="ds-checkbox__box"></span>
+                  <span class="ds-checkbox__label">Добавлять товары, которых не было в заказе</span>
+                </label>
+                <label class="ds-checkbox">
+                  <input type="checkbox" class="ds-checkbox__input">
+                  <span class="ds-checkbox__box"></span>
+                  <span class="ds-checkbox__label">Склад поставки</span>
+                </label>
+              </div>
+            </div>
+
+            <span class="ds-divider"></span>
+
+            <!-- Секция: Цены и налоги -->
+            <div class="group">
+              <span class="group__title">Цены и налоги</span>
+              <div class="ds-checkbox-group ds-checkbox-group--vertical">
+                <label class="ds-checkbox">
+                  <input type="checkbox" class="ds-checkbox__input">
+                  <span class="ds-checkbox__box"></span>
+                  <span class="ds-checkbox__label">Значение НДС</span>
+                </label>
+                <label class="ds-checkbox">
+                  <input type="checkbox" class="ds-checkbox__input">
+                  <span class="ds-checkbox__box"></span>
+                  <span class="ds-checkbox__label">Цена за единицу с НДС</span>
+                </label>
+                <label class="ds-checkbox">
+                  <input type="checkbox" class="ds-checkbox__input">
+                  <span class="ds-checkbox__box"></span>
+                  <span class="ds-checkbox__label">Цена с НДС</span>
+                </label>
+              </div>
+            </div>
+
+            <span class="ds-divider"></span>
+
+            <!-- Секция: Уведомления о расхождениях -->
+            <div class="group">
+              <span class="group__title">Уведомления о расхождениях</span>
+              <div class="ds-input ds-input--m w-360">
+                <div class="ds-input__frame">
+                  <div class="ds-input__content">
+                    <input class="ds-input__field" type="text" placeholder="Наименования сотрудников">
+                  </div>
+                </div>
+                <div class="ds-input__support-row">
+                  <span class="ds-input__support">Отправлять информацию о расхождениях в поставке на e-mail сотрудников</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Нижняя панель: Stepper button, Position=Last (счётчик + «Назад») -->
+    <div class="page-footer">
+      <span class="ds-stepper-button__counter">4 из 4</span>
+      <div class="ds-stepper-button__group">
+        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button">
+          <span class="ds-btn__icon" data-icon="keyboard_arrow_left"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z" fill="#616161"/>
+</svg></span>
+          <span class="ds-btn__label">Назад</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>
