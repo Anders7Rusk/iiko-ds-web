@@ -5361,16 +5361,16 @@
 | Arrow list | `.ds-arrow-list` |
 | Arrow menu | `.ds-arrow-menu` |
 | Arrow select | `.ds-arrow-select` |
-| Autocomplete form | `.ds-autocomplete-form` · `--disabled` |
+| Autocomplete form | `.ds-autocomplete-form` · `--empty` `--populated` `--empty` `--populated` `--populated` `--empty` `--empty` `--populated` `--populated` `--disabled` · :disabled, :focus, :hover |
 | Backdrop | `.ds-backdrop` |
 | Button New | `.ds-button-new` · `--btn-36` `--btn-28` |
-| Button toggle | `.ds-button-toggle` · `--s` `--s` `--xs` `--xs` `--outlined` `--outlined` `--filled` |
+| Button toggle | `.ds-button-toggle` · `--s` `--s` `--xs` `--xs` `--filled` `--outlined` `--outlined` |
 | Checkbox label | `.ds-checkbox-label` · `--normal` `--normal` `--normal` `--error` `--error` `--error` `--disable` `--disable` `--disable` |
 | Chips | `.ds-chips` · `--s` `--s` `--outlined` `--outlined` `--outlined` `--outlined` `--outlined` `--filled` `--filled` `--filled` `--filled` `--filled` `--disabled` · :active, :disabled, :hover |
 | Chips group | `.ds-chips-group` · `--s` `--s` |
-| Chips Input | `.ds-chips-input` · `--s` `--s` `--disabled` · :disabled, :focus |
-| Chips Input | `.ds-chips-input-2` · `--s` `--s` `--disabled` · :disabled, :focus |
-| Chips input cell | `.ds-chips-input-cell` · `--disabled` · :hover |
+| Chips Input | `.ds-chips-input` · `--s` `--s` `--disabled` · :disabled, :focus, :hover |
+| Chips Input | `.ds-chips-input-2` · `--s` `--s` `--disabled` · :disabled, :focus, :hover |
+| Chips input cell | `.ds-chips-input-cell` · `--disabled` · :disabled, :focus, :hover |
 | Chrome Header desktop | `.ds-chrome-header-desktop` |
 | Chrome Header mobile | `.ds-chrome-header-mobile` · `--off` `--on` |
 | Content | `.ds-content` |
@@ -5386,7 +5386,7 @@
 | Dialog view | `.ds-dialog-view` |
 | Element | `.ds-element` · `--image-size` `--icon-size` `--icon-group` `--text-default` `--checkbox` `--radio-button` `--indicator` `--slide-toggle` `--counter` |
 | Element cell | `.ds-element-cell` · `--icon-size` `--icon-group` `--button` `--button-icon` `--status` `--text-ui` `--input-number` `--checkbox` `--slide-toggle` `--chips` `--cell-input` |
-| Element Form Field | `.ds-element-form-field` · `--chips-input-cell` |
+| Element Form Field | `.ds-element-form-field` · `--input-cell` `--select-cell` `--chips-input-cell` |
 | Element left | `.ds-element-left` |
 | Element menu | `.ds-element-menu` · `--image-size` `--icon-size` `--text-default` `--checkbox` `--radio-button` `--indicator` `--slide-toggle` `--counter` |
 | Element select | `.ds-element-select` · `--image-size` `--icon-size` `--text-default` `--checkbox` `--radio-button` `--indicator` `--slide-toggle` `--counter` |
@@ -5396,7 +5396,7 @@
 | Elements | `.ds-elements` · `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--year` `--cell` `--cell` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--month` `--month` `--month` `--month` `--month` `--disabled` · :active, :disabled, :hover |
 | Elements | `.ds-elements-2` · `--selected` `--default` `--default` `--default` `--default` `--default` `--disabled` · :active, :disabled, :hover |
 | Expansion content | `.ds-expansion-content` · `--true` `--false` |
-| Expansion group panel | `.ds-expansion-group-panel` |
+| Expansion group panel | `.ds-expansion-group-panel` · `--collaps` `--expand` |
 | Form field cell | `.ds-form-field-cell` |
 | Header components | `.ds-header-components` · `--default` `--mini` |
 | Hint container | `.ds-hint-container` · `--up` `--down` `--right` `--left` `--default` |
@@ -5406,12 +5406,12 @@
 | Icon group | `.ds-icon-group` · `--4x` |
 | Icon size | `.ds-icon-size` |
 | Icon size_Draft | `.ds-icon-size-draft` |
-| Input cell | `.ds-input-cell` · `--disabled` · :hover |
-| Input Datepicker | `.ds-input-datepicker` |
+| Input cell | `.ds-input-cell` · `--disabled` · :disabled, :focus, :hover |
+| Input Datepicker | `.ds-input-datepicker` · `--empty` `--populated` |
 | Input for number | `.ds-input-for-number` · `--disabled` · :disabled, :hover |
-| Input number | `.ds-input-number` · `--s` `--xs` `--xs` `--populated` `--empty` `--disabled` |
+| Input number | `.ds-input-number` · `--s` `--xs` `--xs` `--populated` `--empty` `--populated` `--populated` `--empty` `--populated` `--populated` `--empty` `--empty` `--disabled` · :disabled, :focus, :hover |
 | Input number_but icon | `.ds-input-number-but-icon` |
-| Input Timepicker | `.ds-input-timepicker` |
+| Input Timepicker | `.ds-input-timepicker` · `--empty` `--populated` |
 | List (Сontainer) | `.ds-list-container` · `--container` |
 | List item | `.ds-list-item` · `--disabled` · :active, :disabled, :hover |
 | Logo iiko | `.ds-logo-iiko` |
@@ -5422,31 +5422,31 @@
 | Picture | `.ds-picture` |
 | Preview | `.ds-preview` |
 | Radio button label | `.ds-radio-button-label` · `--normal` `--normal` `--error` `--error` `--disable` `--disable` |
-| Scroll | `.ds-scroll` · `--s` `--middle` |
+| Scroll | `.ds-scroll` · `--s` `--first` `--middle` `--middle` `--last` · :hover |
 | Scroll tabs | `.ds-scroll-tabs` · `--left` |
 | Search | `.ds-search` · `--s` `--s` `--xs` `--xs` `--disabled` · :disabled, :focus, :hover |
 | Select (Сontainer) | `.ds-select-container` · `--container` |
-| Select cell | `.ds-select-cell` · `--disabled` · :hover |
-| Select form | `.ds-select-form` · `--s` `--s` `--xs` `--xs` `--disabled` |
+| Select cell | `.ds-select-cell` · `--disabled` · :disabled, :focus, :hover |
+| Select form | `.ds-select-form` · `--s` `--s` `--xs` `--xs` `--empty` `--populated` `--empty` `--populated` `--populated` `--empty` `--empty` `--populated` `--populated` `--disabled` · :disabled, :focus, :hover |
 | Select item | `.ds-select-item` · `--true` `--false` `--false` `--false` `--false` `--false` `--disabled` · :active, :disabled, :hover |
-| Sidenav control | `.ds-sidenav-control` · `--collapsed` `--expanded` `--expanded` `--expanded` `--collapsed` · :active, :hover |
+| Sidenav control | `.ds-sidenav-control` · `--collapsed` `--collapsed` `--expanded` `--expanded` `--expanded` `--collapsed` · :active, :hover |
 | Sidenav Footer | `.ds-sidenav-footer` · `--l2` `--l1` `--l1` |
 | Sidenav header | `.ds-sidenav-header` · `--l1` `--l2` `--l1` |
 | Sidenav item | `.ds-sidenav-item` · `--l3` `--l3` `--l2` `--l2` `--l1` `--l1` `--l1` `--l1` · :hover |
 | Sidenav View | `.ds-sidenav-view` |
 | Snackbar | `.ds-snackbar` · `--single` `--single` `--complex` `--complex` |
-| State | `.ds-state` |
+| State | `.ds-state` · :active, :hover |
 | Status | `.ds-status` · `--neutral` `--accent` `--positive` `--warning` `--negative` `--contrast-1` `--contrast-2` `--contrast-3` `--contrast-4` `--neutral` `--accent` `--positive` `--warning` `--negative` `--contrast-1` `--contrast-2` `--contrast-3` `--contrast-4` |
 | Status Bar | `.ds-status-bar` |
 | Table 2 lvl | `.ds-table-2-lvl` · `--table-cell-2-lvl` `--table-row-2-lvl` |
-| Table Chips Input | `.ds-table-chips-input` |
-| Table content cell | `.ds-table-content-cell` · `--disabled` · :hover |
-| Table content row | `.ds-table-content-row` · `--disabled` · :hover |
+| Table Chips Input | `.ds-table-chips-input` · `--default` `--hover` `--focus` `--focus-placeholder` `--vocus-value` `--error` `--error-hover` `--disable` |
+| Table content cell | `.ds-table-content-cell` · `--disabled` · :disabled, :hover |
+| Table content row | `.ds-table-content-row` · `--disabled` · :disabled, :hover |
 | Table footer | `.ds-table-footer` · `--default` |
-| Table header cell | `.ds-table-header-cell` · `--disabled` · :hover |
+| Table header cell | `.ds-table-header-cell` · `--disabled` · :disabled, :hover |
 | Table header row | `.ds-table-header-row` |
 | Text UI | `.ds-text-ui` · `--disabled` · :disabled |
-| Textarea | `.ds-textarea` · `--populated` `--populated` `--empty` `--empty` `--populated` `--empty` `--disabled` · :disabled |
+| Textarea | `.ds-textarea` · `--populated` `--populated` `--empty` `--empty` `--populated` `--populated` `--empty` `--populated` `--empty` `--disabled` · :disabled, :focus, :hover |
 | Timepicker | `.ds-timepicker` · `--time-grid` `--time-line` |
 | Title variant | `.ds-title-variant` |
 | Toggle buttons | `.ds-toggle-buttons` · `--1-button` `--text` `--2-buttons` `--3-buttons` `--3-text` |
@@ -7659,6 +7659,14 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-autocomplete-form__label {
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-darker);
+  white-space: nowrap;
+}
 .ds-autocomplete-form__icon {
   flex-shrink: 0;
   width: var(--ds-size-5x);
@@ -7674,6 +7682,35 @@ CSS-правила компонента:
 }
 .ds-autocomplete-form__icon svg path {
   fill: currentColor;
+}
+.ds-autocomplete-form--empty {
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-autocomplete-form--populated {
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-autocomplete-form--empty:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
+}
+.ds-autocomplete-form--populated:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
+}
+.ds-autocomplete-form--populated:focus-visible {
+  color: var(--ds-color-brand-accent-default);
+}
+.ds-autocomplete-form--empty:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-autocomplete-form--empty.ds-autocomplete-form--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-autocomplete-form--populated:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-autocomplete-form--populated.ds-autocomplete-form--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
 }
 .ds-autocomplete-form--disabled {
   pointer-events: none;
@@ -7732,6 +7769,14 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-button-toggle__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-button-accent-default);
+  white-space: nowrap;
+}
 .ds-button-toggle__icon {
   flex-shrink: 0;
   width: var(--ds-size-5x);
@@ -7750,7 +7795,6 @@ CSS-правила компонента:
 }
 .ds-button-toggle--s {
   height: var(--ds-size-9x);
-  width: 100px;
 }
 .ds-button-toggle--s .ds-button-toggle__icon {
   width: var(--ds-size-5x);
@@ -7758,21 +7802,20 @@ CSS-правила компонента:
 }
 .ds-button-toggle--xs {
   height: var(--ds-size-8x);
-  width: 88px;
 }
 .ds-button-toggle--xs .ds-button-toggle__icon {
   width: var(--ds-size-4x);
   height: var(--ds-size-4x);
 }
+.ds-button-toggle--filled.ds-button-toggle--text {
+  color: var(--ds-color-button-accent-default);
+}
 .ds-button-toggle--outlined.ds-button-toggle--text {
   border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
+  color: var(--ds-color-button-accent-lite-default);
 }
 .ds-button-toggle--outlined.ds-button-toggle--icon {
-  width: 124px;
   border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
-}
-.ds-button-toggle--filled.ds-button-toggle--icon {
-  width: 124px;
 }
 
 /* Checkbox label [53810:880] — 9 вариантов; оси: Variant, Type */
@@ -7934,6 +7977,14 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-chips-group__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-chips-text-color);
+  white-space: nowrap;
+}
 .ds-chips-group__icon {
   flex-shrink: 0;
   width: var(--ds-size-5x);
@@ -8000,6 +8051,10 @@ CSS-правила компонента:
   width: var(--ds-size-5x);
   height: var(--ds-size-5x);
 }
+.ds-chips-input:hover {
+  background: var(--ds-color-chips-input-disable-background);
+  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+}
 .ds-chips-input:focus-visible {
   color: var(--ds-color-chips-input-focus-border-color);
 }
@@ -8054,6 +8109,10 @@ CSS-правила компонента:
   width: var(--ds-size-5x);
   height: var(--ds-size-5x);
 }
+.ds-chips-input-2:hover {
+  background: var(--ds-color-chips-input-disable-background);
+  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+}
 .ds-chips-input-2:focus-visible {
   color: var(--ds-color-chips-input-focus-border-color);
 }
@@ -8078,6 +8137,14 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-chips-input-cell__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-chips-icon-color);
+  white-space: nowrap;
+}
 .ds-chips-input-cell__icon {
   flex-shrink: 0;
   width: var(--ds-size-5x);
@@ -8098,6 +8165,15 @@ CSS-правила компонента:
 .ds-chips-input-cell:hover {
   border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
 }
+.ds-chips-input-cell:focus-visible {
+  color: var(--ds-color-chips-text-color);
+}
+.ds-chips-input-cell:disabled {
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips-input-cell.ds-chips-input-cell--disabled {
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
 .ds-chips-input-cell--disabled {
   pointer-events: none;
 }
@@ -8109,6 +8185,12 @@ CSS-правила компонента:
   flex-direction: column;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-chrome-header-desktop__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: 14.522727012634277px;
+  white-space: nowrap;
 }
 
 /* Chrome Header mobile [56564:1062] — 2 вариантов; оси: Dark */
@@ -8203,7 +8285,6 @@ CSS-правила компонента:
   background: var(--ds-color-brand-neutral-super-light);
   border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
   height: var(--ds-size-9x);
-  width: 65px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8351,6 +8432,7 @@ CSS-правила компонента:
   flex-direction: column;
   align-items: center;
   background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
 }
 
 /* Control Panel [58982:11018] — 2 вариантов; оси: Type; ДУБЛЬ имени — второй сет «Control Panel», различать по node_id */
@@ -8463,7 +8545,7 @@ CSS-правила компонента:
 .ds-dialog-content__icon {
   flex-shrink: 0;
   width: var(--ds-size-3x);
-  height: 204px;
+  height: var(--ds-size-3x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -8485,6 +8567,14 @@ CSS-правила компонента:
   background: var(--ds-color-dialog-background);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-dialog-footer__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-dialog-background);
+  white-space: nowrap;
 }
 .ds-dialog-footer__icon {
   flex-shrink: 0;
@@ -8552,17 +8642,17 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-dialog-view__label {
-  font-size: var(--ds-typography-body-font-size-m);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-body-line-height-l);
+  font-size: var(--ds-typography-header-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-header-line-height-s);
   letter-spacing: var(--ds-typography-letter-spacing-s);
-  color: var(--ds-color-dialog-content-text-color);
+  color: var(--ds-color-dialog-content-title-color);
   white-space: nowrap;
 }
 .ds-dialog-view__icon {
   flex-shrink: 0;
   width: var(--ds-size-3x);
-  height: 204px;
+  height: var(--ds-size-3x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -8585,6 +8675,14 @@ CSS-правила компонента:
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-element__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+  white-space: nowrap;
 }
 .ds-element__icon {
   flex-shrink: 0;
@@ -8614,7 +8712,6 @@ CSS-правила компонента:
 }
 .ds-element--icon-group {
   height: var(--ds-size-5x);
-  width: 76px;
   flex-direction: row;
   align-items: center;
 }
@@ -8655,6 +8752,14 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-element-cell__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+  white-space: nowrap;
+}
 .ds-element-cell__icon {
   flex-shrink: 0;
   width: var(--ds-size-5x);
@@ -8677,7 +8782,6 @@ CSS-правила компонента:
   background: var(--ds-color-brand-neutral-default);
 }
 .ds-element-cell--icon-group {
-  width: 76px;
   flex-direction: row;
   align-items: center;
   background: var(--ds-color-brand-neutral-default);
@@ -8707,9 +8811,9 @@ CSS-правила компонента:
 }
 .ds-element-cell--input-number {
   height: var(--ds-size-7x);
-  width: 123px;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-darker);
 }
 .ds-element-cell--checkbox {
   flex-direction: row;
@@ -8729,6 +8833,7 @@ CSS-правила компонента:
 .ds-element-cell--cell-input {
   flex-direction: row;
   background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-darker);
 }
 
 /* Element Form Field [60231:76795] — 3 вариантов; оси: Variant */
@@ -8740,8 +8845,23 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-element-form-field__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-darker);
+  white-space: nowrap;
+}
+.ds-element-form-field--input-cell {
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-element-form-field--select-cell {
+  color: var(--ds-color-brand-neutral-darker);
+}
 .ds-element-form-field--chips-input-cell {
   height: var(--ds-size-10x);
+  color: var(--ds-color-brand-neutral-darker);
 }
 
 /* Element left [59851:11313] — 5 вариантов; оси: Style */
@@ -8781,6 +8901,14 @@ CSS-правила компонента:
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-element-menu__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-menu-item-text-color);
+  white-space: nowrap;
 }
 .ds-element-menu__icon {
   flex-shrink: 0;
@@ -8847,6 +8975,14 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-element-select__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+  white-space: nowrap;
+}
 .ds-element-select__icon {
   flex-shrink: 0;
   width: var(--ds-size-6x);
@@ -8911,6 +9047,14 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-element-sidenav__label {
+  font-size: var(--ds-typography-caption-font-size-m);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-caption-line-height-m);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-sidenav-item-l3-indicator);
+  white-space: nowrap;
+}
 .ds-element-sidenav__icon {
   flex-shrink: 0;
   width: var(--ds-size-4x);
@@ -8948,6 +9092,14 @@ CSS-правила компонента:
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-element-step__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+  white-space: nowrap;
 }
 .ds-element-step__icon {
   flex-shrink: 0;
@@ -8997,6 +9149,14 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-elementare-cell__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+  white-space: nowrap;
+}
 .ds-elementare-cell__icon {
   flex-shrink: 0;
   width: var(--ds-size-5x);
@@ -9019,7 +9179,6 @@ CSS-правила компонента:
   background: var(--ds-color-brand-neutral-default);
 }
 .ds-elementare-cell--icon-group {
-  width: 76px;
   flex-direction: row;
   align-items: center;
   background: var(--ds-color-brand-neutral-default);
@@ -9049,9 +9208,9 @@ CSS-правила компонента:
 }
 .ds-elementare-cell--input-number {
   height: var(--ds-size-7x);
-  width: 123px;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-darker);
 }
 .ds-elementare-cell--checkbox {
   flex-direction: row;
@@ -9294,6 +9453,20 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-expansion-group-panel__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+  white-space: nowrap;
+}
+.ds-expansion-group-panel--collaps {
+  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+}
+.ds-expansion-group-panel--expand {
+  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+}
 
 /* Form field cell [60220:72732] — 1 вариантов; оси: Variant */
 .ds-form-field-cell {
@@ -9315,16 +9488,17 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-header-components__label {
-  font-size: var(--ds-typography-header-font-size-l);
+  font-size: var(--ds-typography-header-font-size-m);
   font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-header-line-height-l);
-  color: var(--ds-color-brand-neutral-super-dark);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: 0.18000000715255737px;
+  color: var(--ds-color-brand-neutral-default);
   white-space: nowrap;
 }
 .ds-header-components--default {
   flex-direction: column;
   background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-brand-neutral-super-dark);
+  color: var(--ds-color-brand-neutral-default);
 }
 .ds-header-components--mini {
   height: 88px;
@@ -9531,7 +9705,6 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 76px;
   gap: var(--ds-size-2x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -9553,7 +9726,6 @@ CSS-правила компонента:
   fill: currentColor;
 }
 .ds-icon-group--4x {
-  width: 92px;
   gap: var(--ds-size-4x);
 }
 
@@ -9620,6 +9792,14 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-input-cell__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-input-input-label-text-color);
+  white-space: nowrap;
+}
 .ds-input-cell__icon {
   flex-shrink: 0;
   width: var(--ds-size-5x);
@@ -9640,6 +9820,15 @@ CSS-правила компонента:
   background: var(--ds-color-input-filled-disable-input-background);
   border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
 }
+.ds-input-cell:focus-visible {
+  color: var(--ds-color-input-number-control-focus-border-color);
+}
+.ds-input-cell:disabled {
+  color: var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-cell.ds-input-cell--disabled {
+  color: var(--ds-color-input-number-control-disable-icon-color);
+}
 .ds-input-cell--disabled {
   pointer-events: none;
 }
@@ -9652,6 +9841,14 @@ CSS-правила компонента:
   background: var(--ds-color-input-input-outlined-background);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-input-datepicker__label {
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-input-input-label-text-color);
+  white-space: nowrap;
 }
 .ds-input-datepicker__icon {
   flex-shrink: 0;
@@ -9668,6 +9865,12 @@ CSS-правила компонента:
 }
 .ds-input-datepicker__icon svg path {
   fill: currentColor;
+}
+.ds-input-datepicker--empty {
+  color: var(--ds-color-input-input-label-text-color);
+}
+.ds-input-datepicker--populated {
+  color: var(--ds-color-input-input-label-text-color);
 }
 
 /* Input for number [53827:5155] — 10 вариантов; оси: Size, State */
@@ -9728,10 +9931,17 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   height: 48px;
-  width: 138px;
   gap: 18px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-input-number__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-input-input-label-text-color);
+  white-space: nowrap;
 }
 .ds-input-number__icon {
   flex-shrink: 0;
@@ -9761,9 +9971,34 @@ CSS-правила компонента:
 }
 .ds-input-number--populated {
   align-items: center;
+  color: var(--ds-color-input-input-label-text-color);
 }
 .ds-input-number--empty {
   align-items: center;
+  color: var(--ds-color-input-input-label-text-color);
+}
+.ds-input-number--populated:focus-visible {
+  color: var(--ds-color-input-number-control-focus-border-color);
+}
+.ds-input-number--populated:hover {
+  background: var(--ds-color-input-filled-disable-input-background);
+  border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-number--empty:hover {
+  background: var(--ds-color-input-filled-disable-input-background);
+  border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-number--populated:disabled {
+  color: var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-number--populated.ds-input-number--disabled {
+  color: var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-number--empty:disabled {
+  color: var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-number--empty.ds-input-number--disabled {
+  color: var(--ds-color-input-number-control-disable-icon-color);
 }
 .ds-input-number--disabled {
   pointer-events: none;
@@ -9812,6 +10047,14 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-input-timepicker__label {
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-input-input-label-text-color);
+  white-space: nowrap;
+}
 .ds-input-timepicker__icon {
   flex-shrink: 0;
   width: var(--ds-size-5x);
@@ -9827,6 +10070,12 @@ CSS-правила компонента:
 }
 .ds-input-timepicker__icon svg path {
   fill: currentColor;
+}
+.ds-input-timepicker--empty {
+  color: var(--ds-color-input-input-label-text-color);
+}
+.ds-input-timepicker--populated {
+  color: var(--ds-color-input-input-label-text-color);
 }
 
 /* List (Сontainer) [57604:4762] — 1 вариантов; оси: Type */
@@ -9850,7 +10099,7 @@ CSS-правила компонента:
 .ds-list-container__icon {
   flex-shrink: 0;
   width: var(--ds-size-3x);
-  height: 204px;
+  height: var(--ds-size-3x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -9924,7 +10173,6 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-default);
-  width: 73px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -9962,7 +10210,7 @@ CSS-правила компонента:
 .ds-menu-container__icon {
   flex-shrink: 0;
   width: var(--ds-size-3x);
-  height: 272px;
+  height: var(--ds-size-3x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -10146,14 +10394,22 @@ CSS-правила компонента:
   height: 64px;
   width: var(--ds-size-2x);
 }
+.ds-scroll--first:hover {
+  background: var(--ds-color-scroll-hover-background);
+}
 .ds-scroll--middle {
   align-items: center;
+}
+.ds-scroll--middle:hover {
+  background: var(--ds-color-scroll-hover-background);
+}
+.ds-scroll--last:hover {
+  background: var(--ds-color-scroll-hover-background);
 }
 
 /* Scroll tabs [59032:1821] — 4 вариантов; оси: Orientation, State */
 .ds-scroll-tabs {
   height: var(--ds-size-7x);
-  width: 76px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -10279,7 +10535,7 @@ CSS-правила компонента:
 .ds-select-container__icon {
   flex-shrink: 0;
   width: var(--ds-size-3x);
-  height: 272px;
+  height: var(--ds-size-3x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -10307,6 +10563,14 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-select-cell__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-darker);
+  white-space: nowrap;
+}
 .ds-select-cell__icon {
   flex-shrink: 0;
   width: var(--ds-size-5x);
@@ -10327,6 +10591,15 @@ CSS-правила компонента:
   background: var(--ds-color-brand-neutral-super-light);
   border: 1px solid var(--ds-color-brand-neutral-neutral);
 }
+.ds-select-cell:focus-visible {
+  color: var(--ds-color-brand-accent-default);
+}
+.ds-select-cell:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-cell.ds-select-cell--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
 .ds-select-cell--disabled {
   pointer-events: none;
 }
@@ -10339,6 +10612,14 @@ CSS-правила компонента:
   height: 48px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-select-form__label {
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-darker);
+  white-space: nowrap;
 }
 .ds-select-form__icon {
   flex-shrink: 0;
@@ -10369,6 +10650,35 @@ CSS-правила компонента:
 .ds-select-form--xs .ds-select-form__icon {
   width: var(--ds-size-5x);
   height: var(--ds-size-5x);
+}
+.ds-select-form--empty {
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-select-form--populated {
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-select-form--empty:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-form--populated:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-form--populated:focus-visible {
+  color: var(--ds-color-brand-accent-default);
+}
+.ds-select-form--empty:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-form--empty.ds-select-form--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-form--populated:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-form--populated.ds-select-form--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
 }
 .ds-select-form--disabled {
   pointer-events: none;
@@ -10470,6 +10780,9 @@ CSS-правила компонента:
 .ds-sidenav-control--collapsed:hover {
   background: var(--ds-color-sidenav-control-background-hover);
 }
+.ds-sidenav-control--collapsed:active {
+  background: var(--ds-color-sidenav-control-background-hover);
+}
 .ds-sidenav-control--expanded {
   background: var(--ds-color-sidenav-control-background);
   color: var(--ds-color-sidenav-control-text-color);
@@ -10509,10 +10822,11 @@ CSS-правила компонента:
 }
 .ds-sidenav-footer--l1.ds-sidenav-footer--expanded {
   flex-direction: column;
+  color: var(--ds-color-sidenav-control-text-color);
 }
 .ds-sidenav-footer--l1.ds-sidenav-footer--collapsed {
-  width: 52px;
   flex-direction: column;
+  color: var(--ds-color-sidenav-item-l3-indicator);
 }
 
 /* Sidenav header [55045:637] — 3 вариантов; оси: Type, Mode */
@@ -10524,6 +10838,14 @@ CSS-правила компонента:
   gap: 92px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-sidenav-header__label {
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-sidenav-header-l2-text-color);
+  white-space: nowrap;
 }
 .ds-sidenav-header__icon {
   flex-shrink: 0;
@@ -10624,10 +10946,18 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-sidenav-view__label {
+  font-size: var(--ds-typography-caption-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-m);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-sidenav-control-text-color);
+  white-space: nowrap;
+}
 .ds-sidenav-view__icon {
   flex-shrink: 0;
   width: var(--ds-size-3x);
-  height: 484px;
+  height: var(--ds-size-3x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -10700,6 +11030,12 @@ CSS-правила компонента:
   flex-direction: row;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-state:hover {
+  background: var(--ds-color-brand-neutral-lightest);
+}
+.ds-state:active {
+  background: var(--ds-color-brand-neutral-lighter);
 }
 
 /* Status [52928:6588] — 18 вариантов; оси: Style, Type */
@@ -10852,6 +11188,14 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-table-chips-input__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-chips-icon-color);
+  white-space: nowrap;
+}
 .ds-table-chips-input__icon {
   flex-shrink: 0;
   width: var(--ds-size-5x);
@@ -10869,11 +11213,34 @@ CSS-правила компонента:
 .ds-table-chips-input__icon svg path {
   fill: currentColor;
 }
+.ds-table-chips-input--default {
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-table-chips-input--hover {
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-table-chips-input--focus {
+  color: var(--ds-color-chips-text-color);
+}
+.ds-table-chips-input--focus-placeholder {
+  color: var(--ds-color-chips-text-color);
+}
+.ds-table-chips-input--vocus-value {
+  color: var(--ds-color-chips-text-color);
+}
+.ds-table-chips-input--error {
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-table-chips-input--error-hover {
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-table-chips-input--disable {
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
 
 /* Table content cell [52954:1253] — 8 вариантов; оси: State */
 .ds-table-content-cell {
   height: var(--ds-size-9x);
-  width: 81px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -10881,6 +11248,14 @@ CSS-правила компонента:
   padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-table-content-cell__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-tab-innactive-icon-color);
+  white-space: nowrap;
 }
 .ds-table-content-cell__icon {
   flex-shrink: 0;
@@ -10898,6 +11273,12 @@ CSS-правила компонента:
 .ds-table-content-cell__icon svg path {
   fill: currentColor;
 }
+.ds-table-content-cell:disabled {
+  color: var(--ds-color-tab-disable-icon-color);
+}
+.ds-table-content-cell.ds-table-content-cell--disabled {
+  color: var(--ds-color-tab-disable-icon-color);
+}
 .ds-table-content-cell:hover {
   border: 1px solid var(--ds-color-tab-disable-icon-color);
 }
@@ -10914,6 +11295,20 @@ CSS-правила компонента:
   background: var(--ds-color-table-surfase-default);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-table-content-row__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-tab-innactive-icon-color);
+  white-space: nowrap;
+}
+.ds-table-content-row:disabled {
+  color: var(--ds-color-tab-disable-icon-color);
+}
+.ds-table-content-row.ds-table-content-row--disabled {
+  color: var(--ds-color-tab-disable-icon-color);
 }
 .ds-table-content-row:hover {
   background: var(--ds-color-table-surfase-hover);
@@ -10947,7 +11342,6 @@ CSS-правила компонента:
 /* Table header cell [60098:45424] — 3 вариантов; оси: State */
 .ds-table-header-cell {
   height: var(--ds-size-9x);
-  width: 81px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -10957,6 +11351,14 @@ CSS-правила компонента:
   background: var(--ds-color-table-surfase-head);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-table-header-cell__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-tab-innactive-icon-color);
+  white-space: nowrap;
 }
 .ds-table-header-cell__icon {
   flex-shrink: 0;
@@ -10977,6 +11379,12 @@ CSS-правила компонента:
 .ds-table-header-cell:hover {
   background: var(--ds-color-table-cell-header-hover-background);
 }
+.ds-table-header-cell:disabled {
+  color: var(--ds-color-tab-disable-icon-color);
+}
+.ds-table-header-cell.ds-table-header-cell--disabled {
+  color: var(--ds-color-tab-disable-icon-color);
+}
 .ds-table-header-cell--disabled {
   pointer-events: none;
 }
@@ -10990,6 +11398,14 @@ CSS-правила компонента:
   border: 1px solid var(--ds-color-tab-active-press-background);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-table-header-row__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-tab-innactive-icon-color);
+  white-space: nowrap;
 }
 
 /* Text UI [57938:18290] — 7 вариантов; оси: State */
@@ -11080,11 +11496,22 @@ CSS-правила компонента:
 .ds-textarea--empty.ds-textarea--disabled {
   color: var(--ds-color-brand-neutral-neutral);
 }
+.ds-textarea--populated:focus-visible {
+  color: var(--ds-color-brand-accent-default);
+}
 .ds-textarea--populated {
   color: var(--ds-color-brand-neutral-darker);
 }
 .ds-textarea--empty {
   color: var(--ds-color-brand-neutral-darker);
+}
+.ds-textarea--populated:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
+}
+.ds-textarea--empty:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
 }
 .ds-textarea--disabled {
   pointer-events: none;
@@ -11102,10 +11529,18 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-timepicker__label {
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+  white-space: nowrap;
+}
 .ds-timepicker__icon {
   flex-shrink: 0;
   width: var(--ds-size-3x);
-  height: 228px;
+  height: var(--ds-size-3x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -11121,6 +11556,7 @@ CSS-правила компонента:
 .ds-timepicker--time-grid {
   flex-direction: column;
   align-items: center;
+  color: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-timepicker--time-line {
   flex-direction: row;
@@ -11156,6 +11592,14 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-toggle-buttons__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-button-accent-default);
+  white-space: nowrap;
+}
 .ds-toggle-buttons__icon {
   flex-shrink: 0;
   width: var(--ds-size-6x);
@@ -11183,12 +11627,10 @@ CSS-правила компонента:
   box-shadow: none;
 }
 .ds-toggle-buttons--2-buttons {
-  width: 76px;
   gap: var(--ds-size-1x);
   background: var(--ds-color-button-accent-lite-default);
 }
 .ds-toggle-buttons--3-buttons {
-  width: 116px;
   gap: var(--ds-size-1x);
   background: var(--ds-color-button-accent-lite-default);
 }
@@ -11210,7 +11652,7 @@ CSS-правила компонента:
 .ds-tree__icon {
   flex-shrink: 0;
   width: var(--ds-size-6x);
-  height: 44px;
+  height: var(--ds-size-6x);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -11235,7 +11677,6 @@ CSS-правила компонента:
   flex-direction: row;
 }
 .ds-tree--3.ds-tree--end.ds-tree--off {
-  width: 72px;
   flex-direction: row;
 }
 .ds-tree--2.ds-tree--middle.ds-tree--on {
@@ -11253,7 +11694,6 @@ CSS-правила компонента:
   align-items: center;
 }
 .ds-tree--3.ds-tree--middle.ds-tree--off {
-  width: 72px;
   flex-direction: row;
   align-items: center;
 }
