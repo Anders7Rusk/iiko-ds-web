@@ -20,18 +20,18 @@
   align-items: center;
   gap: var(--ds-space-2x);                                /* 8px */
   box-sizing: border-box;
-  height: 32px;                                           /* ДС: Tab element = 32px */
-  padding: var(--ds-space-1x) var(--ds-space-6x);          /* ДС: 4px 24px */
+  height: 32px;                                           /* ДС Lvl=1: 32px */
+  padding: var(--ds-space-1x) var(--ds-space-6x);          /* ДС Lvl=1: 4px 24px */
   border: none;
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
   background: var(--ds-color-tab-innactive-default-background);
   color: var(--ds-color-tab-innactive-text-color);        /* #333333 */
   font-family: inherit;
-  font-size: var(--ds-typography-font-size-3-5x);         /* 14px */
-  font-weight: var(--ds-typography-font-weight-medium);   /* 500 */
+  font-size: var(--ds-typography-body-font-size-m);       /* ДС Lvl=1: 16px */
+  font-weight: var(--ds-typography-font-weight-medium);   /* ДС Lvl=1: 500 */
   letter-spacing: var(--ds-typography-letter-spacing-s);
-  line-height: 20px;
+  line-height: var(--ds-typography-body-line-height-m);   /* ДС Lvl=1: 24px */
   white-space: nowrap;
   cursor: pointer;
   transition: background-color .15s ease, color .15s ease, border-color .15s ease;
@@ -65,9 +65,13 @@
 }
 .ds-tab--disabled .ds-tab__icon { color: var(--ds-color-tab-disable-icon-color); }
 
-/* Уровень 2 — ДС: padding 4px 12px, высота та же 32px */
+/* Уровень 2 — ДС: h28, padding 4/12, шрифт 14px/400, lh 20 (отличается от Lvl=1!) */
 .ds-tabs--lvl2 .ds-tab {
+  height: 28px;
   padding: var(--ds-space-1x) var(--ds-space-3x);
+  font-size: var(--ds-typography-body-font-size-s);       /* 14px */
+  font-weight: var(--ds-typography-font-weight-regular);  /* 400 */
+  line-height: var(--ds-typography-body-line-height-s);   /* 20px */
 }
 
 /* Счётчик в табе (Badge внутри) */
