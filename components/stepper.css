@@ -107,3 +107,42 @@
   height: 1px;
   background: var(--ds-color-stepper-divider-color);         /* #616161 */
 }
+
+/* ============================================================
+   Stepper button (Figma 55419:7330) — счётчик шагов + кнопки навигации
+   12 вариантов: Type=Filled|Outlined × Position=First|Middle|Last
+                 × Content=Text|Icon      (высота ряда 36, gap 16)
+   Состав из Figma (что писать в разметке):
+     Position=First  → одна кнопка «Далее» (иконка справа keyboard_arrow_right)
+     Position=Middle → Button group (gap 8): «Назад» (keyboard_arrow_left слева)
+                       + «Далее» (keyboard_arrow_right справа)
+     Position=Last   → одна кнопка «Назад» (keyboard_arrow_left слева)
+     Content=Text    → .ds-btn.ds-btn--m ; Content=Icon → .ds-button-icon (36×36)
+     Type=Filled     → .ds-btn--accent.ds-btn--filled  (#448AFF + тень)
+     Type=Outlined   → .ds-btn--accent.ds-btn--outlined (рамка 1px #448AFF)
+   ============================================================ */
+
+.ds-stepper-button {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-4x);                                  /* 16px */
+  min-height: 36px;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* «N из M» — TEXT 14/500 lh20 #333333 */
+.ds-stepper-button__counter {
+  flex-shrink: 0;
+  color: var(--ds-color-text-primary);                      /* #333333 */
+  font-size: var(--ds-typography-body-font-size-s);         /* 14px */
+  font-weight: var(--ds-typography-font-weight-medium);     /* 500 */
+  line-height: var(--ds-typography-body-line-height-s);     /* 20px */
+  white-space: nowrap;
+}
+
+/* Button group / Button icon group внутри — gap 8 */
+.ds-stepper-button__group {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2x);                                  /* 8px */
+}
