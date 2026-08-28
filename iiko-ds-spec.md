@@ -5363,97 +5363,95 @@
 | Arrow select | `.ds-arrow-select` |
 | Autocomplete form | `.ds-autocomplete-form` · `--disabled` |
 | Backdrop | `.ds-backdrop` |
-| Button icon | `.ds-button-icon` · `--m` `--s` `--xs` `--negative` `--neutral` `--positive` `--warning` `--filled` `--outlined` `--default` `--disable` `--hover` `--loading` `--press` `--disabled` · :active, :disabled, :hover |
-| Button icon group | `.ds-button-icon-group` · `--vertically` |
-| Button New | `.ds-button-new` · `--btn-28` `--btn-36` |
-| Button toggle | `.ds-button-toggle` · `--s` `--xs` `--outlined` `--icon` |
-| Checkbox label | `.ds-checkbox-label` |
-| Chips | `.ds-chips` · `--m` `--s` `--filled` `--outlined` `--default` `--disable` `--focus` `--hover` `--press` `--disabled` · :active, :disabled, :focus, :hover |
-| Chips group | `.ds-chips-group` · `--s` |
-| Chips Input | `.ds-chips-input` · `--s` `--disabled` · :disabled, :focus |
-| Chips Input | `.ds-chips-input-2` · `--s` `--disabled` · :disabled, :focus |
-| Chips input cell | `.ds-chips-input-cell` · `--error` `--error-hover` `--hover` `--disabled` · :hover |
+| Button New | `.ds-button-new` · `--btn-36` `--btn-28` |
+| Button toggle | `.ds-button-toggle` · `--s` `--s` `--xs` `--xs` `--outlined` `--outlined` `--filled` |
+| Checkbox label | `.ds-checkbox-label` · `--normal` `--normal` `--normal` `--error` `--error` `--error` `--disable` `--disable` `--disable` |
+| Chips | `.ds-chips` · `--s` `--s` `--outlined` `--outlined` `--outlined` `--outlined` `--outlined` `--filled` `--filled` `--filled` `--filled` `--filled` `--disabled` · :active, :disabled, :hover |
+| Chips group | `.ds-chips-group` · `--s` `--s` |
+| Chips Input | `.ds-chips-input` · `--s` `--s` `--disabled` · :disabled, :focus |
+| Chips Input | `.ds-chips-input-2` · `--s` `--s` `--disabled` · :disabled, :focus |
+| Chips input cell | `.ds-chips-input-cell` · `--disabled` · :hover |
 | Chrome Header desktop | `.ds-chrome-header-desktop` |
-| Chrome Header mobile | `.ds-chrome-header-mobile` · `--on` |
+| Chrome Header mobile | `.ds-chrome-header-mobile` · `--off` `--on` |
 | Content | `.ds-content` |
-| Control arrow button | `.ds-control-arrow-button` · `--s` `--xs` |
-| Control group number button | `.ds-control-group-number-button` · `--xs` |
-| Control number button | `.ds-control-number-button` · `--s` `--disable` `--hover` `--press` `--disabled` · :active, :disabled, :hover |
-| Control Panel | `.ds-control-panel` · `--calendar` `--week` |
-| Control Panel | `.ds-control-panel-2` · `--time` |
-| Datepicker | `.ds-datepicker` · `--month` `--year` |
+| Control arrow button | `.ds-control-arrow-button` · `--s` `--s` `--xs` |
+| Control group number button | `.ds-control-group-number-button` · `--xs` `--xs` |
+| Control number button | `.ds-control-number-button` · `--xs` `--xs` `--left` `--left` `--left` `--left` `--left` `--right` `--right` `--right` `--right` `--right` `--disabled` · :active, :disabled, :hover |
+| Control Panel | `.ds-control-panel` · `--control` `--week` `--calendar` |
+| Control Panel | `.ds-control-panel-2` · `--control` `--time` |
+| Datepicker | `.ds-datepicker` · `--day` `--year` `--month` |
 | Dialog content | `.ds-dialog-content` |
 | Dialog footer | `.ds-dialog-footer` |
-| Dialog header | `.ds-dialog-header` · `--picture` |
+| Dialog header | `.ds-dialog-header` · `--text` `--picture` |
 | Dialog view | `.ds-dialog-view` |
-| Element | `.ds-element` · `--checkbox` `--counter` `--icon-group` `--icon-size` `--radio-button` `--slide-toggle` `--text-default` |
-| Element cell | `.ds-element-cell` · `--button` `--button-icon` `--chips` `--icon-group` `--input-number` `--slide-toggle` `--status` `--text-ui` |
+| Element | `.ds-element` · `--image-size` `--icon-size` `--icon-group` `--text-default` `--checkbox` `--radio-button` `--indicator` `--slide-toggle` `--counter` |
+| Element cell | `.ds-element-cell` · `--icon-size` `--icon-group` `--button` `--button-icon` `--status` `--text-ui` `--input-number` `--checkbox` `--slide-toggle` `--chips` `--cell-input` |
 | Element Form Field | `.ds-element-form-field` · `--chips-input-cell` |
 | Element left | `.ds-element-left` |
-| Element menu | `.ds-element-menu` · `--checkbox` `--counter` `--icon-size` `--radio-button` `--slide-toggle` `--text-default` |
-| Element select | `.ds-element-select` · `--checkbox` `--counter` `--icon-size` `--radio-button` `--slide-toggle` `--text-default` |
-| Element sidenav | `.ds-element-sidenav` · `--avatar` |
-| Element step | `.ds-element-step` · `--disabled` · :active, :disabled, :hover |
-| Elementare cell | `.ds-elementare-cell` · `--button` `--button-icon` `--chips` `--icon-group` `--input-number` `--slide-toggle` `--status` `--text-ui` |
-| Elements | `.ds-elements` · `--cell` `--month` `--year` `--default` `--range` `--selected` `--today` `--default` `--disable` `--hover` `--press` `--disabled` · :active, :disabled, :hover |
-| Elements | `.ds-elements-2` · `--default` `--selected` `--default` `--disable` `--hover` `--press` `--range` `--disabled` · :active, :disabled, :hover |
-| Expansion content | `.ds-expansion-content` · `--false` |
+| Element menu | `.ds-element-menu` · `--image-size` `--icon-size` `--text-default` `--checkbox` `--radio-button` `--indicator` `--slide-toggle` `--counter` |
+| Element select | `.ds-element-select` · `--image-size` `--icon-size` `--text-default` `--checkbox` `--radio-button` `--indicator` `--slide-toggle` `--counter` |
+| Element sidenav | `.ds-element-sidenav` · `--collaps-icon` `--avatar` |
+| Element step | `.ds-element-step` · `--icon-size` `--counter` `--counter` `--counter` `--counter` `--counter` `--disabled` · :active, :disabled, :hover |
+| Elementare cell | `.ds-elementare-cell` · `--icon-size` `--icon-group` `--button` `--button-icon` `--status` `--text-ui` `--input-number` `--checkbox` `--slide-toggle` `--chips` |
+| Elements | `.ds-elements` · `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--year` `--cell` `--cell` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--month` `--month` `--month` `--month` `--month` `--disabled` · :active, :disabled, :hover |
+| Elements | `.ds-elements-2` · `--selected` `--default` `--default` `--default` `--default` `--default` `--disabled` · :active, :disabled, :hover |
+| Expansion content | `.ds-expansion-content` · `--true` `--false` |
 | Expansion group panel | `.ds-expansion-group-panel` · `--expand` |
 | Form field cell | `.ds-form-field-cell` |
-| Header components | `.ds-header-components` · `--mini` |
-| Hint container | `.ds-hint-container` · `--single` `--default` `--left` `--right` |
-| Hint content | `.ds-hint-content` · `--single-content` |
-| Hint footer | `.ds-hint-footer` |
-| Hint header | `.ds-hint-header` |
+| Header components | `.ds-header-components` · `--default` `--mini` |
+| Hint container | `.ds-hint-container` · `--up` `--down` `--right` `--left` `--default` |
+| Hint content | `.ds-hint-content` · `--group-content` `--single-content` |
+| Hint footer | `.ds-hint-footer` · `--default` |
+| Hint header | `.ds-hint-header` · `--neutral` `--primary` `--secondary` `--warning` `--error` |
 | Icon group | `.ds-icon-group` · `--4x` |
-| Icon size | `.ds-icon-size` · `--20` `--24` `--32` `--36` `--40` |
-| Icon size_Draft | `.ds-icon-size-draft` · `--20` `--24` `--32` `--36` `--40` |
-| Input cell | `.ds-input-cell` · `--error` `--error-hover` `--hover` `--disabled` · :hover |
+| Icon size | `.ds-icon-size` |
+| Icon size_Draft | `.ds-icon-size-draft` |
+| Input cell | `.ds-input-cell` · `--disabled` · :hover |
 | Input Datepicker | `.ds-input-datepicker` |
-| Input for number | `.ds-input-for-number` · `--compact` `--normal` `--default` `--disable` `--error` `--focus` `--hover` `--disabled` · :disabled, :hover |
-| Input number | `.ds-input-number` · `--s` `--xs` `--no-label-up` `--disable` `--error` `--error-hover` `--focus` `--focus-placeholder` `--focus-value` `--hover` `--disabled` · :disabled, :focus, :hover |
+| Input for number | `.ds-input-for-number` · `--disabled` · :disabled, :hover |
+| Input number | `.ds-input-number` · `--s` `--xs` `--xs` `--populated` `--empty` `--disabled` |
 | Input number_but icon | `.ds-input-number-but-icon` |
 | Input Timepicker | `.ds-input-timepicker` |
-| List (Сontainer) | `.ds-list-container` |
-| List item | `.ds-list-item` · `--back-selected` `--hover` `--press` `--disabled` · :active, :disabled, :hover |
+| List (Сontainer) | `.ds-list-container` · `--container` |
+| List item | `.ds-list-item` · `--disabled` · :active, :disabled, :hover |
 | Logo iiko | `.ds-logo-iiko` |
-| Logo Syrve | `.ds-logo-syrve` · `--small` |
-| Menu (Container) | `.ds-menu-container` |
-| Menu item | `.ds-menu-item` · `--back-selected` `--hover` `--press` `--disabled` · :active, :disabled, :hover |
+| Logo Syrve | `.ds-logo-syrve` |
+| Menu (Container) | `.ds-menu-container` · `--container` |
+| Menu item | `.ds-menu-item` · `--disabled` · :active, :disabled, :hover |
 | Navigation Bar | `.ds-navigation-bar` |
 | Picture | `.ds-picture` |
 | Preview | `.ds-preview` |
-| Radio button label | `.ds-radio-button-label` |
-| Scroll | `.ds-scroll` · `--s` |
+| Radio button label | `.ds-radio-button-label` · `--normal` `--normal` `--error` `--error` `--disable` `--disable` |
+| Scroll | `.ds-scroll` · `--s` `--middle` |
 | Scroll tabs | `.ds-scroll-tabs` · `--left` |
-| Search | `.ds-search` · `--s` `--xs` `--disable` `--hover` `--disabled` · :disabled, :focus, :hover |
-| Select (Сontainer) | `.ds-select-container` |
-| Select cell | `.ds-select-cell` · `--error` `--error-hover` `--hover` `--disabled` · :hover |
-| Select form | `.ds-select-form` · `--s` `--xs` `--disabled` |
-| Select item | `.ds-select-item` · `--back-selected` `--disable` `--error` `--hover` `--press` `--selected` `--false` `--disabled` · :active, :disabled, :hover |
-| Sidenav control | `.ds-sidenav-control` · `--collapsed` `--hover` `--press` · :active, :hover |
-| Sidenav Footer | `.ds-sidenav-footer` · `--l1` `--collapsed` |
-| Sidenav header | `.ds-sidenav-header` · `--l2` `--collapsed` |
-| Sidenav item | `.ds-sidenav-item` · `--l1` `--l2` `--collapsed` `--active` `--hover` `--selected` · :hover |
-| Sidenav View | `.ds-sidenav-view` · `--l2` `--collapsed` |
-| Snackbar | `.ds-snackbar` · `--complex` `--light` |
+| Search | `.ds-search` · `--s` `--s` `--xs` `--xs` `--disabled` · :disabled, :focus, :hover |
+| Select (Сontainer) | `.ds-select-container` · `--container` |
+| Select cell | `.ds-select-cell` · `--disabled` · :hover |
+| Select form | `.ds-select-form` · `--s` `--s` `--xs` `--xs` `--disabled` |
+| Select item | `.ds-select-item` · `--true` `--false` `--false` `--false` `--false` `--false` `--disabled` · :active, :disabled, :hover |
+| Sidenav control | `.ds-sidenav-control` · `--collapsed` `--expanded` `--expanded` `--expanded` `--collapsed` · :active, :hover |
+| Sidenav Footer | `.ds-sidenav-footer` · `--l2` `--l1` `--l1` |
+| Sidenav header | `.ds-sidenav-header` · `--l1` `--l2` `--l1` |
+| Sidenav item | `.ds-sidenav-item` · `--l3` `--l3` `--l2` `--l2` `--l1` `--l1` `--l1` `--l1` · :hover |
+| Sidenav View | `.ds-sidenav-view` |
+| Snackbar | `.ds-snackbar` · `--single` `--single` `--complex` `--complex` |
 | State | `.ds-state` |
-| Status | `.ds-status` · `--accent` `--contrast-1` `--contrast-2` `--contrast-3` `--contrast-4` `--negative` `--neutral` `--positive` `--warning` `--filled` `--text` |
+| Status | `.ds-status` · `--neutral` `--accent` `--positive` `--warning` `--negative` `--contrast-1` `--contrast-2` `--contrast-3` `--contrast-4` `--neutral` `--accent` `--positive` `--warning` `--negative` `--contrast-1` `--contrast-2` `--contrast-3` `--contrast-4` |
 | Status Bar | `.ds-status-bar` |
-| Table 2 lvl | `.ds-table-2-lvl` |
+| Table 2 lvl | `.ds-table-2-lvl` · `--table-cell-2-lvl` `--table-row-2-lvl` |
 | Table Chips Input | `.ds-table-chips-input` |
-| Table content cell | `.ds-table-content-cell` · `--error` `--hover` `--disabled` · :hover |
-| Table content row | `.ds-table-content-row` · `--hover` `--selected` `--zebra` `--disabled` · :hover |
-| Table footer | `.ds-table-footer` |
-| Table header cell | `.ds-table-header-cell` · `--hover` `--disabled` · :hover |
+| Table content cell | `.ds-table-content-cell` · `--disabled` · :hover |
+| Table content row | `.ds-table-content-row` · `--disabled` · :hover |
+| Table footer | `.ds-table-footer` · `--default` |
+| Table header cell | `.ds-table-header-cell` · `--disabled` · :hover |
 | Table header row | `.ds-table-header-row` |
 | Text UI | `.ds-text-ui` · `--disabled` · :disabled |
-| Textarea | `.ds-textarea` · `--disabled` · :disabled |
-| Timepicker | `.ds-timepicker` · `--time-line` |
+| Textarea | `.ds-textarea` · `--populated` `--populated` `--empty` `--empty` `--populated` `--empty` `--disabled` · :disabled |
+| Timepicker | `.ds-timepicker` · `--time-grid` `--time-line` |
 | Title variant | `.ds-title-variant` |
-| Toggle buttons | `.ds-toggle-buttons` · `--2-buttons` `--3-buttons` `--3-text` `--text` |
-| Tree | `.ds-tree` · `--3` `--off` |
-| Tree item | `.ds-tree-item` · `--end-long` `--middle` `--middle-long` `--start` |
+| Toggle buttons | `.ds-toggle-buttons` · `--1-button` `--text` `--2-buttons` `--3-buttons` `--3-text` |
+| Tree | `.ds-tree` · `--2` `--2` `--3` `--3` `--2` `--2` `--3` `--3` |
+| Tree item | `.ds-tree-item` · `--end` `--end-long` `--middle` `--middle-long` `--start` |
 
 #### Ручные (выверенные по Figma) файлы — их классы
 
@@ -7544,7 +7542,7 @@ CSS-правила компонента:
    Все значения — только токены из tokens.css
    ============================================================ */
 
-/* Arrow [55939:14119] — 13 вариантов */
+/* Arrow [55939:14119] — 13 вариантов; оси: Content */
 .ds-arrow {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
@@ -7571,7 +7569,7 @@ CSS-правила компонента:
   fill: currentColor;
 }
 
-/* Arrow list [55939:13307] — 13 вариантов */
+/* Arrow list [55939:13307] — 13 вариантов; оси: Content */
 .ds-arrow-list {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
@@ -7598,7 +7596,7 @@ CSS-правила компонента:
   fill: currentColor;
 }
 
-/* Arrow menu [56090:1628] — 13 вариантов */
+/* Arrow menu [56090:1628] — 13 вариантов; оси: Content */
 .ds-arrow-menu {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
@@ -7625,7 +7623,7 @@ CSS-правила компонента:
   fill: currentColor;
 }
 
-/* Arrow select [57735:17989] — 13 вариантов */
+/* Arrow select [57735:17989] — 13 вариантов; оси: Content */
 .ds-arrow-select {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
@@ -7652,7 +7650,7 @@ CSS-правила компонента:
   fill: currentColor;
 }
 
-/* Autocomplete form [58107:8230] — 10 вариантов */
+/* Autocomplete form [58107:8230] — 10 вариантов; оси: Variant, State */
 .ds-autocomplete-form {
   height: 48px;
   display: flex;
@@ -7679,10 +7677,9 @@ CSS-правила компонента:
 }
 .ds-autocomplete-form--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Backdrop [53623:806] — 1 вариантов */
+/* Backdrop [53623:806] — 1 вариантов; оси: Type */
 .ds-backdrop {
   height: 240px;
   display: flex;
@@ -7692,143 +7689,14 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Button icon [17123:81299] — 153 вариантов */
-.ds-button-icon {
-  height: var(--ds-size-9x);
-  width: var(--ds-size-9x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2x);
-  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-button-accent-default);
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-button-icon__icon {
-  flex-shrink: 0;
-  width: var(--ds-size-5x);
-  height: var(--ds-size-5x);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-button-icon__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.ds-button-icon__icon svg path {
-  fill: currentColor;
-}
-.ds-button-icon--m {
-  background: var(--ds-color-button-accent-lite-default);
-}
-.ds-button-icon--s {
-  height: var(--ds-size-7x);
-  width: var(--ds-size-7x);
-  padding: var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x);
-  background: var(--ds-color-button-accent-lite-default);
-}
-.ds-button-icon--xs {
-  height: var(--ds-size-6x);
-  width: var(--ds-size-6x);
-  padding: var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x);
-  background: var(--ds-color-button-accent-lite-default);
-}
-.ds-button-icon--negative {
-  background: var(--ds-color-button-negative-default);
-}
-.ds-button-icon--neutral {
-  background: var(--ds-color-button-accent-lite-default);
-}
-.ds-button-icon--positive {
-  background: var(--ds-color-button-positive-default);
-}
-.ds-button-icon--warning {
-  background: var(--ds-color-button-warning-default);
-}
-.ds-button-icon--filled {
-  background: var(--ds-color-button-accent-lite-default);
-}
-.ds-button-icon--outlined {
-  background: var(--ds-color-button-accent-lite-default);
-  border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
-}
-.ds-button-icon--default {
-  background: var(--ds-color-button-accent-lite-default);
-}
-.ds-button-icon--disable {
-  background: var(--ds-color-button-neutral-disable);
-}
-.ds-button-icon--hover {
-  background: var(--ds-color-button-neutral-hover);
-}
-.ds-button-icon--loading {
-  height: var(--ds-size-8x);
-  width: var(--ds-size-8x);
-  background: var(--ds-color-button-neutral-disable);
-}
-.ds-button-icon--press {
-  background: var(--ds-color-button-neutral-disable);
-}
-.ds-button-icon:hover {
-  background: var(--ds-color-button-neutral-hover);
-}
-.ds-button-icon:active {
-  background: var(--ds-color-button-neutral-disable);
-}
-.ds-button-icon:disabled {
-  background: var(--ds-color-button-neutral-disable);
-}
-.ds-button-icon--disabled {
-  pointer-events: none;
-  opacity: 1;
-}
-
-/* Button icon group [53828:5738] — 2 вариантов */
-.ds-button-icon-group {
-  height: var(--ds-size-9x);
-  width: 124px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-button-icon-group__icon {
-  flex-shrink: 0;
-  width: var(--ds-size-5x);
-  height: var(--ds-size-5x);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-button-icon-group__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.ds-button-icon-group__icon svg path {
-  fill: currentColor;
-}
-.ds-button-icon-group--vertically {
-  height: 124px;
-  width: var(--ds-size-9x);
-}
-
-/* Button New [16321:6498] — 2 вариантов */
+/* Button New [16321:6498] — 2 вариантов; оси: Type */
 .ds-button-new {
-  height: var(--ds-size-9x);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2-5x) var(--ds-size-2-5x);
-  background: var(--ds-color-button-accent-lite-default);
   box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  height: var(--ds-size-9x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2-5x) var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -7840,19 +7708,19 @@ CSS-правила компонента:
   color: var(--ds-palette-neutral-950);
   white-space: nowrap;
 }
+.ds-button-new--btn-36 {
+  background: var(--ds-color-button-accent-lite-default);
+  color: var(--ds-palette-neutral-950);
+}
 .ds-button-new--btn-28 {
   height: var(--ds-size-7x);
-  width: 66px;
   padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x);
   background: var(--ds-color-button-accent-default);
-}
-.ds-button-new--btn-36 {
-  width: 95px;
+  color: var(--ds-color-button-accent-lite-default);
 }
 
-/* Button toggle [17039:71554] — 12 вариантов */
+/* Button toggle [17039:71554] — 12 вариантов; оси: Size, Type, Content */
 .ds-button-toggle {
-  height: 44px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -7860,6 +7728,7 @@ CSS-правила компонента:
   padding: var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x);
   border-radius: var(--ds-size-3x);
   background: var(--ds-color-button-accent-lite-default);
+  height: 44px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -7882,22 +7751,31 @@ CSS-правила компонента:
 .ds-button-toggle--s {
   height: var(--ds-size-9x);
   width: 100px;
-  border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
+}
+.ds-button-toggle--s .ds-button-toggle__icon {
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
 }
 .ds-button-toggle--xs {
   height: var(--ds-size-8x);
   width: 88px;
+}
+.ds-button-toggle--xs .ds-button-toggle__icon {
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
+}
+.ds-button-toggle--outlined.ds-button-toggle--text {
   border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
 }
-.ds-button-toggle--outlined {
-  border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
-}
-.ds-button-toggle--icon {
+.ds-button-toggle--outlined.ds-button-toggle--icon {
   width: 124px;
   border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
 }
+.ds-button-toggle--filled.ds-button-toggle--icon {
+  width: 124px;
+}
 
-/* Checkbox label [53810:880] — 9 вариантов */
+/* Checkbox label [53810:880] — 9 вариантов; оси: Variant, Type */
 .ds-checkbox-label {
   height: var(--ds-size-5x);
   display: flex;
@@ -7930,17 +7808,43 @@ CSS-правила компонента:
 .ds-checkbox-label__icon svg path {
   fill: currentColor;
 }
+.ds-checkbox-label--normal.ds-checkbox-label--deselected {
+  color: var(--ds-color-checkbox-group-text-color);
+}
+.ds-checkbox-label--normal.ds-checkbox-label--selected {
+  color: var(--ds-color-checkbox-group-text-color);
+}
+.ds-checkbox-label--normal.ds-checkbox-label--inderterminate {
+  color: var(--ds-color-checkbox-group-text-color);
+}
+.ds-checkbox-label--error.ds-checkbox-label--deselected {
+  color: var(--ds-color-checkbox-group-text-color);
+}
+.ds-checkbox-label--error.ds-checkbox-label--selected {
+  color: var(--ds-color-checkbox-group-text-color);
+}
+.ds-checkbox-label--error.ds-checkbox-label--inderterminate {
+  color: var(--ds-color-checkbox-group-text-color);
+}
+.ds-checkbox-label--disable.ds-checkbox-label--deselected {
+  color: var(--ds-color-checkbox-group-text-disable);
+}
+.ds-checkbox-label--disable.ds-checkbox-label--selected {
+  color: var(--ds-color-checkbox-group-text-disable);
+}
+.ds-checkbox-label--disable.ds-checkbox-label--inderterminate {
+  color: var(--ds-color-checkbox-group-text-disable);
+}
 
-/* Chips [17168:83542] — 18 вариантов */
+/* Chips [17168:83542] — 18 вариантов; оси: Size, Type, State */
 .ds-chips {
-  height: var(--ds-size-8x);
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-size-2x);
+  height: var(--ds-size-8x);
   padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-1-5x) var(--ds-size-1-5x);
+  gap: var(--ds-size-2x);
   border-radius: var(--ds-size-3x);
-  background: var(--ds-color-chips-input-default-background);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -7969,80 +7873,64 @@ CSS-правила компонента:
 .ds-chips__icon svg path {
   fill: currentColor;
 }
-.ds-chips--m {
-  width: 132px;
-  background: var(--ds-color-chips-disable-background-outlined);
-  border: 1px solid var(--ds-color-chips-input-default-border-color);
-}
 .ds-chips--s {
   height: var(--ds-size-6x);
-  width: 104px;
   gap: var(--ds-size-1x);
   padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1x) var(--ds-size-1x);
   border-radius: var(--ds-size-2x);
-  background: var(--ds-color-chips-disable-background-outlined);
-  border: 1px solid var(--ds-color-chips-input-default-border-color);
 }
-.ds-chips--filled {
-  width: 132px;
+.ds-chips--s .ds-chips__icon {
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
 }
 .ds-chips--outlined {
-  width: 132px;
   background: var(--ds-color-chips-disable-background-outlined);
   border: 1px solid var(--ds-color-chips-input-default-border-color);
+  color: var(--ds-color-chips-text-color);
 }
-.ds-chips--default {
-  width: 132px;
-  background: var(--ds-color-chips-disable-background-outlined);
-  border: 1px solid var(--ds-color-chips-input-default-border-color);
-}
-.ds-chips--disable {
-  width: 132px;
-  background: var(--ds-color-chips-disable-background-outlined);
-  border: 1px solid var(--ds-color-chips-input-disable-border-color);
-}
-.ds-chips--focus {
-  width: 136px;
-  background: var(--ds-color-chips-disable-background-outlined);
-}
-.ds-chips--hover {
-  width: 132px;
-  background: var(--ds-color-chips-disable-background-outlined);
+.ds-chips--outlined:hover {
   border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
 }
-.ds-chips--press {
-  width: 132px;
+.ds-chips--outlined:active {
   background: var(--ds-color-chips-input-default-border-color);
-  border: 1px solid var(--ds-color-chips-input-default-border-color);
 }
-.ds-chips:hover {
-  background: var(--ds-color-chips-disable-background-outlined);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
-}
-.ds-chips:active {
-  background: var(--ds-color-chips-input-default-border-color);
-  border: 1px solid var(--ds-color-chips-input-default-border-color);
-}
-.ds-chips:disabled {
-  background: var(--ds-color-chips-disable-background-outlined);
+.ds-chips--outlined:disabled {
   border: 1px solid var(--ds-color-chips-input-disable-border-color);
   color: var(--ds-color-chips-input-disable-action-text-color);
 }
-.ds-chips:focus-visible {
-  background: var(--ds-color-chips-disable-background-outlined);
+.ds-chips--outlined.ds-chips--disabled {
+  border: 1px solid var(--ds-color-chips-input-disable-border-color);
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips--filled {
+  background: var(--ds-color-chips-input-default-background);
+  color: var(--ds-color-chips-text-color);
+}
+.ds-chips--filled:hover {
+  background: var(--ds-color-chips-input-disable-background);
+}
+.ds-chips--filled:active {
+  background: var(--ds-color-chips-input-default-border-color);
+}
+.ds-chips--filled:disabled {
+  background: var(--ds-color-chips-input-disable-border-color);
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips--filled.ds-chips--disabled {
+  background: var(--ds-color-chips-input-disable-border-color);
+  color: var(--ds-color-chips-input-disable-action-text-color);
 }
 .ds-chips--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Chips group [55750:5485] — 2 вариантов */
+/* Chips group [55750:5485] — 2 вариантов; оси: Size */
 .ds-chips-group {
-  height: var(--ds-size-8x);
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
+  height: var(--ds-size-8x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8066,13 +7954,17 @@ CSS-правила компонента:
 .ds-chips-group--s {
   height: var(--ds-size-6x);
 }
+.ds-chips-group--s .ds-chips-group__icon {
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
+}
 
-/* Chips Input [52916:14622] — 16 вариантов */
+/* Chips Input [52916:14622] — 16 вариантов; оси: Size, State */
 .ds-chips-input {
-  height: 64px;
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-1x);
+  height: 64px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8104,24 +7996,29 @@ CSS-правила компонента:
 .ds-chips-input--s {
   height: var(--ds-size-9x);
 }
-.ds-chips-input:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+.ds-chips-input--s .ds-chips-input__icon {
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
 }
 .ds-chips-input:focus-visible {
   color: var(--ds-color-chips-input-focus-border-color);
 }
+.ds-chips-input:disabled {
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips-input.ds-chips-input--disabled {
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
 .ds-chips-input--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Chips Input [61382:55775] — 16 вариантов (ДУБЛЬ имени: второй сет «Chips Input»,
-   первый — [52916:14622] → .ds-chips-input; различать по node_id) */
+/* Chips Input [61382:55775] — 16 вариантов; оси: Size, State; ДУБЛЬ имени — второй сет «Chips Input», различать по node_id */
 .ds-chips-input-2 {
-  height: 80px;
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-1x);
+  height: 80px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8153,18 +8050,24 @@ CSS-правила компонента:
 .ds-chips-input-2--s {
   height: var(--ds-size-9x);
 }
-.ds-chips-input-2:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+.ds-chips-input-2--s .ds-chips-input-2__icon {
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
 }
 .ds-chips-input-2:focus-visible {
   color: var(--ds-color-chips-input-focus-border-color);
 }
+.ds-chips-input-2:disabled {
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips-input-2.ds-chips-input-2--disabled {
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
 .ds-chips-input-2--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Chips input cell [60231:75648] — 8 вариантов */
+/* Chips input cell [60231:75648] — 8 вариантов; оси: State */
 .ds-chips-input-cell {
   height: var(--ds-size-10x);
   display: flex;
@@ -8192,25 +8095,14 @@ CSS-правила компонента:
 .ds-chips-input-cell__icon svg path {
   fill: currentColor;
 }
-.ds-chips-input-cell--error {
-  border: 1px solid var(--ds-color-chips-input-error-border-color);
-}
-.ds-chips-input-cell--error-hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-error-border-color);
-}
-.ds-chips-input-cell--hover {
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
-}
 .ds-chips-input-cell:hover {
   border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
 }
 .ds-chips-input-cell--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Chrome Header desktop [56564:1013] — 1 вариантов */
+/* Chrome Header desktop [56564:1013] — 1 вариантов; оси: — */
 .ds-chrome-header-desktop {
   height: 86px;
   display: flex;
@@ -8219,12 +8111,11 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Chrome Header mobile [56564:1062] — 2 вариантов */
+/* Chrome Header mobile [56564:1062] — 2 вариантов; оси: Dark */
 .ds-chrome-header-mobile {
   height: 66px;
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-brand-neutral-default);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8235,11 +8126,16 @@ CSS-правила компонента:
   color: var(--ds-color-brand-neutral-super-dark);
   white-space: nowrap;
 }
+.ds-chrome-header-mobile--off {
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
 .ds-chrome-header-mobile--on {
   background: var(--ds-color-brand-neutral-super-dark);
+  color: var(--ds-color-brand-neutral-default);
 }
 
-/* Content [57375:12699] — 1 вариантов */
+/* Content [57375:12699] — 1 вариантов; оси: — */
 .ds-content {
   height: 750px;
   display: flex;
@@ -8258,13 +8154,13 @@ CSS-правила компонента:
   white-space: nowrap;
 }
 
-/* Control arrow button [52868:3935] — 3 вариантов */
+/* Control arrow button [52868:3935] — 3 вариантов; оси: Size */
 .ds-control-arrow-button {
-  height: var(--ds-size-9x);
-  width: var(--ds-size-5x);
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-0-5x);
+  height: var(--ds-size-9x);
+  width: var(--ds-size-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8288,15 +8184,17 @@ CSS-правила компонента:
   height: var(--ds-size-8x);
   width: 18px;
 }
+.ds-control-arrow-button--s .ds-control-arrow-button__icon {
+  width: var(--ds-size-3x);
+  height: var(--ds-size-3x);
+}
 .ds-control-arrow-button--xs {
   height: var(--ds-size-6x);
   width: var(--ds-size-3x);
 }
 
-/* Control group number button [53828:5569] — 2 вариантов */
+/* Control group number button [53828:5569] — 2 вариантов; оси: Size */
 .ds-control-group-number-button {
-  height: var(--ds-size-9x);
-  width: 65px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8304,6 +8202,8 @@ CSS-правила компонента:
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-brand-neutral-super-light);
   border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
+  height: var(--ds-size-9x);
+  width: 65px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8327,17 +8227,20 @@ CSS-правила компонента:
   height: var(--ds-size-6x);
   width: 49px;
 }
+.ds-control-group-number-button--xs .ds-control-group-number-button__icon {
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
+}
 
-/* Control number button [53829:6130] — 16 вариантов */
+/* Control number button [53829:6130] — 16 вариантов; оси: Size, Type, State */
 .ds-control-number-button {
-  height: var(--ds-size-6x);
-  width: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  padding: var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x);
-  background: var(--ds-color-button-accent-lite-default);
+  height: var(--ds-size-9x);
+  width: var(--ds-size-8x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2-5x) var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8357,42 +8260,55 @@ CSS-правила компонента:
 .ds-control-number-button__icon svg path {
   fill: currentColor;
 }
-.ds-control-number-button--s {
-  height: var(--ds-size-9x);
-  width: var(--ds-size-8x);
-  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2-5x) var(--ds-size-2-5x);
+.ds-control-number-button--xs {
+  height: var(--ds-size-6x);
+  width: var(--ds-size-6x);
+  padding: var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x);
 }
-.ds-control-number-button--disable {
-  background: var(--ds-color-button-neutral-disable);
+.ds-control-number-button--xs .ds-control-number-button__icon {
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
 }
-.ds-control-number-button--hover {
+.ds-control-number-button--left {
+  background: var(--ds-color-button-accent-lite-default);
+}
+.ds-control-number-button--left:hover {
   background: var(--ds-color-button-neutral-hover);
 }
-.ds-control-number-button--press {
+.ds-control-number-button--left:active {
   background: var(--ds-color-button-neutral-disable);
 }
-.ds-control-number-button:hover {
+.ds-control-number-button--left:disabled {
+  background: var(--ds-color-button-neutral-disable);
+}
+.ds-control-number-button--left.ds-control-number-button--disabled {
+  background: var(--ds-color-button-neutral-disable);
+}
+.ds-control-number-button--right {
+  background: var(--ds-color-button-accent-lite-default);
+}
+.ds-control-number-button--right:hover {
   background: var(--ds-color-button-neutral-hover);
 }
-.ds-control-number-button:active {
+.ds-control-number-button--right:active {
   background: var(--ds-color-button-neutral-disable);
 }
-.ds-control-number-button:disabled {
+.ds-control-number-button--right:disabled {
+  background: var(--ds-color-button-neutral-disable);
+}
+.ds-control-number-button--right.ds-control-number-button--disabled {
   background: var(--ds-color-button-neutral-disable);
 }
 .ds-control-number-button--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Control Panel [58501:4052] — 3 вариантов */
+/* Control Panel [58501:4052] — 3 вариантов; оси: Type */
 .ds-control-panel {
-  height: 48px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 74px;
+  height: 48px;
   padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
+  gap: 74px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8420,24 +8336,31 @@ CSS-правила компонента:
 .ds-control-panel__icon svg path {
   fill: currentColor;
 }
-.ds-control-panel--calendar {
-  height: 228px;
-  background: var(--ds-color-brand-neutral-default);
+.ds-control-panel--control {
+  flex-direction: row;
+  align-items: center;
+  color: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-control-panel--week {
   height: 44px;
+  flex-direction: row;
   padding: 0 0 var(--ds-size-0-5x) var(--ds-size-0-5x);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-control-panel--calendar {
+  height: 228px;
+  flex-direction: column;
+  align-items: center;
+  background: var(--ds-color-brand-neutral-default);
 }
 
-/* Control Panel [58982:11018] — 2 вариантов (ДУБЛЬ имени: второй сет «Control Panel»,
-   первый — [58501:4052] → .ds-control-panel; различать по node_id) */
+/* Control Panel [58982:11018] — 2 вариантов; оси: Type; ДУБЛЬ имени — второй сет «Control Panel», различать по node_id */
 .ds-control-panel-2 {
-  height: 48px;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 74px;
+  height: 48px;
   padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
+  gap: 74px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8465,20 +8388,25 @@ CSS-правила компонента:
 .ds-control-panel-2__icon svg path {
   fill: currentColor;
 }
+.ds-control-panel-2--control {
+  align-items: center;
+  color: var(--ds-color-brand-neutral-super-dark);
+}
 .ds-control-panel-2--time {
   height: 44px;
   padding: 0 0 var(--ds-size-0-5x) var(--ds-size-0-5x);
+  color: var(--ds-color-brand-neutral-super-dark);
 }
 
-/* Datepicker [58509:5439] — 3 вариантов */
+/* Datepicker [58509:5439] — 3 вариантов; оси: Type */
 .ds-datepicker {
-  height: 337px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
   border-radius: var(--ds-size-3x);
   border: 1px solid var(--ds-color-brand-neutral-lighter);
+  height: 337px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8506,14 +8434,19 @@ CSS-правила компонента:
 .ds-datepicker__icon svg path {
   fill: currentColor;
 }
-.ds-datepicker--month {
-  height: 248px;
+.ds-datepicker--day {
+  color: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-datepicker--year {
   height: 292px;
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-datepicker--month {
+  height: 248px;
+  color: var(--ds-color-brand-neutral-super-dark);
 }
 
-/* Dialog content [53535:1369] — 1 вариантов */
+/* Dialog content [53535:1369] — 1 вариантов; оси: State */
 .ds-dialog-content {
   height: 204px;
   display: flex;
@@ -8532,8 +8465,8 @@ CSS-правила компонента:
 }
 .ds-dialog-content__icon {
   flex-shrink: 0;
-  width: 11.999999380380132px;
-  height: 204.00000052453623px;
+  width: var(--ds-size-3x);
+  height: 204px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -8547,7 +8480,7 @@ CSS-правила компонента:
   fill: currentColor;
 }
 
-/* Dialog footer [53749:638] — 1 вариантов */
+/* Dialog footer [53749:638] — 1 вариантов; оси: State */
 .ds-dialog-footer {
   height: 69px;
   display: flex;
@@ -8573,12 +8506,12 @@ CSS-правила компонента:
   fill: currentColor;
 }
 
-/* Dialog header [53535:1322] — 2 вариантов */
+/* Dialog header [53535:1322] — 2 вариантов; оси: Type */
 .ds-dialog-header {
-  height: 93px;
   display: flex;
   flex-direction: column;
   background: var(--ds-color-dialog-background);
+  height: 93px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8606,11 +8539,14 @@ CSS-правила компонента:
 .ds-dialog-header__icon svg path {
   fill: currentColor;
 }
+.ds-dialog-header--text {
+  color: var(--ds-color-dialog-content-title-color);
+}
 .ds-dialog-header--picture {
   height: 200px;
 }
 
-/* Dialog view [52952:1285] — 1 вариантов */
+/* Dialog view [52952:1285] — 1 вариантов; оси: State */
 .ds-dialog-view {
   height: 364px;
   display: flex;
@@ -8631,8 +8567,8 @@ CSS-правила компонента:
 }
 .ds-dialog-view__icon {
   flex-shrink: 0;
-  width: 11.999999380380359px;
-  height: 204.00000052453623px;
+  width: var(--ds-size-3x);
+  height: 204px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -8646,15 +8582,13 @@ CSS-правила компонента:
   fill: currentColor;
 }
 
-/* Element [54104:20956] — 9 вариантов */
+/* Element [54104:20956] — 9 вариантов; оси: Content */
 .ds-element {
+  display: flex;
+  background: var(--ds-color-brand-neutral-default);
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-brand-neutral-default);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8674,43 +8608,56 @@ CSS-правила компонента:
 .ds-element__icon svg path {
   fill: currentColor;
 }
-.ds-element--checkbox {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
-}
-.ds-element--counter {
-  height: var(--ds-size-3-5x);
-  width: var(--ds-size-5x);
-}
-.ds-element--icon-group {
-  height: var(--ds-size-5x);
-  width: 76px;
+.ds-element--image-size {
+  flex-direction: row;
+  align-items: center;
 }
 .ds-element--icon-size {
   height: var(--ds-size-5x);
   width: var(--ds-size-5x);
+  flex-direction: row;
+  align-items: center;
+}
+.ds-element--icon-group {
+  height: var(--ds-size-5x);
+  width: 76px;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-element--text-default {
+  height: var(--ds-size-5x);
+  flex-direction: row;
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-element--checkbox {
+  height: var(--ds-size-5x);
+  width: var(--ds-size-5x);
+  flex-direction: row;
 }
 .ds-element--radio-button {
   height: var(--ds-size-5x);
   width: var(--ds-size-5x);
+  flex-direction: row;
+}
+.ds-element--indicator {
+  flex-direction: row;
 }
 .ds-element--slide-toggle {
   height: var(--ds-size-5x);
-  width: var(--ds-size-8-5x);
+  flex-direction: row;
+  color: var(--ds-color-brand-neutral-super-dark);
 }
-.ds-element--text-default {
-  height: var(--ds-size-5x);
-  width: 86px;
+.ds-element--counter {
+  height: var(--ds-size-3-5x);
+  flex-direction: column;
+  color: var(--ds-color-brand-neutral-default);
 }
 
-/* Element cell [58885:32432] — 11 вариантов */
+/* Element cell [58885:32432] — 11 вариантов; оси: Variant */
 .ds-element-cell {
+  display: flex;
   height: var(--ds-size-5x);
   width: var(--ds-size-5x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background: var(--ds-color-brand-neutral-default);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8730,42 +8677,72 @@ CSS-правила компонента:
 .ds-element-cell__icon svg path {
   fill: currentColor;
 }
+.ds-element-cell--icon-size {
+  flex-direction: row;
+  align-items: center;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-element-cell--icon-group {
+  width: 76px;
+  flex-direction: row;
+  align-items: center;
+  background: var(--ds-color-brand-neutral-default);
+}
 .ds-element-cell--button {
   height: var(--ds-size-6x);
-  width: 91px;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-element-cell--button-icon {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
 }
-.ds-element-cell--chips {
+.ds-element-cell--status {
   height: var(--ds-size-6x);
-  width: 104px;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-darker);
 }
-.ds-element-cell--icon-group {
-  width: 76px;
+.ds-element-cell--text-ui {
+  height: 52px;
+  flex-direction: row;
+  color: var(--ds-color-brand-neutral-darker);
 }
 .ds-element-cell--input-number {
   height: var(--ds-size-7x);
   width: 123px;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-element-cell--checkbox {
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
 }
 .ds-element-cell--slide-toggle {
-  width: 72px;
+  flex-direction: column;
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
 }
-.ds-element-cell--status {
+.ds-element-cell--chips {
   height: var(--ds-size-6x);
-  width: 116px;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
 }
-.ds-element-cell--text-ui {
-  height: 52px;
+.ds-element-cell--cell-input {
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
 }
 
-/* Element Form Field [60231:76795] — 3 вариантов */
+/* Element Form Field [60231:76795] — 3 вариантов; оси: Variant */
 .ds-element-form-field {
-  height: var(--ds-size-9x);
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-default);
+  height: var(--ds-size-9x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8773,7 +8750,7 @@ CSS-правила компонента:
   height: var(--ds-size-10x);
 }
 
-/* Element left [59851:11313] — 5 вариантов */
+/* Element left [59851:11313] — 5 вариантов; оси: Style */
 .ds-element-left {
   height: var(--ds-size-5x);
   width: var(--ds-size-5x);
@@ -8801,15 +8778,13 @@ CSS-правила компонента:
   fill: currentColor;
 }
 
-/* Element menu [56090:1611] — 8 вариантов */
+/* Element menu [56090:1611] — 8 вариантов; оси: Content */
 .ds-element-menu {
+  display: flex;
+  background: var(--ds-color-menu-background);
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-menu-background);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8829,40 +8804,52 @@ CSS-правила компонента:
 .ds-element-menu__icon svg path {
   fill: currentColor;
 }
-.ds-element-menu--checkbox {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
-}
-.ds-element-menu--counter {
-  height: var(--ds-size-3-5x);
-  width: var(--ds-size-5x);
+.ds-element-menu--image-size {
+  flex-direction: row;
+  align-items: center;
 }
 .ds-element-menu--icon-size {
   height: var(--ds-size-5x);
   width: var(--ds-size-5x);
+  flex-direction: row;
+  align-items: center;
+}
+.ds-element-menu--text-default {
+  height: var(--ds-size-5x);
+  flex-direction: row;
+  color: var(--ds-color-menu-item-text-color);
+}
+.ds-element-menu--checkbox {
+  height: var(--ds-size-5x);
+  width: var(--ds-size-5x);
+  flex-direction: row;
 }
 .ds-element-menu--radio-button {
   height: var(--ds-size-5x);
   width: var(--ds-size-5x);
+  flex-direction: row;
+}
+.ds-element-menu--indicator {
+  flex-direction: row;
 }
 .ds-element-menu--slide-toggle {
   height: var(--ds-size-5x);
-  width: var(--ds-size-8-5x);
+  flex-direction: row;
+  color: var(--ds-color-menu-item-text-color);
 }
-.ds-element-menu--text-default {
-  height: var(--ds-size-5x);
-  width: 80px;
+.ds-element-menu--counter {
+  height: var(--ds-size-3-5x);
+  flex-direction: column;
+  color: var(--ds-color-menu-background);
 }
 
-/* Element select [57735:17972] — 8 вариантов */
+/* Element select [57735:17972] — 8 вариантов; оси: Content */
 .ds-element-select {
+  display: flex;
+  background: var(--ds-color-brand-neutral-default);
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-brand-neutral-default);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8882,39 +8869,51 @@ CSS-правила компонента:
 .ds-element-select__icon svg path {
   fill: currentColor;
 }
-.ds-element-select--checkbox {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
-}
-.ds-element-select--counter {
-  height: var(--ds-size-3-5x);
-  width: var(--ds-size-5x);
+.ds-element-select--image-size {
+  flex-direction: row;
+  align-items: center;
 }
 .ds-element-select--icon-size {
   height: var(--ds-size-5x);
   width: var(--ds-size-5x);
+  flex-direction: row;
+  align-items: center;
+}
+.ds-element-select--text-default {
+  height: var(--ds-size-5x);
+  flex-direction: row;
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-element-select--checkbox {
+  height: var(--ds-size-5x);
+  width: var(--ds-size-5x);
+  flex-direction: row;
 }
 .ds-element-select--radio-button {
   height: var(--ds-size-5x);
   width: var(--ds-size-5x);
+  flex-direction: row;
+}
+.ds-element-select--indicator {
+  flex-direction: row;
 }
 .ds-element-select--slide-toggle {
   height: var(--ds-size-5x);
-  width: var(--ds-size-8-5x);
+  flex-direction: row;
+  color: var(--ds-color-brand-neutral-super-dark);
 }
-.ds-element-select--text-default {
-  height: var(--ds-size-5x);
-  width: 80px;
+.ds-element-select--counter {
+  height: var(--ds-size-3-5x);
+  flex-direction: column;
+  color: var(--ds-color-brand-neutral-default);
 }
 
-/* Element sidenav [56598:2991] — 2 вариантов */
+/* Element sidenav [56598:2991] — 2 вариантов; оси: Content */
 .ds-element-sidenav {
   height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
   display: flex;
-  flex-direction: row;
+  width: var(--ds-size-5x);
   border-radius: var(--ds-size-1x);
-  background: var(--ds-color-sidenav-control-background-hover);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8934,20 +8933,25 @@ CSS-правила компонента:
 .ds-element-sidenav__icon svg path {
   fill: currentColor;
 }
-.ds-element-sidenav--avatar {
-  gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) 3px 3px;
-}
-
-/* Element step [55403:7248] — 12 вариантов */
-.ds-element-step {
-  height: var(--ds-size-6x);
-  width: var(--ds-size-6x);
-  display: flex;
+.ds-element-sidenav--collaps-icon {
   flex-direction: row;
+  background: var(--ds-color-sidenav-control-background-hover);
+}
+.ds-element-sidenav--avatar {
+  flex-direction: column;
   align-items: center;
   gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) 3px 3px;
+  color: var(--ds-color-sidenav-item-l3-indicator);
+}
+
+/* Element step [55403:7248] — 12 вариантов; оси: Content, State */
+.ds-element-step {
+  height: var(--ds-size-6x);
+  display: flex;
   background: var(--ds-color-brand-neutral-default);
+  width: var(--ds-size-6x);
+  gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8967,28 +8971,35 @@ CSS-правила компонента:
 .ds-element-step__icon svg path {
   fill: currentColor;
 }
-.ds-element-step:hover {
+.ds-element-step--icon-size {
+  flex-direction: row;
+  align-items: center;
+}
+.ds-element-step--counter {
+  flex-direction: column;
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-element-step--counter:hover {
   color: var(--ds-color-brand-neutral-default);
 }
-.ds-element-step:active {
+.ds-element-step--counter:active {
   color: var(--ds-color-brand-neutral-default);
 }
-.ds-element-step:disabled {
+.ds-element-step--counter:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-element-step--counter.ds-element-step--disabled {
   color: var(--ds-color-brand-neutral-neutral);
 }
 .ds-element-step--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Elementare cell [60220:72578] — 10 вариантов */
+/* Elementare cell [60220:72578] — 10 вариантов; оси: Variant */
 .ds-elementare-cell {
+  display: flex;
   height: var(--ds-size-5x);
   width: var(--ds-size-5x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background: var(--ds-color-brand-neutral-default);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -9008,44 +9019,67 @@ CSS-правила компонента:
 .ds-elementare-cell__icon svg path {
   fill: currentColor;
 }
+.ds-elementare-cell--icon-size {
+  flex-direction: row;
+  align-items: center;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-elementare-cell--icon-group {
+  width: 76px;
+  flex-direction: row;
+  align-items: center;
+  background: var(--ds-color-brand-neutral-default);
+}
 .ds-elementare-cell--button {
   height: var(--ds-size-6x);
-  width: 91px;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-elementare-cell--button-icon {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
 }
-.ds-elementare-cell--chips {
+.ds-elementare-cell--status {
   height: var(--ds-size-6x);
-  width: 104px;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-darker);
 }
-.ds-elementare-cell--icon-group {
-  width: 76px;
+.ds-elementare-cell--text-ui {
+  height: 52px;
+  flex-direction: row;
+  color: var(--ds-color-brand-neutral-darker);
 }
 .ds-elementare-cell--input-number {
   height: var(--ds-size-7x);
   width: 123px;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-elementare-cell--checkbox {
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
 }
 .ds-elementare-cell--slide-toggle {
-  width: 72px;
+  flex-direction: column;
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
 }
-.ds-elementare-cell--status {
+.ds-elementare-cell--chips {
   height: var(--ds-size-6x);
-  width: 116px;
-}
-.ds-elementare-cell--text-ui {
-  height: 52px;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
 }
 
-/* Elements [58501:4220] — 30 вариантов */
+/* Elements [58501:4220] — 30 вариантов; оси: Type, Variant, State */
 .ds-elements {
   height: var(--ds-size-10x);
   display: flex;
-  flex-direction: row;
-  align-items: center;
   border-radius: var(--ds-size-circular);
-  background: var(--ds-color-brand-neutral-default);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -9057,71 +9091,140 @@ CSS-правила компонента:
   color: var(--ds-color-brand-neutral-super-dark);
   white-space: nowrap;
 }
-.ds-elements--cell {
-  width: var(--ds-size-10x);
+.ds-elements--cell.ds-elements--today:disabled {
+  background: var(--ds-color-brand-neutral-lighter);
+  color: var(--ds-color-brand-neutral-neutral);
 }
-.ds-elements--month {
-  width: 71px;
-  gap: var(--ds-size-2x);
-  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
+.ds-elements--cell.ds-elements--today.ds-elements--disabled {
+  background: var(--ds-color-brand-neutral-lighter);
+  color: var(--ds-color-brand-neutral-neutral);
 }
-.ds-elements--year {
-  width: 70px;
+.ds-elements--cell.ds-elements--default:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
 }
-.ds-elements--default {
-  width: var(--ds-size-10x);
+.ds-elements--cell.ds-elements--default.ds-elements--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements--cell.ds-elements--range:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements--cell.ds-elements--range.ds-elements--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements--cell.ds-elements--selected:active {
+  background: var(--ds-color-brand-accent-darker);
+}
+.ds-elements--cell.ds-elements--today:active {
+  background: var(--ds-color-brand-neutral-lighter);
+}
+.ds-elements--cell.ds-elements--default:active {
+  background: var(--ds-color-brand-neutral-lighter);
+}
+.ds-elements--cell.ds-elements--today:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+}
+.ds-elements--cell.ds-elements--default:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+}
+.ds-elements--cell.ds-elements--range {
+  flex-direction: row;
+  align-items: center;
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-elements--cell.ds-elements--selected {
+  flex-direction: column;
+  align-items: center;
+  color: var(--ds-color-brand-neutral-default);
+}
+.ds-elements--year.ds-elements--selected {
+  flex-direction: column;
+  align-items: center;
+  color: var(--ds-color-brand-neutral-default);
+}
+.ds-elements--cell.ds-elements--today {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-brand-neutral-default);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-elements--cell.ds-elements--default {
+  flex-direction: column;
+  align-items: center;
   gap: var(--ds-size-2-5x);
   padding: var(--ds-size-2-5x) var(--ds-size-2-5x) var(--ds-size-2x) var(--ds-size-2x);
+  color: var(--ds-color-brand-neutral-super-dark);
 }
-.ds-elements--range {
-  width: var(--ds-size-10x);
+.ds-elements--year.ds-elements--default:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
 }
-.ds-elements--selected {
-  width: var(--ds-size-10x);
+.ds-elements--year.ds-elements--default.ds-elements--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
 }
-.ds-elements--today {
-  width: var(--ds-size-10x);
-  gap: var(--ds-size-2-5x);
-  border: 1px solid var(--ds-color-brand-neutral-neutral);
+.ds-elements--year.ds-elements--today:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
 }
-.ds-elements--default {
-  width: var(--ds-size-10x);
+.ds-elements--year.ds-elements--today.ds-elements--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
 }
-.ds-elements--disable {
-  width: var(--ds-size-10x);
-  gap: var(--ds-size-2-5x);
+.ds-elements--year.ds-elements--default:active {
   background: var(--ds-color-brand-neutral-lighter);
-  border: 1px solid var(--ds-color-brand-neutral-neutral);
 }
-.ds-elements--hover {
-  width: var(--ds-size-10x);
-}
-.ds-elements--press {
-  width: var(--ds-size-10x);
-}
-.ds-elements:hover {
-  color: var(--ds-color-brand-neutral-default);
-}
-.ds-elements:active {
-  background: var(--ds-color-brand-accent-darker);
-  color: var(--ds-color-brand-neutral-default);
-}
-.ds-elements:disabled {
+.ds-elements--year.ds-elements--today:active {
   background: var(--ds-color-brand-neutral-lighter);
+}
+.ds-elements--year.ds-elements--default:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+}
+.ds-elements--year.ds-elements--today:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+}
+.ds-elements--year.ds-elements--default {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-elements--year.ds-elements--today {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-brand-neutral-default);
   border: 1px solid var(--ds-color-brand-neutral-neutral);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-elements--month.ds-elements--default {
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-elements--month.ds-elements--default:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+}
+.ds-elements--month.ds-elements--default:active {
+  background: var(--ds-color-brand-neutral-lighter);
+}
+.ds-elements--month.ds-elements--default:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements--month.ds-elements--default.ds-elements--disabled {
   color: var(--ds-color-brand-neutral-neutral);
 }
 .ds-elements--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Elements [58982:9594] — 8 вариантов (ДУБЛЬ имени: второй сет «Elements»,
-   первый — [58501:4220] → .ds-elements; различать по node_id) */
+/* Elements [58982:9594] — 8 вариантов; оси: Variant, State; ДУБЛЬ имени — второй сет «Elements», различать по node_id */
 .ds-elements-2 {
   height: var(--ds-size-10x);
   display: flex;
-  flex-direction: column;
   align-items: center;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -9134,58 +9237,40 @@ CSS-правила компонента:
   color: var(--ds-color-brand-neutral-default);
   white-space: nowrap;
 }
+.ds-elements-2--selected {
+  flex-direction: column;
+  color: var(--ds-color-brand-neutral-default);
+}
+.ds-elements-2--default:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements-2--default.ds-elements-2--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements-2--default:active {
+  background: var(--ds-color-brand-neutral-lighter);
+}
+.ds-elements-2--default:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+}
 .ds-elements-2--default {
-  width: 74px;
+  flex-direction: row;
   gap: var(--ds-size-2-5x);
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
   border-radius: var(--ds-size-circular);
   background: var(--ds-color-brand-neutral-default);
-}
-.ds-elements-2--selected {
-  width: 74px;
-}
-.ds-elements-2--default {
-  width: 74px;
-}
-.ds-elements-2--disable {
-  width: 74px;
-  gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
-}
-.ds-elements-2--hover {
-  width: 74px;
-}
-.ds-elements-2--press {
-  width: 74px;
-}
-.ds-elements-2--range {
-  width: 74px;
-  gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
-  background: var(--ds-color-brand-accent-lighter);
-}
-.ds-elements-2:hover {
-  background: var(--ds-color-brand-neutral-super-light);
   color: var(--ds-color-brand-neutral-super-dark);
-}
-.ds-elements-2:active {
-  background: var(--ds-color-brand-neutral-lighter);
-  color: var(--ds-color-brand-neutral-super-dark);
-}
-.ds-elements-2:disabled {
-  color: var(--ds-color-brand-neutral-neutral);
 }
 .ds-elements-2--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Expansion content [61361:99603] — 2 вариантов */
+/* Expansion content [61361:99603] — 2 вариантов; оси: Padding off/on */
 .ds-expansion-content {
-  height: 52px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 52px;
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-4x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -9198,16 +9283,20 @@ CSS-правила компонента:
   color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
   white-space: nowrap;
 }
+.ds-expansion-content--true {
+  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+}
 .ds-expansion-content--false {
   height: var(--ds-size-5x);
+  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
 }
 
-/* Expansion group panel [56155:1676] — 2 вариантов */
+/* Expansion group panel [56155:1676] — 2 вариантов; оси: Type ? */
 .ds-expansion-group-panel {
-  height: 200px;
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-2x);
+  height: 200px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -9215,7 +9304,7 @@ CSS-правила компонента:
   height: 408px;
 }
 
-/* Form field cell [60220:72732] — 1 вариантов */
+/* Form field cell [60220:72732] — 1 вариантов; оси: Variant */
 .ds-form-field-cell {
   height: var(--ds-size-10x);
   display: flex;
@@ -9225,14 +9314,12 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Header components [53535:1244] — 2 вариантов */
+/* Header components [53535:1244] — 2 вариантов; оси: Type */
 .ds-header-components {
-  height: 136px;
   display: flex;
-  flex-direction: column;
   padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x);
+  height: 136px;
   border-radius: var(--ds-size-8x);
-  background: var(--ds-color-brand-neutral-default);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -9243,21 +9330,27 @@ CSS-правила компонента:
   color: var(--ds-color-brand-neutral-super-dark);
   white-space: nowrap;
 }
+.ds-header-components--default {
+  flex-direction: column;
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
 .ds-header-components--mini {
   height: 88px;
+  flex-direction: row;
   gap: var(--ds-size-6x);
   border-radius: var(--ds-size-6x);
   background: var(--ds-color-brand-neutral-super-light);
+  color: var(--ds-color-brand-neutral-default);
 }
 
-/* Hint container [54593:479] — 10 вариантов */
+/* Hint container [54593:479] — 10 вариантов; оси: Size, Orientation */
 .ds-hint-container {
-  height: 124px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  border-radius: var(--ds-size-2x);
   box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  height: 124px;
+  border-radius: var(--ds-size-2x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -9285,27 +9378,38 @@ CSS-правила компонента:
 .ds-hint-container__icon svg path {
   fill: currentColor;
 }
-.ds-hint-container--single {
-  height: var(--ds-size-10x);
+.ds-hint-container--up {
+  flex-direction: column;
+  color: var(--ds-color-hint-content-icon-color);
 }
-.ds-hint-container--default {
-  height: 120px;
-}
-.ds-hint-container--left {
-  height: 120px;
+.ds-hint-container--down {
+  flex-direction: column;
+  color: var(--ds-color-hint-content-icon-color);
 }
 .ds-hint-container--right {
   height: 120px;
+  flex-direction: row;
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-container--left {
+  height: 120px;
+  flex-direction: row;
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-container--default {
+  height: 120px;
+  flex-direction: column;
+  color: var(--ds-color-hint-content-icon-color);
 }
 
-/* Hint content [54713:3325] — 2 вариантов */
+/* Hint content [54713:3325] — 2 вариантов; оси: Content */
 .ds-hint-content {
-  height: 52px;
   display: flex;
   flex-direction: row;
   gap: var(--ds-size-2x);
   padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-2x);
   background: var(--ds-color-hint-background-color);
+  height: 52px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -9333,11 +9437,16 @@ CSS-правила компонента:
 .ds-hint-content__icon svg path {
   fill: currentColor;
 }
+.ds-hint-content--group-content {
+  color: var(--ds-color-hint-content-icon-color);
+}
 .ds-hint-content--single-content {
   height: var(--ds-size-9x);
+  align-items: center;
+  color: var(--ds-color-hint-content-icon-color);
 }
 
-/* Hint footer [54600:517] — 1 вариантов */
+/* Hint footer [54600:517] — 1 вариантов; оси: Content */
 .ds-hint-footer {
   height: 56px;
   display: flex;
@@ -9373,8 +9482,11 @@ CSS-правила компонента:
 .ds-hint-footer__icon svg path {
   fill: currentColor;
 }
+.ds-hint-footer--default {
+  color: var(--ds-color-hint-content-icon-color);
+}
 
-/* Hint header [54594:2219] — 5 вариантов */
+/* Hint header [54594:2219] — 5 вариантов; оси: Style */
 .ds-hint-header {
   height: var(--ds-size-8x);
   display: flex;
@@ -9409,14 +9521,29 @@ CSS-правила компонента:
 .ds-hint-header__icon svg path {
   fill: currentColor;
 }
+.ds-hint-header--neutral {
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-header--primary {
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-header--secondary {
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-header--warning {
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-header--error {
+  color: var(--ds-color-hint-content-icon-color);
+}
 
-/* Icon group [53467:1060] — 2 вариантов */
+/* Icon group [53467:1060] — 2 вариантов; оси: Size gap */
 .ds-icon-group {
   height: var(--ds-size-5x);
-  width: 76px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 76px;
   gap: var(--ds-size-2x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -9442,12 +9569,12 @@ CSS-правила компонента:
   gap: var(--ds-size-4x);
 }
 
-/* Icon size [52927:6286] — 12 вариантов */
+/* Icon size [52927:6286] — 12 вариантов; оси: Size, Content */
 .ds-icon-size {
-  height: var(--ds-size-4x);
-  width: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
+  height: var(--ds-size-4x);
+  width: var(--ds-size-4x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -9467,33 +9594,13 @@ CSS-правила компонента:
 .ds-icon-size__icon svg path {
   fill: currentColor;
 }
-.ds-icon-size--20 {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
-}
-.ds-icon-size--24 {
-  height: var(--ds-size-6x);
-  width: var(--ds-size-6x);
-}
-.ds-icon-size--32 {
-  height: var(--ds-size-8x);
-  width: var(--ds-size-8x);
-}
-.ds-icon-size--36 {
-  height: var(--ds-size-9x);
-  width: var(--ds-size-9x);
-}
-.ds-icon-size--40 {
-  height: var(--ds-size-10x);
-  width: var(--ds-size-10x);
-}
 
-/* Icon size_Draft [54063:12911] — 6 вариантов */
+/* Icon size_Draft [54063:12911] — 6 вариантов; оси: Size */
 .ds-icon-size-draft {
-  height: var(--ds-size-4x);
-  width: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
+  height: var(--ds-size-4x);
+  width: var(--ds-size-4x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -9513,28 +9620,8 @@ CSS-правила компонента:
 .ds-icon-size-draft__icon svg path {
   fill: currentColor;
 }
-.ds-icon-size-draft--20 {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
-}
-.ds-icon-size-draft--24 {
-  height: var(--ds-size-6x);
-  width: var(--ds-size-6x);
-}
-.ds-icon-size-draft--32 {
-  height: var(--ds-size-8x);
-  width: var(--ds-size-8x);
-}
-.ds-icon-size-draft--36 {
-  height: var(--ds-size-9x);
-  width: var(--ds-size-9x);
-}
-.ds-icon-size-draft--40 {
-  height: var(--ds-size-10x);
-  width: var(--ds-size-10x);
-}
 
-/* Input cell [60229:74436] — 8 вариантов */
+/* Input cell [60229:74436] — 8 вариантов; оси: State */
 .ds-input-cell {
   height: var(--ds-size-9x);
   display: flex;
@@ -9561,27 +9648,15 @@ CSS-правила компонента:
 .ds-input-cell__icon svg path {
   fill: currentColor;
 }
-.ds-input-cell--error {
-  border: 1px solid var(--ds-color-input-number-control-error-border-color);
-}
-.ds-input-cell--error-hover {
-  background: var(--ds-color-input-filled-disable-input-background);
-  border: 1px solid var(--ds-color-input-number-control-error-border-color);
-}
-.ds-input-cell--hover {
-  background: var(--ds-color-input-filled-disable-input-background);
-  border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
-}
 .ds-input-cell:hover {
   background: var(--ds-color-input-filled-disable-input-background);
   border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
 }
 .ds-input-cell--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Input Datepicker [58548:4764] — 2 вариантов */
+/* Input Datepicker [58548:4764] — 2 вариантов; оси: Type */
 .ds-input-datepicker {
   height: 48px;
   display: flex;
@@ -9607,16 +9682,16 @@ CSS-правила компонента:
   fill: currentColor;
 }
 
-/* Input for number [53827:5155] — 10 вариантов */
+/* Input for number [53827:5155] — 10 вариантов; оси: Size, State */
 .ds-input-for-number {
-  height: var(--ds-size-9x);
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-1x);
-  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-input-input-outlined-background);
+  height: var(--ds-size-9x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
   border: 1px solid var(--ds-color-input-number-control-default-border-color);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -9645,32 +9720,6 @@ CSS-правила компонента:
 .ds-input-for-number__icon svg path {
   fill: currentColor;
 }
-.ds-input-for-number--compact {
-  height: var(--ds-size-7x);
-  width: 101px;
-  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-1x);
-}
-.ds-input-for-number--normal {
-  width: 101px;
-}
-.ds-input-for-number--default {
-  width: 101px;
-}
-.ds-input-for-number--disable {
-  width: 101px;
-  border: 1px solid var(--ds-color-input-number-control-disable-border-color);
-}
-.ds-input-for-number--error {
-  width: 101px;
-  border: 1px solid var(--ds-color-input-number-control-error-border-color);
-}
-.ds-input-for-number--focus {
-  width: 101px;
-}
-.ds-input-for-number--hover {
-  width: 101px;
-  border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
-}
 .ds-input-for-number:hover {
   border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
 }
@@ -9678,18 +9727,20 @@ CSS-правила компонента:
   border: 1px solid var(--ds-color-input-number-control-disable-border-color);
   color: var(--ds-color-input-number-control-disable-icon-color);
 }
+.ds-input-for-number.ds-input-for-number--disabled {
+  border: 1px solid var(--ds-color-input-number-control-disable-border-color);
+  color: var(--ds-color-input-number-control-disable-icon-color);
+}
 .ds-input-for-number--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Input number [17193:84750] — 29 вариантов */
+/* Input number [17193:84750] — 29 вариантов; оси: Size, Variant, State */
 .ds-input-number {
-  height: 48px;
-  width: 138px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  height: 48px;
+  width: 138px;
   gap: 18px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -9712,56 +9763,25 @@ CSS-правила компонента:
 }
 .ds-input-number--s {
   height: var(--ds-size-9x);
-  background: var(--ds-color-input-input-outlined-background);
 }
 .ds-input-number--xs {
   height: var(--ds-size-7x);
-  width: 123px;
-  background: var(--ds-color-input-input-outlined-background);
 }
-.ds-input-number--no-label-up {
-  height: var(--ds-size-9x);
-  background: var(--ds-color-input-input-outlined-background);
+.ds-input-number--xs .ds-input-number__icon {
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
 }
-.ds-input-number--disable {
-  gap: var(--ds-size-1x);
+.ds-input-number--populated {
+  align-items: center;
 }
-.ds-input-number--error {
-  gap: var(--ds-size-1x);
-}
-.ds-input-number--error-hover {
-  gap: var(--ds-size-1x);
-}
-.ds-input-number--focus {
-  gap: var(--ds-size-1x);
-}
-.ds-input-number--focus-placeholder {
-  gap: var(--ds-size-1x);
-}
-.ds-input-number--focus-value {
-  gap: var(--ds-size-1x);
-}
-.ds-input-number--hover {
-  gap: var(--ds-size-1x);
-}
-.ds-input-number:hover {
-  background: var(--ds-color-input-input-outlined-background);
-  color: var(--ds-color-input-input-label-text-color);
-}
-.ds-input-number:disabled {
-  background: var(--ds-color-input-input-outlined-background);
-  color: var(--ds-color-input-input-label-text-color);
-}
-.ds-input-number:focus-visible {
-  background: var(--ds-color-input-input-outlined-background);
-  color: var(--ds-color-input-input-label-text-color);
+.ds-input-number--empty {
+  align-items: center;
 }
 .ds-input-number--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Input number_but icon [56967:10506] — 1 вариантов */
+/* Input number_but icon [56967:10506] — 1 вариантов; оси: — */
 .ds-input-number-but-icon {
   height: 56px;
   display: flex;
@@ -9795,7 +9815,7 @@ CSS-правила компонента:
   fill: currentColor;
 }
 
-/* Input Timepicker [58982:9561] — 2 вариантов */
+/* Input Timepicker [58982:9561] — 2 вариантов; оси: Type */
 .ds-input-timepicker {
   height: 48px;
   display: flex;
@@ -9821,7 +9841,7 @@ CSS-правила компонента:
   fill: currentColor;
 }
 
-/* List (Сontainer) [57604:4762] — 1 вариантов */
+/* List (Сontainer) [57604:4762] — 1 вариантов; оси: Type */
 .ds-list-container {
   height: 257px;
   display: flex;
@@ -9855,8 +9875,11 @@ CSS-правила компонента:
 .ds-list-container__icon svg path {
   fill: currentColor;
 }
+.ds-list-container--container {
+  color: var(--ds-color-list-item-icon-color);
+}
 
-/* List item [54101:7922] — 8 вариантов */
+/* List item [54101:7922] — 8 вариантов; оси: State */
 .ds-list-item {
   height: 68px;
   display: flex;
@@ -9891,15 +9914,6 @@ CSS-правила компонента:
 .ds-list-item__icon svg path {
   fill: currentColor;
 }
-.ds-list-item--back-selected {
-  background: var(--ds-color-list-item-selected-back-selected);
-}
-.ds-list-item--hover {
-  background: var(--ds-color-list-item-hover-background);
-}
-.ds-list-item--press {
-  background: var(--ds-color-list-item-press-background);
-}
 .ds-list-item:hover {
   background: var(--ds-color-list-item-hover-background);
 }
@@ -9909,23 +9923,25 @@ CSS-правила компонента:
 .ds-list-item:disabled {
   color: var(--ds-color-list-item-disable-icon-color);
 }
+.ds-list-item.ds-list-item--disabled {
+  color: var(--ds-color-list-item-disable-icon-color);
+}
 .ds-list-item--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Logo iiko [55332:19892] — 4 вариантов */
+/* Logo iiko [55332:19892] — 4 вариантов; оси: Size, Style */
 .ds-logo-iiko {
   height: 72px;
-  width: 73px;
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-default);
+  width: 73px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Logo Syrve [56079:771] — 4 вариантов */
+/* Logo Syrve [56079:771] — 4 вариантов; оси: Size, Style */
 .ds-logo-syrve {
   height: 72px;
   display: flex;
@@ -9934,11 +9950,8 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
-.ds-logo-syrve--small {
-  width: 61px;
-}
 
-/* Menu (Container) [54163:6705] — 1 вариантов */
+/* Menu (Container) [54163:6705] — 1 вариантов; оси: Type */
 .ds-menu-container {
   height: 418px;
   display: flex;
@@ -9960,7 +9973,7 @@ CSS-правила компонента:
 }
 .ds-menu-container__icon {
   flex-shrink: 0;
-  width: 12.000000000000057px;
+  width: var(--ds-size-3x);
   height: 272px;
   display: inline-flex;
   align-items: center;
@@ -9974,8 +9987,11 @@ CSS-правила компонента:
 .ds-menu-container__icon svg path {
   fill: currentColor;
 }
+.ds-menu-container--container {
+  color: var(--ds-color-brand-neutral-light);
+}
 
-/* Menu item [56090:1476] — 7 вариантов */
+/* Menu item [56090:1476] — 7 вариантов; оси: State */
 .ds-menu-item {
   height: 68px;
   display: flex;
@@ -10010,15 +10026,6 @@ CSS-правила компонента:
 .ds-menu-item__icon svg path {
   fill: currentColor;
 }
-.ds-menu-item--back-selected {
-  background: var(--ds-color-menu-item-selected-back-selected);
-}
-.ds-menu-item--hover {
-  background: var(--ds-color-menu-item-hover-background);
-}
-.ds-menu-item--press {
-  background: var(--ds-color-menu-item-press-background);
-}
 .ds-menu-item:hover {
   background: var(--ds-color-menu-item-hover-background);
 }
@@ -10028,12 +10035,14 @@ CSS-правила компонента:
 .ds-menu-item:disabled {
   color: var(--ds-color-menu-item-disable-icon-color);
 }
+.ds-menu-item.ds-menu-item--disabled {
+  color: var(--ds-color-menu-item-disable-icon-color);
+}
 .ds-menu-item--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Navigation Bar [56564:1057] — 2 вариантов */
+/* Navigation Bar [56564:1057] — 2 вариантов; оси: Dark */
 .ds-navigation-bar {
   height: var(--ds-size-5x);
   display: flex;
@@ -10042,7 +10051,7 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Picture [58937:3985] — 1 вариантов */
+/* Picture [58937:3985] — 1 вариантов; оси: — */
 .ds-picture {
   height: 189px;
   display: flex;
@@ -10055,7 +10064,7 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Preview [54063:12946] — 3 вариантов */
+/* Preview [54063:12946] — 3 вариантов; оси: Property 1 */
 .ds-preview {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
@@ -10084,7 +10093,7 @@ CSS-правила компонента:
   fill: currentColor;
 }
 
-/* Radio button label [54095:4306] — 6 вариантов */
+/* Radio button label [54095:4306] — 6 вариантов; оси: Variant, Type */
 .ds-radio-button-label {
   height: var(--ds-size-5x);
   display: flex;
@@ -10117,22 +10126,43 @@ CSS-правила компонента:
 .ds-radio-button-label__icon svg path {
   fill: currentColor;
 }
+.ds-radio-button-label--normal.ds-radio-button-label--deselected {
+  color: var(--ds-color-button-neutral-filled-default-text-color);
+}
+.ds-radio-button-label--normal.ds-radio-button-label--selected {
+  color: var(--ds-color-button-neutral-filled-default-text-color);
+}
+.ds-radio-button-label--error.ds-radio-button-label--deselected {
+  color: var(--ds-color-button-neutral-filled-default-text-color);
+}
+.ds-radio-button-label--error.ds-radio-button-label--selected {
+  color: var(--ds-color-button-neutral-filled-default-text-color);
+}
+.ds-radio-button-label--disable.ds-radio-button-label--deselected {
+  color: var(--ds-color-button-icon-disable-icon-color);
+}
+.ds-radio-button-label--disable.ds-radio-button-label--selected {
+  color: var(--ds-color-button-icon-disable-icon-color);
+}
 
-/* Scroll [53615:15339] — 12 вариантов */
+/* Scroll [53615:15339] — 12 вариантов; оси: Size, Position, State */
 .ds-scroll {
-  height: 12.000000000000028px;
   display: flex;
   flex-direction: column;
   padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
+  height: var(--ds-size-3x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-scroll--s {
-  height: 64.00000009539906px;
-  width: 8.00000076319236px;
+  height: 64px;
+  width: var(--ds-size-2x);
+}
+.ds-scroll--middle {
+  align-items: center;
 }
 
-/* Scroll tabs [59032:1821] — 4 вариантов */
+/* Scroll tabs [59032:1821] — 4 вариантов; оси: Orientation, State */
 .ds-scroll-tabs {
   height: var(--ds-size-7x);
   width: 76px;
@@ -10164,13 +10194,13 @@ CSS-правила компонента:
   padding: 0 48px 0 0;
 }
 
-/* Search [54453:1620] — 15 вариантов */
+/* Search [54453:1620] — 15 вариантов; оси: Size, State */
 .ds-search {
-  height: 48px;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
+  height: 48px;
   padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
   border-radius: var(--ds-size-3x);
   background: var(--ds-color-search-background);
@@ -10206,35 +10236,39 @@ CSS-правила компонента:
   height: var(--ds-size-9x);
   padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-2x);
 }
+.ds-search--s .ds-search__icon {
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+}
 .ds-search--xs {
   height: var(--ds-size-9x);
   width: var(--ds-size-9x);
   padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x);
   border-radius: var(--ds-size-circular);
-  background: var(--ds-color-search-default-background-xs);
 }
-.ds-search--disable {
-  background: var(--ds-color-search-disable-background);
-}
-.ds-search--hover {
-  border: 1px solid var(--ds-color-search-disable-icon-color);
-}
-.ds-search:hover {
-  border: 1px solid var(--ds-color-search-disable-icon-color);
+.ds-search--xs .ds-search__icon {
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
 }
 .ds-search:disabled {
+  background: var(--ds-color-search-disable-background);
+  color: var(--ds-color-search-disable-icon-color);
+}
+.ds-search.ds-search--disabled {
   background: var(--ds-color-search-disable-background);
   color: var(--ds-color-search-disable-icon-color);
 }
 .ds-search:focus-visible {
   color: var(--ds-color-search-completed-text-color);
 }
+.ds-search:hover {
+  border: 1px solid var(--ds-color-search-disable-icon-color);
+}
 .ds-search--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Select (Сontainer) [57735:17612] — 1 вариантов */
+/* Select (Сontainer) [57735:17612] — 1 вариантов; оси: Type */
 .ds-select-container {
   height: 406px;
   display: flex;
@@ -10270,8 +10304,11 @@ CSS-правила компонента:
 .ds-select-container__icon svg path {
   fill: currentColor;
 }
+.ds-select-container--container {
+  color: var(--ds-color-brand-neutral-light);
+}
 
-/* Select cell [60231:74976] — 7 вариантов */
+/* Select cell [60231:74976] — 7 вариантов; оси: State */
 .ds-select-cell {
   height: var(--ds-size-9x);
   display: flex;
@@ -10298,32 +10335,20 @@ CSS-правила компонента:
 .ds-select-cell__icon svg path {
   fill: currentColor;
 }
-.ds-select-cell--error {
-  border: 1px solid var(--ds-color-brand-negative-default);
-}
-.ds-select-cell--error-hover {
-  background: var(--ds-color-brand-neutral-super-light);
-  border: 1px solid var(--ds-color-brand-negative-default);
-}
-.ds-select-cell--hover {
-  background: var(--ds-color-brand-neutral-super-light);
-  border: 1px solid var(--ds-color-brand-neutral-neutral);
-}
 .ds-select-cell:hover {
   background: var(--ds-color-brand-neutral-super-light);
   border: 1px solid var(--ds-color-brand-neutral-neutral);
 }
 .ds-select-cell--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Select form [57862:17226] — 22 вариантов */
+/* Select form [57862:17226] — 22 вариантов; оси: Size, Variant, State */
 .ds-select-form {
-  height: 48px;
   display: flex;
   flex-direction: column;
   background: var(--ds-color-brand-neutral-default);
+  height: 48px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -10346,23 +10371,28 @@ CSS-правила компонента:
 .ds-select-form--s {
   height: var(--ds-size-9x);
 }
+.ds-select-form--s .ds-select-form__icon {
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+}
 .ds-select-form--xs {
   height: var(--ds-size-7x);
 }
+.ds-select-form--xs .ds-select-form__icon {
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+}
 .ds-select-form--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Select item [57735:17872] — 8 вариантов */
+/* Select item [57735:17872] — 8 вариантов; оси: State, Subtitle */
 .ds-select-item {
-  height: 38px;
   display: flex;
   flex-direction: row;
-  align-items: center;
   gap: var(--ds-size-2x);
+  height: 38px;
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-1-5x);
-  background: var(--ds-color-brand-neutral-default);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -10390,57 +10420,38 @@ CSS-правила компонента:
 .ds-select-item__icon svg path {
   fill: currentColor;
 }
-.ds-select-item--back-selected {
-  height: 68px;
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
-  background: var(--ds-color-brand-accent-lightest);
-}
-.ds-select-item--disable {
-  height: 68px;
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
-}
-.ds-select-item--error {
-  height: 68px;
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
-}
-.ds-select-item--hover {
-  height: 68px;
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
-  background: var(--ds-color-brand-neutral-super-light);
-}
-.ds-select-item--press {
-  height: 68px;
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
-  background: var(--ds-color-brand-neutral-lighter);
-}
-.ds-select-item--selected {
-  height: 68px;
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+.ds-select-item--true {
+  align-items: center;
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-darker);
 }
 .ds-select-item--false {
   height: 68px;
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-darker);
 }
-.ds-select-item:hover {
+.ds-select-item--false:hover {
   background: var(--ds-color-brand-neutral-super-light);
 }
-.ds-select-item:active {
+.ds-select-item--false:active {
   background: var(--ds-color-brand-neutral-lighter);
 }
-.ds-select-item:disabled {
+.ds-select-item--false:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-item--false.ds-select-item--disabled {
   color: var(--ds-color-brand-neutral-neutral);
 }
 .ds-select-item--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Sidenav control [55142:1734] — 6 вариантов */
+/* Sidenav control [55142:1734] — 6 вариантов; оси: Mode, State */
 .ds-sidenav-control {
   height: 41px;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-sidenav-control-background);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -10468,32 +10479,29 @@ CSS-правила компонента:
 .ds-sidenav-control__icon svg path {
   fill: currentColor;
 }
+.ds-sidenav-control--collapsed:hover {
+  background: var(--ds-color-sidenav-control-background-hover);
+}
+.ds-sidenav-control--expanded {
+  background: var(--ds-color-sidenav-control-background);
+  color: var(--ds-color-sidenav-control-text-color);
+}
+.ds-sidenav-control--expanded:hover {
+  background: var(--ds-color-sidenav-control-background-hover);
+}
+.ds-sidenav-control--expanded:active {
+  background: var(--ds-color-sidenav-control-background-hover);
+}
 .ds-sidenav-control--collapsed {
   width: 52px;
 }
-.ds-sidenav-control--hover {
-  width: 52px;
-  background: var(--ds-color-sidenav-control-background-hover);
-}
-.ds-sidenav-control--press {
-  width: 52px;
-}
-.ds-sidenav-control:hover {
-  background: var(--ds-color-sidenav-control-background-hover);
-}
-.ds-sidenav-control:active {
-  background: var(--ds-color-sidenav-control-background-hover);
-}
 
-/* Sidenav Footer [55111:1056] — 3 вариантов */
+/* Sidenav Footer [55111:1056] — 3 вариантов; оси: Type, Mode */
 .ds-sidenav-footer {
-  height: var(--ds-size-10x);
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-3x);
+  height: var(--ds-size-10x);
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x);
-  background: var(--ds-color-sidenav-control-text-color);
+  gap: var(--ds-size-3x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -10505,23 +10513,29 @@ CSS-правила компонента:
   color: var(--ds-color-sidenav-footer-l2-text-color);
   white-space: nowrap;
 }
-.ds-sidenav-footer--l1 {
-  height: 133px;
+.ds-sidenav-footer--l2.ds-sidenav-footer--expanded {
+  flex-direction: row;
+  align-items: center;
+  background: var(--ds-color-sidenav-control-text-color);
+  color: var(--ds-color-sidenav-footer-l2-text-color);
 }
-.ds-sidenav-footer--collapsed {
+.ds-sidenav-footer--l1.ds-sidenav-footer--expanded {
+  height: 133px;
+  flex-direction: column;
+}
+.ds-sidenav-footer--l1.ds-sidenav-footer--collapsed {
   height: 133px;
   width: 52px;
+  flex-direction: column;
 }
 
-/* Sidenav header [55045:637] — 3 вариантов */
+/* Sidenav header [55045:637] — 3 вариантов; оси: Type, Mode */
 .ds-sidenav-header {
   height: 48px;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 92px;
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x);
-  background: var(--ds-color-sidenav-control-background);
+  gap: 92px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -10541,24 +10555,29 @@ CSS-правила компонента:
 .ds-sidenav-header__icon svg path {
   fill: currentColor;
 }
-.ds-sidenav-header--l2 {
+.ds-sidenav-header--l1.ds-sidenav-header--expanded {
+  flex-direction: row;
+  background: var(--ds-color-sidenav-control-background);
+}
+.ds-sidenav-header--l2.ds-sidenav-header--expanded {
+  flex-direction: row;
   gap: var(--ds-size-2x);
   background: var(--ds-color-sidenav-control-text-color);
+  color: var(--ds-color-sidenav-header-l2-text-color);
 }
-.ds-sidenav-header--collapsed {
+.ds-sidenav-header--l1.ds-sidenav-header--collapsed {
   width: 52px;
+  flex-direction: column;
   padding: var(--ds-size-3-5x) var(--ds-size-3-5x) var(--ds-size-3x) var(--ds-size-3x);
+  background: var(--ds-color-sidenav-control-background);
 }
 
-/* Sidenav item [55070:3734] — 13 вариантов */
+/* Sidenav item [55070:3734] — 13 вариантов; оси: Type, Mode, State */
 .ds-sidenav-item {
-  height: var(--ds-size-8x);
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2x);
+  height: var(--ds-size-8x);
   padding: var(--ds-size-8x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
-  background: var(--ds-color-sidenav-control-text-color);
+  gap: var(--ds-size-2x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -10570,47 +10589,59 @@ CSS-правила компонента:
   color: var(--ds-color-sidenav-header-l2-text-color);
   white-space: nowrap;
 }
-.ds-sidenav-item--l1 {
+.ds-sidenav-item--l3.ds-sidenav-item--expanded:hover {
+  background: var(--ds-color-sidenav-item-l2-background-hover);
+}
+.ds-sidenav-item--l3.ds-sidenav-item--expanded {
+  flex-direction: row;
+  align-items: center;
+  background: var(--ds-color-sidenav-control-text-color);
+  color: var(--ds-color-sidenav-header-l2-text-color);
+}
+.ds-sidenav-item--l2.ds-sidenav-item--expanded {
+  height: 41px;
+  flex-direction: column;
+  background: var(--ds-color-sidenav-control-text-color);
+  color: var(--ds-color-sidenav-header-l2-text-color);
+}
+.ds-sidenav-item--l2.ds-sidenav-item--expanded:hover {
+  background: var(--ds-color-sidenav-item-l2-background-hover);
+}
+.ds-sidenav-item--l1.ds-sidenav-item--expanded:hover {
+  background: var(--ds-color-sidenav-control-background-hover);
+}
+.ds-sidenav-item--l1.ds-sidenav-item--expanded {
   height: 44px;
+  flex-direction: row;
+  align-items: center;
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x);
   background: var(--ds-color-sidenav-control-background);
+  color: var(--ds-color-sidenav-control-text-color);
 }
-.ds-sidenav-item--l2 {
-  height: 41px;
+.ds-sidenav-item--l1.ds-sidenav-item--collapsed:hover {
+  background: var(--ds-color-sidenav-control-background-hover);
 }
-.ds-sidenav-item--collapsed {
+.ds-sidenav-item--l1.ds-sidenav-item--collapsed {
   height: 44px;
   width: 52px;
+  flex-direction: row;
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x);
   background: var(--ds-color-sidenav-control-background);
 }
-.ds-sidenav-item--active {
-  background: var(--ds-color-sidenav-item-l2-background-selected);
-}
-.ds-sidenav-item--hover {
-  background: var(--ds-color-sidenav-item-l2-background-hover);
-}
-.ds-sidenav-item--selected {
-  background: var(--ds-color-sidenav-item-l2-background-selected);
-}
-.ds-sidenav-item:hover {
-  background: var(--ds-color-sidenav-item-l2-background-hover);
-}
 
-/* Sidenav View [55074:393] — 3 вариантов */
+/* Sidenav View [55074:393] — 3 вариантов; оси: Type, State */
 .ds-sidenav-view {
   height: 1024px;
   display: flex;
   flex-direction: column;
   padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
-  background: var(--ds-color-sidenav-control-background);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-view__icon {
   flex-shrink: 0;
-  width: 12.00002115631196px;
-  height: 484.00000052453663px;
+  width: var(--ds-size-3x);
+  height: 484px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -10623,21 +10654,14 @@ CSS-правила компонента:
 .ds-sidenav-view__icon svg path {
   fill: currentColor;
 }
-.ds-sidenav-view--l2 {
-  background: var(--ds-color-sidenav-control-text-color);
-}
-.ds-sidenav-view--collapsed {
-  width: 52px;
-}
 
-/* Snackbar [54373:10303] — 4 вариантов */
+/* Snackbar [54373:10303] — 4 вариантов; оси: Type, Mode */
 .ds-snackbar {
-  height: 56px;
   display: flex;
   flex-direction: column;
   border-radius: var(--ds-size-2x);
-  background: var(--ds-color-snackbar-dark-background);
   box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  height: 56px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -10665,14 +10689,26 @@ CSS-правила компонента:
 .ds-snackbar__icon svg path {
   fill: currentColor;
 }
-.ds-snackbar--complex {
-  height: 108px;
+.ds-snackbar--single.ds-snackbar--dark {
+  background: var(--ds-color-snackbar-dark-background);
+  color: var(--ds-color-snackbar-dark-text-color);
 }
-.ds-snackbar--light {
+.ds-snackbar--single.ds-snackbar--light {
   background: var(--ds-color-snackbar-dark-text-color);
+  color: var(--ds-color-snackbar-light-text-color);
+}
+.ds-snackbar--complex.ds-snackbar--dark {
+  height: 108px;
+  background: var(--ds-color-snackbar-dark-background);
+  color: var(--ds-color-snackbar-dark-text-color);
+}
+.ds-snackbar--complex.ds-snackbar--light {
+  height: 108px;
+  background: var(--ds-color-snackbar-dark-text-color);
+  color: var(--ds-color-snackbar-light-text-color);
 }
 
-/* State [54063:12395] — 2 вариантов */
+/* State [54063:12395] — 2 вариантов; оси: State */
 .ds-state {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
@@ -10682,16 +10718,15 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Status [52928:6588] — 18 вариантов */
+/* Status [52928:6588] — 18 вариантов; оси: Style, Type */
 .ds-status {
-  height: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-1x);
-  padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1x) var(--ds-size-1x);
   border-radius: var(--ds-size-2x);
-  background: var(--ds-color-status-accent-filled-background);
+  height: var(--ds-size-6x);
+  padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1x) var(--ds-size-1x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -10700,7 +10735,7 @@ CSS-правила компонента:
   font-weight: var(--ds-typography-font-weight-medium);
   line-height: var(--ds-typography-caption-line-height-l);
   letter-spacing: var(--ds-typography-letter-spacing-s);
-  color: var(--ds-color-status-accent-filled-text-color);
+  color: var(--ds-color-status-icon-color);
   white-space: nowrap;
 }
 .ds-status__icon {
@@ -10720,51 +10755,80 @@ CSS-правила компонента:
 .ds-status__icon svg path {
   fill: currentColor;
 }
-.ds-status--accent {
-  width: 116px;
-}
-.ds-status--contrast-1 {
-  width: 116px;
-  background: var(--ds-color-status-contrast-1-filled-background);
-}
-.ds-status--contrast-2 {
-  width: 116px;
-  background: var(--ds-color-status-contrast-2-filled-background);
-}
-.ds-status--contrast-3 {
-  width: 116px;
-  background: var(--ds-color-status-contrast-3-filled-background);
-}
-.ds-status--contrast-4 {
-  width: 116px;
-  background: var(--ds-color-status-contrast-4-filled-background);
-}
-.ds-status--negative {
-  width: 116px;
-  background: var(--ds-color-status-negative-filled-background);
-}
-.ds-status--neutral {
-  width: 116px;
+.ds-status--neutral.ds-status--filled {
   background: var(--ds-color-status-neutral-filled-background);
+  color: var(--ds-color-status-icon-color);
 }
-.ds-status--positive {
-  width: 116px;
+.ds-status--accent.ds-status--filled {
+  background: var(--ds-color-status-accent-filled-background);
+  color: var(--ds-color-status-accent-filled-text-color);
+}
+.ds-status--positive.ds-status--filled {
   background: var(--ds-color-status-positive-filled-background);
+  color: var(--ds-color-status-positive-filled-text-color);
 }
-.ds-status--warning {
-  width: 116px;
+.ds-status--warning.ds-status--filled {
   background: var(--ds-color-status-warning-filled-background);
+  color: var(--ds-color-status-warning-filled-text-color);
 }
-.ds-status--filled {
-  width: 116px;
-  background: var(--ds-color-status-neutral-filled-background);
+.ds-status--negative.ds-status--filled {
+  background: var(--ds-color-status-negative-filled-background);
+  color: var(--ds-color-status-negative-filled-text-color);
 }
-.ds-status--text {
+.ds-status--contrast-1.ds-status--filled {
+  background: var(--ds-color-status-contrast-1-filled-background);
+  color: var(--ds-color-status-contrast-1-filled-text-color);
+}
+.ds-status--contrast-2.ds-status--filled {
+  background: var(--ds-color-status-contrast-2-filled-background);
+  color: var(--ds-color-status-contrast-2-filled-text-color);
+}
+.ds-status--contrast-3.ds-status--filled {
+  background: var(--ds-color-status-contrast-3-filled-background);
+  color: var(--ds-color-status-contrast-3-filled-text-color);
+}
+.ds-status--contrast-4.ds-status--filled {
+  background: var(--ds-color-status-contrast-4-filled-background);
+  color: var(--ds-color-status-contrast-4-filled-text-color);
+}
+.ds-status--neutral.ds-status--text {
   height: var(--ds-size-4x);
-  width: 104px;
+  color: var(--ds-color-status-icon-color);
+}
+.ds-status--accent.ds-status--text {
+  height: var(--ds-size-4x);
+  color: var(--ds-color-status-accent-filled-text-color);
+}
+.ds-status--positive.ds-status--text {
+  height: var(--ds-size-4x);
+  color: var(--ds-color-status-positive-filled-text-color);
+}
+.ds-status--warning.ds-status--text {
+  height: var(--ds-size-4x);
+  color: var(--ds-color-status-warning-filled-text-color);
+}
+.ds-status--negative.ds-status--text {
+  height: var(--ds-size-4x);
+  color: var(--ds-color-status-negative-filled-text-color);
+}
+.ds-status--contrast-1.ds-status--text {
+  height: var(--ds-size-4x);
+  color: var(--ds-color-status-contrast-1-filled-text-color);
+}
+.ds-status--contrast-2.ds-status--text {
+  height: var(--ds-size-4x);
+  color: var(--ds-color-status-contrast-2-filled-text-color);
+}
+.ds-status--contrast-3.ds-status--text {
+  height: var(--ds-size-4x);
+  color: var(--ds-color-status-contrast-3-filled-text-color);
+}
+.ds-status--contrast-4.ds-status--text {
+  height: var(--ds-size-4x);
+  color: var(--ds-color-status-contrast-4-filled-text-color);
 }
 
-/* Status Bar [56564:1236] — 1 вариантов */
+/* Status Bar [56564:1236] — 1 вариантов; оси: — */
 .ds-status-bar {
   height: 44px;
   display: flex;
@@ -10779,17 +10843,23 @@ CSS-правила компонента:
   white-space: nowrap;
 }
 
-/* Table 2 lvl [60074:44684] — 2 вариантов */
+/* Table 2 lvl [60074:44684] — 2 вариантов; оси: Type */
 .ds-table-2-lvl {
   height: 72px;
   display: flex;
-  flex-direction: column;
-  border: 1px solid var(--ds-color-tab-active-press-background);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-table-2-lvl--table-cell-2-lvl {
+  flex-direction: column;
+  border: 1px solid var(--ds-color-tab-active-press-background);
+}
+.ds-table-2-lvl--table-row-2-lvl {
+  flex-direction: row;
+  align-items: center;
+}
 
-/* Table Chips Input [60220:70978] — 8 вариантов */
+/* Table Chips Input [60220:70978] — 8 вариантов; оси: Style */
 .ds-table-chips-input {
   height: var(--ds-size-6x);
   display: flex;
@@ -10816,7 +10886,7 @@ CSS-правила компонента:
   fill: currentColor;
 }
 
-/* Table content cell [52954:1253] — 8 вариантов */
+/* Table content cell [52954:1253] — 8 вариантов; оси: State */
 .ds-table-content-cell {
   height: var(--ds-size-9x);
   width: 81px;
@@ -10844,48 +10914,31 @@ CSS-правила компонента:
 .ds-table-content-cell__icon svg path {
   fill: currentColor;
 }
-.ds-table-content-cell--error {
-  border: 1px solid var(--ds-color-table-cell-content-error-border-color);
-}
-.ds-table-content-cell--hover {
-  border: 1px solid var(--ds-color-tab-disable-icon-color);
-}
 .ds-table-content-cell:hover {
   border: 1px solid var(--ds-color-tab-disable-icon-color);
 }
 .ds-table-content-cell--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Table content row [60105:56764] — 5 вариантов */
+/* Table content row [60105:56764] — 5 вариантов; оси: State */
 .ds-table-content-row {
   height: var(--ds-size-9x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-table-surfase-default);
   border: 1px solid var(--ds-color-tab-active-press-background);
+  background: var(--ds-color-table-surfase-default);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-table-content-row--hover {
-  background: var(--ds-color-table-surfase-hover);
-}
-.ds-table-content-row--selected {
-  background: var(--ds-color-table-surfase-group);
-}
-.ds-table-content-row--zebra {
-  background: var(--ds-color-table-surfase-hover);
 }
 .ds-table-content-row:hover {
   background: var(--ds-color-table-surfase-hover);
 }
 .ds-table-content-row--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Table footer [59207:20759] — 1 вариантов */
+/* Table footer [59207:20759] — 1 вариантов; оси: Type */
 .ds-table-footer {
   height: 65px;
   display: flex;
@@ -10903,8 +10956,11 @@ CSS-правила компонента:
   color: var(--ds-color-tab-innactive-counter-text-color);
   white-space: nowrap;
 }
+.ds-table-footer--default {
+  color: var(--ds-color-tab-innactive-counter-text-color);
+}
 
-/* Table header cell [60098:45424] — 3 вариантов */
+/* Table header cell [60098:45424] — 3 вариантов; оси: State */
 .ds-table-header-cell {
   height: var(--ds-size-9x);
   width: 81px;
@@ -10913,8 +10969,8 @@ CSS-правила компонента:
   align-items: center;
   gap: var(--ds-size-2x);
   padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
-  background: var(--ds-color-table-surfase-head);
   border: 1px solid var(--ds-color-tab-active-press-background);
+  background: var(--ds-color-table-surfase-head);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -10934,18 +10990,14 @@ CSS-правила компонента:
 .ds-table-header-cell__icon svg path {
   fill: currentColor;
 }
-.ds-table-header-cell--hover {
-  background: var(--ds-color-table-cell-header-hover-background);
-}
 .ds-table-header-cell:hover {
   background: var(--ds-color-table-cell-header-hover-background);
 }
 .ds-table-header-cell--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Table header row [53556:3571] — 1 вариантов */
+/* Table header row [53556:3571] — 1 вариантов; оси: State */
 .ds-table-header-row {
   height: var(--ds-size-9x);
   display: flex;
@@ -10956,7 +11008,7 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Text UI [57938:18290] — 7 вариантов */
+/* Text UI [57938:18290] — 7 вариантов; оси: State */
 .ds-text-ui {
   height: 52px;
   display: flex;
@@ -10992,12 +11044,14 @@ CSS-правила компонента:
 .ds-text-ui:disabled {
   color: var(--ds-color-brand-neutral-neutral);
 }
+.ds-text-ui.ds-text-ui--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
 .ds-text-ui--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Textarea [57916:9023] — 13 вариантов */
+/* Textarea [57916:9023] — 13 вариантов; оси: Size, Variant, State */
 .ds-textarea {
   height: 96px;
   display: flex;
@@ -11030,25 +11084,37 @@ CSS-правила компонента:
 .ds-textarea__icon svg path {
   fill: currentColor;
 }
-.ds-textarea:disabled {
+.ds-textarea--populated:disabled {
   color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-textarea--populated.ds-textarea--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-textarea--empty:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-textarea--empty.ds-textarea--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-textarea--populated {
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-textarea--empty {
+  color: var(--ds-color-brand-neutral-darker);
 }
 .ds-textarea--disabled {
   pointer-events: none;
-  opacity: 1;
 }
 
-/* Timepicker [58982:9858] — 2 вариантов */
+/* Timepicker [58982:9858] — 2 вариантов; оси: Type */
 .ds-timepicker {
-  height: 244px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
   border-radius: var(--ds-size-3x);
   background: var(--ds-color-brand-neutral-default);
   border: 1px solid var(--ds-color-brand-neutral-lighter);
   box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  height: 244px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -11068,12 +11134,17 @@ CSS-правила компонента:
 .ds-timepicker__icon svg path {
   fill: currentColor;
 }
+.ds-timepicker--time-grid {
+  flex-direction: column;
+  align-items: center;
+}
 .ds-timepicker--time-line {
   height: 256px;
-  width: 102px;
+  flex-direction: row;
+  color: var(--ds-color-brand-neutral-super-dark);
 }
 
-/* Title variant [17034:68611] — 1 вариантов */
+/* Title variant [17034:68611] — 1 вариантов; оси: — */
 .ds-title-variant {
   height: 140px;
   display: flex;
@@ -11090,16 +11161,15 @@ CSS-правила компонента:
   white-space: nowrap;
 }
 
-/* Toggle buttons [16992:8639] — 5 вариантов */
+/* Toggle buttons [16992:8639] — 5 вариантов; оси: Type */
 .ds-toggle-buttons {
   height: var(--ds-size-9x);
-  width: var(--ds-size-9x);
   display: flex;
   flex-direction: row;
-  gap: var(--ds-size-2-5x);
+  width: var(--ds-size-9x);
   padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x);
+  gap: var(--ds-size-2-5x);
   border-radius: var(--ds-size-0-5x);
-  background: var(--ds-color-button-accent-lite-default);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -11119,36 +11189,44 @@ CSS-правила компонента:
 .ds-toggle-buttons__icon svg path {
   fill: currentColor;
 }
+.ds-toggle-buttons--1-button {
+  background: var(--ds-color-button-accent-lite-default);
+}
+.ds-toggle-buttons--text {
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x);
+  background: var(--ds-color-button-accent-lite-default);
+  color: var(--ds-color-button-accent-default);
+  border: none;
+  box-shadow: none;
+}
 .ds-toggle-buttons--2-buttons {
   width: 76px;
   gap: var(--ds-size-1x);
+  background: var(--ds-color-button-accent-lite-default);
 }
 .ds-toggle-buttons--3-buttons {
   width: 116px;
   gap: var(--ds-size-1x);
+  background: var(--ds-color-button-accent-lite-default);
 }
 .ds-toggle-buttons--3-text {
   border-radius: var(--ds-size-1x);
   border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
-}
-.ds-toggle-buttons--text {
-  width: 53px;
-  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x);
+  color: var(--ds-color-button-accent-default);
 }
 
-/* Tree [59564:1473] — 8 вариантов */
+/* Tree [59564:1473] — 8 вариантов; оси: Level, Mode, For icon */
 .ds-tree {
   height: 44px;
-  width: var(--ds-size-6x);
   display: flex;
-  flex-direction: row;
+  width: var(--ds-size-6x);
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-tree__icon {
   flex-shrink: 0;
-  width: 24.000001907348633px;
+  width: var(--ds-size-6x);
   height: 44px;
   display: inline-flex;
   align-items: center;
@@ -11162,39 +11240,74 @@ CSS-правила компонента:
 .ds-tree__icon svg path {
   fill: currentColor;
 }
-.ds-tree--3 {
-  width: 48px;
+.ds-tree--2.ds-tree--end.ds-tree--on {
+  flex-direction: row;
 }
-.ds-tree--off {
+.ds-tree--2.ds-tree--end.ds-tree--off {
   width: 48px;
+  flex-direction: column;
 }
-
-/* Tree item [59564:1504] — 5 вариантов */
-.ds-tree-item {
-  height: 44px;
-  width: 24.000001907348633px;
-  display: flex;
+.ds-tree--3.ds-tree--end.ds-tree--on {
+  width: 48px;
+  flex-direction: row;
+}
+.ds-tree--3.ds-tree--end.ds-tree--off {
+  width: 72px;
+  flex-direction: row;
+}
+.ds-tree--2.ds-tree--middle.ds-tree--on {
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-size-2-5x);
+}
+.ds-tree--2.ds-tree--middle.ds-tree--off {
+  width: 48px;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-tree--3.ds-tree--middle.ds-tree--on {
+  width: 48px;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-tree--3.ds-tree--middle.ds-tree--off {
+  width: 72px;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Tree item [59564:1504] — 5 вариантов; оси: Mode */
+.ds-tree-item {
+  height: 44px;
+  display: flex;
+  width: var(--ds-size-6x);
   padding: 11px 0 0 var(--ds-size-5x);
+  gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-tree-item--end {
+  flex-direction: row;
+  align-items: center;
+}
 .ds-tree-item--end-long {
   width: 48px;
+  flex-direction: column;
   padding: 11px 0 0 21px;
 }
 .ds-tree-item--middle {
-  width: var(--ds-size-6x);
+  flex-direction: row;
+  align-items: center;
   padding: 11px 0 0 0;
 }
 .ds-tree-item--middle-long {
   width: 48px;
+  flex-direction: row;
+  align-items: center;
   padding: 11px 0 0 0;
 }
 .ds-tree-item--start {
-  width: var(--ds-size-6x);
+  flex-direction: row;
+  align-items: center;
   padding: 11px var(--ds-size-3x) 0 0;
 }
 
