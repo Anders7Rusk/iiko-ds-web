@@ -1,9 +1,8 @@
-// iiko DS — простановка описаний сетов и вариантов.
-// Данные приходят из ui.html (офлайн, вшиты в ui.html) через postMessage.
-// Важно: в manifest НЕТ documentAccess: "dynamic-page" -> доступен весь документ,
-// поиск синхронный, без loadAllPagesAsync (иначе тормоза/висит).
+// iiko DS — описания компонентов. Применение ПО ОДНОМУ компоненту.
+// Данные приходят из ui.html (он качает index.json и файл конкретного компонента).
+// Никаких findAll/loadAllPagesAsync — только точечный getNodeById + паузы, чтобы Figma не висла.
 
-figma.showUI(__html__, { width: 420, height: 320 });
+figma.showUI(__html__, { width: 460, height: 560 });
 
 function normName(name) {
   return String(name)
@@ -17,123 +16,83 @@ function sortedKey(name) {
   return normName(name).split(", ").sort().join(", ");
 }
 
-var allSetsCache = null;
-function findSetById(id) {
+function pause() {
+  return new Promise(function (resolve) { setTimeout(resolve, 0); });
+}
+
+function findSet(id) {
   var node = null;
   try { node = figma.getNodeById(id); } catch (e) { node = null; }
   if (node && node.type === "COMPONENT_SET") return node;
-  if (allSetsCache === null) {
-    try {
-      allSetsCache = figma.root.findAll(function (n) { return n.type === "COMPONENT_SET"; });
-    } catch (e) {
-      allSetsCache = [];
-    }
-  }
-  for (var i = 0; i < allSetsCache.length; i++) {
-    if (allSetsCache[i].id === id) return allSetsCache[i];
-  }
   return null;
 }
 
-figma.ui.onmessage = function (msg) {
-  if (!msg || msg.type !== "apply") return;
+async function applyOne(item) {
+  var res = { id: item.id, name: item.name, found: false, setWritten: false,
+              md: false, vars: 0, linkCleared: false, notFound: [], error: "" };
 
-  var data = msg.data || {};
-  var setDesc = data.set_desc || {};
-  var setMd = data.set_md || {};
-  var variants = data.variants || {};
+  var set = findSet(item.id);
+  if (!set) { res.error = "компонент не найден в этом файле"; return res; }
+  res.found = true;
 
-  var ids = {};
-  Object.keys(setDesc).forEach(function (id) { ids[id] = true; });
-  Object.keys(variants).forEach(function (id) { ids[id] = true; });
-  var idList = Object.keys(ids);
-
-  var setsFound = 0;
-  var setsWritten = 0;
-  var mdWritten = 0;
-  var varsWritten = 0;
-  var linksCleared = 0;
-  var mdErrors = [];
-  var notFoundSets = [];
-  var notFoundVariants = [];
-
-  for (var i = 0; i < idList.length; i++) {
-    var id = idList[i];
-    var set = findSetById(id);
-    if (!set) { notFoundSets.push(id); continue; }
-    setsFound++;
-
-    // Описание сета: пишем РАЗМЕТКОЙ (descriptionMarkdown) — тогда ссылка в тексте
-    // описания становится кликабельной. Отдельное поле Link не используем.
-    var wroteMd = false;
-    if (setMd[id]) {
-      try {
-        set.descriptionMarkdown = setMd[id];
-        wroteMd = true;
-        mdWritten++;
-      } catch (e) {
-        mdErrors.push(set.name + ": " + (e && e.message ? e.message : String(e)));
-      }
+  if (item.set_md) {
+    try { set.descriptionMarkdown = item.set_md; res.setWritten = true; res.md = true; }
+    catch (e) {
+      try { set.description = item.set_desc || ""; res.setWritten = true; }
+      catch (e2) { res.error = "описание сета: " + (e2 && e2.message ? e2.message : String(e2)); }
     }
-    if (!wroteMd && setDesc[id]) {
-      try { set.description = setDesc[id]; setsWritten++; } catch (e) {}
-    }
-
-    // Поле "Link to documentation" чистим — оно не нужно, ссылка живёт в описании.
-    try {
-      if (set.documentationLinks && set.documentationLinks.length) {
-        set.documentationLinks = [];
-        linksCleared++;
-      }
-    } catch (e) {}
-
-    var vmap = variants[id] || {};
-    var byName = {};
-    var bySorted = {};
-    Object.keys(vmap).forEach(function (vn) {
-      byName[normName(vn)] = vmap[vn];
-      bySorted[sortedKey(vn)] = vmap[vn];
-    });
-
-    var used = {};
-    var children = set.children || [];
-    for (var c = 0; c < children.length; c++) {
-      var child = children[c];
-      if (child.type !== "COMPONENT") continue;
-      var n1 = normName(child.name);
-      var text = byName[n1];
-      var matchedKey = n1;
-      if (!text) {
-        var n2 = sortedKey(child.name);
-        text = bySorted[n2];
-        matchedKey = n2;
-      }
-      if (!text) continue;
-      try {
-        child.description = text;
-        varsWritten++;
-        used[matchedKey] = true;
-      } catch (e) {}
-    }
-
-    Object.keys(vmap).forEach(function (vn) {
-      if (!used[normName(vn)] && !used[sortedKey(vn)]) {
-        notFoundVariants.push(set.name + " / " + vn);
-      }
-    });
+  } else if (item.set_desc) {
+    try { set.description = item.set_desc; res.setWritten = true; } catch (e) {}
   }
 
-  figma.ui.postMessage({
-    type: "done",
-    setsFound: setsFound,
-    setsTotal: idList.length,
-    setsWritten: setsWritten,
-    mdWritten: mdWritten,
-    varsWritten: varsWritten,
-    linksCleared: linksCleared,
-    mdErrors: mdErrors.slice(0, 10),
-    notFoundSets: notFoundSets,
-    notFoundVariants: notFoundVariants.slice(0, 40),
-    notFoundVariantsCount: notFoundVariants.length
+  try {
+    if (set.documentationLinks && set.documentationLinks.length) {
+      set.documentationLinks = [];
+      res.linkCleared = true;
+    }
+  } catch (e) {}
+
+  var vmap = item.variants || {};
+  var byName = {}, bySorted = {};
+  Object.keys(vmap).forEach(function (vn) {
+    byName[normName(vn)] = vmap[vn];
+    bySorted[sortedKey(vn)] = vmap[vn];
   });
+
+  var used = {};
+  var children = set.children || [];
+  for (var c = 0; c < children.length; c++) {
+    var child = children[c];
+    if (child.type !== "COMPONENT") continue;
+    var k1 = normName(child.name);
+    var text = byName[k1];
+    var key = k1;
+    if (!text) { var k2 = sortedKey(child.name); text = bySorted[k2]; key = k2; }
+    if (!text) continue;
+    try { child.description = text; res.vars++; used[key] = true; } catch (e) {}
+    if (res.vars % 20 === 0) await pause();   // даём Figma дышать
+  }
+
+  Object.keys(vmap).forEach(function (vn) {
+    if (!used[normName(vn)] && !used[sortedKey(vn)]) res.notFound.push(vn);
+  });
+
+  return res;
+}
+
+figma.ui.onmessage = async function (msg) {
+  if (!msg) return;
+
+  if (msg.type === "apply") {
+    var items = msg.items || [];
+    var results = [];
+    for (var i = 0; i < items.length; i++) {
+      figma.ui.postMessage({ type: "progress", index: i, total: items.length, name: items[i].name });
+      await pause();
+      var r = await applyOne(items[i]);
+      results.push(r);
+      await pause();
+    }
+    figma.ui.postMessage({ type: "done", results: results });
+  }
 };
