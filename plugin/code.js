@@ -40,8 +40,8 @@ figma.ui.onmessage = function (msg) {
 
   var data = msg.data || {};
   var setDesc = data.set_desc || {};
+  var setMd = data.set_md || {};
   var variants = data.variants || {};
-  var links = data.links || {};
 
   var ids = {};
   Object.keys(setDesc).forEach(function (id) { ids[id] = true; });
@@ -50,9 +50,10 @@ figma.ui.onmessage = function (msg) {
 
   var setsFound = 0;
   var setsWritten = 0;
+  var mdWritten = 0;
   var varsWritten = 0;
-  var linksWritten = 0;
-  var linkErrors = [];
+  var linksCleared = 0;
+  var mdErrors = [];
   var notFoundSets = [];
   var notFoundVariants = [];
 
@@ -62,20 +63,29 @@ figma.ui.onmessage = function (msg) {
     if (!set) { notFoundSets.push(id); continue; }
     setsFound++;
 
-    if (setDesc[id]) {
+    // Описание сета: пишем РАЗМЕТКОЙ (descriptionMarkdown) — тогда ссылка в тексте
+    // описания становится кликабельной. Отдельное поле Link не используем.
+    var wroteMd = false;
+    if (setMd[id]) {
+      try {
+        set.descriptionMarkdown = setMd[id];
+        wroteMd = true;
+        mdWritten++;
+      } catch (e) {
+        mdErrors.push(set.name + ": " + (e && e.message ? e.message : String(e)));
+      }
+    }
+    if (!wroteMd && setDesc[id]) {
       try { set.description = setDesc[id]; setsWritten++; } catch (e) {}
     }
 
-    // Кликабельная ссылка — поле "Link to documentation" (documentationLinks),
-    // в тексте описания ссылка кликабельной НЕ становится.
-    if (links[id]) {
-      try {
-        set.documentationLinks = [{ uri: links[id] }];
-        linksWritten++;
-      } catch (e) {
-        linkErrors.push(set.name + ": " + (e && e.message ? e.message : String(e)));
+    // Поле "Link to documentation" чистим — оно не нужно, ссылка живёт в описании.
+    try {
+      if (set.documentationLinks && set.documentationLinks.length) {
+        set.documentationLinks = [];
+        linksCleared++;
       }
-    }
+    } catch (e) {}
 
     var vmap = variants[id] || {};
     var byName = {};
@@ -118,9 +128,10 @@ figma.ui.onmessage = function (msg) {
     setsFound: setsFound,
     setsTotal: idList.length,
     setsWritten: setsWritten,
+    mdWritten: mdWritten,
     varsWritten: varsWritten,
-    linksWritten: linksWritten,
-    linkErrors: linkErrors.slice(0, 10),
+    linksCleared: linksCleared,
+    mdErrors: mdErrors.slice(0, 10),
     notFoundSets: notFoundSets,
     notFoundVariants: notFoundVariants.slice(0, 40),
     notFoundVariantsCount: notFoundVariants.length
