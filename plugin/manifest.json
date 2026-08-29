@@ -1,11 +1,14 @@
 {
   "name": "iiko DS — описания компонентов",
-  "id": "iiko-ds-descriptions-20260829d",
+  "id": "iiko-ds-descriptions-online",
   "api": "1.0.0",
   "main": "code.js",
   "ui": "ui.html",
   "editorType": ["figma"],
   "networkAccess": {
-    "allowedDomains": ["none"]
+    "allowedDomains": [
+      "https://raw.githubusercontent.com",
+      "https://anders7rusk.github.io"
+    ]
   }
 }
