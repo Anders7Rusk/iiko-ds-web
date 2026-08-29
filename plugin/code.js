@@ -41,6 +41,7 @@ figma.ui.onmessage = function (msg) {
   var data = msg.data || {};
   var setDesc = data.set_desc || {};
   var variants = data.variants || {};
+  var links = data.links || {};
 
   var ids = {};
   Object.keys(setDesc).forEach(function (id) { ids[id] = true; });
@@ -50,6 +51,8 @@ figma.ui.onmessage = function (msg) {
   var setsFound = 0;
   var setsWritten = 0;
   var varsWritten = 0;
+  var linksWritten = 0;
+  var linkErrors = [];
   var notFoundSets = [];
   var notFoundVariants = [];
 
@@ -61,6 +64,17 @@ figma.ui.onmessage = function (msg) {
 
     if (setDesc[id]) {
       try { set.description = setDesc[id]; setsWritten++; } catch (e) {}
+    }
+
+    // Кликабельная ссылка — поле "Link to documentation" (documentationLinks),
+    // в тексте описания ссылка кликабельной НЕ становится.
+    if (links[id]) {
+      try {
+        set.documentationLinks = [{ uri: links[id] }];
+        linksWritten++;
+      } catch (e) {
+        linkErrors.push(set.name + ": " + (e && e.message ? e.message : String(e)));
+      }
     }
 
     var vmap = variants[id] || {};
@@ -105,6 +119,8 @@ figma.ui.onmessage = function (msg) {
     setsTotal: idList.length,
     setsWritten: setsWritten,
     varsWritten: varsWritten,
+    linksWritten: linksWritten,
+    linkErrors: linkErrors.slice(0, 10),
     notFoundSets: notFoundSets,
     notFoundVariants: notFoundVariants.slice(0, 40),
     notFoundVariantsCount: notFoundVariants.length
