@@ -3,100 +3,169 @@
 <head>
 <meta charset="utf-8">
 <style>
-  body { font-family: Roboto, Inter, -apple-system, sans-serif; font-size: 13px; color: #333; margin: 0; padding: 14px; }
-  h1 { font-size: 14px; font-weight: 500; margin: 0 0 8px; }
-  .muted { color: #616161; font-size: 12px; line-height: 1.45; }
-  button { font-family: inherit; font-size: 14px; font-weight: 500; height: 36px; padding: 0 16px;
-           border: none; border-radius: 12px; background: #448AFF; color: #fff; cursor: pointer; }
+  body { font-family: Roboto, Inter, -apple-system, sans-serif; font-size: 13px; color: #333; margin: 0;
+         display: flex; flex-direction: column; height: 100vh; }
+  header { padding: 12px 14px 8px; border-bottom: 1px solid #E0E0E0; }
+  h1 { font-size: 14px; font-weight: 500; margin: 0 0 6px; }
+  .muted { color: #616161; font-size: 12px; line-height: 1.4; }
+  input[type=text] { width: 100%; box-sizing: border-box; height: 32px; margin-top: 8px; padding: 0 10px;
+                     font-family: inherit; font-size: 13px; border: 1px solid #E0E0E0; border-radius: 8px; }
+  input[type=text]:focus { outline: none; border-color: #448AFF; }
+  #list { flex: 1; overflow: auto; padding: 4px 0; }
+  .row { display: flex; align-items: center; gap: 8px; padding: 6px 14px; }
+  .row:hover { background: #F5F5F5; }
+  .row .nm { flex: 1; min-width: 0; }
+  .row .nm b { font-weight: 500; }
+  .row .cnt { color: #9E9E9E; font-size: 11px; }
+  .row .st { font-size: 11px; color: #616161; min-width: 74px; text-align: right; }
+  .ok { color: #2E7D32; }
+  .err { color: #C62828; }
+  button { font-family: inherit; font-size: 13px; font-weight: 500; height: 28px; padding: 0 12px;
+           border: none; border-radius: 8px; background: #448AFF; color: #fff; cursor: pointer; }
   button:hover { background: #3969D5; }
   button:disabled { background: #D6D6D6; cursor: default; }
-  #log { margin-top: 12px; font-size: 12px; line-height: 1.5; white-space: pre-wrap; color: #333;
-         max-height: 180px; overflow: auto; border-top: 1px solid #E0E0E0; padding-top: 10px; }
+  footer { border-top: 1px solid #E0E0E0; padding: 10px 14px; display: flex; align-items: center; gap: 10px; }
+  footer .muted { flex: 1; }
+  #log { padding: 0 14px 8px; font-size: 12px; color: #616161; white-space: pre-wrap; max-height: 90px; overflow: auto; }
 </style>
 </head>
 <body>
-  <h1>Описания компонентов iiko DS</h1>
-  <div class="muted" id="info">Загружаю свежие данные…</div>
-  <div style="margin-top:12px"><button id="run" disabled>Проставить описания</button></div>
+  <header>
+    <h1>Описания компонентов iiko DS</h1>
+    <div class="muted" id="info">Загружаю список компонентов…</div>
+    <input type="text" id="q" placeholder="Поиск компонента" autocomplete="off">
+  </header>
+  <div id="list"></div>
   <div id="log"></div>
+  <footer>
+    <div class="muted" id="ver"></div>
+    <button id="allBtn" disabled>Применить все</button>
+  </footer>
 
   <script>
-    // Данные НЕ вшиты в плагин: код плагина неизменен, свежесть берётся из сети.
-    // raw.githubusercontent — без CDN, всегда актуальный; Pages — запасной источник.
-    var SOURCES = [
-      'https://raw.githubusercontent.com/Anders7Rusk/iiko-ds-web/main/plugin/descriptions.json',
-      'https://anders7rusk.github.io/iiko-ds-web/plugin/descriptions.json'
+    // Данные лежат отдельными файлами по компонентам: index.json + data/<id>.json.
+    // Код плагина неизменен — обновляются только эти файлы.
+    var BASES = [
+      'https://raw.githubusercontent.com/Anders7Rusk/iiko-ds-web/main/plugin/',
+      'https://anders7rusk.github.io/iiko-ds-web/plugin/'
     ];
+    var base = null;
+    var INDEX = [];
+    var rows = {};
 
-    var DATA = null;
     var info = document.getElementById('info');
+    var list = document.getElementById('list');
     var log = document.getElementById('log');
-    var btn = document.getElementById('run');
+    var ver = document.getElementById('ver');
+    var allBtn = document.getElementById('allBtn');
+    var q = document.getElementById('q');
 
-    function counts(d) {
-      var vs = d.variants || {};
-      var n = 0;
-      Object.keys(vs).forEach(function (k) { n += Object.keys(vs[k]).length; });
-      return { sets: Object.keys(d.set_desc || {}).length, comps: Object.keys(vs).length, vars: n };
+    function getJSON(url) {
+      return fetch(url + '?v=' + Date.now(), { cache: 'no-store' }).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      });
     }
 
-    function load(i) {
-      if (i >= SOURCES.length) {
-        info.textContent = 'Не удалось загрузить данные из сети.';
-        log.textContent = 'Проверь доступ из Figma к raw.githubusercontent.com и anders7rusk.github.io.\n' +
-                          'Если сеть закрыта — напиши мне, соберу офлайн-версию с данными внутри.';
+    function loadIndex(i) {
+      if (i >= BASES.length) {
+        info.textContent = 'Не удалось загрузить список из сети.';
+        log.textContent = 'Проверь доступ из Figma к raw.githubusercontent.com и anders7rusk.github.io.';
         return;
       }
-      var url = SOURCES[i] + '?v=' + Date.now();
-      fetch(url, { cache: 'no-store' })
-        .then(function (r) {
-          if (!r.ok) throw new Error('HTTP ' + r.status);
-          return r.json();
-        })
-        .then(function (d) {
-          DATA = d;
-          var c = counts(d);
-          info.textContent = 'Данные загружены: сетов ' + c.sets + ', компонентов с вариантами ' +
-            c.comps + ', описаний вариантов ' + c.vars +
-            (d.generated_at ? '. Версия данных: ' + d.generated_at : '');
-          btn.disabled = false;
-        })
-        .catch(function (e) {
-          log.textContent += 'Источник ' + (i + 1) + ': ' + e.message + '\n';
-          load(i + 1);
-        });
+      getJSON(BASES[i] + 'index.json').then(function (d) {
+        base = BASES[i];
+        INDEX = d.components || [];
+        ver.textContent = 'Данные от ' + (d.generated_at || '—') + ' · компонентов ' + INDEX.length;
+        info.textContent = 'Выбери компонент и нажми «Применить» — грузится только его файл.';
+        render();
+        allBtn.disabled = false;
+      }).catch(function (e) {
+        log.textContent += 'Источник ' + (i + 1) + ': ' + e.message + '\n';
+        loadIndex(i + 1);
+      });
     }
 
-    load(0);
+    function render() {
+      var term = (q.value || '').toLowerCase();
+      list.innerHTML = '';
+      rows = {};
+      INDEX.forEach(function (c) {
+        if (term && c.name.toLowerCase().indexOf(term) === -1) return;
+        var row = document.createElement('div');
+        row.className = 'row';
+        var nm = document.createElement('div');
+        nm.className = 'nm';
+        nm.innerHTML = '<b>' + c.name + '</b> <span class="cnt">' +
+          (c.variants ? c.variants + ' вар.' : 'без вариантов') + '</span>';
+        var st = document.createElement('div');
+        st.className = 'st';
+        var btn = document.createElement('button');
+        btn.textContent = 'Применить';
+        btn.onclick = function () { applyIds([c]); };
+        row.appendChild(nm); row.appendChild(st); row.appendChild(btn);
+        list.appendChild(row);
+        rows[c.id] = { st: st, btn: btn };
+      });
+    }
 
-    btn.onclick = function () {
-      if (!DATA) return;
-      btn.disabled = true;
-      log.textContent = 'Применяю…';
-      parent.postMessage({ pluginMessage: { type: 'apply', data: DATA } }, '*');
-    };
+    q.oninput = render;
+
+    function applyIds(comps) {
+      var buttons = document.querySelectorAll('button');
+      buttons.forEach(function (b) { b.disabled = true; });
+      log.textContent = 'Загружаю данные (' + comps.length + ')…';
+      var chain = Promise.resolve([]);
+      comps.forEach(function (c) {
+        chain = chain.then(function (acc) {
+          if (rows[c.id]) rows[c.id].st.textContent = 'загрузка…';
+          return getJSON(base + 'data/' + c.file).then(function (item) {
+            acc.push(item);
+            return acc;
+          });
+        });
+      });
+      chain.then(function (items) {
+        log.textContent = 'Применяю…';
+        parent.postMessage({ pluginMessage: { type: 'apply', items: items } }, '*');
+      }).catch(function (e) {
+        log.textContent = 'Ошибка загрузки данных: ' + e.message;
+        buttons.forEach(function (b) { b.disabled = false; });
+      });
+    }
+
+    allBtn.onclick = function () { applyIds(INDEX); };
 
     onmessage = function (e) {
       var m = e.data.pluginMessage;
-      if (!m || m.type !== 'done') return;
-      btn.disabled = false;
-      var out = 'Готово.\n' +
-        'Сетов найдено: ' + m.setsFound + ' из ' + m.setsTotal + '\n' +
-        'Описаний сетов с кликабельной ссылкой (markdown): ' + m.mdWritten + '\n' +
-        'Описаний сетов обычным текстом: ' + m.setsWritten + '\n' +
-        'Описаний вариантов записано: ' + m.varsWritten + '\n' +
-        'Поле Link очищено: ' + m.linksCleared;
-      if (m.mdErrors && m.mdErrors.length) {
-        out += '\n⚠️ Ошибки markdown:\n' + m.mdErrors.join('\n');
+      if (!m) return;
+      if (m.type === 'progress') {
+        log.textContent = 'Применяю ' + (m.index + 1) + ' из ' + m.total + ': ' + m.name;
+        return;
       }
-      if (m.notFoundSets && m.notFoundSets.length) {
-        out += '\n⚠️ Не найдены сеты (id): ' + m.notFoundSets.join(', ');
-      }
-      if (m.notFoundVariantsCount) {
-        out += '\n⚠️ Не найдены варианты (' + m.notFoundVariantsCount + '):\n' + m.notFoundVariants.join('\n');
-      }
+      if (m.type !== 'done') return;
+      document.querySelectorAll('button').forEach(function (b) { b.disabled = false; });
+      var okSets = 0, okVars = 0, fails = [];
+      m.results.forEach(function (r) {
+        var row = rows[r.id];
+        if (r.found && !r.error) {
+          okSets += r.setWritten ? 1 : 0;
+          okVars += r.vars;
+          if (row) { row.st.className = 'st ok'; row.st.textContent = '✓ ' + r.vars + ' вар.'; }
+        } else {
+          fails.push(r.name + ': ' + (r.error || 'не найден'));
+          if (row) { row.st.className = 'st err'; row.st.textContent = '✗'; }
+        }
+        if (r.notFound && r.notFound.length && row) {
+          row.st.textContent += ' (без пары: ' + r.notFound.length + ')';
+        }
+      });
+      var out = 'Готово. Описаний сетов: ' + okSets + ', описаний вариантов: ' + okVars;
+      if (fails.length) out += '\n⚠️ ' + fails.join('\n⚠️ ');
       log.textContent = out;
     };
+
+    loadIndex(0);
   </script>
 </body>
 </html>
