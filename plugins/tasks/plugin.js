@@ -24,7 +24,7 @@ import { useEffect, useMemo, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v6'
+const PLUGIN_VER = 'v7'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -55,7 +55,7 @@ function uid(prefix) {
 async function openSession(id) {
   try {
     haptic('tap')
-    await host.request('session.resume', { session_id: id })
+    host.navigate('/chat?resume=' + encodeURIComponent(id))
   } catch (err) {
     const msg = err && err.message ? err.message : String(err)
     host.notify({ kind: 'error', message: 'Не удалось открыть сессию: ' + msg })
@@ -461,7 +461,7 @@ function TasksPage() {
         )
       })
       host.notify({ kind: 'info', message: 'Сессия создана' })
-      openSession(sid)
+      host.navigate('/chat?resume=' + encodeURIComponent(sid))
     } catch (err) {
       const msg = err && err.message ? err.message : String(err)
       host.notify({ kind: 'error', message: 'Не удалось создать сессию: ' + msg })
