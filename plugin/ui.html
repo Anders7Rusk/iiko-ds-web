@@ -12,12 +12,12 @@
                      font-family: inherit; font-size: 13px; border: 1px solid #E0E0E0; border-radius: 8px; }
   input[type=text]:focus { outline: none; border-color: #448AFF; }
   #list { flex: 1; overflow: auto; padding: 4px 0; }
-  .row { display: flex; align-items: center; gap: 8px; padding: 6px 14px; }
+  .row { display: flex; align-items: flex-start; gap: 8px; padding: 8px 14px; border-bottom: 1px solid #F5F5F5; }
   .row:hover { background: #F5F5F5; }
   .row .nm { flex: 1; min-width: 0; }
-  .row .nm b { font-weight: 500; }
-  .row .cnt { color: #9E9E9E; font-size: 11px; }
-  .row .st { font-size: 11px; color: #616161; min-width: 74px; text-align: right; }
+  .row .nm .t { font-weight: 500; }
+  .row .nm .sub { color: #9E9E9E; font-size: 11px; line-height: 1.35; margin-top: 2px; }
+  .row .st { font-size: 11px; color: #616161; min-width: 86px; text-align: right; padding-top: 2px; }
   .ok { color: #2E7D32; }
   .err { color: #C62828; }
   button { font-family: inherit; font-size: 13px; font-weight: 500; height: 28px; padding: 0 12px;
@@ -26,14 +26,14 @@
   button:disabled { background: #D6D6D6; cursor: default; }
   footer { border-top: 1px solid #E0E0E0; padding: 10px 14px; display: flex; align-items: center; gap: 10px; }
   footer .muted { flex: 1; }
-  #log { padding: 0 14px 8px; font-size: 12px; color: #616161; white-space: pre-wrap; max-height: 90px; overflow: auto; }
+  #log { padding: 6px 14px; font-size: 12px; color: #616161; white-space: pre-wrap; max-height: 84px; overflow: auto; }
 </style>
 </head>
 <body>
   <header>
     <h1>Описания компонентов iiko DS</h1>
-    <div class="muted" id="info">Загружаю список компонентов…</div>
-    <input type="text" id="q" placeholder="Поиск компонента" autocomplete="off">
+    <div class="muted" id="info">Загружаю список…</div>
+    <input type="text" id="q" placeholder="Поиск по названию" autocomplete="off">
   </header>
   <div id="list"></div>
   <div id="log"></div>
@@ -43,14 +43,14 @@
   </footer>
 
   <script>
-    // Данные лежат отдельными файлами по компонентам: index.json + data/<id>.json.
-    // Код плагина неизменен — обновляются только эти файлы.
+    // Список = страницы Figma. Одна страница (например Button со сетами Button и Button group)
+    // обновляется целиком одним нажатием; грузится только её файл данных.
     var BASES = [
       'https://raw.githubusercontent.com/Anders7Rusk/iiko-ds-web/main/plugin/',
       'https://anders7rusk.github.io/iiko-ds-web/plugin/'
     ];
     var base = null;
-    var INDEX = [];
+    var GROUPS = [];
     var rows = {};
 
     var info = document.getElementById('info');
@@ -75,9 +75,12 @@
       }
       getJSON(BASES[i] + 'index.json').then(function (d) {
         base = BASES[i];
-        INDEX = d.components || [];
-        ver.textContent = 'Данные от ' + (d.generated_at || '—') + ' · компонентов ' + INDEX.length;
-        info.textContent = 'Выбери компонент и нажми «Применить» — грузится только его файл.';
+        GROUPS = d.groups || [];
+        var totalSets = 0, totalVars = 0;
+        GROUPS.forEach(function (g) { totalSets += g.sets.length; totalVars += g.variants; });
+        ver.textContent = 'Данные от ' + (d.generated_at || '—') + ' · ' + GROUPS.length +
+                          ' страниц, ' + totalSets + ' компонентов, ' + totalVars + ' вариантов';
+        info.textContent = 'Список как в Figma: страница обновляется целиком, со всеми компонентами внутри.';
         render();
         allBtn.disabled = false;
       }).catch(function (e) {
@@ -90,51 +93,60 @@
       var term = (q.value || '').toLowerCase();
       list.innerHTML = '';
       rows = {};
-      INDEX.forEach(function (c) {
-        if (term && c.name.toLowerCase().indexOf(term) === -1) return;
+      GROUPS.forEach(function (g) {
+        var hay = (g.page + ' ' + g.sets.join(' ')).toLowerCase();
+        if (term && hay.indexOf(term) === -1) return;
         var row = document.createElement('div');
         row.className = 'row';
         var nm = document.createElement('div');
         nm.className = 'nm';
-        nm.innerHTML = '<b>' + c.name + '</b> <span class="cnt">' +
-          (c.variants ? c.variants + ' вар.' : 'без вариантов') + '</span>';
+        var t = document.createElement('div');
+        t.className = 't';
+        t.textContent = g.page;
+        var sub = document.createElement('div');
+        sub.className = 'sub';
+        sub.textContent = g.sets.join(', ') + ' · ' + g.variants + ' вар.';
+        nm.appendChild(t); nm.appendChild(sub);
         var st = document.createElement('div');
         st.className = 'st';
         var btn = document.createElement('button');
         btn.textContent = 'Применить';
-        btn.onclick = function () { applyIds([c]); };
+        btn.onclick = function () { apply([g]); };
         row.appendChild(nm); row.appendChild(st); row.appendChild(btn);
         list.appendChild(row);
-        rows[c.id] = { st: st, btn: btn };
+        rows[g.page] = { st: st };
       });
     }
 
     q.oninput = render;
 
-    function applyIds(comps) {
-      var buttons = document.querySelectorAll('button');
-      buttons.forEach(function (b) { b.disabled = true; });
-      log.textContent = 'Загружаю данные (' + comps.length + ')…';
-      var chain = Promise.resolve([]);
-      comps.forEach(function (c) {
-        chain = chain.then(function (acc) {
-          if (rows[c.id]) rows[c.id].st.textContent = 'загрузка…';
-          return getJSON(base + 'data/' + c.file).then(function (item) {
-            acc.push(item);
-            return acc;
+    function lock(v) {
+      document.querySelectorAll('button').forEach(function (b) { b.disabled = v; });
+    }
+
+    function apply(groups) {
+      lock(true);
+      log.textContent = 'Загружаю данные…';
+      var items = [];
+      var chain = Promise.resolve();
+      groups.forEach(function (g) {
+        chain = chain.then(function () {
+          if (rows[g.page]) rows[g.page].st.textContent = 'загрузка…';
+          return getJSON(base + 'data/' + g.file).then(function (d) {
+            (d.items || []).forEach(function (it) { it.page = g.page; items.push(it); });
           });
         });
       });
-      chain.then(function (items) {
+      chain.then(function () {
         log.textContent = 'Применяю…';
         parent.postMessage({ pluginMessage: { type: 'apply', items: items } }, '*');
       }).catch(function (e) {
         log.textContent = 'Ошибка загрузки данных: ' + e.message;
-        buttons.forEach(function (b) { b.disabled = false; });
+        lock(false);
       });
     }
 
-    allBtn.onclick = function () { applyIds(INDEX); };
+    allBtn.onclick = function () { apply(GROUPS); };
 
     onmessage = function (e) {
       var m = e.data.pluginMessage;
@@ -144,23 +156,29 @@
         return;
       }
       if (m.type !== 'done') return;
-      document.querySelectorAll('button').forEach(function (b) { b.disabled = false; });
+      lock(false);
+      var byPage = {};
       var okSets = 0, okVars = 0, fails = [];
       m.results.forEach(function (r) {
-        var row = rows[r.id];
+        var p = r.page || '—';
+        byPage[p] = byPage[p] || { sets: 0, vars: 0, bad: 0 };
         if (r.found && !r.error) {
           okSets += r.setWritten ? 1 : 0;
           okVars += r.vars;
-          if (row) { row.st.className = 'st ok'; row.st.textContent = '✓ ' + r.vars + ' вар.'; }
+          byPage[p].sets += r.setWritten ? 1 : 0;
+          byPage[p].vars += r.vars;
         } else {
           fails.push(r.name + ': ' + (r.error || 'не найден'));
-          if (row) { row.st.className = 'st err'; row.st.textContent = '✗'; }
-        }
-        if (r.notFound && r.notFound.length && row) {
-          row.st.textContent += ' (без пары: ' + r.notFound.length + ')';
+          byPage[p].bad++;
         }
       });
-      var out = 'Готово. Описаний сетов: ' + okSets + ', описаний вариантов: ' + okVars;
+      Object.keys(byPage).forEach(function (p) {
+        var s = byPage[p];
+        if (!rows[p]) return;
+        rows[p].st.className = 'st ' + (s.bad ? 'err' : 'ok');
+        rows[p].st.textContent = (s.bad ? '✗ ' + s.bad + ' · ' : '✓ ') + s.sets + ' комп., ' + s.vars + ' вар.';
+      });
+      var out = 'Готово. Описаний компонентов: ' + okSets + ', описаний вариантов: ' + okVars;
       if (fails.length) out += '\n⚠️ ' + fails.join('\n⚠️ ');
       log.textContent = out;
     };
