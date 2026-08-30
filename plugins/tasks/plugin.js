@@ -55,8 +55,7 @@ function uid(prefix) {
 async function openSession(id) {
   try {
     haptic('tap')
-    await host.request('session.activate', { session_id: id })
-    host.navigate('/')
+    host.navigate('/chat?resume=' + encodeURIComponent(id))
   } catch (err) {
     const msg = err && err.message ? err.message : String(err)
     host.notify({ kind: 'error', message: 'Не удалось открыть сессию: ' + msg })
@@ -162,7 +161,9 @@ function TaskBlock(props) {
             ? sessions.map(s =>
                 jsx(SessionLine, {
                   session: s,
-                  onUnlink: sid => onUnlink(task.id, sid)
+                  onUnlink: sid => onUnlink(task.id, sid),
+                  onMove,
+                  taskOptions
                 }, s.id)
               )
             : jsx('div', {
