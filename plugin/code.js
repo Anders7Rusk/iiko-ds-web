@@ -28,7 +28,7 @@ function findSet(id) {
 }
 
 async function applyOne(item) {
-  var res = { id: item.id, name: item.name, found: false, setWritten: false,
+  var res = { id: item.id, name: item.name, page: item.page || "", found: false, setWritten: false,
               md: false, vars: 0, linkCleared: false, notFound: [], error: "" };
 
   var set = findSet(item.id);
