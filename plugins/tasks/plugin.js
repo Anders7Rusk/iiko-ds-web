@@ -55,10 +55,11 @@ function uid(prefix) {
 async function openSession(id) {
   try {
     haptic('tap')
-    // 1) сервер: сделать сессию живой
-    await host.request('session.resume', { session_id: id })
-    // 2) фронтенд: подключить главное окно к этой сессии
-    await host.request('session.activate', { session_id: id, omit_messages: true })
+    // 1) сервер: оживить сессию — возвращает внутренний live-id (sid)
+    const res = await host.request('session.resume', { session_id: id })
+    const sid = (res && (res.session_id || res.resumed || res.id)) || id
+    // 2) фронтенд: подключить главное окно к ЭТОМУ live-идентификатору
+    await host.request('session.activate', { session_id: sid, omit_messages: true })
   } catch (err) {
     const msg = err && err.message ? err.message : String(err)
     host.notify({ kind: 'error', message: 'Не удалось открыть сессию: ' + msg })
@@ -513,12 +514,6 @@ function TasksPage() {
     .filter(s => !assigned.has(s.id))
     .sort((a, b) => (b.started_at || 0) - (a.started_at || 0))
 
-  // последние 10 сессий по дате убывания
-  const recentSessions = liveSessions
-    .slice()
-    .sort((a, b) => (b.last_activity_at || b.started_at || 0) - (a.last_activity_at || a.started_at || 0))
-    .slice(0, 10)
-
   // список задач-целей для дропдауна «перенести в…»
   const taskOptions = store.tasks.map(t => {
     const proj = store.projects.find(p => p.id === t.projectId)
@@ -580,43 +575,6 @@ function TasksPage() {
         style: { color: 'var(--ui-text-quaternary)' },
         children: PLUGIN_VER + ' · хранится в приложении'
       }),
-
-      // Последние сессии — плоский список, клик открывает
-      jsxs('div', {
-        className: 'px-4 pb-2',
-        children: [
-          jsx('div', {
-            className: 'mb-1 text-[0.8125rem] font-semibold',
-            children: 'Последние сессии'
-          }),
-          jsx('div', {
-            className: 'flex flex-col gap-0.5 rounded-md border px-1 py-1',
-            style: { borderColor: 'var(--ui-stroke-secondary)' },
-            children: live.error
-              ? jsx('div', {
-                  className: 'px-2 py-1 text-[0.75rem]',
-                  style: { color: 'var(--ui-text-quaternary)' },
-                  children: 'сессии не загрузились'
-                })
-              : recentSessions.length
-                ? recentSessions.map((s, idx) =>
-                    jsx(SessionLine, { session: s, onMove, taskOptions }, s.id + '-recent')
-                  )
-                : jsx('div', {
-                    className: 'px-2 py-1 text-[0.75rem]',
-                    style: { color: 'var(--ui-text-quaternary)' },
-                    children: 'нет сессий'
-                  })
-          }),
-          recentSessions.length > 0 &&
-            jsx('div', {
-              className: 'mt-1 text-[0.6875rem]',
-              style: { color: 'var(--ui-text-quaternary)' },
-              children: 'показаны последние ' + recentSessions.length + ' сессий'
-            })
-        ]
-      }),
-
       jsx('div', {
         className: 'flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto px-4 pb-4',
         children: [
