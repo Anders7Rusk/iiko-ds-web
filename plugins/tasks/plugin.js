@@ -119,7 +119,7 @@ function TaskBlock(props) {
   const sessions = (task.sessions || [])
     .map(id => liveById.get(id))
     .filter(Boolean)
-    .sort((a, b) => (a.started_at || 0) - (b.started_at || 0))
+    .sort((a, b) => (b.started_at || 0) - (a.started_at || 0))
   const addSession = () => {
     onCreateSession(task.id, sessionTitle.trim())
     setSessionTitle('')
@@ -508,7 +508,7 @@ function TasksPage() {
   const assigned = new Set(store.tasks.reduce((acc, t) => acc.concat(t.sessions || []), []))
   const orphans = liveSessions
     .filter(s => !assigned.has(s.id))
-    .sort((a, b) => (a.started_at || 0) - (b.started_at || 0))
+    .sort((a, b) => (b.started_at || 0) - (a.started_at || 0))
 
   // список задач-целей для дропдауна «перенести в…»
   const taskOptions = store.tasks.map(t => {
