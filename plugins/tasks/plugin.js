@@ -426,7 +426,7 @@ function TasksPage() {
     persist({ ...store, tasks: store.tasks.filter(t => t.id !== id) })
   }
 
-  // создать новую сессию Hermes и привязать к задаче
+  // создать новую сессию Hermes, привязать к задаче и перейти в неё
   const createSession = async taskId => {
     try {
       const res = await host.request('session.create', { cols: 80 })
@@ -441,6 +441,7 @@ function TasksPage() {
         )
       })
       host.notify({ kind: 'info', message: 'Сессия создана и привязана к задаче' })
+      host.navigate('/chat?resume=' + encodeURIComponent(sid))
     } catch (err) {
       const msg = err && err.message ? err.message : String(err)
       host.notify({ kind: 'error', message: 'Не удалось создать сессию: ' + msg })
