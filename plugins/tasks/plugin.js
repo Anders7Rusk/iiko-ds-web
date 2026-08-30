@@ -24,7 +24,7 @@ import { useEffect, useMemo, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v5'
+const PLUGIN_VER = 'v6'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -62,10 +62,10 @@ async function openSession(id) {
   }
 }
 
-// Строка одной сессии. Клик по названию открывает сессию.
+// Строка одной сессии (мелкая, приглушённая). Клик по названию открывает сессию.
 function SessionLine({ session, onMove, onUnlink, taskOptions }) {
   return jsxs('div', {
-    className: 'flex items-center gap-1 rounded px-1 py-0.5 text-xs hover:bg-(--chrome-action-hover)',
+    className: 'flex items-center gap-1.5 rounded px-1.5 py-1 text-[0.8125rem] hover:bg-(--chrome-action-hover)',
     children: [
       jsx('span', {
         className: 'w-12 shrink-0 tabular-nums',
@@ -91,8 +91,8 @@ function SessionLine({ session, onMove, onUnlink, taskOptions }) {
             if (e.target.value) onMove(session.id, e.target.value)
             e.target.value = ''
           },
-          className: 'shrink-0 rounded border bg-transparent px-1 py-0.5 text-[0.625rem] outline-none',
-          style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-text-primary)' },
+          className: 'shrink-0 rounded border bg-transparent px-1 py-0.5 text-[0.6875rem] outline-none',
+          style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-text-quaternary)' },
           children: [
             jsx('option', { value: '', children: 'перенести в…' }),
             ...(taskOptions || []).map(o =>
@@ -104,7 +104,7 @@ function SessionLine({ session, onMove, onUnlink, taskOptions }) {
         jsx('button', {
           type: 'button',
           onClick: () => onUnlink(session.id),
-          className: 'shrink-0 rounded border px-1.5 text-[0.625rem] hover:bg-(--chrome-action-hover)',
+          className: 'shrink-0 rounded border px-1.5 text-[0.6875rem] hover:bg-(--chrome-action-hover)',
           style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-text-tertiary)' },
           children: '✕'
         })
@@ -124,7 +124,7 @@ function TaskBlock(props) {
     style: { borderColor: 'var(--ui-stroke-secondary)' },
     children: [
       jsxs('div', {
-        className: 'flex items-center gap-2 px-2 py-1.5',
+        className: 'flex items-center gap-2 px-2.5 py-2',
         children: [
           jsx('button', {
             type: 'button',
@@ -132,14 +132,27 @@ function TaskBlock(props) {
             className: 'flex min-w-0 flex-1 items-center gap-2 rounded text-left hover:bg-(--chrome-action-hover)',
             children: [
               jsx('span', {
-                className: 'w-3 shrink-0 text-[0.625rem]',
+                className: 'w-3 shrink-0 text-[0.75rem]',
                 style: { color: 'var(--ui-text-quaternary)' },
                 children: open ? '▾' : '▸'
               }),
-              jsx('span', { className: 'truncate text-xs', children: task.name }),
+              jsx('span', { className: 'truncate text-[0.8125rem] font-medium', children: task.name }),
+              task.status
+                ? jsx('span', {
+                    className: 'shrink-0 rounded px-1.5 py-0.5 text-[0.6875rem]',
+                    style: {
+                      color: 'var(--ui-accent)',
+                      border: '1px solid var(--ui-stroke-secondary)'
+                    },
+                    children: task.status
+                  })
+                : null,
               jsx('span', {
-                className: 'shrink-0 text-[0.625rem] tabular-nums',
-                style: { color: 'var(--ui-text-tertiary)' },
+                className: 'shrink-0 rounded px-1.5 py-0.5 text-[0.6875rem] tabular-nums',
+                style: {
+                  color: 'var(--ui-text-tertiary)',
+                  border: '1px solid var(--ui-stroke-secondary)'
+                },
                 children: plural(sessions.length, 'сессия', 'сессии', 'сессий')
               })
             ]
@@ -147,7 +160,7 @@ function TaskBlock(props) {
           jsx('button', {
             type: 'button',
             onClick: () => removeTask(task.id),
-            className: 'shrink-0 rounded border px-1.5 text-[0.625rem] hover:bg-(--chrome-action-hover)',
+            className: 'shrink-0 rounded border px-1.5 text-[0.6875rem] hover:bg-(--chrome-action-hover)',
             style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-text-tertiary)' },
             children: '✕'
           })
@@ -155,7 +168,7 @@ function TaskBlock(props) {
       }),
       open &&
         jsxs('div', {
-          className: 'flex flex-col gap-0.5 border-t px-2 py-1.5',
+          className: 'flex flex-col gap-0.5 border-t px-2.5 py-2',
           style: { borderColor: 'var(--ui-stroke-secondary)' },
           children: [
             sessions.length
@@ -168,14 +181,14 @@ function TaskBlock(props) {
                   }, s.id)
                 )
               : jsx('div', {
-                  className: 'px-1 pb-1 text-[0.6875rem]',
+                  className: 'px-1 pb-1 text-[0.75rem]',
                   style: { color: 'var(--ui-text-quaternary)' },
                   children: 'сессий не привязано'
                 }),
             jsx('button', {
               type: 'button',
               onClick: () => onCreateSession(task.id),
-              className: 'mt-1 self-start rounded border px-2 py-1 text-xs hover:bg-(--chrome-action-hover)',
+              className: 'mt-1.5 self-start rounded border px-2 py-1 text-[0.75rem] hover:bg-(--chrome-action-hover)',
               style: { borderColor: 'var(--ui-stroke-secondary)' },
               children: '+ Сессия'
             })
@@ -208,7 +221,8 @@ function ProjectBlock(props) {
     style: { borderColor: 'var(--ui-stroke-secondary)' },
     children: [
       jsxs('div', {
-        className: 'flex items-center gap-2 px-3 py-2',
+        className: 'flex items-center gap-2 rounded-t-md px-3 py-2.5',
+        style: { background: 'var(--chrome-action-hover, rgba(128,128,128,0.06))' },
         children: [
           jsx('button', {
             type: 'button',
@@ -216,14 +230,17 @@ function ProjectBlock(props) {
             className: 'flex min-w-0 flex-1 items-center gap-2 rounded text-left hover:bg-(--chrome-action-hover)',
             children: [
               jsx('span', {
-                className: 'w-3 shrink-0 text-[0.625rem]',
+                className: 'w-3 shrink-0 text-[0.75rem]',
                 style: { color: 'var(--ui-text-quaternary)' },
                 children: expanded ? '▾' : '▸'
               }),
-              jsx('span', { className: 'truncate text-sm font-medium', children: proj.name }),
+              jsx('span', { className: 'truncate text-[0.9375rem] font-semibold', children: proj.name }),
               jsx('span', {
-                className: 'shrink-0 text-[0.6875rem] tabular-nums',
-                style: { color: 'var(--ui-text-tertiary)' },
+                className: 'shrink-0 rounded px-1.5 py-0.5 text-[0.6875rem] tabular-nums',
+                style: {
+                  color: 'var(--ui-text-tertiary)',
+                  border: '1px solid var(--ui-stroke-secondary)'
+                },
                 children: plural(proj.tasks.length, 'задача', 'задачи', 'задач')
               })
             ]
@@ -232,7 +249,7 @@ function ProjectBlock(props) {
             jsx('button', {
               type: 'button',
               onClick: () => removeProject(proj.id),
-              className: 'shrink-0 rounded border px-1.5 text-[0.625rem] hover:bg-(--chrome-action-hover)',
+              className: 'shrink-0 rounded border px-1.5 text-[0.6875rem] hover:bg-(--chrome-action-hover)',
               style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-text-tertiary)' },
               children: 'удал.'
             })
@@ -240,23 +257,23 @@ function ProjectBlock(props) {
       }),
       expanded &&
         jsxs('div', {
-          className: 'flex flex-col gap-1.5 px-2 pb-2',
+          className: 'flex flex-col gap-1.5 px-2 pb-2 pt-2 pl-4',
           children: [
             jsxs('div', {
-              className: 'flex items-center gap-2 px-1',
+              className: 'flex items-center gap-2',
               children: [
                 jsx('input', {
                   value: newTask,
                   placeholder: 'Новая задача…',
                   onChange: e => setNewTask(e.target.value),
                   onKeyDown: e => e.key === 'Enter' && addTask(proj.id),
-                  className: 'flex-1 rounded border bg-transparent px-2 py-1 text-xs outline-none',
+                  className: 'flex-1 rounded border bg-transparent px-2 py-1 text-[0.8125rem] outline-none',
                   style: { borderColor: 'var(--ui-stroke-secondary)' }
                 }),
                 jsx('button', {
                   type: 'button',
                   onClick: () => addTask(proj.id),
-                  className: 'rounded border px-2 py-1 text-xs hover:bg-(--chrome-action-hover)',
+                  className: 'rounded border px-2 py-1 text-[0.8125rem] hover:bg-(--chrome-action-hover)',
                   style: { borderColor: 'var(--ui-stroke-secondary)' },
                   children: '+ Задача'
                 })
@@ -264,7 +281,7 @@ function ProjectBlock(props) {
             }),
             empty
               ? jsx('div', {
-                  className: 'px-1 pt-1 text-xs',
+                  className: 'pl-1 pt-1 text-[0.8125rem]',
                   style: { color: 'var(--ui-text-quaternary)' },
                   children: 'нет задач — добавь выше'
                 })
@@ -296,23 +313,27 @@ function UnassignedBlock({ orphans, taskOptions, onMove }) {
     style: { borderColor: 'var(--ui-stroke-secondary)' },
     children: [
       jsxs('div', {
-        className: 'flex items-center gap-2 px-3 py-2',
+        className: 'flex items-center gap-2 rounded-t-md px-3 py-2.5',
+        style: { background: 'var(--chrome-action-hover, rgba(128,128,128,0.06))' },
         children: [
           jsx('span', {
-            className: 'w-3 shrink-0 text-[0.625rem]',
+            className: 'w-3 shrink-0 text-[0.75rem]',
             style: { color: 'var(--ui-text-quaternary)' },
             children: '▾'
           }),
-          jsx('span', { className: 'truncate text-sm font-medium', children: 'Не распределено' }),
+          jsx('span', { className: 'truncate text-[0.9375rem] font-semibold', children: 'Не распределено' }),
           jsx('span', {
-            className: 'shrink-0 text-[0.6875rem] tabular-nums',
-            style: { color: 'var(--ui-text-tertiary)' },
+            className: 'shrink-0 rounded px-1.5 py-0.5 text-[0.6875rem] tabular-nums',
+            style: {
+              color: 'var(--ui-text-tertiary)',
+              border: '1px solid var(--ui-stroke-secondary)'
+            },
             children: plural(orphans.length, 'сессия', 'сессии', 'сессий')
           })
         ]
       }),
       jsx('div', {
-        className: 'flex flex-col gap-0.5 px-2 pb-2',
+        className: 'flex flex-col gap-0.5 px-2 pb-2 pt-1 pl-4',
         children: orphans.map(s =>
           jsx(SessionLine, { session: s, onMove, taskOptions }, s.id)
         )
