@@ -52,7 +52,8 @@ async function applyOne(item) {
     }
   } catch (e) {}
 
-  var vmap = item.variants || {};
+  var vmap = (item.variants_md && Object.keys(item.variants_md).length)
+    ? item.variants_md : (item.variants || {});
   var byName = {}, bySorted = {};
   Object.keys(vmap).forEach(function (vn) {
     byName[normName(vn)] = vmap[vn];
@@ -69,7 +70,10 @@ async function applyOne(item) {
     var key = k1;
     if (!text) { var k2 = sortedKey(child.name); text = bySorted[k2]; key = k2; }
     if (!text) continue;
-    try { child.description = text; res.vars++; used[key] = true; } catch (e) {}
+    try { child.descriptionMarkdown = text; res.vars++; used[key] = true; }
+    catch (e) {
+      try { child.description = text.replace(/\*\*/g, ""); res.vars++; used[key] = true; } catch (e2) {}
+    }
     if (res.vars % 20 === 0) await pause();   // даём Figma дышать
   }
 
