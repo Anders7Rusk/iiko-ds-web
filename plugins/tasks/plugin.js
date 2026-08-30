@@ -92,7 +92,7 @@ function SessionLine({ session, onMove, onUnlink, taskOptions }) {
             e.target.value = ''
           },
           className: 'shrink-0 rounded border bg-transparent px-1 py-0.5 text-[0.625rem] outline-none',
-          style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-accent)' },
+          style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-text-primary)' },
           children: [
             jsx('option', { value: '', children: 'перенести в…' }),
             ...(taskOptions || []).map(o =>
