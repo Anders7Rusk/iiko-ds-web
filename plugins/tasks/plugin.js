@@ -113,7 +113,7 @@ function SessionLine({ session, onMove, onUnlink, taskOptions }) {
 }
 
 function TaskBlock(props) {
-  const { task, liveById, liveSessions, onUnlink, onMove, taskOptions, removeTask } = props
+  const { task, liveById, liveSessions, onUnlink, onMove, taskOptions, removeTask, onCreateSession } = props
   const [open, setOpen] = useState(false)
   const sessions = (task.sessions || [])
     .map(id => liveById.get(id))
@@ -157,20 +157,29 @@ function TaskBlock(props) {
         jsxs('div', {
           className: 'flex flex-col gap-0.5 border-t px-2 py-1.5',
           style: { borderColor: 'var(--ui-stroke-secondary)' },
-          children: sessions.length
-            ? sessions.map(s =>
-                jsx(SessionLine, {
-                  session: s,
-                  onUnlink: sid => onUnlink(task.id, sid),
-                  onMove,
-                  taskOptions
-                }, s.id)
-              )
-            : jsx('div', {
-                className: 'px-1 pb-1 text-[0.6875rem]',
-                style: { color: 'var(--ui-text-quaternary)' },
-                children: 'сессий не привязано — добавь из «Не распределено»'
-              })
+          children: [
+            sessions.length
+              ? sessions.map(s =>
+                  jsx(SessionLine, {
+                    session: s,
+                    onUnlink: sid => onUnlink(task.id, sid),
+                    onMove,
+                    taskOptions
+                  }, s.id)
+                )
+              : jsx('div', {
+                  className: 'px-1 pb-1 text-[0.6875rem]',
+                  style: { color: 'var(--ui-text-quaternary)' },
+                  children: 'сессий не привязано'
+                }),
+            jsx('button', {
+              type: 'button',
+              onClick: () => onCreateSession(task.id),
+              className: 'mt-1 self-start rounded border px-2 py-1 text-xs hover:bg-(--chrome-action-hover)',
+              style: { borderColor: 'var(--ui-stroke-secondary)' },
+              children: '+ Сессия'
+            })
+          ]
         })
     ]
   })
@@ -190,7 +199,8 @@ function ProjectBlock(props) {
     liveSessions,
     onUnlink,
     onMove,
-    taskOptions
+    taskOptions,
+    onCreateSession
   } = props
   const empty = proj.tasks.length === 0
   return jsxs('div', {
@@ -268,7 +278,8 @@ function ProjectBlock(props) {
                       onUnlink,
                       onMove,
                       taskOptions,
-                      removeTask
+                      removeTask,
+                      onCreateSession: onCreateSession
                     },
                     task.id
                   )
@@ -394,6 +405,27 @@ function TasksPage() {
     persist({ ...store, tasks: store.tasks.filter(t => t.id !== id) })
   }
 
+  // создать новую сессию Hermes и привязать к задаче
+  const createSession = async taskId => {
+    try {
+      const res = await host.request('session.create', { cols: 80 })
+      const sid = res && (res.session_id || res.resumed || res.id)
+      if (!sid) throw new Error('нет id новой сессии')
+      persist({
+        ...store,
+        tasks: store.tasks.map(t =>
+          t.id === taskId
+            ? { ...t, sessions: (t.sessions || []).concat([sid]) }
+            : t
+        )
+      })
+      host.notify({ kind: 'info', message: 'Сессия создана и привязана к задаче' })
+    } catch (err) {
+      const msg = err && err.message ? err.message : String(err)
+      host.notify({ kind: 'error', message: 'Не удалось создать сессию: ' + msg })
+    }
+  }
+
   // перенести сессию в задачу (текущая задача заменяется на выбранную)
   const moveSession = (sessionId, taskId) => {
     persist({
@@ -516,7 +548,8 @@ function TasksPage() {
                 liveSessions,
                 onUnlink: unlinkSession,
                 onMove: moveSession,
-                taskOptions
+                taskOptions,
+                onCreateSession: createSession
               },
               proj.key
             )
