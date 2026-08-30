@@ -53,7 +53,7 @@ function uid(prefix) {
 async function openSession(id) {
   try {
     haptic('tap')
-    await host.request('session.resume', { session_id: id })
+    await host.request('session.activate', { session_id: id })
     host.navigate('/')
   } catch (err) {
     const msg = err && err.message ? err.message : String(err)
