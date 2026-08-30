@@ -63,7 +63,7 @@ async function openSession(id) {
   }
 }
 
-// Строка одной сессии с кнопками. variant: 'link' (в задаче) или 'move' (в «Не распределено»)
+// Строка одной сессии. Клик по названию открывает сессию.
 function SessionLine({ session, onMove, onUnlink, taskOptions }) {
   return jsxs('div', {
     className: 'flex items-center gap-1 rounded px-1 py-0.5 text-xs hover:bg-(--chrome-action-hover)',
