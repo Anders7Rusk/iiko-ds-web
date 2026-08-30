@@ -55,7 +55,7 @@ function uid(prefix) {
 async function openSession(id) {
   try {
     haptic('tap')
-    host.navigate('/chat?resume=' + encodeURIComponent(id))
+    await host.request('session.resume', { session_id: id })
   } catch (err) {
     const msg = err && err.message ? err.message : String(err)
     host.notify({ kind: 'error', message: 'Не удалось открыть сессию: ' + msg })
@@ -460,8 +460,8 @@ function TasksPage() {
             : t
         )
       })
-      host.notify({ kind: 'info', message: 'Сессия создана и привязана к задаче' })
-      host.navigate('/chat?resume=' + encodeURIComponent(sid))
+      host.notify({ kind: 'info', message: 'Сессия создана' })
+      openSession(sid)
     } catch (err) {
       const msg = err && err.message ? err.message : String(err)
       host.notify({ kind: 'error', message: 'Не удалось создать сессию: ' + msg })
