@@ -1,11 +1,13 @@
 /**
- * Hermes desktop plugin: «Задачи» v4 — проекты + задачи + сессии.
+ * Hermes desktop plugin: «Задачи» v5 — проекты + задачи + сессии.
  *
- * CRUD: проекты и задачи создаются/удаляются прямо в меню, сессии
- * привязываются к задаче чекбоксами. Хранилище — localStorage плагина
- * (внутри приложения), сессии приходят живыми с сервера через RPC session.list.
+ * CRUD: проекты и задачи создаются/удаляются прямо в меню.
+ * Привязка сессий — НА САМОЙ СЕССИИ: у сессии кнопка «перенести в …»
+ * (дропдаун по задачам) и у привязанной сессии в задаче — «отвязать».
+ * Сессии, не привязанные ни к одной задаче, — в блоке «Не распределено».
  *
- * Установка: %LOCALAPPDATA%\hermes\desktop-plugins\tasks\plugin.js
+ * Хранилище — localStorage плагина; сессии приходят живыми с сервера
+ * через RPC session.list. Установка: %LOCALAPPDATA%\hermes\desktop-plugins\tasks\plugin.js
  */
 
 import {
@@ -22,7 +24,7 @@ import { useEffect, useMemo, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v4-crud'
+const PLUGIN_VER = 'v5'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -61,17 +63,20 @@ async function openSession(id) {
   }
 }
 
-function SessionRow({ session }) {
+// Строка одной сессии с кнопками. variant: 'link' (в задаче) или 'move' (в «Не распределено»)
+function SessionLine({ session, onMove, onUnlink, taskOptions }) {
   return jsxs('div', {
-    className: 'flex items-center gap-2 px-2 py-1 text-xs',
+    className: 'flex items-center gap-1 rounded px-1 py-0.5 text-xs hover:bg-(--chrome-action-hover)',
     children: [
       jsx('span', {
         className: 'w-12 shrink-0 tabular-nums',
         style: { color: 'var(--ui-text-quaternary)' },
         children: fmtDate(session.started_at)
       }),
-      jsx('span', {
-        className: 'min-w-0 flex-1 truncate',
+      jsx('button', {
+        type: 'button',
+        onClick: () => openSession(session.id),
+        className: 'min-w-0 flex-1 truncate text-left',
         style: { color: 'var(--ui-text-secondary)' },
         children: session.title || session.preview || session.id
       }),
@@ -80,102 +85,36 @@ function SessionRow({ session }) {
         style: { color: 'var(--ui-text-quaternary)' },
         children: session.message_count ? session.message_count + ' сообщ.' : ''
       }),
-      jsx('button', {
-        type: 'button',
-        onClick: () => openSession(session.id),
-        className: 'shrink-0 rounded border px-1.5 text-[0.625rem] hover:bg-(--chrome-action-hover)',
-        style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-accent)' },
-        children: 'открыть'
-      })
-    ]
-  })
-}
-
-function SessionPicker({ task, liveSessions, toggleSession }) {
-  const chosen = new Set(task.sessions || [])
-  return jsx('div', {
-    className: 'max-h-48 overflow-y-auto border-t pt-1.5',
-    style: { borderColor: 'var(--ui-stroke-secondary)' },
-    children: jsxs('div', {
-      className: 'text-[0.6875rem]',
-      children: [
-        jsx('div', {
-          className: 'pb-1',
-          style: { color: 'var(--ui-text-quaternary)' },
-          children: 'Привязать сессии (клик = вкл/выкл):'
+      onMove &&
+        jsx('select', {
+          value: '',
+          onChange: e => {
+            if (e.target.value) onMove(session.id, e.target.value)
+            e.target.value = ''
+          },
+          className: 'shrink-0 rounded border bg-transparent px-1 py-0.5 text-[0.625rem] outline-none',
+          style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-accent)' },
+          children: [
+            jsx('option', { value: '', children: 'перенести в…' }),
+            ...(taskOptions || []).map(o =>
+              jsx('option', { value: o.id, children: o.label }, o.id)
+            )
+          ]
         }),
-        ...liveSessions.map(s =>
-          jsxs(
-            'label',
-            {
-              className: cn(
-                'flex cursor-pointer items-center gap-2 rounded px-1 py-0.5 text-xs',
-                'hover:bg-(--chrome-action-hover)'
-              ),
-              key: s.id
-            },
-            s.id
-          )
-        )
-      ]
-    })
-  })
-}
-
-function SessionPickerRow({ session, picked, onToggle }) {
-  return jsxs('label', {
-    className: 'flex cursor-pointer items-center gap-2 rounded px-1 py-0.5 text-xs hover:bg-(--chrome-action-hover)',
-    children: [
-      jsx('input', {
-        type: 'checkbox',
-        checked: picked,
-        onChange: onToggle,
-        className: 'shrink-0'
-      }),
-      jsx('span', {
-        className: 'w-12 shrink-0 tabular-nums',
-        style: { color: 'var(--ui-text-quaternary)' },
-        children: fmtDate(session.started_at)
-      }),
-      jsx('span', {
-        className: 'min-w-0 flex-1 truncate',
-        style: { color: 'var(--ui-text-secondary)' },
-        children: session.title || session.preview || session.id
-      })
-    ]
-  })
-}
-
-function SessionPickerList({ task, liveSessions, toggleSession }) {
-  const chosen = new Set(task.sessions || [])
-  return jsxs('div', {
-    className: 'border-t pt-1.5 mt-1',
-    style: { borderColor: 'var(--ui-stroke-secondary)' },
-    children: [
-      jsx('div', {
-        className: 'pb-1 text-[0.6875rem]',
-        style: { color: 'var(--ui-text-quaternary)' },
-        children: 'Привязать сессии (клик = вкл/выкл):'
-      }),
-      jsx('div', {
-        className: 'max-h-44 overflow-y-auto',
-        children: liveSessions
-          .slice()
-          .sort((a, b) => (a.started_at || 0) - (b.started_at || 0))
-          .map(s =>
-            jsx(SessionPickerRow, {
-              session: s,
-              picked: chosen.has(s.id),
-              onToggle: () => toggleSession(task.id, s.id)
-            }, s.id)
-          )
-      })
+      onUnlink &&
+        jsx('button', {
+          type: 'button',
+          onClick: () => onUnlink(session.id),
+          className: 'shrink-0 rounded border px-1.5 text-[0.625rem] hover:bg-(--chrome-action-hover)',
+          style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-text-tertiary)' },
+          children: '✕'
+        })
     ]
   })
 }
 
 function TaskBlock(props) {
-  const { task, liveById, liveSessions, toggleSession, removeTask, assignedIds } = props
+  const { task, liveById, liveSessions, onUnlink, onMove, taskOptions, removeTask } = props
   const [open, setOpen] = useState(false)
   const sessions = (task.sessions || [])
     .map(id => liveById.get(id))
@@ -219,20 +158,18 @@ function TaskBlock(props) {
         jsxs('div', {
           className: 'flex flex-col gap-0.5 border-t px-2 py-1.5',
           style: { borderColor: 'var(--ui-stroke-secondary)' },
-          children: [
-            sessions.length
-              ? sessions.map(s => jsx(SessionRow, { session: s }, s.id))
-              : jsx('div', {
-                  className: 'px-1 pb-1 text-[0.6875rem]',
-                  style: { color: 'var(--ui-text-quaternary)' },
-                  children: 'сессий не привязано'
-                }),
-            jsx(SessionPickerList, {
-              task,
-              liveSessions,
-              toggleSession
-            })
-          ]
+          children: sessions.length
+            ? sessions.map(s =>
+                jsx(SessionLine, {
+                  session: s,
+                  onUnlink: sid => onUnlink(task.id, sid)
+                }, s.id)
+              )
+            : jsx('div', {
+                className: 'px-1 pb-1 text-[0.6875rem]',
+                style: { color: 'var(--ui-text-quaternary)' },
+                children: 'сессий не привязано — добавь из «Не распределено»'
+              })
         })
     ]
   })
@@ -250,8 +187,9 @@ function ProjectBlock(props) {
     removeTask,
     liveById,
     liveSessions,
-    toggleSession,
-    assignedIds
+    onUnlink,
+    onMove,
+    taskOptions
   } = props
   const empty = proj.tasks.length === 0
   return jsxs('div', {
@@ -326,15 +264,47 @@ function ProjectBlock(props) {
                       task,
                       liveById,
                       liveSessions,
-                      toggleSession,
-                      removeTask,
-                      assignedIds
+                      onUnlink,
+                      onMove,
+                      taskOptions,
+                      removeTask
                     },
                     task.id
                   )
                 )
           ]
         })
+    ]
+  })
+}
+
+function UnassignedBlock({ orphans, taskOptions, onMove }) {
+  return jsxs('div', {
+    className: 'rounded-md border',
+    style: { borderColor: 'var(--ui-stroke-secondary)' },
+    children: [
+      jsxs('div', {
+        className: 'flex items-center gap-2 px-3 py-2',
+        children: [
+          jsx('span', {
+            className: 'w-3 shrink-0 text-[0.625rem]',
+            style: { color: 'var(--ui-text-quaternary)' },
+            children: '▾'
+          }),
+          jsx('span', { className: 'truncate text-sm font-medium', children: 'Не распределено' }),
+          jsx('span', {
+            className: 'shrink-0 text-[0.6875rem] tabular-nums',
+            style: { color: 'var(--ui-text-tertiary)' },
+            children: plural(orphans.length, 'сессия', 'сессии', 'сессий')
+          })
+        ]
+      }),
+      jsx('div', {
+        className: 'flex flex-col gap-0.5 px-2 pb-2',
+        children: orphans.map(s =>
+          jsx(SessionLine, { session: s, onMove, taskOptions }, s.id)
+        )
+      })
     ]
   })
 }
@@ -368,7 +338,7 @@ function TasksPage() {
     try {
       window.localStorage.setItem(STORE_KEY, JSON.stringify({ projects: next.projects, tasks: next.tasks }))
     } catch (e) {
-      /* ignore quota */
+      /* ignore */
     }
   }
 
@@ -379,8 +349,6 @@ function TasksPage() {
   })
   const liveSessions = (live.data && live.data.sessions) || []
   const liveById = useMemo(() => new Map(liveSessions.map(s => [s.id, s])), [liveSessions])
-
-  const assignedIds = useMemo(() => new Set((store && store.tasks) ? store.tasks.reduce((acc, t) => acc.concat(t.sessions || []), []) : []), [store])
 
   if (!store) {
     return jsx('div', {
@@ -425,19 +393,30 @@ function TasksPage() {
     persist({ ...store, tasks: store.tasks.filter(t => t.id !== id) })
   }
 
-  const toggleSession = (taskId, sessionId) => {
+  // перенести сессию в задачу (текущая задача заменяется на выбранную)
+  const moveSession = (sessionId, taskId) => {
     persist({
       ...store,
       tasks: store.tasks.map(t => {
-        if (t.id !== taskId) return t
         const has = (t.sessions || []).includes(sessionId)
-        return {
-          ...t,
-          sessions: has
-            ? (t.sessions || []).filter(s => s !== sessionId)
-            : (t.sessions || []).concat([sessionId])
+        if (t.id === taskId) {
+          const without = (t.sessions || []).filter(s => s !== sessionId)
+          return { ...t, sessions: has ? without : without.concat([sessionId]) }
         }
+        return has ? { ...t, sessions: (t.sessions || []).filter(s => s !== sessionId) } : t
       })
+    })
+  }
+
+  // отвязать сессию от конкретной задачи
+  const unlinkSession = (taskId, sessionId) => {
+    persist({
+      ...store,
+      tasks: store.tasks.map(t =>
+        t.id === taskId
+          ? { ...t, sessions: (t.sessions || []).filter(s => s !== sessionId) }
+          : t
+      )
     })
   }
 
@@ -449,6 +428,20 @@ function TasksPage() {
   if (noProject.length) {
     projectRows.push({ key: 'none', id: 'none', name: 'Без проекта', tasks: noProject, notask: true })
   }
+
+  // сессии, не привязанные ни к одной задаче
+  const assigned = new Set(store.tasks.reduce((acc, t) => acc.concat(t.sessions || []), []))
+  const orphans = liveSessions
+    .filter(s => !assigned.has(s.id))
+    .sort((a, b) => (a.started_at || 0) - (b.started_at || 0))
+
+  // список задач-целей для дропдауна «перенести в…»
+  const taskOptions = store.tasks.map(t => {
+    const proj = store.projects.find(p => p.id === t.projectId)
+    return { id: t.id, label: (proj ? proj.name + ' / ' : '') + t.name }
+  })
+
+  // дубли проектов для выпадающего: не включать задачу, у которой уже есть эта сессия — не критично
 
   const totalSessions = store.tasks.reduce((n, t) => n + (t.sessions || []).length, 0)
 
@@ -505,26 +498,32 @@ function TasksPage() {
       }),
       jsx('div', {
         className: 'flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto px-4 pb-4',
-        children: projectRows.map(proj =>
-          jsx(
-            ProjectBlock,
-            {
-              proj,
-              expanded: !!expanded[proj.id],
-              onToggle: () => setExpanded(e => ({ ...e, [proj.id]: !e[proj.id] })),
-              newTask,
-              setNewTask,
-              addTask,
-              removeProject,
-              removeTask,
-              liveById,
-              liveSessions,
-              toggleSession,
-              assignedIds
-            },
-            proj.key
-          )
-        )
+        children: [
+          ...projectRows.map(proj =>
+            jsx(
+              ProjectBlock,
+              {
+                proj,
+                expanded: !!expanded[proj.id],
+                onToggle: () => setExpanded(e => ({ ...e, [proj.id]: !e[proj.id] })),
+                newTask,
+                setNewTask,
+                addTask,
+                removeProject,
+                removeTask: removeTask,
+                liveById,
+                liveSessions,
+                onUnlink: unlinkSession,
+                onMove: moveSession,
+                taskOptions
+              },
+              proj.key
+            )
+          ),
+          orphans.length
+            ? jsx(UnassignedBlock, { orphans, taskOptions, onMove: moveSession })
+            : null
+        ]
       })
     ]
   })
