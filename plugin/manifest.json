@@ -1,6 +1,6 @@
 {
   "name": "iiko DS — описания компонентов",
-  "id": "iiko-ds-descriptions-online",
+  "id": "iiko-ds-descriptions-groups",
   "api": "1.0.0",
   "main": "code.js",
   "ui": "ui.html",
