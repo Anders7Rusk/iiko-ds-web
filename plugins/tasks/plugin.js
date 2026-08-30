@@ -115,10 +115,15 @@ function SessionLine({ session, onMove, onUnlink, taskOptions }) {
 function TaskBlock(props) {
   const { task, liveById, liveSessions, onUnlink, onMove, taskOptions, removeTask, onCreateSession } = props
   const [open, setOpen] = useState(false)
+  const [sessionTitle, setSessionTitle] = useState('')
   const sessions = (task.sessions || [])
     .map(id => liveById.get(id))
     .filter(Boolean)
     .sort((a, b) => (a.started_at || 0) - (b.started_at || 0))
+  const addSession = () => {
+    onCreateSession(task.id, sessionTitle.trim())
+    setSessionTitle('')
+  }
   return jsxs('div', {
     className: 'rounded border',
     style: { borderColor: 'var(--ui-stroke-secondary)' },
@@ -185,12 +190,25 @@ function TaskBlock(props) {
                   style: { color: 'var(--ui-text-quaternary)' },
                   children: 'сессий не привязано'
                 }),
-            jsx('button', {
-              type: 'button',
-              onClick: () => onCreateSession(task.id),
-              className: 'mt-1.5 self-start rounded border px-2 py-1 text-[0.75rem] hover:bg-(--chrome-action-hover)',
-              style: { borderColor: 'var(--ui-stroke-secondary)' },
-              children: '+ Сессия'
+            jsxs('div', {
+              className: 'mt-1.5 flex items-center gap-2',
+              children: [
+                jsx('input', {
+                  value: sessionTitle,
+                  placeholder: 'Новая сессия…',
+                  onChange: e => setSessionTitle(e.target.value),
+                  onKeyDown: e => e.key === 'Enter' && addSession(),
+                  className: 'flex-1 rounded border bg-transparent px-2 py-1 text-[0.8125rem] outline-none',
+                  style: { borderColor: 'var(--ui-stroke-secondary)' }
+                }),
+                jsx('button', {
+                  type: 'button',
+                  onClick: addSession,
+                  className: 'rounded border px-2 py-1 text-[0.8125rem] hover:bg-(--chrome-action-hover)',
+                  style: { borderColor: 'var(--ui-stroke-secondary)' },
+                  children: '+ Сессия'
+                })
+              ]
             })
           ]
         })
@@ -427,9 +445,11 @@ function TasksPage() {
   }
 
   // создать новую сессию Hermes, привязать к задаче и перейти в неё
-  const createSession = async taskId => {
+  const createSession = async (taskId, title) => {
     try {
-      const res = await host.request('session.create', { cols: 80 })
+      const params = { cols: 80 }
+      if (title) params.title = title
+      const res = await host.request('session.create', params)
       const sid = res && (res.session_id || res.resumed || res.id)
       if (!sid) throw new Error('нет id новой сессии')
       persist({
