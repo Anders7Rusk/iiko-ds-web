@@ -176,22 +176,8 @@ function TaskBlock(props) {
           className: 'flex flex-col gap-0.5 border-t px-2.5 py-2',
           style: { borderColor: 'var(--ui-stroke-secondary)' },
           children: [
-            sessions.length
-              ? sessions.map(s =>
-                  jsx(SessionLine, {
-                    session: s,
-                    onUnlink: sid => onUnlink(task.id, sid),
-                    onMove,
-                    taskOptions
-                  }, s.id)
-                )
-              : jsx('div', {
-                  className: 'px-1 pb-1 text-[0.75rem]',
-                  style: { color: 'var(--ui-text-quaternary)' },
-                  children: 'сессий не привязано'
-                }),
             jsxs('div', {
-              className: 'mt-1.5 flex items-center gap-2',
+              className: 'mb-1.5 flex items-center gap-2',
               children: [
                 jsx('input', {
                   value: sessionTitle,
@@ -209,7 +195,21 @@ function TaskBlock(props) {
                   children: '+ Сессия'
                 })
               ]
-            })
+            }),
+            sessions.length
+              ? sessions.map(s =>
+                  jsx(SessionLine, {
+                    session: s,
+                    onUnlink: sid => onUnlink(task.id, sid),
+                    onMove,
+                    taskOptions
+                  }, s.id)
+                )
+              : jsx('div', {
+                  className: 'px-1 pb-1 text-[0.75rem]',
+                  style: { color: 'var(--ui-text-quaternary)' },
+                  children: 'сессий не привязано'
+                })
           ]
         })
     ]
