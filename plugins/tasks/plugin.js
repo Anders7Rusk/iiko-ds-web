@@ -24,7 +24,7 @@ import { useEffect, useMemo, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v8'
+const PLUGIN_VER = 'v9'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -55,12 +55,10 @@ function uid(prefix) {
 async function openSession(id) {
   try {
     haptic('tap')
-    const res = await host.request('session.resume', { session_id: id })
-    if (res && res.session_id) {
-      host.navigate('/chat?resume=' + encodeURIComponent(res.session_id))
-    } else {
-      host.notify({ kind: 'info', message: 'Сессия возобновлена' })
-    }
+    // 1) сервер: сделать сессию живой
+    await host.request('session.resume', { session_id: id })
+    // 2) фронтенд: подключить главное окно к этой сессии
+    await host.request('session.activate', { session_id: id, omit_messages: true })
   } catch (err) {
     const msg = err && err.message ? err.message : String(err)
     host.notify({ kind: 'error', message: 'Не удалось открыть сессию: ' + msg })
