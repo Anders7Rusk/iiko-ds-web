@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v28'
+const PLUGIN_VER = 'v29'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -724,15 +724,15 @@ function TasksPage() {
     refetchInterval: 5000
   })
   const liveRows = (liveActive.data && liveActive.data.sessions) || []
-  // Зелёная точка = как в сайдбаре (REST is_active): последняя активность < 5 мин.
-  // В active_list сессии по определению живые (ended_at нет), поэтому критерий сводится
-  // к свежести last_active. Так слева и в задачах показывается ОДНО и то же.
-  const nowMs = Date.now()
+  // Зелёная точка = сессия НЕ idle (working / waiting / starting).
+  // last_active из active_list брать нельзя: это память гейтвея, она
+  // обновляется при любом касании живой сессии, поэтому «свежесть» там
+  // почти всегда и точка горела бы у просто открытых сессий.
   const liveSet = useMemo(
     () =>
       new Set(
         liveRows
-          .filter(s => (nowMs - (s.last_active || 0) * (s.last_active < 1e12 ? 1000 : 1)) < 300000)
+          .filter(s => s.status && s.status !== 'idle')
           .map(s => s.session_key || s.id)
       ),
     [liveActive.data]
