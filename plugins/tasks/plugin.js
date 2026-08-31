@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v60'
+const PLUGIN_VER = 'v61'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1219,16 +1219,17 @@ function SessionTieChip() {
   const [infoCount, setInfoCount] = useState(0)
   const [tick, setTick] = useState(0)
 
-  // session.info — focus-bound: приходит для открытой сессии, несёт stored_session_id
+  // session.info — focus-bound: приходит для открытой сессии, несёт stored_session_id.
+  // Подписываемся на КОНКРЕТНОЕ имя (как это делает сам клиент в бандле:
+  // `l.on('session.info', ...)`), а не на '*' — wildcard может не доставлять события.
   useEffect(() => {
     let off = null
     try {
-      off = host.onEvent('*', ev => {
-        if (!ev || ev.type !== 'session.info') return
-        const p = ev.payload || {}
+      off = host.onEvent('session.info', ev => {
+        const p = (ev && ev.payload) || {}
         const k = p.stored_session_id || p.session_key || p.id
         setInfoCount(x => x + 1)
-        setLastInfo(k ? '(' + (k || '').slice(0, 18) + ')' : '(пусто/тип=' + typeof k + ')')
+        setLastInfo(k ? '(' + String(k).slice(0, 18) + ')' : '(пусто/тип=' + typeof k + ')')
         if (k && isStoredId(k)) setKey(k)
       })
     } catch (e) {
