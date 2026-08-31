@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v38'
+const PLUGIN_VER = 'v39'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1240,16 +1240,31 @@ function SessionTieChip() {
   const row = rows.find(s => s.id === activeSid) || rows.find(s => s.current)
   // берём ТОЛЬКО сохранённый id: внутренний live-id в привязках не встречается
   const fromRow = row && isStoredId(row.session_key) ? row.session_key : null
-  // фолбэк: если по active_list не определилось — самая свежая сессия
-  const recent = useQuery({
-    queryKey: ['tasks-plugin', 'most_recent'],
-    queryFn: () => host.request('session.most_recent', {}),
-    refetchInterval: 15000,
-    enabled: !fromRow && !isStoredId(activeSid)
+
+  // Фолбэк без вранья: активная строка сайдбара помечена aria-current="true"
+  // (так её отмечает сам клиент). Берём её текст и находим сессию по названию.
+  const sessions = useQuery({
+    queryKey: ['tasks-plugin', 'chip-list'],
+    queryFn: () => host.request('session.list', { limit: 500 }),
+    refetchInterval: 15000
   })
-  const fromRecent =
-    recent.data && isStoredId(recent.data.session_id) ? recent.data.session_id : null
-  const key = fromRow || (isStoredId(activeSid) ? activeSid : null) || fromRecent
+  const fromDom = useMemo(() => {
+    if (fromRow || isStoredId(activeSid)) return null
+    let el = null
+    try {
+      el = document.querySelector('[aria-current="true"]')
+    } catch (e) {
+      el = null
+    }
+    if (!el) return null
+    const text = _norm(el.textContent)
+    if (!text) return null
+    const list = (sessions.data && sessions.data.sessions) || []
+    const hit = list.find(s => _looksSame(s.title || s.preview || '', text))
+    return hit && isStoredId(hit.id) ? hit.id : null
+  }, [fromRow, activeSid, sessions.data, tick])
+
+  const key = fromRow || (isStoredId(activeSid) ? activeSid : null) || fromDom
 
   const label = useMemo(() => {
     if (!key) return 'сессия не определена'
