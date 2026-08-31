@@ -25,7 +25,7 @@ import { useEffect, useMemo, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v14'
+const PLUGIN_VER = 'v15'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -723,80 +723,36 @@ function TasksPage() {
   const createSession = async (taskId, title) => {
     try {
       haptic('tap')
-      const beforeActive = _activeSessionId()
-      const beforeLive = await _liveIds()
-      const beforeStored = ((live.data && live.data.sessions) || []).map(s => s.id)
+      const name = String(title || '').trim()
+      // session.create отдаёт ДВА id: session_id (внутренний live) и
+      // stored_session_id (сохранённый — он же в session.list и в привязках)
+      const params = { cols: 80 }
+      if (name) params.title = name
+      const res = await host.request('session.create', params)
+      const sid = res && (res.session_id || res.id)
+      const key = (res && (res.stored_session_id || res.session_key)) || sid
+      if (!key) throw new Error('сервер не вернул id новой сессии')
 
-      // 1) родная кнопка «New session» в сайдбаре
-      const btn = _findNewSessionButton()
-      if (btn) _fireClick(btn)
-      // 2) плюс родной хоткей Ctrl+N — если кнопку приложение обрабатывает иначе
-      if (!btn) _pressCtrlN()
-
-      // ждём появления новой сессии: активная → живые → список
-      let sid = null
-      let via = ''
-      for (let i = 0; i < 20 && !sid; i++) {
-        await _wait(250)
-        const cur = _activeSessionId()
-        if (cur && cur !== beforeActive) {
-          sid = cur
-          via = 'active'
-          break
-        }
-        const nowLive = await _liveIds()
-        const freshLive = nowLive.find(x => !beforeLive.includes(x))
-        if (freshLive) {
-          sid = freshLive
-          via = 'live'
-          break
-        }
-        if (i === 6 && !btn) {
-          const b2 = _findNewSessionButton()
-          if (b2) _fireClick(b2)
-        }
-        if (i % 4 === 3) {
-          const res = await host.request('session.list', { limit: 20 }).catch(() => null)
-          const rows = (res && res.sessions) || []
-          const fresh = rows.map(s => s.id).find(x => !beforeStored.includes(x))
-          if (fresh) {
-            sid = fresh
-            via = 'list'
-            break
-          }
-        }
-      }
-
-      if (!sid) {
-        host.notify({
-          kind: 'error',
-          message:
-            'Сессия не появилась. Диагностика: кнопка ' +
-            (btn ? 'найдена' : 'НЕ найдена') +
-            ', активная=' +
-            (beforeActive || 'нет') +
-            ', живых до=' +
-            beforeLive.length
-        })
-        return
-      }
-
-      // привязать к задаче
+      // привязать к задаче именно сохранённый id
       persist({
         ...store,
         tasks: store.tasks.map(t =>
-          t.id === taskId ? { ...t, sessions: [sid].concat(t.sessions || []) } : t
+          t.id === taskId ? { ...t, sessions: [key].concat(t.sessions || []) } : t
         )
       })
-
-      // применить введённое название
-      const name = String(title || '').trim()
-      if (name) {
-        await host.request('session.title', { session_id: sid, title: name }).catch(() => null)
-      }
       live.refetch()
       liveActive.refetch()
-      host.notify({ kind: 'info', message: 'Сессия привязана к задаче (' + via + ')' })
+
+      // переключить окно на новую сессию: она живая, поэтому сначала activate,
+      // затем — подтверждённый путь: клик по её строке в списке приложения
+      await host.request('session.activate', { session_id: sid, omit_messages: true }).catch(
+        () => null
+      )
+      await _wait(500)
+      const switched = _activeSessionId() === sid
+      if (!switched) {
+        await openSession(key, name)
+      }
     } catch (err) {
       const msg = err && err.message ? err.message : String(err)
       host.notify({ kind: 'error', message: 'Не удалось создать сессию: ' + msg })
