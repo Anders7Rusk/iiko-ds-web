@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v31'
+const PLUGIN_VER = 'v32'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1164,6 +1164,49 @@ function TasksPage() {
   })
 }
 
+// Чип в статусбаре: к чему относится ОТКРЫТАЯ сейчас сессия.
+// «Проект / Задача», либо просто «Проект», если задачи нет.
+function SessionTieChip() {
+  const activeSid = useValue(host.state.activeSessionId)
+  const liveActive = useQuery({
+    queryKey: ['tasks-plugin', 'chip', activeSid || ''],
+    queryFn: () => host.request('session.active_list', { current_session_id: activeSid || '' }),
+    refetchInterval: 5000
+  })
+  // перечитываем localStorage (привязки меняются на странице «Задачи»)
+  const [tick, setTick] = useState(0)
+  useEffect(() => {
+    const t = setInterval(() => setTick(x => x + 1), 3000)
+    return () => clearInterval(t)
+  }, [])
+
+  const rows = (liveActive.data && liveActive.data.sessions) || []
+  const row = rows.find(s => s.id === activeSid) || rows.find(s => s.current)
+  const key = row ? row.session_key || row.id : null
+
+  const label = useMemo(() => {
+    if (!key) return null
+    const store = readStore()
+    const task = (store.tasks || []).find(t => (t.sessions || []).includes(key))
+    if (task) {
+      const proj = (store.projects || []).find(p => p.id === task.projectId)
+      return (proj ? proj.name + ' / ' : '') + task.name
+    }
+    const proj = (store.projects || []).find(p => (p.sessions || []).includes(key))
+    return proj ? proj.name : null
+  }, [key, tick])
+
+  if (!label) return null
+  return jsx('button', {
+    type: 'button',
+    onClick: () => host.navigate(ROUTE),
+    title: 'к какой задаче относится эта сессия — открыть «Задачи»',
+    className: 'max-w-[280px] truncate text-[0.6875rem]',
+    style: { color: 'var(--ui-text-tertiary)' },
+    children: label
+  })
+}
+
 export default {
   id: ID,
   name: 'Задачи',
@@ -1178,6 +1221,11 @@ export default {
       id: 'nav',
       area: SIDEBAR_NAV_AREA,
       data: { path: ROUTE, label: 'Задачи', codicon: 'checklist' }
+    })
+    ctx.register({
+      id: 'status',
+      area: 'statusBar.right',
+      render: () => jsx(SessionTieChip, {})
     })
     ctx.register({
       id: 'palette',
