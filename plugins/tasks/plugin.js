@@ -24,7 +24,7 @@ import { useEffect, useMemo, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v10'
+const PLUGIN_VER = 'v11'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -52,14 +52,139 @@ function uid(prefix) {
   return prefix + '-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 6)
 }
 
-async function openSession(id) {
+// ── Открытие сессии: программный клик по строке сессии в самом приложении ──
+// SDK не даёт API переключения сессии (activeSessionId readonly), но плагин
+// живёт в том же окне — поэтому находим строку сессии в списке приложения и
+// нажимаем её так же, как это делает мышь пользователя.
+
+const _norm = s =>
+  (s || '')
+    .replace(/\s+/g, ' ')
+    .replace(/[…]+/g, '')
+    .replace(/\.\.\.$/, '')
+    .trim()
+    .toLowerCase()
+
+function _looksSame(a, b) {
+  const x = _norm(a)
+  const y = _norm(b)
+  if (!x || !y) return false
+  const n = Math.min(x.length, y.length, 24)
+  if (n < 6) return false
+  return x.slice(0, n) === y.slice(0, n)
+}
+
+function _fireClick(el) {
+  const opts = { bubbles: true, cancelable: true, view: window }
+  try {
+    el.dispatchEvent(new PointerEvent('pointerdown', opts))
+  } catch (e) {
+    /* PointerEvent may be unavailable */
+  }
+  el.dispatchEvent(new MouseEvent('mousedown', opts))
+  try {
+    el.dispatchEvent(new PointerEvent('pointerup', opts))
+  } catch (e) {
+    /* ignore */
+  }
+  el.dispatchEvent(new MouseEvent('mouseup', opts))
+  el.dispatchEvent(new MouseEvent('click', opts))
+}
+
+function _clickableAncestor(el) {
+  let n = el
+  for (let i = 0; i < 6 && n; i++) {
+    const tag = (n.tagName || '').toLowerCase()
+    const role = n.getAttribute ? n.getAttribute('role') : null
+    const cls = n.className ? String(n.className) : ''
+    if (
+      tag === 'button' ||
+      tag === 'a' ||
+      role === 'button' ||
+      role === 'option' ||
+      role === 'menuitem' ||
+      cls.includes('cursor-pointer')
+    ) {
+      return n
+    }
+    n = n.parentElement
+  }
+  return el
+}
+
+// Ищем строку сессии в приложении (исключая нашу собственную страницу)
+function _findSessionRow(title) {
+  if (!_norm(title)) return null
+  const nodes = document.querySelectorAll(
+    'button, a, [role="button"], [role="option"], li, div, span'
+  )
+  let best = null
+  let bestLen = Infinity
+  for (const el of nodes) {
+    if (el.closest && el.closest('[data-tasks-plugin]')) continue
+    const txt = el.textContent || ''
+    if (txt.length > 160) continue
+    if (!_looksSame(txt, title)) continue
+    const r = el.getBoundingClientRect ? el.getBoundingClientRect() : null
+    if (!r || r.width < 20 || r.height < 8) continue
+    if (txt.length < bestLen) {
+      best = el
+      bestLen = txt.length
+    }
+  }
+  return best ? _clickableAncestor(best) : null
+}
+
+const _wait = ms => new Promise(r => setTimeout(r, ms))
+
+function _setNativeValue(el, value) {
+  const desc = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value')
+  if (desc && desc.set) desc.set.call(el, value)
+  else el.value = value
+  el.dispatchEvent(new Event('input', { bubbles: true }))
+  el.dispatchEvent(new Event('change', { bubbles: true }))
+}
+
+// Родное поле поиска сессий приложения (не наше)
+function _findSearchInput() {
+  const inputs = document.querySelectorAll('input')
+  for (const el of inputs) {
+    if (el.closest && el.closest('[data-tasks-plugin]')) continue
+    const ph = (el.getAttribute('placeholder') || '').toLowerCase()
+    if (ph.includes('search session') || ph.includes('поиск') || ph.includes('search')) return el
+  }
+  return null
+}
+
+async function openSession(id, title) {
   try {
     haptic('tap')
-    // 1) сервер: оживить сессию — возвращает внутренний live-id (sid)
-    const res = await host.request('session.resume', { session_id: id })
-    const sid = (res && (res.session_id || res.resumed || res.id)) || id
-    // 2) фронтенд: подключить главное окно к ЭТОМУ live-идентификатору
-    await host.request('session.activate', { session_id: sid, omit_messages: true })
+    // 1) сессия уже видна в списке — нажимаем её
+    let row = _findSessionRow(title)
+    if (row) {
+      _fireClick(row)
+      return
+    }
+    // 2) не видна — набираем название в родной поиск сессий и ждём строку
+    const search = _findSearchInput()
+    if (search) {
+      search.focus()
+      _setNativeValue(search, String(title || '').slice(0, 40))
+      for (let i = 0; i < 12; i++) {
+        await _wait(180)
+        row = _findSessionRow(title)
+        if (row) {
+          _fireClick(row)
+          _setNativeValue(search, '')
+          return
+        }
+      }
+      _setNativeValue(search, '')
+    }
+    host.notify({
+      kind: 'error',
+      message: 'Сессия не найдена в списке приложения: ' + (title || id)
+    })
   } catch (err) {
     const msg = err && err.message ? err.message : String(err)
     host.notify({ kind: 'error', message: 'Не удалось открыть сессию: ' + msg })
@@ -78,7 +203,7 @@ function SessionLine({ session, onMove, onUnlink, taskOptions }) {
       }),
       jsx('button', {
         type: 'button',
-        onClick: () => openSession(session.id),
+        onClick: () => openSession(session.id, session.title || session.preview || ''),
         className: 'min-w-0 flex-1 truncate text-left',
         style: { color: 'var(--ui-text-secondary)' },
         children: session.title || session.preview || session.id
@@ -465,7 +590,10 @@ function TasksPage() {
         )
       })
       host.notify({ kind: 'info', message: 'Сессия создана' })
-      host.navigate('/chat?resume=' + encodeURIComponent(sid))
+      // дать приложению обновить список, затем открыть её кликом
+      await host.request('session.list', { limit: 500 }).catch(() => null)
+      live.refetch()
+      setTimeout(() => openSession(sid, title || ''), 700)
     } catch (err) {
       const msg = err && err.message ? err.message : String(err)
       host.notify({ kind: 'error', message: 'Не удалось создать сессию: ' + msg })
@@ -526,6 +654,7 @@ function TasksPage() {
 
   return jsxs('div', {
     className: 'flex h-full flex-col overflow-hidden',
+    'data-tasks-plugin': '1',
     children: [
       jsxs('div', {
         className: 'flex items-center gap-3 px-4 pt-4 pb-2',
