@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v42'
+const PLUGIN_VER = 'v43'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1236,58 +1236,80 @@ function SessionTieChip() {
     }
   }, [activeSid])
 
-  const rows = (liveActive.data && liveActive.data.sessions) || []
-  const row = rows.find(s => s.id === activeSid) || rows.find(s => s.current)
-  // берём ТОЛЬКО сохранённый id: внутренний live-id в привязках не встречается
-  const fromRow = row && isStoredId(row.session_key) ? row.session_key : null
-
-  // Фолбэк без вранья: активная строка сайдбара помечена aria-current="true"
-  // (так её отмечает сам клиент). Берём её текст и находим сессию по названию.
-  const sessions = useQuery({
-    queryKey: ['tasks-plugin', 'chip-list'],
-    queryFn: () => host.request('session.list', { limit: 500 }),
-    refetchInterval: 15000
-  })
-  const fromDom = useMemo(() => {
-    if (fromRow || isStoredId(activeSid)) return null
-    // ищем выделенную строку сессии: клиент помечает её aria-current,
-    // либо выделяет классами (bg-primary / border-primary / aria-selected)
-    let el = null
+  // Открытую сессию определяем ТОЛЬКО надёжно:
+  // 1) атом activeSessionId (внутренний sid) или sid из событий гейтвея;
+  // 2) active_list переводит этот sid в сохранённый id (session_key).
+  // Никакого поиска «подсвеченной строки» в DOM — он мог схватить чужую сессию.
+  const [evtSid, setEvtSid] = useState(null)
+  useEffect(() => {
+    let off = null
     try {
-      el =
-        document.querySelector('[aria-current="true"]') ||
-        document.querySelector('[aria-current="page"]') ||
-        document.querySelector('[aria-selected="true"]')
-      if (!el) {
-        const cands = document.querySelectorAll('a, li, div, button')
-        for (const n of cands) {
-          if (n.closest && n.closest('[data-tasks-plugin]')) continue
-          const cls = String(n.className || '')
-          if (!/bg-primary|border-primary|is-active|selected/.test(cls)) continue
-          const txt = _norm(n.textContent)
-          if (txt.length >= 6 && txt.length <= 160) {
-            el = n
-            break
-          }
-        }
-      }
+      off = host.onEvent('*', ev => {
+        const sid = ev && (ev.session_id || (ev.params && ev.params.session_id))
+        if (sid) setEvtSid(String(sid))
+      })
     } catch (e) {
-      el = null
+      off = null
     }
-    if (!el) return null
-    const text = _norm(el.textContent)
-    if (!text) return null
-    const list = (sessions.data && sessions.data.sessions) || []
-    const hit = list.find(s => _looksSame(s.title || s.preview || '', text))
-    return hit && isStoredId(hit.id) ? hit.id : null
-  }, [fromRow, activeSid, sessions.data, tick])
+    return () => {
+      try {
+        if (typeof off === 'function') off()
+      } catch (e) {
+        /* ignore */
+      }
+    }
+  }, [])
 
-  const key = fromRow || (isStoredId(activeSid) ? activeSid : null) || fromDom
+  const sid = activeSid || evtSid
+  const rows = (liveActive.data && liveActive.data.sessions) || []
+  const row = rows.find(s => s.id === sid) || rows.find(s => s.current)
+  const fromRow = row && isStoredId(row.session_key) ? row.session_key : null
+  const key = fromRow || (isStoredId(sid) ? sid : null)
+
+  // АВТОПРИВЯЗКА: «+ Сессия» записала намерение (pendingTie). Как только
+  // открытая сессия определилась и её ещё не было в списке на момент нажатия —
+  // привязываем её к той задаче/проекту, где нажали. Здесь, на странице чата,
+  // это срабатывает сразу после первого сообщения — возвращаться в «Задачи»
+  // не нужно.
+  useEffect(() => {
+    if (!key) return
+    const cur = readStore()
+    const tie = cur.pendingTie
+    if (!tie || !tie.target) return
+    const known = new Set(tie.known || [])
+    if (known.has(key)) return // это старая сессия, не та, что создали
+    const already =
+      (cur.tasks || []).some(t => (t.sessions || []).includes(key)) ||
+      (cur.projects || []).some(p => (p.sessions || []).includes(key))
+    if (already) {
+      writeStore({ ...cur, pendingTie: null })
+      return
+    }
+    const target = tie.target
+    const next =
+      target.type === 'project'
+        ? {
+            ...cur,
+            pendingTie: null,
+            projects: (cur.projects || []).map(p =>
+              p.id === target.id ? { ...p, sessions: [key].concat(p.sessions || []) } : p
+            )
+          }
+        : {
+            ...cur,
+            pendingTie: null,
+            tasks: (cur.tasks || []).map(t =>
+              t.id === target.id ? { ...t, sessions: [key].concat(t.sessions || []) } : t
+            )
+          }
+    writeStore(next)
+    setTick(x => x + 1)
+  }, [key])
 
   const label = useMemo(() => {
     if (!key) {
       const n = rows.length
-      return 'не определено (sid=' + (activeSid || '—') + ', живых=' + n + ')'
+      return 'не определено (sid=' + (sid || '—') + ', живых=' + n + ')'
     }
     const store = readStore()
     const task = (store.tasks || []).find(t => (t.sessions || []).includes(key))
@@ -1298,45 +1320,9 @@ function SessionTieChip() {
     const proj = (store.projects || []).find(p => (p.sessions || []).includes(key))
     if (proj) return proj.name
     return 'без задачи'
-  }, [key, tick, activeSid, rows.length])
+  }, [key, tick, sid, rows.length])
 
-  // варианты привязки текущей сессии + возможность снять её
-  const options = useMemo(() => {
-    const store = readStore()
-    const list = []
-    for (const t of store.tasks || []) {
-      const proj = (store.projects || []).find(p => p.id === t.projectId)
-      list.push({ value: 'task:' + t.id, label: (proj ? proj.name + ' / ' : '') + t.name })
-    }
-    for (const p of store.projects || []) {
-      list.push({ value: 'proj:' + p.id, label: p.name + ' (проект)' })
-    }
-    return list
-  }, [tick])
 
-  const applyTie = value => {
-    if (!key || !value) return
-    const cur = readStore()
-    const strip = arr => (arr || []).filter(x => x !== key)
-    const next = {
-      ...cur,
-      tasks: (cur.tasks || []).map(t => ({ ...t, sessions: strip(t.sessions) })),
-      projects: (cur.projects || []).map(p => ({ ...p, sessions: strip(p.sessions) }))
-    }
-    if (value.startsWith('task:')) {
-      const id = value.slice(5)
-      next.tasks = next.tasks.map(t =>
-        t.id === id ? { ...t, sessions: [key].concat(t.sessions || []) } : t
-      )
-    } else if (value.startsWith('proj:')) {
-      const id = value.slice(5)
-      next.projects = next.projects.map(p =>
-        p.id === id ? { ...p, sessions: [key].concat(p.sessions || []) } : p
-      )
-    }
-    writeStore(next)
-    setTick(x => x + 1)
-  }
 
   return jsxs('div', {
     className: 'flex h-full w-full items-center gap-1.5 px-2 text-[0.75rem]',
@@ -1349,25 +1335,10 @@ function SessionTieChip() {
         type: 'button',
         onClick: () => host.navigate(ROUTE),
         title: 'открыть «Задачи»',
-        className: 'min-w-0 max-w-[45%] truncate text-left hover:underline',
+        className: 'min-w-0 flex-1 truncate text-left hover:underline',
         style: { color: 'var(--ui-text-secondary)' },
         children: label
-      }),
-      key &&
-        jsxs('select', {
-          value: '',
-          onChange: e => {
-            applyTie(e.target.value)
-            e.target.value = ''
-          },
-          className: 'ml-auto shrink-0 rounded border bg-transparent px-1 py-0.5 text-[0.6875rem] outline-none',
-          style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-text-primary)' },
-          children: [
-            jsx('option', { value: '', children: 'изменить…' }),
-            jsx('option', { value: 'none', children: '— убрать привязку —' }),
-            ...options.map(o => jsx('option', { value: o.value, children: o.label }, o.value))
-          ]
-        })
+      })
     ]
   })
 }
