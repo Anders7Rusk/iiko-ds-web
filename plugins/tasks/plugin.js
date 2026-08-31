@@ -17,14 +17,15 @@ import {
   cn,
   haptic,
   host,
-  useQuery
+  useQuery,
+  useValue
 } from '@hermes/plugin-sdk'
 import { jsx, jsxs } from 'react/jsx-runtime'
 import { useEffect, useMemo, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v12'
+const PLUGIN_VER = 'v13'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -199,6 +200,28 @@ async function _liveIds() {
   }
 }
 
+// Ctrl+N — родной хоткей приложения «New session» (показан рядом с кнопкой)
+function _pressCtrlN() {
+  const init = {
+    key: 'n',
+    code: 'KeyN',
+    keyCode: 78,
+    which: 78,
+    ctrlKey: true,
+    bubbles: true,
+    cancelable: true
+  }
+  for (const target of [document.activeElement, document.body, document, window]) {
+    if (!target || !target.dispatchEvent) continue
+    try {
+      target.dispatchEvent(new KeyboardEvent('keydown', init))
+      target.dispatchEvent(new KeyboardEvent('keyup', init))
+    } catch (e) {
+      /* ignore */
+    }
+  }
+}
+
 async function openSession(id, title) {
   try {
     haptic('tap')
@@ -235,10 +258,49 @@ async function openSession(id, title) {
 }
 
 // Строка одной сессии (мелкая, приглушённая). Клик по названию открывает сессию.
-function SessionLine({ session, onMove, onUnlink, taskOptions }) {
+// Точка-индикатор, как в сайдбаре приложения:
+// 'active' — сессия, в которой ты сейчас (синяя, var(--ui-accent))
+// 'live'   — живая сессия, агент в памяти (зелёная, класс text-success + bg-current)
+// иначе    — обычная историческая (пустой кружок)
+function Dot({ kind }) {
+  if (kind === 'active') {
+    return jsx('span', {
+      className: 'inline-block h-1.5 w-1.5 shrink-0 rounded-full',
+      style: { background: 'var(--ui-accent)' },
+      title: 'ты здесь'
+    })
+  }
+  if (kind === 'live') {
+    return jsx('span', {
+      className: 'inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-current text-success',
+      title: 'живая сессия'
+    })
+  }
+  return jsx('span', {
+    className: 'inline-block h-1.5 w-1.5 shrink-0 rounded-full border',
+    style: { borderColor: 'var(--ui-stroke-secondary)' }
+  })
+}
+
+// Тип точки для сессии / агрегат для задачи и проекта
+function dotForSession(id, activeId, liveSet) {
+  if (id && activeId && id === activeId) return 'active'
+  if (id && liveSet && liveSet.has(id)) return 'live'
+  return 'idle'
+}
+
+function dotForList(ids, activeId, liveSet) {
+  const list = ids || []
+  if (activeId && list.includes(activeId)) return 'active'
+  if (liveSet && list.some(x => liveSet.has(x))) return 'live'
+  return 'idle'
+}
+
+function SessionLine({ session, onMove, onUnlink, taskOptions, activeId, liveSet }) {
   return jsxs('div', {
     className: 'flex items-center gap-1.5 rounded px-1.5 py-1 text-[0.8125rem] hover:bg-(--chrome-action-hover)',
     children: [
+      jsx(Dot, { kind: dotForSession(session.id, activeId, liveSet) }),
       jsx('span', {
         className: 'w-12 shrink-0 tabular-nums',
         style: { color: 'var(--ui-text-quaternary)' },
@@ -285,7 +347,18 @@ function SessionLine({ session, onMove, onUnlink, taskOptions }) {
 }
 
 function TaskBlock(props) {
-  const { task, liveById, liveSessions, onUnlink, onMove, taskOptions, removeTask, onCreateSession } = props
+  const {
+    task,
+    liveById,
+    liveSessions,
+    onUnlink,
+    onMove,
+    taskOptions,
+    removeTask,
+    onCreateSession,
+    activeId,
+    liveSet
+  } = props
   const [open, setOpen] = useState(false)
   const [sessionTitle, setSessionTitle] = useState('')
   const sessions = (task.sessions || [])
@@ -313,6 +386,7 @@ function TaskBlock(props) {
                 style: { color: 'var(--ui-text-quaternary)' },
                 children: open ? '▾' : '▸'
               }),
+              jsx(Dot, { kind: dotForList(task.sessions || [], activeId, liveSet) }),
               jsx('span', { className: 'truncate text-[0.8125rem] font-medium', children: task.name }),
               task.status
                 ? jsx('span', {
@@ -374,7 +448,9 @@ function TaskBlock(props) {
                     session: s,
                     onUnlink: sid => onUnlink(task.id, sid),
                     onMove,
-                    taskOptions
+                    taskOptions,
+                    activeId,
+                    liveSet
                   }, s.id)
                 )
               : jsx('div', {
@@ -403,9 +479,12 @@ function ProjectBlock(props) {
     onUnlink,
     onMove,
     taskOptions,
-    onCreateSession
+    onCreateSession,
+    activeId,
+    liveSet
   } = props
   const empty = proj.tasks.length === 0
+  const projSessions = proj.tasks.reduce((acc, t) => acc.concat(t.sessions || []), [])
   return jsxs('div', {
     className: 'rounded-md border',
     style: { borderColor: 'var(--ui-stroke-secondary)' },
@@ -424,6 +503,7 @@ function ProjectBlock(props) {
                 style: { color: 'var(--ui-text-quaternary)' },
                 children: expanded ? '▾' : '▸'
               }),
+              jsx(Dot, { kind: dotForList(projSessions, activeId, liveSet) }),
               jsx('span', { className: 'truncate text-[0.9375rem] font-semibold', children: proj.name }),
               jsx('span', {
                 className: 'shrink-0 rounded px-1.5 py-0.5 text-[0.6875rem] tabular-nums',
@@ -486,7 +566,9 @@ function ProjectBlock(props) {
                       onMove,
                       taskOptions,
                       removeTask,
-                      onCreateSession: onCreateSession
+                      onCreateSession: onCreateSession,
+                      activeId,
+                      liveSet
                     },
                     task.id
                   )
@@ -497,7 +579,7 @@ function ProjectBlock(props) {
   })
 }
 
-function UnassignedBlock({ orphans, taskOptions, onMove }) {
+function UnassignedBlock({ orphans, taskOptions, onMove, activeId, liveSet }) {
   return jsxs('div', {
     className: 'rounded-md border',
     style: { borderColor: 'var(--ui-stroke-secondary)' },
@@ -525,7 +607,7 @@ function UnassignedBlock({ orphans, taskOptions, onMove }) {
       jsx('div', {
         className: 'flex flex-col gap-0.5 px-2 pb-2 pt-1 pl-4',
         children: orphans.map(s =>
-          jsx(SessionLine, { session: s, onMove, taskOptions }, s.id)
+          jsx(SessionLine, { session: s, onMove, taskOptions, activeId, liveSet }, s.id)
         )
       })
     ]
@@ -570,6 +652,18 @@ function TasksPage() {
     queryFn: () => host.request('session.list', { limit: 500 }),
     refetchInterval: 60000
   })
+  // живые сессии приложения — для зелёной точки
+  const liveActive = useQuery({
+    queryKey: ['tasks-plugin', 'session.active_list'],
+    queryFn: () => host.request('session.active_list', {}),
+    refetchInterval: 5000
+  })
+  // сессия, в которой пользователь сейчас — для синей точки
+  const activeId = useValue(host.state.activeSessionId)
+  const liveSet = useMemo(() => {
+    const rows = (liveActive.data && liveActive.data.sessions) || []
+    return new Set(rows.map(s => s.session_key || s.id).filter(Boolean))
+  }, [liveActive.data])
   const liveSessions = (live.data && live.data.sessions) || []
   const liveById = useMemo(() => new Map(liveSessions.map(s => [s.id, s])), [liveSessions])
 
@@ -620,52 +714,69 @@ function TasksPage() {
   const createSession = async (taskId, title) => {
     try {
       haptic('tap')
-      // родная кнопка приложения: она и создаёт сессию, и сразу переключает в неё
-      const btn = _findNewSessionButton()
-      if (!btn) {
-        host.notify({
-          kind: 'error',
-          message: 'Кнопка «New session» не найдена в приложении'
-        })
-        return
-      }
       const beforeActive = _activeSessionId()
       const beforeLive = await _liveIds()
-      _fireClick(btn)
+      const beforeStored = ((live.data && live.data.sessions) || []).map(s => s.id)
 
-      // ждём, пока приложение переключится на новую сессию
+      // 1) родная кнопка «New session» в сайдбаре
+      const btn = _findNewSessionButton()
+      if (btn) _fireClick(btn)
+      // 2) плюс родной хоткей Ctrl+N — если кнопку приложение обрабатывает иначе
+      if (!btn) _pressCtrlN()
+
+      // ждём появления новой сессии: активная → живые → список
       let sid = null
-      for (let i = 0; i < 25; i++) {
-        await _wait(200)
+      let via = ''
+      for (let i = 0; i < 20 && !sid; i++) {
+        await _wait(250)
         const cur = _activeSessionId()
         if (cur && cur !== beforeActive) {
           sid = cur
+          via = 'active'
           break
         }
-        if (i % 3 === 2) {
-          const now = await _liveIds()
-          const fresh = now.find(x => !beforeLive.includes(x))
+        const nowLive = await _liveIds()
+        const freshLive = nowLive.find(x => !beforeLive.includes(x))
+        if (freshLive) {
+          sid = freshLive
+          via = 'live'
+          break
+        }
+        if (i === 6 && !btn) {
+          const b2 = _findNewSessionButton()
+          if (b2) _fireClick(b2)
+        }
+        if (i % 4 === 3) {
+          const res = await host.request('session.list', { limit: 20 }).catch(() => null)
+          const rows = (res && res.sessions) || []
+          const fresh = rows.map(s => s.id).find(x => !beforeStored.includes(x))
           if (fresh) {
             sid = fresh
+            via = 'list'
             break
           }
         }
       }
+
       if (!sid) {
         host.notify({
           kind: 'error',
-          message: 'Сессия создана, но её id не определился — привязка не сохранена'
+          message:
+            'Сессия не появилась. Диагностика: кнопка ' +
+            (btn ? 'найдена' : 'НЕ найдена') +
+            ', активная=' +
+            (beforeActive || 'нет') +
+            ', живых до=' +
+            beforeLive.length
         })
         return
       }
 
-      // привязать новую сессию к задаче
+      // привязать к задаче
       persist({
         ...store,
         tasks: store.tasks.map(t =>
-          t.id === taskId
-            ? { ...t, sessions: [sid].concat(t.sessions || []) }
-            : t
+          t.id === taskId ? { ...t, sessions: [sid].concat(t.sessions || []) } : t
         )
       })
 
@@ -675,6 +786,8 @@ function TasksPage() {
         await host.request('session.title', { session_id: sid, title: name }).catch(() => null)
       }
       live.refetch()
+      liveActive.refetch()
+      host.notify({ kind: 'info', message: 'Сессия привязана к задаче (' + via + ')' })
     } catch (err) {
       const msg = err && err.message ? err.message : String(err)
       host.notify({ kind: 'error', message: 'Не удалось создать сессию: ' + msg })
@@ -805,13 +918,15 @@ function TasksPage() {
                 onUnlink: unlinkSession,
                 onMove: moveSession,
                 taskOptions,
-                onCreateSession: createSession
+                onCreateSession: createSession,
+                activeId,
+                liveSet
               },
               proj.key
             )
           ),
           orphans.length
-            ? jsx(UnassignedBlock, { orphans, taskOptions, onMove: moveSession })
+            ? jsx(UnassignedBlock, { orphans, taskOptions, onMove: moveSession, activeId, liveSet })
             : null
         ]
       })
