@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v21'
+const PLUGIN_VER = 'v22'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -366,7 +366,7 @@ function TaskBlock(props) {
     .filter(Boolean)
     .sort((a, b) => (b.started_at || 0) - (a.started_at || 0))
   const addSession = () => {
-    onCreateSession(task.id, '')
+    onCreateSession({ type: 'task', id: task.id }, '')
   }
   return jsxs('div', {
     className: 'rounded border',
@@ -472,11 +472,19 @@ function ProjectBlock(props) {
     onMove,
     taskOptions,
     onCreateSession,
+    onCreateProjectSession,
     activeId,
     liveSet
   } = props
   const empty = proj.tasks.length === 0
   const projSessions = proj.tasks.reduce((acc, t) => acc.concat(t.sessions || []), [])
+  const projectOwnSessions = (proj.sessions || [])
+    .map(id => liveById.get(id))
+    .filter(Boolean)
+    .sort((a, b) => (b.started_at || 0) - (a.started_at || 0))
+  const addProjectSession = () => {
+    onCreateProjectSession(proj.id)
+  }
   return jsxs('div', {
     className: 'rounded-md border',
     style: { borderColor: 'var(--ui-stroke-secondary)' },
@@ -542,10 +550,39 @@ function ProjectBlock(props) {
               ]
             }),
             empty
-              ? jsx('div', {
-                  className: 'pl-1 pt-1 text-[0.8125rem]',
-                  style: { color: 'var(--ui-text-quaternary)' },
-                  children: 'нет задач — добавь выше'
+              ? jsxs('div', {
+                  className: 'flex flex-col gap-1.5',
+                  children: [
+                    jsx('div', {
+                      className: 'pl-1 pt-1 text-[0.8125rem]',
+                      style: { color: 'var(--ui-text-quaternary)' },
+                      children: 'нет задач — добавь выше'
+                    }),
+                    jsx('button', {
+                      type: 'button',
+                      onClick: addProjectSession,
+                      className:
+                        'flex w-full items-center justify-center gap-1 rounded border px-2 py-1 text-[0.8125rem] hover:bg-(--chrome-action-hover)',
+                      style: { borderColor: 'var(--ui-stroke-secondary)' },
+                      children: '+ Сессия'
+                    }),
+                    projectOwnSessions.length
+                      ? projectOwnSessions.map(s =>
+                          jsx(SessionLine, {
+                            session: s,
+                            onUnlink: sid => onUnlink(proj.id, sid, 'project'),
+                            onMove,
+                            taskOptions,
+                            activeId,
+                            liveSet
+                          }, s.id + '-proj')
+                        )
+                      : jsx('div', {
+                          className: 'px-1 pb-1 text-[0.75rem]',
+                          style: { color: 'var(--ui-text-quaternary)' },
+                          children: 'сессий не привязано'
+                        })
+                  ]
                 })
               : proj.tasks.map(task =>
                   jsx(
@@ -689,29 +726,44 @@ function TasksPage() {
 
   // Отложенная привязка: после «+ Сессия» приложение перевело в пустой чат,
   // сессия появится в session.list только после первого сообщения. Здесь
-  // находим её и привязываем к задаче из pendingTie.
+  // находим её и привязываем к целе (задаче или проекту) из pendingTie.
   const tieDone = useRef(false)
   useEffect(() => {
     if (!store || !store.pendingTie || tieDone.current) return
     const tie = store.pendingTie
-    const assigned = new Set(store.tasks.reduce((acc, t) => acc.concat(t.sessions || []), []))
+    const target = tie.target || { type: 'task', id: tie.taskId }
+    const assigned = new Set(
+      store.tasks
+        .concat(store.projects || [])
+        .reduce((acc, o) => acc.concat(o.sessions || []), [])
+    )
     const fresh = liveSessions
       .filter(s => !assigned.has(s.id))
       .filter(s => (s.started_at || 0) >= (tie.at - 5 * 60 * 1000))
       .sort((a, b) => (b.started_at || 0) - (a.started_at || 0))[0]
     if (!fresh) return
     tieDone.current = true
-    persist({
-      ...store,
-      pendingTie: null,
-      tasks: store.tasks.map(t =>
-        t.id === tie.taskId ? { ...t, sessions: [fresh.id].concat(t.sessions || []) } : t
-      )
-    })
+    if (target.type === 'project') {
+      persist({
+        ...store,
+        pendingTie: null,
+        projects: store.projects.map(p =>
+          p.id === target.id ? { ...p, sessions: [fresh.id].concat(p.sessions || []) } : p
+        )
+      })
+    } else {
+      persist({
+        ...store,
+        pendingTie: null,
+        tasks: store.tasks.map(t =>
+          t.id === target.id ? { ...t, sessions: [fresh.id].concat(t.sessions || []) } : t
+        )
+      })
+    }
     if (tie.title) {
       host.request('session.title', { session_id: fresh.id, title: tie.title }).catch(() => null)
     }
-    host.notify({ kind: 'info', message: 'Сессия привязана к задаче' })
+    host.notify({ kind: 'info', message: 'Сессия привязана' })
   }, [live.data, store])
 
   if (!store) {
@@ -758,7 +810,8 @@ function TasksPage() {
   }
 
   // создать новую сессию Hermes, привязать к задаче и перейти в неё
-  const createSession = async (taskId, title) => {
+  const createSession = async (target, title) => {
+    // target: { type: 'task' | 'project', id }
     try {
       haptic('tap')
       const name = String(title || '').trim()
@@ -784,10 +837,10 @@ function TasksPage() {
         if (btn) _fireClick(btn)
       }
       // отложенная привязка: новая сессия из session.list (появится после
-      // первого сообщения) будет привязана к этой задаче
+      // первого сообщения) будет привязана к задаче или проекту из target
       persist({
         ...store,
-        pendingTie: { taskId, at: Date.now(), title: name }
+        pendingTie: { target, at: Date.now(), title: name }
       })
       host.notify({ kind: 'info', message: 'Новая сессия — напишите первое сообщение' })
     } catch (err) {
@@ -811,12 +864,23 @@ function TasksPage() {
     })
   }
 
-  // отвязать сессию от конкретной задачи
-  const unlinkSession = (taskId, sessionId) => {
+  // отвязать сессию от задачи или проекта
+  const unlinkSession = (ownerId, sessionId, type = 'task') => {
+    if (type === 'project') {
+      persist({
+        ...store,
+        projects: store.projects.map(p =>
+          p.id === ownerId
+            ? { ...p, sessions: (p.sessions || []).filter(s => s !== sessionId) }
+            : p
+        )
+      })
+      return
+    }
     persist({
       ...store,
       tasks: store.tasks.map(t =>
-        t.id === taskId
+        t.id === ownerId
           ? { ...t, sessions: (t.sessions || []).filter(s => s !== sessionId) }
           : t
       )
@@ -832,8 +896,12 @@ function TasksPage() {
     projectRows.push({ key: 'none', id: 'none', name: 'Без проекта', tasks: noProject, notask: true })
   }
 
-  // сессии, не привязанные ни к одной задаче
-  const assigned = new Set(store.tasks.reduce((acc, t) => acc.concat(t.sessions || []), []))
+  // сессии, не привязанные ни к одной задаче или проекту
+  const assigned = new Set(
+    store.tasks
+      .concat(store.projects || [])
+      .reduce((acc, o) => acc.concat(o.sessions || []), [])
+  )
   const orphans = liveSessions
     .filter(s => !assigned.has(s.id))
     .sort((a, b) => (b.started_at || 0) - (a.started_at || 0))
@@ -846,7 +914,9 @@ function TasksPage() {
 
   // дубли проектов для выпадающего: не включать задачу, у которой уже есть эта сессия — не критично
 
-  const totalSessions = store.tasks.reduce((n, t) => n + (t.sessions || []).length, 0)
+  const totalSessions =
+    store.tasks.reduce((n, t) => n + (t.sessions || []).length, 0) +
+    (store.projects || []).reduce((n, p) => n + (p.sessions || []).length, 0)
 
   return jsxs('div', {
     className: 'flex h-full flex-col overflow-hidden',
@@ -921,6 +991,7 @@ function TasksPage() {
                 onMove: moveSession,
                 taskOptions,
                 onCreateSession: createSession,
+                onCreateProjectSession: projId => createSession({ type: 'project', id: projId }, ''),
                 activeId,
                 liveSet
               },
