@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v27'
+const PLUGIN_VER = 'v28'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -713,7 +713,7 @@ function TasksPage() {
   const live = useQuery({
     queryKey: ['tasks-plugin', 'session.list'],
     queryFn: () => host.request('session.list', { limit: 500 }),
-    refetchInterval: 60000
+    refetchInterval: 10000
   })
   // сессия, в которой пользователь сейчас: атом даёт ВНУТРЕННИЙ live-id,
   // поэтому передаём его в active_list и берём у отмеченной строки session_key
@@ -762,15 +762,18 @@ function TasksPage() {
         .concat(store.projects || [])
         .reduce((acc, o) => acc.concat(o.sessions || []), [])
     )
-    // started_at приходит в СЕКУНДАХ, tie.at — в миллисекундах: нормализуем
+    // Новая сессия = та, которой НЕ было в снимке known на момент нажатия.
+    // Это точный критерий (время как подстраховка для старых записей без known).
+    const known = new Set(tie.known || [])
     const startedMs = s => {
       const v = s.started_at || 0
       return v < 1e12 ? v * 1000 : v
     }
-    const fresh = liveSessions
-      .filter(s => !assigned.has(s.id))
-      .filter(s => startedMs(s) >= tie.at - 30 * 60 * 1000)
-      .sort((a, b) => startedMs(b) - startedMs(a))[0]
+    const candidates = liveSessions.filter(s => !assigned.has(s.id))
+    const fresh = (tie.known
+      ? candidates.filter(s => !known.has(s.id))
+      : candidates.filter(s => startedMs(s) >= tie.at - 30 * 60 * 1000)
+    ).sort((a, b) => startedMs(b) - startedMs(a))[0]
     if (!fresh) return
     tieDone.current = true
     if (target.type === 'project') {
@@ -841,18 +844,28 @@ function TasksPage() {
 
   // создать новую сессию Hermes, привязать к задаче и перейти в неё
   const createSession = async (target, title) => {
-    // target: { type: 'task' | 'project', id }
+    // target: { type: 'task' | 'project' | 'none', id }
     try {
       haptic('tap')
       const name = String(title || '').trim()
+      // ВАЖНО: сохраняем намерение ДО перехода — нажатие Ctrl+N уводит на новый
+      // чат и размонтирует эту страницу, после чего persist уже не выполнится.
+      // Снимок известных id: новой будет та сессия, которой сейчас НЕТ в списке.
+      if (target && target.type !== 'none') {
+        persist({
+          ...store,
+          pendingTie: {
+            target,
+            at: Date.now(),
+            title: name,
+            known: liveSessions.map(s => s.id)
+          }
+        })
+      }
       // Пустая сессия НЕ пишется в БД до первого сообщения (архитектура Hermes),
-      // поэтому «создать» её через session.create нельзя — она невидима.
-      // Родная кнопка «New session» (Ctrl+N) переводит в пустой новый чат, а
-      // строка появится в списке после первого сообщения. Дублируем её.
-      // Приоритет — хоткей Ctrl+N: он глобальный, доходит до приложения вернее,
-      // чем клик по DOM-элементу, найденному по тексту.
+      // поэтому session.create не даёт видимой сессии. Родная кнопка «New session»
+      // (Ctrl+N) переводит в пустой новый чат — дублируем её.
       _pressCtrlN()
-      // подождать мгновение; если активная сессия не сменилась — кликнуть кнопку
       let switched = false
       const beforeActive = _activeSessionId()
       for (let i = 0; i < 6; i++) {
@@ -866,15 +879,6 @@ function TasksPage() {
         const btn = _findNewSessionButton()
         if (btn) _fireClick(btn)
       }
-      // отложенная привязка: новая сессия из session.list (появится после
-      // первого сообщения) будет привязана к задаче или проекту из target
-      if (target && target.type !== 'none') {
-        persist({
-          ...store,
-          pendingTie: { target, at: Date.now(), title: name }
-        })
-      }
-      host.notify({ kind: 'info', message: 'Новая сессия — напишите первое сообщение' })
     } catch (err) {
       const msg = err && err.message ? err.message : String(err)
       host.notify({ kind: 'error', message: 'Не удалось создать сессию: ' + msg })
