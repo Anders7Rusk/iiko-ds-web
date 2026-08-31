@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v20'
+const PLUGIN_VER = 'v21'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -361,14 +361,12 @@ function TaskBlock(props) {
     liveSet
   } = props
   const [open, setOpen] = useState(false)
-  const [sessionTitle, setSessionTitle] = useState('')
   const sessions = (task.sessions || [])
     .map(id => liveById.get(id))
     .filter(Boolean)
     .sort((a, b) => (b.started_at || 0) - (a.started_at || 0))
   const addSession = () => {
-    onCreateSession(task.id, sessionTitle.trim())
-    setSessionTitle('')
+    onCreateSession(task.id, '')
   }
   return jsxs('div', {
     className: 'rounded border',
@@ -426,18 +424,11 @@ function TaskBlock(props) {
             jsxs('div', {
               className: 'mb-1.5 flex items-center gap-2',
               children: [
-                jsx('input', {
-                  value: sessionTitle,
-                  placeholder: 'Новая сессия…',
-                  onChange: e => setSessionTitle(e.target.value),
-                  onKeyDown: e => e.key === 'Enter' && addSession(),
-                  className: 'flex-1 rounded border bg-transparent px-2 py-1 text-[0.8125rem] outline-none',
-                  style: { borderColor: 'var(--ui-stroke-secondary)' }
-                }),
                 jsx('button', {
                   type: 'button',
                   onClick: addSession,
-                  className: 'rounded border px-2 py-1 text-[0.8125rem] hover:bg-(--chrome-action-hover)',
+                  className:
+                    'flex w-full items-center justify-center gap-1 rounded border px-2 py-1 text-[0.8125rem] hover:bg-(--chrome-action-hover)',
                   style: { borderColor: 'var(--ui-stroke-secondary)' },
                   children: '+ Сессия'
                 })
