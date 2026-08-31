@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v19'
+const PLUGIN_VER = 'v20'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -771,18 +771,26 @@ function TasksPage() {
     try {
       haptic('tap')
       const name = String(title || '').trim()
-      // Пустая сессия НЕ пишется в БД до первого сообщения (это архитектура
-      // Hermes — _ensure_session_db_row вызывается из prompt.submit). Поэтому
-      // создавать её через session.create бессмысленно: она невидима ни в
-      // списке, ни в поиске, и переключиться на неё нельзя.
-      // Решение ровно как у родной кнопки «New session»: она переводит главное
-      // окно в пустой чат, а строка в списке появляется после первого сообщения.
-      // Запоминаем намерение «эта сессия принадлежит задаче taskId» в localStorage.
-      const btn = _findNewSessionButton()
-      if (btn) {
-        _fireClick(btn)
-      } else {
-        _pressCtrlN()
+      // Пустая сессия НЕ пишется в БД до первого сообщения (архитектура Hermes),
+      // поэтому «создать» её через session.create нельзя — она невидима.
+      // Родная кнопка «New session» (Ctrl+N) переводит в пустой новый чат, а
+      // строка появится в списке после первого сообщения. Дублируем её.
+      // Приоритет — хоткей Ctrl+N: он глобальный, доходит до приложения вернее,
+      // чем клик по DOM-элементу, найденному по тексту.
+      _pressCtrlN()
+      // подождать мгновение; если активная сессия не сменилась — кликнуть кнопку
+      let switched = false
+      const beforeActive = _activeSessionId()
+      for (let i = 0; i < 6; i++) {
+        await _wait(150)
+        if (_activeSessionId() && _activeSessionId() !== beforeActive) {
+          switched = true
+          break
+        }
+      }
+      if (!switched) {
+        const btn = _findNewSessionButton()
+        if (btn) _fireClick(btn)
       }
       // отложенная привязка: новая сессия из session.list (появится после
       // первого сообщения) будет привязана к этой задаче
@@ -790,10 +798,7 @@ function TasksPage() {
         ...store,
         pendingTie: { taskId, at: Date.now(), title: name }
       })
-      host.notify({
-        kind: 'info',
-        message: 'Новая сессия создана. Напишите первое сообщение — она появится в задаче'
-      })
+      host.notify({ kind: 'info', message: 'Новая сессия — напишите первое сообщение' })
     } catch (err) {
       const msg = err && err.message ? err.message : String(err)
       host.notify({ kind: 'error', message: 'Не удалось создать сессию: ' + msg })
