@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v25'
+const PLUGIN_VER = 'v26'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -762,10 +762,15 @@ function TasksPage() {
         .concat(store.projects || [])
         .reduce((acc, o) => acc.concat(o.sessions || []), [])
     )
+    // started_at приходит в СЕКУНДАХ, tie.at — в миллисекундах: нормализуем
+    const startedMs = s => {
+      const v = s.started_at || 0
+      return v < 1e12 ? v * 1000 : v
+    }
     const fresh = liveSessions
       .filter(s => !assigned.has(s.id))
-      .filter(s => (s.started_at || 0) >= (tie.at - 5 * 60 * 1000))
-      .sort((a, b) => (b.started_at || 0) - (a.started_at || 0))[0]
+      .filter(s => startedMs(s) >= tie.at - 30 * 60 * 1000)
+      .sort((a, b) => startedMs(b) - startedMs(a))[0]
     if (!fresh) return
     tieDone.current = true
     if (target.type === 'project') {
