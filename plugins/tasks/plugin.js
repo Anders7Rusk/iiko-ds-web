@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v23'
+const PLUGIN_VER = 'v24'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -604,7 +604,7 @@ function ProjectBlock(props) {
   })
 }
 
-function UnassignedBlock({ orphans, taskOptions, onMove, activeId, liveSet }) {
+function UnassignedBlock({ orphans, taskOptions, onMove, activeId, liveSet, onCreateUnassigned }) {
   return jsxs('div', {
     className: 'rounded-md border',
     style: { borderColor: 'var(--ui-stroke-secondary)' },
@@ -629,11 +629,27 @@ function UnassignedBlock({ orphans, taskOptions, onMove, activeId, liveSet }) {
           })
         ]
       }),
-      jsx('div', {
-        className: 'flex flex-col gap-0.5 px-2 pb-2 pt-1 pl-4',
-        children: orphans.map(s =>
-          jsx(SessionLine, { session: s, onMove, taskOptions, activeId, liveSet }, s.id)
-        )
+      jsxs('div', {
+        className: 'flex flex-col gap-1 px-2 pb-2 pt-1 pl-4',
+        children: [
+          jsx('button', {
+            type: 'button',
+            onClick: () => onCreateUnassigned(),
+            className:
+              'flex w-full items-center justify-center gap-1 rounded border px-2 py-1 text-[0.8125rem] hover:bg-(--chrome-action-hover)',
+            style: { borderColor: 'var(--ui-stroke-secondary)' },
+            children: '+ Сессия'
+          }),
+          orphans.map(s =>
+            jsx(SessionLine, { session: s, onMove, taskOptions, activeId, liveSet }, s.id)
+          ),
+          !orphans.length &&
+            jsx('div', {
+              className: 'px-1 pb-1 text-[0.75rem]',
+              style: { color: 'var(--ui-text-quaternary)' },
+              children: 'сессий не привязано'
+            })
+        ]
       })
     ]
   })
@@ -834,10 +850,12 @@ function TasksPage() {
       }
       // отложенная привязка: новая сессия из session.list (появится после
       // первого сообщения) будет привязана к задаче или проекту из target
-      persist({
-        ...store,
-        pendingTie: { target, at: Date.now(), title: name }
-      })
+      if (target && target.type !== 'none') {
+        persist({
+          ...store,
+          pendingTie: { target, at: Date.now(), title: name }
+        })
+      }
       host.notify({ kind: 'info', message: 'Новая сессия — напишите первое сообщение' })
     } catch (err) {
       const msg = err && err.message ? err.message : String(err)
@@ -994,9 +1012,14 @@ function TasksPage() {
               proj.key
             )
           ),
-          orphans.length
-            ? jsx(UnassignedBlock, { orphans, taskOptions, onMove: moveSession, activeId, liveSet })
-            : null
+          jsx(UnassignedBlock, {
+            orphans,
+            taskOptions,
+            onMove: moveSession,
+            activeId,
+            liveSet,
+            onCreateUnassigned: () => createSession({ type: 'none' }, '')
+          }),
         ]
       })
     ]
