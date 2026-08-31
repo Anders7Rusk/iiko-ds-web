@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v53'
+const PLUGIN_VER = 'v54'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1280,11 +1280,6 @@ function SessionTieChip() {
   }, [])
   // свежесть: если session.info давно не приходил, не показываем устаревший id
   const [tieStamp, setTieStamp] = useState(0)
-  const [tick, setTick] = useState(0)
-  useEffect(() => {
-    const t = setInterval(() => setTick(x => x + 1), 3000)
-    return () => clearInterval(t)
-  }, [])
   const evtKeyFresh = tieStamp && Date.now() - tieStamp < 8000 ? evtKey : null
 
   // Фолбэк: атом activeSessionId (внутренний sid) → active_list → session_key
