@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v62'
+const PLUGIN_VER = 'v63'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1207,129 +1207,6 @@ function _scrollChatToEnd() {
   return !!best
 }
 
-// Чип: к чему относится ОТКРЫТАЯ сейчас сессия.
-// Из исходника: сервер помечает строку `current:true` в session.active_list
-// только если ты передашь правильный внутренний sid в current_session_id.
-// Атом host.state.activeSessionId даёт этот внутренний sid — передаём его в
-// active_list и берём session_key помеченной строки. Никаких событий и
-// «самых свежих» — сервер сам говорит, какая сессия открыта.
-function SessionTieChip() {
-  const activeSid = useValue(host.state.activeSessionId)
-  const [key, setKey] = useState(null)
-  const [tick, setTick] = useState(0)
-
-  // active_list с current_session_id=атомSid: сервер вернёт строку с current:true
-  const liveActive = useQuery({
-    queryKey: ['tasks-plugin', 'chip', activeSid || ''],
-    queryFn: () =>
-      host.request('session.active_list', { current_session_id: activeSid || '' }),
-    refetchInterval: 1000
-  })
-
-  // перечитываем localStorage (привязки меняются на странице «Задачи»)
-  useEffect(() => {
-    const t = setInterval(() => setTick(x => x + 1), 3000)
-    return () => clearInterval(t)
-  }, [])
-
-  // при открытии/смене сессии доводим переписку до последнего сообщения
-  useEffect(() => {
-    let stop = false
-    let n = 0
-    const tryScroll = () => {
-      if (stop) return
-      _scrollChatToEnd()
-      n += 1
-      if (n < 12) setTimeout(tryScroll, 250)
-    }
-    tryScroll()
-    return () => {
-      stop = true
-    }
-  }, [key])
-
-  const rows = (liveActive.data && liveActive.data.sessions) || []
-  const marked = rows.find(s => s.current)
-  const nextKey = marked && isStoredId(marked.session_key) ? marked.session_key : null
-  // если current не поднялся, чистый фолбэк — строго по sid
-  const bySid = rows.find(s => s.id === activeSid)
-  const fallback = bySid && isStoredId(bySid.session_key) ? bySid.session_key : null
-  const resolved = nextKey || fallback || (isStoredId(activeSid) ? activeSid : null)
-  // синхронизируем внутренний state только при реальной смене
-  useEffect(() => {
-    if (resolved) setKey(resolved)
-  }, [resolved])
-
-  // АВТОПРИВЯЗКА: «+ Сессия» записала намерение (pendingTie). Как только
-  // открытая сессия определилась и её ещё не было в списке на момент нажатия —
-  // привязываем её к той задаче/проекту, где нажали.
-  useEffect(() => {
-    if (!key) return
-    const cur = readStore()
-    const tie = cur.pendingTie
-    if (!tie || !tie.target) return
-    const known = new Set(tie.known || [])
-    if (known.has(key)) return // это старая сессия, не та, что создали
-    const already =
-      (cur.tasks || []).some(t => (t.sessions || []).includes(key)) ||
-      (cur.projects || []).some(p => (p.sessions || []).includes(key))
-    if (already) {
-      writeStore({ ...cur, pendingTie: null })
-      return
-    }
-    const target = tie.target
-    const next =
-      target.type === 'project'
-        ? {
-            ...cur,
-            pendingTie: null,
-            projects: (cur.projects || []).map(p =>
-              p.id === target.id ? { ...p, sessions: [key].concat(p.sessions || []) } : p
-            )
-          }
-        : {
-            ...cur,
-            pendingTie: null,
-            tasks: (cur.tasks || []).map(t =>
-              t.id === target.id ? { ...t, sessions: [key].concat(t.sessions || []) } : t
-            )
-          }
-    writeStore(next)
-    setTick(x => x + 1)
-  }, [key])
-
-  const label = useMemo(() => {
-    if (!key) return 'без задачи'
-    const store = readStore()
-    const task = (store.tasks || []).find(t => (t.sessions || []).includes(key))
-    if (task) {
-      const proj = (store.projects || []).find(p => p.id === task.projectId)
-      return (proj ? proj.name + ' / ' : '') + task.name
-    }
-    const proj = (store.projects || []).find(p => (p.sessions || []).includes(key))
-    if (proj) return proj.name
-    return 'без задачи'
-  }, [key, tick])
-
-  return jsxs('div', {
-    className: 'flex h-full w-full items-center gap-1.5 px-2 text-[0.75rem]',
-    children: [
-      jsx('span', {
-        style: { color: 'var(--ui-text-quaternary)' },
-        children: 'Задача:'
-      }),
-      jsx('button', {
-        type: 'button',
-        onClick: () => host.navigate(ROUTE),
-        title: 'открыть «Задачи»',
-        className: 'min-w-0 flex-1 truncate text-left hover:underline',
-        style: { color: 'var(--ui-text-secondary)' },
-        children: label
-      })
-    ]
-  })
-}
-
 export default {
   id: ID,
   name: 'Задачи',
@@ -1344,27 +1221,6 @@ export default {
       id: 'nav',
       area: SIDEBAR_NAV_AREA,
       data: { path: ROUTE, label: 'Задачи', codicon: 'checklist' }
-    })
-    ctx.register({
-      id: 'tie-pane',
-      area: 'panes',
-      title: 'Задача сессии',
-      data: {
-        placement: 'main',
-        dock: { pane: 'workspace', pos: 'top' },
-        height: '34px'
-      },
-      render: () => jsx(SessionTieChip, {})
-    })
-    ctx.register({
-      id: 'status',
-      area: 'statusBar.right',
-      render: () => jsx(SessionTieChip, {})
-    })
-    ctx.register({
-      id: 'status-left',
-      area: 'statusBar.left',
-      render: () => jsx(SessionTieChip, {})
     })
     ctx.register({
       id: 'palette',
