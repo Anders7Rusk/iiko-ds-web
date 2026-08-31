@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v57'
+const PLUGIN_VER = 'v58'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1244,13 +1244,44 @@ function SessionTieChip() {
 
   const rows = (liveActive.data && liveActive.data.sessions) || []
   const sid = activeSid
-  // открытая сессия = атом activeSessionId → active_list даёт её session_key.
-  // fromFreshest убран полностью: «самая свежая живая» — это другая сессия,
-  // которая просто была недавно активной, и она подставляла чужую привязку.
   const row = rows.find(s => s.id === sid)
   const fromRow = row && isStoredId(row.session_key) ? row.session_key : null
 
-  const key = fromRow || (isStoredId(sid) ? sid : null)
+  // Атом в desktop указывает на РАБОЧУЮ сессию, а не на открытую в окне
+  // (подтверждено: sid=4a9b85b5 отсутствует в живых). Открытую в окне находим
+  // по подсвеченной строке сайдбара: у неё непрозрачный фон, текст совпадает
+  // с одной из живых сессий — берём её сохранённый session_key.
+  const fromHighlight = useMemo(() => {
+    if (fromRow) return null
+    const live = rows.filter(s => isStoredId(s.session_key))
+    if (!live.length) return null
+    let hit = null
+    try {
+      const nodes = document.querySelectorAll('a, li, div, button, [role="option"]')
+      for (const el of nodes) {
+        if (el.closest && el.closest('[data-tasks-plugin]')) continue
+        const txt = _norm(el.textContent)
+        if (txt.length < 6 || txt.length > 120) continue
+        const bg = getComputedStyle(el).backgroundColor || ''
+        const m = bg.match(/rgba?\(([^)]+)\)/)
+        if (!m) continue
+        const parts = m[1].split(',').map(x => parseFloat(x.trim()))
+        const alpha = parts.length > 3 ? parts[3] : 1
+        if (alpha <= 0.06) continue
+        // ищем живую сессию, чьё название совпадает с текстом строки
+        const match = live.find(s => _looksSame(s.title || s.preview || '', txt))
+        if (match) {
+          hit = match.session_key
+          break
+        }
+      }
+    } catch (e) {
+      hit = null
+    }
+    return hit
+  }, [liveActive.data, fromRow, tick])
+
+  const key = fromHighlight || fromRow || (isStoredId(sid) ? sid : null)
 
   // АВТОПРИВЯЗКА: «+ Сессия» записала намерение (pendingTie). Как только
   // открытая сессия определилась и её ещё не было в списке на момент нажатия —
@@ -1295,7 +1326,7 @@ function SessionTieChip() {
   const label = useMemo(() => {
     if (!key) {
       const n = rows.length
-      return 'не определено (sid=' + (sid || '—') + ', живых=' + n + ')'
+      return 'не определено (sid=' + String(sid || '—') + ', живых=' + n + ')'
     }
     const store = readStore()
     const task = (store.tasks || []).find(t => (t.sessions || []).includes(key))
@@ -1305,7 +1336,7 @@ function SessionTieChip() {
     }
     const proj = (store.projects || []).find(p => (p.sessions || []).includes(key))
     if (proj) return proj.name
-    return 'без задачи'
+    return 'без задачи (' + key + ')'
   }, [key, tick, sid, rows.length])
 
 
