@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v43'
+const PLUGIN_VER = 'v45'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1209,9 +1209,9 @@ function _scrollChatToEnd() {
 function SessionTieChip() {
   const activeSid = useValue(host.state.activeSessionId)
   const liveActive = useQuery({
-    queryKey: ['tasks-plugin', 'chip', activeSid || ''],
-    queryFn: () => host.request('session.active_list', { current_session_id: activeSid || '' }),
-    refetchInterval: 5000
+    queryKey: ['tasks-plugin', 'chip'],
+    queryFn: () => host.request('session.active_list', {}),
+    refetchInterval: 3000
   })
   // перечитываем localStorage (привязки меняются на странице «Задачи»)
   const [tick, setTick] = useState(0)
@@ -1260,10 +1260,12 @@ function SessionTieChip() {
     }
   }, [])
 
-  const sid = activeSid || evtSid
+  const sid = evtSid || activeSid
   const rows = (liveActive.data && liveActive.data.sessions) || []
   const row = rows.find(s => s.id === sid) || rows.find(s => s.current)
   const fromRow = row && isStoredId(row.session_key) ? row.session_key : null
+
+
   const key = fromRow || (isStoredId(sid) ? sid : null)
 
   // АВТОПРИВЯЗКА: «+ Сессия» записала намерение (pendingTie). Как только
@@ -1334,7 +1336,11 @@ function SessionTieChip() {
       jsx('button', {
         type: 'button',
         onClick: () => host.navigate(ROUTE),
-        title: 'открыть «Задачи»',
+        title:
+          'открыть «Задачи» · сессия=' +
+          (key || '—') +
+          ' · источник=' +
+          (fromRow ? 'active_list' : isStoredId(sid) ? 'атом' : 'нет'),
         className: 'min-w-0 flex-1 truncate text-left hover:underline',
         style: { color: 'var(--ui-text-secondary)' },
         children: label
