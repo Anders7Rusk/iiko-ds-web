@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v49'
+const PLUGIN_VER = 'v50'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1240,63 +1240,24 @@ function SessionTieChip() {
   // 1) атом activeSessionId (внутренний sid) или sid из событий гейтвея;
   // 2) active_list переводит этот sid в сохранённый id (session_key).
   // Никакого поиска «подсвеченной строки» в DOM — он мог схватить чужую сессию.
-  const [evtSid, setEvtSid] = useState(null)
-  useEffect(() => {
-    let off = null
-    try {
-      off = host.onEvent('*', ev => {
-        const sid = ev && (ev.session_id || (ev.params && ev.params.session_id))
-        if (sid) setEvtSid(String(sid))
-      })
-    } catch (e) {
-      off = null
-    }
-    return () => {
-      try {
-        if (typeof off === 'function') off()
-      } catch (e) {
-        /* ignore */
-      }
-    }
-  }, [])
 
   // Официальный источник открытой сессии — атом host.state.activeSessionId
   // (референс SDK). Он отдаёт ВНУТРЕННИЙ id; active_list переводит его в
   // сохранённый (session_key), по которому хранятся привязки.
   // События — только подстраховка, когда атом пуст: они приходят и от других
   // (фоновых) сессий, поэтому приоритет у атома.
-  // СОБЫТИЕ session.info приходит именно по ОТКРЫТОЙ сессии и несёт её
-  // сохранённый session_key — точный id, по которому хранятся привязки.
-  // Это самый надёжный источник: без преобразований и без риска взять фоновую.
-  const [evtKey, setEvtKey] = useState(null)
-  useEffect(() => {
-    let off = null
-    try {
-      off = host.onEvent('*', ev => {
-        if (!ev || ev.type !== 'session.info') return
-        const key =
-          ev.payload && (ev.payload.session_key || ev.payload.stored_session_id || ev.payload.id)
-        if (key && isStoredId(key)) setEvtKey(key)
-      })
-    } catch (e) {
-      off = null
-    }
-    return () => {
-      try {
-        if (typeof off === 'function') off()
-      } catch (e) {
-        /* ignore */
-      }
-    }
-  }, [])
-
-  const sid = activeSid || evtSid
+  // Источник открытой сессии — атом host.state.activeSessionId (единственный
+  // официальный источник «что сейчас открыто»). session.info НЕ используем как
+  // источник: оно шлётся ТОЛЬКО при завершении работы агента, а при простом
+  // открытии для просмотра не приходит — из-за него подпись залипала на
+  // последней РАБОЧЕЙ сессии, а не на открытой.
+  const sid = activeSid
   const rows = (liveActive.data && liveActive.data.sessions) || []
   // строго по нашему sid: без фолбэка на «current», который подставлял чужую сессию
   const row = rows.find(s => s.id === sid)
   const fromRow = row && isStoredId(row.session_key) ? row.session_key : null
 
-  const key = evtKey || fromRow || (isStoredId(sid) ? sid : null)
+  const key = fromRow || (isStoredId(sid) ? sid : null)
 
   // АВТОПРИВЯЗКА: «+ Сессия» записала намерение (pendingTie). Как только
   // открытая сессия определилась и её ещё не было в списке на момент нажатия —
