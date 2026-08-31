@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v54'
+const PLUGIN_VER = 'v55'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1207,8 +1207,11 @@ function _scrollChatToEnd() {
   return !!best
 }
 
-// Чип в статусбаре: к чему относится ОТКРЫТАЯ сейчас сессия.
-// «Проект / Задача», либо просто «Проект», если задачи нет.
+// Чип: к чему относится ОТКРЫТАЯ сейчас сессия.
+// Источник — атом host.state.activeSessionId (внутренний sid) → active_list
+// даёт session_key (сохранённый id). Если атом не обновился при переключении
+// (это бывает), берём самую свежую живую сессию по last_active — её клиент
+// непрерывно обновляет у открытой. Опрос активного списка раз в 1 сек.
 function SessionTieChip() {
   const activeSid = useValue(host.state.activeSessionId)
   const liveActive = useQuery({
@@ -1239,56 +1242,21 @@ function SessionTieChip() {
     }
   }, [activeSid])
 
-  // Открытую сессию определяем ТОЛЬКО надёжно:
-  // 1) атом activeSessionId (внутренний sid) или sid из событий гейтвея;
-  // 2) active_list переводит этот sid в сохранённый id (session_key).
-  // Никакого поиска «подсвеченной строки» в DOM — он мог схватить чужую сессию.
-
-  // Официальный источник открытой сессии — атом host.state.activeSessionId
-  // (референс SDK). Он отдаёт ВНУТРЕННИЙ id; active_list переводит его в
-  // сохранённый (session_key), по которому хранятся привязки.
-  // События — только подстраховка, когда атом пуст: они приходят и от других
-  // (фоновых) сессий, поэтому приоритет у атома.
-  // ГЛАВНЫЙ источник открытой сессии — событие session.info. Сервер шлёт его
-  // именно для АКТИВНОЙ сессии (focus-bound by construction) и кладёт в payload
-  // готовый session_key (сохранённый id) — без внутренней→сохранённой
-  // перекодировки, поэтому ошибиться сессией здесь нельзя.
-  const [evtKey, setEvtKey] = useState(null)
-  useEffect(() => {
-    let off = null
-    const stamp = () => setTieStamp(Date.now())
-    try {
-      off = host.onEvent('*', ev => {
-        if (!ev || ev.type !== 'session.info') return
-        const p = ev.payload || {}
-        const k = p.session_key || p.stored_session_id || p.id || ev.session_key || ev.session_id
-        if (k && isStoredId(k)) {
-          setEvtKey(k)
-          stamp()
-        }
-      })
-    } catch (e) {
-      off = null
-    }
-    return () => {
-      try {
-        if (typeof off === 'function') off()
-      } catch (e) {
-        /* ignore */
-      }
-    }
-  }, [])
-  // свежесть: если session.info давно не приходил, не показываем устаревший id
-  const [tieStamp, setTieStamp] = useState(0)
-  const evtKeyFresh = tieStamp && Date.now() - tieStamp < 8000 ? evtKey : null
-
-  // Фолбэк: атом activeSessionId (внутренний sid) → active_list → session_key
-  const sid = activeSid
   const rows = (liveActive.data && liveActive.data.sessions) || []
+  const sid = activeSid
   const row = rows.find(s => s.id === sid)
   const fromRow = row && isStoredId(row.session_key) ? row.session_key : null
+  // атом залип при переключении → самая свежая живая (last_active растёт у открытой)
+  const fromFreshest = useMemo(() => {
+    if (fromRow) return null
+    const live = rows.filter(s => isStoredId(s.session_key))
+    if (!live.length) return null
+    const ms = v => (!v ? 0 : v < 1e12 ? v * 1000 : v)
+    const sorted = live.slice().sort((a, b) => ms(b.last_active) - ms(a.last_active))
+    return sorted[0].session_key
+  }, [liveActive.data, fromRow])
 
-  const key = evtKeyFresh || fromRow || (isStoredId(sid) ? sid : null)
+  const key = fromRow || fromFreshest || (isStoredId(sid) ? sid : null)
 
   // АВТОПРИВЯЗКА: «+ Сессия» записала намерение (pendingTie). Как только
   // открытая сессия определилась и её ещё не было в списке на момент нажатия —
