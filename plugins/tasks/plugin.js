@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v61'
+const PLUGIN_VER = 'v62'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1208,41 +1208,23 @@ function _scrollChatToEnd() {
 }
 
 // Чип: к чему относится ОТКРЫТАЯ сейчас сессия.
-// Единственный источник «какая сессия открыта» — событие session.info:
-// клиент шлёт его при каждом открытии сессии, внутри готовый session_key
-// (сохранённый id, тот же, по которому хранятся привязки в localStorage).
-// Ничего не перекодируем, ничего не угадываем. Пока событие не пришло —
-// показываем «без задачи».
+// Из исходника: сервер помечает строку `current:true` в session.active_list
+// только если ты передашь правильный внутренний sid в current_session_id.
+// Атом host.state.activeSessionId даёт этот внутренний sid — передаём его в
+// active_list и берём session_key помеченной строки. Никаких событий и
+// «самых свежих» — сервер сам говорит, какая сессия открыта.
 function SessionTieChip() {
+  const activeSid = useValue(host.state.activeSessionId)
   const [key, setKey] = useState(null)
-  const [lastInfo, setLastInfo] = useState('')
-  const [infoCount, setInfoCount] = useState(0)
   const [tick, setTick] = useState(0)
 
-  // session.info — focus-bound: приходит для открытой сессии, несёт stored_session_id.
-  // Подписываемся на КОНКРЕТНОЕ имя (как это делает сам клиент в бандле:
-  // `l.on('session.info', ...)`), а не на '*' — wildcard может не доставлять события.
-  useEffect(() => {
-    let off = null
-    try {
-      off = host.onEvent('session.info', ev => {
-        const p = (ev && ev.payload) || {}
-        const k = p.stored_session_id || p.session_key || p.id
-        setInfoCount(x => x + 1)
-        setLastInfo(k ? '(' + String(k).slice(0, 18) + ')' : '(пусто/тип=' + typeof k + ')')
-        if (k && isStoredId(k)) setKey(k)
-      })
-    } catch (e) {
-      off = null
-    }
-    return () => {
-      try {
-        if (typeof off === 'function') off()
-      } catch (e) {
-        /* ignore */
-      }
-    }
-  }, [])
+  // active_list с current_session_id=атомSid: сервер вернёт строку с current:true
+  const liveActive = useQuery({
+    queryKey: ['tasks-plugin', 'chip', activeSid || ''],
+    queryFn: () =>
+      host.request('session.active_list', { current_session_id: activeSid || '' }),
+    refetchInterval: 1000
+  })
 
   // перечитываем localStorage (привязки меняются на странице «Задачи»)
   useEffect(() => {
@@ -1265,6 +1247,18 @@ function SessionTieChip() {
       stop = true
     }
   }, [key])
+
+  const rows = (liveActive.data && liveActive.data.sessions) || []
+  const marked = rows.find(s => s.current)
+  const nextKey = marked && isStoredId(marked.session_key) ? marked.session_key : null
+  // если current не поднялся, чистый фолбэк — строго по sid
+  const bySid = rows.find(s => s.id === activeSid)
+  const fallback = bySid && isStoredId(bySid.session_key) ? bySid.session_key : null
+  const resolved = nextKey || fallback || (isStoredId(activeSid) ? activeSid : null)
+  // синхронизируем внутренний state только при реальной смене
+  useEffect(() => {
+    if (resolved) setKey(resolved)
+  }, [resolved])
 
   // АВТОПРИВЯЗКА: «+ Сессия» записала намерение (pendingTie). Как только
   // открытая сессия определилась и её ещё не было в списке на момент нажатия —
@@ -1305,9 +1299,7 @@ function SessionTieChip() {
   }, [key])
 
   const label = useMemo(() => {
-    if (!key) {
-      return 'без задачи (событий:' + infoCount + (lastInfo ? ', ' + lastInfo : '') + ')'
-    }
+    if (!key) return 'без задачи'
     const store = readStore()
     const task = (store.tasks || []).find(t => (t.sessions || []).includes(key))
     if (task) {
@@ -1317,7 +1309,7 @@ function SessionTieChip() {
     const proj = (store.projects || []).find(p => (p.sessions || []).includes(key))
     if (proj) return proj.name
     return 'без задачи'
-  }, [key, tick, infoCount, lastInfo])
+  }, [key, tick])
 
   return jsxs('div', {
     className: 'flex h-full w-full items-center gap-1.5 px-2 text-[0.75rem]',
