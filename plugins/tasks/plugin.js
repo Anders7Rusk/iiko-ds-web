@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v26'
+const PLUGIN_VER = 'v27'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -422,7 +422,7 @@ function TaskBlock(props) {
           style: { borderColor: 'var(--ui-stroke-secondary)' },
           children: [
             jsxs('div', {
-              className: 'mb-1 flex items-center gap-1.5',
+              className: 'mb-1 flex items-center justify-end gap-1.5',
               children: [
                 jsx('button', {
                   type: 'button',
@@ -529,20 +529,13 @@ function ProjectBlock(props) {
         jsxs('div', {
           className: 'flex flex-col gap-1 px-2 pb-2 pt-1.5 pl-4',
           children: [
-            // компактная строка действий: маленькие кнопки в одну линию
+            // компактная строка действий: кнопки справа, сначала задача, потом сессия
             jsxs('div', {
-              className: 'flex items-center gap-1.5',
+              className: 'flex items-center justify-end gap-1.5',
               children: [
-                jsx('button', {
-                  type: 'button',
-                  onClick: addProjectSession,
-                  className: 'rounded border px-2 py-0.5 text-[0.75rem] hover:bg-(--chrome-action-hover)',
-                  style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-text-tertiary)' },
-                  children: '+ Сессия'
-                }),
                 showTaskInput
                   ? jsxs('div', {
-                      className: 'flex flex-1 items-center gap-1.5',
+                      className: 'flex w-1/2 items-center gap-1.5',
                       children: [
                         jsx('input', {
                           value: newTask,
@@ -577,7 +570,14 @@ function ProjectBlock(props) {
                       className: 'rounded border px-2 py-0.5 text-[0.75rem] hover:bg-(--chrome-action-hover)',
                       style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-text-tertiary)' },
                       children: '+ Задача'
-                    })
+                    }),
+                jsx('button', {
+                  type: 'button',
+                  onClick: addProjectSession,
+                  className: 'rounded border px-2 py-0.5 text-[0.75rem] hover:bg-(--chrome-action-hover)',
+                  style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-text-tertiary)' },
+                  children: '+ Сессия'
+                })
               ]
             }),
             projectOwnSessions.length
@@ -649,7 +649,7 @@ function UnassignedBlock({ orphans, taskOptions, onMove, activeId, liveSet, onCr
           jsx('button', {
             type: 'button',
             onClick: () => onCreateUnassigned(),
-            className: 'self-start rounded border px-2 py-0.5 text-[0.75rem] hover:bg-(--chrome-action-hover)',
+            className: 'self-end rounded border px-2 py-0.5 text-[0.75rem] hover:bg-(--chrome-action-hover)',
             style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-text-tertiary)' },
             children: '+ Сессия'
           }),
