@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v34'
+const PLUGIN_VER = 'v35'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -910,37 +910,30 @@ function TasksPage() {
           }
         })
       }
-      const beforeActive = _activeSessionId()
+      // Снимок ЖИВЫХ сессий до нажатия: новая сессия — та, чей session_key
+      // появится в active_list после. Это не зависит от activeSessionId,
+      // который при Ctrl+N может не смениться (тогда привязывалась текущая).
+      const beforeKeys = await _liveIds()
       // Пустая сессия не пишется в БД до первого сообщения — родная «New session»
       // (Ctrl+N) переводит в пустой чат, дублируем её.
       _pressCtrlN()
-      let activeSid = null
-      for (let i = 0; i < 14; i++) {
-        await _wait(150)
-        const cur = _activeSessionId()
-        if (cur && cur !== beforeActive) {
-          activeSid = cur
-          break
-        }
-        if (i === 5) {
+      let key = null
+      for (let i = 0; i < 20 && !key; i++) {
+        await _wait(200)
+        if (i === 4) {
           const btn = _findNewSessionButton()
           if (btn) _fireClick(btn)
         }
+        const nowKeys = await _liveIds()
+        const fresh = nowKeys.find(k => !beforeKeys.includes(k))
+        if (fresh) key = fresh
       }
-      if (!isTie || !activeSid) return
-      // Новая сессия уже ЖИВАЯ (в памяти гейтвея), поэтому active_list знает её
-      // сохранённый id (session_key) ещё до первого сообщения — привязываем сразу.
-      let key = null
-      for (let i = 0; i < 10 && !key; i++) {
-        const res = await host.request('session.active_list', {
-          current_session_id: activeSid
-        }).catch(() => null)
-        const rows = (res && res.sessions) || []
-        const row = rows.find(s => s.id === activeSid) || rows.find(s => s.current)
-        if (row && (row.session_key || row.id)) key = row.session_key || row.id
-        if (!key) await _wait(200)
+      if (!isTie) return
+      if (!key) {
+        // не смогли определить новую сессию — остаётся отложенная привязка
+        // (pendingTie сработает, когда сессия появится в session.list)
+        return
       }
-      if (!key) return
       const cur = readStore()
       const next =
         target.type === 'project'
