@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v55'
+const PLUGIN_VER = 'v56'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1244,19 +1244,13 @@ function SessionTieChip() {
 
   const rows = (liveActive.data && liveActive.data.sessions) || []
   const sid = activeSid
+  // открытая сессия = атом activeSessionId → active_list даёт её session_key.
+  // fromFreshest убран полностью: «самая свежая живая» — это другая сессия,
+  // которая просто была недавно активной, и она подставляла чужую привязку.
   const row = rows.find(s => s.id === sid)
   const fromRow = row && isStoredId(row.session_key) ? row.session_key : null
-  // атом залип при переключении → самая свежая живая (last_active растёт у открытой)
-  const fromFreshest = useMemo(() => {
-    if (fromRow) return null
-    const live = rows.filter(s => isStoredId(s.session_key))
-    if (!live.length) return null
-    const ms = v => (!v ? 0 : v < 1e12 ? v * 1000 : v)
-    const sorted = live.slice().sort((a, b) => ms(b.last_active) - ms(a.last_active))
-    return sorted[0].session_key
-  }, [liveActive.data, fromRow])
 
-  const key = fromRow || fromFreshest || (isStoredId(sid) ? sid : null)
+  const key = fromRow || (isStoredId(sid) ? sid : null)
 
   // АВТОПРИВЯЗКА: «+ Сессия» записала намерение (pendingTie). Как только
   // открытая сессия определилась и её ещё не было в списке на момент нажатия —
