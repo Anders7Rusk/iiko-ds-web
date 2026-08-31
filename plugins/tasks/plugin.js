@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v29'
+const PLUGIN_VER = 'v30'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -668,6 +668,39 @@ function UnassignedBlock({ orphans, taskOptions, onMove, activeId, liveSet, onCr
   })
 }
 
+// Прямая работа с localStorage — не зависит от жизненного цикла компонента:
+// после Ctrl+N страница «Задачи» размонтируется, а привязку записать нужно.
+function readStore() {
+  try {
+    const raw = window.localStorage.getItem(STORE_KEY)
+    if (!raw) return { version: 2, projects: [], tasks: [], pendingTie: null }
+    const p = JSON.parse(raw)
+    return {
+      version: 2,
+      projects: p.projects || [],
+      tasks: p.tasks || [],
+      pendingTie: p.pendingTie || null
+    }
+  } catch (e) {
+    return { version: 2, projects: [], tasks: [], pendingTie: null }
+  }
+}
+
+function writeStore(next) {
+  try {
+    window.localStorage.setItem(
+      STORE_KEY,
+      JSON.stringify({
+        projects: next.projects,
+        tasks: next.tasks,
+        pendingTie: next.pendingTie || null
+      })
+    )
+  } catch (e) {
+    /* ignore */
+  }
+}
+
 function TasksPage() {
   const [store, setStore] = useState(null)
   const [expanded, setExpanded] = useState({})
@@ -848,10 +881,10 @@ function TasksPage() {
     try {
       haptic('tap')
       const name = String(title || '').trim()
-      // ВАЖНО: сохраняем намерение ДО перехода — нажатие Ctrl+N уводит на новый
-      // чат и размонтирует эту страницу, после чего persist уже не выполнится.
-      // Снимок известных id: новой будет та сессия, которой сейчас НЕТ в списке.
-      if (target && target.type !== 'none') {
+      const isTie = target && target.type !== 'none'
+      // Страховка на случай, если id новой сессии определить не удастся:
+      // намерение пишем ДО перехода (Ctrl+N размонтирует эту страницу).
+      if (isTie) {
         persist({
           ...store,
           pendingTie: {
@@ -862,23 +895,60 @@ function TasksPage() {
           }
         })
       }
-      // Пустая сессия НЕ пишется в БД до первого сообщения (архитектура Hermes),
-      // поэтому session.create не даёт видимой сессии. Родная кнопка «New session»
-      // (Ctrl+N) переводит в пустой новый чат — дублируем её.
-      _pressCtrlN()
-      let switched = false
       const beforeActive = _activeSessionId()
-      for (let i = 0; i < 6; i++) {
+      // Пустая сессия не пишется в БД до первого сообщения — родная «New session»
+      // (Ctrl+N) переводит в пустой чат, дублируем её.
+      _pressCtrlN()
+      let activeSid = null
+      for (let i = 0; i < 14; i++) {
         await _wait(150)
-        if (_activeSessionId() && _activeSessionId() !== beforeActive) {
-          switched = true
+        const cur = _activeSessionId()
+        if (cur && cur !== beforeActive) {
+          activeSid = cur
           break
         }
+        if (i === 5) {
+          const btn = _findNewSessionButton()
+          if (btn) _fireClick(btn)
+        }
       }
-      if (!switched) {
-        const btn = _findNewSessionButton()
-        if (btn) _fireClick(btn)
+      if (!isTie || !activeSid) return
+      // Новая сессия уже ЖИВАЯ (в памяти гейтвея), поэтому active_list знает её
+      // сохранённый id (session_key) ещё до первого сообщения — привязываем сразу.
+      let key = null
+      for (let i = 0; i < 10 && !key; i++) {
+        const res = await host.request('session.active_list', {
+          current_session_id: activeSid
+        }).catch(() => null)
+        const rows = (res && res.sessions) || []
+        const row = rows.find(s => s.id === activeSid) || rows.find(s => s.current)
+        if (row && (row.session_key || row.id)) key = row.session_key || row.id
+        if (!key) await _wait(200)
       }
+      if (!key) return
+      const cur = readStore()
+      const next =
+        target.type === 'project'
+          ? {
+              ...cur,
+              pendingTie: null,
+              projects: (cur.projects || []).map(p =>
+                p.id === target.id
+                  ? { ...p, sessions: [key].concat((p.sessions || []).filter(x => x !== key)) }
+                  : p
+              )
+            }
+          : {
+              ...cur,
+              pendingTie: null,
+              tasks: (cur.tasks || []).map(t =>
+                t.id === target.id
+                  ? { ...t, sessions: [key].concat((t.sessions || []).filter(x => x !== key)) }
+                  : t
+              )
+            }
+      writeStore(next)
+      setStore(next)
     } catch (err) {
       const msg = err && err.message ? err.message : String(err)
       host.notify({ kind: 'error', message: 'Не удалось создать сессию: ' + msg })
