@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v59'
+const PLUGIN_VER = 'v60'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1215,16 +1215,20 @@ function _scrollChatToEnd() {
 // показываем «без задачи».
 function SessionTieChip() {
   const [key, setKey] = useState(null)
+  const [lastInfo, setLastInfo] = useState('')
+  const [infoCount, setInfoCount] = useState(0)
   const [tick, setTick] = useState(0)
 
-  // session.info — focus-bound: приходит для открытой сессии, несёт session_key
+  // session.info — focus-bound: приходит для открытой сессии, несёт stored_session_id
   useEffect(() => {
     let off = null
     try {
       off = host.onEvent('*', ev => {
         if (!ev || ev.type !== 'session.info') return
         const p = ev.payload || {}
-        const k = p.session_key || p.stored_session_id || p.id
+        const k = p.stored_session_id || p.session_key || p.id
+        setInfoCount(x => x + 1)
+        setLastInfo(k ? '(' + (k || '').slice(0, 18) + ')' : '(пусто/тип=' + typeof k + ')')
         if (k && isStoredId(k)) setKey(k)
       })
     } catch (e) {
@@ -1300,7 +1304,9 @@ function SessionTieChip() {
   }, [key])
 
   const label = useMemo(() => {
-    if (!key) return 'без задачи'
+    if (!key) {
+      return 'без задачи (событий:' + infoCount + (lastInfo ? ', ' + lastInfo : '') + ')'
+    }
     const store = readStore()
     const task = (store.tasks || []).find(t => (t.sessions || []).includes(key))
     if (task) {
@@ -1310,7 +1316,7 @@ function SessionTieChip() {
     const proj = (store.projects || []).find(p => (p.sessions || []).includes(key))
     if (proj) return proj.name
     return 'без задачи'
-  }, [key, tick])
+  }, [key, tick, infoCount, lastInfo])
 
   return jsxs('div', {
     className: 'flex h-full w-full items-center gap-1.5 px-2 text-[0.75rem]',
