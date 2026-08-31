@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v39'
+const PLUGIN_VER = 'v40'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1250,9 +1250,27 @@ function SessionTieChip() {
   })
   const fromDom = useMemo(() => {
     if (fromRow || isStoredId(activeSid)) return null
+    // ищем выделенную строку сессии: клиент помечает её aria-current,
+    // либо выделяет классами (bg-primary / border-primary / aria-selected)
     let el = null
     try {
-      el = document.querySelector('[aria-current="true"]')
+      el =
+        document.querySelector('[aria-current="true"]') ||
+        document.querySelector('[aria-current="page"]') ||
+        document.querySelector('[aria-selected="true"]')
+      if (!el) {
+        const cands = document.querySelectorAll('a, li, div, button')
+        for (const n of cands) {
+          if (n.closest && n.closest('[data-tasks-plugin]')) continue
+          const cls = String(n.className || '')
+          if (!/bg-primary|border-primary|is-active|selected/.test(cls)) continue
+          const txt = _norm(n.textContent)
+          if (txt.length >= 6 && txt.length <= 160) {
+            el = n
+            break
+          }
+        }
+      }
     } catch (e) {
       el = null
     }
@@ -1267,7 +1285,11 @@ function SessionTieChip() {
   const key = fromRow || (isStoredId(activeSid) ? activeSid : null) || fromDom
 
   const label = useMemo(() => {
-    if (!key) return 'сессия не определена'
+    if (!key) {
+      // техинфо, чтобы сразу видеть, чего не хватает (без догадок)
+      const n = rows.length
+      return 'не определено (sid=' + (activeSid || '—') + ', живых=' + n + ')'
+    }
     const store = readStore()
     const task = (store.tasks || []).find(t => (t.sessions || []).includes(key))
     if (task) {
@@ -1276,7 +1298,7 @@ function SessionTieChip() {
     }
     const proj = (store.projects || []).find(p => (p.sessions || []).includes(key))
     return proj ? proj.name : 'без задачи'
-  }, [key, tick])
+  }, [key, tick, activeSid, rows.length])
   return jsxs('div', {
     className: 'flex h-full w-full items-center gap-1.5 px-2 text-[0.75rem]',
     children: [
