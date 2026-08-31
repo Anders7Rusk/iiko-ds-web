@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v52'
+const PLUGIN_VER = 'v53'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1186,20 +1186,18 @@ function TasksPage() {
 function _scrollChatToEnd() {
   let best = null
   let bestArea = 0
-  const winW = window.innerWidth || 0
   const nodes = document.querySelectorAll('div, section, main, ul')
   for (const el of nodes) {
     if (el.closest && el.closest('[data-tasks-plugin]')) continue
+    const r = el.getBoundingClientRect()
+    // сайдбар/левая навигация — не трогаем: они слева (left < 350px)
+    if (r.left < 350) continue
     const sh = el.scrollHeight || 0
     const ch = el.clientHeight || 0
     if (sh - ch < 200 || ch < 200) continue
     const st = getComputedStyle(el).overflowY
     if (st !== 'auto' && st !== 'scroll') continue
-    const w = el.clientWidth || 0
-    // лента чата — широкая; сайдбар (узкий список сессий) не трогаем,
-    // иначе прокрутка уходит в него вниз вместо конца переписки
-    if (w < winW * 0.55) continue
-    const area = ch * w
+    const area = ch * (el.clientWidth || 0)
     if (area > bestArea) {
       best = el
       bestArea = area
@@ -1258,12 +1256,16 @@ function SessionTieChip() {
   const [evtKey, setEvtKey] = useState(null)
   useEffect(() => {
     let off = null
+    const stamp = () => setTieStamp(Date.now())
     try {
       off = host.onEvent('*', ev => {
         if (!ev || ev.type !== 'session.info') return
         const p = ev.payload || {}
         const k = p.session_key || p.stored_session_id || p.id || ev.session_key || ev.session_id
-        if (k && isStoredId(k)) setEvtKey(k)
+        if (k && isStoredId(k)) {
+          setEvtKey(k)
+          stamp()
+        }
       })
     } catch (e) {
       off = null
@@ -1276,6 +1278,14 @@ function SessionTieChip() {
       }
     }
   }, [])
+  // свежесть: если session.info давно не приходил, не показываем устаревший id
+  const [tieStamp, setTieStamp] = useState(0)
+  const [tick, setTick] = useState(0)
+  useEffect(() => {
+    const t = setInterval(() => setTick(x => x + 1), 3000)
+    return () => clearInterval(t)
+  }, [])
+  const evtKeyFresh = tieStamp && Date.now() - tieStamp < 8000 ? evtKey : null
 
   // Фолбэк: атом activeSessionId (внутренний sid) → active_list → session_key
   const sid = activeSid
@@ -1283,7 +1293,7 @@ function SessionTieChip() {
   const row = rows.find(s => s.id === sid)
   const fromRow = row && isStoredId(row.session_key) ? row.session_key : null
 
-  const key = evtKey || fromRow || (isStoredId(sid) ? sid : null)
+  const key = evtKeyFresh || fromRow || (isStoredId(sid) ? sid : null)
 
   // АВТОПРИВЯЗКА: «+ Сессия» записала намерение (pendingTie). Как только
   // открытая сессия определилась и её ещё не было в списке на момент нажатия —
