@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v32'
+const PLUGIN_VER = 'v33'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1182,10 +1182,11 @@ function SessionTieChip() {
 
   const rows = (liveActive.data && liveActive.data.sessions) || []
   const row = rows.find(s => s.id === activeSid) || rows.find(s => s.current)
-  const key = row ? row.session_key || row.id : null
+  // если в active_list не нашли — атом мог отдать уже сохранённый id
+  const key = (row && (row.session_key || row.id)) || activeSid || null
 
   const label = useMemo(() => {
-    if (!key) return null
+    if (!key) return 'сессия не определена'
     const store = readStore()
     const task = (store.tasks || []).find(t => (t.sessions || []).includes(key))
     if (task) {
@@ -1193,10 +1194,9 @@ function SessionTieChip() {
       return (proj ? proj.name + ' / ' : '') + task.name
     }
     const proj = (store.projects || []).find(p => (p.sessions || []).includes(key))
-    return proj ? proj.name : null
+    return proj ? proj.name : 'без задачи'
   }, [key, tick])
 
-  if (!label) return null
   return jsx('button', {
     type: 'button',
     onClick: () => host.navigate(ROUTE),
@@ -1225,6 +1225,11 @@ export default {
     ctx.register({
       id: 'status',
       area: 'statusBar.right',
+      render: () => jsx(SessionTieChip, {})
+    })
+    ctx.register({
+      id: 'status-left',
+      area: 'statusBar.left',
       render: () => jsx(SessionTieChip, {})
     })
     ctx.register({
