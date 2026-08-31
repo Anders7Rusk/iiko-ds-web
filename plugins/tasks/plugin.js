@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v17'
+const PLUGIN_VER = 'v18'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -671,9 +671,17 @@ function TasksPage() {
     refetchInterval: 5000
   })
   const liveRows = (liveActive.data && liveActive.data.sessions) || []
-  // Зелёная точка = агент сейчас РАБОТАЕТ (status 'working'), а не просто живая.
+  // Зелёная точка = как в сайдбаре (REST is_active): последняя активность < 5 мин.
+  // В active_list сессии по определению живые (ended_at нет), поэтому критерий сводится
+  // к свежести last_active. Так слева и в задачах показывается ОДНО и то же.
+  const nowMs = Date.now()
   const liveSet = useMemo(
-    () => new Set(liveRows.filter(s => s.status === 'working').map(s => s.session_key || s.id)),
+    () =>
+      new Set(
+        liveRows
+          .filter(s => (nowMs - (s.last_active || 0) * (s.last_active < 1e12 ? 1000 : 1)) < 300000)
+          .map(s => s.session_key || s.id)
+      ),
     [liveActive.data]
   )
   const activeId = useMemo(() => {
