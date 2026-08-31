@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v47'
+const PLUGIN_VER = 'v48'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1211,7 +1211,7 @@ function SessionTieChip() {
   const liveActive = useQuery({
     queryKey: ['tasks-plugin', 'chip'],
     queryFn: () => host.request('session.active_list', {}),
-    refetchInterval: 3000
+    refetchInterval: 1000
   })
   // перечитываем localStorage (привязки меняются на странице «Задачи»)
   const [tick, setTick] = useState(0)
