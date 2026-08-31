@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v46'
+const PLUGIN_VER = 'v47'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1271,8 +1271,18 @@ function SessionTieChip() {
   const row = rows.find(s => s.id === sid)
   const fromRow = row && isStoredId(row.session_key) ? row.session_key : null
 
+  // Если атом залип (при переключении между сессиями он не всегда меняется),
+  // берём самую СВЕЖУЮ живую сессию: клиент непрерывно обновляет last_active
+  // именно у открытой.
+  const fromFreshest = useMemo(() => {
+    if (fromRow) return null
+    const live = rows.filter(s => isStoredId(s.session_key))
+    if (!live.length) return null
+    const sorted = live.slice().sort((a, b) => (b.last_active || 0) - (a.last_active || 0))
+    return sorted[0].session_key
+  }, [liveActive.data, fromRow])
 
-  const key = fromRow || (isStoredId(sid) ? sid : null)
+  const key = fromRow || fromFreshest || (isStoredId(sid) ? sid : null)
 
   // АВТОПРИВЯЗКА: «+ Сессия» записала намерение (pendingTie). Как только
   // открытая сессия определилась и её ещё не было в списке на момент нажатия —
