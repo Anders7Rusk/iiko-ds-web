@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v50'
+const PLUGIN_VER = 'v51'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1246,18 +1246,39 @@ function SessionTieChip() {
   // сохранённый (session_key), по которому хранятся привязки.
   // События — только подстраховка, когда атом пуст: они приходят и от других
   // (фоновых) сессий, поэтому приоритет у атома.
-  // Источник открытой сессии — атом host.state.activeSessionId (единственный
-  // официальный источник «что сейчас открыто»). session.info НЕ используем как
-  // источник: оно шлётся ТОЛЬКО при завершении работы агента, а при простом
-  // открытии для просмотра не приходит — из-за него подпись залипала на
-  // последней РАБОЧЕЙ сессии, а не на открытой.
+  // ГЛАВНЫЙ источник открытой сессии — событие session.info. Сервер шлёт его
+  // именно для АКТИВНОЙ сессии (focus-bound by construction) и кладёт в payload
+  // готовый session_key (сохранённый id) — без внутренней→сохранённой
+  // перекодировки, поэтому ошибиться сессией здесь нельзя.
+  const [evtKey, setEvtKey] = useState(null)
+  useEffect(() => {
+    let off = null
+    try {
+      off = host.onEvent('*', ev => {
+        if (!ev || ev.type !== 'session.info') return
+        const p = ev.payload || {}
+        const k = p.session_key || p.stored_session_id || p.id || ev.session_key || ev.session_id
+        if (k && isStoredId(k)) setEvtKey(k)
+      })
+    } catch (e) {
+      off = null
+    }
+    return () => {
+      try {
+        if (typeof off === 'function') off()
+      } catch (e) {
+        /* ignore */
+      }
+    }
+  }, [])
+
+  // Фолбэк: атом activeSessionId (внутренний sid) → active_list → session_key
   const sid = activeSid
   const rows = (liveActive.data && liveActive.data.sessions) || []
-  // строго по нашему sid: без фолбэка на «current», который подставлял чужую сессию
   const row = rows.find(s => s.id === sid)
   const fromRow = row && isStoredId(row.session_key) ? row.session_key : null
 
-  const key = fromRow || (isStoredId(sid) ? sid : null)
+  const key = evtKey || fromRow || (isStoredId(sid) ? sid : null)
 
   // АВТОПРИВЯЗКА: «+ Сессия» записала намерение (pendingTie). Как только
   // открытая сессия определилась и её ещё не было в списке на момент нажатия —
