@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v22'
+const PLUGIN_VER = 'v23'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -529,6 +529,31 @@ function ProjectBlock(props) {
         jsxs('div', {
           className: 'flex flex-col gap-1.5 px-2 pb-2 pt-2 pl-4',
           children: [
+            // «+ Сессия» проекта — всегда видна, не зависит от наличия задач
+            jsx('button', {
+              type: 'button',
+              onClick: addProjectSession,
+              className:
+                'flex w-full items-center justify-center gap-1 rounded border px-2 py-1 text-[0.8125rem] hover:bg-(--chrome-action-hover)',
+              style: { borderColor: 'var(--ui-stroke-secondary)' },
+              children: '+ Сессия'
+            }),
+            projectOwnSessions.length
+              ? projectOwnSessions.map(s =>
+                  jsx(SessionLine, {
+                    session: s,
+                    onUnlink: sid => onUnlink(proj.id, sid, 'project'),
+                    onMove,
+                    taskOptions,
+                    activeId,
+                    liveSet
+                  }, s.id + '-proj')
+                )
+              : jsx('div', {
+                  className: 'px-1 pb-1 text-[0.75rem]',
+                  style: { color: 'var(--ui-text-quaternary)' },
+                  children: 'сессий не привязано'
+                }),
             jsxs('div', {
               className: 'flex items-center gap-2',
               children: [
@@ -550,39 +575,10 @@ function ProjectBlock(props) {
               ]
             }),
             empty
-              ? jsxs('div', {
-                  className: 'flex flex-col gap-1.5',
-                  children: [
-                    jsx('div', {
-                      className: 'pl-1 pt-1 text-[0.8125rem]',
-                      style: { color: 'var(--ui-text-quaternary)' },
-                      children: 'нет задач — добавь выше'
-                    }),
-                    jsx('button', {
-                      type: 'button',
-                      onClick: addProjectSession,
-                      className:
-                        'flex w-full items-center justify-center gap-1 rounded border px-2 py-1 text-[0.8125rem] hover:bg-(--chrome-action-hover)',
-                      style: { borderColor: 'var(--ui-stroke-secondary)' },
-                      children: '+ Сессия'
-                    }),
-                    projectOwnSessions.length
-                      ? projectOwnSessions.map(s =>
-                          jsx(SessionLine, {
-                            session: s,
-                            onUnlink: sid => onUnlink(proj.id, sid, 'project'),
-                            onMove,
-                            taskOptions,
-                            activeId,
-                            liveSet
-                          }, s.id + '-proj')
-                        )
-                      : jsx('div', {
-                          className: 'px-1 pb-1 text-[0.75rem]',
-                          style: { color: 'var(--ui-text-quaternary)' },
-                          children: 'сессий не привязано'
-                        })
-                  ]
+              ? jsx('div', {
+                  className: 'pl-1 pt-1 text-[0.8125rem]',
+                  style: { color: 'var(--ui-text-quaternary)' },
+                  children: 'нет задач'
                 })
               : proj.tasks.map(task =>
                   jsx(
