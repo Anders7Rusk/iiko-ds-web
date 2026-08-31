@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v37'
+const PLUGIN_VER = 'v38'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -647,6 +647,7 @@ function UnassignedBlock({ orphans, taskOptions, onMove, activeId, liveSet, onCr
             style: { color: 'var(--ui-text-quaternary)' },
             children: '▾'
           }),
+          jsx(Dot, { kind: dotForList(orphans.map(s => s.id), activeId, liveSet) }),
           jsx('span', { className: 'truncate text-[0.9375rem] font-semibold', children: 'Не распределено' }),
           jsx('span', {
             className: 'shrink-0 rounded px-1.5 py-0.5 text-[0.6875rem] tabular-nums',
