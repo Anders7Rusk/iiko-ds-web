@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v40'
+const PLUGIN_VER = 'v41'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1297,7 +1297,8 @@ function SessionTieChip() {
       return (proj ? proj.name + ' / ' : '') + task.name
     }
     const proj = (store.projects || []).find(p => (p.sessions || []).includes(key))
-    return proj ? proj.name : 'без задачи'
+    if (proj) return proj.name
+    return 'без задачи (' + key + ')'
   }, [key, tick, activeSid, rows.length])
   return jsxs('div', {
     className: 'flex h-full w-full items-center gap-1.5 px-2 text-[0.75rem]',
