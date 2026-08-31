@@ -24,7 +24,7 @@ import { useEffect, useMemo, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v11'
+const PLUGIN_VER = 'v12'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -154,6 +154,49 @@ function _findSearchInput() {
     if (ph.includes('search session') || ph.includes('поиск') || ph.includes('search')) return el
   }
   return null
+}
+
+// Родная кнопка «New session» в сайдбаре приложения
+function _findNewSessionButton() {
+  const wanted = ['new session', 'новая сессия', 'new chat']
+  const nodes = document.querySelectorAll('button, a, [role="button"], li, div')
+  let best = null
+  let bestLen = Infinity
+  for (const el of nodes) {
+    if (el.closest && el.closest('[data-tasks-plugin]')) continue
+    const txt = _norm(el.textContent)
+    if (!txt || txt.length > 40) continue
+    if (!wanted.some(w => txt.startsWith(w))) continue
+    const r = el.getBoundingClientRect ? el.getBoundingClientRect() : null
+    if (!r || r.width < 20 || r.height < 8) continue
+    if (txt.length < bestLen) {
+      best = el
+      bestLen = txt.length
+    }
+  }
+  return best ? _clickableAncestor(best) : null
+}
+
+// Текущая активная сессия приложения (атом доступен только на чтение)
+function _activeSessionId() {
+  try {
+    const a = host.state && host.state.activeSessionId
+    if (!a) return null
+    return typeof a.get === 'function' ? a.get() : a
+  } catch (e) {
+    return null
+  }
+}
+
+// Живые сессии — для определения id только что созданной
+async function _liveIds() {
+  try {
+    const res = await host.request('session.active_list', {})
+    const list = (res && (res.sessions || res.active || res.items)) || []
+    return list.map(s => s && (s.session_key || s.id || s.session_id)).filter(Boolean)
+  } catch (e) {
+    return []
+  }
 }
 
 async function openSession(id, title) {
@@ -576,24 +619,62 @@ function TasksPage() {
   // создать новую сессию Hermes, привязать к задаче и перейти в неё
   const createSession = async (taskId, title) => {
     try {
-      const params = { cols: 80 }
-      if (title) params.title = title
-      const res = await host.request('session.create', params)
-      const sid = res && (res.session_id || res.resumed || res.id)
-      if (!sid) throw new Error('нет id новой сессии')
+      haptic('tap')
+      // родная кнопка приложения: она и создаёт сессию, и сразу переключает в неё
+      const btn = _findNewSessionButton()
+      if (!btn) {
+        host.notify({
+          kind: 'error',
+          message: 'Кнопка «New session» не найдена в приложении'
+        })
+        return
+      }
+      const beforeActive = _activeSessionId()
+      const beforeLive = await _liveIds()
+      _fireClick(btn)
+
+      // ждём, пока приложение переключится на новую сессию
+      let sid = null
+      for (let i = 0; i < 25; i++) {
+        await _wait(200)
+        const cur = _activeSessionId()
+        if (cur && cur !== beforeActive) {
+          sid = cur
+          break
+        }
+        if (i % 3 === 2) {
+          const now = await _liveIds()
+          const fresh = now.find(x => !beforeLive.includes(x))
+          if (fresh) {
+            sid = fresh
+            break
+          }
+        }
+      }
+      if (!sid) {
+        host.notify({
+          kind: 'error',
+          message: 'Сессия создана, но её id не определился — привязка не сохранена'
+        })
+        return
+      }
+
+      // привязать новую сессию к задаче
       persist({
         ...store,
         tasks: store.tasks.map(t =>
           t.id === taskId
-            ? { ...t, sessions: (t.sessions || []).concat([sid]) }
+            ? { ...t, sessions: [sid].concat(t.sessions || []) }
             : t
         )
       })
-      host.notify({ kind: 'info', message: 'Сессия создана' })
-      // дать приложению обновить список, затем открыть её кликом
-      await host.request('session.list', { limit: 500 }).catch(() => null)
+
+      // применить введённое название
+      const name = String(title || '').trim()
+      if (name) {
+        await host.request('session.title', { session_id: sid, title: name }).catch(() => null)
+      }
       live.refetch()
-      setTimeout(() => openSession(sid, title || ''), 700)
     } catch (err) {
       const msg = err && err.message ? err.message : String(err)
       host.notify({ kind: 'error', message: 'Не удалось создать сессию: ' + msg })
