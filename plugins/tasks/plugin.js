@@ -21,11 +21,11 @@ import {
   useValue
 } from '@hermes/plugin-sdk'
 import { jsx, jsxs } from 'react/jsx-runtime'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v15'
+const PLUGIN_VER = 'v16'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -626,23 +626,32 @@ function TasksPage() {
       const raw = window.localStorage.getItem(STORE_KEY)
       if (raw) {
         const parsed = JSON.parse(raw)
-        setStore({ version: 2, projects: parsed.projects || [], tasks: parsed.tasks || [] })
+        setStore({
+          version: 2,
+          projects: parsed.projects || [],
+          tasks: parsed.tasks || [],
+          pendingTie: parsed.pendingTie || null
+        })
       } else {
         setStore({
           version: 2,
           projects: (TASKS_SEED.projects || []).slice(),
-          tasks: (TASKS_SEED.tasks || []).slice()
+          tasks: (TASKS_SEED.tasks || []).slice(),
+          pendingTie: null
         })
       }
     } catch (e) {
-      setStore({ version: 2, projects: [], tasks: [] })
+      setStore({ version: 2, projects: [], tasks: [], pendingTie: null })
     }
   }, [])
 
   const persist = next => {
     setStore(next)
     try {
-      window.localStorage.setItem(STORE_KEY, JSON.stringify({ projects: next.projects, tasks: next.tasks }))
+      window.localStorage.setItem(
+        STORE_KEY,
+        JSON.stringify({ projects: next.projects, tasks: next.tasks, pendingTie: next.pendingTie || null })
+      )
     } catch (e) {
       /* ignore */
     }
@@ -675,6 +684,33 @@ function TasksPage() {
   }, [liveActive.data, activeSid])
   const liveSessions = (live.data && live.data.sessions) || []
   const liveById = useMemo(() => new Map(liveSessions.map(s => [s.id, s])), [liveSessions])
+
+  // Отложенная привязка: после «+ Сессия» приложение перевело в пустой чат,
+  // сессия появится в session.list только после первого сообщения. Здесь
+  // находим её и привязываем к задаче из pendingTie.
+  const tieDone = useRef(false)
+  useEffect(() => {
+    if (!store || !store.pendingTie || tieDone.current) return
+    const tie = store.pendingTie
+    const assigned = new Set(store.tasks.reduce((acc, t) => acc.concat(t.sessions || []), []))
+    const fresh = liveSessions
+      .filter(s => !assigned.has(s.id))
+      .filter(s => (s.started_at || 0) >= (tie.at - 5 * 60 * 1000))
+      .sort((a, b) => (b.started_at || 0) - (a.started_at || 0))[0]
+    if (!fresh) return
+    tieDone.current = true
+    persist({
+      ...store,
+      pendingTie: null,
+      tasks: store.tasks.map(t =>
+        t.id === tie.taskId ? { ...t, sessions: [fresh.id].concat(t.sessions || []) } : t
+      )
+    })
+    if (tie.title) {
+      host.request('session.title', { session_id: fresh.id, title: tie.title }).catch(() => null)
+    }
+    host.notify({ kind: 'info', message: 'Сессия привязана к задаче' })
+  }, [live.data, store])
 
   if (!store) {
     return jsx('div', {
@@ -724,35 +760,29 @@ function TasksPage() {
     try {
       haptic('tap')
       const name = String(title || '').trim()
-      // session.create отдаёт ДВА id: session_id (внутренний live) и
-      // stored_session_id (сохранённый — он же в session.list и в привязках)
-      const params = { cols: 80 }
-      if (name) params.title = name
-      const res = await host.request('session.create', params)
-      const sid = res && (res.session_id || res.id)
-      const key = (res && (res.stored_session_id || res.session_key)) || sid
-      if (!key) throw new Error('сервер не вернул id новой сессии')
-
-      // привязать к задаче именно сохранённый id
+      // Пустая сессия НЕ пишется в БД до первого сообщения (это архитектура
+      // Hermes — _ensure_session_db_row вызывается из prompt.submit). Поэтому
+      // создавать её через session.create бессмысленно: она невидима ни в
+      // списке, ни в поиске, и переключиться на неё нельзя.
+      // Решение ровно как у родной кнопки «New session»: она переводит главное
+      // окно в пустой чат, а строка в списке появляется после первого сообщения.
+      // Запоминаем намерение «эта сессия принадлежит задаче taskId» в localStorage.
+      const btn = _findNewSessionButton()
+      if (btn) {
+        _fireClick(btn)
+      } else {
+        _pressCtrlN()
+      }
+      // отложенная привязка: новая сессия из session.list (появится после
+      // первого сообщения) будет привязана к этой задаче
       persist({
         ...store,
-        tasks: store.tasks.map(t =>
-          t.id === taskId ? { ...t, sessions: [key].concat(t.sessions || []) } : t
-        )
+        pendingTie: { taskId, at: Date.now(), title: name }
       })
-      live.refetch()
-      liveActive.refetch()
-
-      // переключить окно на новую сессию: она живая, поэтому сначала activate,
-      // затем — подтверждённый путь: клик по её строке в списке приложения
-      await host.request('session.activate', { session_id: sid, omit_messages: true }).catch(
-        () => null
-      )
-      await _wait(500)
-      const switched = _activeSessionId() === sid
-      if (!switched) {
-        await openSession(key, name)
-      }
+      host.notify({
+        kind: 'info',
+        message: 'Новая сессия создана. Напишите первое сообщение — она появится в задаче'
+      })
     } catch (err) {
       const msg = err && err.message ? err.message : String(err)
       host.notify({ kind: 'error', message: 'Не удалось создать сессию: ' + msg })
