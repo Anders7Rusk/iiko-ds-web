@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v51'
+const PLUGIN_VER = 'v52'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1186,6 +1186,7 @@ function TasksPage() {
 function _scrollChatToEnd() {
   let best = null
   let bestArea = 0
+  const winW = window.innerWidth || 0
   const nodes = document.querySelectorAll('div, section, main, ul')
   for (const el of nodes) {
     if (el.closest && el.closest('[data-tasks-plugin]')) continue
@@ -1194,7 +1195,11 @@ function _scrollChatToEnd() {
     if (sh - ch < 200 || ch < 200) continue
     const st = getComputedStyle(el).overflowY
     if (st !== 'auto' && st !== 'scroll') continue
-    const area = ch * (el.clientWidth || 0)
+    const w = el.clientWidth || 0
+    // лента чата — широкая; сайдбар (узкий список сессий) не трогаем,
+    // иначе прокрутка уходит в него вниз вместо конца переписки
+    if (w < winW * 0.55) continue
+    const area = ch * w
     if (area > bestArea) {
       best = el
       bestArea = area
