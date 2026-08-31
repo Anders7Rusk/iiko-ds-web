@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v45'
+const PLUGIN_VER = 'v46'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1260,9 +1260,15 @@ function SessionTieChip() {
     }
   }, [])
 
-  const sid = evtSid || activeSid
+  // Официальный источник открытой сессии — атом host.state.activeSessionId
+  // (референс SDK). Он отдаёт ВНУТРЕННИЙ id; active_list переводит его в
+  // сохранённый (session_key), по которому хранятся привязки.
+  // События — только подстраховка, когда атом пуст: они приходят и от других
+  // (фоновых) сессий, поэтому приоритет у атома.
+  const sid = activeSid || evtSid
   const rows = (liveActive.data && liveActive.data.sessions) || []
-  const row = rows.find(s => s.id === sid) || rows.find(s => s.current)
+  // строго по нашему sid: без фолбэка на «current», который подставлял чужую сессию
+  const row = rows.find(s => s.id === sid)
   const fromRow = row && isStoredId(row.session_key) ? row.session_key : null
 
 
