@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v30'
+const PLUGIN_VER = 'v31'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -297,7 +297,7 @@ function dotForList(ids, activeId, liveSet) {
   return 'idle'
 }
 
-function SessionLine({ session, onMove, onUnlink, taskOptions, activeId, liveSet }) {
+function SessionLine({ session, onMove, onUnlink, onDelete, taskOptions, activeId, liveSet }) {
   return jsxs('div', {
     className: 'flex items-center gap-1.5 rounded px-1.5 py-1 text-[0.8125rem] hover:bg-(--chrome-action-hover)',
     children: [
@@ -338,10 +338,20 @@ function SessionLine({ session, onMove, onUnlink, taskOptions, activeId, liveSet
       onUnlink &&
         jsx('button', {
           type: 'button',
+          title: 'отвязать от задачи (сессия останется в Hermes)',
           onClick: () => onUnlink(session.id),
           className: 'shrink-0 rounded border px-1.5 text-[0.6875rem] hover:bg-(--chrome-action-hover)',
           style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-text-tertiary)' },
           children: '✕'
+        }),
+      onDelete &&
+        jsx('button', {
+          type: 'button',
+          title: 'удалить сессию целиком (переписка удалится)',
+          onClick: () => onDelete(session.id, session.title || session.preview || ''),
+          className: 'shrink-0 rounded border px-1.5 text-[0.6875rem] hover:bg-(--chrome-action-hover)',
+          style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-text-tertiary)' },
+          children: '🗑'
         })
     ]
   })
@@ -357,6 +367,7 @@ function TaskBlock(props) {
     taskOptions,
     removeTask,
     onCreateSession,
+    onDelete,
     activeId,
     liveSet
   } = props
@@ -438,6 +449,7 @@ function TaskBlock(props) {
                   jsx(SessionLine, {
                     session: s,
                     onUnlink: sid => onUnlink(task.id, sid),
+                    onDelete,
                     onMove,
                     taskOptions,
                     activeId,
@@ -472,6 +484,7 @@ function ProjectBlock(props) {
     taskOptions,
     onCreateSession,
     onCreateProjectSession,
+    onDelete,
     activeId,
     liveSet
   } = props
@@ -585,6 +598,7 @@ function ProjectBlock(props) {
                   jsx(SessionLine, {
                     session: s,
                     onUnlink: sid => onUnlink(proj.id, sid, 'project'),
+                    onDelete,
                     onMove,
                     taskOptions,
                     activeId,
@@ -606,6 +620,7 @@ function ProjectBlock(props) {
                       taskOptions,
                       removeTask,
                       onCreateSession: onCreateSession,
+                      onDelete,
                       activeId,
                       liveSet
                     },
@@ -618,7 +633,7 @@ function ProjectBlock(props) {
   })
 }
 
-function UnassignedBlock({ orphans, taskOptions, onMove, activeId, liveSet, onCreateUnassigned }) {
+function UnassignedBlock({ orphans, taskOptions, onMove, activeId, liveSet, onCreateUnassigned, onDelete }) {
   return jsxs('div', {
     className: 'rounded-md border',
     style: { borderColor: 'var(--ui-stroke-secondary)' },
@@ -654,7 +669,7 @@ function UnassignedBlock({ orphans, taskOptions, onMove, activeId, liveSet, onCr
             children: '+ Сессия'
           }),
           orphans.map(s =>
-            jsx(SessionLine, { session: s, onMove, taskOptions, activeId, liveSet }, s.id)
+            jsx(SessionLine, { session: s, onMove, onDelete, taskOptions, activeId, liveSet }, s.id)
           ),
           !orphans.length &&
             jsx('div', {
@@ -955,6 +970,35 @@ function TasksPage() {
     }
   }
 
+  // удалить сессию целиком: и из Hermes (session.delete), и из привязок
+  const deleteSession = async (sessionId, label) => {
+    const ok = window.confirm(
+      'Удалить сессию полностью?\n\n' + (label || sessionId) + '\n\nПереписка будет удалена безвозвратно.'
+    )
+    if (!ok) return
+    try {
+      await host.request('session.delete', { session_id: sessionId })
+    } catch (err) {
+      const msg = err && err.message ? err.message : String(err)
+      host.notify({ kind: 'error', message: 'Не удалось удалить сессию: ' + msg })
+      return
+    }
+    persist({
+      ...store,
+      tasks: store.tasks.map(t => ({
+        ...t,
+        sessions: (t.sessions || []).filter(s => s !== sessionId)
+      })),
+      projects: (store.projects || []).map(p => ({
+        ...p,
+        sessions: (p.sessions || []).filter(s => s !== sessionId)
+      }))
+    })
+    live.refetch()
+    liveActive.refetch()
+    host.notify({ kind: 'info', message: 'Сессия удалена' })
+  }
+
   // перенести сессию в задачу (текущая задача заменяется на выбранную)
   const moveSession = (sessionId, taskId) => {
     persist({
@@ -1098,6 +1142,7 @@ function TasksPage() {
                 taskOptions,
                 onCreateSession: createSession,
                 onCreateProjectSession: projId => createSession({ type: 'project', id: projId }, ''),
+                onDelete: deleteSession,
                 activeId,
                 liveSet
               },
@@ -1110,7 +1155,8 @@ function TasksPage() {
             onMove: moveSession,
             activeId,
             liveSet,
-            onCreateUnassigned: () => createSession({ type: 'none' }, '')
+            onCreateUnassigned: () => createSession({ type: 'none' }, ''),
+            onDelete: deleteSession
           }),
         ]
       })
