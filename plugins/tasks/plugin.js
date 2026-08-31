@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v41'
+const PLUGIN_VER = 'v42'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1286,7 +1286,6 @@ function SessionTieChip() {
 
   const label = useMemo(() => {
     if (!key) {
-      // техинфо, чтобы сразу видеть, чего не хватает (без догадок)
       const n = rows.length
       return 'не определено (sid=' + (activeSid || '—') + ', живых=' + n + ')'
     }
@@ -1298,8 +1297,47 @@ function SessionTieChip() {
     }
     const proj = (store.projects || []).find(p => (p.sessions || []).includes(key))
     if (proj) return proj.name
-    return 'без задачи (' + key + ')'
+    return 'без задачи'
   }, [key, tick, activeSid, rows.length])
+
+  // варианты привязки текущей сессии + возможность снять её
+  const options = useMemo(() => {
+    const store = readStore()
+    const list = []
+    for (const t of store.tasks || []) {
+      const proj = (store.projects || []).find(p => p.id === t.projectId)
+      list.push({ value: 'task:' + t.id, label: (proj ? proj.name + ' / ' : '') + t.name })
+    }
+    for (const p of store.projects || []) {
+      list.push({ value: 'proj:' + p.id, label: p.name + ' (проект)' })
+    }
+    return list
+  }, [tick])
+
+  const applyTie = value => {
+    if (!key || !value) return
+    const cur = readStore()
+    const strip = arr => (arr || []).filter(x => x !== key)
+    const next = {
+      ...cur,
+      tasks: (cur.tasks || []).map(t => ({ ...t, sessions: strip(t.sessions) })),
+      projects: (cur.projects || []).map(p => ({ ...p, sessions: strip(p.sessions) }))
+    }
+    if (value.startsWith('task:')) {
+      const id = value.slice(5)
+      next.tasks = next.tasks.map(t =>
+        t.id === id ? { ...t, sessions: [key].concat(t.sessions || []) } : t
+      )
+    } else if (value.startsWith('proj:')) {
+      const id = value.slice(5)
+      next.projects = next.projects.map(p =>
+        p.id === id ? { ...p, sessions: [key].concat(p.sessions || []) } : p
+      )
+    }
+    writeStore(next)
+    setTick(x => x + 1)
+  }
+
   return jsxs('div', {
     className: 'flex h-full w-full items-center gap-1.5 px-2 text-[0.75rem]',
     children: [
@@ -1311,10 +1349,25 @@ function SessionTieChip() {
         type: 'button',
         onClick: () => host.navigate(ROUTE),
         title: 'открыть «Задачи»',
-        className: 'min-w-0 flex-1 truncate text-left hover:underline',
+        className: 'min-w-0 max-w-[45%] truncate text-left hover:underline',
         style: { color: 'var(--ui-text-secondary)' },
         children: label
-      })
+      }),
+      key &&
+        jsxs('select', {
+          value: '',
+          onChange: e => {
+            applyTie(e.target.value)
+            e.target.value = ''
+          },
+          className: 'ml-auto shrink-0 rounded border bg-transparent px-1 py-0.5 text-[0.6875rem] outline-none',
+          style: { borderColor: 'var(--ui-stroke-secondary)', color: 'var(--ui-text-primary)' },
+          children: [
+            jsx('option', { value: '', children: 'изменить…' }),
+            jsx('option', { value: 'none', children: '— убрать привязку —' }),
+            ...options.map(o => jsx('option', { value: o.value, children: o.label }, o.value))
+          ]
+        })
     ]
   })
 }
