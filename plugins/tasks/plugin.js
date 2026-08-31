@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v16'
+const PLUGIN_VER = 'v17'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -260,7 +260,7 @@ async function openSession(id, title) {
 // Строка одной сессии (мелкая, приглушённая). Клик по названию открывает сессию.
 // Точка-индикатор, как в сайдбаре приложения:
 // 'active' — сессия, в которой ты сейчас (синяя, var(--ui-accent))
-// 'live'   — живая сессия, агент в памяти (зелёная, var(--ui-success) с запасом #4ade80)
+// 'live'   — агент прямо сейчас РАБОТАЕТ (зелёная, var(--ui-success) с запасом #4ade80)
 // иначе    — обычная историческая (пустой кружок)
 function Dot({ kind }) {
   if (kind === 'active') {
@@ -274,7 +274,7 @@ function Dot({ kind }) {
     return jsx('span', {
       className: 'inline-block h-1.5 w-1.5 shrink-0 rounded-full',
       style: { background: 'var(--ui-success, var(--ui-positive, #4ade80))' },
-      title: 'живая сессия'
+      title: 'агент работает'
     })
   }
   return jsx('span', {
@@ -671,8 +671,9 @@ function TasksPage() {
     refetchInterval: 5000
   })
   const liveRows = (liveActive.data && liveActive.data.sessions) || []
+  // Зелёная точка = агент сейчас РАБОТАЕТ (status 'working'), а не просто живая.
   const liveSet = useMemo(
-    () => new Set(liveRows.map(s => s.session_key || s.id).filter(Boolean)),
+    () => new Set(liveRows.filter(s => s.status === 'working').map(s => s.session_key || s.id)),
     [liveActive.data]
   )
   const activeId = useMemo(() => {
