@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v33'
+const PLUGIN_VER = 'v34'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1197,13 +1197,22 @@ function SessionTieChip() {
     return proj ? proj.name : 'без задачи'
   }, [key, tick])
 
-  return jsx('button', {
-    type: 'button',
-    onClick: () => host.navigate(ROUTE),
-    title: 'к какой задаче относится эта сессия — открыть «Задачи»',
-    className: 'max-w-[280px] truncate text-[0.6875rem]',
-    style: { color: 'var(--ui-text-tertiary)' },
-    children: label
+  return jsxs('div', {
+    className: 'flex h-full w-full items-center gap-1.5 px-2 text-[0.75rem]',
+    children: [
+      jsx('span', {
+        style: { color: 'var(--ui-text-quaternary)' },
+        children: 'Задача:'
+      }),
+      jsx('button', {
+        type: 'button',
+        onClick: () => host.navigate(ROUTE),
+        title: 'открыть «Задачи»',
+        className: 'min-w-0 flex-1 truncate text-left hover:underline',
+        style: { color: 'var(--ui-text-secondary)' },
+        children: label
+      })
+    ]
   })
 }
 
@@ -1221,6 +1230,17 @@ export default {
       id: 'nav',
       area: SIDEBAR_NAV_AREA,
       data: { path: ROUTE, label: 'Задачи', codicon: 'checklist' }
+    })
+    ctx.register({
+      id: 'tie-pane',
+      area: 'panes',
+      title: 'Задача сессии',
+      data: {
+        placement: 'main',
+        dock: { pane: 'workspace', pos: 'top' },
+        height: '34px'
+      },
+      render: () => jsx(SessionTieChip, {})
     })
     ctx.register({
       id: 'status',
