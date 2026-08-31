@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v35'
+const PLUGIN_VER = 'v36'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -683,6 +683,19 @@ function UnassignedBlock({ orphans, taskOptions, onMove, activeId, liveSet, onCr
   })
 }
 
+// Сохранённый id сессии всегда вида 20260831_104859_117ae6.
+// Внутренние live-id (74bc0448) в привязках — мусор от ранних версий: они
+// ломали и отображение в задачах, и подпись над чатом.
+const STORED_ID_RE = /^\d{8}_\d{6}_[0-9a-z]{6}$/i
+
+function isStoredId(id) {
+  return typeof id === 'string' && STORED_ID_RE.test(id)
+}
+
+function sanitizeSessions(list) {
+  return (list || []).filter(isStoredId)
+}
+
 // Прямая работа с localStorage — не зависит от жизненного цикла компонента:
 // после Ctrl+N страница «Задачи» размонтируется, а привязку записать нужно.
 function readStore() {
@@ -692,8 +705,8 @@ function readStore() {
     const p = JSON.parse(raw)
     return {
       version: 2,
-      projects: p.projects || [],
-      tasks: p.tasks || [],
+      projects: (p.projects || []).map(x => ({ ...x, sessions: sanitizeSessions(x.sessions) })),
+      tasks: (p.tasks || []).map(x => ({ ...x, sessions: sanitizeSessions(x.sessions) })),
       pendingTie: p.pendingTie || null
     }
   } catch (e) {
@@ -727,12 +740,21 @@ function TasksPage() {
       const raw = window.localStorage.getItem(STORE_KEY)
       if (raw) {
         const parsed = JSON.parse(raw)
-        setStore({
+        // чистим мусорные (внутренние) id, попавшие в привязки ранними версиями
+        const cleaned = {
           version: 2,
-          projects: parsed.projects || [],
-          tasks: parsed.tasks || [],
+          projects: (parsed.projects || []).map(p => ({
+            ...p,
+            sessions: sanitizeSessions(p.sessions)
+          })),
+          tasks: (parsed.tasks || []).map(t => ({
+            ...t,
+            sessions: sanitizeSessions(t.sessions)
+          })),
           pendingTie: parsed.pendingTie || null
-        })
+        }
+        setStore(cleaned)
+        writeStore(cleaned)
       } else {
         setStore({
           version: 2,
@@ -925,7 +947,7 @@ function TasksPage() {
           if (btn) _fireClick(btn)
         }
         const nowKeys = await _liveIds()
-        const fresh = nowKeys.find(k => !beforeKeys.includes(k))
+        const fresh = nowKeys.find(k => !beforeKeys.includes(k) && isStoredId(k))
         if (fresh) key = fresh
       }
       if (!isTie) return
@@ -1175,8 +1197,9 @@ function SessionTieChip() {
 
   const rows = (liveActive.data && liveActive.data.sessions) || []
   const row = rows.find(s => s.id === activeSid) || rows.find(s => s.current)
-  // если в active_list не нашли — атом мог отдать уже сохранённый id
-  const key = (row && (row.session_key || row.id)) || activeSid || null
+  // берём ТОЛЬКО сохранённый id: внутренний live-id в привязках не встречается
+  const fromRow = row && isStoredId(row.session_key) ? row.session_key : null
+  const key = fromRow || (isStoredId(activeSid) ? activeSid : null)
 
   const label = useMemo(() => {
     if (!key) return 'сессия не определена'
