@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v18'
+const PLUGIN_VER = 'v19'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -685,11 +685,13 @@ function TasksPage() {
     [liveActive.data]
   )
   const activeId = useMemo(() => {
+    // activeSid — ВНУТРЕННИЙ live-id (атом); в active_list сессии лежат с этим
+    // id в поле `id`, а привязки хранят сохранённый `session_key`. Находим по id.
+    const bySid = liveRows.find(s => s.id === activeSid)
+    if (bySid) return bySid.session_key || bySid.id
     const marked = liveRows.find(s => s.current)
     if (marked) return marked.session_key || marked.id
-    // запас: атом мог отдать уже сохранённый id
-    const direct = liveRows.find(s => s.session_key === activeSid)
-    return direct ? direct.session_key : activeSid || null
+    return activeSid || null
   }, [liveActive.data, activeSid])
   const liveSessions = (live.data && live.data.sessions) || []
   const liveById = useMemo(() => new Map(liveSessions.map(s => [s.id, s])), [liveSessions])
