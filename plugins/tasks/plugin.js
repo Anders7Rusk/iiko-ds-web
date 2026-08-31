@@ -25,7 +25,7 @@ import { useEffect, useMemo, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v13'
+const PLUGIN_VER = 'v14'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -266,13 +266,14 @@ function Dot({ kind }) {
   if (kind === 'active') {
     return jsx('span', {
       className: 'inline-block h-1.5 w-1.5 shrink-0 rounded-full',
-      style: { background: 'var(--ui-accent)' },
+      style: { background: 'var(--ui-accent, #448AFF)' },
       title: 'ты здесь'
     })
   }
   if (kind === 'live') {
     return jsx('span', {
-      className: 'inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-current text-success',
+      className: 'inline-block h-1.5 w-1.5 shrink-0 rounded-full',
+      style: { background: 'var(--ui-success, var(--ui-positive, #4ade80))' },
       title: 'живая сессия'
     })
   }
@@ -652,18 +653,26 @@ function TasksPage() {
     queryFn: () => host.request('session.list', { limit: 500 }),
     refetchInterval: 60000
   })
-  // живые сессии приложения — для зелёной точки
+  // сессия, в которой пользователь сейчас: атом даёт ВНУТРЕННИЙ live-id,
+  // поэтому передаём его в active_list и берём у отмеченной строки session_key
+  const activeSid = useValue(host.state.activeSessionId)
   const liveActive = useQuery({
-    queryKey: ['tasks-plugin', 'session.active_list'],
-    queryFn: () => host.request('session.active_list', {}),
+    queryKey: ['tasks-plugin', 'session.active_list', activeSid || ''],
+    queryFn: () => host.request('session.active_list', { current_session_id: activeSid || '' }),
     refetchInterval: 5000
   })
-  // сессия, в которой пользователь сейчас — для синей точки
-  const activeId = useValue(host.state.activeSessionId)
-  const liveSet = useMemo(() => {
-    const rows = (liveActive.data && liveActive.data.sessions) || []
-    return new Set(rows.map(s => s.session_key || s.id).filter(Boolean))
-  }, [liveActive.data])
+  const liveRows = (liveActive.data && liveActive.data.sessions) || []
+  const liveSet = useMemo(
+    () => new Set(liveRows.map(s => s.session_key || s.id).filter(Boolean)),
+    [liveActive.data]
+  )
+  const activeId = useMemo(() => {
+    const marked = liveRows.find(s => s.current)
+    if (marked) return marked.session_key || marked.id
+    // запас: атом мог отдать уже сохранённый id
+    const direct = liveRows.find(s => s.session_key === activeSid)
+    return direct ? direct.session_key : activeSid || null
+  }, [liveActive.data, activeSid])
   const liveSessions = (live.data && live.data.sessions) || []
   const liveById = useMemo(() => new Map(liveSessions.map(s => [s.id, s])), [liveSessions])
 
