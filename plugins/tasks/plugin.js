@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v56'
+const PLUGIN_VER = 'v57'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
