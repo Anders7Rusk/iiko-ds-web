@@ -25,7 +25,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v36'
+const PLUGIN_VER = 'v37'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
@@ -1179,6 +1179,30 @@ function TasksPage() {
   })
 }
 
+// Автопрокрутка переписки в конец: desktop-клиент после перезапуска
+// восстанавливает позицию не в конце. Находим самый большой скроллируемый
+// контейнер (это лента сообщений) и доводим его до низа.
+function _scrollChatToEnd() {
+  let best = null
+  let bestArea = 0
+  const nodes = document.querySelectorAll('div, section, main, ul')
+  for (const el of nodes) {
+    if (el.closest && el.closest('[data-tasks-plugin]')) continue
+    const sh = el.scrollHeight || 0
+    const ch = el.clientHeight || 0
+    if (sh - ch < 200 || ch < 200) continue
+    const st = getComputedStyle(el).overflowY
+    if (st !== 'auto' && st !== 'scroll') continue
+    const area = ch * (el.clientWidth || 0)
+    if (area > bestArea) {
+      best = el
+      bestArea = area
+    }
+  }
+  if (best) best.scrollTop = best.scrollHeight
+  return !!best
+}
+
 // Чип в статусбаре: к чему относится ОТКРЫТАЯ сейчас сессия.
 // «Проект / Задача», либо просто «Проект», если задачи нет.
 function SessionTieChip() {
@@ -1195,11 +1219,36 @@ function SessionTieChip() {
     return () => clearInterval(t)
   }, [])
 
+  // при открытии/смене сессии доводим переписку до последнего сообщения
+  useEffect(() => {
+    let stop = false
+    let n = 0
+    const tryScroll = () => {
+      if (stop) return
+      _scrollChatToEnd()
+      n += 1
+      if (n < 12) setTimeout(tryScroll, 250)
+    }
+    tryScroll()
+    return () => {
+      stop = true
+    }
+  }, [activeSid])
+
   const rows = (liveActive.data && liveActive.data.sessions) || []
   const row = rows.find(s => s.id === activeSid) || rows.find(s => s.current)
   // берём ТОЛЬКО сохранённый id: внутренний live-id в привязках не встречается
   const fromRow = row && isStoredId(row.session_key) ? row.session_key : null
-  const key = fromRow || (isStoredId(activeSid) ? activeSid : null)
+  // фолбэк: если по active_list не определилось — самая свежая сессия
+  const recent = useQuery({
+    queryKey: ['tasks-plugin', 'most_recent'],
+    queryFn: () => host.request('session.most_recent', {}),
+    refetchInterval: 15000,
+    enabled: !fromRow && !isStoredId(activeSid)
+  })
+  const fromRecent =
+    recent.data && isStoredId(recent.data.session_id) ? recent.data.session_id : null
+  const key = fromRow || (isStoredId(activeSid) ? activeSid : null) || fromRecent
 
   const label = useMemo(() => {
     if (!key) return 'сессия не определена'
@@ -1212,7 +1261,6 @@ function SessionTieChip() {
     const proj = (store.projects || []).find(p => (p.sessions || []).includes(key))
     return proj ? proj.name : 'без задачи'
   }, [key, tick])
-
   return jsxs('div', {
     className: 'flex h-full w-full items-center gap-1.5 px-2 text-[0.75rem]',
     children: [
