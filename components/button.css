@@ -42,7 +42,16 @@
   gap: var(--ds-space-1x);                        /* 4px */
   font-size: var(--ds-typography-font-size-3x);   /* 12px */
 }
-.ds-btn--xs .ds-btn__icon { font-size: 16px; }
+.ds-btn--xs /* Контейнер текста (Figma: «Button Container» — HUG, выравнивание по центру).
+   Своей типографики нет: размер/вес/цвет наследуются от .ds-btn */
+.ds-btn__label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.ds-btn__icon { font-size: 16px; }
 
 .ds-btn--s {
   height: 28px;
