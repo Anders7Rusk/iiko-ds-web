@@ -152,6 +152,134 @@
 | Токен | Значение |
 |---|---|
 
+### Текстовые стили ДС (готовые классы)
+
+Стили из Figma один в один. В разметке ставить **класс**, а не набор свойств: `<span class="ds-text-body-m-normal-regular">`.
+
+| Стиль Figma | Класс | font (вес размер/интерлиньяж) | Трекинг | Регистр |
+|---|---|---|---|---|
+| Header L (34)/Normal/Regular | `.ds-text-header-l-34-normal-regular` | `400 34px/40px "Roboto"` | 0px | none |
+| Header L (34) / Normal / Medium | `.ds-text-header-l-34-normal-medium` | `500 34px/40px "Roboto"` | 0px | none |
+| Header L (34) / Caps / Regular | `.ds-text-header-l-34-caps-regular` | `400 34px/40px "Roboto"` | 0px | uppercase |
+| Header L (34) / Caps / Medium | `.ds-text-header-l-34-caps-medium` | `500 34px/40px "Roboto"` | 0px | uppercase |
+| Header M (24) / Normal / Regular | `.ds-text-header-m-24-normal-regular` | `400 24px/32px "Roboto"` | 0.5px | none |
+| Header M (24) / Normal / Medium | `.ds-text-header-m-24-normal-medium` | `500 24px/32px "Roboto"` | 0.5px | none |
+| Header M (24) / Caps / Regular | `.ds-text-header-m-24-caps-regular` | `400 24px/32px "Roboto"` | 0.5px | uppercase |
+| Header M (24) / Caps / Medium | `.ds-text-header-m-24-caps-medium` | `500 24px/32px "Roboto"` | 0.5px | uppercase |
+| Header S (20) / Normal / Regular | `.ds-text-header-s-20-normal-regular` | `400 20px/28px "Roboto"` | 0.5px | none |
+| Header S (20) / Normal / Medium | `.ds-text-header-s-20-normal-medium` | `500 20px/28px "Roboto"` | 0.5px | none |
+| Header S (20) / Caps / Regular | `.ds-text-header-s-20-caps-regular` | `400 20px/28px "Roboto"` | 0.5px | uppercase |
+| Header S (20) / Caps / Medium | `.ds-text-header-s-20-caps-medium` | `500 20px/28px "Roboto"` | 0.5px | uppercase |
+| Body L (18) / Normal / Regular | `.ds-text-body-l-18-normal-regular` | `400 18px/24px "Roboto"` | 0.5px | none |
+| Body L (18) / Normal / Medium | `.ds-text-body-l-18-normal-medium` | `500 18px/24px "Roboto"` | 0.5px | none |
+| Body L (18) / Caps / Regular | `.ds-text-body-l-18-caps-regular` | `400 18px/24px "Roboto"` | 0.5px | uppercase |
+| Body L (18) / Caps / Medium | `.ds-text-body-l-18-caps-medium` | `500 18px/24px "Roboto"` | 0.5px | uppercase |
+| Body M (16) / Normal / Regular | `.ds-text-body-m-16-normal-regular` | `400 16px/24px "Roboto"` | 0.5px | none |
+| Body M (16) / Normal / Medium | `.ds-text-body-m-16-normal-medium` | `500 16px/24px "Roboto"` | 0.5px | none |
+| Body M (16) / Caps / Regular | `.ds-text-body-m-16-caps-regular` | `400 16px/24px "Roboto"` | 0.5px | uppercase |
+| Body M (16) / Caps / Medium | `.ds-text-body-m-16-caps-medium` | `500 16px/24px "Roboto"` | 0.5px | uppercase |
+| Body S (14) / Normal / Regular | `.ds-text-body-s-14-normal-regular` | `400 14px/20px "Roboto"` | 0.5px | none |
+| Body S (14) / Normal / Medium | `.ds-text-body-s-14-normal-medium` | `500 14px/20px "Roboto"` | 0.5px | none |
+| Body S (14) / Caps / Regular | `.ds-text-body-s-14-caps-regular` | `400 14px/20px "Roboto"` | 0.5px | uppercase |
+| Body S (14) / Caps / Medium | `.ds-text-body-s-14-caps-medium` | `500 14px/20px "Roboto"` | 0.5px | uppercase |
+| Caption L (12) / Normal / Regular | `.ds-text-caption-l-12-normal-regular` | `400 12px/16px "Roboto"` | 0.5px | none |
+| Caption L (12) / Normal / Medium | `.ds-text-caption-l-12-normal-medium` | `500 12px/16px "Roboto"` | 0.5px | none |
+| Caption L (12) / Caps / Regular | `.ds-text-caption-l-12-caps-regular` | `400 12px/16px "Roboto"` | 0.5px | uppercase |
+| Caption L (12) / Caps / Medium | `.ds-text-caption-l-12-caps-medium` | `500 12px/16px "Roboto"` | 0.5px | uppercase |
+| Caption M (10) / Normal / Regular | `.ds-text-caption-m-10-normal-regular` | `400 10px/12px "Roboto"` | 0.5px | none |
+| Caption M (10)/Normal/Medium | `.ds-text-caption-m-10-normal-medium` | `500 10px/12px "Roboto"` | 0.5px | capitalize |
+| Caption M (10) / Caps / Regular | `.ds-text-caption-m-10-caps-regular` | `400 10px/12px "Roboto"` | 0.5px | uppercase |
+| Caption M (10) / Caps / Medium | `.ds-text-caption-m-10-caps-medium` | `500 10px/12px "Roboto"` | 0.5px | uppercase |
+| Caption S (8) / Normal / Regular | `.ds-text-caption-s-8-normal-regular` | `400 8px/10px "Roboto"` | 0.5px | none |
+| Caption S (8) / Normal / Medium | `.ds-text-caption-s-8-normal-medium` | `500 8px/10px "Roboto"` | 0.5px | none |
+| Caption S (8) / Caps / Regular | `.ds-text-caption-s-8-caps-regular` | `400 8px/10px "Roboto"` | 0.5px | uppercase |
+| Caption S (8) / Caps / Medium | `.ds-text-caption-s-8-caps-medium` | `500 8px/10px "Roboto"` | 0.5px | uppercase |
+
+### Эффект-стили ДС (тени как готовые значения)
+
+Ставить `box-shadow: var(--ds-shadow-…)`, не переписывать пиксели.
+
+| Стиль Figma | Токен | Значение box-shadow |
+|---|---|---|
+| Shadows/None | `--ds-shadow-shadows-none` | `0px 2px 0px 0px #ffffff` |
+| Shadows/01 dp Sl | `--ds-shadow-shadows-01-dp-sl` | `0px 0px 4px 0px rgba(33, 33, 33, 0.12), 0px 2px 2px 0px rgba(33, 33, 33, 0.04)` |
+| Shadows/08 dp S | `--ds-shadow-shadows-08-dp-s` | `0px 0px 16px 0px rgba(33, 33, 33, 0.12), 0px 4px 6px 0px rgba(33, 33, 33, 0.1)` |
+| Shadows/12 dp M | `--ds-shadow-shadows-12-dp-m` | `0px 0px 28px 0px rgba(33, 33, 33, 0.12), 0px 10px 24px 0px rgba(33, 33, 33, 0.12)` |
+| Shadows/24 dp XL | `--ds-shadow-shadows-24-dp-xl` | `0px 0px 32px 0px rgba(33, 33, 33, 0.16), 0px 12px 16px 0px rgba(33, 33, 33, 0.16)` |
+
+### Цветовые стили ДС
+
+Цветовые стили Figma. Для компонентов приоритет у компонентных токенов `--ds-color-*`.
+
+| Стиль Figma | Токен | Значение |
+|---|---|---|
+| Surface / Default | `--ds-paint-surface-default` | #ffffff |
+| Surface / Default V2 | `--ds-paint-surface-default-v2` | #f8f9fc |
+| Surface / Hover | `--ds-paint-surface-hover` | #f5f5f5 |
+| Surface / Selected | `--ds-paint-surface-selected` | #ebebeb |
+| Surface / Press | `--ds-paint-surface-press` | #e0e0e0 |
+| Surface / Disable | `--ds-paint-surface-disable` | #e0e0e0 |
+| Surface/SnackTooltip | `--ds-paint-surface-snacktooltip` | #424242 |
+| Surface/Sidebar | `--ds-paint-surface-sidebar` | #f8f9fc |
+| Surface/Sidebar_Selected | `--ds-paint-surface-sidebar-selected` | #f0f5ff |
+| Surface / Sidebar_Active | `--ds-paint-surface-sidebar-active` | #a8c9ff |
+| Table surfase / Default | `--ds-paint-table-surfase-default` | #ffffff |
+| Table surfase / Hover | `--ds-paint-table-surfase-hover` | #f5f5f5 |
+| Table surfase / Selected | `--ds-paint-table-surfase-selected` | #ebebeb |
+| Table surfase / Group | `--ds-paint-table-surfase-group` | #ebebeb |
+| Table surfase / Head | `--ds-paint-table-surfase-head` | #f0f5ff |
+| Table surfase / Head Group | `--ds-paint-table-surfase-head-group` | #a8c9ff |
+| Text/Primary | `--ds-paint-text-primary` | #333333 |
+| Text/Inversive | `--ds-paint-text-inversive` | #ffffff |
+| Text / Caption | `--ds-paint-text-caption` | #616161 |
+| Text / Placeholder | `--ds-paint-text-placeholder` | #d6d6d6 |
+| Text / Disable | `--ds-paint-text-disable` | #9e9e9e |
+| Text/Accent | `--ds-paint-text-accent` | #448aff |
+| Text/Positive | `--ds-paint-text-positive` | #14b456 |
+| Text / Warning | `--ds-paint-text-warning` | #ffab40 |
+| Text/Negative | `--ds-paint-text-negative` | #ff5252 |
+| Button / Neutral / Default | `--ds-paint-button-neutral-default` | #ffffff |
+| Button / Neutral / Hover | `--ds-paint-button-neutral-hover` | #f5f5f5 |
+| Button / Neutral / Press | `--ds-paint-button-neutral-press` | #ebebeb |
+| Button / Neutral / Disable | `--ds-paint-button-neutral-disable` | #ebebeb |
+| Button/Accent/Default | `--ds-paint-button-accent-default` | #448aff |
+| Button/Accent/Hover | `--ds-paint-button-accent-hover` | #3969d5 |
+| Button/Accent/Press | `--ds-paint-button-accent-press` | #2651b5 |
+| Button/Positive/Default | `--ds-paint-button-positive-default` | #14b456 |
+| Button/Positive/Hover | `--ds-paint-button-positive-hover` | #0f852c |
+| Button/Positive/Press | `--ds-paint-button-positive-press` | #0a571a |
+| Button/Warning/Default | `--ds-paint-button-warning-default` | #ffab40 |
+| Button/Warning/Hover | `--ds-paint-button-warning-hover` | #ea7806 |
+| Button/Warning/Press | `--ds-paint-button-warning-press` | #994000 |
+| Button/Negative/Default | `--ds-paint-button-negative-default` | #ff5252 |
+| Button/Negative/Hover | `--ds-paint-button-negative-hover` | #de1a12 |
+| Button/Negative/Press | `--ds-paint-button-negative-press` | #7f0f0a |
+| Icon/Primary | `--ds-paint-icon-primary` | #616161 |
+| Icon/Inversive | `--ds-paint-icon-inversive` | #ffffff |
+| Icon/Disable | `--ds-paint-icon-disable` | #9e9e9e |
+| Icon/Accent | `--ds-paint-icon-accent` | #448aff |
+| Icon/Positive | `--ds-paint-icon-positive` | #14b456 |
+| Icon/Warning | `--ds-paint-icon-warning` | #ea7806 |
+| Icon/Negative | `--ds-paint-icon-negative` | #ff5252 |
+| Shapes / Default | `--ds-paint-shapes-default` | #ffffff |
+| Shapes / SuperLight NT | `--ds-paint-shapes-superlight-nt` | #f5f5f5 |
+| Shapes / Lightest NT | `--ds-paint-shapes-lightest-nt` | #ebebeb |
+| Shapes / Lighter NT | `--ds-paint-shapes-lighter-nt` | #e0e0e0 |
+| Shapes / Lighter PR | `--ds-paint-shapes-lighter-pr` | #f8f9fc |
+| Shapes / Lighter SC | `--ds-paint-shapes-lighter-sc` | #ebfbf2 |
+| Shapes/Lighter WR | `--ds-paint-shapes-lighter-wr` | #fff9f0 |
+| Shapes / Lighter ER | `--ds-paint-shapes-lighter-er` | #fff2f2 |
+| Shapes / Lightest MG | `--ds-paint-shapes-lightest-mg` | #fbf7fc |
+| Shapes / Lightest BR | `--ds-paint-shapes-lightest-br` | #f7e9e3 |
+| Shapes / Lightest DB | `--ds-paint-shapes-lightest-db` | #f9fafb |
+| Stroke / Default | `--ds-paint-stroke-default` | #e0e0e0 |
+| Stroke / Hover | `--ds-paint-stroke-hover` | #9e9e9e |
+| Stroke / Disable | `--ds-paint-stroke-disable` | #ebebeb |
+| Stroke / Primary | `--ds-paint-stroke-primary` | #448aff |
+| Stroke / Secondary | `--ds-paint-stroke-secondary` | #14b456 |
+| Stroke / Warning | `--ds-paint-stroke-warning` | #ffab40 |
+| Stroke / Error | `--ds-paint-stroke-error` | #ff5252 |
+
 
 ## Компоненты
 
@@ -406,10 +534,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-autocomplete-form__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -536,7 +664,7 @@
 - Размеры и параметры:
     - ширина: по контенту (hug)
     - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2-5x) var(--ds-size-2-5x)`
-    - тень: `0.0px 0.0px 4.0px 0px #2121211f`
+    - тень: `var(--ds-shadow-shadows-01-dp-sl)`
 - Модификаторы (что меняет каждый):
     - `--btn-28`: внутренние отступы `var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x)`, фон `var(--ds-color-chips-input-focus-border-color)`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
     - `--btn-36`: фон `var(--ds-color-expansion-panel-block-collaps-content-background)`, color `var(--ds-palette-neutral-950)`
@@ -555,7 +683,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2-5x) var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -618,10 +746,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-button-toggle__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-chips-input-focus-border-color);
   white-space: nowrap;
 }
@@ -789,9 +917,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-checkbox-label-text-support-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-checkbox-label--normal.ds-checkbox-label--deselected {
@@ -870,10 +999,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -915,9 +1044,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-chips-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-chips__close {
@@ -1014,10 +1144,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-group__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -1081,10 +1211,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -1199,10 +1329,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input-2__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -1313,10 +1443,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input-cell__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -1815,10 +1945,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-control-panel__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -1850,9 +1980,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-primary);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-control-panel__button-icon-group {
@@ -1921,10 +2052,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-control-panel-2__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -1956,9 +2087,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-primary);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-control-panel-2__button-icon-group {
@@ -2018,10 +2150,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-datepicker__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -2115,10 +2247,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-dialog-content__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-medium-size);
+  line-height: var(--ds-font-body-m-16-normal-medium-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-medium-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -2184,10 +2316,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-dialog-footer__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -2227,7 +2359,7 @@
   padding: var(--ds-button-m-size-pad-left) var(--ds-button-m-size-pad-right) var(--ds-button-m-size-pad-top) var(--ds-button-m-size-pad-bottom);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-button-accent-filled-default-background);
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 ```
 </details>
@@ -2264,10 +2396,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-dialog-header__label {
-  font-size: var(--ds-typography-font-size-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-7x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-header-s-20-normal-medium-size);
+  line-height: var(--ds-font-header-s-20-normal-medium-line);
+  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
+  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -2296,9 +2428,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-dialog-header-desc-color);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-dialog-header__divider {
@@ -2324,7 +2457,7 @@
     - ширина: по контенту (hug)
     - скругление: `var(--ds-size-3x)`
     - фон: `var(--ds-color-dialog-background)`
-    - тень: `0.0px 0.0px 28.0px 0px #2121211f`
+    - тень: `var(--ds-shadow-shadows-12-dp-m)`
 - Разметка:
 
 ```html
@@ -2349,15 +2482,15 @@
   flex-direction: column;
   border-radius: var(--ds-size-3x);
   background: var(--ds-color-dialog-background);
-  box-shadow: 0.0px 0.0px 28.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-12-dp-m);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-dialog-view__label {
-  font-size: var(--ds-typography-font-size-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-7x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-header-s-20-normal-medium-size);
+  line-height: var(--ds-font-header-s-20-normal-medium-line);
+  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
+  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -2460,10 +2593,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -2559,10 +2692,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-form-field__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -2678,10 +2811,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-menu__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -2775,10 +2908,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-select__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -2867,10 +3000,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-sidenav__label {
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-3x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-m-10-normal-medium-size);
+  line-height: var(--ds-font-caption-m-10-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-m-10-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-m-10-normal-medium-weight);
+  text-transform: capitalize;
   color: var(--ds-color-chips-input-focus-border-color);
   white-space: nowrap;
 }
@@ -2946,10 +3080,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-step__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -3048,10 +3182,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-elements__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -3077,9 +3211,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-primary);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-elements--cell.ds-elements--today:disabled {
@@ -3248,10 +3383,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-elements-2__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -3335,10 +3470,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-expansion-content__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
   white-space: nowrap;
 }
@@ -3379,10 +3514,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-expansion-group-panel__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
   white-space: nowrap;
 }
@@ -3525,7 +3660,7 @@
 - Размеры и параметры:
     - ширина: по контенту (hug)
     - скругление: `var(--ds-size-2x)`
-    - тень: `0.0px 0.0px 16.0px 0px #2121211f`
+    - тень: `var(--ds-shadow-shadows-08-dp-s)`
 - Модификаторы (что меняет каждый):
     - `--default`: направление `column`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
     - `--down`: направление `column`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
@@ -3551,16 +3686,16 @@
 .ds-hint-container {
   display: flex;
   align-items: center;
-  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-08-dp-s);
   border-radius: var(--ds-size-2x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-hint-container__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -3670,10 +3805,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-hint-content__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -3766,10 +3901,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-hint-footer__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -3793,9 +3928,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-hint-footer-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
 }
 .ds-hint-footer__button-group {
@@ -3853,10 +3989,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-hint-header__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -3891,9 +4027,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-hint-header-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
 }
 .ds-hint-header__clear {
@@ -4028,10 +4165,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-cell__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
   white-space: nowrap;
 }
@@ -4115,10 +4252,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-datepicker__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
   white-space: nowrap;
 }
@@ -4205,10 +4342,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-for-number__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-input-filled-default-input-text-color);
   white-space: nowrap;
 }
@@ -4302,10 +4439,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-number__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
   white-space: nowrap;
 }
@@ -4412,10 +4549,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-number-but-icon__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
   white-space: nowrap;
 }
@@ -4449,7 +4586,7 @@
   padding: var(--ds-button-icon-m-size-pad-left) var(--ds-button-icon-m-size-pad-right) var(--ds-button-icon-m-size-pad-top) var(--ds-button-icon-m-size-pad-bottom);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-button-icon-neutral-filled-default-background);
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 .ds-input-number-but-icon__text {
   height: var(--ds-size-4x);
@@ -4460,9 +4597,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-form-field-filled-default-support-text-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
 }
 ```
@@ -4500,10 +4638,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-timepicker__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
   white-space: nowrap;
 }
@@ -4585,10 +4723,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-list-container__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -4692,10 +4830,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-list-item__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -4733,27 +4871,30 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-list-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-list-item__text {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-list-item-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-list-item__label-down {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-list-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-list-item__element-right {
@@ -4867,7 +5008,7 @@
     - промежуток между элементами: `var(--ds-menu-gap)`
     - скругление: `var(--ds-size-2x)`
     - фон: `var(--ds-color-menu-background)`
-    - тень: `0.0px 0.0px 16.0px 0px #2121211f`
+    - тень: `var(--ds-shadow-shadows-08-dp-s)`
 - Модификаторы (что меняет каждый):
     - `--container`: color `var(--ds-color-chips-input-error-text-placeholder-color)`
 - Разметка:
@@ -4898,15 +5039,15 @@
   padding: 0 0 var(--ds-menu-pad-top) var(--ds-menu-pad-bottom);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-menu-background);
-  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-menu-container__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-text-placeholder-color);
   white-space: nowrap;
 }
@@ -5024,10 +5165,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-menu-item__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -5065,27 +5206,30 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-menu-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-menu-item__text {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-menu-item-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-menu-item__label-down {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-menu-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-menu-item__element-right {
@@ -5371,9 +5515,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-radio-button-label-text-support-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-radio-button-label--normal.ds-radio-button-label--deselected {
@@ -5515,7 +5660,7 @@
   padding: var(--ds-button-icon-s-size-pad-left) var(--ds-button-icon-s-size-pad-right) var(--ds-button-icon-s-size-pad-top) var(--ds-button-icon-s-size-pad-bottom);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-button-icon-neutral-filled-default-background);
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 .ds-scroll-tabs__icon-size {
   height: var(--ds-size-5x);
@@ -5573,10 +5718,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-search__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-error-text-placeholder-color);
   white-space: nowrap;
 }
@@ -5605,9 +5750,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-search-default-text-color);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-error-text-placeholder-color);
 }
 .ds-search__right-icon {
@@ -5669,7 +5815,7 @@
     - промежуток между элементами: `var(--ds-space-0)`
     - скругление: `var(--ds-size-3x)`
     - фон: `var(--ds-color-menu-background)`
-    - тень: `0.0px 0.0px 16.0px 0px #2121211f`
+    - тень: `var(--ds-shadow-shadows-08-dp-s)`
 - Модификаторы (что меняет каждый):
     - `--container`: color `var(--ds-color-chips-input-error-text-placeholder-color)`
 - Разметка:
@@ -5701,15 +5847,15 @@
   padding: 0 0 var(--ds-menu-pad-top) var(--ds-menu-pad-bottom);
   border-radius: var(--ds-size-3x);
   background: var(--ds-color-menu-background);
-  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-select-container__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-text-placeholder-color);
   white-space: nowrap;
 }
@@ -5829,10 +5975,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-select-cell__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -5926,10 +6072,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-select-form__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -6053,10 +6199,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-select-item__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -6096,27 +6242,31 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-select-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-select-item__subtitle {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-select-item-text-label-color);
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-3x);
+  font-size: var(--ds-font-caption-m-10-normal-medium-size);
+  line-height: var(--ds-font-caption-m-10-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-m-10-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-m-10-normal-medium-weight);
+  text-transform: capitalize;
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-select-item__label-down {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-select-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-select-item__element-right {
@@ -6192,10 +6342,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-control__label {
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-3x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-m-10-normal-regular-size);
+  line-height: var(--ds-font-caption-m-10-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-m-10-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-m-10-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -6232,9 +6382,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-sidenav-control-text-color);
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-3x);
+  font-size: var(--ds-font-caption-m-10-normal-regular-size);
+  line-height: var(--ds-font-caption-m-10-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-m-10-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-m-10-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
 }
 .ds-sidenav-control__divider {
@@ -6299,10 +6450,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-footer__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -6328,9 +6479,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-sidenav-footer-l2-text-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-sidenav-footer--l2.ds-sidenav-footer--expanded {
@@ -6386,10 +6538,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-header__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-medium-size);
+  line-height: var(--ds-font-body-m-16-normal-medium-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-medium-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -6485,10 +6637,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-item__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -6496,9 +6648,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-sidenav-item-l3-text-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-sidenav-item--l3.ds-sidenav-item--expanded:hover {
@@ -6559,7 +6712,7 @@
 - Размеры и параметры:
     - ширина: по контенту (hug)
     - скругление: `var(--ds-size-2x)`
-    - тень: `0.0px 0.0px 16.0px 0px #2121211f`
+    - тень: `var(--ds-shadow-shadows-08-dp-s)`
 - Модификаторы (что меняет каждый):
     - `--complex`: фон `var(--ds-color-snackbar-complex-dark-background)`, color `var(--ds-color-snackbar-dark-text-color)`, фон `var(--ds-color-snackbar-complex-light-background)`, color `var(--ds-color-snackbar-light-text-color)`
     - `--single`: фон `var(--ds-color-snackbar-complex-dark-background)`, color `var(--ds-color-snackbar-dark-text-color)`, фон `var(--ds-color-snackbar-complex-light-background)`, color `var(--ds-color-snackbar-light-text-color)`
@@ -6584,15 +6737,15 @@
   display: flex;
   flex-direction: column;
   border-radius: var(--ds-size-2x);
-  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-snackbar__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-snackbar-dark-text-color);
   white-space: nowrap;
 }
@@ -6737,10 +6890,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-status__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-medium-size);
+  line-height: var(--ds-font-caption-l-12-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-medium-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -6776,9 +6929,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-status-neutral-filled-text-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-medium-size);
+  line-height: var(--ds-font-caption-l-12-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-medium-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-status__element-right {
@@ -7021,10 +7175,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-chips-input__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -7121,10 +7275,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-content-cell__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-tab-innactive-icon-color);
   white-space: nowrap;
 }
@@ -7200,10 +7354,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-content-row__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-tab-innactive-icon-color);
   white-space: nowrap;
 }
@@ -7229,7 +7383,7 @@
     - высота: `65px` (фикс.)
     - ширина: по контенту (hug)
     - фон: `var(--ds-color-table-footer-background)`
-    - тень: `0.0px 0.0px 4.0px 0px #2121211f`
+    - тень: `var(--ds-shadow-shadows-01-dp-sl)`
 - Модификаторы (что меняет каждый):
     - `--default`: color `var(--ds-color-tab-innactive-counter-text-color)`
 - Разметка:
@@ -7250,15 +7404,15 @@
   display: flex;
   flex-direction: column;
   background: var(--ds-color-table-footer-background);
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-footer__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-tab-innactive-counter-text-color);
   white-space: nowrap;
 }
@@ -7322,10 +7476,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-header-cell__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-tab-innactive-icon-color);
   white-space: nowrap;
 }
@@ -7400,10 +7554,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-header-row__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-tab-innactive-icon-color);
   white-space: nowrap;
 }
@@ -7455,10 +7609,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-text-ui__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -7496,27 +7650,30 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-ui-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-text-ui__list-item {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-ui-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-text-ui__label-down {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-ui-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-text-ui__element-right {
@@ -7586,10 +7743,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-textarea__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -7699,7 +7856,7 @@
     - скругление: `var(--ds-size-3x)`
     - рамка: `1px solid var(--ds-color-stroke-default)`
     - фон: `var(--ds-color-brand-neutral-default)`
-    - тень: `0.0px 0.0px 16.0px 0px #2121211f`
+    - тень: `var(--ds-shadow-shadows-08-dp-s)`
 - Модификаторы (что меняет каждый):
     - `--time-grid`: направление `column`, align-items `center`, color `var(--ds-color-chips-input-error-cursor-color)`
     - `--time-line`: направление `row`, color `var(--ds-color-chips-input-error-cursor-color)`
@@ -7723,15 +7880,15 @@
   border-radius: var(--ds-size-3x);
   background: var(--ds-color-brand-neutral-default);
   border: 1px solid var(--ds-color-stroke-default);
-  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-timepicker__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -7804,10 +7961,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-title-variant__label {
-  font-size: var(--ds-typography-font-size-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-7x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-header-s-20-normal-medium-size);
+  line-height: var(--ds-font-header-s-20-normal-medium-line);
+  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
+  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -7822,36 +7979,40 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-super-dark);
-  font-size: var(--ds-typography-font-size-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-7x);
+  font-size: var(--ds-font-header-s-20-normal-medium-size);
+  line-height: var(--ds-font-header-s-20-normal-medium-line);
+  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
+  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-title-variant__body-6 {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-darker);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-title-variant__body-7 {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-darker);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-title-variant__body-5 {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-darker);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-title-variant__mode {
@@ -7903,10 +8064,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-toggle-buttons__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-focus-border-color);
   white-space: nowrap;
 }
@@ -11110,6 +11271,539 @@ CSS-правила компонента:
   --ds-shadow-xl: 0px 12px 16px 0px rgba(33, 33, 33, 0.161), 0px 0px 32px 0px rgba(33, 33, 33, 0.161);
 }
 
+/* ==== СТИЛИ FIGMA (авто: gen_style_tokens.py) ==== */
+/* Стили Figma (текст, тени, цвета) — выгрузка плагина v2. Не править руками. */
+:root {
+  /* --- Типографика (текстовые стили) --- */
+  --ds-font-header-l-34-normal-regular: 400 34px/40px "Roboto";
+  --ds-font-header-l-34-normal-regular-size: 34px;
+  --ds-font-header-l-34-normal-regular-line: 40px;
+  --ds-font-header-l-34-normal-regular-spacing: 0px;
+  --ds-font-header-l-34-normal-regular-weight: 400;
+  --ds-font-header-l-34-normal-medium: 500 34px/40px "Roboto";
+  --ds-font-header-l-34-normal-medium-size: 34px;
+  --ds-font-header-l-34-normal-medium-line: 40px;
+  --ds-font-header-l-34-normal-medium-spacing: 0px;
+  --ds-font-header-l-34-normal-medium-weight: 500;
+  --ds-font-header-l-34-caps-regular: 400 34px/40px "Roboto";
+  --ds-font-header-l-34-caps-regular-size: 34px;
+  --ds-font-header-l-34-caps-regular-line: 40px;
+  --ds-font-header-l-34-caps-regular-spacing: 0px;
+  --ds-font-header-l-34-caps-regular-weight: 400;
+  --ds-font-header-l-34-caps-medium: 500 34px/40px "Roboto";
+  --ds-font-header-l-34-caps-medium-size: 34px;
+  --ds-font-header-l-34-caps-medium-line: 40px;
+  --ds-font-header-l-34-caps-medium-spacing: 0px;
+  --ds-font-header-l-34-caps-medium-weight: 500;
+  --ds-font-header-m-24-normal-regular: 400 24px/32px "Roboto";
+  --ds-font-header-m-24-normal-regular-size: 24px;
+  --ds-font-header-m-24-normal-regular-line: 32px;
+  --ds-font-header-m-24-normal-regular-spacing: 0.5px;
+  --ds-font-header-m-24-normal-regular-weight: 400;
+  --ds-font-header-m-24-normal-medium: 500 24px/32px "Roboto";
+  --ds-font-header-m-24-normal-medium-size: 24px;
+  --ds-font-header-m-24-normal-medium-line: 32px;
+  --ds-font-header-m-24-normal-medium-spacing: 0.5px;
+  --ds-font-header-m-24-normal-medium-weight: 500;
+  --ds-font-header-m-24-caps-regular: 400 24px/32px "Roboto";
+  --ds-font-header-m-24-caps-regular-size: 24px;
+  --ds-font-header-m-24-caps-regular-line: 32px;
+  --ds-font-header-m-24-caps-regular-spacing: 0.5px;
+  --ds-font-header-m-24-caps-regular-weight: 400;
+  --ds-font-header-m-24-caps-medium: 500 24px/32px "Roboto";
+  --ds-font-header-m-24-caps-medium-size: 24px;
+  --ds-font-header-m-24-caps-medium-line: 32px;
+  --ds-font-header-m-24-caps-medium-spacing: 0.5px;
+  --ds-font-header-m-24-caps-medium-weight: 500;
+  --ds-font-header-s-20-normal-regular: 400 20px/28px "Roboto";
+  --ds-font-header-s-20-normal-regular-size: 20px;
+  --ds-font-header-s-20-normal-regular-line: 28px;
+  --ds-font-header-s-20-normal-regular-spacing: 0.5px;
+  --ds-font-header-s-20-normal-regular-weight: 400;
+  --ds-font-header-s-20-normal-medium: 500 20px/28px "Roboto";
+  --ds-font-header-s-20-normal-medium-size: 20px;
+  --ds-font-header-s-20-normal-medium-line: 28px;
+  --ds-font-header-s-20-normal-medium-spacing: 0.5px;
+  --ds-font-header-s-20-normal-medium-weight: 500;
+  --ds-font-header-s-20-caps-regular: 400 20px/28px "Roboto";
+  --ds-font-header-s-20-caps-regular-size: 20px;
+  --ds-font-header-s-20-caps-regular-line: 28px;
+  --ds-font-header-s-20-caps-regular-spacing: 0.5px;
+  --ds-font-header-s-20-caps-regular-weight: 400;
+  --ds-font-header-s-20-caps-medium: 500 20px/28px "Roboto";
+  --ds-font-header-s-20-caps-medium-size: 20px;
+  --ds-font-header-s-20-caps-medium-line: 28px;
+  --ds-font-header-s-20-caps-medium-spacing: 0.5px;
+  --ds-font-header-s-20-caps-medium-weight: 500;
+  --ds-font-body-l-18-normal-regular: 400 18px/24px "Roboto";
+  --ds-font-body-l-18-normal-regular-size: 18px;
+  --ds-font-body-l-18-normal-regular-line: 24px;
+  --ds-font-body-l-18-normal-regular-spacing: 0.5px;
+  --ds-font-body-l-18-normal-regular-weight: 400;
+  --ds-font-body-l-18-normal-medium: 500 18px/24px "Roboto";
+  --ds-font-body-l-18-normal-medium-size: 18px;
+  --ds-font-body-l-18-normal-medium-line: 24px;
+  --ds-font-body-l-18-normal-medium-spacing: 0.5px;
+  --ds-font-body-l-18-normal-medium-weight: 500;
+  --ds-font-body-l-18-caps-regular: 400 18px/24px "Roboto";
+  --ds-font-body-l-18-caps-regular-size: 18px;
+  --ds-font-body-l-18-caps-regular-line: 24px;
+  --ds-font-body-l-18-caps-regular-spacing: 0.5px;
+  --ds-font-body-l-18-caps-regular-weight: 400;
+  --ds-font-body-l-18-caps-medium: 500 18px/24px "Roboto";
+  --ds-font-body-l-18-caps-medium-size: 18px;
+  --ds-font-body-l-18-caps-medium-line: 24px;
+  --ds-font-body-l-18-caps-medium-spacing: 0.5px;
+  --ds-font-body-l-18-caps-medium-weight: 500;
+  --ds-font-body-m-16-normal-regular: 400 16px/24px "Roboto";
+  --ds-font-body-m-16-normal-regular-size: 16px;
+  --ds-font-body-m-16-normal-regular-line: 24px;
+  --ds-font-body-m-16-normal-regular-spacing: 0.5px;
+  --ds-font-body-m-16-normal-regular-weight: 400;
+  --ds-font-body-m-16-normal-medium: 500 16px/24px "Roboto";
+  --ds-font-body-m-16-normal-medium-size: 16px;
+  --ds-font-body-m-16-normal-medium-line: 24px;
+  --ds-font-body-m-16-normal-medium-spacing: 0.5px;
+  --ds-font-body-m-16-normal-medium-weight: 500;
+  --ds-font-body-m-16-caps-regular: 400 16px/24px "Roboto";
+  --ds-font-body-m-16-caps-regular-size: 16px;
+  --ds-font-body-m-16-caps-regular-line: 24px;
+  --ds-font-body-m-16-caps-regular-spacing: 0.5px;
+  --ds-font-body-m-16-caps-regular-weight: 400;
+  --ds-font-body-m-16-caps-medium: 500 16px/24px "Roboto";
+  --ds-font-body-m-16-caps-medium-size: 16px;
+  --ds-font-body-m-16-caps-medium-line: 24px;
+  --ds-font-body-m-16-caps-medium-spacing: 0.5px;
+  --ds-font-body-m-16-caps-medium-weight: 500;
+  --ds-font-body-s-14-normal-regular: 400 14px/20px "Roboto";
+  --ds-font-body-s-14-normal-regular-size: 14px;
+  --ds-font-body-s-14-normal-regular-line: 20px;
+  --ds-font-body-s-14-normal-regular-spacing: 0.5px;
+  --ds-font-body-s-14-normal-regular-weight: 400;
+  --ds-font-body-s-14-normal-medium: 500 14px/20px "Roboto";
+  --ds-font-body-s-14-normal-medium-size: 14px;
+  --ds-font-body-s-14-normal-medium-line: 20px;
+  --ds-font-body-s-14-normal-medium-spacing: 0.5px;
+  --ds-font-body-s-14-normal-medium-weight: 500;
+  --ds-font-body-s-14-caps-regular: 400 14px/20px "Roboto";
+  --ds-font-body-s-14-caps-regular-size: 14px;
+  --ds-font-body-s-14-caps-regular-line: 20px;
+  --ds-font-body-s-14-caps-regular-spacing: 0.5px;
+  --ds-font-body-s-14-caps-regular-weight: 400;
+  --ds-font-body-s-14-caps-medium: 500 14px/20px "Roboto";
+  --ds-font-body-s-14-caps-medium-size: 14px;
+  --ds-font-body-s-14-caps-medium-line: 20px;
+  --ds-font-body-s-14-caps-medium-spacing: 0.5px;
+  --ds-font-body-s-14-caps-medium-weight: 500;
+  --ds-font-caption-l-12-normal-regular: 400 12px/16px "Roboto";
+  --ds-font-caption-l-12-normal-regular-size: 12px;
+  --ds-font-caption-l-12-normal-regular-line: 16px;
+  --ds-font-caption-l-12-normal-regular-spacing: 0.5px;
+  --ds-font-caption-l-12-normal-regular-weight: 400;
+  --ds-font-caption-l-12-normal-medium: 500 12px/16px "Roboto";
+  --ds-font-caption-l-12-normal-medium-size: 12px;
+  --ds-font-caption-l-12-normal-medium-line: 16px;
+  --ds-font-caption-l-12-normal-medium-spacing: 0.5px;
+  --ds-font-caption-l-12-normal-medium-weight: 500;
+  --ds-font-caption-l-12-caps-regular: 400 12px/16px "Roboto";
+  --ds-font-caption-l-12-caps-regular-size: 12px;
+  --ds-font-caption-l-12-caps-regular-line: 16px;
+  --ds-font-caption-l-12-caps-regular-spacing: 0.5px;
+  --ds-font-caption-l-12-caps-regular-weight: 400;
+  --ds-font-caption-l-12-caps-medium: 500 12px/16px "Roboto";
+  --ds-font-caption-l-12-caps-medium-size: 12px;
+  --ds-font-caption-l-12-caps-medium-line: 16px;
+  --ds-font-caption-l-12-caps-medium-spacing: 0.5px;
+  --ds-font-caption-l-12-caps-medium-weight: 500;
+  --ds-font-caption-m-10-normal-regular: 400 10px/12px "Roboto";
+  --ds-font-caption-m-10-normal-regular-size: 10px;
+  --ds-font-caption-m-10-normal-regular-line: 12px;
+  --ds-font-caption-m-10-normal-regular-spacing: 0.5px;
+  --ds-font-caption-m-10-normal-regular-weight: 400;
+  --ds-font-caption-m-10-normal-medium: 500 10px/12px "Roboto";
+  --ds-font-caption-m-10-normal-medium-size: 10px;
+  --ds-font-caption-m-10-normal-medium-line: 12px;
+  --ds-font-caption-m-10-normal-medium-spacing: 0.5px;
+  --ds-font-caption-m-10-normal-medium-weight: 500;
+  --ds-font-caption-m-10-caps-regular: 400 10px/12px "Roboto";
+  --ds-font-caption-m-10-caps-regular-size: 10px;
+  --ds-font-caption-m-10-caps-regular-line: 12px;
+  --ds-font-caption-m-10-caps-regular-spacing: 0.5px;
+  --ds-font-caption-m-10-caps-regular-weight: 400;
+  --ds-font-caption-m-10-caps-medium: 500 10px/12px "Roboto";
+  --ds-font-caption-m-10-caps-medium-size: 10px;
+  --ds-font-caption-m-10-caps-medium-line: 12px;
+  --ds-font-caption-m-10-caps-medium-spacing: 0.5px;
+  --ds-font-caption-m-10-caps-medium-weight: 500;
+  --ds-font-caption-s-8-normal-regular: 400 8px/10px "Roboto";
+  --ds-font-caption-s-8-normal-regular-size: 8px;
+  --ds-font-caption-s-8-normal-regular-line: 10px;
+  --ds-font-caption-s-8-normal-regular-spacing: 0.5px;
+  --ds-font-caption-s-8-normal-regular-weight: 400;
+  --ds-font-caption-s-8-normal-medium: 500 8px/10px "Roboto";
+  --ds-font-caption-s-8-normal-medium-size: 8px;
+  --ds-font-caption-s-8-normal-medium-line: 10px;
+  --ds-font-caption-s-8-normal-medium-spacing: 0.5px;
+  --ds-font-caption-s-8-normal-medium-weight: 500;
+  --ds-font-caption-s-8-caps-regular: 400 8px/10px "Roboto";
+  --ds-font-caption-s-8-caps-regular-size: 8px;
+  --ds-font-caption-s-8-caps-regular-line: 10px;
+  --ds-font-caption-s-8-caps-regular-spacing: 0.5px;
+  --ds-font-caption-s-8-caps-regular-weight: 400;
+  --ds-font-caption-s-8-caps-medium: 500 8px/10px "Roboto";
+  --ds-font-caption-s-8-caps-medium-size: 8px;
+  --ds-font-caption-s-8-caps-medium-line: 10px;
+  --ds-font-caption-s-8-caps-medium-spacing: 0.5px;
+  --ds-font-caption-s-8-caps-medium-weight: 500;
+  /* --- Тени (эффект-стили) --- */
+  --ds-shadow-shadows-none: 0px 2px 0px 0px #ffffff;
+  --ds-shadow-shadows-01-dp-sl: 0px 0px 4px 0px rgba(33, 33, 33, 0.12), 0px 2px 2px 0px rgba(33, 33, 33, 0.04);
+  --ds-shadow-shadows-08-dp-s: 0px 0px 16px 0px rgba(33, 33, 33, 0.12), 0px 4px 6px 0px rgba(33, 33, 33, 0.1);
+  --ds-shadow-shadows-12-dp-m: 0px 0px 28px 0px rgba(33, 33, 33, 0.12), 0px 10px 24px 0px rgba(33, 33, 33, 0.12);
+  --ds-shadow-shadows-24-dp-xl: 0px 0px 32px 0px rgba(33, 33, 33, 0.16), 0px 12px 16px 0px rgba(33, 33, 33, 0.16);
+  /* --- Цветовые стили --- */
+  --ds-paint-surface-default: #ffffff;
+  --ds-paint-surface-default-v2: #f8f9fc;
+  --ds-paint-surface-hover: #f5f5f5;
+  --ds-paint-surface-selected: #ebebeb;
+  --ds-paint-surface-press: #e0e0e0;
+  --ds-paint-surface-disable: #e0e0e0;
+  --ds-paint-surface-snacktooltip: #424242;
+  --ds-paint-surface-sidebar: #f8f9fc;
+  --ds-paint-surface-sidebar-selected: #f0f5ff;
+  --ds-paint-surface-sidebar-active: #a8c9ff;
+  --ds-paint-table-surfase-default: #ffffff;
+  --ds-paint-table-surfase-hover: #f5f5f5;
+  --ds-paint-table-surfase-selected: #ebebeb;
+  --ds-paint-table-surfase-group: #ebebeb;
+  --ds-paint-table-surfase-head: #f0f5ff;
+  --ds-paint-table-surfase-head-group: #a8c9ff;
+  --ds-paint-text-primary: #333333;
+  --ds-paint-text-inversive: #ffffff;
+  --ds-paint-text-caption: #616161;
+  --ds-paint-text-placeholder: #d6d6d6;
+  --ds-paint-text-disable: #9e9e9e;
+  --ds-paint-text-accent: #448aff;
+  --ds-paint-text-positive: #14b456;
+  --ds-paint-text-warning: #ffab40;
+  --ds-paint-text-negative: #ff5252;
+  --ds-paint-button-neutral-default: #ffffff;
+  --ds-paint-button-neutral-hover: #f5f5f5;
+  --ds-paint-button-neutral-press: #ebebeb;
+  --ds-paint-button-neutral-disable: #ebebeb;
+  --ds-paint-button-accent-default: #448aff;
+  --ds-paint-button-accent-hover: #3969d5;
+  --ds-paint-button-accent-press: #2651b5;
+  --ds-paint-button-positive-default: #14b456;
+  --ds-paint-button-positive-hover: #0f852c;
+  --ds-paint-button-positive-press: #0a571a;
+  --ds-paint-button-warning-default: #ffab40;
+  --ds-paint-button-warning-hover: #ea7806;
+  --ds-paint-button-warning-press: #994000;
+  --ds-paint-button-negative-default: #ff5252;
+  --ds-paint-button-negative-hover: #de1a12;
+  --ds-paint-button-negative-press: #7f0f0a;
+  --ds-paint-icon-primary: #616161;
+  --ds-paint-icon-inversive: #ffffff;
+  --ds-paint-icon-disable: #9e9e9e;
+  --ds-paint-icon-accent: #448aff;
+  --ds-paint-icon-positive: #14b456;
+  --ds-paint-icon-warning: #ea7806;
+  --ds-paint-icon-negative: #ff5252;
+  --ds-paint-shapes-default: #ffffff;
+  --ds-paint-shapes-superlight-nt: #f5f5f5;
+  --ds-paint-shapes-lightest-nt: #ebebeb;
+  --ds-paint-shapes-lighter-nt: #e0e0e0;
+  --ds-paint-shapes-lighter-pr: #f8f9fc;
+  --ds-paint-shapes-lighter-sc: #ebfbf2;
+  --ds-paint-shapes-lighter-wr: #fff9f0;
+  --ds-paint-shapes-lighter-er: #fff2f2;
+  --ds-paint-shapes-lightest-mg: #fbf7fc;
+  --ds-paint-shapes-lightest-br: #f7e9e3;
+  --ds-paint-shapes-lightest-db: #f9fafb;
+  --ds-paint-stroke-default: #e0e0e0;
+  --ds-paint-stroke-hover: #9e9e9e;
+  --ds-paint-stroke-disable: #ebebeb;
+  --ds-paint-stroke-primary: #448aff;
+  --ds-paint-stroke-secondary: #14b456;
+  --ds-paint-stroke-warning: #ffab40;
+  --ds-paint-stroke-error: #ff5252;
+}
+
+/* Классы типографики: применяются как есть, без хардкода размеров */
+.ds-text-header-l-34-normal-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-header-l-34-normal-regular-size);
+  line-height: var(--ds-font-header-l-34-normal-regular-line);
+  letter-spacing: var(--ds-font-header-l-34-normal-regular-spacing);
+  font-weight: var(--ds-font-header-l-34-normal-regular-weight);
+}
+.ds-text-header-l-34-normal-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-header-l-34-normal-medium-size);
+  line-height: var(--ds-font-header-l-34-normal-medium-line);
+  letter-spacing: var(--ds-font-header-l-34-normal-medium-spacing);
+  font-weight: var(--ds-font-header-l-34-normal-medium-weight);
+}
+.ds-text-header-l-34-caps-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-header-l-34-caps-regular-size);
+  line-height: var(--ds-font-header-l-34-caps-regular-line);
+  letter-spacing: var(--ds-font-header-l-34-caps-regular-spacing);
+  font-weight: var(--ds-font-header-l-34-caps-regular-weight);
+  text-transform: uppercase;
+}
+.ds-text-header-l-34-caps-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-header-l-34-caps-medium-size);
+  line-height: var(--ds-font-header-l-34-caps-medium-line);
+  letter-spacing: var(--ds-font-header-l-34-caps-medium-spacing);
+  font-weight: var(--ds-font-header-l-34-caps-medium-weight);
+  text-transform: uppercase;
+}
+.ds-text-header-m-24-normal-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-header-m-24-normal-regular-size);
+  line-height: var(--ds-font-header-m-24-normal-regular-line);
+  letter-spacing: var(--ds-font-header-m-24-normal-regular-spacing);
+  font-weight: var(--ds-font-header-m-24-normal-regular-weight);
+}
+.ds-text-header-m-24-normal-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-header-m-24-normal-medium-size);
+  line-height: var(--ds-font-header-m-24-normal-medium-line);
+  letter-spacing: var(--ds-font-header-m-24-normal-medium-spacing);
+  font-weight: var(--ds-font-header-m-24-normal-medium-weight);
+}
+.ds-text-header-m-24-caps-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-header-m-24-caps-regular-size);
+  line-height: var(--ds-font-header-m-24-caps-regular-line);
+  letter-spacing: var(--ds-font-header-m-24-caps-regular-spacing);
+  font-weight: var(--ds-font-header-m-24-caps-regular-weight);
+  text-transform: uppercase;
+}
+.ds-text-header-m-24-caps-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-header-m-24-caps-medium-size);
+  line-height: var(--ds-font-header-m-24-caps-medium-line);
+  letter-spacing: var(--ds-font-header-m-24-caps-medium-spacing);
+  font-weight: var(--ds-font-header-m-24-caps-medium-weight);
+  text-transform: uppercase;
+}
+.ds-text-header-s-20-normal-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-header-s-20-normal-regular-size);
+  line-height: var(--ds-font-header-s-20-normal-regular-line);
+  letter-spacing: var(--ds-font-header-s-20-normal-regular-spacing);
+  font-weight: var(--ds-font-header-s-20-normal-regular-weight);
+}
+.ds-text-header-s-20-normal-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-header-s-20-normal-medium-size);
+  line-height: var(--ds-font-header-s-20-normal-medium-line);
+  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
+  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
+}
+.ds-text-header-s-20-caps-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-header-s-20-caps-regular-size);
+  line-height: var(--ds-font-header-s-20-caps-regular-line);
+  letter-spacing: var(--ds-font-header-s-20-caps-regular-spacing);
+  font-weight: var(--ds-font-header-s-20-caps-regular-weight);
+  text-transform: uppercase;
+}
+.ds-text-header-s-20-caps-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-header-s-20-caps-medium-size);
+  line-height: var(--ds-font-header-s-20-caps-medium-line);
+  letter-spacing: var(--ds-font-header-s-20-caps-medium-spacing);
+  font-weight: var(--ds-font-header-s-20-caps-medium-weight);
+  text-transform: uppercase;
+}
+.ds-text-body-l-18-normal-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-body-l-18-normal-regular-size);
+  line-height: var(--ds-font-body-l-18-normal-regular-line);
+  letter-spacing: var(--ds-font-body-l-18-normal-regular-spacing);
+  font-weight: var(--ds-font-body-l-18-normal-regular-weight);
+}
+.ds-text-body-l-18-normal-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-body-l-18-normal-medium-size);
+  line-height: var(--ds-font-body-l-18-normal-medium-line);
+  letter-spacing: var(--ds-font-body-l-18-normal-medium-spacing);
+  font-weight: var(--ds-font-body-l-18-normal-medium-weight);
+}
+.ds-text-body-l-18-caps-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-body-l-18-caps-regular-size);
+  line-height: var(--ds-font-body-l-18-caps-regular-line);
+  letter-spacing: var(--ds-font-body-l-18-caps-regular-spacing);
+  font-weight: var(--ds-font-body-l-18-caps-regular-weight);
+  text-transform: uppercase;
+}
+.ds-text-body-l-18-caps-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-body-l-18-caps-medium-size);
+  line-height: var(--ds-font-body-l-18-caps-medium-line);
+  letter-spacing: var(--ds-font-body-l-18-caps-medium-spacing);
+  font-weight: var(--ds-font-body-l-18-caps-medium-weight);
+  text-transform: uppercase;
+}
+.ds-text-body-m-16-normal-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
+}
+.ds-text-body-m-16-normal-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-body-m-16-normal-medium-size);
+  line-height: var(--ds-font-body-m-16-normal-medium-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-medium-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-medium-weight);
+}
+.ds-text-body-m-16-caps-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-body-m-16-caps-regular-size);
+  line-height: var(--ds-font-body-m-16-caps-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-caps-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-caps-regular-weight);
+  text-transform: uppercase;
+}
+.ds-text-body-m-16-caps-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-body-m-16-caps-medium-size);
+  line-height: var(--ds-font-body-m-16-caps-medium-line);
+  letter-spacing: var(--ds-font-body-m-16-caps-medium-spacing);
+  font-weight: var(--ds-font-body-m-16-caps-medium-weight);
+  text-transform: uppercase;
+}
+.ds-text-body-s-14-normal-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+}
+.ds-text-body-s-14-normal-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
+}
+.ds-text-body-s-14-caps-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-body-s-14-caps-regular-size);
+  line-height: var(--ds-font-body-s-14-caps-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-caps-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-caps-regular-weight);
+  text-transform: uppercase;
+}
+.ds-text-body-s-14-caps-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-body-s-14-caps-medium-size);
+  line-height: var(--ds-font-body-s-14-caps-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-caps-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-caps-medium-weight);
+  text-transform: uppercase;
+}
+.ds-text-caption-l-12-normal-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
+}
+.ds-text-caption-l-12-normal-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-caption-l-12-normal-medium-size);
+  line-height: var(--ds-font-caption-l-12-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-medium-weight);
+}
+.ds-text-caption-l-12-caps-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-caption-l-12-caps-regular-size);
+  line-height: var(--ds-font-caption-l-12-caps-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-caps-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-caps-regular-weight);
+  text-transform: uppercase;
+}
+.ds-text-caption-l-12-caps-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-caption-l-12-caps-medium-size);
+  line-height: var(--ds-font-caption-l-12-caps-medium-line);
+  letter-spacing: var(--ds-font-caption-l-12-caps-medium-spacing);
+  font-weight: var(--ds-font-caption-l-12-caps-medium-weight);
+  text-transform: uppercase;
+}
+.ds-text-caption-m-10-normal-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-caption-m-10-normal-regular-size);
+  line-height: var(--ds-font-caption-m-10-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-m-10-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-m-10-normal-regular-weight);
+}
+.ds-text-caption-m-10-normal-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-caption-m-10-normal-medium-size);
+  line-height: var(--ds-font-caption-m-10-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-m-10-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-m-10-normal-medium-weight);
+  text-transform: capitalize;
+}
+.ds-text-caption-m-10-caps-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-caption-m-10-caps-regular-size);
+  line-height: var(--ds-font-caption-m-10-caps-regular-line);
+  letter-spacing: var(--ds-font-caption-m-10-caps-regular-spacing);
+  font-weight: var(--ds-font-caption-m-10-caps-regular-weight);
+  text-transform: uppercase;
+}
+.ds-text-caption-m-10-caps-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-caption-m-10-caps-medium-size);
+  line-height: var(--ds-font-caption-m-10-caps-medium-line);
+  letter-spacing: var(--ds-font-caption-m-10-caps-medium-spacing);
+  font-weight: var(--ds-font-caption-m-10-caps-medium-weight);
+  text-transform: uppercase;
+}
+.ds-text-caption-s-8-normal-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-caption-s-8-normal-regular-size);
+  line-height: var(--ds-font-caption-s-8-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-s-8-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-s-8-normal-regular-weight);
+}
+.ds-text-caption-s-8-normal-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-caption-s-8-normal-medium-size);
+  line-height: var(--ds-font-caption-s-8-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-s-8-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-s-8-normal-medium-weight);
+}
+.ds-text-caption-s-8-caps-regular {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-caption-s-8-caps-regular-size);
+  line-height: var(--ds-font-caption-s-8-caps-regular-line);
+  letter-spacing: var(--ds-font-caption-s-8-caps-regular-spacing);
+  font-weight: var(--ds-font-caption-s-8-caps-regular-weight);
+  text-transform: uppercase;
+}
+.ds-text-caption-s-8-caps-medium {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--ds-font-caption-s-8-caps-medium-size);
+  line-height: var(--ds-font-caption-s-8-caps-medium-line);
+  letter-spacing: var(--ds-font-caption-s-8-caps-medium-spacing);
+  font-weight: var(--ds-font-caption-s-8-caps-medium-weight);
+  text-transform: uppercase;
+}
+/* ==== /СТИЛИ FIGMA ==== */
+
 ```
 
 ### Стили компонентов
@@ -11265,10 +11959,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-autocomplete-form__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -11356,7 +12050,7 @@ CSS-правила компонента:
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2-5x) var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -11391,10 +12085,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-button-toggle__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-chips-input-focus-border-color);
   white-space: nowrap;
 }
@@ -11501,9 +12195,10 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-checkbox-label-text-support-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-checkbox-label--normal.ds-checkbox-label--deselected {
@@ -11547,10 +12242,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -11592,9 +12287,10 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-chips-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-chips__close {
@@ -11670,10 +12366,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-group__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -11708,10 +12404,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -11797,10 +12493,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input-2__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -11886,10 +12582,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input-cell__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -12085,10 +12781,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-content__label {
-  font-size: var(--ds-typography-font-size-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-7x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-header-s-20-normal-regular-size);
+  line-height: var(--ds-font-header-s-20-normal-regular-line);
+  letter-spacing: var(--ds-font-header-s-20-normal-regular-spacing);
+  font-weight: var(--ds-font-header-s-20-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -12252,10 +12948,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-control-panel__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -12287,9 +12983,10 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-primary);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-control-panel__button-icon-group {
@@ -12332,10 +13029,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-control-panel-2__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -12367,9 +13064,10 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-primary);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-control-panel-2__button-icon-group {
@@ -12399,10 +13097,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-datepicker__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -12474,10 +13172,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-dialog-content__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-medium-size);
+  line-height: var(--ds-font-body-m-16-normal-medium-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-medium-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -12520,10 +13218,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-dialog-footer__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -12563,7 +13261,7 @@ CSS-правила компонента:
   padding: var(--ds-button-m-size-pad-left) var(--ds-button-m-size-pad-right) var(--ds-button-m-size-pad-top) var(--ds-button-m-size-pad-bottom);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-button-accent-filled-default-background);
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 
 /* Dialog header [53535:1322] — 2 вариантов; оси: Type */
@@ -12575,10 +13273,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-dialog-header__label {
-  font-size: var(--ds-typography-font-size-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-7x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-header-s-20-normal-medium-size);
+  line-height: var(--ds-font-header-s-20-normal-medium-line);
+  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
+  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -12607,9 +13305,10 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-dialog-header-desc-color);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-dialog-header__divider {
@@ -12632,15 +13331,15 @@ CSS-правила компонента:
   flex-direction: column;
   border-radius: var(--ds-size-3x);
   background: var(--ds-color-dialog-background);
-  box-shadow: 0.0px 0.0px 28.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-12-dp-m);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-dialog-view__label {
-  font-size: var(--ds-typography-font-size-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-7x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-header-s-20-normal-medium-size);
+  line-height: var(--ds-font-header-s-20-normal-medium-line);
+  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
+  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -12703,10 +13402,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -12775,10 +13474,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-form-field__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -12846,10 +13545,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-menu__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -12914,10 +13613,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-select__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -12983,10 +13682,11 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-sidenav__label {
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-3x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-m-10-normal-medium-size);
+  line-height: var(--ds-font-caption-m-10-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-m-10-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-m-10-normal-medium-weight);
+  text-transform: capitalize;
   color: var(--ds-color-chips-input-focus-border-color);
   white-space: nowrap;
 }
@@ -13033,10 +13733,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-step__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -13100,10 +13800,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-elements__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -13129,9 +13829,10 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-primary);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-elements--cell.ds-elements--today:disabled {
@@ -13273,10 +13974,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-elements-2__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -13339,10 +14040,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-expansion-content__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
   white-space: nowrap;
 }
@@ -13362,10 +14063,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-expansion-group-panel__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
   white-space: nowrap;
 }
@@ -13449,16 +14150,16 @@ CSS-правила компонента:
 .ds-hint-container {
   display: flex;
   align-items: center;
-  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-08-dp-s);
   border-radius: var(--ds-size-2x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-hint-container__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -13539,10 +14240,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-hint-content__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -13610,10 +14311,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-hint-footer__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -13637,9 +14338,10 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-hint-footer-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
 }
 .ds-hint-footer__button-group {
@@ -13664,10 +14366,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-hint-header__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -13702,9 +14404,10 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-hint-header-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
 }
 .ds-hint-header__clear {
@@ -13776,10 +14479,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-cell__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
   white-space: nowrap;
 }
@@ -13839,10 +14542,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-datepicker__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
   white-space: nowrap;
 }
@@ -13898,10 +14601,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-for-number__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-input-filled-default-input-text-color);
   white-space: nowrap;
 }
@@ -13966,10 +14669,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-number__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
   white-space: nowrap;
 }
@@ -14053,10 +14756,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-number-but-icon__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
   white-space: nowrap;
 }
@@ -14090,7 +14793,7 @@ CSS-правила компонента:
   padding: var(--ds-button-icon-m-size-pad-left) var(--ds-button-icon-m-size-pad-right) var(--ds-button-icon-m-size-pad-top) var(--ds-button-icon-m-size-pad-bottom);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-button-icon-neutral-filled-default-background);
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 .ds-input-number-but-icon__text {
   height: var(--ds-size-4x);
@@ -14101,9 +14804,10 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-form-field-filled-default-support-text-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
 }
 
@@ -14117,10 +14821,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-timepicker__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
   white-space: nowrap;
 }
@@ -14173,10 +14877,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-list-container__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -14247,10 +14951,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-list-item__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -14288,27 +14992,30 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-list-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-list-item__text {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-list-item-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-list-item__label-down {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-list-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-list-item__element-right {
@@ -14381,15 +15088,15 @@ CSS-правила компонента:
   padding: 0 0 var(--ds-menu-pad-top) var(--ds-menu-pad-bottom);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-menu-background);
-  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-menu-container__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-text-placeholder-color);
   white-space: nowrap;
 }
@@ -14474,10 +15181,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-menu-item__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -14515,27 +15222,30 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-menu-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-menu-item__text {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-menu-item-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-menu-item__label-down {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-menu-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-menu-item__element-right {
@@ -14720,9 +15430,10 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-radio-button-label-text-support-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-radio-button-label--normal.ds-radio-button-label--deselected {
@@ -14815,7 +15526,7 @@ CSS-правила компонента:
   padding: var(--ds-button-icon-s-size-pad-left) var(--ds-button-icon-s-size-pad-right) var(--ds-button-icon-s-size-pad-top) var(--ds-button-icon-s-size-pad-bottom);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-button-icon-neutral-filled-default-background);
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 .ds-scroll-tabs__icon-size {
   height: var(--ds-size-5x);
@@ -14840,10 +15551,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-search__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-error-text-placeholder-color);
   white-space: nowrap;
 }
@@ -14872,9 +15583,10 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-search-default-text-color);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-error-text-placeholder-color);
 }
 .ds-search__right-icon {
@@ -14933,15 +15645,15 @@ CSS-правила компонента:
   padding: 0 0 var(--ds-menu-pad-top) var(--ds-menu-pad-bottom);
   border-radius: var(--ds-size-3x);
   background: var(--ds-color-menu-background);
-  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-select-container__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-text-placeholder-color);
   white-space: nowrap;
 }
@@ -15035,10 +15747,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-select-cell__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -15102,10 +15814,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-select-form__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -15196,10 +15908,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-select-item__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -15239,27 +15951,31 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-select-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-select-item__subtitle {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-select-item-text-label-color);
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-3x);
+  font-size: var(--ds-font-caption-m-10-normal-medium-size);
+  line-height: var(--ds-font-caption-m-10-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-m-10-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-m-10-normal-medium-weight);
+  text-transform: capitalize;
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-select-item__label-down {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-select-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-select-item__element-right {
@@ -15307,10 +16023,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-control__label {
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-3x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-m-10-normal-regular-size);
+  line-height: var(--ds-font-caption-m-10-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-m-10-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-m-10-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -15347,9 +16063,10 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-sidenav-control-text-color);
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-3x);
+  font-size: var(--ds-font-caption-m-10-normal-regular-size);
+  line-height: var(--ds-font-caption-m-10-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-m-10-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-m-10-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
 }
 .ds-sidenav-control__divider {
@@ -15387,10 +16104,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-footer__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -15416,9 +16133,10 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-sidenav-footer-l2-text-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-sidenav-footer--l2.ds-sidenav-footer--expanded {
@@ -15446,10 +16164,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-header__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-medium-size);
+  line-height: var(--ds-font-body-m-16-normal-medium-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-medium-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -15518,10 +16236,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-item__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -15529,9 +16247,10 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-sidenav-item-l3-text-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-sidenav-item--l3.ds-sidenav-item--expanded:hover {
@@ -15581,10 +16300,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-view__label {
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-3x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-m-10-normal-regular-size);
+  line-height: var(--ds-font-caption-m-10-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-m-10-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-m-10-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -15632,15 +16351,15 @@ CSS-правила компонента:
   display: flex;
   flex-direction: column;
   border-radius: var(--ds-size-2x);
-  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-snackbar__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-snackbar-dark-text-color);
   white-space: nowrap;
 }
@@ -15738,10 +16457,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-status__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-medium-size);
+  line-height: var(--ds-font-caption-l-12-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-medium-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -15777,9 +16496,10 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-status-neutral-filled-text-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-medium-size);
+  line-height: var(--ds-font-caption-l-12-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-medium-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-status__element-right {
@@ -15926,10 +16646,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-chips-input__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -16001,10 +16721,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-content-cell__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-tab-innactive-icon-color);
   white-space: nowrap;
 }
@@ -16057,10 +16777,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-content-row__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-tab-innactive-icon-color);
   white-space: nowrap;
 }
@@ -16083,15 +16803,15 @@ CSS-правила компонента:
   display: flex;
   flex-direction: column;
   background: var(--ds-color-table-footer-background);
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-footer__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-tab-innactive-counter-text-color);
   white-space: nowrap;
 }
@@ -16128,10 +16848,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-header-cell__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-tab-innactive-icon-color);
   white-space: nowrap;
 }
@@ -16186,10 +16906,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-header-row__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-tab-innactive-icon-color);
   white-space: nowrap;
 }
@@ -16204,10 +16924,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-text-ui__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -16245,27 +16965,30 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-ui-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-text-ui__list-item {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-ui-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-text-ui__label-down {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-ui-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-text-ui__element-right {
@@ -16300,10 +17023,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-textarea__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -16409,15 +17132,15 @@ CSS-правила компонента:
   border-radius: var(--ds-size-3x);
   background: var(--ds-color-brand-neutral-default);
   border: 1px solid var(--ds-color-stroke-default);
-  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-timepicker__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -16467,10 +17190,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-title-variant__label {
-  font-size: var(--ds-typography-font-size-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-7x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-header-s-20-normal-medium-size);
+  line-height: var(--ds-font-header-s-20-normal-medium-line);
+  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
+  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -16485,36 +17208,40 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-super-dark);
-  font-size: var(--ds-typography-font-size-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-7x);
+  font-size: var(--ds-font-header-s-20-normal-medium-size);
+  line-height: var(--ds-font-header-s-20-normal-medium-line);
+  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
+  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-title-variant__body-6 {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-darker);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-title-variant__body-7 {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-darker);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-title-variant__body-5 {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-darker);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-title-variant__mode {
@@ -16537,10 +17264,10 @@ CSS-правила компонента:
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-toggle-buttons__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-focus-border-color);
   white-space: nowrap;
 }
@@ -17846,9 +18573,9 @@ CSS-правила компонента:
   border: 1px solid var(--ds-color-stroke-default);   /* #E0E0E0 */
 }
 
-/* Type=Shadow — тень 0 0 4px rgba(33,33,33,.12) */
+/* Type=Shadow — эффект-стиль ДС «Shadows/01 dp Sl» (Card/Shadows) */
 .ds-card--shadow {
-  box-shadow: 0 0 4px 0 rgba(33, 33, 33, 0.12);
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 
 /* ── Card header (Label up / Title / Label down + Divider) ── */
