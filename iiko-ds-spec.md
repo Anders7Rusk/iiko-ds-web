@@ -5368,8 +5368,8 @@
 | Checkbox label | `.ds-checkbox-label` · `--normal` `--normal` `--normal` `--error` `--error` `--error` `--disable` `--disable` `--disable` |
 | Chips | `.ds-chips` · `--s` `--s` `--outlined` `--outlined` `--outlined` `--outlined` `--outlined` `--filled` `--filled` `--filled` `--filled` `--filled` `--disabled` · :active, :disabled, :hover |
 | Chips group | `.ds-chips-group` · `--s` `--s` |
-| Chips Input | `.ds-chips-input` · `--s` `--s` `--disabled` · :disabled, :focus, :hover |
-| Chips Input | `.ds-chips-input-2` · `--s` `--s` `--disabled` · :disabled, :focus, :hover |
+| Chips Input | `.ds-chips-input` · `--s` `--disabled` · :disabled, :focus, :hover |
+| Chips Input | `.ds-chips-input-2` · `--s` `--disabled` · :disabled, :focus, :hover |
 | Chips input cell | `.ds-chips-input-cell` · `--disabled` · :disabled, :focus, :hover |
 | Chrome Header desktop | `.ds-chrome-header-desktop` |
 | Chrome Header mobile | `.ds-chrome-header-mobile` · `--off` `--on` |
@@ -5385,14 +5385,12 @@
 | Dialog header | `.ds-dialog-header` · `--text` |
 | Dialog view | `.ds-dialog-view` |
 | Element | `.ds-element` · `--image-size` `--icon-size` `--icon-group` `--text-default` `--checkbox` `--radio-button` `--indicator` `--slide-toggle` `--counter` |
-| Element cell | `.ds-element-cell` · `--icon-size` `--icon-group` `--button` `--button-icon` `--status` `--text-ui` `--input-number` `--checkbox` `--slide-toggle` `--chips` `--cell-input` |
 | Element Form Field | `.ds-element-form-field` · `--input-cell` `--select-cell` `--chips-input-cell` |
 | Element left | `.ds-element-left` |
 | Element menu | `.ds-element-menu` · `--image-size` `--icon-size` `--text-default` `--checkbox` `--radio-button` `--indicator` `--slide-toggle` `--counter` |
 | Element select | `.ds-element-select` · `--image-size` `--icon-size` `--text-default` `--checkbox` `--radio-button` `--indicator` `--slide-toggle` `--counter` |
 | Element sidenav | `.ds-element-sidenav` · `--collaps-icon` `--avatar` |
 | Element step | `.ds-element-step` · `--icon-size` `--counter` `--counter` `--counter` `--counter` `--counter` `--disabled` · :active, :disabled, :hover |
-| Elementare cell | `.ds-elementare-cell` · `--icon-size` `--icon-group` `--button` `--button-icon` `--status` `--text-ui` `--input-number` `--checkbox` `--slide-toggle` `--chips` |
 | Elements | `.ds-elements` · `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--year` `--cell` `--cell` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--month` `--month` `--month` `--month` `--month` `--disabled` · :active, :disabled, :hover |
 | Elements | `.ds-elements-2` · `--selected` `--default` `--default` `--default` `--default` `--default` `--disabled` · :active, :disabled, :hover |
 | Expansion content | `.ds-expansion-content` · `--true` `--false` |
@@ -5404,12 +5402,10 @@
 | Hint footer | `.ds-hint-footer` · `--default` |
 | Hint header | `.ds-hint-header` · `--neutral` `--primary` `--secondary` `--warning` `--error` |
 | Icon group | `.ds-icon-group` · `--4x` |
-| Icon size | `.ds-icon-size` |
-| Icon size_Draft | `.ds-icon-size-draft` |
 | Input cell | `.ds-input-cell` · `--disabled` · :disabled, :focus, :hover |
 | Input Datepicker | `.ds-input-datepicker` · `--empty` `--populated` |
 | Input for number | `.ds-input-for-number` · `--disabled` · :disabled, :hover |
-| Input number | `.ds-input-number` · `--s` `--xs` `--xs` `--populated` `--empty` `--populated` `--populated` `--empty` `--populated` `--populated` `--empty` `--empty` `--disabled` · :disabled, :focus, :hover |
+| Input number | `.ds-input-number` · `--xs` `--populated` `--empty` `--populated` `--populated` `--empty` `--populated` `--populated` `--empty` `--empty` `--disabled` · :disabled, :focus, :hover |
 | Input number_but icon | `.ds-input-number-but-icon` |
 | Input Timepicker | `.ds-input-timepicker` · `--empty` `--populated` |
 | List (Сontainer) | `.ds-list-container` · `--container` |
@@ -5422,14 +5418,14 @@
 | Picture | `.ds-picture` |
 | Preview | `.ds-preview` |
 | Radio button label | `.ds-radio-button-label` · `--normal` `--normal` `--error` `--error` `--disable` `--disable` |
-| Scroll | `.ds-scroll` · `--s` `--first` `--middle` `--middle` `--last` · :hover |
+| Scroll | `.ds-scroll` · `--first` `--middle` `--middle` `--last` · :hover |
 | Scroll tabs | `.ds-scroll-tabs` · `--left` |
 | Search | `.ds-search` · `--s` `--s` `--xs` `--xs` `--disabled` · :disabled, :focus, :hover |
 | Select (Сontainer) | `.ds-select-container` · `--container` |
 | Select cell | `.ds-select-cell` · `--disabled` · :disabled, :focus, :hover |
-| Select form | `.ds-select-form` · `--s` `--s` `--xs` `--xs` `--empty` `--populated` `--empty` `--populated` `--populated` `--empty` `--empty` `--populated` `--populated` `--disabled` · :disabled, :focus, :hover |
+| Select form | `.ds-select-form` · `--s` `--xs` `--empty` `--populated` `--empty` `--populated` `--populated` `--empty` `--empty` `--populated` `--populated` `--disabled` · :disabled, :focus, :hover |
 | Select item | `.ds-select-item` · `--true` `--false` `--false` `--false` `--false` `--false` `--disabled` · :active, :disabled, :hover |
-| Sidenav control | `.ds-sidenav-control` · `--collapsed` `--collapsed` `--expanded` `--expanded` `--expanded` `--collapsed` · :active, :hover |
+| Sidenav control | `.ds-sidenav-control` · `--collapsed` `--collapsed` `--expanded` `--expanded` `--expanded` · :active, :hover |
 | Sidenav Footer | `.ds-sidenav-footer` · `--l2` `--l1` `--l1` |
 | Sidenav header | `.ds-sidenav-header` · `--l1` `--l2` `--l1` |
 | Sidenav item | `.ds-sidenav-item` · `--l3` `--l3` `--l2` `--l2` `--l1` `--l1` `--l1` `--l1` · :hover |
@@ -8015,7 +8011,6 @@ CSS-правила компонента:
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-1x);
-  height: 64px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8044,9 +8039,6 @@ CSS-правила компонента:
 .ds-chips-input__icon svg path {
   fill: currentColor;
 }
-.ds-chips-input--s {
-  height: var(--ds-size-9x);
-}
 .ds-chips-input--s .ds-chips-input__icon {
   width: var(--ds-size-5x);
   height: var(--ds-size-5x);
@@ -8073,7 +8065,6 @@ CSS-правила компонента:
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-1x);
-  height: 80px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8101,9 +8092,6 @@ CSS-правила компонента:
 }
 .ds-chips-input-2__icon svg path {
   fill: currentColor;
-}
-.ds-chips-input-2--s {
-  height: var(--ds-size-9x);
 }
 .ds-chips-input-2--s .ds-chips-input-2__icon {
   width: var(--ds-size-5x);
@@ -8242,7 +8230,6 @@ CSS-правила компонента:
   flex-direction: column;
   gap: var(--ds-size-0-5x);
   height: var(--ds-size-9x);
-  width: var(--ds-size-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8264,7 +8251,6 @@ CSS-правила компонента:
 }
 .ds-control-arrow-button--s {
   height: var(--ds-size-8x);
-  width: 18px;
 }
 .ds-control-arrow-button--s .ds-control-arrow-button__icon {
   width: var(--ds-size-3x);
@@ -8272,7 +8258,6 @@ CSS-правила компонента:
 }
 .ds-control-arrow-button--xs {
   height: var(--ds-size-6x);
-  width: var(--ds-size-3x);
 }
 
 /* Control group number button [53828:5569] — 2 вариантов; оси: Size */
@@ -8387,7 +8372,6 @@ CSS-правила компонента:
 /* Control Panel [58501:4052] — 3 вариантов; оси: Type */
 .ds-control-panel {
   display: flex;
-  height: 48px;
   padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
   gap: 74px;
   box-sizing: border-box;
@@ -8423,7 +8407,6 @@ CSS-правила компонента:
   color: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-control-panel--week {
-  height: 44px;
   flex-direction: row;
   padding: 0 0 var(--ds-size-0-5x) var(--ds-size-0-5x);
   color: var(--ds-color-brand-neutral-super-dark);
@@ -8598,7 +8581,6 @@ CSS-правила компонента:
   display: flex;
   flex-direction: column;
   background: var(--ds-color-dialog-background);
-  height: 93px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8670,8 +8652,6 @@ CSS-правила компонента:
 .ds-element {
   display: flex;
   background: var(--ds-color-brand-neutral-default);
-  height: var(--ds-size-6x);
-  width: var(--ds-size-6x);
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -8705,135 +8685,33 @@ CSS-правила компонента:
   align-items: center;
 }
 .ds-element--icon-size {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
   flex-direction: row;
   align-items: center;
 }
 .ds-element--icon-group {
-  height: var(--ds-size-5x);
   flex-direction: row;
   align-items: center;
 }
 .ds-element--text-default {
-  height: var(--ds-size-5x);
   flex-direction: row;
   color: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-element--checkbox {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
   flex-direction: row;
 }
 .ds-element--radio-button {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
   flex-direction: row;
 }
 .ds-element--indicator {
   flex-direction: row;
 }
 .ds-element--slide-toggle {
-  height: var(--ds-size-5x);
   flex-direction: row;
   color: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-element--counter {
-  height: var(--ds-size-3-5x);
   flex-direction: column;
   color: var(--ds-color-brand-neutral-default);
-}
-
-/* Element cell [58885:32432] — 11 вариантов; оси: Variant */
-.ds-element-cell {
-  display: flex;
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-element-cell__label {
-  font-size: var(--ds-typography-caption-font-size-l);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-caption-line-height-l);
-  letter-spacing: var(--ds-typography-letter-spacing-s);
-  color: var(--ds-color-brand-neutral-super-dark);
-  white-space: nowrap;
-}
-.ds-element-cell__icon {
-  flex-shrink: 0;
-  width: var(--ds-size-5x);
-  height: var(--ds-size-5x);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-element-cell__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.ds-element-cell__icon svg path {
-  fill: currentColor;
-}
-.ds-element-cell--icon-size {
-  flex-direction: row;
-  align-items: center;
-  background: var(--ds-color-brand-neutral-default);
-}
-.ds-element-cell--icon-group {
-  flex-direction: row;
-  align-items: center;
-  background: var(--ds-color-brand-neutral-default);
-}
-.ds-element-cell--button {
-  height: var(--ds-size-6x);
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-brand-neutral-super-dark);
-}
-.ds-element-cell--button-icon {
-  height: var(--ds-size-6x);
-  width: var(--ds-size-6x);
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-default);
-}
-.ds-element-cell--status {
-  height: var(--ds-size-6x);
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-brand-neutral-darker);
-}
-.ds-element-cell--text-ui {
-  height: 52px;
-  flex-direction: row;
-  color: var(--ds-color-brand-neutral-darker);
-}
-.ds-element-cell--input-number {
-  height: var(--ds-size-7x);
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-brand-neutral-darker);
-}
-.ds-element-cell--checkbox {
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-default);
-}
-.ds-element-cell--slide-toggle {
-  flex-direction: column;
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-brand-neutral-super-dark);
-}
-.ds-element-cell--chips {
-  height: var(--ds-size-6x);
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-brand-neutral-super-dark);
-}
-.ds-element-cell--cell-input {
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-brand-neutral-darker);
 }
 
 /* Element Form Field [60231:76795] — 3 вариантов; оси: Variant */
@@ -8896,8 +8774,6 @@ CSS-правила компонента:
 .ds-element-menu {
   display: flex;
   background: var(--ds-color-menu-background);
-  height: var(--ds-size-6x);
-  width: var(--ds-size-6x);
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -8931,36 +8807,27 @@ CSS-правила компонента:
   align-items: center;
 }
 .ds-element-menu--icon-size {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
   flex-direction: row;
   align-items: center;
 }
 .ds-element-menu--text-default {
-  height: var(--ds-size-5x);
   flex-direction: row;
   color: var(--ds-color-menu-item-text-color);
 }
 .ds-element-menu--checkbox {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
   flex-direction: row;
 }
 .ds-element-menu--radio-button {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
   flex-direction: row;
 }
 .ds-element-menu--indicator {
   flex-direction: row;
 }
 .ds-element-menu--slide-toggle {
-  height: var(--ds-size-5x);
   flex-direction: row;
   color: var(--ds-color-menu-item-text-color);
 }
 .ds-element-menu--counter {
-  height: var(--ds-size-3-5x);
   flex-direction: column;
   color: var(--ds-color-menu-background);
 }
@@ -8969,8 +8836,6 @@ CSS-правила компонента:
 .ds-element-select {
   display: flex;
   background: var(--ds-color-brand-neutral-default);
-  height: var(--ds-size-6x);
-  width: var(--ds-size-6x);
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -9004,36 +8869,27 @@ CSS-правила компонента:
   align-items: center;
 }
 .ds-element-select--icon-size {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
   flex-direction: row;
   align-items: center;
 }
 .ds-element-select--text-default {
-  height: var(--ds-size-5x);
   flex-direction: row;
   color: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-element-select--checkbox {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
   flex-direction: row;
 }
 .ds-element-select--radio-button {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
   flex-direction: row;
 }
 .ds-element-select--indicator {
   flex-direction: row;
 }
 .ds-element-select--slide-toggle {
-  height: var(--ds-size-5x);
   flex-direction: row;
   color: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-element-select--counter {
-  height: var(--ds-size-3-5x);
   flex-direction: column;
   color: var(--ds-color-brand-neutral-default);
 }
@@ -9139,93 +8995,6 @@ CSS-правила компонента:
 }
 .ds-element-step--disabled {
   pointer-events: none;
-}
-
-/* Elementare cell [60220:72578] — 10 вариантов; оси: Variant */
-.ds-elementare-cell {
-  display: flex;
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-elementare-cell__label {
-  font-size: var(--ds-typography-caption-font-size-l);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-caption-line-height-l);
-  letter-spacing: var(--ds-typography-letter-spacing-s);
-  color: var(--ds-color-brand-neutral-super-dark);
-  white-space: nowrap;
-}
-.ds-elementare-cell__icon {
-  flex-shrink: 0;
-  width: var(--ds-size-5x);
-  height: var(--ds-size-5x);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-elementare-cell__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.ds-elementare-cell__icon svg path {
-  fill: currentColor;
-}
-.ds-elementare-cell--icon-size {
-  flex-direction: row;
-  align-items: center;
-  background: var(--ds-color-brand-neutral-default);
-}
-.ds-elementare-cell--icon-group {
-  flex-direction: row;
-  align-items: center;
-  background: var(--ds-color-brand-neutral-default);
-}
-.ds-elementare-cell--button {
-  height: var(--ds-size-6x);
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-brand-neutral-super-dark);
-}
-.ds-elementare-cell--button-icon {
-  height: var(--ds-size-6x);
-  width: var(--ds-size-6x);
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-default);
-}
-.ds-elementare-cell--status {
-  height: var(--ds-size-6x);
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-brand-neutral-darker);
-}
-.ds-elementare-cell--text-ui {
-  height: 52px;
-  flex-direction: row;
-  color: var(--ds-color-brand-neutral-darker);
-}
-.ds-elementare-cell--input-number {
-  height: var(--ds-size-7x);
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-brand-neutral-darker);
-}
-.ds-elementare-cell--checkbox {
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-default);
-}
-.ds-elementare-cell--slide-toggle {
-  flex-direction: column;
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-brand-neutral-super-dark);
-}
-.ds-elementare-cell--chips {
-  height: var(--ds-size-6x);
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-brand-neutral-super-dark);
 }
 
 /* Elements [58501:4220] — 30 вариантов; оси: Type, Variant, State */
@@ -9423,7 +9192,6 @@ CSS-правила компонента:
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 52px;
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-4x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -9440,12 +9208,10 @@ CSS-правила компонента:
   color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
 }
 .ds-expansion-content--false {
-  height: var(--ds-size-5x);
   color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
 }
 
 /* Expansion group panel [56155:1676] — 2 вариантов; оси: Type ? */
-/* height из макета Figma: 200px — размер примера, задавайте по месту */
 .ds-expansion-group-panel {
   display: flex;
   flex-direction: column;
@@ -9479,7 +9245,6 @@ CSS-правила компонента:
 }
 
 /* Header components [53535:1244] — 2 вариантов; оси: Type */
-/* height из макета Figma: 136px — размер примера, задавайте по месту */
 .ds-header-components {
   display: flex;
   padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x);
@@ -9501,7 +9266,6 @@ CSS-правила компонента:
   color: var(--ds-color-brand-neutral-default);
 }
 .ds-header-components--mini {
-  height: 88px;
   flex-direction: row;
   gap: var(--ds-size-6x);
   border-radius: var(--ds-size-6x);
@@ -9510,7 +9274,6 @@ CSS-правила компонента:
 }
 
 /* Hint container [54593:479] — 10 вариантов; оси: Size, Orientation */
-/* height из макета Figma: 124px — размер примера, задавайте по месту */
 .ds-hint-container {
   display: flex;
   align-items: center;
@@ -9729,58 +9492,6 @@ CSS-правила компонента:
   gap: var(--ds-size-4x);
 }
 
-/* Icon size [52927:6286] — 12 вариантов; оси: Size, Content */
-.ds-icon-size {
-  display: flex;
-  flex-direction: row;
-  height: var(--ds-size-4x);
-  width: var(--ds-size-4x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-icon-size__icon {
-  flex-shrink: 0;
-  width: var(--ds-size-4x);
-  height: var(--ds-size-4x);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-icon-size__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.ds-icon-size__icon svg path {
-  fill: currentColor;
-}
-
-/* Icon size_Draft [54063:12911] — 6 вариантов; оси: Size */
-.ds-icon-size-draft {
-  display: flex;
-  flex-direction: row;
-  height: var(--ds-size-4x);
-  width: var(--ds-size-4x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-icon-size-draft__icon {
-  flex-shrink: 0;
-  width: var(--ds-size-4x);
-  height: var(--ds-size-4x);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-icon-size-draft__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.ds-icon-size-draft__icon svg path {
-  fill: currentColor;
-}
-
 /* Input cell [60229:74436] — 8 вариантов; оси: State */
 .ds-input-cell {
   height: var(--ds-size-9x);
@@ -9930,7 +9641,6 @@ CSS-правила компонента:
 .ds-input-number {
   display: flex;
   flex-direction: row;
-  height: 48px;
   gap: 18px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -9958,12 +9668,6 @@ CSS-правила компонента:
 }
 .ds-input-number__icon svg path {
   fill: currentColor;
-}
-.ds-input-number--s {
-  height: var(--ds-size-9x);
-}
-.ds-input-number--xs {
-  height: var(--ds-size-7x);
 }
 .ds-input-number--xs .ds-input-number__icon {
   width: var(--ds-size-6x);
@@ -10386,13 +10090,8 @@ CSS-правила компонента:
   display: flex;
   flex-direction: column;
   padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
-  height: var(--ds-size-3x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-scroll--s {
-  height: 64px;
-  width: var(--ds-size-2x);
 }
 .ds-scroll--first:hover {
   background: var(--ds-color-scroll-hover-background);
@@ -10486,7 +10185,6 @@ CSS-правила компонента:
 }
 .ds-search--xs {
   height: var(--ds-size-9x);
-  width: var(--ds-size-9x);
   padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x);
   border-radius: var(--ds-size-circular);
 }
@@ -10609,7 +10307,6 @@ CSS-правила компонента:
   display: flex;
   flex-direction: column;
   background: var(--ds-color-brand-neutral-default);
-  height: 48px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -10637,15 +10334,9 @@ CSS-правила компонента:
 .ds-select-form__icon svg path {
   fill: currentColor;
 }
-.ds-select-form--s {
-  height: var(--ds-size-9x);
-}
 .ds-select-form--s .ds-select-form__icon {
   width: var(--ds-size-5x);
   height: var(--ds-size-5x);
-}
-.ds-select-form--xs {
-  height: var(--ds-size-7x);
 }
 .ds-select-form--xs .ds-select-form__icon {
   width: var(--ds-size-5x);
@@ -10689,7 +10380,6 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   gap: var(--ds-size-2x);
-  height: 38px;
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-1-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -10724,7 +10414,6 @@ CSS-правила компонента:
   color: var(--ds-color-brand-neutral-darker);
 }
 .ds-select-item--false {
-  height: 68px;
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
   background: var(--ds-color-brand-neutral-default);
   color: var(--ds-color-brand-neutral-darker);
@@ -10793,14 +10482,10 @@ CSS-правила компонента:
 .ds-sidenav-control--expanded:active {
   background: var(--ds-color-sidenav-control-background-hover);
 }
-.ds-sidenav-control--collapsed {
-  width: 52px;
-}
 
 /* Sidenav Footer [55111:1056] — 3 вариантов; оси: Type, Mode */
 .ds-sidenav-footer {
   display: flex;
-  height: var(--ds-size-10x);
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x);
   gap: var(--ds-size-3x);
   box-sizing: border-box;
@@ -10874,7 +10559,6 @@ CSS-правила компонента:
   color: var(--ds-color-sidenav-header-l2-text-color);
 }
 .ds-sidenav-header--l1.ds-sidenav-header--collapsed {
-  width: 52px;
   flex-direction: column;
   padding: var(--ds-size-3-5x) var(--ds-size-3-5x) var(--ds-size-3x) var(--ds-size-3x);
   background: var(--ds-color-sidenav-control-background);
@@ -10931,7 +10615,6 @@ CSS-правила компонента:
 }
 .ds-sidenav-item--l1.ds-sidenav-item--collapsed {
   height: 44px;
-  width: 52px;
   flex-direction: row;
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x);
   background: var(--ds-color-sidenav-control-background);
@@ -10977,7 +10660,6 @@ CSS-правила компонента:
   flex-direction: column;
   border-radius: var(--ds-size-2x);
   box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
-  height: 56px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -11585,7 +11267,6 @@ CSS-правила компонента:
   height: var(--ds-size-9x);
   display: flex;
   flex-direction: row;
-  width: var(--ds-size-9x);
   padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x);
   gap: var(--ds-size-2-5x);
   border-radius: var(--ds-size-0-5x);
@@ -11644,7 +11325,6 @@ CSS-правила компонента:
 .ds-tree {
   height: 44px;
   display: flex;
-  width: var(--ds-size-6x);
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -11669,11 +11349,9 @@ CSS-правила компонента:
   flex-direction: row;
 }
 .ds-tree--2.ds-tree--end.ds-tree--off {
-  width: 48px;
   flex-direction: column;
 }
 .ds-tree--3.ds-tree--end.ds-tree--on {
-  width: 48px;
   flex-direction: row;
 }
 .ds-tree--3.ds-tree--end.ds-tree--off {
@@ -11684,12 +11362,10 @@ CSS-правила компонента:
   align-items: center;
 }
 .ds-tree--2.ds-tree--middle.ds-tree--off {
-  width: 48px;
   flex-direction: row;
   align-items: center;
 }
 .ds-tree--3.ds-tree--middle.ds-tree--on {
-  width: 48px;
   flex-direction: row;
   align-items: center;
 }
@@ -11702,7 +11378,6 @@ CSS-правила компонента:
 .ds-tree-item {
   height: 44px;
   display: flex;
-  width: var(--ds-size-6x);
   padding: 11px 0 0 var(--ds-size-5x);
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
@@ -11713,7 +11388,6 @@ CSS-правила компонента:
   align-items: center;
 }
 .ds-tree-item--end-long {
-  width: 48px;
   flex-direction: column;
   padding: 11px 0 0 21px;
 }
@@ -11723,7 +11397,6 @@ CSS-правила компонента:
   padding: 11px 0 0 0;
 }
 .ds-tree-item--middle-long {
-  width: 48px;
   flex-direction: row;
   align-items: center;
   padding: 11px 0 0 0;
