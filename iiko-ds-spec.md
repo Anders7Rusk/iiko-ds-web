@@ -1577,8 +1577,11 @@
     - высота: минимум `48px`, растёт по контенту
     - ширина: по контенту (hug)
     - фон: `var(--ds-color-brand-neutral-default)`
-- Модификаторы: `--disabled` `--empty` `--populated`
-- Состояния: `:disabled` `:focus-visible` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+    - `--empty`: color `var(--ds-color-brand-neutral-darker)`, color `var(--ds-color-brand-neutral-neutral)`
+    - `--populated`: color `var(--ds-color-brand-neutral-darker)`, color `var(--ds-color-brand-neutral-neutral)`
+- Состояния: `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -3135,7 +3138,9 @@
     - ширина: по контенту (hug)
     - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2-5x) var(--ds-size-2-5x)`
     - тень: `0.0px 0.0px 4.0px 0px #2121211f`
-- Модификаторы: `--btn-28` `--btn-36`
+- Модификаторы (что меняет каждый):
+    - `--btn-28`: внутренние отступы `var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x)`, фон `var(--ds-color-button-accent-default)`, color `var(--ds-color-button-accent-lite-default)`
+    - `--btn-36`: фон `var(--ds-color-button-accent-lite-default)`, color `var(--ds-palette-neutral-950)`
 - Разметка:
 
 ```html
@@ -3417,7 +3422,11 @@
     - промежуток между элементами: `var(--ds-size-1x)`
     - скругление: `var(--ds-size-3x)`
     - фон: `var(--ds-color-button-accent-lite-default)`
-- Модификаторы: `--filled` `--outlined` `--s` `--xs`
+- Модификаторы (что меняет каждый):
+    - `--filled`: color `var(--ds-color-button-accent-default)`
+    - `--outlined`: рамка `1px solid var(--ds-color-button-icon-neutral-outlined-border-color)`, color `var(--ds-color-button-accent-lite-default)`
+    - `--s`: ширина `var(--ds-size-5x)`, высота `var(--ds-size-5x)`
+    - `--xs`: ширина `var(--ds-size-4x)`, высота `var(--ds-size-4x)`
 - Разметка:
 
 ```html
@@ -3654,7 +3663,10 @@
     - высота: минимум `var(--ds-size-5x)`, растёт по контенту
     - ширина: по контенту (hug)
     - промежуток между элементами: `var(--ds-size-1x)`
-- Модификаторы: `--disable` `--error` `--normal`
+- Модификаторы (что меняет каждый):
+    - `--disable`: color `var(--ds-color-checkbox-group-text-disable)`
+    - `--error`: color `var(--ds-color-checkbox-group-text-color)`
+    - `--normal`: color `var(--ds-color-checkbox-group-text-color)`
 - Разметка:
 
 ```html
@@ -3827,8 +3839,12 @@
     - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-1-5x) var(--ds-size-1-5x)`
     - промежуток между элементами: `var(--ds-size-2x)`
     - скругление: `var(--ds-size-3x)`
-- Модификаторы: `--disabled` `--filled` `--outlined` `--s`
-- Состояния: `:active` `:disabled` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+    - `--filled`: фон `var(--ds-color-chips-input-default-background)`, color `var(--ds-color-chips-text-color)`, фон `var(--ds-color-chips-input-disable-border-color)`, color `var(--ds-color-chips-input-disable-action-text-color)`
+    - `--outlined`: фон `var(--ds-color-chips-disable-background-outlined)`, рамка `1px solid var(--ds-color-chips-input-default-border-color)`, color `var(--ds-color-chips-text-color)`, рамка `1px solid var(--ds-color-chips-input-disable-border-color)`
+    - `--s`: промежуток между элементами `var(--ds-size-1x)`, внутренние отступы `var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1x) var(--ds-size-1x)`, скругление `var(--ds-size-2x)`, ширина `var(--ds-size-4x)`
+- Состояния: `:active` (нажатие), `:disabled` (неактивно), `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -4023,7 +4039,8 @@
 - Размеры и параметры:
     - ширина: по контенту (hug)
     - промежуток между элементами: `var(--ds-size-2x)`
-- Модификаторы: `--s`
+- Модификаторы (что меняет каждый):
+    - `--s`: ширина `var(--ds-size-4x)`, высота `var(--ds-size-4x)`
 - Разметка:
 
 ```html
@@ -4134,8 +4151,10 @@
 - Размеры и параметры:
     - ширина: по контенту (hug)
     - промежуток между элементами: `var(--ds-size-1x)`
-- Модификаторы: `--disabled` `--s`
-- Состояния: `:disabled` `:focus-visible` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+    - `--s`: ширина `var(--ds-size-5x)`, высота `var(--ds-size-5x)`
+- Состояния: `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -4298,8 +4317,10 @@
 - Размеры и параметры:
     - ширина: по контенту (hug)
     - промежуток между элементами: `var(--ds-size-1x)`
-- Модификаторы: `--disabled` `--s`
-- Состояния: `:disabled` `:focus-visible` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+    - `--s`: ширина `var(--ds-size-5x)`, высота `var(--ds-size-5x)`
+- Состояния: `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -4461,8 +4482,9 @@
     - ширина: по контенту (hug)
     - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x)`
     - промежуток между элементами: `var(--ds-size-2x)`
-- Модификаторы: `--disabled`
-- Состояния: `:disabled` `:focus-visible` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+- Состояния: `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -4613,7 +4635,9 @@
 - Размеры и параметры:
     - высота: `66px` (фикс.)
     - ширина: по контенту (hug)
-- Модификаторы: `--off` `--on`
+- Модификаторы (что меняет каждый):
+    - `--off`: фон `var(--ds-color-brand-neutral-default)`, color `var(--ds-color-brand-neutral-super-dark)`
+    - `--on`: фон `var(--ds-color-brand-neutral-super-dark)`, color `var(--ds-color-brand-neutral-default)`
 - Разметка:
 
 ```html
@@ -4737,7 +4761,8 @@
 - Размеры и параметры:
     - ширина: по контенту (hug)
     - промежуток между элементами: `var(--ds-size-0-5x)`
-- Модификаторы: `--s`
+- Модификаторы (что меняет каждый):
+    - `--s`: ширина `var(--ds-size-3x)`, высота `var(--ds-size-3x)`
 - Разметка:
 
 ```html
@@ -4793,7 +4818,8 @@
     - скругление: `var(--ds-size-2x)`
     - рамка: `1px solid var(--ds-color-button-icon-neutral-outlined-border-color)`
     - фон: `var(--ds-color-brand-neutral-super-light)`
-- Модификаторы: `--xs`
+- Модификаторы (что меняет каждый):
+    - `--xs`: ширина `var(--ds-size-4x)`, высота `var(--ds-size-4x)`
 - Разметка:
 
 ```html
@@ -4853,8 +4879,12 @@
     - ширина: по контенту (hug)
     - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2-5x) var(--ds-size-2-5x)`
     - промежуток между элементами: `var(--ds-size-2x)`
-- Модификаторы: `--disabled` `--left` `--right` `--xs`
-- Состояния: `:active` `:disabled` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+    - `--left`: фон `var(--ds-color-button-accent-lite-default)`, фон `var(--ds-color-button-neutral-disable)`
+    - `--right`: фон `var(--ds-color-button-accent-lite-default)`, фон `var(--ds-color-button-neutral-disable)`
+    - `--xs`: внутренние отступы `var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x)`, ширина `var(--ds-size-4x)`, высота `var(--ds-size-4x)`
+- Состояния: `:active` (нажатие), `:disabled` (неактивно), `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -4954,7 +4984,10 @@
     - ширина: по контенту (hug)
     - внутренние отступы: `0 0 var(--ds-size-1x) var(--ds-size-1x)`
     - промежуток между элементами: `74px`
-- Модификаторы: `--calendar` `--control` `--week`
+- Модификаторы (что меняет каждый):
+    - `--calendar`: направление `column`, align-items `center`, фон `var(--ds-color-brand-neutral-default)`, color `var(--ds-color-brand-neutral-super-dark)`
+    - `--control`: направление `row`, align-items `center`, color `var(--ds-color-brand-neutral-super-dark)`
+    - `--week`: направление `row`, внутренние отступы `0 0 var(--ds-size-0-5x) var(--ds-size-0-5x)`, color `var(--ds-color-brand-neutral-super-dark)`
 - Разметка:
 
 ```html
@@ -5058,7 +5091,9 @@
     - ширина: по контенту (hug)
     - внутренние отступы: `0 0 var(--ds-size-1x) var(--ds-size-1x)`
     - промежуток между элементами: `74px`
-- Модификаторы: `--control` `--time`
+- Модификаторы (что меняет каждый):
+    - `--control`: align-items `center`, color `var(--ds-color-brand-neutral-super-dark)`
+    - `--time`: внутренние отступы `0 0 var(--ds-size-0-5x) var(--ds-size-0-5x)`, color `var(--ds-color-brand-neutral-super-dark)`
 - Разметка:
 
 ```html
@@ -5148,7 +5183,10 @@
     - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x)`
     - скругление: `var(--ds-size-3x)`
     - рамка: `1px solid var(--ds-color-brand-neutral-lighter)`
-- Модификаторы: `--day` `--month` `--year`
+- Модификаторы (что меняет каждый):
+    - `--day`: color `var(--ds-color-brand-neutral-super-dark)`
+    - `--month`: color `var(--ds-color-brand-neutral-super-dark)`
+    - `--year`: color `var(--ds-color-brand-neutral-super-dark)`
 - Разметка:
 
 ```html
@@ -5415,7 +5453,9 @@
 - Размеры и параметры:
     - ширина: по контенту (hug)
     - фон: `var(--ds-color-dialog-background)`
-- Модификаторы: `--picture` `--text`
+- Модификаторы (что меняет каждый):
+    - `--picture`: ширина `500px`
+    - `--text`: color `var(--ds-color-dialog-content-title-color)`
 - Разметка:
 
 ```html
@@ -5628,7 +5668,16 @@
     - ширина: по контенту (hug)
     - промежуток между элементами: `var(--ds-size-2-5x)`
     - фон: `var(--ds-color-brand-neutral-default)`
-- Модификаторы: `--checkbox` `--counter` `--icon-group` `--icon-size` `--image-size` `--indicator` `--radio-button` `--slide-toggle` `--text-default`
+- Модификаторы (что меняет каждый):
+    - `--checkbox`: направление `row`
+    - `--counter`: направление `column`, color `var(--ds-color-brand-neutral-default)`
+    - `--icon-group`: направление `row`, align-items `center`
+    - `--icon-size`: направление `row`, align-items `center`
+    - `--image-size`: направление `row`, align-items `center`
+    - `--indicator`: направление `row`
+    - `--radio-button`: направление `row`
+    - `--slide-toggle`: направление `row`, color `var(--ds-color-brand-neutral-super-dark)`
+    - `--text-default`: направление `row`, color `var(--ds-color-brand-neutral-super-dark)`
 - Разметка:
 
 ```html
@@ -5724,7 +5773,10 @@
 - Размеры и параметры:
     - ширина: по контенту (hug)
     - фон: `var(--ds-color-brand-neutral-default)`
-- Модификаторы: `--chips-input-cell` `--input-cell` `--select-cell`
+- Модификаторы (что меняет каждый):
+    - `--chips-input-cell`: color `var(--ds-color-brand-neutral-darker)`
+    - `--input-cell`: color `var(--ds-color-brand-neutral-darker)`
+    - `--select-cell`: color `var(--ds-color-brand-neutral-darker)`
 - Разметка:
 
 ```html
@@ -5835,7 +5887,15 @@
     - ширина: по контенту (hug)
     - промежуток между элементами: `var(--ds-size-2-5x)`
     - фон: `var(--ds-color-menu-background)`
-- Модификаторы: `--checkbox` `--counter` `--icon-size` `--image-size` `--indicator` `--radio-button` `--slide-toggle` `--text-default`
+- Модификаторы (что меняет каждый):
+    - `--checkbox`: направление `row`
+    - `--counter`: направление `column`, color `var(--ds-color-menu-background)`
+    - `--icon-size`: направление `row`, align-items `center`
+    - `--image-size`: направление `row`, align-items `center`
+    - `--indicator`: направление `row`
+    - `--radio-button`: направление `row`
+    - `--slide-toggle`: направление `row`, color `var(--ds-color-menu-item-text-color)`
+    - `--text-default`: направление `row`, color `var(--ds-color-menu-item-text-color)`
 - Разметка:
 
 ```html
@@ -5924,7 +5984,15 @@
     - ширина: по контенту (hug)
     - промежуток между элементами: `var(--ds-size-2-5x)`
     - фон: `var(--ds-color-brand-neutral-default)`
-- Модификаторы: `--checkbox` `--counter` `--icon-size` `--image-size` `--indicator` `--radio-button` `--slide-toggle` `--text-default`
+- Модификаторы (что меняет каждый):
+    - `--checkbox`: направление `row`
+    - `--counter`: направление `column`, color `var(--ds-color-brand-neutral-default)`
+    - `--icon-size`: направление `row`, align-items `center`
+    - `--image-size`: направление `row`, align-items `center`
+    - `--indicator`: направление `row`
+    - `--radio-button`: направление `row`
+    - `--slide-toggle`: направление `row`, color `var(--ds-color-brand-neutral-super-dark)`
+    - `--text-default`: направление `row`, color `var(--ds-color-brand-neutral-super-dark)`
 - Разметка:
 
 ```html
@@ -6013,7 +6081,9 @@
     - высота: `var(--ds-size-5x)` (фикс.)
     - ширина: `var(--ds-size-5x)` (фикс.)
     - скругление: `var(--ds-size-1x)`
-- Модификаторы: `--avatar` `--collaps-icon`
+- Модификаторы (что меняет каждый):
+    - `--avatar`: направление `column`, align-items `center`, промежуток между элементами `var(--ds-size-2-5x)`, внутренние отступы `var(--ds-size-0-5x) var(--ds-size-0-5x) 3px 3px`
+    - `--collaps-icon`: направление `row`, фон `var(--ds-color-sidenav-control-background-hover)`
 - Разметка:
 
 ```html
@@ -6087,8 +6157,11 @@
     - ширина: по контенту (hug)
     - промежуток между элементами: `var(--ds-size-2-5x)`
     - фон: `var(--ds-color-brand-neutral-default)`
-- Модификаторы: `--counter` `--disabled` `--icon-size`
-- Состояния: `:active` `:disabled` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--counter`: направление `column`, color `var(--ds-color-brand-neutral-super-dark)`, color `var(--ds-color-brand-neutral-neutral)`
+    - `--disabled`: pointer-events `none`
+    - `--icon-size`: направление `row`, align-items `center`
+- Состояния: `:active` (нажатие), `:disabled` (неактивно), `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -6185,8 +6258,12 @@
     - высота: `var(--ds-size-10x)` (фикс.)
     - ширина: по контенту (hug)
     - скругление: `var(--ds-size-circular)`
-- Модификаторы: `--cell` `--disabled` `--month` `--year`
-- Состояния: `:active` `:disabled` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--cell`: фон `var(--ds-color-brand-neutral-lighter)`, color `var(--ds-color-brand-neutral-neutral)`, направление `row`, align-items `center`
+    - `--disabled`: pointer-events `none`
+    - `--month`: направление `row`, промежуток между элементами `var(--ds-size-2x)`, внутренние отступы `var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x)`, фон `var(--ds-color-brand-neutral-default)`
+    - `--year`: направление `column`, align-items `center`, color `var(--ds-color-brand-neutral-default)`, color `var(--ds-color-brand-neutral-neutral)`
+- Состояния: `:active` (нажатие), `:disabled` (неактивно), `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -6383,8 +6460,11 @@
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-10x)`, растёт по контенту
     - ширина: по контенту (hug)
-- Модификаторы: `--default` `--disabled` `--selected`
-- Состояния: `:active` `:disabled` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--default`: color `var(--ds-color-brand-neutral-neutral)`, направление `row`, промежуток между элементами `var(--ds-size-2-5x)`, внутренние отступы `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x)`
+    - `--disabled`: pointer-events `none`
+    - `--selected`: направление `column`, color `var(--ds-color-brand-neutral-default)`
+- Состояния: `:active` (нажатие), `:disabled` (неактивно), `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -6484,7 +6564,9 @@
 - Размеры и параметры:
     - ширина: по контенту (hug)
     - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-4x)`
-- Модификаторы: `--false` `--true`
+- Модификаторы (что меняет каждый):
+    - `--false`: color `var(--ds-color-expansion-panel-block-collaps-content-text-color)`
+    - `--true`: color `var(--ds-color-expansion-panel-block-collaps-content-text-color)`
 - Разметка:
 
 ```html
@@ -6540,7 +6622,9 @@
 - Размеры и параметры:
     - ширина: по контенту (hug)
     - промежуток между элементами: `var(--ds-size-2x)`
-- Модификаторы: `--collaps` `--expand`
+- Модификаторы (что меняет каждый):
+    - `--collaps`: color `var(--ds-color-expansion-panel-block-collaps-content-text-color)`
+    - `--expand`: color `var(--ds-color-expansion-panel-block-collaps-content-text-color)`
 - Разметка:
 
 ```html
@@ -6660,7 +6744,9 @@
     - ширина: по контенту (hug)
     - внутренние отступы: `var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x)`
     - скругление: `var(--ds-size-8x)`
-- Модификаторы: `--default` `--mini`
+- Модификаторы (что меняет каждый):
+    - `--default`: направление `column`, фон `var(--ds-color-brand-neutral-default)`, color `var(--ds-color-brand-neutral-default)`
+    - `--mini`: направление `row`, промежуток между элементами `var(--ds-size-6x)`, скругление `var(--ds-size-6x)`, фон `var(--ds-color-brand-neutral-super-light)`
 - Разметка:
 
 ```html
@@ -6743,7 +6829,12 @@
     - ширина: по контенту (hug)
     - скругление: `var(--ds-size-2x)`
     - тень: `0.0px 0.0px 16.0px 0px #2121211f`
-- Модификаторы: `--default` `--down` `--left` `--right` `--up`
+- Модификаторы (что меняет каждый):
+    - `--default`: направление `column`, color `var(--ds-color-hint-content-icon-color)`
+    - `--down`: направление `column`, color `var(--ds-color-hint-content-icon-color)`
+    - `--left`: направление `row`, color `var(--ds-color-hint-content-icon-color)`
+    - `--right`: направление `row`, color `var(--ds-color-hint-content-icon-color)`
+    - `--up`: направление `column`, color `var(--ds-color-hint-content-icon-color)`
 - Разметка:
 
 ```html
@@ -6864,7 +6955,9 @@
     - внутренние отступы: `var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-2x)`
     - промежуток между элементами: `var(--ds-size-2x)`
     - фон: `var(--ds-color-hint-background-color)`
-- Модификаторы: `--group-content` `--single-content`
+- Модификаторы (что меняет каждый):
+    - `--group-content`: color `var(--ds-color-hint-content-icon-color)`
+    - `--single-content`: align-items `center`, color `var(--ds-color-hint-content-icon-color)`
 - Разметка:
 
 ```html
@@ -6973,7 +7066,8 @@
     - внутренние отступы: `var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-4x) var(--ds-size-3x)`
     - промежуток между элементами: `var(--ds-size-3x)`
     - фон: `var(--ds-color-hint-background-color)`
-- Модификаторы: `--default`
+- Модификаторы (что меняет каждый):
+    - `--default`: color `var(--ds-color-hint-content-icon-color)`
 - Разметка:
 
 ```html
@@ -7064,7 +7158,12 @@
     - внутренние отступы: `var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-1x)`
     - промежуток между элементами: `var(--ds-size-2x)`
     - фон: `var(--ds-color-hint-background-color)`
-- Модификаторы: `--error` `--neutral` `--primary` `--secondary` `--warning`
+- Модификаторы (что меняет каждый):
+    - `--error`: color `var(--ds-color-hint-content-icon-color)`
+    - `--neutral`: color `var(--ds-color-hint-content-icon-color)`
+    - `--primary`: color `var(--ds-color-hint-content-icon-color)`
+    - `--secondary`: color `var(--ds-color-hint-content-icon-color)`
+    - `--warning`: color `var(--ds-color-hint-content-icon-color)`
 - Разметка:
 
 ```html
@@ -7172,7 +7271,8 @@
     - высота: минимум `var(--ds-size-5x)`, растёт по контенту
     - ширина: по контенту (hug)
     - промежуток между элементами: `var(--ds-size-2x)`
-- Модификаторы: `--4x`
+- Модификаторы (что меняет каждый):
+    - `--4x`: промежуток между элементами `var(--ds-size-4x)`
 - Разметка:
 
 ```html
@@ -7401,8 +7501,9 @@
     - ширина: по контенту (hug)
     - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x)`
     - промежуток между элементами: `var(--ds-size-2x)`
-- Модификаторы: `--disabled`
-- Состояния: `:disabled` `:focus-visible` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+- Состояния: `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -7570,7 +7671,9 @@
     - высота: минимум `48px`, растёт по контенту
     - ширина: по контенту (hug)
     - фон: `var(--ds-color-input-input-outlined-background)`
-- Модификаторы: `--empty` `--populated`
+- Модификаторы (что меняет каждый):
+    - `--empty`: color `var(--ds-color-input-input-label-text-color)`
+    - `--populated`: color `var(--ds-color-input-input-label-text-color)`
 - Разметка:
 
 ```html
@@ -7733,8 +7836,9 @@
     - скругление: `var(--ds-size-2x)`
     - рамка: `1px solid var(--ds-color-input-number-control-default-border-color)`
     - фон: `var(--ds-color-input-input-outlined-background)`
-- Модификаторы: `--disabled`
-- Состояния: `:disabled` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+- Состояния: `:disabled` (неактивно), `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -7913,8 +8017,12 @@
 - Размеры и параметры:
     - ширина: по контенту (hug)
     - промежуток между элементами: `18px`
-- Модификаторы: `--disabled` `--empty` `--populated` `--xs`
-- Состояния: `:disabled` `:focus-visible` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+    - `--empty`: align-items `center`, color `var(--ds-color-input-input-label-text-color)`, color `var(--ds-color-input-number-control-disable-icon-color)`
+    - `--populated`: align-items `center`, color `var(--ds-color-input-input-label-text-color)`, color `var(--ds-color-input-number-control-disable-icon-color)`
+    - `--xs`: ширина `var(--ds-size-6x)`, высота `var(--ds-size-6x)`
+- Состояния: `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -8271,7 +8379,9 @@
     - высота: минимум `48px`, растёт по контенту
     - ширина: по контенту (hug)
     - фон: `var(--ds-color-input-input-outlined-background)`
-- Модификаторы: `--empty` `--populated`
+- Модификаторы (что меняет каждый):
+    - `--empty`: color `var(--ds-color-input-input-label-text-color)`
+    - `--populated`: color `var(--ds-color-input-input-label-text-color)`
 - Разметка:
 
 ```html
@@ -8371,7 +8481,8 @@
     - ширина: по контенту (hug)
     - внутренние отступы: `0 0 var(--ds-size-2x) var(--ds-size-2x)`
     - фон: `var(--ds-color-list-background)`
-- Модификаторы: `--container`
+- Модификаторы (что меняет каждый):
+    - `--container`: color `var(--ds-color-list-item-icon-color)`
 - Разметка:
 
 ```html
@@ -8494,8 +8605,9 @@
     - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x)`
     - промежуток между элементами: `var(--ds-size-2x)`
     - фон: `var(--ds-color-list-background)`
-- Модификаторы: `--disabled`
-- Состояния: `:active` `:disabled` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+- Состояния: `:active` (нажатие), `:disabled` (неактивно), `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -8719,7 +8831,8 @@
     - скругление: `var(--ds-size-2x)`
     - фон: `var(--ds-color-menu-background)`
     - тень: `0.0px 0.0px 16.0px 0px #2121211f`
-- Модификаторы: `--container`
+- Модификаторы (что меняет каждый):
+    - `--container`: color `var(--ds-color-brand-neutral-light)`
 - Разметка:
 
 ```html
@@ -8858,8 +8971,9 @@
     - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x)`
     - промежуток между элементами: `var(--ds-size-2x)`
     - фон: `var(--ds-color-menu-background)`
-- Модификаторы: `--disabled`
-- Состояния: `:active` `:disabled` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+- Состояния: `:active` (нажатие), `:disabled` (неактивно), `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -9229,7 +9343,10 @@
     - высота: минимум `var(--ds-size-5x)`, растёт по контенту
     - ширина: по контенту (hug)
     - промежуток между элементами: `var(--ds-size-1x)`
-- Модификаторы: `--disable` `--error` `--normal`
+- Модификаторы (что меняет каждый):
+    - `--disable`: color `var(--ds-color-button-icon-disable-icon-color)`
+    - `--error`: color `var(--ds-color-button-neutral-filled-default-text-color)`
+    - `--normal`: color `var(--ds-color-button-neutral-filled-default-text-color)`
 - Разметка:
 
 ```html
@@ -9353,8 +9470,11 @@
 - Размеры и параметры:
     - ширина: по контенту (hug)
     - внутренние отступы: `var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x)`
-- Модификаторы: `--first` `--last` `--middle`
-- Состояния: `:hover`
+- Модификаторы (что меняет каждый):
+    - `--first`
+    - `--last`
+    - `--middle`: align-items `center`
+- Состояния: `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -9418,7 +9538,8 @@
     - ширина: по контенту (hug)
     - внутренние отступы: `48px 0 0 0`
     - промежуток между элементами: `var(--ds-size-2-5x)`
-- Модификаторы: `--left`
+- Модификаторы (что меняет каждый):
+    - `--left`: внутренние отступы `0 48px 0 0`
 - Разметка:
 
 ```html
@@ -9508,8 +9629,11 @@
     - скругление: `var(--ds-size-3x)`
     - рамка: `1px solid var(--ds-color-search-completed-border-color)`
     - фон: `var(--ds-color-search-background)`
-- Модификаторы: `--disabled` `--s` `--xs`
-- Состояния: `:disabled` `:focus-visible` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+    - `--s`: внутренние отступы `var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-2x)`, ширина `var(--ds-size-5x)`, высота `var(--ds-size-5x)`
+    - `--xs`: высота `var(--ds-size-9x)`, внутренние отступы `var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x)`, скругление `var(--ds-size-circular)`, ширина `var(--ds-size-5x)`
+- Состояния: `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -9635,7 +9759,8 @@
     - скругление: `var(--ds-size-3x)`
     - фон: `var(--ds-color-brand-neutral-default)`
     - тень: `0.0px 0.0px 16.0px 0px #2121211f`
-- Модификаторы: `--container`
+- Модификаторы (что меняет каждый):
+    - `--container`: color `var(--ds-color-brand-neutral-light)`
 - Разметка:
 
 ```html
@@ -9763,8 +9888,9 @@
     - ширина: по контенту (hug)
     - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x)`
     - промежуток между элементами: `var(--ds-size-2x)`
-- Модификаторы: `--disabled`
-- Состояния: `:disabled` `:focus-visible` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+- Состояния: `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -9858,8 +9984,13 @@
 - Размеры и параметры:
     - ширина: по контенту (hug)
     - фон: `var(--ds-color-brand-neutral-default)`
-- Модификаторы: `--disabled` `--empty` `--populated` `--s` `--xs`
-- Состояния: `:disabled` `:focus-visible` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+    - `--empty`: color `var(--ds-color-brand-neutral-darker)`, color `var(--ds-color-brand-neutral-neutral)`
+    - `--populated`: color `var(--ds-color-brand-neutral-darker)`, color `var(--ds-color-brand-neutral-neutral)`
+    - `--s`: ширина `var(--ds-size-5x)`, высота `var(--ds-size-5x)`
+    - `--xs`: ширина `var(--ds-size-5x)`, высота `var(--ds-size-5x)`
+- Состояния: `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -9977,8 +10108,11 @@
     - ширина: по контенту (hug)
     - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-1-5x)`
     - промежуток между элементами: `var(--ds-size-2x)`
-- Модификаторы: `--disabled` `--false` `--true`
-- Состояния: `:active` `:disabled` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+    - `--false`: внутренние отступы `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x)`, фон `var(--ds-color-brand-neutral-default)`, color `var(--ds-color-brand-neutral-darker)`, color `var(--ds-color-brand-neutral-neutral)`
+    - `--true`: align-items `center`, фон `var(--ds-color-brand-neutral-default)`, color `var(--ds-color-brand-neutral-darker)`
+- Состояния: `:active` (нажатие), `:disabled` (неактивно), `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -10152,8 +10286,10 @@
 - Размеры и параметры:
     - высота: минимум `41px`, растёт по контенту
     - ширина: по контенту (hug)
-- Модификаторы: `--collapsed` `--expanded`
-- Состояния: `:active` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--collapsed`
+    - `--expanded`: фон `var(--ds-color-sidenav-control-background)`, color `var(--ds-color-sidenav-control-text-color)`
+- Состояния: `:active` (нажатие), `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -10292,7 +10428,9 @@
     - ширина: по контенту (hug)
     - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x)`
     - промежуток между элементами: `var(--ds-size-3x)`
-- Модификаторы: `--l1` `--l2`
+- Модификаторы (что меняет каждый):
+    - `--l1`: направление `column`, color `var(--ds-color-sidenav-control-text-color)`, color `var(--ds-color-sidenav-item-l3-indicator)`
+    - `--l2`: направление `row`, align-items `center`, фон `var(--ds-color-sidenav-control-text-color)`, color `var(--ds-color-sidenav-footer-l2-text-color)`
 - Разметка:
 
 ```html
@@ -10412,7 +10550,9 @@
     - ширина: по контенту (hug)
     - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x)`
     - промежуток между элементами: `92px`
-- Модификаторы: `--l1` `--l2`
+- Модификаторы (что меняет каждый):
+    - `--l1`: направление `row`, фон `var(--ds-color-sidenav-control-background)`, направление `column`, внутренние отступы `var(--ds-size-3-5x) var(--ds-size-3-5x) var(--ds-size-3x) var(--ds-size-3x)`
+    - `--l2`: высота `48px`, направление `row`, промежуток между элементами `var(--ds-size-2x)`, фон `var(--ds-color-sidenav-control-text-color)`
 - Разметка:
 
 ```html
@@ -10548,8 +10688,11 @@
     - ширина: по контенту (hug)
     - внутренние отступы: `var(--ds-size-8x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x)`
     - промежуток между элементами: `var(--ds-size-2x)`
-- Модификаторы: `--l1` `--l2` `--l3`
-- Состояния: `:hover`
+- Модификаторы (что меняет каждый):
+    - `--l1`: направление `row`, align-items `center`, внутренние отступы `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x)`, фон `var(--ds-color-sidenav-control-background)`
+    - `--l2`: направление `column`, фон `var(--ds-color-sidenav-control-text-color)`, color `var(--ds-color-sidenav-header-l2-text-color)`
+    - `--l3`: направление `row`, align-items `center`, фон `var(--ds-color-sidenav-control-text-color)`, color `var(--ds-color-sidenav-header-l2-text-color)`
+- Состояния: `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -10720,7 +10863,9 @@
     - ширина: по контенту (hug)
     - скругление: `var(--ds-size-2x)`
     - тень: `0.0px 0.0px 16.0px 0px #2121211f`
-- Модификаторы: `--complex` `--single`
+- Модификаторы (что меняет каждый):
+    - `--complex`: фон `var(--ds-color-snackbar-dark-background)`, color `var(--ds-color-snackbar-dark-text-color)`, фон `var(--ds-color-snackbar-dark-text-color)`, color `var(--ds-color-snackbar-light-text-color)`
+    - `--single`: фон `var(--ds-color-snackbar-dark-background)`, color `var(--ds-color-snackbar-dark-text-color)`, фон `var(--ds-color-snackbar-dark-text-color)`, color `var(--ds-color-snackbar-light-text-color)`
 - Разметка:
 
 ```html
@@ -10826,7 +10971,7 @@
 - Размеры и параметры:
     - высота: `var(--ds-size-6x)` (фикс.)
     - ширина: `var(--ds-size-6x)` (фикс.)
-- Состояния: `:active` `:hover`
+- Состояния: `:active` (нажатие), `:hover` (наведение)
 <details><summary>CSS компонента</summary>
 
 ```css
@@ -10887,7 +11032,16 @@
     - внутренние отступы: `var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1x) var(--ds-size-1x)`
     - промежуток между элементами: `var(--ds-size-1x)`
     - скругление: `var(--ds-size-2x)`
-- Модификаторы: `--accent` `--contrast-1` `--contrast-2` `--contrast-3` `--contrast-4` `--negative` `--neutral` `--positive` `--warning`
+- Модификаторы (что меняет каждый):
+    - `--accent`: фон `var(--ds-color-status-accent-filled-background)`, color `var(--ds-color-status-accent-filled-text-color)`
+    - `--contrast-1`: фон `var(--ds-color-status-contrast-1-filled-background)`, color `var(--ds-color-status-contrast-1-filled-text-color)`
+    - `--contrast-2`: фон `var(--ds-color-status-contrast-2-filled-background)`, color `var(--ds-color-status-contrast-2-filled-text-color)`
+    - `--contrast-3`: фон `var(--ds-color-status-contrast-3-filled-background)`, color `var(--ds-color-status-contrast-3-filled-text-color)`
+    - `--contrast-4`: фон `var(--ds-color-status-contrast-4-filled-background)`, color `var(--ds-color-status-contrast-4-filled-text-color)`
+    - `--negative`: фон `var(--ds-color-status-negative-filled-background)`, color `var(--ds-color-status-negative-filled-text-color)`
+    - `--neutral`: фон `var(--ds-color-status-neutral-filled-background)`, color `var(--ds-color-status-icon-color)`
+    - `--positive`: фон `var(--ds-color-status-positive-filled-background)`, color `var(--ds-color-status-positive-filled-text-color)`
+    - `--warning`: фон `var(--ds-color-status-warning-filled-background)`, color `var(--ds-color-status-warning-filled-text-color)`
 - Разметка:
 
 ```html
@@ -11259,7 +11413,9 @@
 - Размеры и параметры:
     - высота: минимум `72px`, растёт по контенту
     - ширина: по контенту (hug)
-- Модификаторы: `--table-cell-2-lvl` `--table-row-2-lvl`
+- Модификаторы (что меняет каждый):
+    - `--table-cell-2-lvl`: направление `column`, рамка `1px solid var(--ds-color-tab-active-press-background)`
+    - `--table-row-2-lvl`: направление `row`, align-items `center`
 - Разметка:
 
 ```html
@@ -11324,7 +11480,15 @@
     - высота: минимум `var(--ds-size-6x)`, растёт по контенту
     - ширина: по контенту (hug)
     - фон: `var(--ds-color-table-surfase-default)`
-- Модификаторы: `--default` `--disable` `--error` `--error-hover` `--focus` `--focus-placeholder` `--hover` `--vocus-value`
+- Модификаторы (что меняет каждый):
+    - `--default`: color `var(--ds-color-chips-icon-color)`
+    - `--disable`: color `var(--ds-color-chips-input-disable-action-text-color)`
+    - `--error`: color `var(--ds-color-chips-icon-color)`
+    - `--error-hover`: color `var(--ds-color-chips-icon-color)`
+    - `--focus`: color `var(--ds-color-chips-text-color)`
+    - `--focus-placeholder`: color `var(--ds-color-chips-text-color)`
+    - `--hover`: color `var(--ds-color-chips-icon-color)`
+    - `--vocus-value`: color `var(--ds-color-chips-text-color)`
 - Разметка:
 
 ```html
@@ -11444,8 +11608,9 @@
     - ширина: по контенту (hug)
     - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x)`
     - промежуток между элементами: `var(--ds-size-2x)`
-- Модификаторы: `--disabled`
-- Состояния: `:disabled` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+- Состояния: `:disabled` (неактивно), `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -11550,8 +11715,9 @@
     - ширина: по контенту (hug)
     - рамка: `1px solid var(--ds-color-tab-active-press-background)`
     - фон: `var(--ds-color-table-surfase-default)`
-- Модификаторы: `--disabled`
-- Состояния: `:disabled` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+- Состояния: `:disabled` (неактивно), `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -11627,7 +11793,8 @@
     - ширина: по контенту (hug)
     - фон: `var(--ds-color-table-surfase-default)`
     - тень: `0.0px 0.0px 4.0px 0px #2121211f`
-- Модификаторы: `--default`
+- Модификаторы (что меняет каждый):
+    - `--default`: color `var(--ds-color-tab-innactive-counter-text-color)`
 - Разметка:
 
 ```html
@@ -11712,8 +11879,9 @@
     - промежуток между элементами: `var(--ds-size-2x)`
     - рамка: `1px solid var(--ds-color-tab-active-press-background)`
     - фон: `var(--ds-color-table-surfase-head)`
-- Модификаторы: `--disabled`
-- Состояния: `:disabled` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+- Состояния: `:disabled` (неактивно), `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -11885,8 +12053,9 @@
     - высота: минимум `52px`, растёт по контенту
     - ширина: по контенту (hug)
     - промежуток между элементами: `var(--ds-size-2x)`
-- Модификаторы: `--disabled`
-- Состояния: `:disabled`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+- Состояния: `:disabled` (неактивно)
 - Разметка:
 
 ```html
@@ -12013,8 +12182,11 @@
     - высота: минимум `96px`, растёт по контенту
     - ширина: по контенту (hug)
     - промежуток между элементами: `var(--ds-size-1x)`
-- Модификаторы: `--disabled` `--empty` `--populated`
-- Состояния: `:disabled` `:focus-visible` `:hover`
+- Модификаторы (что меняет каждый):
+    - `--disabled`: pointer-events `none`
+    - `--empty`: color `var(--ds-color-brand-neutral-neutral)`, color `var(--ds-color-brand-neutral-darker)`
+    - `--populated`: color `var(--ds-color-brand-neutral-neutral)`, color `var(--ds-color-brand-neutral-darker)`
+- Состояния: `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
 - Разметка:
 
 ```html
@@ -12157,7 +12329,9 @@
     - рамка: `1px solid var(--ds-color-brand-neutral-lighter)`
     - фон: `var(--ds-color-brand-neutral-default)`
     - тень: `0.0px 0.0px 16.0px 0px #2121211f`
-- Модификаторы: `--time-grid` `--time-line`
+- Модификаторы (что меняет каждый):
+    - `--time-grid`: направление `column`, align-items `center`, color `var(--ds-color-brand-neutral-super-dark)`
+    - `--time-line`: направление `row`, color `var(--ds-color-brand-neutral-super-dark)`
 - Разметка:
 
 ```html
@@ -12327,7 +12501,12 @@
     - внутренние отступы: `var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x)`
     - промежуток между элементами: `var(--ds-size-2-5x)`
     - скругление: `var(--ds-size-0-5x)`
-- Модификаторы: `--1-button` `--2-buttons` `--3-buttons` `--3-text` `--text`
+- Модификаторы (что меняет каждый):
+    - `--1-button`: фон `var(--ds-color-button-accent-lite-default)`
+    - `--2-buttons`: промежуток между элементами `var(--ds-size-1x)`, фон `var(--ds-color-button-accent-lite-default)`
+    - `--3-buttons`: промежуток между элементами `var(--ds-size-1x)`, фон `var(--ds-color-button-accent-lite-default)`
+    - `--3-text`: скругление `var(--ds-size-1x)`, рамка `1px solid var(--ds-color-button-icon-neutral-outlined-border-color)`, color `var(--ds-color-button-accent-default)`
+    - `--text`: внутренние отступы `var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x)`, фон `var(--ds-color-button-accent-lite-default)`, color `var(--ds-color-button-accent-default)`, рамка `none`
 - Разметка:
 
 ```html
@@ -12420,7 +12599,9 @@
     - высота: `44px` (фикс.)
     - ширина: по контенту (hug)
     - промежуток между элементами: `var(--ds-size-2-5x)`
-- Модификаторы: `--2` `--3`
+- Модификаторы (что меняет каждый):
+    - `--2`: направление `row`, направление `column`, align-items `center`
+    - `--3`: направление `row`, align-items `center`
 - Разметка:
 
 ```html
@@ -12508,7 +12689,12 @@
     - ширина: по контенту (hug)
     - внутренние отступы: `11px 0 0 var(--ds-size-5x)`
     - промежуток между элементами: `var(--ds-size-2-5x)`
-- Модификаторы: `--end` `--end-long` `--middle` `--middle-long` `--start`
+- Модификаторы (что меняет каждый):
+    - `--end`: направление `row`, align-items `center`, направление `column`, внутренние отступы `11px 0 0 21px`
+    - `--end-long`: направление `column`, внутренние отступы `11px 0 0 21px`
+    - `--middle`: направление `row`, align-items `center`, внутренние отступы `11px 0 0 0`
+    - `--middle-long`: направление `row`, align-items `center`, внутренние отступы `11px 0 0 0`
+    - `--start`: направление `row`, align-items `center`, внутренние отступы `11px var(--ds-size-3x) 0 0`
 - Разметка:
 
 ```html
