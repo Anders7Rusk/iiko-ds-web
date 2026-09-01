@@ -1364,24 +1364,328 @@
 
 #### Arrow `[55939:14119]` — 13 вариантов
 - **Content** (VARIANT): arrow_back, arrow_downward_alt, arrow_drop_down, arrow_drop_up, arrow_forward, arrow_left, arrow_right, arrow_upward_alt, keyboard_arrow_down, keyboard_arrow_left, keyboard_arrow_right, keyboard_arrow_up, unfold_less
+- Размеры и параметры:
+    - высота: `var(--ds-size-6x)` (фикс.)
+    - ширина: `var(--ds-size-6x)` (фикс.)
+    - фон: `var(--ds-color-brand-neutral-default)`
+- Разметка:
+
+```html
+<div class="ds-arrow">
+  <div class="ds-arrow__drop-down"></div>
+  <span class="ds-arrow__icon"><!-- SVG-иконка ДС --></span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Arrow [55939:14119] — 13 вариантов; оси: Content */
+.ds-arrow {
+  height: var(--ds-size-6x);
+  width: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-arrow__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-arrow__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-arrow__icon svg path {
+  fill: currentColor;
+}
+.ds-arrow__drop-down {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+```
+</details>
 
 #### Arrow list `[55939:13307]` — 13 вариантов
 - **Content** (VARIANT): arrow_back, arrow_downward_alt, arrow_drop_down, arrow_drop_up, arrow_forward, arrow_left, arrow_right, arrow_upward_alt, keyboard_arrow_down, keyboard_arrow_left, keyboard_arrow_right, keyboard_arrow_up, unfold_less
+- Размеры и параметры:
+    - высота: `var(--ds-size-6x)` (фикс.)
+    - ширина: `var(--ds-size-6x)` (фикс.)
+    - фон: `var(--ds-color-list-background)`
+- Разметка:
+
+```html
+<div class="ds-arrow-list">
+  <div class="ds-arrow-list__drop-down"></div>
+  <span class="ds-arrow-list__icon"><!-- SVG-иконка ДС --></span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Arrow list [55939:13307] — 13 вариантов; оси: Content */
+.ds-arrow-list {
+  height: var(--ds-size-6x);
+  width: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-list-background);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-arrow-list__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-arrow-list__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-arrow-list__icon svg path {
+  fill: currentColor;
+}
+.ds-arrow-list__drop-down {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-list-background);
+}
+```
+</details>
 
 #### Arrow menu `[56090:1628]` — 13 вариантов
 - **Content** (VARIANT): arrow_back, arrow_downward_alt, arrow_drop_down, arrow_drop_up, arrow_forward, arrow_left, arrow_right, arrow_upward_alt, keyboard_arrow_down, keyboard_arrow_left, keyboard_arrow_right, keyboard_arrow_up, unfold_less
+- Размеры и параметры:
+    - высота: `var(--ds-size-6x)` (фикс.)
+    - ширина: `var(--ds-size-6x)` (фикс.)
+    - фон: `var(--ds-color-menu-background)`
+- Разметка:
+
+```html
+<div class="ds-arrow-menu">
+  <div class="ds-arrow-menu__drop-down"></div>
+  <span class="ds-arrow-menu__icon"><!-- SVG-иконка ДС --></span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Arrow menu [56090:1628] — 13 вариантов; оси: Content */
+.ds-arrow-menu {
+  height: var(--ds-size-6x);
+  width: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-menu-background);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-arrow-menu__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-arrow-menu__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-arrow-menu__icon svg path {
+  fill: currentColor;
+}
+.ds-arrow-menu__drop-down {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-menu-background);
+}
+```
+</details>
 
 #### Arrow select `[57735:17989]` — 13 вариантов
 - **Content** (VARIANT): arrow_back, arrow_downward_alt, arrow_drop_down, arrow_drop_up, arrow_forward, arrow_left, arrow_right, arrow_upward_alt, keyboard_arrow_down, keyboard_arrow_left, keyboard_arrow_right, keyboard_arrow_up, unfold_less
+- Размеры и параметры:
+    - высота: `var(--ds-size-6x)` (фикс.)
+    - ширина: `var(--ds-size-6x)` (фикс.)
+    - фон: `var(--ds-color-brand-neutral-default)`
+- Разметка:
+
+```html
+<div class="ds-arrow-select">
+  <div class="ds-arrow-select__drop-down"></div>
+  <span class="ds-arrow-select__icon"><!-- SVG-иконка ДС --></span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Arrow select [57735:17989] — 13 вариантов; оси: Content */
+.ds-arrow-select {
+  height: var(--ds-size-6x);
+  width: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-arrow-select__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-arrow-select__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-arrow-select__icon svg path {
+  fill: currentColor;
+}
+.ds-arrow-select__drop-down {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+```
+</details>
 
 #### Autocomplete form `[58107:8230]` — 10 вариантов
 - **Variant** (VARIANT): Empty, Populated
 - **State** (VARIANT): Default, Disable, Error, Focus, Focus+Value, Hover
+- Размеры и параметры:
+    - высота: минимум `48px`, растёт по контенту
+    - ширина: по контенту (hug)
+    - фон: `var(--ds-color-brand-neutral-default)`
+- Модификаторы: `--disabled` `--empty` `--populated`
+- Состояния: `:disabled` `:focus-visible` `:hover`
+- Разметка:
+
+```html
+<div class="ds-autocomplete-form ds-autocomplete-form--disabled">
+  <span class="ds-autocomplete-form__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-autocomplete-form__input"></div>
+  <div class="ds-autocomplete-form__input-frame"></div>
+  <span class="ds-autocomplete-form__label">Текст</span>
+  <span class="ds-autocomplete-form__support">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Autocomplete form [58107:8230] — 10 вариантов; оси: Variant, State */
+.ds-autocomplete-form {
+  min-height: 48px;
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-brand-neutral-default);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-autocomplete-form__label {
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-darker);
+  white-space: nowrap;
+}
+.ds-autocomplete-form__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-autocomplete-form__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-autocomplete-form__icon svg path {
+  fill: currentColor;
+}
+.ds-autocomplete-form__input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+}
+.ds-autocomplete-form__input-frame {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-brand-accent-super-lightest);
+  border: 1px solid var(--ds-color-brand-neutral-lighter);
+}
+.ds-autocomplete-form__support {
+  display: flex;
+  flex-direction: row;
+}
+.ds-autocomplete-form--empty {
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-autocomplete-form--populated {
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-autocomplete-form--empty:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
+}
+.ds-autocomplete-form--populated:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
+}
+.ds-autocomplete-form--populated:focus-visible {
+  color: var(--ds-color-brand-accent-default);
+}
+.ds-autocomplete-form--empty:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-autocomplete-form--empty.ds-autocomplete-form--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-autocomplete-form--populated:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-autocomplete-form--populated.ds-autocomplete-form--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-autocomplete-form--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Backdrop `[53623:806]` — 1 вариантов
 - **Type** (VARIANT): Default
 - Токены компонента (1):
     - `--ds-color-backdrop-background`: `#333333`
+
 
 #### Badge `[54428:187]` — 8 вариантов
 - **Style** (VARIANT): Accent, Negative, Positive, Warning
@@ -1392,6 +1696,7 @@
     - `--ds-color-badge-negative-background`: `#ff5252`
     - `--ds-color-badge-positive-background`: `#14b456`
     - `--ds-color-badge-warning-background`: `#ffab40`
+- CSS: выверено вручную, см. `components/badge.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Banners `[54367:2566]` — 12 вариантов
 - **Style** (VARIANT): Accent, Negative, Neutral, Positive, Tip, Warning
@@ -1410,6 +1715,7 @@
     - `--ds-color-banners-positive-icon-color`: `#14b456`
     - `--ds-color-banners-warning-background`: `#fff9f0`
     - `--ds-color-banners-warning-icon-color`: `#ea7806`
+- CSS: выверено вручную, см. `components/navigation.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Button `[17022:63091]` — 153 вариантов
 - **Size** (VARIANT): M, S, XS
@@ -1647,6 +1953,7 @@
     - `--ds-color-button-warning-text-press-background`: `#fff4e5`
     - `--ds-color-button-warning-text-press-icon-color`: `#ea7806`
     - `--ds-color-button-warning-text-press-text-color`: `#ea7806`
+- CSS: выверено вручную, см. `components/button.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Button `[16953:14851]` — 13 вариантов
 - **Type** (VARIANT): Icon, Icon_outlined
@@ -1882,6 +2189,7 @@
     - `--ds-color-button-warning-text-press-background`: `#fff4e5`
     - `--ds-color-button-warning-text-press-icon-color`: `#ea7806`
     - `--ds-color-button-warning-text-press-text-color`: `#ea7806`
+- CSS: выверено вручную, см. `components/button.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Button group `[53619:15772]` — 4 вариантов
 - **Orientation** (VARIANT): Horizontally, Vertically
@@ -2117,6 +2425,7 @@
     - `--ds-color-button-warning-text-press-background`: `#fff4e5`
     - `--ds-color-button-warning-text-press-icon-color`: `#ea7806`
     - `--ds-color-button-warning-text-press-text-color`: `#ea7806`
+- CSS: выверено вручную, см. `components/button.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Button icon `[17123:81299]` — 153 вариантов
 - **Size** (VARIANT): M, S, XS
@@ -2354,6 +2663,7 @@
     - `--ds-color-button-warning-text-press-icon-color`: `#ea7806`
     - `--ds-color-button-warning-text-press-text-color`: `#ea7806`
 
+
 #### Button icon group `[53828:5738]` — 2 вариантов
 - **Orientation** (VARIANT): Horizontally, Vertically
 - Прочие свойства: Slot#60176:0 (SLOT)
@@ -2588,6 +2898,7 @@
     - `--ds-color-button-warning-text-press-icon-color`: `#ea7806`
     - `--ds-color-button-warning-text-press-text-color`: `#ea7806`
 
+
 #### Button New `[16321:6498]` — 2 вариантов
 - **Type** (VARIANT): btn-28, btn-36
 - Токены компонента (229):
@@ -2820,6 +3131,50 @@
     - `--ds-color-button-warning-text-press-background`: `#fff4e5`
     - `--ds-color-button-warning-text-press-icon-color`: `#ea7806`
     - `--ds-color-button-warning-text-press-text-color`: `#ea7806`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2-5x) var(--ds-size-2-5x)`
+    - тень: `0.0px 0.0px 4.0px 0px #2121211f`
+- Модификаторы: `--btn-28` `--btn-36`
+- Разметка:
+
+```html
+<div class="ds-button-new ds-button-new--btn-28">
+  <span class="ds-button-new__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Button New [16321:6498] — 2 вариантов; оси: Type */
+.ds-button-new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2-5x) var(--ds-size-2-5x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-button-new__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: 1.25px;
+  color: var(--ds-palette-neutral-950);
+  white-space: nowrap;
+}
+.ds-button-new--btn-36 {
+  background: var(--ds-color-button-accent-lite-default);
+  color: var(--ds-palette-neutral-950);
+}
+.ds-button-new--btn-28 {
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x);
+  background: var(--ds-color-button-accent-default);
+  color: var(--ds-color-button-accent-lite-default);
+}
+```
+</details>
 
 #### Button toggle `[17039:71554]` — 12 вариантов
 - **Size** (VARIANT): M, S, XS
@@ -3056,6 +3411,80 @@
     - `--ds-color-button-warning-text-press-background`: `#fff4e5`
     - `--ds-color-button-warning-text-press-icon-color`: `#ea7806`
     - `--ds-color-button-warning-text-press-text-color`: `#ea7806`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x)`
+    - промежуток между элементами: `var(--ds-size-1x)`
+    - скругление: `var(--ds-size-3x)`
+    - фон: `var(--ds-color-button-accent-lite-default)`
+- Модификаторы: `--filled` `--outlined` `--s` `--xs`
+- Разметка:
+
+```html
+<div class="ds-button-toggle ds-button-toggle--filled">
+  <span class="ds-button-toggle__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-button-toggle__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Button toggle [17039:71554] — 12 вариантов; оси: Size, Type, Content */
+.ds-button-toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-1x);
+  padding: var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-button-accent-lite-default);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-button-toggle__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-button-accent-default);
+  white-space: nowrap;
+}
+.ds-button-toggle__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-button-toggle__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-button-toggle__icon svg path {
+  fill: currentColor;
+}
+.ds-button-toggle--s .ds-button-toggle__icon {
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+}
+.ds-button-toggle--xs .ds-button-toggle__icon {
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
+}
+.ds-button-toggle--filled.ds-button-toggle--text {
+  color: var(--ds-color-button-accent-default);
+}
+.ds-button-toggle--outlined.ds-button-toggle--text {
+  border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
+  color: var(--ds-color-button-accent-lite-default);
+}
+.ds-button-toggle--outlined.ds-button-toggle--icon {
+  border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
+}
+```
+</details>
 
 #### Card content `[53744:3079]` — 2 вариантов
 - **Content** (VARIANT): Custom, Default
@@ -3066,6 +3495,7 @@
     - `--ds-color-card-content-title-color`: `#333333`
     - `--ds-color-card-header-desc-color`: `#616161`
     - `--ds-color-card-header-title-color`: `#333333`
+- CSS: выверено вручную, см. `components/card.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Card footer `[53744:3139]` — 1 вариантов
 - **Content** (VARIANT): Default
@@ -3076,6 +3506,7 @@
     - `--ds-color-card-content-title-color`: `#333333`
     - `--ds-color-card-header-desc-color`: `#616161`
     - `--ds-color-card-header-title-color`: `#333333`
+- CSS: выверено вручную, см. `components/card.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Card header `[52916:15126]` — 1 вариантов
 - **Content** (VARIANT): Default
@@ -3086,6 +3517,7 @@
     - `--ds-color-card-content-title-color`: `#333333`
     - `--ds-color-card-header-desc-color`: `#616161`
     - `--ds-color-card-header-title-color`: `#333333`
+- CSS: выверено вручную, см. `components/card.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Card view `[53744:3181]` — 3 вариантов
 - **Type** (VARIANT): Filled, Outlined, Shadow
@@ -3096,6 +3528,7 @@
     - `--ds-color-card-content-title-color`: `#333333`
     - `--ds-color-card-header-desc-color`: `#616161`
     - `--ds-color-card-header-title-color`: `#333333`
+- CSS: выверено вручную, см. `components/card.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Checkbox `[53806:5694]` — 21 вариантов
 - **Variant** (VARIANT): Disable, Error, Normal
@@ -3136,6 +3569,7 @@
     - `--ds-color-checkbox-normal-selected-default-background`: `rgba(255, 255, 255, 0.0)`
     - `--ds-color-checkbox-normal-selected-hover-background`: `#e8f0ff`
     - `--ds-color-checkbox-normal-selected-press-background`: `#ccdfff`
+- CSS: выверено вручную, см. `components/selection.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Checkbox group `[53810:889]` — 3 вариантов
 - **Orientation** (VARIANT): Group, Horizontal, Vertical
@@ -3175,6 +3609,7 @@
     - `--ds-color-checkbox-normal-selected-default-background`: `rgba(255, 255, 255, 0.0)`
     - `--ds-color-checkbox-normal-selected-hover-background`: `#e8f0ff`
     - `--ds-color-checkbox-normal-selected-press-background`: `#ccdfff`
+- CSS: выверено вручную, см. `components/selection.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Checkbox label `[53810:880]` — 9 вариантов
 - **Variant** (VARIANT): Disable, Error, Normal
@@ -3215,6 +3650,120 @@
     - `--ds-color-checkbox-normal-selected-default-background`: `rgba(255, 255, 255, 0.0)`
     - `--ds-color-checkbox-normal-selected-hover-background`: `#e8f0ff`
     - `--ds-color-checkbox-normal-selected-press-background`: `#ccdfff`
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-5x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-1x)`
+- Модификаторы: `--disable` `--error` `--normal`
+- Разметка:
+
+```html
+<div class="ds-checkbox-label ds-checkbox-label--disable">
+  <div class="ds-checkbox-label__form"></div>
+  <span class="ds-checkbox-label__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-checkbox-label__label">Текст</span>
+  <div class="ds-checkbox-label__left"></div>
+  <div class="ds-checkbox-label__right"></div>
+  <span class="ds-checkbox-label__support">Текст</span>
+  <div class="ds-checkbox-label__support-text"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Checkbox label [53810:880] — 9 вариантов; оси: Variant, Type */
+.ds-checkbox-label {
+  min-height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-checkbox-label__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: 0.25px;
+  color: var(--ds-color-checkbox-group-text-color);
+  white-space: nowrap;
+}
+.ds-checkbox-label__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-checkbox-label__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-checkbox-label__icon svg path {
+  fill: currentColor;
+}
+.ds-checkbox-label__form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+}
+.ds-checkbox-label__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-checkbox-label__right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-checkbox-label__support {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--ds-size-7x) 0 0 0;
+}
+.ds-checkbox-label__support-text {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-checkbox-group-text-support-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-checkbox-group-text-support-color);
+}
+.ds-checkbox-label--normal.ds-checkbox-label--deselected {
+  color: var(--ds-color-checkbox-group-text-color);
+}
+.ds-checkbox-label--normal.ds-checkbox-label--selected {
+  color: var(--ds-color-checkbox-group-text-color);
+}
+.ds-checkbox-label--normal.ds-checkbox-label--inderterminate {
+  color: var(--ds-color-checkbox-group-text-color);
+}
+.ds-checkbox-label--error.ds-checkbox-label--deselected {
+  color: var(--ds-color-checkbox-group-text-color);
+}
+.ds-checkbox-label--error.ds-checkbox-label--selected {
+  color: var(--ds-color-checkbox-group-text-color);
+}
+.ds-checkbox-label--error.ds-checkbox-label--inderterminate {
+  color: var(--ds-color-checkbox-group-text-color);
+}
+.ds-checkbox-label--disable.ds-checkbox-label--deselected {
+  color: var(--ds-color-checkbox-group-text-disable);
+}
+.ds-checkbox-label--disable.ds-checkbox-label--selected {
+  color: var(--ds-color-checkbox-group-text-disable);
+}
+.ds-checkbox-label--disable.ds-checkbox-label--inderterminate {
+  color: var(--ds-color-checkbox-group-text-disable);
+}
+```
+</details>
 
 #### Chips `[17168:83542]` — 18 вариантов
 - **Size** (VARIANT): M, S
@@ -3272,6 +3821,150 @@
     - `--ds-color-chips-outlined-hover-border-color`: `#9e9e9e`
     - `--ds-color-chips-outlined-press-background`: `#e0e0e0`
     - `--ds-color-chips-outlined-press-border-color`: `#e0e0e0`
+- Размеры и параметры:
+    - высота: `var(--ds-size-8x)` (фикс.)
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-1-5x) var(--ds-size-1-5x)`
+    - промежуток между элементами: `var(--ds-size-2x)`
+    - скругление: `var(--ds-size-3x)`
+- Модификаторы: `--disabled` `--filled` `--outlined` `--s`
+- Состояния: `:active` `:disabled` `:hover`
+- Разметка:
+
+```html
+<div class="ds-chips ds-chips--disabled">
+  <div class="ds-chips__add"></div>
+  <div class="ds-chips__chip-container"></div>
+  <div class="ds-chips__chip-text"></div>
+  <div class="ds-chips__close"></div>
+  <span class="ds-chips__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-chips__icon-size"></div>
+  <span class="ds-chips__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Chips [17168:83542] — 18 вариантов; оси: Size, Type, State */
+.ds-chips {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: var(--ds-size-8x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-1-5x) var(--ds-size-1-5x);
+  gap: var(--ds-size-2x);
+  border-radius: var(--ds-size-3x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-chips__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-chips-text-color);
+  white-space: nowrap;
+}
+.ds-chips__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-chips__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-chips__icon svg path {
+  fill: currentColor;
+}
+.ds-chips__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-chips__add {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-chips-disable-background-outlined);
+}
+.ds-chips__chip-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+}
+.ds-chips__chip-text {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-chips-text-color);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-chips-text-color);
+}
+.ds-chips__close {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-chips-disable-background-outlined);
+}
+.ds-chips--s {
+  gap: var(--ds-size-1x);
+  padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1x) var(--ds-size-1x);
+  border-radius: var(--ds-size-2x);
+}
+.ds-chips--s .ds-chips__icon {
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
+}
+.ds-chips--outlined {
+  background: var(--ds-color-chips-disable-background-outlined);
+  border: 1px solid var(--ds-color-chips-input-default-border-color);
+  color: var(--ds-color-chips-text-color);
+}
+.ds-chips--outlined:hover {
+  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips--outlined:active {
+  background: var(--ds-color-chips-input-default-border-color);
+}
+.ds-chips--outlined:disabled {
+  border: 1px solid var(--ds-color-chips-input-disable-border-color);
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips--outlined.ds-chips--disabled {
+  border: 1px solid var(--ds-color-chips-input-disable-border-color);
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips--filled {
+  background: var(--ds-color-chips-input-default-background);
+  color: var(--ds-color-chips-text-color);
+}
+.ds-chips--filled:hover {
+  background: var(--ds-color-chips-input-disable-background);
+}
+.ds-chips--filled:active {
+  background: var(--ds-color-chips-input-default-border-color);
+}
+.ds-chips--filled:disabled {
+  background: var(--ds-color-chips-input-disable-border-color);
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips--filled.ds-chips--disabled {
+  background: var(--ds-color-chips-input-disable-border-color);
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Chips group `[55750:5485]` — 2 вариантов
 - **Size** (VARIANT): M, S
@@ -3327,6 +4020,61 @@
     - `--ds-color-chips-outlined-hover-border-color`: `#9e9e9e`
     - `--ds-color-chips-outlined-press-background`: `#e0e0e0`
     - `--ds-color-chips-outlined-press-border-color`: `#e0e0e0`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-2x)`
+- Модификаторы: `--s`
+- Разметка:
+
+```html
+<div class="ds-chips-group ds-chips-group--s">
+  <span class="ds-chips-group__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-chips-group__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Chips group [55750:5485] — 2 вариантов; оси: Size */
+.ds-chips-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-chips-group__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-chips-text-color);
+  white-space: nowrap;
+}
+.ds-chips-group__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-chips-group__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-chips-group__icon svg path {
+  fill: currentColor;
+}
+.ds-chips-group--s .ds-chips-group__icon {
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
+}
+```
+</details>
 
 #### Chips Input `[52916:14622]` — 16 вариантов
 - **Size** (VARIANT): M, S
@@ -3383,6 +4131,114 @@
     - `--ds-color-chips-outlined-hover-border-color`: `#9e9e9e`
     - `--ds-color-chips-outlined-press-background`: `#e0e0e0`
     - `--ds-color-chips-outlined-press-border-color`: `#e0e0e0`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-1x)`
+- Модификаторы: `--disabled` `--s`
+- Состояния: `:disabled` `:focus-visible` `:hover`
+- Разметка:
+
+```html
+<div class="ds-chips-input ds-chips-input--disabled">
+  <div class="ds-chips-input__content"></div>
+  <div class="ds-chips-input__frame"></div>
+  <span class="ds-chips-input__hint">Текст</span>
+  <span class="ds-chips-input__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-chips-input__label">Текст</span>
+  <span class="ds-chips-input__support">Текст</span>
+  <span class="ds-chips-input__text">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Chips Input [52916:14622] — 16 вариантов; оси: Size, State */
+.ds-chips-input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-chips-input__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-chips-icon-color);
+  white-space: nowrap;
+}
+.ds-chips-input__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-chips-input__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-chips-input__icon svg path {
+  fill: currentColor;
+}
+.ds-chips-input__frame {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1x) var(--ds-size-2x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-chips-input-default-background);
+  border: 1px solid var(--ds-color-chips-input-default-border-color);
+}
+.ds-chips-input__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+}
+.ds-chips-input__support {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-1x);
+}
+.ds-chips-input__text {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  padding: var(--ds-size-3x) var(--ds-size-3x) 0 0;
+}
+.ds-chips-input__hint {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  padding: var(--ds-size-3x) var(--ds-size-3x) 0 0;
+}
+.ds-chips-input--s .ds-chips-input__icon {
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+}
+.ds-chips-input:hover {
+  background: var(--ds-color-chips-input-disable-background);
+  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips-input:focus-visible {
+  color: var(--ds-color-chips-input-focus-border-color);
+}
+.ds-chips-input:disabled {
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips-input.ds-chips-input--disabled {
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips-input--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Chips Input `[61382:55775]` — 16 вариантов
 - **Size** (VARIANT): M, S
@@ -3439,6 +4295,113 @@
     - `--ds-color-chips-outlined-hover-border-color`: `#9e9e9e`
     - `--ds-color-chips-outlined-press-background`: `#e0e0e0`
     - `--ds-color-chips-outlined-press-border-color`: `#e0e0e0`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-1x)`
+- Модификаторы: `--disabled` `--s`
+- Состояния: `:disabled` `:focus-visible` `:hover`
+- Разметка:
+
+```html
+<div class="ds-chips-input-2 ds-chips-input-2--disabled">
+  <div class="ds-chips-input-2__content"></div>
+  <div class="ds-chips-input-2__frame"></div>
+  <span class="ds-chips-input-2__hint">Текст</span>
+  <span class="ds-chips-input-2__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-chips-input-2__label">Текст</span>
+  <span class="ds-chips-input-2__support">Текст</span>
+  <span class="ds-chips-input-2__text">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Chips Input [61382:55775] — 16 вариантов; оси: Size, State; ДУБЛЬ имени — второй сет «Chips Input», различать по node_id */
+.ds-chips-input-2 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-chips-input-2__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-chips-icon-color);
+  white-space: nowrap;
+}
+.ds-chips-input-2__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-chips-input-2__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-chips-input-2__icon svg path {
+  fill: currentColor;
+}
+.ds-chips-input-2__frame {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-chips-input-default-background);
+  border: 1px solid var(--ds-color-chips-input-default-border-color);
+}
+.ds-chips-input-2__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-chips-input-2__support {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-1x);
+}
+.ds-chips-input-2__text {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  padding: var(--ds-size-3x) var(--ds-size-3x) 0 0;
+}
+.ds-chips-input-2__hint {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  padding: var(--ds-size-3x) var(--ds-size-3x) 0 0;
+}
+.ds-chips-input-2--s .ds-chips-input-2__icon {
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+}
+.ds-chips-input-2:hover {
+  background: var(--ds-color-chips-input-disable-background);
+  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips-input-2:focus-visible {
+  color: var(--ds-color-chips-input-focus-border-color);
+}
+.ds-chips-input-2:disabled {
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips-input-2.ds-chips-input-2--disabled {
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips-input-2--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Chips input cell `[60231:75648]` — 8 вариантов
 - **State** (VARIANT): Default, Disable, Error, Error+Hover, Focus, Focus+Placeholder, Focus+Value, Hover
@@ -3493,37 +4456,793 @@
     - `--ds-color-chips-outlined-hover-border-color`: `#9e9e9e`
     - `--ds-color-chips-outlined-press-background`: `#e0e0e0`
     - `--ds-color-chips-outlined-press-border-color`: `#e0e0e0`
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-10x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x)`
+    - промежуток между элементами: `var(--ds-size-2x)`
+- Модификаторы: `--disabled`
+- Состояния: `:disabled` `:focus-visible` `:hover`
+- Разметка:
+
+```html
+<div class="ds-chips-input-cell ds-chips-input-cell--disabled">
+  <div class="ds-chips-input-cell__frame"></div>
+  <span class="ds-chips-input-cell__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-chips-input-cell__label">Текст</span>
+  <span class="ds-chips-input-cell__support">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Chips input cell [60231:75648] — 8 вариантов; оси: State */
+.ds-chips-input-cell {
+  min-height: var(--ds-size-10x);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-chips-input-cell__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-chips-icon-color);
+  white-space: nowrap;
+}
+.ds-chips-input-cell__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-chips-input-cell__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-chips-input-cell__icon svg path {
+  fill: currentColor;
+}
+.ds-chips-input-cell__frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-1x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-chips-input-default-background);
+  border: 1px solid var(--ds-color-chips-input-default-border-color);
+}
+.ds-chips-input-cell__support {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-1x);
+}
+.ds-chips-input-cell:hover {
+  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips-input-cell:focus-visible {
+  color: var(--ds-color-chips-text-color);
+}
+.ds-chips-input-cell:disabled {
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips-input-cell.ds-chips-input-cell--disabled {
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+.ds-chips-input-cell--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Chrome Header desktop `[56564:1013]` — 1 вариантов
+- Размеры и параметры:
+    - высота: минимум `86px`, растёт по контенту
+    - ширина: по контенту (hug)
+- Разметка:
+
+```html
+<div class="ds-chrome-header-desktop">
+  <div class="ds-chrome-header-desktop__application-controller"></div>
+  <div class="ds-chrome-header-desktop__base"></div>
+  <span class="ds-chrome-header-desktop__label">Текст</span>
+  <div class="ds-chrome-header-desktop__navigation"></div>
+  <div class="ds-chrome-header-desktop__tabs"></div>
+  <div class="ds-chrome-header-desktop__top"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Chrome Header desktop [56564:1013] — 1 вариантов; оси: — */
+.ds-chrome-header-desktop {
+  min-height: 86px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-chrome-header-desktop__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: 14.522727012634277px;
+  white-space: nowrap;
+}
+.ds-chrome-header-desktop__top {
+  height: 43px;
+  display: flex;
+  flex-direction: row;
+}
+.ds-chrome-header-desktop__tabs {
+  display: flex;
+  flex-direction: row;
+}
+.ds-chrome-header-desktop__application-controller {
+  height: 43px;
+  display: flex;
+  flex-direction: row;
+}
+.ds-chrome-header-desktop__base {
+  height: 43px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-chrome-header-desktop__navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-3x);
+}
+```
+</details>
 
 #### Chrome Header mobile `[56564:1062]` — 2 вариантов
 - **Dark** (VARIANT): Off, On
+- Размеры и параметры:
+    - высота: `66px` (фикс.)
+    - ширина: по контенту (hug)
+- Модификаторы: `--off` `--on`
+- Разметка:
+
+```html
+<div class="ds-chrome-header-mobile ds-chrome-header-mobile--off">
+  <div class="ds-chrome-header-mobile__1"></div>
+  <div class="ds-chrome-header-mobile__address"></div>
+  <div class="ds-chrome-header-mobile__address-field"></div>
+  <div class="ds-chrome-header-mobile__home"></div>
+  <span class="ds-chrome-header-mobile__label">Текст</span>
+  <div class="ds-chrome-header-mobile__lock"></div>
+  <div class="ds-chrome-header-mobile__more"></div>
+  <div class="ds-chrome-header-mobile__more-vert"></div>
+  <div class="ds-chrome-header-mobile__rectangle"></div>
+  <div class="ds-chrome-header-mobile__spacer-16px"></div>
+  <div class="ds-chrome-header-mobile__spacer-8px"></div>
+  <div class="ds-chrome-header-mobile__tabs"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Chrome Header mobile [56564:1062] — 2 вариантов; оси: Dark */
+.ds-chrome-header-mobile {
+  height: 66px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-chrome-header-mobile__label {
+  font-size: var(--ds-typography-caption-font-size-m);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: 13px;
+  color: var(--ds-color-brand-neutral-super-dark);
+  white-space: nowrap;
+}
+.ds-chrome-header-mobile__home {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-chrome-header-mobile__spacer-8px {
+  height: var(--ds-size-2x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-chrome-header-mobile__address-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: 11px 11px 9px 9px;
+  border-radius: 17px;
+}
+.ds-chrome-header-mobile__lock {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-chrome-header-mobile__address {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-chrome-header-mobile__spacer-16px {
+  height: var(--ds-size-2x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-chrome-header-mobile__tabs {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-chrome-header-mobile__rectangle {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  border: 1.5px solid var(--ds-color-brand-neutral-super-dark);
+}
+.ds-chrome-header-mobile__1 {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-super-dark);
+  font-size: var(--ds-typography-caption-font-size-m);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: 11.71875px;
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-chrome-header-mobile__more {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-chrome-header-mobile__more-vert {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-chrome-header-mobile--off {
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-chrome-header-mobile--on {
+  background: var(--ds-color-brand-neutral-super-dark);
+  color: var(--ds-color-brand-neutral-default);
+}
+```
+</details>
 
 #### Content `[57375:12699]` — 1 вариантов
 - Прочие свойства: Slot#57375:0 (SLOT), Slot 1#57376:0 (SLOT)
 
+
 #### Control arrow button `[52868:3935]` — 3 вариантов
 - **Size** (VARIANT): M, S, XS
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-0-5x)`
+- Модификаторы: `--s`
+- Разметка:
+
+```html
+<div class="ds-control-arrow-button ds-control-arrow-button--s">
+  <span class="ds-control-arrow-button__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-control-arrow-button__icon-size"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Control arrow button [52868:3935] — 3 вариантов; оси: Size */
+.ds-control-arrow-button {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-0-5x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-control-arrow-button__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-3x);
+  height: var(--ds-size-3x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-control-arrow-button__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-control-arrow-button__icon svg path {
+  fill: currentColor;
+}
+.ds-control-arrow-button__icon-size {
+  height: var(--ds-size-3x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-control-arrow-button--s .ds-control-arrow-button__icon {
+  width: var(--ds-size-3x);
+  height: var(--ds-size-3x);
+}
+```
+</details>
 
 #### Control group number button `[53828:5569]` — 2 вариантов
 - **Size** (VARIANT): S, XS
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-0-25x)`
+    - скругление: `var(--ds-size-2x)`
+    - рамка: `1px solid var(--ds-color-button-icon-neutral-outlined-border-color)`
+    - фон: `var(--ds-color-brand-neutral-super-light)`
+- Модификаторы: `--xs`
+- Разметка:
+
+```html
+<div class="ds-control-group-number-button ds-control-group-number-button--xs">
+  <span class="ds-control-group-number-button__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-control-group-number-button__icon-size"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Control group number button [53828:5569] — 2 вариантов; оси: Size */
+.ds-control-group-number-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-0-25x);
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-brand-neutral-super-light);
+  border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-control-group-number-button__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-control-group-number-button__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-control-group-number-button__icon svg path {
+  fill: currentColor;
+}
+.ds-control-group-number-button__icon-size {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-control-group-number-button--xs .ds-control-group-number-button__icon {
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
+}
+```
+</details>
 
 #### Control number button `[53829:6130]` — 16 вариантов
 - **Size** (VARIANT): S, XS
 - **Type** (VARIANT): Left, Right
 - **State** (VARIANT): Default, Disable, Hover, Press
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2-5x) var(--ds-size-2-5x)`
+    - промежуток между элементами: `var(--ds-size-2x)`
+- Модификаторы: `--disabled` `--left` `--right` `--xs`
+- Состояния: `:active` `:disabled` `:hover`
+- Разметка:
+
+```html
+<div class="ds-control-number-button ds-control-number-button--disabled">
+  <span class="ds-control-number-button__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-control-number-button__icon-size"></div>
+  <div class="ds-control-number-button__remove"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Control number button [53829:6130] — 16 вариантов; оси: Size, Type, State */
+.ds-control-number-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2-5x) var(--ds-size-2-5x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-control-number-button__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-control-number-button__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-control-number-button__icon svg path {
+  fill: currentColor;
+}
+.ds-control-number-button__icon-size {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-control-number-button__remove {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-button-accent-lite-default);
+}
+.ds-control-number-button--xs {
+  padding: var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x);
+}
+.ds-control-number-button--xs .ds-control-number-button__icon {
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
+}
+.ds-control-number-button--left {
+  background: var(--ds-color-button-accent-lite-default);
+}
+.ds-control-number-button--left:hover {
+  background: var(--ds-color-button-neutral-hover);
+}
+.ds-control-number-button--left:active {
+  background: var(--ds-color-button-neutral-disable);
+}
+.ds-control-number-button--left:disabled {
+  background: var(--ds-color-button-neutral-disable);
+}
+.ds-control-number-button--left.ds-control-number-button--disabled {
+  background: var(--ds-color-button-neutral-disable);
+}
+.ds-control-number-button--right {
+  background: var(--ds-color-button-accent-lite-default);
+}
+.ds-control-number-button--right:hover {
+  background: var(--ds-color-button-neutral-hover);
+}
+.ds-control-number-button--right:active {
+  background: var(--ds-color-button-neutral-disable);
+}
+.ds-control-number-button--right:disabled {
+  background: var(--ds-color-button-neutral-disable);
+}
+.ds-control-number-button--right.ds-control-number-button--disabled {
+  background: var(--ds-color-button-neutral-disable);
+}
+.ds-control-number-button--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Control Panel `[58501:4052]` — 3 вариантов
 - **Type** (VARIANT): Calendar, Control, Week
 - Прочие свойства: Slot Week#58546:5 (SLOT)
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `0 0 var(--ds-size-1x) var(--ds-size-1x)`
+    - промежуток между элементами: `74px`
+- Модификаторы: `--calendar` `--control` `--week`
+- Разметка:
+
+```html
+<div class="ds-control-panel ds-control-panel--calendar">
+  <div class="ds-control-panel__button-icon"></div>
+  <div class="ds-control-panel__button-icon-group"></div>
+  <div class="ds-control-panel__elements"></div>
+  <span class="ds-control-panel__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-control-panel__label">Текст</span>
+  <div class="ds-control-panel__month"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Control Panel [58501:4052] — 3 вариантов; оси: Type */
+.ds-control-panel {
+  display: flex;
+  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
+  gap: 74px;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-control-panel__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+  white-space: nowrap;
+}
+.ds-control-panel__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-control-panel__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-control-panel__icon svg path {
+  fill: currentColor;
+}
+.ds-control-panel__elements {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
+  border-radius: var(--ds-size-circular);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-control-panel__month {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-super-dark);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-control-panel__button-icon-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+}
+.ds-control-panel__button-icon {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
+  border-radius: var(--ds-size-2x);
+}
+.ds-control-panel--control {
+  flex-direction: row;
+  align-items: center;
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-control-panel--week {
+  flex-direction: row;
+  padding: 0 0 var(--ds-size-0-5x) var(--ds-size-0-5x);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-control-panel--calendar {
+  flex-direction: column;
+  align-items: center;
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+```
+</details>
 
 #### Control Panel `[58982:11018]` — 2 вариантов
 - **Type** (VARIANT): Control, Time
 - Прочие свойства: Slot Time#58546:5 (SLOT)
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `0 0 var(--ds-size-1x) var(--ds-size-1x)`
+    - промежуток между элементами: `74px`
+- Модификаторы: `--control` `--time`
+- Разметка:
+
+```html
+<div class="ds-control-panel-2 ds-control-panel-2--control">
+  <div class="ds-control-panel-2__button-icon-group"></div>
+  <div class="ds-control-panel-2__elements"></div>
+  <span class="ds-control-panel-2__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-control-panel-2__label">Текст</span>
+  <div class="ds-control-panel-2__month"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Control Panel [58982:11018] — 2 вариантов; оси: Type; ДУБЛЬ имени — второй сет «Control Panel», различать по node_id */
+.ds-control-panel-2 {
+  display: flex;
+  flex-direction: row;
+  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
+  gap: 74px;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-control-panel-2__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+  white-space: nowrap;
+}
+.ds-control-panel-2__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-control-panel-2__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-control-panel-2__icon svg path {
+  fill: currentColor;
+}
+.ds-control-panel-2__elements {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
+  border-radius: var(--ds-size-circular);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-control-panel-2__month {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-super-dark);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-control-panel-2__button-icon-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+}
+.ds-control-panel-2--control {
+  align-items: center;
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-control-panel-2--time {
+  padding: 0 0 var(--ds-size-0-5x) var(--ds-size-0-5x);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+```
+</details>
 
 #### Datepicker `[58509:5439]` — 3 вариантов
 - **Type** (VARIANT): Day, Month, Year
 - Прочие свойства: Headline#53001:0 (TEXT), Supporting text#53001:4 (TEXT), Supporting text (range)#53001:8 (TEXT), Headline (range)#53001:12 (TEXT), Show clear button#54584:0 (BOOLEAN), show controls#58548:10 (BOOLEAN)
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x)`
+    - скругление: `var(--ds-size-3x)`
+    - рамка: `1px solid var(--ds-color-brand-neutral-lighter)`
+- Модификаторы: `--day` `--month` `--year`
+- Разметка:
+
+```html
+<div class="ds-datepicker ds-datepicker--day">
+  <div class="ds-datepicker__button-icon-group"></div>
+  <div class="ds-datepicker__control-panel"></div>
+  <div class="ds-datepicker__divider"></div>
+  <div class="ds-datepicker__elements"></div>
+  <span class="ds-datepicker__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-datepicker__label">Текст</span>
+  <div class="ds-datepicker__week-6"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Datepicker [58509:5439] — 3 вариантов; оси: Type */
+.ds-datepicker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  border-radius: var(--ds-size-3x);
+  border: 1px solid var(--ds-color-brand-neutral-lighter);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-datepicker__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+  white-space: nowrap;
+}
+.ds-datepicker__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-datepicker__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-datepicker__icon svg path {
+  fill: currentColor;
+}
+.ds-datepicker__control-panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 74px;
+  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
+}
+.ds-datepicker__elements {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
+  border-radius: var(--ds-size-circular);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-datepicker__button-icon-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+}
+.ds-datepicker__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-datepicker__week-6 {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+}
+.ds-datepicker--day {
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-datepicker--year {
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-datepicker--month {
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+```
+</details>
 
 #### Dialog content `[53535:1369]` — 1 вариантов
 - **State** (VARIANT): Default
@@ -3534,6 +5253,70 @@
     - `--ds-color-dialog-content-title-color`: `#333333`
     - `--ds-color-dialog-header-desc-color`: `#616161`
     - `--ds-color-dialog-header-title-color`: `#333333`
+- Размеры и параметры:
+    - высота: минимум `204px`, растёт по контенту
+    - ширина: по контенту (hug)
+    - фон: `var(--ds-color-dialog-background)`
+- Разметка:
+
+```html
+<div class="ds-dialog-content">
+  <div class="ds-dialog-content__background"></div>
+  <span class="ds-dialog-content__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-dialog-content__label">Текст</span>
+  <div class="ds-dialog-content__scroll"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Dialog content [53535:1369] — 1 вариантов; оси: State */
+.ds-dialog-content {
+  min-height: 204px;
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-dialog-background);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-dialog-content__label {
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-dialog-content-title-color);
+  white-space: nowrap;
+}
+.ds-dialog-content__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-3x);
+  height: var(--ds-size-3x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-dialog-content__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-dialog-content__icon svg path {
+  fill: currentColor;
+}
+.ds-dialog-content__scroll {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
+}
+.ds-dialog-content__background {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-button-neutral-hover);
+}
+```
+</details>
 
 #### Dialog footer `[53749:638]` — 1 вариантов
 - **State** (VARIANT): Default
@@ -3544,6 +5327,81 @@
     - `--ds-color-dialog-content-title-color`: `#333333`
     - `--ds-color-dialog-header-desc-color`: `#616161`
     - `--ds-color-dialog-header-title-color`: `#333333`
+- Размеры и параметры:
+    - высота: минимум `69px`, растёт по контенту
+    - ширина: по контенту (hug)
+    - фон: `var(--ds-color-dialog-background)`
+- Разметка:
+
+```html
+<div class="ds-dialog-footer">
+  <div class="ds-dialog-footer__action"></div>
+  <div class="ds-dialog-footer__button"></div>
+  <div class="ds-dialog-footer__divider"></div>
+  <span class="ds-dialog-footer__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-dialog-footer__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Dialog footer [53749:638] — 1 вариантов; оси: State */
+.ds-dialog-footer {
+  min-height: 69px;
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-dialog-background);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-dialog-footer__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-dialog-background);
+  white-space: nowrap;
+}
+.ds-dialog-footer__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-dialog-footer__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-dialog-footer__icon svg path {
+  fill: currentColor;
+}
+.ds-dialog-footer__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-dialog-background);
+}
+.ds-dialog-footer__action {
+  height: 68px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-4x) var(--ds-size-4x);
+}
+.ds-dialog-footer__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-2x);
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-brand-accent-default);
+  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+}
+```
+</details>
 
 #### Dialog header `[53535:1322]` — 2 вариантов
 - **Type** (VARIANT): Picture, Text
@@ -3554,6 +5412,84 @@
     - `--ds-color-dialog-content-title-color`: `#333333`
     - `--ds-color-dialog-header-desc-color`: `#616161`
     - `--ds-color-dialog-header-title-color`: `#333333`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - фон: `var(--ds-color-dialog-background)`
+- Модификаторы: `--picture` `--text`
+- Разметка:
+
+```html
+<div class="ds-dialog-header ds-dialog-header--picture">
+  <div class="ds-dialog-header__description"></div>
+  <div class="ds-dialog-header__divider"></div>
+  <span class="ds-dialog-header__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-dialog-header__label">Текст</span>
+  <div class="ds-dialog-header__title-container"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Dialog header [53535:1322] — 2 вариантов; оси: Type */
+.ds-dialog-header {
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-dialog-background);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-dialog-header__label {
+  font-size: var(--ds-typography-header-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-header-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-dialog-content-title-color);
+  white-space: nowrap;
+}
+.ds-dialog-header__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-dialog-header__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-dialog-header__icon svg path {
+  fill: currentColor;
+}
+.ds-dialog-header__title-container {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+}
+.ds-dialog-header__description {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-dialog-content-text-color);
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  color: var(--ds-color-dialog-content-text-color);
+}
+.ds-dialog-header__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-dialog-background);
+}
+.ds-dialog-header--text {
+  color: var(--ds-color-dialog-content-title-color);
+}
+.ds-dialog-header--picture {
+  width: 500px;
+}
+```
+</details>
 
 #### Dialog view `[52952:1285]` — 1 вариантов
 - **State** (VARIANT): Default
@@ -3564,6 +5500,99 @@
     - `--ds-color-dialog-content-title-color`: `#333333`
     - `--ds-color-dialog-header-desc-color`: `#616161`
     - `--ds-color-dialog-header-title-color`: `#333333`
+- Размеры и параметры:
+    - высота: минимум `364px`, растёт по контенту
+    - ширина: по контенту (hug)
+    - скругление: `var(--ds-size-3x)`
+    - фон: `var(--ds-color-dialog-background)`
+    - тень: `0.0px 0.0px 28.0px 0px #2121211f`
+- Разметка:
+
+```html
+<div class="ds-dialog-view">
+  <div class="ds-dialog-view__action"></div>
+  <div class="ds-dialog-view__content"></div>
+  <div class="ds-dialog-view__divider"></div>
+  <div class="ds-dialog-view__footer"></div>
+  <div class="ds-dialog-view__header"></div>
+  <span class="ds-dialog-view__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-dialog-view__label">Текст</span>
+  <div class="ds-dialog-view__scroll"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Dialog view [52952:1285] — 1 вариантов; оси: State */
+.ds-dialog-view {
+  min-height: 364px;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-dialog-background);
+  box-shadow: 0.0px 0.0px 28.0px 0px #2121211f;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-dialog-view__label {
+  font-size: var(--ds-typography-header-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-header-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-dialog-content-title-color);
+  white-space: nowrap;
+}
+.ds-dialog-view__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-3x);
+  height: var(--ds-size-3x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-dialog-view__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-dialog-view__icon svg path {
+  fill: currentColor;
+}
+.ds-dialog-view__header {
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-dialog-background);
+}
+.ds-dialog-view__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-dialog-background);
+}
+.ds-dialog-view__content {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-dialog-background);
+}
+.ds-dialog-view__scroll {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
+}
+.ds-dialog-view__footer {
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-dialog-background);
+}
+.ds-dialog-view__action {
+  height: 68px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-4x) var(--ds-size-4x);
+}
+```
+</details>
 
 #### Divider `[58320:441]` — 16 вариантов
 - **Size** (VARIANT): L, M
@@ -3578,6 +5607,7 @@
     - `--ds-color-divider-solid-hover-color`: `#448aff`
     - `--ds-color-divider-solid-lite-color`: `#e0e0e0`
     - `--ds-color-divider-solid-selected-color`: `#448aff`
+- CSS: выверено вручную, см. `components/navigation.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Divider `[53556:7964]` — 1 вариантов
 - **Type** (VARIANT): Solid
@@ -3590,46 +5620,850 @@
     - `--ds-color-divider-solid-hover-color`: `#448aff`
     - `--ds-color-divider-solid-lite-color`: `#e0e0e0`
     - `--ds-color-divider-solid-selected-color`: `#448aff`
+- CSS: выверено вручную, см. `components/navigation.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Element `[54104:20956]` — 9 вариантов
 - **Content** (VARIANT): Checkbox, Counter, Icon group, Icon size, Image size, Indicator, Radio button, Slide toggle, Text default
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-2-5x)`
+    - фон: `var(--ds-color-brand-neutral-default)`
+- Модификаторы: `--checkbox` `--counter` `--icon-group` `--icon-size` `--image-size` `--indicator` `--radio-button` `--slide-toggle` `--text-default`
+- Разметка:
+
+```html
+<div class="ds-element ds-element--checkbox">
+  <span class="ds-element__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-element__image-size"></div>
+  <span class="ds-element__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Element [54104:20956] — 9 вариантов; оси: Content */
+.ds-element {
+  display: flex;
+  background: var(--ds-color-brand-neutral-default);
+  gap: var(--ds-size-2-5x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-element__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+  white-space: nowrap;
+}
+.ds-element__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-element__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-element__icon svg path {
+  fill: currentColor;
+}
+.ds-element__image-size {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--ds-size-circular);
+}
+.ds-element--image-size {
+  flex-direction: row;
+  align-items: center;
+}
+.ds-element--icon-size {
+  flex-direction: row;
+  align-items: center;
+}
+.ds-element--icon-group {
+  flex-direction: row;
+  align-items: center;
+}
+.ds-element--text-default {
+  flex-direction: row;
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-element--checkbox {
+  flex-direction: row;
+}
+.ds-element--radio-button {
+  flex-direction: row;
+}
+.ds-element--indicator {
+  flex-direction: row;
+}
+.ds-element--slide-toggle {
+  flex-direction: row;
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-element--counter {
+  flex-direction: column;
+  color: var(--ds-color-brand-neutral-default);
+}
+```
+</details>
 
 #### Element cell `[58885:32432]` — 11 вариантов
 - **Variant** (VARIANT): Button, Button icon, Cell Input, Checkbox, Chips, Icon group, Icon size, Input number, Slide toggle, Status, Text UI
 
+
 #### Element Form Field `[60231:76795]` — 3 вариантов
 - **Variant** (VARIANT): Chips input cell, Input cell, Select cell
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - фон: `var(--ds-color-brand-neutral-default)`
+- Модификаторы: `--chips-input-cell` `--input-cell` `--select-cell`
+- Разметка:
+
+```html
+<div class="ds-element-form-field ds-element-form-field--chips-input-cell">
+  <div class="ds-element-form-field__input"></div>
+  <div class="ds-element-form-field__input-cell"></div>
+  <span class="ds-element-form-field__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Element Form Field [60231:76795] — 3 вариантов; оси: Variant */
+.ds-element-form-field {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-element-form-field__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-darker);
+  white-space: nowrap;
+}
+.ds-element-form-field__input-cell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
+}
+.ds-element-form-field__input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+}
+.ds-element-form-field--input-cell {
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-element-form-field--select-cell {
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-element-form-field--chips-input-cell {
+  color: var(--ds-color-brand-neutral-darker);
+}
+```
+</details>
 
 #### Element left `[59851:11313]` — 5 вариантов
 - **Style** (VARIANT): Accent, Negative, Neutral, Positive, Warning
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-5x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-2-5x)`
+- Разметка:
+
+```html
+<div class="ds-element-left">
+  <span class="ds-element-left__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-element-left__info"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Element left [59851:11313] — 5 вариантов; оси: Style */
+.ds-element-left {
+  min-height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-element-left__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-element-left__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-element-left__icon svg path {
+  fill: currentColor;
+}
+.ds-element-left__info {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+```
+</details>
 
 #### Element menu `[56090:1611]` — 8 вариантов
 - **Content** (VARIANT): Checkbox, Counter, Icon size, Image size, Indicator, Radio button, Slide toggle, Text default
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-2-5x)`
+    - фон: `var(--ds-color-menu-background)`
+- Модификаторы: `--checkbox` `--counter` `--icon-size` `--image-size` `--indicator` `--radio-button` `--slide-toggle` `--text-default`
+- Разметка:
+
+```html
+<div class="ds-element-menu ds-element-menu--checkbox">
+  <span class="ds-element-menu__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-element-menu__image-size"></div>
+  <span class="ds-element-menu__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Element menu [56090:1611] — 8 вариантов; оси: Content */
+.ds-element-menu {
+  display: flex;
+  background: var(--ds-color-menu-background);
+  gap: var(--ds-size-2-5x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-element-menu__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-menu-item-text-color);
+  white-space: nowrap;
+}
+.ds-element-menu__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-element-menu__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-element-menu__icon svg path {
+  fill: currentColor;
+}
+.ds-element-menu__image-size {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--ds-size-circular);
+}
+.ds-element-menu--image-size {
+  flex-direction: row;
+  align-items: center;
+}
+.ds-element-menu--icon-size {
+  flex-direction: row;
+  align-items: center;
+}
+.ds-element-menu--text-default {
+  flex-direction: row;
+  color: var(--ds-color-menu-item-text-color);
+}
+.ds-element-menu--checkbox {
+  flex-direction: row;
+}
+.ds-element-menu--radio-button {
+  flex-direction: row;
+}
+.ds-element-menu--indicator {
+  flex-direction: row;
+}
+.ds-element-menu--slide-toggle {
+  flex-direction: row;
+  color: var(--ds-color-menu-item-text-color);
+}
+.ds-element-menu--counter {
+  flex-direction: column;
+  color: var(--ds-color-menu-background);
+}
+```
+</details>
 
 #### Element select `[57735:17972]` — 8 вариантов
 - **Content** (VARIANT): Checkbox, Counter, Icon size, Image size, Indicator, Radio button, Slide toggle, Text default
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-2-5x)`
+    - фон: `var(--ds-color-brand-neutral-default)`
+- Модификаторы: `--checkbox` `--counter` `--icon-size` `--image-size` `--indicator` `--radio-button` `--slide-toggle` `--text-default`
+- Разметка:
+
+```html
+<div class="ds-element-select ds-element-select--checkbox">
+  <span class="ds-element-select__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-element-select__image-size"></div>
+  <span class="ds-element-select__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Element select [57735:17972] — 8 вариантов; оси: Content */
+.ds-element-select {
+  display: flex;
+  background: var(--ds-color-brand-neutral-default);
+  gap: var(--ds-size-2-5x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-element-select__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+  white-space: nowrap;
+}
+.ds-element-select__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-element-select__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-element-select__icon svg path {
+  fill: currentColor;
+}
+.ds-element-select__image-size {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--ds-size-circular);
+}
+.ds-element-select--image-size {
+  flex-direction: row;
+  align-items: center;
+}
+.ds-element-select--icon-size {
+  flex-direction: row;
+  align-items: center;
+}
+.ds-element-select--text-default {
+  flex-direction: row;
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-element-select--checkbox {
+  flex-direction: row;
+}
+.ds-element-select--radio-button {
+  flex-direction: row;
+}
+.ds-element-select--indicator {
+  flex-direction: row;
+}
+.ds-element-select--slide-toggle {
+  flex-direction: row;
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-element-select--counter {
+  flex-direction: column;
+  color: var(--ds-color-brand-neutral-default);
+}
+```
+</details>
 
 #### Element sidenav `[56598:2991]` — 2 вариантов
 - **Content** (VARIANT): Avatar, Collaps icon
+- Размеры и параметры:
+    - высота: `var(--ds-size-5x)` (фикс.)
+    - ширина: `var(--ds-size-5x)` (фикс.)
+    - скругление: `var(--ds-size-1x)`
+- Модификаторы: `--avatar` `--collaps-icon`
+- Разметка:
+
+```html
+<div class="ds-element-sidenav ds-element-sidenav--avatar">
+  <span class="ds-element-sidenav__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-element-sidenav__keyboard-arrow-left"></div>
+  <span class="ds-element-sidenav__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Element sidenav [56598:2991] — 2 вариантов; оси: Content */
+.ds-element-sidenav {
+  height: var(--ds-size-5x);
+  display: flex;
+  width: var(--ds-size-5x);
+  border-radius: var(--ds-size-1x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-element-sidenav__label {
+  font-size: var(--ds-typography-caption-font-size-m);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-caption-line-height-m);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-sidenav-item-l3-indicator);
+  white-space: nowrap;
+}
+.ds-element-sidenav__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-element-sidenav__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-element-sidenav__icon svg path {
+  fill: currentColor;
+}
+.ds-element-sidenav__keyboard-arrow-left {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-element-sidenav--collaps-icon {
+  flex-direction: row;
+  background: var(--ds-color-sidenav-control-background-hover);
+}
+.ds-element-sidenav--avatar {
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) 3px 3px;
+  color: var(--ds-color-sidenav-item-l3-indicator);
+}
+```
+</details>
 
 #### Element step `[55403:7248]` — 12 вариантов
 - **Content** (VARIANT): Counter, Icon size
 - **State** (VARIANT): Default, Disable, Error, Hover, Press, Selected
 - Прочие свойства: Text#57060:7 (TEXT)
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-6x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-2-5x)`
+    - фон: `var(--ds-color-brand-neutral-default)`
+- Модификаторы: `--counter` `--disabled` `--icon-size`
+- Состояния: `:active` `:disabled` `:hover`
+- Разметка:
+
+```html
+<div class="ds-element-step ds-element-step--counter">
+  <span class="ds-element-step__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-element-step__icon-size"></div>
+  <div class="ds-element-step__info"></div>
+  <span class="ds-element-step__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Element step [55403:7248] — 12 вариантов; оси: Content, State */
+.ds-element-step {
+  min-height: var(--ds-size-6x);
+  display: flex;
+  background: var(--ds-color-brand-neutral-default);
+  gap: var(--ds-size-2-5x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-element-step__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+  white-space: nowrap;
+}
+.ds-element-step__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-element-step__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-element-step__icon svg path {
+  fill: currentColor;
+}
+.ds-element-step__icon-size {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-element-step__info {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-element-step--icon-size {
+  flex-direction: row;
+  align-items: center;
+}
+.ds-element-step--counter {
+  flex-direction: column;
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-element-step--counter:hover {
+  color: var(--ds-color-brand-neutral-default);
+}
+.ds-element-step--counter:active {
+  color: var(--ds-color-brand-neutral-default);
+}
+.ds-element-step--counter:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-element-step--counter.ds-element-step--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-element-step--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Elementare cell `[60220:72578]` — 10 вариантов
 - **Variant** (VARIANT): Button, Button icon, Checkbox, Chips, Icon group, Icon size, Input number, Slide toggle, Status, Text UI
+
 
 #### Elements `[58501:4220]` — 30 вариантов
 - **Type** (VARIANT): Cell, Month, Year
 - **Variant** (VARIANT): Default, Range, Selected, Today
 - **State** (VARIANT): Default, Disable, Hover, Press
 - Прочие свойства: Back right#58506:0 (BOOLEAN), Back left#58506:1 (BOOLEAN), Start range#58506:2 (BOOLEAN), End range#58506:3 (BOOLEAN), Date#58506:4 (TEXT), Show focus indicator#58506:5 (BOOLEAN), Year#58506:84 (TEXT), Month#58506:165 (TEXT)
+- Размеры и параметры:
+    - высота: `var(--ds-size-10x)` (фикс.)
+    - ширина: по контенту (hug)
+    - скругление: `var(--ds-size-circular)`
+- Модификаторы: `--cell` `--disabled` `--month` `--year`
+- Состояния: `:active` `:disabled` `:hover`
+- Разметка:
+
+```html
+<div class="ds-elements ds-elements--cell">
+  <div class="ds-elements__date"></div>
+  <span class="ds-elements__label">Текст</span>
+  <div class="ds-elements__range-highlight-end"></div>
+  <div class="ds-elements__range-highlight-middle"></div>
+  <div class="ds-elements__range-highlight-start"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Elements [58501:4220] — 30 вариантов; оси: Type, Variant, State */
+.ds-elements {
+  display: flex;
+  height: var(--ds-size-10x);
+  border-radius: var(--ds-size-circular);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-elements__label {
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+  white-space: nowrap;
+}
+.ds-elements__range-highlight-start {
+  height: var(--ds-size-10x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-accent-lighter);
+}
+.ds-elements__range-highlight-end {
+  height: var(--ds-size-10x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-accent-lighter);
+}
+.ds-elements__range-highlight-middle {
+  height: var(--ds-size-10x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-accent-lightest);
+}
+.ds-elements__date {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-super-dark);
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-elements--cell.ds-elements--today:disabled {
+  background: var(--ds-color-brand-neutral-lighter);
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements--cell.ds-elements--today.ds-elements--disabled {
+  background: var(--ds-color-brand-neutral-lighter);
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements--cell.ds-elements--default:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements--cell.ds-elements--default.ds-elements--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements--cell.ds-elements--range:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements--cell.ds-elements--range.ds-elements--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements--cell.ds-elements--selected:active {
+  background: var(--ds-color-brand-accent-darker);
+}
+.ds-elements--cell.ds-elements--today:active {
+  background: var(--ds-color-brand-neutral-lighter);
+}
+.ds-elements--cell.ds-elements--default:active {
+  background: var(--ds-color-brand-neutral-lighter);
+}
+.ds-elements--cell.ds-elements--today:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+}
+.ds-elements--cell.ds-elements--default:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+}
+.ds-elements--cell.ds-elements--range {
+  flex-direction: row;
+  align-items: center;
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-elements--cell.ds-elements--selected {
+  flex-direction: column;
+  align-items: center;
+  color: var(--ds-color-brand-neutral-default);
+}
+.ds-elements--year.ds-elements--selected {
+  flex-direction: column;
+  align-items: center;
+  color: var(--ds-color-brand-neutral-default);
+}
+.ds-elements--cell.ds-elements--today {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-brand-neutral-default);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-elements--cell.ds-elements--default {
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-2-5x) var(--ds-size-2-5x) var(--ds-size-2x) var(--ds-size-2x);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-elements--year.ds-elements--default:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements--year.ds-elements--default.ds-elements--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements--year.ds-elements--today:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements--year.ds-elements--today.ds-elements--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements--year.ds-elements--default:active {
+  background: var(--ds-color-brand-neutral-lighter);
+}
+.ds-elements--year.ds-elements--today:active {
+  background: var(--ds-color-brand-neutral-lighter);
+}
+.ds-elements--year.ds-elements--default:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+}
+.ds-elements--year.ds-elements--today:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+}
+.ds-elements--year.ds-elements--default {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-elements--year.ds-elements--today {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-brand-neutral-default);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-elements--month.ds-elements--default {
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-elements--month.ds-elements--default:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+}
+.ds-elements--month.ds-elements--default:active {
+  background: var(--ds-color-brand-neutral-lighter);
+}
+.ds-elements--month.ds-elements--default:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements--month.ds-elements--default.ds-elements--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Elements `[58982:9594]` — 8 вариантов
 - **Variant** (VARIANT): Default, Selected
 - **State** (VARIANT): Default, Disable, Hover, Press, Range
 - Прочие свойства: Start range#58506:2 (BOOLEAN), End range#58506:3 (BOOLEAN), Time#58506:84 (TEXT)
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-10x)`, растёт по контенту
+    - ширина: по контенту (hug)
+- Модификаторы: `--default` `--disabled` `--selected`
+- Состояния: `:active` `:disabled` `:hover`
+- Разметка:
+
+```html
+<div class="ds-elements-2 ds-elements-2--default">
+  <div class="ds-elements-2__date"></div>
+  <span class="ds-elements-2__label">Текст</span>
+  <div class="ds-elements-2__range-highlight-end"></div>
+  <div class="ds-elements-2__range-highlight-start"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Elements [58982:9594] — 8 вариантов; оси: Variant, State; ДУБЛЬ имени — второй сет «Elements», различать по node_id */
+.ds-elements-2 {
+  min-height: var(--ds-size-10x);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-elements-2__label {
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-default);
+  white-space: nowrap;
+}
+.ds-elements-2__range-highlight-start {
+  height: var(--ds-size-10x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-accent-lighter);
+}
+.ds-elements-2__range-highlight-end {
+  height: var(--ds-size-10x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-accent-lighter);
+}
+.ds-elements-2__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  border-radius: var(--ds-size-circular);
+  background: var(--ds-color-brand-accent-default);
+}
+.ds-elements-2--selected {
+  flex-direction: column;
+  color: var(--ds-color-brand-neutral-default);
+}
+.ds-elements-2--default:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements-2--default.ds-elements-2--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-elements-2--default:active {
+  background: var(--ds-color-brand-neutral-lighter);
+}
+.ds-elements-2--default:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+}
+.ds-elements-2--default {
+  flex-direction: row;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  border-radius: var(--ds-size-circular);
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-elements-2--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Expansion content `[61361:99603]` — 2 вариантов
 - **Padding off/on** (VARIANT): False, True
@@ -3647,6 +6481,45 @@
     - `--ds-color-expansion-panel-block-expand-header-disable-text-color`: `#9e9e9e`
     - `--ds-color-expansion-panel-block-expand-header-hover-background`: `#f5f5f5`
     - `--ds-color-expansion-panel-block-expand-header-press-background`: `#e0e0e0`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-4x)`
+- Модификаторы: `--false` `--true`
+- Разметка:
+
+```html
+<div class="ds-expansion-content ds-expansion-content--false">
+  <span class="ds-expansion-content__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Expansion content [61361:99603] — 2 вариантов; оси: Padding off/on */
+.ds-expansion-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-4x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-expansion-content__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+  white-space: nowrap;
+}
+.ds-expansion-content--true {
+  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+}
+.ds-expansion-content--false {
+  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+}
+```
+</details>
 
 #### Expansion group panel `[56155:1676]` — 2 вариантов
 - **Type ?** (VARIANT): Collaps, Expand
@@ -3664,6 +6537,44 @@
     - `--ds-color-expansion-panel-block-expand-header-disable-text-color`: `#9e9e9e`
     - `--ds-color-expansion-panel-block-expand-header-hover-background`: `#f5f5f5`
     - `--ds-color-expansion-panel-block-expand-header-press-background`: `#e0e0e0`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-2x)`
+- Модификаторы: `--collaps` `--expand`
+- Разметка:
+
+```html
+<div class="ds-expansion-group-panel ds-expansion-group-panel--collaps">
+  <span class="ds-expansion-group-panel__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Expansion group panel [56155:1676] — 2 вариантов; оси: Type ? */
+.ds-expansion-group-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-2x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-expansion-group-panel__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+  white-space: nowrap;
+}
+.ds-expansion-group-panel--collaps {
+  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+}
+.ds-expansion-group-panel--expand {
+  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+}
+```
+</details>
 
 #### Expansion panel `[52937:1329]` — 12 вариантов
 - **Variant** (VARIANT): Default, Info
@@ -3683,6 +6594,7 @@
     - `--ds-color-expansion-panel-block-expand-header-disable-text-color`: `#9e9e9e`
     - `--ds-color-expansion-panel-block-expand-header-hover-background`: `#f5f5f5`
     - `--ds-color-expansion-panel-block-expand-header-press-background`: `#e0e0e0`
+- CSS: выверено вручную, см. `components/expansion.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Expansion table panel `[56217:15104]` — 0 вариантов
 - Токены компонента (12):
@@ -3699,12 +6611,117 @@
     - `--ds-color-expansion-panel-block-expand-header-hover-background`: `#f5f5f5`
     - `--ds-color-expansion-panel-block-expand-header-press-background`: `#e0e0e0`
 
+
 #### Form field cell `[60220:72732]` — 1 вариантов
 - **Variant** (VARIANT): Table content cell Chips input
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-10x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - фон: `var(--ds-color-brand-neutral-default)`
+- Разметка:
+
+```html
+<div class="ds-form-field-cell">
+  <div class="ds-form-field-cell__table-content"></div>
+  <div class="ds-form-field-cell__table-content-chips-input"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Form field cell [60220:72732] — 1 вариантов; оси: Variant */
+.ds-form-field-cell {
+  min-height: var(--ds-size-10x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-form-field-cell__table-content-chips-input {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-form-field-cell__table-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
+}
+```
+</details>
 
 #### Header components `[53535:1244]` — 2 вариантов
 - **Type** (VARIANT): Default, Mini
 - Прочие свойства: Show Doc#17828:0 (BOOLEAN), Show Designer#17828:1 (BOOLEAN), Show Name#17828:2 (BOOLEAN), Show Figma#17828:3 (BOOLEAN), Description#57740:0 (BOOLEAN)
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x)`
+    - скругление: `var(--ds-size-8x)`
+- Модификаторы: `--default` `--mini`
+- Разметка:
+
+```html
+<div class="ds-header-components ds-header-components--default">
+  <div class="ds-header-components__badge-group"></div>
+  <div class="ds-header-components__container"></div>
+  <div class="ds-header-components__frame-1"></div>
+  <span class="ds-header-components__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Header components [53535:1244] — 2 вариантов; оси: Type */
+.ds-header-components {
+  display: flex;
+  padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x);
+  border-radius: var(--ds-size-8x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-header-components__label {
+  font-size: var(--ds-typography-header-font-size-m);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: 0.18000000715255737px;
+  color: var(--ds-color-brand-neutral-default);
+  white-space: nowrap;
+}
+.ds-header-components__container {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-6x);
+  padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x);
+  border-radius: var(--ds-size-6x);
+  background: var(--ds-color-brand-neutral-super-light);
+}
+.ds-header-components__badge-group {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+}
+.ds-header-components__frame-1 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-2x);
+}
+.ds-header-components--default {
+  flex-direction: column;
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-default);
+}
+.ds-header-components--mini {
+  flex-direction: row;
+  gap: var(--ds-size-6x);
+  border-radius: var(--ds-size-6x);
+  background: var(--ds-color-brand-neutral-super-light);
+  color: var(--ds-color-brand-neutral-default);
+}
+```
+</details>
 
 #### Hint container `[54593:479]` — 10 вариантов
 - **Size** (VARIANT): Complex, Single
@@ -3722,6 +6739,110 @@
     - `--ds-color-hint-header-neutral-icon-color`: `#ffffff`
     - `--ds-color-hint-header-positive-icon-color`: `#14b456`
     - `--ds-color-hint-header-warning-icon-color`: `#ea7806`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - скругление: `var(--ds-size-2x)`
+    - тень: `0.0px 0.0px 16.0px 0px #2121211f`
+- Модификаторы: `--default` `--down` `--left` `--right` `--up`
+- Разметка:
+
+```html
+<div class="ds-hint-container ds-hint-container--default">
+  <span class="ds-hint-container__arrow"><!-- SVG-иконка ДС --></span>
+  <div class="ds-hint-container__content"></div>
+  <div class="ds-hint-container__footer"></div>
+  <div class="ds-hint-container__header"></div>
+  <span class="ds-hint-container__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-hint-container__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Hint container [54593:479] — 10 вариантов; оси: Size, Orientation */
+.ds-hint-container {
+  display: flex;
+  align-items: center;
+  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  border-radius: var(--ds-size-2x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-hint-container__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-hint-content-icon-color);
+  white-space: nowrap;
+}
+.ds-hint-container__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-hint-container__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-hint-container__icon svg path {
+  fill: currentColor;
+}
+.ds-hint-container__arrow {
+  height: var(--ds-size-1x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-hint-background-color);
+}
+.ds-hint-container__header {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-1x);
+  background: var(--ds-color-hint-background-color);
+}
+.ds-hint-container__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-hint-background-color);
+}
+.ds-hint-container__footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-3x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-4x) var(--ds-size-3x);
+  background: var(--ds-color-hint-background-color);
+}
+.ds-hint-container--up {
+  flex-direction: column;
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-container--down {
+  flex-direction: column;
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-container--right {
+  flex-direction: row;
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-container--left {
+  flex-direction: row;
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-container--default {
+  flex-direction: column;
+  color: var(--ds-color-hint-content-icon-color);
+}
+```
+</details>
 
 #### Hint content `[54713:3325]` — 2 вариантов
 - **Content** (VARIANT): Group content, Single content
@@ -3738,6 +6859,98 @@
     - `--ds-color-hint-header-neutral-icon-color`: `#ffffff`
     - `--ds-color-hint-header-positive-icon-color`: `#14b456`
     - `--ds-color-hint-header-warning-icon-color`: `#ea7806`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-2x)`
+    - промежуток между элементами: `var(--ds-size-2x)`
+    - фон: `var(--ds-color-hint-background-color)`
+- Модификаторы: `--group-content` `--single-content`
+- Разметка:
+
+```html
+<div class="ds-hint-content ds-hint-content--group-content">
+  <div class="ds-hint-content__block"></div>
+  <div class="ds-hint-content__clear"></div>
+  <div class="ds-hint-content__close"></div>
+  <span class="ds-hint-content__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-hint-content__icon-size"></div>
+  <div class="ds-hint-content__info"></div>
+  <span class="ds-hint-content__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Hint content [54713:3325] — 2 вариантов; оси: Content */
+.ds-hint-content {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-hint-background-color);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-hint-content__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-hint-content-icon-color);
+  white-space: nowrap;
+}
+.ds-hint-content__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-hint-content__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-hint-content__icon svg path {
+  fill: currentColor;
+}
+.ds-hint-content__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-hint-content__info {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-content__block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+}
+.ds-hint-content__clear {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-hint-content__close {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-content--group-content {
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-content--single-content {
+  align-items: center;
+  color: var(--ds-color-hint-content-icon-color);
+}
+```
+</details>
 
 #### Hint footer `[54600:517]` — 1 вариантов
 - **Content** (VARIANT): Default
@@ -3754,6 +6967,81 @@
     - `--ds-color-hint-header-neutral-icon-color`: `#ffffff`
     - `--ds-color-hint-header-positive-icon-color`: `#14b456`
     - `--ds-color-hint-header-warning-icon-color`: `#ea7806`
+- Размеры и параметры:
+    - высота: минимум `56px`, растёт по контенту
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-4x) var(--ds-size-3x)`
+    - промежуток между элементами: `var(--ds-size-3x)`
+    - фон: `var(--ds-color-hint-background-color)`
+- Модификаторы: `--default`
+- Разметка:
+
+```html
+<div class="ds-hint-footer ds-hint-footer--default">
+  <div class="ds-hint-footer__button-group"></div>
+  <span class="ds-hint-footer__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-hint-footer__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Hint footer [54600:517] — 1 вариантов; оси: Content */
+.ds-hint-footer {
+  min-height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-3x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-4x) var(--ds-size-3x);
+  background: var(--ds-color-hint-background-color);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-hint-footer__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-hint-content-icon-color);
+  white-space: nowrap;
+}
+.ds-hint-footer__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-7x);
+  height: var(--ds-size-7x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-hint-footer__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-hint-footer__icon svg path {
+  fill: currentColor;
+}
+.ds-hint-footer__цвет-и-палитра {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-hint-content-icon-color);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-footer__button-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+}
+.ds-hint-footer--default {
+  color: var(--ds-color-hint-content-icon-color);
+}
+```
+</details>
 
 #### Hint header `[54594:2219]` — 5 вариантов
 - **Style** (VARIANT): Error, Neutral, Primary, Secondary, Warning
@@ -3770,18 +7058,172 @@
     - `--ds-color-hint-header-neutral-icon-color`: `#ffffff`
     - `--ds-color-hint-header-positive-icon-color`: `#14b456`
     - `--ds-color-hint-header-warning-icon-color`: `#ea7806`
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-8x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-1x)`
+    - промежуток между элементами: `var(--ds-size-2x)`
+    - фон: `var(--ds-color-hint-background-color)`
+- Модификаторы: `--error` `--neutral` `--primary` `--secondary` `--warning`
+- Разметка:
+
+```html
+<div class="ds-hint-header ds-hint-header--error">
+  <div class="ds-hint-header__clear"></div>
+  <div class="ds-hint-header__close"></div>
+  <span class="ds-hint-header__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-hint-header__icon-size"></div>
+  <div class="ds-hint-header__info"></div>
+  <span class="ds-hint-header__label">Текст</span>
+  <span class="ds-hint-header__title">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Hint header [54594:2219] — 5 вариантов; оси: Style */
+.ds-hint-header {
+  min-height: var(--ds-size-8x);
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-1x);
+  background: var(--ds-color-hint-background-color);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-hint-header__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-hint-content-icon-color);
+  white-space: nowrap;
+}
+.ds-hint-header__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-hint-header__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-hint-header__icon svg path {
+  fill: currentColor;
+}
+.ds-hint-header__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-hint-header__info {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-header__title {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-hint-content-icon-color);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-header__clear {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-hint-header__close {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-header--neutral {
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-header--primary {
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-header--secondary {
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-header--warning {
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-header--error {
+  color: var(--ds-color-hint-content-icon-color);
+}
+```
+</details>
 
 #### Icon group `[53467:1060]` — 2 вариантов
 - **Size gap** (VARIANT): 2x, 4x
 - Прочие свойства: Slot#60190:14 (SLOT)
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-5x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-2x)`
+- Модификаторы: `--4x`
+- Разметка:
+
+```html
+<div class="ds-icon-group ds-icon-group--4x">
+  <span class="ds-icon-group__icon"><!-- SVG-иконка ДС --></span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Icon group [53467:1060] — 2 вариантов; оси: Size gap */
+.ds-icon-group {
+  min-height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-icon-group__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-icon-group__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-icon-group__icon svg path {
+  fill: currentColor;
+}
+.ds-icon-group--4x {
+  gap: var(--ds-size-4x);
+}
+```
+</details>
 
 #### Icon size `[52927:6286]` — 12 вариантов
 - **Size** (VARIANT): 16, 20, 24, 32, 36, 40
 - **Content** (VARIANT): Icon, Img
 - Прочие свойства: State#54063:8 (BOOLEAN), Instance#60108:34 (INSTANCE_SWAP)
 
+
 #### Icon size_Draft `[54063:12911]` — 6 вариантов
 - **Size** (VARIANT): 16, 20, 24, 32, 36, 40
+
 
 #### Input `[52670:7573]` — 29 вариантов
 - **Size** (VARIANT): M, S, XS
@@ -3869,6 +7311,7 @@
     - `--ds-color-input-outlined-hover-border-color`: `#e0e0e0`
     - `--ds-color-input-outlined-hover-icon-color`: `#616161`
     - `--ds-color-input-outlined-hover-text-color`: `#333333`
+- CSS: выверено вручную, см. `components/input.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Input cell `[60229:74436]` — 8 вариантов
 - **State** (VARIANT): Default, Disable, Error, Error+Hover, Focus, Focus+Placeholder, Hover, Vocus+Value
@@ -3953,6 +7396,92 @@
     - `--ds-color-input-outlined-hover-border-color`: `#e0e0e0`
     - `--ds-color-input-outlined-hover-icon-color`: `#616161`
     - `--ds-color-input-outlined-hover-text-color`: `#333333`
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-9x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x)`
+    - промежуток между элементами: `var(--ds-size-2x)`
+- Модификаторы: `--disabled`
+- Состояния: `:disabled` `:focus-visible` `:hover`
+- Разметка:
+
+```html
+<div class="ds-input-cell ds-input-cell--disabled">
+  <div class="ds-input-cell__frame"></div>
+  <span class="ds-input-cell__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-input-cell__label">Текст</span>
+  <span class="ds-input-cell__support">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Input cell [60229:74436] — 8 вариантов; оси: State */
+.ds-input-cell {
+  min-height: var(--ds-size-9x);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-input-cell__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-input-input-label-text-color);
+  white-space: nowrap;
+}
+.ds-input-cell__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-input-cell__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-input-cell__icon svg path {
+  fill: currentColor;
+}
+.ds-input-cell__frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-input-input-filled-background);
+  border: 1px solid var(--ds-color-input-number-control-default-border-color);
+}
+.ds-input-cell__support {
+  display: flex;
+  flex-direction: row;
+}
+.ds-input-cell:hover {
+  background: var(--ds-color-input-filled-disable-input-background);
+  border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-cell:focus-visible {
+  color: var(--ds-color-input-number-control-focus-border-color);
+}
+.ds-input-cell:disabled {
+  color: var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-cell.ds-input-cell--disabled {
+  color: var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-cell--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Input Datepicker `[58548:4764]` — 2 вариантов
 - **Type** (VARIANT): Empty, Populated
@@ -4037,6 +7566,80 @@
     - `--ds-color-input-outlined-hover-border-color`: `#e0e0e0`
     - `--ds-color-input-outlined-hover-icon-color`: `#616161`
     - `--ds-color-input-outlined-hover-text-color`: `#333333`
+- Размеры и параметры:
+    - высота: минимум `48px`, растёт по контенту
+    - ширина: по контенту (hug)
+    - фон: `var(--ds-color-input-input-outlined-background)`
+- Модификаторы: `--empty` `--populated`
+- Разметка:
+
+```html
+<div class="ds-input-datepicker ds-input-datepicker--empty">
+  <div class="ds-input-datepicker__frame"></div>
+  <span class="ds-input-datepicker__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-input-datepicker__label">Текст</span>
+  <span class="ds-input-datepicker__support">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Input Datepicker [58548:4764] — 2 вариантов; оси: Type */
+.ds-input-datepicker {
+  min-height: 48px;
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-input-input-outlined-background);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-input-datepicker__label {
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-input-input-label-text-color);
+  white-space: nowrap;
+}
+.ds-input-datepicker__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-input-datepicker__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-input-datepicker__icon svg path {
+  fill: currentColor;
+}
+.ds-input-datepicker__frame {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-input-input-filled-background);
+  border: 1px solid var(--ds-color-input-number-control-default-border-color);
+}
+.ds-input-datepicker__support {
+  display: flex;
+  flex-direction: row;
+}
+.ds-input-datepicker--empty {
+  color: var(--ds-color-input-input-label-text-color);
+}
+.ds-input-datepicker--populated {
+  color: var(--ds-color-input-input-label-text-color);
+}
+```
+</details>
 
 #### Input for number `[53827:5155]` — 10 вариантов
 - **Size** (VARIANT): Compact, Normal
@@ -4123,6 +7726,103 @@
     - `--ds-color-input-outlined-hover-border-color`: `#e0e0e0`
     - `--ds-color-input-outlined-hover-icon-color`: `#616161`
     - `--ds-color-input-outlined-hover-text-color`: `#333333`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x)`
+    - промежуток между элементами: `var(--ds-size-1x)`
+    - скругление: `var(--ds-size-2x)`
+    - рамка: `1px solid var(--ds-color-input-number-control-default-border-color)`
+    - фон: `var(--ds-color-input-input-outlined-background)`
+- Модификаторы: `--disabled`
+- Состояния: `:disabled` `:hover`
+- Разметка:
+
+```html
+<div class="ds-input-for-number ds-input-for-number--disabled">
+  <div class="ds-input-for-number__content"></div>
+  <span class="ds-input-for-number__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-input-for-number__icon-size"></div>
+  <div class="ds-input-for-number__info"></div>
+  <span class="ds-input-for-number__label">Текст</span>
+  <span class="ds-input-for-number__text">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Input for number [53827:5155] — 10 вариантов; оси: Size, State */
+.ds-input-for-number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-1x);
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-input-input-outlined-background);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
+  border: 1px solid var(--ds-color-input-number-control-default-border-color);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-input-for-number__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-input-number-control-text-color);
+  white-space: nowrap;
+}
+.ds-input-for-number__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-input-for-number__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-input-for-number__icon svg path {
+  fill: currentColor;
+}
+.ds-input-for-number__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-input-for-number__info {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-input-input-outlined-background);
+}
+.ds-input-for-number__content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-input-for-number__text {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+}
+.ds-input-for-number:hover {
+  border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-for-number:disabled {
+  border: 1px solid var(--ds-color-input-number-control-disable-border-color);
+  color: var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-for-number.ds-input-for-number--disabled {
+  border: 1px solid var(--ds-color-input-number-control-disable-border-color);
+  color: var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-for-number--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Input number `[17193:84750]` — 29 вариантов
 - **Size** (VARIANT): M, S, XS
@@ -4210,6 +7910,111 @@
     - `--ds-color-input-outlined-hover-border-color`: `#e0e0e0`
     - `--ds-color-input-outlined-hover-icon-color`: `#616161`
     - `--ds-color-input-outlined-hover-text-color`: `#333333`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `18px`
+- Модификаторы: `--disabled` `--empty` `--populated` `--xs`
+- Состояния: `:disabled` `:focus-visible` `:hover`
+- Разметка:
+
+```html
+<div class="ds-input-number ds-input-number--disabled">
+  <div class="ds-input-number__frame"></div>
+  <span class="ds-input-number__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-input-number__label">Текст</span>
+  <span class="ds-input-number__support">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Input number [17193:84750] — 29 вариантов; оси: Size, Variant, State */
+.ds-input-number {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-input-number__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-input-input-label-text-color);
+  white-space: nowrap;
+}
+.ds-input-number__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-input-number__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-input-number__icon svg path {
+  fill: currentColor;
+}
+.ds-input-number__frame {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-input-input-filled-background);
+  border: 1px solid var(--ds-color-input-number-control-default-border-color);
+}
+.ds-input-number__support {
+  display: flex;
+  flex-direction: row;
+}
+.ds-input-number--xs .ds-input-number__icon {
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
+}
+.ds-input-number--populated {
+  align-items: center;
+  color: var(--ds-color-input-input-label-text-color);
+}
+.ds-input-number--empty {
+  align-items: center;
+  color: var(--ds-color-input-input-label-text-color);
+}
+.ds-input-number--populated:focus-visible {
+  color: var(--ds-color-input-number-control-focus-border-color);
+}
+.ds-input-number--populated:hover {
+  background: var(--ds-color-input-filled-disable-input-background);
+  border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-number--empty:hover {
+  background: var(--ds-color-input-filled-disable-input-background);
+  border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-number--populated:disabled {
+  color: var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-number--populated.ds-input-number--disabled {
+  color: var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-number--empty:disabled {
+  color: var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-number--empty.ds-input-number--disabled {
+  color: var(--ds-color-input-number-control-disable-icon-color);
+}
+.ds-input-number--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Input number_but icon `[56967:10506]` — 1 вариантов
 - Прочие свойства: Support#57977:0 (BOOLEAN)
@@ -4294,6 +8099,90 @@
     - `--ds-color-input-outlined-hover-border-color`: `#e0e0e0`
     - `--ds-color-input-outlined-hover-icon-color`: `#616161`
     - `--ds-color-input-outlined-hover-text-color`: `#333333`
+- Размеры и параметры:
+    - высота: минимум `56px`, растёт по контенту
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-1x)`
+- Разметка:
+
+```html
+<div class="ds-input-number-but-icon">
+  <div class="ds-input-number-but-icon__button"></div>
+  <div class="ds-input-number-but-icon__container"></div>
+  <span class="ds-input-number-but-icon__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-input-number-but-icon__label">Текст</span>
+  <div class="ds-input-number-but-icon__support-text"></div>
+  <span class="ds-input-number-but-icon__text">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Input number_but icon [56967:10506] — 1 вариантов; оси: — */
+.ds-input-number-but-icon {
+  min-height: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-input-number-but-icon__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-input-input-label-text-color);
+  white-space: nowrap;
+}
+.ds-input-number-but-icon__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-input-number-but-icon__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-input-number-but-icon__icon svg path {
+  fill: currentColor;
+}
+.ds-input-number-but-icon__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-1x);
+}
+.ds-input-number-but-icon__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-input-input-outlined-background);
+  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+}
+.ds-input-number-but-icon__text {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-input-number-but-icon__support-text {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-input-input-label-text-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-input-input-label-text-color);
+}
+```
+</details>
 
 #### Input Timepicker `[58982:9561]` — 2 вариантов
 - **Type** (VARIANT): Empty, Populated
@@ -4378,6 +8267,80 @@
     - `--ds-color-input-outlined-hover-border-color`: `#e0e0e0`
     - `--ds-color-input-outlined-hover-icon-color`: `#616161`
     - `--ds-color-input-outlined-hover-text-color`: `#333333`
+- Размеры и параметры:
+    - высота: минимум `48px`, растёт по контенту
+    - ширина: по контенту (hug)
+    - фон: `var(--ds-color-input-input-outlined-background)`
+- Модификаторы: `--empty` `--populated`
+- Разметка:
+
+```html
+<div class="ds-input-timepicker ds-input-timepicker--empty">
+  <div class="ds-input-timepicker__frame"></div>
+  <span class="ds-input-timepicker__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-input-timepicker__label">Текст</span>
+  <span class="ds-input-timepicker__support">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Input Timepicker [58982:9561] — 2 вариантов; оси: Type */
+.ds-input-timepicker {
+  min-height: 48px;
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-input-input-outlined-background);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-input-timepicker__label {
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-input-input-label-text-color);
+  white-space: nowrap;
+}
+.ds-input-timepicker__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-input-timepicker__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-input-timepicker__icon svg path {
+  fill: currentColor;
+}
+.ds-input-timepicker__frame {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-input-input-filled-background);
+  border: 1px solid var(--ds-color-input-number-control-default-border-color);
+}
+.ds-input-timepicker__support {
+  display: flex;
+  flex-direction: row;
+}
+.ds-input-timepicker--empty {
+  color: var(--ds-color-input-input-label-text-color);
+}
+.ds-input-timepicker--populated {
+  color: var(--ds-color-input-input-label-text-color);
+}
+```
+</details>
 
 #### List (Сontainer) `[57604:4762]` — 1 вариантов
 - **Type** (VARIANT): Сontainer
@@ -4403,6 +8366,103 @@
     - `--ds-color-list-item-selected-back-selected`: `#f5f9ff`
     - `--ds-color-list-item-selected-background`: `#ffffff`
     - `--ds-color-list-item-selected-icon-color`: `#448aff`
+- Размеры и параметры:
+    - высота: минимум `257px`, растёт по контенту
+    - ширина: по контенту (hug)
+    - внутренние отступы: `0 0 var(--ds-size-2x) var(--ds-size-2x)`
+    - фон: `var(--ds-color-list-background)`
+- Модификаторы: `--container`
+- Разметка:
+
+```html
+<div class="ds-list-container ds-list-container--container">
+  <div class="ds-list-container__content"></div>
+  <div class="ds-list-container__divider"></div>
+  <span class="ds-list-container__element-left"><!-- SVG-иконка ДС --></span>
+  <span class="ds-list-container__element-right"><!-- SVG-иконка ДС --></span>
+  <span class="ds-list-container__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-list-container__item"></div>
+  <span class="ds-list-container__label">Текст</span>
+  <div class="ds-list-container__scroll"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* List (Сontainer) [57604:4762] — 1 вариантов; оси: Type */
+.ds-list-container {
+  min-height: 257px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-list-background);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-list-container__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-list-item-icon-color);
+  white-space: nowrap;
+}
+.ds-list-container__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-3x);
+  height: var(--ds-size-3x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-list-container__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-list-container__icon svg path {
+  fill: currentColor;
+}
+.ds-list-container__item {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-list-background);
+}
+.ds-list-container__element-left {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-list-background);
+}
+.ds-list-container__content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-list-container__element-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-list-background);
+}
+.ds-list-container__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-list-background);
+}
+.ds-list-container__scroll {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
+}
+.ds-list-container--container {
+  color: var(--ds-color-list-item-icon-color);
+}
+```
+</details>
 
 #### List item `[54101:7922]` — 8 вариантов
 - **State** (VARIANT): Back selected, Default, Disable, Hover, Link, Negative, Press, Selected
@@ -4428,14 +8488,207 @@
     - `--ds-color-list-item-selected-back-selected`: `#f5f9ff`
     - `--ds-color-list-item-selected-background`: `#ffffff`
     - `--ds-color-list-item-selected-icon-color`: `#448aff`
+- Размеры и параметры:
+    - высота: минимум `68px`, растёт по контенту
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x)`
+    - промежуток между элементами: `var(--ds-size-2x)`
+    - фон: `var(--ds-color-list-background)`
+- Модификаторы: `--disabled`
+- Состояния: `:active` `:disabled` `:hover`
+- Разметка:
+
+```html
+<div class="ds-list-item ds-list-item--disabled">
+  <div class="ds-list-item__checkbox"></div>
+  <div class="ds-list-item__content"></div>
+  <span class="ds-list-item__element-left"><!-- SVG-иконка ДС --></span>
+  <span class="ds-list-item__element-right"><!-- SVG-иконка ДС --></span>
+  <span class="ds-list-item__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-list-item__icon-size"></div>
+  <span class="ds-list-item__label">Текст</span>
+  <div class="ds-list-item__label-down"></div>
+  <div class="ds-list-item__label-up"></div>
+  <span class="ds-list-item__text">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* List item [54101:7922] — 8 вариантов; оси: State */
+.ds-list-item {
+  min-height: 68px;
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-list-background);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-list-item__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-list-item-icon-color);
+  white-space: nowrap;
+}
+.ds-list-item__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-list-item__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-list-item__icon svg path {
+  fill: currentColor;
+}
+.ds-list-item__element-left {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-list-background);
+}
+.ds-list-item__checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-list-item__content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-list-item__label-up {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-list-item-icon-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-list-item-icon-color);
+}
+.ds-list-item__text {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-list-item-text-color);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-list-item-text-color);
+}
+.ds-list-item__label-down {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-list-item-icon-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-list-item-icon-color);
+}
+.ds-list-item__element-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-list-background);
+}
+.ds-list-item__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-list-item:hover {
+  background: var(--ds-color-list-item-hover-background);
+}
+.ds-list-item:active {
+  background: var(--ds-color-list-item-press-background);
+}
+.ds-list-item:disabled {
+  color: var(--ds-color-list-item-disable-icon-color);
+}
+.ds-list-item.ds-list-item--disabled {
+  color: var(--ds-color-list-item-disable-icon-color);
+}
+.ds-list-item--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Logo iiko `[55332:19892]` — 4 вариантов
 - **Size** (VARIANT): Full, Small
 - **Style** (VARIANT): Inverse, Main
+- Размеры и параметры:
+    - высота: `72px` (фикс.)
+    - ширина: по контенту (hug)
+    - фон: `var(--ds-color-brand-neutral-default)`
+- Разметка:
+
+```html
+<div class="ds-logo-iiko">
+  <div class="ds-logo-iiko__vector"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Logo iiko [55332:19892] — 4 вариантов; оси: Size, Style */
+.ds-logo-iiko {
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-logo-iiko__vector {
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+```
+</details>
 
 #### Logo Syrve `[56079:771]` — 4 вариантов
 - **Size** (VARIANT): Full, Small
 - **Style** (VARIANT): Inverse, Main
+- Размеры и параметры:
+    - высота: `72px` (фикс.)
+    - ширина: по контенту (hug)
+    - фон: `var(--ds-color-brand-neutral-default)`
+- Разметка:
+
+```html
+<div class="ds-logo-syrve">
+  <div class="ds-logo-syrve__vector"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Logo Syrve [56079:771] — 4 вариантов; оси: Size, Style */
+.ds-logo-syrve {
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-logo-syrve__vector {
+  height: 70.9px;
+  display: flex;
+  flex-direction: row;
+}
+```
+</details>
 
 #### Menu (Container) `[54163:6705]` — 1 вариантов
 - **Type** (VARIANT): Container
@@ -4459,6 +8712,123 @@
     - `--ds-color-menu-item-selected-back-selected`: `#f5f9ff`
     - `--ds-color-menu-item-selected-background`: `#ffffff`
     - `--ds-color-menu-item-selected-icon-color`: `#448aff`
+- Размеры и параметры:
+    - высота: минимум `418px`, растёт по контенту
+    - ширина: по контенту (hug)
+    - внутренние отступы: `0 0 var(--ds-size-2x) var(--ds-size-2x)`
+    - скругление: `var(--ds-size-2x)`
+    - фон: `var(--ds-color-menu-background)`
+    - тень: `0.0px 0.0px 16.0px 0px #2121211f`
+- Модификаторы: `--container`
+- Разметка:
+
+```html
+<div class="ds-menu-container ds-menu-container--container">
+  <div class="ds-menu-container__button-group"></div>
+  <div class="ds-menu-container__content"></div>
+  <div class="ds-menu-container__divider"></div>
+  <span class="ds-menu-container__element-left"><!-- SVG-иконка ДС --></span>
+  <span class="ds-menu-container__element-right"><!-- SVG-иконка ДС --></span>
+  <span class="ds-menu-container__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-menu-container__label">Текст</span>
+  <div class="ds-menu-container__scroll"></div>
+  <div class="ds-menu-container__search"></div>
+  <span class="ds-menu-container__title">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Menu (Container) [54163:6705] — 1 вариантов; оси: Type */
+.ds-menu-container {
+  min-height: 418px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-menu-background);
+  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-menu-container__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-light);
+  white-space: nowrap;
+}
+.ds-menu-container__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-3x);
+  height: var(--ds-size-3x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-menu-container__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-menu-container__icon svg path {
+  fill: currentColor;
+}
+.ds-menu-container__search {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) 0 var(--ds-size-1x);
+}
+.ds-menu-container__title {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-menu-background);
+}
+.ds-menu-container__element-left {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-menu-background);
+}
+.ds-menu-container__content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-menu-container__element-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-menu-background);
+}
+.ds-menu-container__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-menu-background);
+}
+.ds-menu-container__scroll {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
+}
+.ds-menu-container__button-group {
+  height: 52px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+}
+.ds-menu-container--container {
+  color: var(--ds-color-brand-neutral-light);
+}
+```
+</details>
 
 #### Menu item `[56090:1476]` — 7 вариантов
 - **State** (VARIANT): Back selected, Default, Disable, Hover, Negative, Press, Selected
@@ -4482,15 +8852,282 @@
     - `--ds-color-menu-item-selected-back-selected`: `#f5f9ff`
     - `--ds-color-menu-item-selected-background`: `#ffffff`
     - `--ds-color-menu-item-selected-icon-color`: `#448aff`
+- Размеры и параметры:
+    - высота: минимум `68px`, растёт по контенту
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x)`
+    - промежуток между элементами: `var(--ds-size-2x)`
+    - фон: `var(--ds-color-menu-background)`
+- Модификаторы: `--disabled`
+- Состояния: `:active` `:disabled` `:hover`
+- Разметка:
+
+```html
+<div class="ds-menu-item ds-menu-item--disabled">
+  <div class="ds-menu-item__checkbox"></div>
+  <div class="ds-menu-item__content"></div>
+  <span class="ds-menu-item__element-left"><!-- SVG-иконка ДС --></span>
+  <span class="ds-menu-item__element-right"><!-- SVG-иконка ДС --></span>
+  <span class="ds-menu-item__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-menu-item__icon-size"></div>
+  <span class="ds-menu-item__label">Текст</span>
+  <div class="ds-menu-item__label-down"></div>
+  <div class="ds-menu-item__label-up"></div>
+  <span class="ds-menu-item__text">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Menu item [56090:1476] — 7 вариантов; оси: State */
+.ds-menu-item {
+  min-height: 68px;
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-menu-background);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-menu-item__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-menu-item-icon-color);
+  white-space: nowrap;
+}
+.ds-menu-item__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-menu-item__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-menu-item__icon svg path {
+  fill: currentColor;
+}
+.ds-menu-item__element-left {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-menu-background);
+}
+.ds-menu-item__checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-menu-item__content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-menu-item__label-up {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-menu-item-icon-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-menu-item-icon-color);
+}
+.ds-menu-item__text {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-menu-item-text-color);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-menu-item-text-color);
+}
+.ds-menu-item__label-down {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-menu-item-icon-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-menu-item-icon-color);
+}
+.ds-menu-item__element-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-menu-background);
+}
+.ds-menu-item__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-menu-item:hover {
+  background: var(--ds-color-menu-item-hover-background);
+}
+.ds-menu-item:active {
+  background: var(--ds-color-menu-item-press-background);
+}
+.ds-menu-item:disabled {
+  color: var(--ds-color-menu-item-disable-icon-color);
+}
+.ds-menu-item.ds-menu-item--disabled {
+  color: var(--ds-color-menu-item-disable-icon-color);
+}
+.ds-menu-item--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Navigation Bar `[56564:1057]` — 2 вариантов
 - **Dark** (VARIANT): Off, On
+- Размеры и параметры:
+    - высота: `var(--ds-size-5x)` (фикс.)
+    - ширина: по контенту (hug)
+- Разметка:
+
+```html
+<div class="ds-navigation-bar">
+  <div class="ds-navigation-bar__pill"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Navigation Bar [56564:1057] — 2 вариантов; оси: Dark */
+.ds-navigation-bar {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-navigation-bar__pill {
+  height: var(--ds-size-1x);
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--ds-size-1x);
+  background: var(--ds-color-brand-neutral-super-dark);
+}
+```
+</details>
 
 #### Picture `[58937:3985]` — 1 вариантов
 - Прочие свойства: Crop#58947:6 (BOOLEAN)
+- Размеры и параметры:
+    - высота: минимум `189px`, растёт по контенту
+    - ширина: `446px` (фикс.)
+    - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x)`
+    - промежуток между элементами: `var(--ds-size-2-5x)`
+    - скругление: `var(--ds-size-2x)`
+    - фон: `var(--ds-color-brand-accent-super-lightest)`
+- Разметка:
+
+```html
+<div class="ds-picture">
+  <div class="ds-picture__crop"></div>
+  <div class="ds-picture__frame-1000001806"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Picture [58937:3985] — 1 вариантов; оси: — */
+.ds-picture {
+  min-height: 189px;
+  width: 446px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-brand-accent-super-lightest);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-picture__crop {
+  height: 173px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-2-5x);
+  border: 1px dashed var(--ds-color-brand-neutral-neutral);
+}
+.ds-picture__frame-1000001806 {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 440px;
+}
+```
+</details>
 
 #### Preview `[54063:12946]` — 3 вариантов
 - **Property 1** (VARIANT): Default, Variant2, Variant3
+- Размеры и параметры:
+    - высота: `var(--ds-size-6x)` (фикс.)
+    - ширина: `var(--ds-size-6x)` (фикс.)
+    - внутренние отступы: `var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x)`
+    - промежуток между элементами: `var(--ds-size-2-5x)`
+- Разметка:
+
+```html
+<div class="ds-preview">
+  <span class="ds-preview__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-preview__icon-size-draft"></div>
+  <div class="ds-preview__info"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Preview [54063:12946] — 3 вариантов; оси: Property 1 */
+.ds-preview {
+  height: var(--ds-size-6x);
+  width: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-preview__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-preview__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-preview__icon svg path {
+  fill: currentColor;
+}
+.ds-preview__icon-size-draft {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-preview__info {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+```
+</details>
 
 #### Radio button `[54095:4263]` — 14 вариантов
 - **Variant** (VARIANT): Disable, Error, Normal
@@ -4523,6 +9160,7 @@
     - `--ds-color-radio-button-normal-selected-default-background`: `rgba(255, 255, 255, 0.0)`
     - `--ds-color-radio-button-normal-selected-hover-background`: `#e8f0ff`
     - `--ds-color-radio-button-normal-selected-press-background`: `#ccdfff`
+- CSS: выверено вручную, см. `components/selection.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Radio button group `[54095:4392]` — 2 вариантов
 - **Orientation** (VARIANT): Horizontal, Vertical
@@ -4554,6 +9192,7 @@
     - `--ds-color-radio-button-normal-selected-default-background`: `rgba(255, 255, 255, 0.0)`
     - `--ds-color-radio-button-normal-selected-hover-background`: `#e8f0ff`
     - `--ds-color-radio-button-normal-selected-press-background`: `#ccdfff`
+- CSS: выверено вручную, см. `components/selection.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Radio button label `[54095:4306]` — 6 вариантов
 - **Variant** (VARIANT): Disable, Error, Normal
@@ -4586,6 +9225,120 @@
     - `--ds-color-radio-button-normal-selected-default-background`: `rgba(255, 255, 255, 0.0)`
     - `--ds-color-radio-button-normal-selected-hover-background`: `#e8f0ff`
     - `--ds-color-radio-button-normal-selected-press-background`: `#ccdfff`
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-5x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-1x)`
+- Модификаторы: `--disable` `--error` `--normal`
+- Разметка:
+
+```html
+<div class="ds-radio-button-label ds-radio-button-label--disable">
+  <div class="ds-radio-button-label__form"></div>
+  <span class="ds-radio-button-label__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-radio-button-label__label">Текст</span>
+  <div class="ds-radio-button-label__left"></div>
+  <div class="ds-radio-button-label__right"></div>
+  <span class="ds-radio-button-label__support">Текст</span>
+  <div class="ds-radio-button-label__support-text"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Radio button label [54095:4306] — 6 вариантов; оси: Variant, Type */
+.ds-radio-button-label {
+  min-height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-radio-button-label__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: 0.25px;
+  color: var(--ds-color-button-neutral-filled-default-text-color);
+  white-space: nowrap;
+}
+.ds-radio-button-label__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-radio-button-label__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-radio-button-label__icon svg path {
+  fill: currentColor;
+}
+.ds-radio-button-label__form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+}
+.ds-radio-button-label__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-radio-button-label__цвет-и-палитра {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-button-neutral-filled-default-text-color);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-button-neutral-filled-default-text-color);
+}
+.ds-radio-button-label__right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-radio-button-label__support {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--ds-size-7x) 0 0 0;
+}
+.ds-radio-button-label__support-text {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-button-icon-neutral-filled-icon-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-button-icon-neutral-filled-icon-color);
+}
+.ds-radio-button-label--normal.ds-radio-button-label--deselected {
+  color: var(--ds-color-button-neutral-filled-default-text-color);
+}
+.ds-radio-button-label--normal.ds-radio-button-label--selected {
+  color: var(--ds-color-button-neutral-filled-default-text-color);
+}
+.ds-radio-button-label--error.ds-radio-button-label--deselected {
+  color: var(--ds-color-button-neutral-filled-default-text-color);
+}
+.ds-radio-button-label--error.ds-radio-button-label--selected {
+  color: var(--ds-color-button-neutral-filled-default-text-color);
+}
+.ds-radio-button-label--disable.ds-radio-button-label--deselected {
+  color: var(--ds-color-button-icon-disable-icon-color);
+}
+.ds-radio-button-label--disable.ds-radio-button-label--selected {
+  color: var(--ds-color-button-icon-disable-icon-color);
+}
+```
+</details>
 
 #### Scroll `[53615:15339]` — 12 вариантов
 - **Size** (VARIANT): M, S
@@ -4597,6 +9350,59 @@
     - `--ds-color-scroll-default-knob-color`: `#d6d6d6`
     - `--ds-color-scroll-hover-background`: `#ebebeb`
     - `--ds-color-scroll-hover-knob-color`: `#9e9e9e`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x)`
+- Модификаторы: `--first` `--last` `--middle`
+- Состояния: `:hover`
+- Разметка:
+
+```html
+<div class="ds-scroll ds-scroll--first">
+  <div class="ds-scroll__background"></div>
+  <div class="ds-scroll__knob"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Scroll [53615:15339] — 12 вариантов; оси: Size, Position, State */
+.ds-scroll {
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-scroll__background {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-scroll-default-background);
+}
+.ds-scroll__knob {
+  height: var(--ds-size-2x);
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-2-5x) var(--ds-size-2-5x) var(--ds-size-2-5x) var(--ds-size-2-5x);
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-scroll-default-knob-color);
+}
+.ds-scroll--first:hover {
+  background: var(--ds-color-scroll-hover-background);
+}
+.ds-scroll--middle {
+  align-items: center;
+}
+.ds-scroll--middle:hover {
+  background: var(--ds-color-scroll-hover-background);
+}
+.ds-scroll--last:hover {
+  background: var(--ds-color-scroll-hover-background);
+}
+```
+</details>
 
 #### Scroll tabs `[59032:1821]` — 4 вариантов
 - **Orientation** (VARIANT): Left, Right
@@ -4607,6 +9413,71 @@
     - `--ds-color-scroll-default-knob-color`: `#d6d6d6`
     - `--ds-color-scroll-hover-background`: `#ebebeb`
     - `--ds-color-scroll-hover-knob-color`: `#9e9e9e`
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-7x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - внутренние отступы: `48px 0 0 0`
+    - промежуток между элементами: `var(--ds-size-2-5x)`
+- Модификаторы: `--left`
+- Разметка:
+
+```html
+<div class="ds-scroll-tabs ds-scroll-tabs--left">
+  <div class="ds-scroll-tabs__button-icon"></div>
+  <span class="ds-scroll-tabs__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-scroll-tabs__icon-size"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Scroll tabs [59032:1821] — 4 вариантов; оси: Orientation, State */
+.ds-scroll-tabs {
+  min-height: var(--ds-size-7x);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: 48px 0 0 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-scroll-tabs__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-scroll-tabs__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-scroll-tabs__icon svg path {
+  fill: currentColor;
+}
+.ds-scroll-tabs__button-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x);
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-brand-neutral-default);
+  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+}
+.ds-scroll-tabs__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-scroll-tabs--left {
+  padding: 0 48px 0 0;
+}
+```
+</details>
 
 #### Search `[54453:1620]` — 15 вариантов
 - **Size** (VARIANT): M, S, XS
@@ -4630,23 +9501,612 @@
     - `--ds-color-search-hover-background-xs`: `#e8f0ff`
     - `--ds-color-search-hover-border-color`: `#9e9e9e`
     - `--ds-color-search-hover-text-color`: `#d6d6d6`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x)`
+    - промежуток между элементами: `var(--ds-size-2x)`
+    - скругление: `var(--ds-size-3x)`
+    - рамка: `1px solid var(--ds-color-search-completed-border-color)`
+    - фон: `var(--ds-color-search-background)`
+- Модификаторы: `--disabled` `--s` `--xs`
+- Состояния: `:disabled` `:focus-visible` `:hover`
+- Разметка:
+
+```html
+<div class="ds-search ds-search--disabled">
+  <div class="ds-search__divider"></div>
+  <span class="ds-search__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-search__icon-size"></div>
+  <span class="ds-search__label">Текст</span>
+  <div class="ds-search__right-icon"></div>
+  <span class="ds-search__text">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Search [54453:1620] — 15 вариантов; оси: Size, State */
+.ds-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-search-background);
+  border: 1px solid var(--ds-color-search-completed-border-color);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-search__label {
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-search-default-text-color);
+  white-space: nowrap;
+}
+.ds-search__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-search__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-search__icon svg path {
+  fill: currentColor;
+}
+.ds-search__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-search__text {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-search-default-text-color);
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  color: var(--ds-color-search-default-text-color);
+}
+.ds-search__right-icon {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+}
+.ds-search__divider {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-search--s {
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-2x);
+}
+.ds-search--s .ds-search__icon {
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+}
+.ds-search--xs {
+  height: var(--ds-size-9x);
+  padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x);
+  border-radius: var(--ds-size-circular);
+}
+.ds-search--xs .ds-search__icon {
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+}
+.ds-search:disabled {
+  background: var(--ds-color-search-disable-background);
+  color: var(--ds-color-search-disable-icon-color);
+}
+.ds-search.ds-search--disabled {
+  background: var(--ds-color-search-disable-background);
+  color: var(--ds-color-search-disable-icon-color);
+}
+.ds-search:focus-visible {
+  color: var(--ds-color-search-completed-text-color);
+}
+.ds-search:hover {
+  border: 1px solid var(--ds-color-search-disable-icon-color);
+}
+.ds-search--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Select (Сontainer) `[57735:17612]` — 1 вариантов
 - **Type** (VARIANT): Сontainer
 - Прочие свойства: Scroll#55632:0 (BOOLEAN), Item container#56968:88 (SLOT), Title#57636:8 (BOOLEAN), Search#57740:3 (BOOLEAN), Button#57740:5 (BOOLEAN), Divider header#57862:2 (BOOLEAN), Divider footer#57862:4 (BOOLEAN)
+- Размеры и параметры:
+    - высота: минимум `406px`, растёт по контенту
+    - ширина: по контенту (hug)
+    - внутренние отступы: `0 0 var(--ds-size-2x) var(--ds-size-2x)`
+    - скругление: `var(--ds-size-3x)`
+    - фон: `var(--ds-color-brand-neutral-default)`
+    - тень: `0.0px 0.0px 16.0px 0px #2121211f`
+- Модификаторы: `--container`
+- Разметка:
+
+```html
+<div class="ds-select-container ds-select-container--container">
+  <div class="ds-select-container__button"></div>
+  <div class="ds-select-container__button-group"></div>
+  <div class="ds-select-container__content"></div>
+  <div class="ds-select-container__divider"></div>
+  <span class="ds-select-container__element-left"><!-- SVG-иконка ДС --></span>
+  <span class="ds-select-container__element-right"><!-- SVG-иконка ДС --></span>
+  <span class="ds-select-container__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-select-container__label">Текст</span>
+  <div class="ds-select-container__scroll"></div>
+  <div class="ds-select-container__search"></div>
+  <span class="ds-select-container__title">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Select (Сontainer) [57735:17612] — 1 вариантов; оси: Type */
+.ds-select-container {
+  min-height: 406px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-brand-neutral-default);
+  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-select-container__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-light);
+  white-space: nowrap;
+}
+.ds-select-container__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-3x);
+  height: var(--ds-size-3x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-select-container__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-select-container__icon svg path {
+  fill: currentColor;
+}
+.ds-select-container__search {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) 0 0;
+}
+.ds-select-container__title {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-select-container__element-left {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-select-container__content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-select-container__element-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-select-container__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-select-container__scroll {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
+}
+.ds-select-container__button-group {
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+}
+.ds-select-container__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-1x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-1x);
+  border-radius: var(--ds-size-2x);
+  border: 1px solid var(--ds-color-brand-neutral-lighter);
+}
+.ds-select-container--container {
+  color: var(--ds-color-brand-neutral-light);
+}
+```
+</details>
 
 #### Select cell `[60231:74976]` — 7 вариантов
 - **State** (VARIANT): Default, Disable, Error, Error+Hover, Focus, Focus+Value, Hover
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-9x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x)`
+    - промежуток между элементами: `var(--ds-size-2x)`
+- Модификаторы: `--disabled`
+- Состояния: `:disabled` `:focus-visible` `:hover`
+- Разметка:
+
+```html
+<div class="ds-select-cell ds-select-cell--disabled">
+  <span class="ds-select-cell__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-select-cell__input"></div>
+  <div class="ds-select-cell__input-frame"></div>
+  <span class="ds-select-cell__label">Текст</span>
+  <span class="ds-select-cell__support">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Select cell [60231:74976] — 7 вариантов; оси: State */
+.ds-select-cell {
+  min-height: var(--ds-size-9x);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-select-cell__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-darker);
+  white-space: nowrap;
+}
+.ds-select-cell__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-select-cell__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-select-cell__icon svg path {
+  fill: currentColor;
+}
+.ds-select-cell__input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+}
+.ds-select-cell__input-frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-brand-accent-super-lightest);
+  border: 1px solid var(--ds-color-brand-neutral-lighter);
+}
+.ds-select-cell__support {
+  display: flex;
+  flex-direction: row;
+}
+.ds-select-cell:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-cell:focus-visible {
+  color: var(--ds-color-brand-accent-default);
+}
+.ds-select-cell:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-cell.ds-select-cell--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-cell--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Select form `[57862:17226]` — 22 вариантов
 - **Size** (VARIANT): M, S, XS
 - **Variant** (VARIANT): Empty, Populated
 - **State** (VARIANT): Default, Disable, Error, Focus, Focus+Value, Hover
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - фон: `var(--ds-color-brand-neutral-default)`
+- Модификаторы: `--disabled` `--empty` `--populated` `--s` `--xs`
+- Состояния: `:disabled` `:focus-visible` `:hover`
+- Разметка:
+
+```html
+<div class="ds-select-form ds-select-form--disabled">
+  <span class="ds-select-form__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-select-form__input"></div>
+  <div class="ds-select-form__input-frame"></div>
+  <span class="ds-select-form__label">Текст</span>
+  <span class="ds-select-form__support">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Select form [57862:17226] — 22 вариантов; оси: Size, Variant, State */
+.ds-select-form {
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-brand-neutral-default);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-select-form__label {
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-darker);
+  white-space: nowrap;
+}
+.ds-select-form__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-select-form__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-select-form__icon svg path {
+  fill: currentColor;
+}
+.ds-select-form__input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+}
+.ds-select-form__input-frame {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-brand-accent-super-lightest);
+  border: 1px solid var(--ds-color-brand-neutral-lighter);
+}
+.ds-select-form__support {
+  display: flex;
+  flex-direction: row;
+}
+.ds-select-form--s .ds-select-form__icon {
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+}
+.ds-select-form--xs .ds-select-form__icon {
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+}
+.ds-select-form--empty {
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-select-form--populated {
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-select-form--empty:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-form--populated:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-form--populated:focus-visible {
+  color: var(--ds-color-brand-accent-default);
+}
+.ds-select-form--empty:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-form--empty.ds-select-form--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-form--populated:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-form--populated.ds-select-form--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-form--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Select item `[57735:17872]` — 8 вариантов
 - **State** (VARIANT): Back selected, Default, Disable, Error, Hover, Press, Selected
 - **Subtitle** (VARIANT): False, True
 - Прочие свойства: Element left#54167:1 (BOOLEAN), Element right#54167:6 (BOOLEAN), Label up#54741:15 (BOOLEAN), Label down#54741:30 (BOOLEAN), Left#60868:0 (BOOLEAN), Right#60868:1 (BOOLEAN)
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-1-5x)`
+    - промежуток между элементами: `var(--ds-size-2x)`
+- Модификаторы: `--disabled` `--false` `--true`
+- Состояния: `:active` `:disabled` `:hover`
+- Разметка:
+
+```html
+<div class="ds-select-item ds-select-item--disabled">
+  <div class="ds-select-item__content"></div>
+  <span class="ds-select-item__element-left"><!-- SVG-иконка ДС --></span>
+  <span class="ds-select-item__element-right"><!-- SVG-иконка ДС --></span>
+  <span class="ds-select-item__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-select-item__icon-size"></div>
+  <span class="ds-select-item__label">Текст</span>
+  <div class="ds-select-item__label-down"></div>
+  <div class="ds-select-item__label-up"></div>
+  <div class="ds-select-item__subtitle"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Select item [57735:17872] — 8 вариантов; оси: State, Subtitle */
+.ds-select-item {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-1-5x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-select-item__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-darker);
+  white-space: nowrap;
+}
+.ds-select-item__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-select-item__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-select-item__icon svg path {
+  fill: currentColor;
+}
+.ds-select-item__element-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-select-item__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-select-item__content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-select-item__label-up {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-darker);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-select-item__subtitle {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-darker);
+  font-size: var(--ds-typography-caption-font-size-m);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-caption-line-height-m);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-select-item__label-down {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-darker);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-select-item__element-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-select-item--true {
+  align-items: center;
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-select-item--false {
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-brand-neutral-default);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-select-item--false:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+}
+.ds-select-item--false:active {
+  background: var(--ds-color-brand-neutral-lighter);
+}
+.ds-select-item--false:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-item--false.ds-select-item--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-select-item--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Sidenav control `[55142:1734]` — 6 вариантов
 - **Mode** (VARIANT): Collapsed, Expanded
@@ -4689,6 +10149,103 @@
     - `--ds-color-sidenav-sidebar-info-background-container`: `#f8f9fc`
     - `--ds-color-sidenav-sidebar-l1-background`: `#263136`
     - `--ds-color-sidenav-sidebar-l2-background`: `#ffffff`
+- Размеры и параметры:
+    - высота: минимум `41px`, растёт по контенту
+    - ширина: по контенту (hug)
+- Модификаторы: `--collapsed` `--expanded`
+- Состояния: `:active` `:hover`
+- Разметка:
+
+```html
+<div class="ds-sidenav-control ds-sidenav-control--collapsed">
+  <div class="ds-sidenav-control__content"></div>
+  <div class="ds-sidenav-control__divider"></div>
+  <span class="ds-sidenav-control__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-sidenav-control__icon-size"></div>
+  <span class="ds-sidenav-control__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Sidenav control [55142:1734] — 6 вариантов; оси: Mode, State */
+.ds-sidenav-control {
+  min-height: 41px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-sidenav-control__label {
+  font-size: var(--ds-typography-caption-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-m);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-sidenav-control-text-color);
+  white-space: nowrap;
+}
+.ds-sidenav-control__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-sidenav-control__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-sidenav-control__icon svg path {
+  fill: currentColor;
+}
+.ds-sidenav-control__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-3x);
+  background: var(--ds-color-sidenav-control-background);
+}
+.ds-sidenav-control__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-sidenav-control__свернуть-меню {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-sidenav-control-text-color);
+  font-size: var(--ds-typography-caption-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-m);
+  color: var(--ds-color-sidenav-control-text-color);
+}
+.ds-sidenav-control__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-sidenav-control-text-color);
+}
+.ds-sidenav-control--collapsed:hover {
+  background: var(--ds-color-sidenav-control-background-hover);
+}
+.ds-sidenav-control--collapsed:active {
+  background: var(--ds-color-sidenav-control-background-hover);
+}
+.ds-sidenav-control--expanded {
+  background: var(--ds-color-sidenav-control-background);
+  color: var(--ds-color-sidenav-control-text-color);
+}
+.ds-sidenav-control--expanded:hover {
+  background: var(--ds-color-sidenav-control-background-hover);
+}
+.ds-sidenav-control--expanded:active {
+  background: var(--ds-color-sidenav-control-background-hover);
+}
+```
+</details>
 
 #### Sidenav Footer `[55111:1056]` — 3 вариантов
 - **Type** (VARIANT): L1, L2
@@ -4731,6 +10288,84 @@
     - `--ds-color-sidenav-sidebar-info-background-container`: `#f8f9fc`
     - `--ds-color-sidenav-sidebar-l1-background`: `#263136`
     - `--ds-color-sidenav-sidebar-l2-background`: `#ffffff`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x)`
+    - промежуток между элементами: `var(--ds-size-3x)`
+- Модификаторы: `--l1` `--l2`
+- Разметка:
+
+```html
+<div class="ds-sidenav-footer ds-sidenav-footer--l1">
+  <div class="ds-sidenav-footer__divider"></div>
+  <span class="ds-sidenav-footer__label">Текст</span>
+  <div class="ds-sidenav-footer__logo-iiko"></div>
+  <div class="ds-sidenav-footer__vector"></div>
+  <div class="ds-sidenav-footer__ver-7-8-6-29440"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Sidenav Footer [55111:1056] — 3 вариантов; оси: Type, Mode */
+.ds-sidenav-footer {
+  display: flex;
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x);
+  gap: var(--ds-size-3x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-sidenav-footer__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-sidenav-footer-l2-text-color);
+  white-space: nowrap;
+}
+.ds-sidenav-footer__logo-iiko {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-sidenav-control-text-color);
+}
+.ds-sidenav-footer__vector {
+  height: 9.8px;
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-sidenav-footer-l2-logo);
+}
+.ds-sidenav-footer__divider {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-sidenav-control-text-color);
+}
+.ds-sidenav-footer__ver-7-8-6-29440 {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-sidenav-footer-l2-text-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-sidenav-footer-l2-text-color);
+}
+.ds-sidenav-footer--l2.ds-sidenav-footer--expanded {
+  flex-direction: row;
+  align-items: center;
+  background: var(--ds-color-sidenav-control-text-color);
+  color: var(--ds-color-sidenav-footer-l2-text-color);
+}
+.ds-sidenav-footer--l1.ds-sidenav-footer--expanded {
+  flex-direction: column;
+  color: var(--ds-color-sidenav-control-text-color);
+}
+.ds-sidenav-footer--l1.ds-sidenav-footer--collapsed {
+  flex-direction: column;
+  color: var(--ds-color-sidenav-item-l3-indicator);
+}
+```
+</details>
 
 #### Sidenav header `[55045:637]` — 3 вариантов
 - **Type** (VARIANT): L1, L2
@@ -4773,6 +10408,99 @@
     - `--ds-color-sidenav-sidebar-info-background-container`: `#f8f9fc`
     - `--ds-color-sidenav-sidebar-l1-background`: `#263136`
     - `--ds-color-sidenav-sidebar-l2-background`: `#ffffff`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x)`
+    - промежуток между элементами: `92px`
+- Модификаторы: `--l1` `--l2`
+- Разметка:
+
+```html
+<div class="ds-sidenav-header ds-sidenav-header--l1">
+  <div class="ds-sidenav-header__close"></div>
+  <span class="ds-sidenav-header__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-sidenav-header__icon-size"></div>
+  <span class="ds-sidenav-header__label">Текст</span>
+  <div class="ds-sidenav-header__logo-iiko"></div>
+  <div class="ds-sidenav-header__vector"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Sidenav header [55045:637] — 3 вариантов; оси: Type, Mode */
+.ds-sidenav-header {
+  display: flex;
+  align-items: center;
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x);
+  gap: 92px;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-sidenav-header__label {
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-sidenav-header-l2-text-color);
+  white-space: nowrap;
+}
+.ds-sidenav-header__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-sidenav-header__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-sidenav-header__icon svg path {
+  fill: currentColor;
+}
+.ds-sidenav-header__logo-iiko {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-sidenav-header__vector {
+  height: 14.7px;
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-sidenav-control-text-color);
+}
+.ds-sidenav-header__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-sidenav-header__close {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-sidenav-control-text-color);
+}
+.ds-sidenav-header--l1.ds-sidenav-header--expanded {
+  flex-direction: row;
+  background: var(--ds-color-sidenav-control-background);
+}
+.ds-sidenav-header--l2.ds-sidenav-header--expanded {
+  height: 48px;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  background: var(--ds-color-sidenav-control-text-color);
+  color: var(--ds-color-sidenav-header-l2-text-color);
+}
+.ds-sidenav-header--l1.ds-sidenav-header--collapsed {
+  flex-direction: column;
+  padding: var(--ds-size-3-5x) var(--ds-size-3-5x) var(--ds-size-3x) var(--ds-size-3x);
+  background: var(--ds-color-sidenav-control-background);
+}
+```
+</details>
 
 #### Sidenav item `[55070:3734]` — 13 вариантов
 - **Type** (VARIANT): L1, L2, L3
@@ -4816,6 +10544,85 @@
     - `--ds-color-sidenav-sidebar-info-background-container`: `#f8f9fc`
     - `--ds-color-sidenav-sidebar-l1-background`: `#263136`
     - `--ds-color-sidenav-sidebar-l2-background`: `#ffffff`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-8x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x)`
+    - промежуток между элементами: `var(--ds-size-2x)`
+- Модификаторы: `--l1` `--l2` `--l3`
+- Состояния: `:hover`
+- Разметка:
+
+```html
+<div class="ds-sidenav-item ds-sidenav-item--l1">
+  <div class="ds-sidenav-item__l3"></div>
+  <span class="ds-sidenav-item__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Sidenav item [55070:3734] — 13 вариантов; оси: Type, Mode, State */
+.ds-sidenav-item {
+  display: flex;
+  padding: var(--ds-size-8x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  gap: var(--ds-size-2x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-sidenav-item__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-sidenav-header-l2-text-color);
+  white-space: nowrap;
+}
+.ds-sidenav-item__l3 {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-sidenav-header-l2-text-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-sidenav-header-l2-text-color);
+}
+.ds-sidenav-item--l3.ds-sidenav-item--expanded:hover {
+  background: var(--ds-color-sidenav-item-l2-background-hover);
+}
+.ds-sidenav-item--l3.ds-sidenav-item--expanded {
+  flex-direction: row;
+  align-items: center;
+  background: var(--ds-color-sidenav-control-text-color);
+  color: var(--ds-color-sidenav-header-l2-text-color);
+}
+.ds-sidenav-item--l2.ds-sidenav-item--expanded {
+  flex-direction: column;
+  background: var(--ds-color-sidenav-control-text-color);
+  color: var(--ds-color-sidenav-header-l2-text-color);
+}
+.ds-sidenav-item--l2.ds-sidenav-item--expanded:hover {
+  background: var(--ds-color-sidenav-item-l2-background-hover);
+}
+.ds-sidenav-item--l1.ds-sidenav-item--expanded:hover {
+  background: var(--ds-color-sidenav-control-background-hover);
+}
+.ds-sidenav-item--l1.ds-sidenav-item--expanded {
+  flex-direction: row;
+  align-items: center;
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x);
+  background: var(--ds-color-sidenav-control-background);
+  color: var(--ds-color-sidenav-control-text-color);
+}
+.ds-sidenav-item--l1.ds-sidenav-item--collapsed:hover {
+  background: var(--ds-color-sidenav-control-background-hover);
+}
+.ds-sidenav-item--l1.ds-sidenav-item--collapsed {
+  flex-direction: row;
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x);
+  background: var(--ds-color-sidenav-control-background);
+}
+```
+</details>
 
 #### Sidenav View `[55074:393]` — 3 вариантов
 - **Type** (VARIANT): L1, L2
@@ -4859,6 +10666,7 @@
     - `--ds-color-sidenav-sidebar-l1-background`: `#263136`
     - `--ds-color-sidenav-sidebar-l2-background`: `#ffffff`
 
+
 #### Slide toggle `[52887:2592]` — 6 вариантов
 - **Active** (VARIANT): Off, On
 - **State** (VARIANT): Default, Disable, Hover
@@ -4876,6 +10684,7 @@
     - `--ds-color-slide-toggle-selected-disable-background`: `#e0e0e0`
     - `--ds-color-slide-toggle-selected-disable-text-color`: `#9e9e9e`
     - `--ds-color-slide-toggle-selected-hover-background`: `#3969d5`
+- CSS: выверено вручную, см. `components/toggle.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Snackbar `[54373:10303]` — 4 вариантов
 - **Type** (VARIANT): Complex, Single
@@ -4907,9 +10716,137 @@
     - `--ds-color-snackbar-light-single-neutral-icon-color`: `#616161`
     - `--ds-color-snackbar-light-single-positive-icon-color`: `#14b456`
     - `--ds-color-snackbar-light-single-warning-icon-color`: `#ea7806`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - скругление: `var(--ds-size-2x)`
+    - тень: `0.0px 0.0px 16.0px 0px #2121211f`
+- Модификаторы: `--complex` `--single`
+- Разметка:
+
+```html
+<div class="ds-snackbar ds-snackbar--complex">
+  <div class="ds-snackbar__body"></div>
+  <div class="ds-snackbar__button"></div>
+  <div class="ds-snackbar__content"></div>
+  <span class="ds-snackbar__element-right"><!-- SVG-иконка ДС --></span>
+  <span class="ds-snackbar__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-snackbar__label">Текст</span>
+  <div class="ds-snackbar__progress"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Snackbar [54373:10303] — 4 вариантов; оси: Type, Mode */
+.ds-snackbar {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--ds-size-2x);
+  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-snackbar__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-snackbar-dark-text-color);
+  white-space: nowrap;
+}
+.ds-snackbar__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-snackbar__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-snackbar__icon svg path {
+  fill: currentColor;
+}
+.ds-snackbar__body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
+}
+.ds-snackbar__content {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+}
+.ds-snackbar__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-1x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-1x);
+  border-radius: var(--ds-size-2x);
+}
+.ds-snackbar__element-right {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-snackbar__progress {
+  height: var(--ds-size-1x);
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-snackbar-progress-color);
+}
+.ds-snackbar--single.ds-snackbar--dark {
+  background: var(--ds-color-snackbar-dark-background);
+  color: var(--ds-color-snackbar-dark-text-color);
+}
+.ds-snackbar--single.ds-snackbar--light {
+  background: var(--ds-color-snackbar-dark-text-color);
+  color: var(--ds-color-snackbar-light-text-color);
+}
+.ds-snackbar--complex.ds-snackbar--dark {
+  background: var(--ds-color-snackbar-dark-background);
+  color: var(--ds-color-snackbar-dark-text-color);
+}
+.ds-snackbar--complex.ds-snackbar--light {
+  background: var(--ds-color-snackbar-dark-text-color);
+  color: var(--ds-color-snackbar-light-text-color);
+}
+```
+</details>
 
 #### State `[54063:12395]` — 2 вариантов
 - **State** (VARIANT): Hover, Press
+- Размеры и параметры:
+    - высота: `var(--ds-size-6x)` (фикс.)
+    - ширина: `var(--ds-size-6x)` (фикс.)
+- Состояния: `:active` `:hover`
+<details><summary>CSS компонента</summary>
+
+```css
+/* State [54063:12395] — 2 вариантов; оси: State */
+.ds-state {
+  height: var(--ds-size-6x);
+  width: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-state:hover {
+  background: var(--ds-color-brand-neutral-lightest);
+}
+.ds-state:active {
+  background: var(--ds-color-brand-neutral-lighter);
+}
+```
+</details>
 
 #### Status `[52928:6588]` — 18 вариантов
 - **Style** (VARIANT): Accent, Contrast-1, Contrast-2, Contrast-3, Contrast-4, Negative, Neutral, Positive, Warning
@@ -4945,6 +10882,153 @@
     - `--ds-color-status-warning-filled-background`: `#fffcf8`
     - `--ds-color-status-warning-filled-text-color`: `#ea7806`
     - `--ds-color-status-warning-text-text-color`: `#ea7806`
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1x) var(--ds-size-1x)`
+    - промежуток между элементами: `var(--ds-size-1x)`
+    - скругление: `var(--ds-size-2x)`
+- Модификаторы: `--accent` `--contrast-1` `--contrast-2` `--contrast-3` `--contrast-4` `--negative` `--neutral` `--positive` `--warning`
+- Разметка:
+
+```html
+<div class="ds-status ds-status--accent">
+  <div class="ds-status__content"></div>
+  <span class="ds-status__element-left"><!-- SVG-иконка ДС --></span>
+  <span class="ds-status__element-right"><!-- SVG-иконка ДС --></span>
+  <span class="ds-status__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-status__info"></div>
+  <span class="ds-status__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Status [52928:6588] — 18 вариантов; оси: Style, Type */
+.ds-status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-1x);
+  border-radius: var(--ds-size-2x);
+  padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1x) var(--ds-size-1x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-status__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-status-icon-color);
+  white-space: nowrap;
+}
+.ds-status__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-4x);
+  height: var(--ds-size-4x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ds-color-status-icon-color);
+}
+.ds-status__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-status__icon svg path {
+  fill: currentColor;
+}
+.ds-status__element-left {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-status__info {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-status__content {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-status-icon-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-status-icon-color);
+}
+.ds-status__element-right {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-status--neutral.ds-status--filled {
+  background: var(--ds-color-status-neutral-filled-background);
+  color: var(--ds-color-status-icon-color);
+}
+.ds-status--accent.ds-status--filled {
+  background: var(--ds-color-status-accent-filled-background);
+  color: var(--ds-color-status-accent-filled-text-color);
+}
+.ds-status--positive.ds-status--filled {
+  background: var(--ds-color-status-positive-filled-background);
+  color: var(--ds-color-status-positive-filled-text-color);
+}
+.ds-status--warning.ds-status--filled {
+  background: var(--ds-color-status-warning-filled-background);
+  color: var(--ds-color-status-warning-filled-text-color);
+}
+.ds-status--negative.ds-status--filled {
+  background: var(--ds-color-status-negative-filled-background);
+  color: var(--ds-color-status-negative-filled-text-color);
+}
+.ds-status--contrast-1.ds-status--filled {
+  background: var(--ds-color-status-contrast-1-filled-background);
+  color: var(--ds-color-status-contrast-1-filled-text-color);
+}
+.ds-status--contrast-2.ds-status--filled {
+  background: var(--ds-color-status-contrast-2-filled-background);
+  color: var(--ds-color-status-contrast-2-filled-text-color);
+}
+.ds-status--contrast-3.ds-status--filled {
+  background: var(--ds-color-status-contrast-3-filled-background);
+  color: var(--ds-color-status-contrast-3-filled-text-color);
+}
+.ds-status--contrast-4.ds-status--filled {
+  background: var(--ds-color-status-contrast-4-filled-background);
+  color: var(--ds-color-status-contrast-4-filled-text-color);
+}
+.ds-status--neutral.ds-status--text {
+  color: var(--ds-color-status-icon-color);
+}
+.ds-status--accent.ds-status--text {
+  color: var(--ds-color-status-accent-filled-text-color);
+}
+.ds-status--positive.ds-status--text {
+  color: var(--ds-color-status-positive-filled-text-color);
+}
+.ds-status--warning.ds-status--text {
+  color: var(--ds-color-status-warning-filled-text-color);
+}
+.ds-status--negative.ds-status--text {
+  color: var(--ds-color-status-negative-filled-text-color);
+}
+.ds-status--contrast-1.ds-status--text {
+  color: var(--ds-color-status-contrast-1-filled-text-color);
+}
+.ds-status--contrast-2.ds-status--text {
+  color: var(--ds-color-status-contrast-2-filled-text-color);
+}
+.ds-status--contrast-3.ds-status--text {
+  color: var(--ds-color-status-contrast-3-filled-text-color);
+}
+.ds-status--contrast-4.ds-status--text {
+  color: var(--ds-color-status-contrast-4-filled-text-color);
+}
+```
+</details>
 
 #### Status Bar `[56564:1236]` — 1 вариантов
 - Токены компонента (29):
@@ -4977,6 +11061,57 @@
     - `--ds-color-status-warning-filled-background`: `#fffcf8`
     - `--ds-color-status-warning-filled-text-color`: `#ea7806`
     - `--ds-color-status-warning-text-text-color`: `#ea7806`
+- Размеры и параметры:
+    - высота: `44px` (фикс.)
+    - ширина: по контенту (hug)
+- Разметка:
+
+```html
+<div class="ds-status-bar">
+  <div class="ds-status-bar__8-00"></div>
+  <span class="ds-status-bar__label">Текст</span>
+  <div class="ds-status-bar__stats"></div>
+  <div class="ds-status-bar__time"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Status Bar [56564:1236] — 1 вариантов; оси: — */
+.ds-status-bar {
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-status-bar__label {
+  font-size: 15px;
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: 18.28499984741211px;
+  white-space: nowrap;
+}
+.ds-status-bar__time {
+  height: 18px;
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-status-bar__8-00 {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: 18.28499984741211px;
+}
+.ds-status-bar__stats {
+  height: var(--ds-size-3x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+```
+</details>
 
 #### Step `[54800:3659]` — 12 вариантов
 - **Background** (VARIANT): Off, On
@@ -5006,6 +11141,7 @@
     - `--ds-color-stepper-selected-border-color`: `#448aff`
     - `--ds-color-stepper-selected-icon-color`: `#448aff`
     - `--ds-color-stepper-selected-text-color`: `#448aff`
+- CSS: выверено вручную, см. `components/stepper.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Stepper button `[55419:7330]` — 12 вариантов
 - **Type** (VARIANT): Filled, Outlined
@@ -5037,6 +11173,7 @@
     - `--ds-color-stepper-selected-icon-color`: `#448aff`
     - `--ds-color-stepper-selected-text-color`: `#448aff`
 
+
 #### Stepper line `[54689:3072]` — 4 вариантов
 - **Step** (VARIANT): Off, On
 - **Background** (VARIANT): Off, On
@@ -5066,6 +11203,7 @@
     - `--ds-color-stepper-selected-icon-color`: `#448aff`
     - `--ds-color-stepper-selected-text-color`: `#448aff`
 
+
 #### Tab element `[54404:200]` — 16 вариантов
 - **Lvl** (VARIANT): 1, 2
 - **State** (VARIANT): Default, Disable, Hover, Press
@@ -5089,6 +11227,7 @@
     - `--ds-color-tab-innactive-default-background`: `rgba(255, 255, 255, 0.0)`
     - `--ds-color-tab-innactive-hover-background`: `#f5f5f5`
     - `--ds-color-tab-innactive-press-background`: `#e0e0e0`
+- CSS: выверено вручную, см. `components/navigation.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Table 2 lvl `[60074:44684]` — 2 вариантов
 - **Type** (VARIANT): Table cell 2 lvl, Table row 2 lvl
@@ -5117,6 +11256,43 @@
     - `--ds-color-table-row-content-selected-background`: `#ebebeb`
     - `--ds-color-table-row-content-zebra-background`: `#f5f5f5`
     - `--ds-color-table-row-header-background-header`: `#f0f5ff`
+- Размеры и параметры:
+    - высота: минимум `72px`, растёт по контенту
+    - ширина: по контенту (hug)
+- Модификаторы: `--table-cell-2-lvl` `--table-row-2-lvl`
+- Разметка:
+
+```html
+<div class="ds-table-2-lvl ds-table-2-lvl--table-cell-2-lvl">
+  <div class="ds-table-2-lvl__header-row"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Table 2 lvl [60074:44684] — 2 вариантов; оси: Type */
+.ds-table-2-lvl {
+  min-height: 72px;
+  display: flex;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-table-2-lvl__header-row {
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-table-surfase-head);
+  border: 1px solid var(--ds-color-tab-active-press-background);
+}
+.ds-table-2-lvl--table-cell-2-lvl {
+  flex-direction: column;
+  border: 1px solid var(--ds-color-tab-active-press-background);
+}
+.ds-table-2-lvl--table-row-2-lvl {
+  flex-direction: row;
+  align-items: center;
+}
+```
+</details>
 
 #### Table Chips Input `[60220:70978]` — 8 вариантов
 - **Style** (VARIANT): Default, Disable, Error, Error+Hover, Focus, Focus+Placeholder, Hover, Vocus+Value
@@ -5144,6 +11320,98 @@
     - `--ds-color-table-row-content-selected-background`: `#ebebeb`
     - `--ds-color-table-row-content-zebra-background`: `#f5f5f5`
     - `--ds-color-table-row-header-background-header`: `#f0f5ff`
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-6x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - фон: `var(--ds-color-table-surfase-default)`
+- Модификаторы: `--default` `--disable` `--error` `--error-hover` `--focus` `--focus-placeholder` `--hover` `--vocus-value`
+- Разметка:
+
+```html
+<div class="ds-table-chips-input ds-table-chips-input--default">
+  <div class="ds-table-chips-input__frame"></div>
+  <span class="ds-table-chips-input__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-table-chips-input__label">Текст</span>
+  <span class="ds-table-chips-input__support">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Table Chips Input [60220:70978] — 8 вариантов; оси: Style */
+.ds-table-chips-input {
+  min-height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-table-surfase-default);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-table-chips-input__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-chips-icon-color);
+  white-space: nowrap;
+}
+.ds-table-chips-input__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-table-chips-input__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-table-chips-input__icon svg path {
+  fill: currentColor;
+}
+.ds-table-chips-input__frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-1x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-chips-input-default-background);
+  border: 1px solid var(--ds-color-chips-input-default-border-color);
+}
+.ds-table-chips-input__support {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-1x);
+}
+.ds-table-chips-input--default {
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-table-chips-input--hover {
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-table-chips-input--focus {
+  color: var(--ds-color-chips-text-color);
+}
+.ds-table-chips-input--focus-placeholder {
+  color: var(--ds-color-chips-text-color);
+}
+.ds-table-chips-input--vocus-value {
+  color: var(--ds-color-chips-text-color);
+}
+.ds-table-chips-input--error {
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-table-chips-input--error-hover {
+  color: var(--ds-color-chips-icon-color);
+}
+.ds-table-chips-input--disable {
+  color: var(--ds-color-chips-input-disable-action-text-color);
+}
+```
+</details>
 
 #### Table content cell `[52954:1253]` — 8 вариантов
 - **State** (VARIANT): Default, Disable, Edit, Error, Focus, Hover, Link, Null
@@ -5171,6 +11439,84 @@
     - `--ds-color-table-row-content-selected-background`: `#ebebeb`
     - `--ds-color-table-row-content-zebra-background`: `#f5f5f5`
     - `--ds-color-table-row-header-background-header`: `#f0f5ff`
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-9x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x)`
+    - промежуток между элементами: `var(--ds-size-2x)`
+- Модификаторы: `--disabled`
+- Состояния: `:disabled` `:hover`
+- Разметка:
+
+```html
+<div class="ds-table-content-cell ds-table-content-cell--disabled">
+  <div class="ds-table-content-cell__element"></div>
+  <span class="ds-table-content-cell__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-table-content-cell__label">Текст</span>
+  <div class="ds-table-content-cell__text-ui"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Table content cell [52954:1253] — 8 вариантов; оси: State */
+.ds-table-content-cell {
+  min-height: var(--ds-size-9x);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-table-content-cell__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-tab-innactive-icon-color);
+  white-space: nowrap;
+}
+.ds-table-content-cell__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-table-content-cell__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-table-content-cell__icon svg path {
+  fill: currentColor;
+}
+.ds-table-content-cell__element {
+  display: flex;
+  flex-direction: row;
+}
+.ds-table-content-cell__text-ui {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+}
+.ds-table-content-cell:disabled {
+  color: var(--ds-color-tab-disable-icon-color);
+}
+.ds-table-content-cell.ds-table-content-cell--disabled {
+  color: var(--ds-color-tab-disable-icon-color);
+}
+.ds-table-content-cell:hover {
+  border: 1px solid var(--ds-color-tab-disable-icon-color);
+}
+.ds-table-content-cell--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Table content row `[60105:56764]` — 5 вариантов
 - **State** (VARIANT): Default, Disable, Hover, Selected, Zebra
@@ -5199,6 +11545,55 @@
     - `--ds-color-table-row-content-selected-background`: `#ebebeb`
     - `--ds-color-table-row-content-zebra-background`: `#f5f5f5`
     - `--ds-color-table-row-header-background-header`: `#f0f5ff`
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-9x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - рамка: `1px solid var(--ds-color-tab-active-press-background)`
+    - фон: `var(--ds-color-table-surfase-default)`
+- Модификаторы: `--disabled`
+- Состояния: `:disabled` `:hover`
+- Разметка:
+
+```html
+<div class="ds-table-content-row ds-table-content-row--disabled">
+  <span class="ds-table-content-row__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Table content row [60105:56764] — 5 вариантов; оси: State */
+.ds-table-content-row {
+  min-height: var(--ds-size-9x);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--ds-color-tab-active-press-background);
+  background: var(--ds-color-table-surfase-default);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-table-content-row__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-tab-innactive-icon-color);
+  white-space: nowrap;
+}
+.ds-table-content-row:disabled {
+  color: var(--ds-color-tab-disable-icon-color);
+}
+.ds-table-content-row.ds-table-content-row--disabled {
+  color: var(--ds-color-tab-disable-icon-color);
+}
+.ds-table-content-row:hover {
+  background: var(--ds-color-table-surfase-hover);
+}
+.ds-table-content-row--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Table footer `[59207:20759]` — 1 вариантов
 - **Type** (VARIANT): Default
@@ -5227,6 +11622,62 @@
     - `--ds-color-table-row-content-selected-background`: `#ebebeb`
     - `--ds-color-table-row-content-zebra-background`: `#f5f5f5`
     - `--ds-color-table-row-header-background-header`: `#f0f5ff`
+- Размеры и параметры:
+    - высота: `65px` (фикс.)
+    - ширина: по контенту (hug)
+    - фон: `var(--ds-color-table-surfase-default)`
+    - тень: `0.0px 0.0px 4.0px 0px #2121211f`
+- Модификаторы: `--default`
+- Разметка:
+
+```html
+<div class="ds-table-footer ds-table-footer--default">
+  <div class="ds-table-footer__content"></div>
+  <div class="ds-table-footer__divider"></div>
+  <span class="ds-table-footer__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Table footer [59207:20759] — 1 вариантов; оси: Type */
+.ds-table-footer {
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-table-surfase-default);
+  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-table-footer__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-tab-innactive-counter-text-color);
+  white-space: nowrap;
+}
+.ds-table-footer__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-table-surfase-default);
+}
+.ds-table-footer__content {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-8x) var(--ds-size-8x) var(--ds-size-3x) var(--ds-size-3x);
+  background: var(--ds-color-table-surfase-default);
+}
+.ds-table-footer--default {
+  color: var(--ds-color-tab-innactive-counter-text-color);
+}
+```
+</details>
 
 #### Table header cell `[60098:45424]` — 3 вариантов
 - **State** (VARIANT): Default, Disable, Hover
@@ -5254,6 +11705,88 @@
     - `--ds-color-table-row-content-selected-background`: `#ebebeb`
     - `--ds-color-table-row-content-zebra-background`: `#f5f5f5`
     - `--ds-color-table-row-header-background-header`: `#f0f5ff`
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-9x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x)`
+    - промежуток между элементами: `var(--ds-size-2x)`
+    - рамка: `1px solid var(--ds-color-tab-active-press-background)`
+    - фон: `var(--ds-color-table-surfase-head)`
+- Модификаторы: `--disabled`
+- Состояния: `:disabled` `:hover`
+- Разметка:
+
+```html
+<div class="ds-table-header-cell ds-table-header-cell--disabled">
+  <div class="ds-table-header-cell__element"></div>
+  <span class="ds-table-header-cell__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-table-header-cell__label">Текст</span>
+  <div class="ds-table-header-cell__text-ui"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Table header cell [60098:45424] — 3 вариантов; оси: State */
+.ds-table-header-cell {
+  min-height: var(--ds-size-9x);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
+  border: 1px solid var(--ds-color-tab-active-press-background);
+  background: var(--ds-color-table-surfase-head);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-table-header-cell__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-tab-innactive-icon-color);
+  white-space: nowrap;
+}
+.ds-table-header-cell__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-table-header-cell__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-table-header-cell__icon svg path {
+  fill: currentColor;
+}
+.ds-table-header-cell__element {
+  display: flex;
+  flex-direction: row;
+}
+.ds-table-header-cell__text-ui {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+}
+.ds-table-header-cell:hover {
+  background: var(--ds-color-table-cell-header-hover-background);
+}
+.ds-table-header-cell:disabled {
+  color: var(--ds-color-tab-disable-icon-color);
+}
+.ds-table-header-cell.ds-table-header-cell--disabled {
+  color: var(--ds-color-tab-disable-icon-color);
+}
+.ds-table-header-cell--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Table header row `[53556:3571]` — 1 вариантов
 - **State** (VARIANT): Default
@@ -5282,11 +11815,47 @@
     - `--ds-color-table-row-content-selected-background`: `#ebebeb`
     - `--ds-color-table-row-content-zebra-background`: `#f5f5f5`
     - `--ds-color-table-row-header-background-header`: `#f0f5ff`
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-9x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - рамка: `1px solid var(--ds-color-tab-active-press-background)`
+    - фон: `var(--ds-color-table-surfase-head)`
+- Разметка:
+
+```html
+<div class="ds-table-header-row">
+  <span class="ds-table-header-row__label">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Table header row [53556:3571] — 1 вариантов; оси: State */
+.ds-table-header-row {
+  min-height: var(--ds-size-9x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-table-surfase-head);
+  border: 1px solid var(--ds-color-tab-active-press-background);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-table-header-row__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-tab-innactive-icon-color);
+  white-space: nowrap;
+}
+```
+</details>
 
 #### Tabs `[54854:3052]` — 4 вариантов
 - **Lvl** (VARIANT): 1, 2
 - **Content** (VARIANT): Icon, Text
 - Прочие свойства: Content text m#58420:0 (SLOT), Content icon m#58420:5 (SLOT), Content text s#58420:10 (SLOT), Content icon s#58420:15 (SLOT), Scroll left#59422:17 (BOOLEAN), Scroll right#59422:22 (BOOLEAN)
+- CSS: выверено вручную, см. `components/navigation.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Text UI `[57938:18290]` — 7 вариантов
 - **State** (VARIANT): Default, Disable, Hover, Link, Negative, Press, Selected
@@ -5312,30 +11881,683 @@
     - `--ds-color-text-ui-selected-back-selected`: `#f5f9ff`
     - `--ds-color-text-ui-selected-background`: `#ffffff`
     - `--ds-color-text-ui-selected-icon-color`: `#448aff`
+- Размеры и параметры:
+    - высота: минимум `52px`, растёт по контенту
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-2x)`
+- Модификаторы: `--disabled`
+- Состояния: `:disabled`
+- Разметка:
+
+```html
+<div class="ds-text-ui ds-text-ui--disabled">
+  <div class="ds-text-ui__checkbox"></div>
+  <div class="ds-text-ui__content"></div>
+  <span class="ds-text-ui__element-left"><!-- SVG-иконка ДС --></span>
+  <span class="ds-text-ui__element-right"><!-- SVG-иконка ДС --></span>
+  <span class="ds-text-ui__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-text-ui__icon-size"></div>
+  <span class="ds-text-ui__label">Текст</span>
+  <div class="ds-text-ui__label-down"></div>
+  <div class="ds-text-ui__label-up"></div>
+  <div class="ds-text-ui__list-item"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Text UI [57938:18290] — 7 вариантов; оси: State */
+.ds-text-ui {
+  min-height: 52px;
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-text-ui__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-darker);
+  white-space: nowrap;
+}
+.ds-text-ui__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-text-ui__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-text-ui__icon svg path {
+  fill: currentColor;
+}
+.ds-text-ui__element-left {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-text-ui__checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-text-ui__content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-text-ui__label-up {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-darker);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-text-ui__list-item {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-super-dark);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-text-ui__label-down {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-darker);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-text-ui__element-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-text-ui__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-text-ui:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-text-ui.ds-text-ui--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-text-ui--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Textarea `[57916:9023]` — 13 вариантов
 - **Size** (VARIANT): M
 - **Variant** (VARIANT): Empty, Populated
 - **State** (VARIANT): Default, Disable, Error, Error+Hover, Focus, Focus+Placeholder, Focus+Value, Hover
 - Прочие свойства: Input text#52678:0 (TEXT), Label text#52678:3 (TEXT), Support text#52678:6 (TEXT), Label#56934:32 (BOOLEAN), Element left#56934:282 (BOOLEAN), Element right#56934:407 (BOOLEAN), Support text#56934:532 (BOOLEAN), Input text#56968:66 (BOOLEAN), Hint text#57893:0 (BOOLEAN), Support#57893:30 (BOOLEAN), Hint text#57893:60 (TEXT), Scroll#57994:0 (BOOLEAN)
+- Размеры и параметры:
+    - высота: минимум `96px`, растёт по контенту
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-1x)`
+- Модификаторы: `--disabled` `--empty` `--populated`
+- Состояния: `:disabled` `:focus-visible` `:hover`
+- Разметка:
+
+```html
+<div class="ds-textarea ds-textarea--disabled">
+  <span class="ds-textarea__element-left"><!-- SVG-иконка ДС --></span>
+  <span class="ds-textarea__element-right"><!-- SVG-иконка ДС --></span>
+  <span class="ds-textarea__hint">Текст</span>
+  <span class="ds-textarea__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-textarea__input-content"></div>
+  <div class="ds-textarea__input-frame"></div>
+  <span class="ds-textarea__label">Текст</span>
+  <div class="ds-textarea__scroll"></div>
+  <span class="ds-textarea__support">Текст</span>
+  <span class="ds-textarea__text">Текст</span>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Textarea [57916:9023] — 13 вариантов; оси: Size, Variant, State */
+.ds-textarea {
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-textarea__label {
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-darker);
+  white-space: nowrap;
+}
+.ds-textarea__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-textarea__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-textarea__icon svg path {
+  fill: currentColor;
+}
+.ds-textarea__input-frame {
+  height: 76px;
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1x) var(--ds-size-3x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-brand-accent-super-lightest);
+  border: 1px solid var(--ds-color-brand-neutral-lighter);
+}
+.ds-textarea__element-left {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-textarea__input-content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-textarea__element-right {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-textarea__scroll {
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
+}
+.ds-textarea__support {
+  display: flex;
+  flex-direction: row;
+}
+.ds-textarea__text {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  padding: var(--ds-size-3x) var(--ds-size-3x) 0 0;
+}
+.ds-textarea__hint {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  padding: var(--ds-size-3x) var(--ds-size-3x) 0 0;
+}
+.ds-textarea--populated:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-textarea--populated.ds-textarea--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-textarea--empty:disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-textarea--empty.ds-textarea--disabled {
+  color: var(--ds-color-brand-neutral-neutral);
+}
+.ds-textarea--populated:focus-visible {
+  color: var(--ds-color-brand-accent-default);
+}
+.ds-textarea--populated {
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-textarea--empty {
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-textarea--populated:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
+}
+.ds-textarea--empty:hover {
+  background: var(--ds-color-brand-neutral-super-light);
+  border: 1px solid var(--ds-color-brand-neutral-neutral);
+}
+.ds-textarea--disabled {
+  pointer-events: none;
+}
+```
+</details>
 
 #### Timepicker `[58982:9858]` — 2 вариантов
 - **Type** (VARIANT): Time grid, Time line
 - Прочие свойства: Slot Time#58983:4 (SLOT), Control Panel#58983:7 (SLOT), Scroll#58983:10 (BOOLEAN)
+- Размеры и параметры:
+    - ширина: по контенту (hug)
+    - внутренние отступы: `0 0 var(--ds-size-2x) var(--ds-size-2x)`
+    - скругление: `var(--ds-size-3x)`
+    - рамка: `1px solid var(--ds-color-brand-neutral-lighter)`
+    - фон: `var(--ds-color-brand-neutral-default)`
+    - тень: `0.0px 0.0px 16.0px 0px #2121211f`
+- Модификаторы: `--time-grid` `--time-line`
+- Разметка:
+
+```html
+<div class="ds-timepicker ds-timepicker--time-grid">
+  <div class="ds-timepicker__control-panel"></div>
+  <span class="ds-timepicker__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-timepicker__label">Текст</span>
+  <div class="ds-timepicker__scroll"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Timepicker [58982:9858] — 2 вариантов; оси: Type */
+.ds-timepicker {
+  display: flex;
+  padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-brand-neutral-default);
+  border: 1px solid var(--ds-color-brand-neutral-lighter);
+  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-timepicker__label {
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+  white-space: nowrap;
+}
+.ds-timepicker__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-3x);
+  height: var(--ds-size-3x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-timepicker__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-timepicker__icon svg path {
+  fill: currentColor;
+}
+.ds-timepicker__control-panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-timepicker__scroll {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
+}
+.ds-timepicker--time-grid {
+  flex-direction: column;
+  align-items: center;
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-timepicker--time-line {
+  flex-direction: row;
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+```
+</details>
 
 #### Title variant `[17034:68611]` — 1 вариантов
 - Прочие свойства: Name#53575:0 (BOOLEAN), Size#53575:1 (BOOLEAN), State#53575:2 (BOOLEAN), Style#53575:3 (BOOLEAN)
+- Размеры и параметры:
+    - высота: минимум `140px`, растёт по контенту
+    - ширина: по контенту (hug)
+- Разметка:
+
+```html
+<div class="ds-title-variant">
+  <div class="ds-title-variant__body-4"></div>
+  <div class="ds-title-variant__body-5"></div>
+  <div class="ds-title-variant__body-6"></div>
+  <div class="ds-title-variant__body-7"></div>
+  <span class="ds-title-variant__label">Текст</span>
+  <div class="ds-title-variant__mode"></div>
+  <div class="ds-title-variant__size"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Title variant [17034:68611] — 1 вариантов; оси: — */
+.ds-title-variant {
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-title-variant__label {
+  font-size: var(--ds-typography-header-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-header-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+  white-space: nowrap;
+}
+.ds-title-variant__size {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
+}
+.ds-title-variant__body-4 {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-super-dark);
+  font-size: var(--ds-typography-header-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-header-line-height-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-title-variant__body-6 {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-darker);
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-title-variant__body-7 {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-darker);
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-title-variant__body-5 {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-darker);
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-title-variant__mode {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
+}
+```
+</details>
 
 #### Toggle buttons `[16992:8639]` — 5 вариантов
 - **Type** (VARIANT): 1 button, 2 buttons, 3 buttons, 3 text, Text
+- Размеры и параметры:
+    - высота: минимум `var(--ds-size-9x)`, растёт по контенту
+    - ширина: по контенту (hug)
+    - внутренние отступы: `var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x)`
+    - промежуток между элементами: `var(--ds-size-2-5x)`
+    - скругление: `var(--ds-size-0-5x)`
+- Модификаторы: `--1-button` `--2-buttons` `--3-buttons` `--3-text` `--text`
+- Разметка:
+
+```html
+<div class="ds-toggle-buttons ds-toggle-buttons--1-button">
+  <span class="ds-toggle-buttons__icon"><!-- SVG-иконка ДС --></span>
+  <span class="ds-toggle-buttons__label">Текст</span>
+  <div class="ds-toggle-buttons__notifications"></div>
+  <div class="ds-toggle-buttons__vector"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Toggle buttons [16992:8639] — 5 вариантов; оси: Type */
+.ds-toggle-buttons {
+  min-height: var(--ds-size-9x);
+  display: flex;
+  flex-direction: row;
+  padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x);
+  gap: var(--ds-size-2-5x);
+  border-radius: var(--ds-size-0-5x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-toggle-buttons__label {
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  letter-spacing: var(--ds-typography-letter-spacing-s);
+  color: var(--ds-color-button-accent-default);
+  white-space: nowrap;
+}
+.ds-toggle-buttons__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-toggle-buttons__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-toggle-buttons__icon svg path {
+  fill: currentColor;
+}
+.ds-toggle-buttons__notifications {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-toggle-buttons__vector {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-toggle-buttons--1-button {
+  background: var(--ds-color-button-accent-lite-default);
+}
+.ds-toggle-buttons--text {
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x);
+  background: var(--ds-color-button-accent-lite-default);
+  color: var(--ds-color-button-accent-default);
+  border: none;
+  box-shadow: none;
+}
+.ds-toggle-buttons--2-buttons {
+  gap: var(--ds-size-1x);
+  background: var(--ds-color-button-accent-lite-default);
+}
+.ds-toggle-buttons--3-buttons {
+  gap: var(--ds-size-1x);
+  background: var(--ds-color-button-accent-lite-default);
+}
+.ds-toggle-buttons--3-text {
+  border-radius: var(--ds-size-1x);
+  border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
+  color: var(--ds-color-button-accent-default);
+}
+```
+</details>
 
 #### Tree `[59564:1473]` — 8 вариантов
 - **Level** (VARIANT): 2, 3
 - **Mode** (VARIANT): End, Middle
 - **For icon** (VARIANT): Off, On
+- Размеры и параметры:
+    - высота: `44px` (фикс.)
+    - ширина: по контенту (hug)
+    - промежуток между элементами: `var(--ds-size-2-5x)`
+- Модификаторы: `--2` `--3`
+- Разметка:
+
+```html
+<div class="ds-tree ds-tree--2">
+  <span class="ds-tree__icon"><!-- SVG-иконка ДС --></span>
+  <div class="ds-tree__item"></div>
+  <div class="ds-tree__separator-stroke"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Tree [59564:1473] — 8 вариантов; оси: Level, Mode, For icon */
+.ds-tree {
+  height: 44px;
+  display: flex;
+  gap: var(--ds-size-2-5x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-tree__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-6x);
+  height: var(--ds-size-6x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-tree__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-tree__icon svg path {
+  fill: currentColor;
+}
+.ds-tree__item {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: 11px 0 0 var(--ds-size-5x);
+}
+.ds-tree__separator-stroke {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.ds-tree--2.ds-tree--end.ds-tree--on {
+  flex-direction: row;
+}
+.ds-tree--2.ds-tree--end.ds-tree--off {
+  flex-direction: column;
+}
+.ds-tree--3.ds-tree--end.ds-tree--on {
+  flex-direction: row;
+}
+.ds-tree--3.ds-tree--end.ds-tree--off {
+  flex-direction: row;
+}
+.ds-tree--2.ds-tree--middle.ds-tree--on {
+  flex-direction: row;
+  align-items: center;
+}
+.ds-tree--2.ds-tree--middle.ds-tree--off {
+  flex-direction: row;
+  align-items: center;
+}
+.ds-tree--3.ds-tree--middle.ds-tree--on {
+  flex-direction: row;
+  align-items: center;
+}
+.ds-tree--3.ds-tree--middle.ds-tree--off {
+  flex-direction: row;
+  align-items: center;
+}
+```
+</details>
 
 #### Tree item `[59564:1504]` — 5 вариантов
 - **Mode** (VARIANT): End, End-long, Middle, Middle-long, Start
+- Размеры и параметры:
+    - высота: `44px` (фикс.)
+    - ширина: по контенту (hug)
+    - внутренние отступы: `11px 0 0 var(--ds-size-5x)`
+    - промежуток между элементами: `var(--ds-size-2-5x)`
+- Модификаторы: `--end` `--end-long` `--middle` `--middle-long` `--start`
+- Разметка:
+
+```html
+<div class="ds-tree-item ds-tree-item--end">
+  <div class="ds-tree-item__separator-stroke"></div>
+</div>
+```
+<details><summary>CSS компонента</summary>
+
+```css
+/* Tree item [59564:1504] — 5 вариантов; оси: Mode */
+.ds-tree-item {
+  height: 44px;
+  display: flex;
+  padding: 11px 0 0 var(--ds-size-5x);
+  gap: var(--ds-size-2-5x);
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-tree-item__separator-stroke {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.ds-tree-item--end {
+  flex-direction: row;
+  align-items: center;
+}
+.ds-tree-item--end-long {
+  flex-direction: column;
+  padding: 11px 0 0 21px;
+}
+.ds-tree-item--middle {
+  flex-direction: row;
+  align-items: center;
+  padding: 11px 0 0 0;
+}
+.ds-tree-item--middle-long {
+  flex-direction: row;
+  align-items: center;
+  padding: 11px 0 0 0;
+}
+.ds-tree-item--start {
+  flex-direction: row;
+  align-items: center;
+  padding: 11px var(--ds-size-3x) 0 0;
+}
+```
+</details>
 
 
 ### Карта классов CSS-библиотеки
@@ -5364,25 +12586,25 @@
 | Autocomplete form | `.ds-autocomplete-form` · `--empty` `--populated` `--empty` `--populated` `--populated` `--empty` `--empty` `--populated` `--populated` `--disabled` · :disabled, :focus, :hover |
 | Backdrop | `.ds-backdrop` |
 | Button New | `.ds-button-new` · `--btn-36` `--btn-28` |
-| Button toggle | `.ds-button-toggle` · `--s` `--s` `--xs` `--xs` `--filled` `--outlined` `--outlined` |
+| Button toggle | `.ds-button-toggle` · `--s` `--xs` `--filled` `--outlined` `--outlined` |
 | Checkbox label | `.ds-checkbox-label` · `--normal` `--normal` `--normal` `--error` `--error` `--error` `--disable` `--disable` `--disable` |
 | Chips | `.ds-chips` · `--s` `--s` `--outlined` `--outlined` `--outlined` `--outlined` `--outlined` `--filled` `--filled` `--filled` `--filled` `--filled` `--disabled` · :active, :disabled, :hover |
-| Chips group | `.ds-chips-group` · `--s` `--s` |
+| Chips group | `.ds-chips-group` · `--s` |
 | Chips Input | `.ds-chips-input` · `--s` `--disabled` · :disabled, :focus, :hover |
 | Chips Input | `.ds-chips-input-2` · `--s` `--disabled` · :disabled, :focus, :hover |
 | Chips input cell | `.ds-chips-input-cell` · `--disabled` · :disabled, :focus, :hover |
 | Chrome Header desktop | `.ds-chrome-header-desktop` |
 | Chrome Header mobile | `.ds-chrome-header-mobile` · `--off` `--on` |
 | Content | `.ds-content` |
-| Control arrow button | `.ds-control-arrow-button` · `--s` `--s` `--xs` |
-| Control group number button | `.ds-control-group-number-button` · `--xs` `--xs` |
+| Control arrow button | `.ds-control-arrow-button` · `--s` |
+| Control group number button | `.ds-control-group-number-button` · `--xs` |
 | Control number button | `.ds-control-number-button` · `--xs` `--xs` `--left` `--left` `--left` `--left` `--left` `--right` `--right` `--right` `--right` `--right` `--disabled` · :active, :disabled, :hover |
 | Control Panel | `.ds-control-panel` · `--control` `--week` `--calendar` |
 | Control Panel | `.ds-control-panel-2` · `--control` `--time` |
 | Datepicker | `.ds-datepicker` · `--day` `--year` `--month` |
 | Dialog content | `.ds-dialog-content` |
 | Dialog footer | `.ds-dialog-footer` |
-| Dialog header | `.ds-dialog-header` · `--text` |
+| Dialog header | `.ds-dialog-header` · `--text` `--picture` |
 | Dialog view | `.ds-dialog-view` |
 | Element | `.ds-element` · `--image-size` `--icon-size` `--icon-group` `--text-default` `--checkbox` `--radio-button` `--indicator` `--slide-toggle` `--counter` |
 | Element Form Field | `.ds-element-form-field` · `--input-cell` `--select-cell` `--chips-input-cell` |
@@ -7564,6 +14786,12 @@ CSS-правила компонента:
 .ds-arrow__icon svg path {
   fill: currentColor;
 }
+.ds-arrow__drop-down {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
 
 /* Arrow list [55939:13307] — 13 вариантов; оси: Content */
 .ds-arrow-list {
@@ -7590,6 +14818,12 @@ CSS-правила компонента:
 }
 .ds-arrow-list__icon svg path {
   fill: currentColor;
+}
+.ds-arrow-list__drop-down {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-list-background);
 }
 
 /* Arrow menu [56090:1628] — 13 вариантов; оси: Content */
@@ -7618,6 +14852,12 @@ CSS-правила компонента:
 .ds-arrow-menu__icon svg path {
   fill: currentColor;
 }
+.ds-arrow-menu__drop-down {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-menu-background);
+}
 
 /* Arrow select [57735:17989] — 13 вариантов; оси: Content */
 .ds-arrow-select {
@@ -7645,10 +14885,16 @@ CSS-правила компонента:
 .ds-arrow-select__icon svg path {
   fill: currentColor;
 }
+.ds-arrow-select__drop-down {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
 
 /* Autocomplete form [58107:8230] — 10 вариантов; оси: Variant, State */
 .ds-autocomplete-form {
-  height: 48px;
+  min-height: 48px;
   display: flex;
   flex-direction: column;
   background: var(--ds-color-brand-neutral-default);
@@ -7678,6 +14924,26 @@ CSS-правила компонента:
 }
 .ds-autocomplete-form__icon svg path {
   fill: currentColor;
+}
+.ds-autocomplete-form__input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+}
+.ds-autocomplete-form__input-frame {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-brand-accent-super-lightest);
+  border: 1px solid var(--ds-color-brand-neutral-lighter);
+}
+.ds-autocomplete-form__support {
+  display: flex;
+  flex-direction: row;
 }
 .ds-autocomplete-form--empty {
   color: var(--ds-color-brand-neutral-darker);
@@ -7728,7 +14994,6 @@ CSS-правила компонента:
   flex-direction: column;
   align-items: center;
   box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
-  height: var(--ds-size-9x);
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2-5x) var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -7746,7 +15011,6 @@ CSS-правила компонента:
   color: var(--ds-palette-neutral-950);
 }
 .ds-button-new--btn-28 {
-  height: var(--ds-size-7x);
   padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x);
   background: var(--ds-color-button-accent-default);
   color: var(--ds-color-button-accent-lite-default);
@@ -7761,7 +15025,6 @@ CSS-правила компонента:
   padding: var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x);
   border-radius: var(--ds-size-3x);
   background: var(--ds-color-button-accent-lite-default);
-  height: 44px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -7789,15 +15052,9 @@ CSS-правила компонента:
 .ds-button-toggle__icon svg path {
   fill: currentColor;
 }
-.ds-button-toggle--s {
-  height: var(--ds-size-9x);
-}
 .ds-button-toggle--s .ds-button-toggle__icon {
   width: var(--ds-size-5x);
   height: var(--ds-size-5x);
-}
-.ds-button-toggle--xs {
-  height: var(--ds-size-8x);
 }
 .ds-button-toggle--xs .ds-button-toggle__icon {
   width: var(--ds-size-4x);
@@ -7816,7 +15073,7 @@ CSS-правила компонента:
 
 /* Checkbox label [53810:880] — 9 вариантов; оси: Variant, Type */
 .ds-checkbox-label {
-  height: var(--ds-size-5x);
+  min-height: var(--ds-size-5x);
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-1x);
@@ -7846,6 +15103,37 @@ CSS-правила компонента:
 }
 .ds-checkbox-label__icon svg path {
   fill: currentColor;
+}
+.ds-checkbox-label__form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+}
+.ds-checkbox-label__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-checkbox-label__right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-checkbox-label__support {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--ds-size-7x) 0 0 0;
+}
+.ds-checkbox-label__support-text {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-checkbox-group-text-support-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-checkbox-group-text-support-color);
 }
 .ds-checkbox-label--normal.ds-checkbox-label--deselected {
   color: var(--ds-color-checkbox-group-text-color);
@@ -7912,8 +15200,39 @@ CSS-правила компонента:
 .ds-chips__icon svg path {
   fill: currentColor;
 }
+.ds-chips__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-chips__add {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-chips-disable-background-outlined);
+}
+.ds-chips__chip-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+}
+.ds-chips__chip-text {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-chips-text-color);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-chips-text-color);
+}
+.ds-chips__close {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-chips-disable-background-outlined);
+}
 .ds-chips--s {
-  height: var(--ds-size-6x);
   gap: var(--ds-size-1x);
   padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1x) var(--ds-size-1x);
   border-radius: var(--ds-size-2x);
@@ -7969,7 +15288,6 @@ CSS-правила компонента:
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  height: var(--ds-size-8x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -7997,9 +15315,6 @@ CSS-правила компонента:
 }
 .ds-chips-group__icon svg path {
   fill: currentColor;
-}
-.ds-chips-group--s {
-  height: var(--ds-size-6x);
 }
 .ds-chips-group--s .ds-chips-group__icon {
   width: var(--ds-size-4x);
@@ -8038,6 +15353,38 @@ CSS-правила компонента:
 }
 .ds-chips-input__icon svg path {
   fill: currentColor;
+}
+.ds-chips-input__frame {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1x) var(--ds-size-2x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-chips-input-default-background);
+  border: 1px solid var(--ds-color-chips-input-default-border-color);
+}
+.ds-chips-input__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+}
+.ds-chips-input__support {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-1x);
+}
+.ds-chips-input__text {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  padding: var(--ds-size-3x) var(--ds-size-3x) 0 0;
+}
+.ds-chips-input__hint {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  padding: var(--ds-size-3x) var(--ds-size-3x) 0 0;
 }
 .ds-chips-input--s .ds-chips-input__icon {
   width: var(--ds-size-5x);
@@ -8093,6 +15440,37 @@ CSS-правила компонента:
 .ds-chips-input-2__icon svg path {
   fill: currentColor;
 }
+.ds-chips-input-2__frame {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-chips-input-default-background);
+  border: 1px solid var(--ds-color-chips-input-default-border-color);
+}
+.ds-chips-input-2__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-chips-input-2__support {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-1x);
+}
+.ds-chips-input-2__text {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  padding: var(--ds-size-3x) var(--ds-size-3x) 0 0;
+}
+.ds-chips-input-2__hint {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  padding: var(--ds-size-3x) var(--ds-size-3x) 0 0;
+}
 .ds-chips-input-2--s .ds-chips-input-2__icon {
   width: var(--ds-size-5x);
   height: var(--ds-size-5x);
@@ -8116,7 +15494,7 @@ CSS-правила компонента:
 
 /* Chips input cell [60231:75648] — 8 вариантов; оси: State */
 .ds-chips-input-cell {
-  height: var(--ds-size-10x);
+  min-height: var(--ds-size-10x);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8150,6 +15528,20 @@ CSS-правила компонента:
 .ds-chips-input-cell__icon svg path {
   fill: currentColor;
 }
+.ds-chips-input-cell__frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-1x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-chips-input-default-background);
+  border: 1px solid var(--ds-color-chips-input-default-border-color);
+}
+.ds-chips-input-cell__support {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-1x);
+}
 .ds-chips-input-cell:hover {
   border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
 }
@@ -8168,7 +15560,7 @@ CSS-правила компонента:
 
 /* Chrome Header desktop [56564:1013] — 1 вариантов; оси: — */
 .ds-chrome-header-desktop {
-  height: 86px;
+  min-height: 86px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -8179,6 +15571,34 @@ CSS-правила компонента:
   font-weight: var(--ds-typography-font-weight-regular);
   line-height: 14.522727012634277px;
   white-space: nowrap;
+}
+.ds-chrome-header-desktop__top {
+  height: 43px;
+  display: flex;
+  flex-direction: row;
+}
+.ds-chrome-header-desktop__tabs {
+  display: flex;
+  flex-direction: row;
+}
+.ds-chrome-header-desktop__application-controller {
+  height: 43px;
+  display: flex;
+  flex-direction: row;
+}
+.ds-chrome-header-desktop__base {
+  height: 43px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-chrome-header-desktop__navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-3x);
 }
 
 /* Chrome Header mobile [56564:1062] — 2 вариантов; оси: Dark */
@@ -8195,6 +15615,73 @@ CSS-правила компонента:
   line-height: 13px;
   color: var(--ds-color-brand-neutral-super-dark);
   white-space: nowrap;
+}
+.ds-chrome-header-mobile__home {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-chrome-header-mobile__spacer-8px {
+  height: var(--ds-size-2x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-chrome-header-mobile__address-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: 11px 11px 9px 9px;
+  border-radius: 17px;
+}
+.ds-chrome-header-mobile__lock {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-chrome-header-mobile__address {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-chrome-header-mobile__spacer-16px {
+  height: var(--ds-size-2x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-chrome-header-mobile__tabs {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-chrome-header-mobile__rectangle {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  border: 1.5px solid var(--ds-color-brand-neutral-super-dark);
+}
+.ds-chrome-header-mobile__1 {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-super-dark);
+  font-size: var(--ds-typography-caption-font-size-m);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: 11.71875px;
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-chrome-header-mobile__more {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-chrome-header-mobile__more-vert {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-chrome-header-mobile--off {
   background: var(--ds-color-brand-neutral-default);
@@ -8229,7 +15716,6 @@ CSS-правила компонента:
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-0-5x);
-  height: var(--ds-size-9x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8249,15 +15735,14 @@ CSS-правила компонента:
 .ds-control-arrow-button__icon svg path {
   fill: currentColor;
 }
-.ds-control-arrow-button--s {
-  height: var(--ds-size-8x);
+.ds-control-arrow-button__icon-size {
+  height: var(--ds-size-3x);
+  display: flex;
+  flex-direction: row;
 }
 .ds-control-arrow-button--s .ds-control-arrow-button__icon {
   width: var(--ds-size-3x);
   height: var(--ds-size-3x);
-}
-.ds-control-arrow-button--xs {
-  height: var(--ds-size-6x);
 }
 
 /* Control group number button [53828:5569] — 2 вариантов; оси: Size */
@@ -8269,7 +15754,6 @@ CSS-правила компонента:
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-brand-neutral-super-light);
   border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
-  height: var(--ds-size-9x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8289,9 +15773,10 @@ CSS-правила компонента:
 .ds-control-group-number-button__icon svg path {
   fill: currentColor;
 }
-.ds-control-group-number-button--xs {
-  height: var(--ds-size-6x);
-  width: 49px;
+.ds-control-group-number-button__icon-size {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
 }
 .ds-control-group-number-button--xs .ds-control-group-number-button__icon {
   width: var(--ds-size-4x);
@@ -8304,8 +15789,6 @@ CSS-правила компонента:
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  height: var(--ds-size-9x);
-  width: var(--ds-size-8x);
   padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2-5x) var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -8326,9 +15809,18 @@ CSS-правила компонента:
 .ds-control-number-button__icon svg path {
   fill: currentColor;
 }
+.ds-control-number-button__icon-size {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-control-number-button__remove {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-button-accent-lite-default);
+}
 .ds-control-number-button--xs {
-  height: var(--ds-size-6x);
-  width: var(--ds-size-6x);
   padding: var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x);
 }
 .ds-control-number-button--xs .ds-control-number-button__icon {
@@ -8401,6 +15893,36 @@ CSS-правила компонента:
 .ds-control-panel__icon svg path {
   fill: currentColor;
 }
+.ds-control-panel__elements {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
+  border-radius: var(--ds-size-circular);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-control-panel__month {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-super-dark);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-control-panel__button-icon-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+}
+.ds-control-panel__button-icon {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
+  border-radius: var(--ds-size-2x);
+}
 .ds-control-panel--control {
   flex-direction: row;
   align-items: center;
@@ -8422,7 +15944,6 @@ CSS-правила компонента:
 .ds-control-panel-2 {
   display: flex;
   flex-direction: row;
-  height: 48px;
   padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
   gap: 74px;
   box-sizing: border-box;
@@ -8452,18 +15973,39 @@ CSS-правила компонента:
 .ds-control-panel-2__icon svg path {
   fill: currentColor;
 }
+.ds-control-panel-2__elements {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
+  border-radius: var(--ds-size-circular);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-control-panel-2__month {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-super-dark);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-control-panel-2__button-icon-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+}
 .ds-control-panel-2--control {
   align-items: center;
   color: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-control-panel-2--time {
-  height: 44px;
   padding: 0 0 var(--ds-size-0-5x) var(--ds-size-0-5x);
   color: var(--ds-color-brand-neutral-super-dark);
 }
 
 /* Datepicker [58509:5439] — 3 вариантов; оси: Type */
-/* height из макета Figma: 337px — размер примера, задавайте по месту */
 .ds-datepicker {
   display: flex;
   flex-direction: column;
@@ -8498,6 +16040,38 @@ CSS-правила компонента:
 .ds-datepicker__icon svg path {
   fill: currentColor;
 }
+.ds-datepicker__control-panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 74px;
+  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
+}
+.ds-datepicker__elements {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
+  border-radius: var(--ds-size-circular);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-datepicker__button-icon-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+}
+.ds-datepicker__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-datepicker__week-6 {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+}
 .ds-datepicker--day {
   color: var(--ds-color-brand-neutral-super-dark);
 }
@@ -8509,8 +16083,8 @@ CSS-правила компонента:
 }
 
 /* Dialog content [53535:1369] — 1 вариантов; оси: State */
-/* height из макета Figma: 204px — размер примера, задавайте по месту */
 .ds-dialog-content {
+  min-height: 204px;
   display: flex;
   flex-direction: row;
   background: var(--ds-color-dialog-background);
@@ -8541,10 +16115,22 @@ CSS-правила компонента:
 .ds-dialog-content__icon svg path {
   fill: currentColor;
 }
+.ds-dialog-content__scroll {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
+}
+.ds-dialog-content__background {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-button-neutral-hover);
+}
 
 /* Dialog footer [53749:638] — 1 вариантов; оси: State */
 .ds-dialog-footer {
-  height: 69px;
+  min-height: 69px;
   display: flex;
   flex-direction: column;
   background: var(--ds-color-dialog-background);
@@ -8574,6 +16160,28 @@ CSS-правила компонента:
 }
 .ds-dialog-footer__icon svg path {
   fill: currentColor;
+}
+.ds-dialog-footer__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-dialog-background);
+}
+.ds-dialog-footer__action {
+  height: 68px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-4x) var(--ds-size-4x);
+}
+.ds-dialog-footer__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-2x);
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-brand-accent-default);
+  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
 }
 
 /* Dialog header [53535:1322] — 2 вариантов; оси: Type */
@@ -8608,13 +16216,36 @@ CSS-правила компонента:
 .ds-dialog-header__icon svg path {
   fill: currentColor;
 }
+.ds-dialog-header__title-container {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+}
+.ds-dialog-header__description {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-dialog-content-text-color);
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  color: var(--ds-color-dialog-content-text-color);
+}
+.ds-dialog-header__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-dialog-background);
+}
 .ds-dialog-header--text {
   color: var(--ds-color-dialog-content-title-color);
 }
+.ds-dialog-header--picture {
+  width: 500px;
+}
 
 /* Dialog view [52952:1285] — 1 вариантов; оси: State */
-/* height из макета Figma: 364px — размер примера, задавайте по месту */
 .ds-dialog-view {
+  min-height: 364px;
   display: flex;
   flex-direction: column;
   border-radius: var(--ds-size-3x);
@@ -8646,6 +16277,39 @@ CSS-правила компонента:
 }
 .ds-dialog-view__icon svg path {
   fill: currentColor;
+}
+.ds-dialog-view__header {
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-dialog-background);
+}
+.ds-dialog-view__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-dialog-background);
+}
+.ds-dialog-view__content {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-dialog-background);
+}
+.ds-dialog-view__scroll {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
+}
+.ds-dialog-view__footer {
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-dialog-background);
+}
+.ds-dialog-view__action {
+  height: 68px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-4x) var(--ds-size-4x);
 }
 
 /* Element [54104:20956] — 9 вариантов; оси: Content */
@@ -8679,6 +16343,12 @@ CSS-правила компонента:
 }
 .ds-element__icon svg path {
   fill: currentColor;
+}
+.ds-element__image-size {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--ds-size-circular);
 }
 .ds-element--image-size {
   flex-direction: row;
@@ -8719,7 +16389,6 @@ CSS-правила компонента:
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-default);
-  height: var(--ds-size-9x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -8731,6 +16400,18 @@ CSS-правила компонента:
   color: var(--ds-color-brand-neutral-darker);
   white-space: nowrap;
 }
+.ds-element-form-field__input-cell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
+}
+.ds-element-form-field__input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+}
 .ds-element-form-field--input-cell {
   color: var(--ds-color-brand-neutral-darker);
 }
@@ -8738,14 +16419,12 @@ CSS-правила компонента:
   color: var(--ds-color-brand-neutral-darker);
 }
 .ds-element-form-field--chips-input-cell {
-  height: var(--ds-size-10x);
   color: var(--ds-color-brand-neutral-darker);
 }
 
 /* Element left [59851:11313] — 5 вариантов; оси: Style */
 .ds-element-left {
-  height: var(--ds-size-5x);
-  width: var(--ds-size-5x);
+  min-height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8768,6 +16447,12 @@ CSS-правила компонента:
 }
 .ds-element-left__icon svg path {
   fill: currentColor;
+}
+.ds-element-left__info {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
 }
 
 /* Element menu [56090:1611] — 8 вариантов; оси: Content */
@@ -8801,6 +16486,12 @@ CSS-правила компонента:
 }
 .ds-element-menu__icon svg path {
   fill: currentColor;
+}
+.ds-element-menu__image-size {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--ds-size-circular);
 }
 .ds-element-menu--image-size {
   flex-direction: row;
@@ -8863,6 +16554,12 @@ CSS-правила компонента:
 }
 .ds-element-select__icon svg path {
   fill: currentColor;
+}
+.ds-element-select__image-size {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--ds-size-circular);
 }
 .ds-element-select--image-size {
   flex-direction: row;
@@ -8927,6 +16624,11 @@ CSS-правила компонента:
 .ds-element-sidenav__icon svg path {
   fill: currentColor;
 }
+.ds-element-sidenav__keyboard-arrow-left {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+}
 .ds-element-sidenav--collaps-icon {
   flex-direction: row;
   background: var(--ds-color-sidenav-control-background-hover);
@@ -8941,10 +16643,9 @@ CSS-правила компонента:
 
 /* Element step [55403:7248] — 12 вариантов; оси: Content, State */
 .ds-element-step {
-  height: var(--ds-size-6x);
+  min-height: var(--ds-size-6x);
   display: flex;
   background: var(--ds-color-brand-neutral-default);
-  width: var(--ds-size-6x);
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -8973,6 +16674,17 @@ CSS-правила компонента:
 .ds-element-step__icon svg path {
   fill: currentColor;
 }
+.ds-element-step__icon-size {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-element-step__info {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
 .ds-element-step--icon-size {
   flex-direction: row;
   align-items: center;
@@ -8999,8 +16711,8 @@ CSS-правила компонента:
 
 /* Elements [58501:4220] — 30 вариантов; оси: Type, Variant, State */
 .ds-elements {
-  height: var(--ds-size-10x);
   display: flex;
+  height: var(--ds-size-10x);
   border-radius: var(--ds-size-circular);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -9012,6 +16724,33 @@ CSS-правила компонента:
   letter-spacing: var(--ds-typography-letter-spacing-s);
   color: var(--ds-color-brand-neutral-super-dark);
   white-space: nowrap;
+}
+.ds-elements__range-highlight-start {
+  height: var(--ds-size-10x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-accent-lighter);
+}
+.ds-elements__range-highlight-end {
+  height: var(--ds-size-10x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-accent-lighter);
+}
+.ds-elements__range-highlight-middle {
+  height: var(--ds-size-10x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-accent-lightest);
+}
+.ds-elements__date {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-super-dark);
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  color: var(--ds-color-brand-neutral-super-dark);
 }
 .ds-elements--cell.ds-elements--today:disabled {
   background: var(--ds-color-brand-neutral-lighter);
@@ -9145,7 +16884,7 @@ CSS-правила компонента:
 
 /* Elements [58982:9594] — 8 вариантов; оси: Variant, State; ДУБЛЬ имени — второй сет «Elements», различать по node_id */
 .ds-elements-2 {
-  height: var(--ds-size-10x);
+  min-height: var(--ds-size-10x);
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -9158,6 +16897,27 @@ CSS-правила компонента:
   letter-spacing: var(--ds-typography-letter-spacing-s);
   color: var(--ds-color-brand-neutral-default);
   white-space: nowrap;
+}
+.ds-elements-2__range-highlight-start {
+  height: var(--ds-size-10x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-accent-lighter);
+}
+.ds-elements-2__range-highlight-end {
+  height: var(--ds-size-10x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-accent-lighter);
+}
+.ds-elements-2__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  border-radius: var(--ds-size-circular);
+  background: var(--ds-color-brand-accent-default);
 }
 .ds-elements-2--selected {
   flex-direction: column;
@@ -9236,12 +16996,24 @@ CSS-правила компонента:
 
 /* Form field cell [60220:72732] — 1 вариантов; оси: Variant */
 .ds-form-field-cell {
-  height: var(--ds-size-10x);
+  min-height: var(--ds-size-10x);
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-default);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-form-field-cell__table-content-chips-input {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-form-field-cell__table-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
 }
 
 /* Header components [53535:1244] — 2 вариантов; оси: Type */
@@ -9259,6 +17031,24 @@ CSS-правила компонента:
   letter-spacing: 0.18000000715255737px;
   color: var(--ds-color-brand-neutral-default);
   white-space: nowrap;
+}
+.ds-header-components__container {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-6x);
+  padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x);
+  border-radius: var(--ds-size-6x);
+  background: var(--ds-color-brand-neutral-super-light);
+}
+.ds-header-components__badge-group {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+}
+.ds-header-components__frame-1 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-2x);
 }
 .ds-header-components--default {
   flex-direction: column;
@@ -9306,6 +17096,35 @@ CSS-правила компонента:
 .ds-hint-container__icon svg path {
   fill: currentColor;
 }
+.ds-hint-container__arrow {
+  height: var(--ds-size-1x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-hint-background-color);
+}
+.ds-hint-container__header {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-1x);
+  background: var(--ds-color-hint-background-color);
+}
+.ds-hint-container__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-hint-background-color);
+}
+.ds-hint-container__footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-3x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-4x) var(--ds-size-3x);
+  background: var(--ds-color-hint-background-color);
+}
 .ds-hint-container--up {
   flex-direction: column;
   color: var(--ds-color-hint-content-icon-color);
@@ -9334,7 +17153,6 @@ CSS-правила компонента:
   gap: var(--ds-size-2x);
   padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-2x);
   background: var(--ds-color-hint-background-color);
-  height: 52px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -9362,18 +17180,44 @@ CSS-правила компонента:
 .ds-hint-content__icon svg path {
   fill: currentColor;
 }
+.ds-hint-content__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-hint-content__info {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-content__block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+}
+.ds-hint-content__clear {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-hint-content__close {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-hint-content-icon-color);
+}
 .ds-hint-content--group-content {
   color: var(--ds-color-hint-content-icon-color);
 }
 .ds-hint-content--single-content {
-  height: var(--ds-size-9x);
   align-items: center;
   color: var(--ds-color-hint-content-icon-color);
 }
 
 /* Hint footer [54600:517] — 1 вариантов; оси: Content */
 .ds-hint-footer {
-  height: 56px;
+  min-height: 56px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -9407,13 +17251,28 @@ CSS-правила компонента:
 .ds-hint-footer__icon svg path {
   fill: currentColor;
 }
+.ds-hint-footer__цвет-и-палитра {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-hint-content-icon-color);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-footer__button-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+}
 .ds-hint-footer--default {
   color: var(--ds-color-hint-content-icon-color);
 }
 
 /* Hint header [54594:2219] — 5 вариантов; оси: Style */
 .ds-hint-header {
-  height: var(--ds-size-8x);
+  min-height: var(--ds-size-8x);
   display: flex;
   flex-direction: row;
   gap: var(--ds-size-2x);
@@ -9446,6 +17305,37 @@ CSS-правила компонента:
 .ds-hint-header__icon svg path {
   fill: currentColor;
 }
+.ds-hint-header__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-hint-header__info {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-header__title {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-hint-content-icon-color);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-hint-content-icon-color);
+}
+.ds-hint-header__clear {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-hint-header__close {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-hint-content-icon-color);
+}
 .ds-hint-header--neutral {
   color: var(--ds-color-hint-content-icon-color);
 }
@@ -9464,7 +17354,7 @@ CSS-правила компонента:
 
 /* Icon group [53467:1060] — 2 вариантов; оси: Size gap */
 .ds-icon-group {
-  height: var(--ds-size-5x);
+  min-height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -9494,7 +17384,7 @@ CSS-правила компонента:
 
 /* Input cell [60229:74436] — 8 вариантов; оси: State */
 .ds-input-cell {
-  height: var(--ds-size-9x);
+  min-height: var(--ds-size-9x);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -9527,6 +17417,19 @@ CSS-правила компонента:
 .ds-input-cell__icon svg path {
   fill: currentColor;
 }
+.ds-input-cell__frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-input-input-filled-background);
+  border: 1px solid var(--ds-color-input-number-control-default-border-color);
+}
+.ds-input-cell__support {
+  display: flex;
+  flex-direction: row;
+}
 .ds-input-cell:hover {
   background: var(--ds-color-input-filled-disable-input-background);
   border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
@@ -9546,7 +17449,7 @@ CSS-правила компонента:
 
 /* Input Datepicker [58548:4764] — 2 вариантов; оси: Type */
 .ds-input-datepicker {
-  height: 48px;
+  min-height: 48px;
   display: flex;
   flex-direction: column;
   background: var(--ds-color-input-input-outlined-background);
@@ -9577,6 +17480,21 @@ CSS-правила компонента:
 .ds-input-datepicker__icon svg path {
   fill: currentColor;
 }
+.ds-input-datepicker__frame {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-input-input-filled-background);
+  border: 1px solid var(--ds-color-input-number-control-default-border-color);
+}
+.ds-input-datepicker__support {
+  display: flex;
+  flex-direction: row;
+}
 .ds-input-datepicker--empty {
   color: var(--ds-color-input-input-label-text-color);
 }
@@ -9592,7 +17510,6 @@ CSS-правила компонента:
   gap: var(--ds-size-1x);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-input-input-outlined-background);
-  height: var(--ds-size-9x);
   padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
   border: 1px solid var(--ds-color-input-number-control-default-border-color);
   box-sizing: border-box;
@@ -9621,6 +17538,26 @@ CSS-правила компонента:
 }
 .ds-input-for-number__icon svg path {
   fill: currentColor;
+}
+.ds-input-for-number__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-input-for-number__info {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-input-input-outlined-background);
+}
+.ds-input-for-number__content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-input-for-number__text {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
 }
 .ds-input-for-number:hover {
   border: 1px solid var(--ds-color-input-number-control-disable-icon-color);
@@ -9669,6 +17606,21 @@ CSS-правила компонента:
 .ds-input-number__icon svg path {
   fill: currentColor;
 }
+.ds-input-number__frame {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-input-input-filled-background);
+  border: 1px solid var(--ds-color-input-number-control-default-border-color);
+}
+.ds-input-number__support {
+  display: flex;
+  flex-direction: row;
+}
 .ds-input-number--xs .ds-input-number__icon {
   width: var(--ds-size-6x);
   height: var(--ds-size-6x);
@@ -9710,7 +17662,7 @@ CSS-правила компонента:
 
 /* Input number_but icon [56967:10506] — 1 вариантов; оси: — */
 .ds-input-number-but-icon {
-  height: 56px;
+  min-height: 56px;
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-1x);
@@ -9741,10 +17693,40 @@ CSS-правила компонента:
 .ds-input-number-but-icon__icon svg path {
   fill: currentColor;
 }
+.ds-input-number-but-icon__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-1x);
+}
+.ds-input-number-but-icon__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-input-input-outlined-background);
+  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+}
+.ds-input-number-but-icon__text {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-input-number-but-icon__support-text {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-input-input-label-text-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-input-input-label-text-color);
+}
 
 /* Input Timepicker [58982:9561] — 2 вариантов; оси: Type */
 .ds-input-timepicker {
-  height: 48px;
+  min-height: 48px;
   display: flex;
   flex-direction: column;
   background: var(--ds-color-input-input-outlined-background);
@@ -9775,6 +17757,21 @@ CSS-правила компонента:
 .ds-input-timepicker__icon svg path {
   fill: currentColor;
 }
+.ds-input-timepicker__frame {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-input-input-filled-background);
+  border: 1px solid var(--ds-color-input-number-control-default-border-color);
+}
+.ds-input-timepicker__support {
+  display: flex;
+  flex-direction: row;
+}
 .ds-input-timepicker--empty {
   color: var(--ds-color-input-input-label-text-color);
 }
@@ -9783,8 +17780,8 @@ CSS-правила компонента:
 }
 
 /* List (Сontainer) [57604:4762] — 1 вариантов; оси: Type */
-/* height из макета Figma: 257px — размер примера, задавайте по месту */
 .ds-list-container {
+  min-height: 257px;
   display: flex;
   flex-direction: column;
   padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
@@ -9816,13 +17813,48 @@ CSS-правила компонента:
 .ds-list-container__icon svg path {
   fill: currentColor;
 }
+.ds-list-container__item {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-list-background);
+}
+.ds-list-container__element-left {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-list-background);
+}
+.ds-list-container__content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-list-container__element-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-list-background);
+}
+.ds-list-container__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-list-background);
+}
+.ds-list-container__scroll {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
+}
 .ds-list-container--container {
   color: var(--ds-color-list-item-icon-color);
 }
 
 /* List item [54101:7922] — 8 вариантов; оси: State */
 .ds-list-item {
-  height: 68px;
+  min-height: 68px;
   display: flex;
   flex-direction: row;
   gap: var(--ds-size-2x);
@@ -9855,6 +17887,59 @@ CSS-правила компонента:
 .ds-list-item__icon svg path {
   fill: currentColor;
 }
+.ds-list-item__element-left {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-list-background);
+}
+.ds-list-item__checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-list-item__content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-list-item__label-up {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-list-item-icon-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-list-item-icon-color);
+}
+.ds-list-item__text {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-list-item-text-color);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-list-item-text-color);
+}
+.ds-list-item__label-down {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-list-item-icon-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-list-item-icon-color);
+}
+.ds-list-item__element-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-list-background);
+}
+.ds-list-item__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
 .ds-list-item:hover {
   background: var(--ds-color-list-item-hover-background);
 }
@@ -9880,6 +17965,12 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-logo-iiko__vector {
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
 
 /* Logo Syrve [56079:771] — 4 вариантов; оси: Size, Style */
 .ds-logo-syrve {
@@ -9890,10 +17981,15 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-logo-syrve__vector {
+  height: 70.9px;
+  display: flex;
+  flex-direction: row;
+}
 
 /* Menu (Container) [54163:6705] — 1 вариантов; оси: Type */
-/* height из макета Figma: 418px — размер примера, задавайте по месту */
 .ds-menu-container {
+  min-height: 418px;
   display: flex;
   flex-direction: column;
   padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
@@ -9927,13 +18023,62 @@ CSS-правила компонента:
 .ds-menu-container__icon svg path {
   fill: currentColor;
 }
+.ds-menu-container__search {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) 0 var(--ds-size-1x);
+}
+.ds-menu-container__title {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-menu-background);
+}
+.ds-menu-container__element-left {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-menu-background);
+}
+.ds-menu-container__content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-menu-container__element-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-menu-background);
+}
+.ds-menu-container__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-menu-background);
+}
+.ds-menu-container__scroll {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
+}
+.ds-menu-container__button-group {
+  height: 52px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+}
 .ds-menu-container--container {
   color: var(--ds-color-brand-neutral-light);
 }
 
 /* Menu item [56090:1476] — 7 вариантов; оси: State */
 .ds-menu-item {
-  height: 68px;
+  min-height: 68px;
   display: flex;
   flex-direction: row;
   gap: var(--ds-size-2x);
@@ -9966,6 +18111,59 @@ CSS-правила компонента:
 .ds-menu-item__icon svg path {
   fill: currentColor;
 }
+.ds-menu-item__element-left {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-menu-background);
+}
+.ds-menu-item__checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-menu-item__content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-menu-item__label-up {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-menu-item-icon-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-menu-item-icon-color);
+}
+.ds-menu-item__text {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-menu-item-text-color);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-menu-item-text-color);
+}
+.ds-menu-item__label-down {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-menu-item-icon-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-menu-item-icon-color);
+}
+.ds-menu-item__element-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-menu-background);
+}
+.ds-menu-item__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
 .ds-menu-item:hover {
   background: var(--ds-color-menu-item-hover-background);
 }
@@ -9990,10 +18188,18 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-navigation-bar__pill {
+  height: var(--ds-size-1x);
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--ds-size-1x);
+  background: var(--ds-color-brand-neutral-super-dark);
+}
 
 /* Picture [58937:3985] — 1 вариантов; оси: — */
-/* height из макета Figma: 189px — размер примера, задавайте по месту */
 .ds-picture {
+  min-height: 189px;
+  width: 446px;
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-2-5x);
@@ -10002,6 +18208,20 @@ CSS-правила компонента:
   background: var(--ds-color-brand-accent-super-lightest);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-picture__crop {
+  height: 173px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-2-5x);
+  border: 1px dashed var(--ds-color-brand-neutral-neutral);
+}
+.ds-picture__frame-1000001806 {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 440px;
 }
 
 /* Preview [54063:12946] — 3 вариантов; оси: Property 1 */
@@ -10032,10 +18252,21 @@ CSS-правила компонента:
 .ds-preview__icon svg path {
   fill: currentColor;
 }
+.ds-preview__icon-size-draft {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-preview__info {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
 
 /* Radio button label [54095:4306] — 6 вариантов; оси: Variant, Type */
 .ds-radio-button-label {
-  height: var(--ds-size-5x);
+  min-height: var(--ds-size-5x);
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-1x);
@@ -10066,6 +18297,46 @@ CSS-правила компонента:
 .ds-radio-button-label__icon svg path {
   fill: currentColor;
 }
+.ds-radio-button-label__form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+}
+.ds-radio-button-label__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-radio-button-label__цвет-и-палитра {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-button-neutral-filled-default-text-color);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-button-neutral-filled-default-text-color);
+}
+.ds-radio-button-label__right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-radio-button-label__support {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--ds-size-7x) 0 0 0;
+}
+.ds-radio-button-label__support-text {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-button-icon-neutral-filled-icon-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-button-icon-neutral-filled-icon-color);
+}
 .ds-radio-button-label--normal.ds-radio-button-label--deselected {
   color: var(--ds-color-button-neutral-filled-default-text-color);
 }
@@ -10093,6 +18364,21 @@ CSS-правила компонента:
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+.ds-scroll__background {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-scroll-default-background);
+}
+.ds-scroll__knob {
+  height: var(--ds-size-2x);
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-2-5x) var(--ds-size-2-5x) var(--ds-size-2-5x) var(--ds-size-2-5x);
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-scroll-default-knob-color);
+}
 .ds-scroll--first:hover {
   background: var(--ds-color-scroll-hover-background);
 }
@@ -10108,7 +18394,7 @@ CSS-правила компонента:
 
 /* Scroll tabs [59032:1821] — 4 вариантов; оси: Orientation, State */
 .ds-scroll-tabs {
-  height: var(--ds-size-7x);
+  min-height: var(--ds-size-7x);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -10133,6 +18419,21 @@ CSS-правила компонента:
 .ds-scroll-tabs__icon svg path {
   fill: currentColor;
 }
+.ds-scroll-tabs__button-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x);
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-brand-neutral-default);
+  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+}
+.ds-scroll-tabs__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
 .ds-scroll-tabs--left {
   padding: 0 48px 0 0;
 }
@@ -10143,7 +18444,6 @@ CSS-правила компонента:
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  height: 48px;
   padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
   border-radius: var(--ds-size-3x);
   background: var(--ds-color-search-background);
@@ -10175,8 +18475,34 @@ CSS-правила компонента:
 .ds-search__icon svg path {
   fill: currentColor;
 }
+.ds-search__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-search__text {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-search-default-text-color);
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  color: var(--ds-color-search-default-text-color);
+}
+.ds-search__right-icon {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+}
+.ds-search__divider {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-brand-neutral-default);
+}
 .ds-search--s {
-  height: var(--ds-size-9x);
   padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-2x) var(--ds-size-2x);
 }
 .ds-search--s .ds-search__icon {
@@ -10211,8 +18537,8 @@ CSS-правила компонента:
 }
 
 /* Select (Сontainer) [57735:17612] — 1 вариантов; оси: Type */
-/* height из макета Figma: 406px — размер примера, задавайте по месту */
 .ds-select-container {
+  min-height: 406px;
   display: flex;
   flex-direction: column;
   padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
@@ -10246,13 +18572,71 @@ CSS-правила компонента:
 .ds-select-container__icon svg path {
   fill: currentColor;
 }
+.ds-select-container__search {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) 0 0;
+}
+.ds-select-container__title {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-select-container__element-left {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-select-container__content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-select-container__element-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-select-container__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-select-container__scroll {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
+}
+.ds-select-container__button-group {
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+}
+.ds-select-container__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-1x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-1x);
+  border-radius: var(--ds-size-2x);
+  border: 1px solid var(--ds-color-brand-neutral-lighter);
+}
 .ds-select-container--container {
   color: var(--ds-color-brand-neutral-light);
 }
 
 /* Select cell [60231:74976] — 7 вариантов; оси: State */
 .ds-select-cell {
-  height: var(--ds-size-9x);
+  min-height: var(--ds-size-9x);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -10284,6 +18668,24 @@ CSS-правила компонента:
 }
 .ds-select-cell__icon svg path {
   fill: currentColor;
+}
+.ds-select-cell__input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+}
+.ds-select-cell__input-frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-brand-accent-super-lightest);
+  border: 1px solid var(--ds-color-brand-neutral-lighter);
+}
+.ds-select-cell__support {
+  display: flex;
+  flex-direction: row;
 }
 .ds-select-cell:hover {
   background: var(--ds-color-brand-neutral-super-light);
@@ -10333,6 +18735,26 @@ CSS-правила компонента:
 }
 .ds-select-form__icon svg path {
   fill: currentColor;
+}
+.ds-select-form__input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-size-1x);
+}
+.ds-select-form__input-frame {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-brand-accent-super-lightest);
+  border: 1px solid var(--ds-color-brand-neutral-lighter);
+}
+.ds-select-form__support {
+  display: flex;
+  flex-direction: row;
 }
 .ds-select-form--s .ds-select-form__icon {
   width: var(--ds-size-5x);
@@ -10408,6 +18830,56 @@ CSS-правила компонента:
 .ds-select-item__icon svg path {
   fill: currentColor;
 }
+.ds-select-item__element-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-select-item__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-select-item__content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-select-item__label-up {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-darker);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-select-item__subtitle {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-darker);
+  font-size: var(--ds-typography-caption-font-size-m);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-caption-line-height-m);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-select-item__label-down {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-darker);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-select-item__element-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-brand-neutral-default);
+}
 .ds-select-item--true {
   align-items: center;
   background: var(--ds-color-brand-neutral-default);
@@ -10436,7 +18908,7 @@ CSS-правила компонента:
 
 /* Sidenav control [55142:1734] — 6 вариантов; оси: Mode, State */
 .ds-sidenav-control {
-  height: 41px;
+  min-height: 41px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -10465,6 +18937,34 @@ CSS-правила компонента:
 }
 .ds-sidenav-control__icon svg path {
   fill: currentColor;
+}
+.ds-sidenav-control__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-3x);
+  background: var(--ds-color-sidenav-control-background);
+}
+.ds-sidenav-control__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-sidenav-control__свернуть-меню {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-sidenav-control-text-color);
+  font-size: var(--ds-typography-caption-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-m);
+  color: var(--ds-color-sidenav-control-text-color);
+}
+.ds-sidenav-control__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-sidenav-control-text-color);
 }
 .ds-sidenav-control--collapsed:hover {
   background: var(--ds-color-sidenav-control-background-hover);
@@ -10499,6 +18999,33 @@ CSS-правила компонента:
   color: var(--ds-color-sidenav-footer-l2-text-color);
   white-space: nowrap;
 }
+.ds-sidenav-footer__logo-iiko {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-sidenav-control-text-color);
+}
+.ds-sidenav-footer__vector {
+  height: 9.8px;
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-sidenav-footer-l2-logo);
+}
+.ds-sidenav-footer__divider {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-sidenav-control-text-color);
+}
+.ds-sidenav-footer__ver-7-8-6-29440 {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-sidenav-footer-l2-text-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-sidenav-footer-l2-text-color);
+}
 .ds-sidenav-footer--l2.ds-sidenav-footer--expanded {
   flex-direction: row;
   align-items: center;
@@ -10516,7 +19043,6 @@ CSS-правила компонента:
 
 /* Sidenav header [55045:637] — 3 вариантов; оси: Type, Mode */
 .ds-sidenav-header {
-  height: 48px;
   display: flex;
   align-items: center;
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x);
@@ -10548,11 +19074,34 @@ CSS-правила компонента:
 .ds-sidenav-header__icon svg path {
   fill: currentColor;
 }
+.ds-sidenav-header__logo-iiko {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-sidenav-header__vector {
+  height: 14.7px;
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-sidenav-control-text-color);
+}
+.ds-sidenav-header__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-sidenav-header__close {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-sidenav-control-text-color);
+}
 .ds-sidenav-header--l1.ds-sidenav-header--expanded {
   flex-direction: row;
   background: var(--ds-color-sidenav-control-background);
 }
 .ds-sidenav-header--l2.ds-sidenav-header--expanded {
+  height: 48px;
   flex-direction: row;
   gap: var(--ds-size-2x);
   background: var(--ds-color-sidenav-control-text-color);
@@ -10567,7 +19116,6 @@ CSS-правила компонента:
 /* Sidenav item [55070:3734] — 13 вариантов; оси: Type, Mode, State */
 .ds-sidenav-item {
   display: flex;
-  height: var(--ds-size-8x);
   padding: var(--ds-size-8x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
   gap: var(--ds-size-2x);
   box-sizing: border-box;
@@ -10581,6 +19129,15 @@ CSS-правила компонента:
   color: var(--ds-color-sidenav-header-l2-text-color);
   white-space: nowrap;
 }
+.ds-sidenav-item__l3 {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-sidenav-header-l2-text-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-sidenav-header-l2-text-color);
+}
 .ds-sidenav-item--l3.ds-sidenav-item--expanded:hover {
   background: var(--ds-color-sidenav-item-l2-background-hover);
 }
@@ -10591,7 +19148,6 @@ CSS-правила компонента:
   color: var(--ds-color-sidenav-header-l2-text-color);
 }
 .ds-sidenav-item--l2.ds-sidenav-item--expanded {
-  height: 41px;
   flex-direction: column;
   background: var(--ds-color-sidenav-control-text-color);
   color: var(--ds-color-sidenav-header-l2-text-color);
@@ -10603,7 +19159,6 @@ CSS-правила компонента:
   background: var(--ds-color-sidenav-control-background-hover);
 }
 .ds-sidenav-item--l1.ds-sidenav-item--expanded {
-  height: 44px;
   flex-direction: row;
   align-items: center;
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x);
@@ -10614,7 +19169,6 @@ CSS-правила компонента:
   background: var(--ds-color-sidenav-control-background-hover);
 }
 .ds-sidenav-item--l1.ds-sidenav-item--collapsed {
-  height: 44px;
   flex-direction: row;
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-3x) var(--ds-size-3x);
   background: var(--ds-color-sidenav-control-background);
@@ -10653,6 +19207,28 @@ CSS-правила компонента:
 .ds-sidenav-view__icon svg path {
   fill: currentColor;
 }
+.ds-sidenav-view__container {
+  display: flex;
+  flex-direction: column;
+}
+.ds-sidenav-view__header {
+  display: flex;
+  flex-direction: column;
+}
+.ds-sidenav-view__body {
+  display: flex;
+  flex-direction: row;
+}
+.ds-sidenav-view__footer {
+  display: flex;
+  flex-direction: column;
+}
+.ds-sidenav-view__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-sidenav-control-text-color);
+}
 
 /* Snackbar [54373:10303] — 4 вариантов; оси: Type, Mode */
 .ds-snackbar {
@@ -10686,6 +19262,38 @@ CSS-правила компонента:
 }
 .ds-snackbar__icon svg path {
   fill: currentColor;
+}
+.ds-snackbar__body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-3x);
+}
+.ds-snackbar__content {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+}
+.ds-snackbar__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-1x);
+  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-1x);
+  border-radius: var(--ds-size-2x);
+}
+.ds-snackbar__element-right {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-snackbar__progress {
+  height: var(--ds-size-1x);
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--ds-size-2x);
+  background: var(--ds-color-snackbar-progress-color);
 }
 .ds-snackbar--single.ds-snackbar--dark {
   background: var(--ds-color-snackbar-dark-background);
@@ -10727,7 +19335,6 @@ CSS-правила компонента:
   align-items: center;
   gap: var(--ds-size-1x);
   border-radius: var(--ds-size-2x);
-  height: var(--ds-size-6x);
   padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1x) var(--ds-size-1x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -10756,6 +19363,31 @@ CSS-правила компонента:
 }
 .ds-status__icon svg path {
   fill: currentColor;
+}
+.ds-status__element-left {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-status__info {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-status__content {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-status-icon-color);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-status-icon-color);
+}
+.ds-status__element-right {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
 }
 .ds-status--neutral.ds-status--filled {
   background: var(--ds-color-status-neutral-filled-background);
@@ -10794,39 +19426,30 @@ CSS-правила компонента:
   color: var(--ds-color-status-contrast-4-filled-text-color);
 }
 .ds-status--neutral.ds-status--text {
-  height: var(--ds-size-4x);
   color: var(--ds-color-status-icon-color);
 }
 .ds-status--accent.ds-status--text {
-  height: var(--ds-size-4x);
   color: var(--ds-color-status-accent-filled-text-color);
 }
 .ds-status--positive.ds-status--text {
-  height: var(--ds-size-4x);
   color: var(--ds-color-status-positive-filled-text-color);
 }
 .ds-status--warning.ds-status--text {
-  height: var(--ds-size-4x);
   color: var(--ds-color-status-warning-filled-text-color);
 }
 .ds-status--negative.ds-status--text {
-  height: var(--ds-size-4x);
   color: var(--ds-color-status-negative-filled-text-color);
 }
 .ds-status--contrast-1.ds-status--text {
-  height: var(--ds-size-4x);
   color: var(--ds-color-status-contrast-1-filled-text-color);
 }
 .ds-status--contrast-2.ds-status--text {
-  height: var(--ds-size-4x);
   color: var(--ds-color-status-contrast-2-filled-text-color);
 }
 .ds-status--contrast-3.ds-status--text {
-  height: var(--ds-size-4x);
   color: var(--ds-color-status-contrast-3-filled-text-color);
 }
 .ds-status--contrast-4.ds-status--text {
-  height: var(--ds-size-4x);
   color: var(--ds-color-status-contrast-4-filled-text-color);
 }
 
@@ -10844,13 +19467,38 @@ CSS-правила компонента:
   line-height: 18.28499984741211px;
   white-space: nowrap;
 }
+.ds-status-bar__time {
+  height: 18px;
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-status-bar__8-00 {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: 18.28499984741211px;
+}
+.ds-status-bar__stats {
+  height: var(--ds-size-3x);
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
 
 /* Table 2 lvl [60074:44684] — 2 вариантов; оси: Type */
 .ds-table-2-lvl {
-  height: 72px;
+  min-height: 72px;
   display: flex;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-table-2-lvl__header-row {
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-table-surfase-head);
+  border: 1px solid var(--ds-color-tab-active-press-background);
 }
 .ds-table-2-lvl--table-cell-2-lvl {
   flex-direction: column;
@@ -10863,7 +19511,7 @@ CSS-правила компонента:
 
 /* Table Chips Input [60220:70978] — 8 вариантов; оси: Style */
 .ds-table-chips-input {
-  height: var(--ds-size-6x);
+  min-height: var(--ds-size-6x);
   display: flex;
   flex-direction: column;
   background: var(--ds-color-table-surfase-default);
@@ -10895,6 +19543,20 @@ CSS-правила компонента:
 .ds-table-chips-input__icon svg path {
   fill: currentColor;
 }
+.ds-table-chips-input__frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-1x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-chips-input-default-background);
+  border: 1px solid var(--ds-color-chips-input-default-border-color);
+}
+.ds-table-chips-input__support {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-1x);
+}
 .ds-table-chips-input--default {
   color: var(--ds-color-chips-icon-color);
 }
@@ -10922,7 +19584,7 @@ CSS-правила компонента:
 
 /* Table content cell [52954:1253] — 8 вариантов; оси: State */
 .ds-table-content-cell {
-  height: var(--ds-size-9x);
+  min-height: var(--ds-size-9x);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -10955,6 +19617,15 @@ CSS-правила компонента:
 .ds-table-content-cell__icon svg path {
   fill: currentColor;
 }
+.ds-table-content-cell__element {
+  display: flex;
+  flex-direction: row;
+}
+.ds-table-content-cell__text-ui {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+}
 .ds-table-content-cell:disabled {
   color: var(--ds-color-tab-disable-icon-color);
 }
@@ -10970,7 +19641,7 @@ CSS-правила компонента:
 
 /* Table content row [60105:56764] — 5 вариантов; оси: State */
 .ds-table-content-row {
-  height: var(--ds-size-9x);
+  min-height: var(--ds-size-9x);
   display: flex;
   flex-direction: column;
   border: 1px solid var(--ds-color-tab-active-press-background);
@@ -11017,13 +19688,28 @@ CSS-правила компонента:
   color: var(--ds-color-tab-innactive-counter-text-color);
   white-space: nowrap;
 }
+.ds-table-footer__divider {
+  height: var(--ds-size-0-25x);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-color-table-surfase-default);
+}
+.ds-table-footer__content {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: var(--ds-size-8x) var(--ds-size-8x) var(--ds-size-3x) var(--ds-size-3x);
+  background: var(--ds-color-table-surfase-default);
+}
 .ds-table-footer--default {
   color: var(--ds-color-tab-innactive-counter-text-color);
 }
 
 /* Table header cell [60098:45424] — 3 вариантов; оси: State */
 .ds-table-header-cell {
-  height: var(--ds-size-9x);
+  min-height: var(--ds-size-9x);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -11058,6 +19744,15 @@ CSS-правила компонента:
 .ds-table-header-cell__icon svg path {
   fill: currentColor;
 }
+.ds-table-header-cell__element {
+  display: flex;
+  flex-direction: row;
+}
+.ds-table-header-cell__text-ui {
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+}
 .ds-table-header-cell:hover {
   background: var(--ds-color-table-cell-header-hover-background);
 }
@@ -11073,7 +19768,7 @@ CSS-правила компонента:
 
 /* Table header row [53556:3571] — 1 вариантов; оси: State */
 .ds-table-header-row {
-  height: var(--ds-size-9x);
+  min-height: var(--ds-size-9x);
   display: flex;
   flex-direction: column;
   background: var(--ds-color-table-surfase-head);
@@ -11092,7 +19787,7 @@ CSS-правила компонента:
 
 /* Text UI [57938:18290] — 7 вариантов; оси: State */
 .ds-text-ui {
-  height: 52px;
+  min-height: 52px;
   display: flex;
   flex-direction: row;
   gap: var(--ds-size-2x);
@@ -11123,6 +19818,59 @@ CSS-правила компонента:
 .ds-text-ui__icon svg path {
   fill: currentColor;
 }
+.ds-text-ui__element-left {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-text-ui__checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-text-ui__content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-text-ui__label-up {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-darker);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-text-ui__list-item {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-super-dark);
+  font-size: var(--ds-typography-body-font-size-s);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-text-ui__label-down {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-darker);
+  font-size: var(--ds-typography-caption-font-size-l);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-caption-line-height-l);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-text-ui__element-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  background: var(--ds-color-brand-neutral-default);
+}
+.ds-text-ui__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
 .ds-text-ui:disabled {
   color: var(--ds-color-brand-neutral-neutral);
 }
@@ -11135,7 +19883,7 @@ CSS-правила компонента:
 
 /* Textarea [57916:9023] — 13 вариантов; оси: Size, Variant, State */
 .ds-textarea {
-  height: 96px;
+  min-height: 96px;
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-1x);
@@ -11165,6 +19913,51 @@ CSS-правила компонента:
 }
 .ds-textarea__icon svg path {
   fill: currentColor;
+}
+.ds-textarea__input-frame {
+  height: 76px;
+  display: flex;
+  flex-direction: row;
+  gap: var(--ds-size-2x);
+  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1x) var(--ds-size-3x);
+  border-radius: var(--ds-size-3x);
+  background: var(--ds-color-brand-accent-super-lightest);
+  border: 1px solid var(--ds-color-brand-neutral-lighter);
+}
+.ds-textarea__element-left {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-textarea__input-content {
+  display: flex;
+  flex-direction: column;
+}
+.ds-textarea__element-right {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-textarea__scroll {
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
+}
+.ds-textarea__support {
+  display: flex;
+  flex-direction: row;
+}
+.ds-textarea__text {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  padding: var(--ds-size-3x) var(--ds-size-3x) 0 0;
+}
+.ds-textarea__hint {
+  height: var(--ds-size-4x);
+  display: flex;
+  flex-direction: row;
+  padding: var(--ds-size-3x) var(--ds-size-3x) 0 0;
 }
 .ds-textarea--populated:disabled {
   color: var(--ds-color-brand-neutral-neutral);
@@ -11200,7 +19993,6 @@ CSS-правила компонента:
 }
 
 /* Timepicker [58982:9858] — 2 вариантов; оси: Type */
-/* height из макета Figma: 244px — размер примера, задавайте по месту */
 .ds-timepicker {
   display: flex;
   padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
@@ -11235,6 +20027,17 @@ CSS-правила компонента:
 .ds-timepicker__icon svg path {
   fill: currentColor;
 }
+.ds-timepicker__control-panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ds-timepicker__scroll {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x) var(--ds-size-0-5x);
+}
 .ds-timepicker--time-grid {
   flex-direction: column;
   align-items: center;
@@ -11246,8 +20049,8 @@ CSS-правила компонента:
 }
 
 /* Title variant [17034:68611] — 1 вариантов; оси: — */
-/* height из макета Figma: 140px — размер примера, задавайте по месту */
 .ds-title-variant {
+  min-height: 140px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -11261,10 +20064,60 @@ CSS-правила компонента:
   color: var(--ds-color-brand-neutral-super-dark);
   white-space: nowrap;
 }
+.ds-title-variant__size {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
+}
+.ds-title-variant__body-4 {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-super-dark);
+  font-size: var(--ds-typography-header-font-size-s);
+  font-weight: var(--ds-typography-font-weight-medium);
+  line-height: var(--ds-typography-header-line-height-s);
+  color: var(--ds-color-brand-neutral-super-dark);
+}
+.ds-title-variant__body-6 {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-darker);
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-title-variant__body-7 {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-darker);
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-title-variant__body-5 {
+  display: flex;
+  flex-direction: row;
+  background: var(--ds-color-brand-neutral-darker);
+  font-size: var(--ds-typography-body-font-size-m);
+  font-weight: var(--ds-typography-font-weight-regular);
+  line-height: var(--ds-typography-body-line-height-l);
+  color: var(--ds-color-brand-neutral-darker);
+}
+.ds-title-variant__mode {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
+}
 
 /* Toggle buttons [16992:8639] — 5 вариантов; оси: Type */
 .ds-toggle-buttons {
-  height: var(--ds-size-9x);
+  min-height: var(--ds-size-9x);
   display: flex;
   flex-direction: row;
   padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x);
@@ -11296,6 +20149,16 @@ CSS-правила компонента:
 }
 .ds-toggle-buttons__icon svg path {
   fill: currentColor;
+}
+.ds-toggle-buttons__notifications {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-toggle-buttons__vector {
+  height: var(--ds-size-6x);
+  display: flex;
+  flex-direction: row;
 }
 .ds-toggle-buttons--1-button {
   background: var(--ds-color-button-accent-lite-default);
@@ -11345,6 +20208,19 @@ CSS-правила компонента:
 .ds-tree__icon svg path {
   fill: currentColor;
 }
+.ds-tree__item {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-size-2-5x);
+  padding: 11px 0 0 var(--ds-size-5x);
+}
+.ds-tree__separator-stroke {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
 .ds-tree--2.ds-tree--end.ds-tree--on {
   flex-direction: row;
 }
@@ -11382,6 +20258,11 @@ CSS-правила компонента:
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-tree-item__separator-stroke {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 .ds-tree-item--end {
   flex-direction: row;
