@@ -29,6 +29,7 @@
   justify-content: center;
   width: var(--ds-size-5x);                    /* 20px */
   height: var(--ds-size-5x);
+  flex-shrink: 0;                              /* иконка не сжимается */
 }
 .ds-btn-icon__icon svg { width: 100%; height: 100%; display: block; }
 .ds-btn-icon__icon svg path { fill: currentColor; }
@@ -53,6 +54,7 @@
 .ds-btn-icon--xs .ds-btn-icon__icon {
   width: var(--ds-size-4x);                    /* 16px */
   height: var(--ds-size-4x);
+  flex-shrink: 0;                              /* иконка не сжимается */
 }
 
 /* ── Состояния: общие ─────────────────────────────────────── */
