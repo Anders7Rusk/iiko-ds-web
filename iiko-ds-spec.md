@@ -1685,7 +1685,7 @@
 - **Type** (VARIANT): Default
 - Токены компонента (1):
     - `--ds-color-backdrop-background`: `#333333`
-
+- CSS не требуется: собственного оформления нет — компонент задаёт только структуру/поведение, вид приходит от вложенных элементов.
 
 #### Badge `[54428:187]` — 8 вариантов
 - **Style** (VARIANT): Accent, Negative, Positive, Warning
@@ -2662,7 +2662,7 @@
     - `--ds-color-button-warning-text-press-background`: `#fff4e5`
     - `--ds-color-button-warning-text-press-icon-color`: `#ea7806`
     - `--ds-color-button-warning-text-press-text-color`: `#ea7806`
-
+- CSS: выверено вручную, см. `components/button-icon.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Button icon group `[53828:5738]` — 2 вариантов
 - **Orientation** (VARIANT): Horizontally, Vertically
@@ -2897,7 +2897,7 @@
     - `--ds-color-button-warning-text-press-background`: `#fff4e5`
     - `--ds-color-button-warning-text-press-icon-color`: `#ea7806`
     - `--ds-color-button-warning-text-press-text-color`: `#ea7806`
-
+- CSS: выверено вручную, см. `components/button-icon.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Button New `[16321:6498]` — 2 вариантов
 - **Type** (VARIANT): btn-28, btn-36
@@ -4730,7 +4730,7 @@
 
 #### Content `[57375:12699]` — 1 вариантов
 - Прочие свойства: Slot#57375:0 (SLOT), Slot 1#57376:0 (SLOT)
-
+- CSS не требуется: собственного оформления нет — компонент задаёт только структуру/поведение, вид приходит от вложенных элементов.
 
 #### Control arrow button `[52868:3935]` — 3 вариантов
 - **Size** (VARIANT): M, S, XS
@@ -5717,7 +5717,7 @@
 
 #### Element cell `[58885:32432]` — 11 вариантов
 - **Variant** (VARIANT): Button, Button icon, Cell Input, Checkbox, Chips, Icon group, Icon size, Input number, Slide toggle, Status, Text UI
-
+- CSS не требуется: это **слот-контейнер** — пустая обёртка под вложенный компонент (иконку, ячейку). Оформление задаёт вложенный компонент, а размер — контент.
 
 #### Element Form Field `[60231:76795]` — 3 вариантов
 - **Variant** (VARIANT): Chips input cell, Input cell, Select cell
@@ -6174,7 +6174,7 @@
 
 #### Elementare cell `[60220:72578]` — 10 вариантов
 - **Variant** (VARIANT): Button, Button icon, Checkbox, Chips, Icon group, Icon size, Input number, Slide toggle, Status, Text UI
-
+- CSS не требуется: это **слот-контейнер** — пустая обёртка под вложенный компонент (иконку, ячейку). Оформление задаёт вложенный компонент, а размер — контент.
 
 #### Elements `[58501:4220]` — 30 вариантов
 - **Type** (VARIANT): Cell, Month, Year
@@ -6610,7 +6610,7 @@
     - `--ds-color-expansion-panel-block-expand-header-disable-text-color`: `#9e9e9e`
     - `--ds-color-expansion-panel-block-expand-header-hover-background`: `#f5f5f5`
     - `--ds-color-expansion-panel-block-expand-header-press-background`: `#e0e0e0`
-
+- CSS не требуется: это **слот-контейнер** — пустая обёртка под вложенный компонент (иконку, ячейку). Оформление задаёт вложенный компонент, а размер — контент.
 
 #### Form field cell `[60220:72732]` — 1 вариантов
 - **Variant** (VARIANT): Table content cell Chips input
@@ -7219,11 +7219,11 @@
 - **Size** (VARIANT): 16, 20, 24, 32, 36, 40
 - **Content** (VARIANT): Icon, Img
 - Прочие свойства: State#54063:8 (BOOLEAN), Instance#60108:34 (INSTANCE_SWAP)
-
+- CSS не требуется: это **слот-контейнер** — пустая обёртка под вложенный компонент (иконку, ячейку). Оформление задаёт вложенный компонент, а размер — контент.
 
 #### Icon size_Draft `[54063:12911]` — 6 вариантов
 - **Size** (VARIANT): 16, 20, 24, 32, 36, 40
-
+- CSS не требуется: это **слот-контейнер** — пустая обёртка под вложенный компонент (иконку, ячейку). Оформление задаёт вложенный компонент, а размер — контент.
 
 #### Input `[52670:7573]` — 29 вариантов
 - **Size** (VARIANT): M, S, XS
@@ -10665,7 +10665,7 @@
     - `--ds-color-sidenav-sidebar-info-background-container`: `#f8f9fc`
     - `--ds-color-sidenav-sidebar-l1-background`: `#263136`
     - `--ds-color-sidenav-sidebar-l2-background`: `#ffffff`
-
+- CSS не требуется: собственного оформления нет — компонент задаёт только структуру/поведение, вид приходит от вложенных элементов.
 
 #### Slide toggle `[52887:2592]` — 6 вариантов
 - **Active** (VARIANT): Off, On
@@ -11172,7 +11172,7 @@
     - `--ds-color-stepper-selected-border-color`: `#448aff`
     - `--ds-color-stepper-selected-icon-color`: `#448aff`
     - `--ds-color-stepper-selected-text-color`: `#448aff`
-
+- CSS: выверено вручную, см. `components/stepper.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Stepper line `[54689:3072]` — 4 вариантов
 - **Step** (VARIANT): Off, On
@@ -11202,7 +11202,7 @@
     - `--ds-color-stepper-selected-border-color`: `#448aff`
     - `--ds-color-stepper-selected-icon-color`: `#448aff`
     - `--ds-color-stepper-selected-text-color`: `#448aff`
-
+- CSS: выверено вручную, см. `components/stepper.css` в разделе «Полные CSS-стили всех компонентов»
 
 #### Tab element `[54404:200]` — 16 вариантов
 - **Lvl** (VARIANT): 1, 2
@@ -12679,8 +12679,8 @@
 |---|---|---|
 | `.ds-btn` | `--accent` `--disabled` `--filled` `--m` `--negative` `--neutral` `--outlined` `--positive` `--s` `--text` `--warning` `--xs` | `__icon` |
 | `.ds-btn-group` | `--horizontal` `--margins` `--vertical` | — |
-| `.ds-button-icon` | `--disabled` `--filled` `--m` `--outlined` `--s` `--text` `--xs` | `__icon` |
-| `.ds-button-icon-group` | `--vertically` | — |
+| `.ds-btn-icon` | `--accent` `--disabled` `--m` `--negative` `--neutral` `--outlined` `--positive` `--s` `--text` `--warning` `--xs` | `__icon` |
+| `.ds-btn-icon-group` | `--vertically` | — |
 | `.ds-input` | `--disabled` `--error` `--m` `--s` `--xs` | `__content` `__field` `__frame` `__hint` `__icon` `__label` `__stepper` `__support` `__support-row` |
 | `.ds-checkbox` | `--disabled` `--error` | `__box` `__input` `__label` `__support` |
 | `.ds-radio` | `--disabled` `--error` | `__box` `__input` `__label` `__state` `__support` |
@@ -20512,159 +20512,250 @@ CSS-правила компонента:
 }
 
 /* ============================================================
-   iiko DS — Button icon (Figma 17123:81299, 153 варианта)
-   Size × Style × Type × State, снято по узлам Figma:
-     Size:  M 36×36 pad 8 (иконка 20) · S 28×28 pad 4 (20) · XS 24×24 pad 4 (16)
-     r8 у всех размеров
-     Type=Text     — БЕЗ фона (прозрачный), БЕЗ рамки, БЕЗ тени; hover — фон
-     Type=Outlined — рамка 1px, фон #FFFFFF, БЕЗ тени
-     Type=Filled   — фон Style, тень 0 0 4px rgba(33,33,33,.12)
-     Style: Accent / Neutral / Positive / Negative / Warning
-   Цвета — только компонентные токены --ds-color-button-icon-*
+   iiko DS — Button icon + Button icon group
+   Источник: Figma, страница «Button icon» [17123:81299], 153 варианта
+   Оси: Size (M/S/XS) × Style (Accent/Negative/Neutral/Positive/Warning)
+        × Type (Filled/Outlined/Text) × State (Default/Hover/Press/Disable/Loading)
+   Размеры: M 36×36 (иконка 20) · S 28×28 (иконка 20) · XS 24×24 (иконка 16)
+   Радиус 8px у всех размеров
    ============================================================ */
 
-.ds-button-icon {
+.ds-btn-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  width: 36px;
-  height: 36px;
-  padding: var(--ds-space-2x);                              /* 8px */
-  border: none;
-  border-radius: var(--ds-radius-2x);                       /* 8px */
-  background: var(--ds-color-button-icon-neutral-text-default-background);
-  color: var(--ds-color-button-icon-neutral-text-icon-color);
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  flex-shrink: 0;
+  width: var(--ds-size-9x);                    /* M: 36px */
+  height: var(--ds-size-9x);
+  padding: var(--ds-space-2x);                 /* 8px */
+  border: 1px solid transparent;
+  border-radius: var(--ds-radius-2x);          /* 8px */
+  background: none;
   cursor: pointer;
+  transition: background-color .12s ease, border-color .12s ease;
 }
 
-/* ── Размеры ──────────────────────────────────────────────── */
-
-.ds-button-icon--m  { width: 36px; height: 36px; padding: var(--ds-space-2x); }
-.ds-button-icon--s  { width: 28px; height: 28px; padding: var(--ds-space-1x); }
-.ds-button-icon--xs { width: 24px; height: 24px; padding: var(--ds-space-1x); }
-
-/* ── Слот иконки ──────────────────────────────────────────── */
-
-.ds-button-icon__icon {
+.ds-btn-icon__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  width: var(--ds-size-5x);                    /* 20px */
+  height: var(--ds-size-5x);
 }
-.ds-button-icon--xs .ds-button-icon__icon { width: 16px; height: 16px; }
-.ds-button-icon__icon svg { width: 100%; height: 100%; display: block; }
-.ds-button-icon__icon svg path { fill: currentColor; }
+.ds-btn-icon__icon svg { width: 100%; height: 100%; display: block; }
+.ds-btn-icon__icon svg path { fill: currentColor; }
 
-/* ── Type=Text (по умолчанию): прозрачный фон, без рамки и тени ─ */
+/* ── Размеры ──────────────────────────────────────────────── */
 
-.ds-button-icon--text {
-  border: none;
-  box-shadow: none;
-  background: var(--ds-color-button-icon-neutral-text-default-background);
-  color: var(--ds-color-button-icon-neutral-text-icon-color);
+.ds-btn-icon--m {
+  width: var(--ds-size-9x);                    /* 36px */
+  height: var(--ds-size-9x);
+  padding: var(--ds-space-2x);                 /* 8px */
 }
-.ds-button-icon--text:hover  { background: var(--ds-color-button-icon-neutral-text-hover-background); }
-.ds-button-icon--text:active { background: var(--ds-color-button-icon-neutral-text-press-background); }
-
-.ds-button-icon--text.ds-button-icon--accent {
-  background: var(--ds-color-button-icon-accent-text-default-background);
-  color: var(--ds-color-button-icon-accent-text-icon-color);
+.ds-btn-icon--s {
+  width: var(--ds-size-7x);                    /* 28px */
+  height: var(--ds-size-7x);
+  padding: var(--ds-space-1x);                 /* 4px */
 }
-.ds-button-icon--text.ds-button-icon--accent:hover  { background: var(--ds-color-button-icon-accent-text-hover-background); }
-.ds-button-icon--text.ds-button-icon--accent:active { background: var(--ds-color-button-icon-accent-text-press-background); }
-
-.ds-button-icon--text.ds-button-icon--negative {
-  background: var(--ds-color-button-icon-negative-text-default-background);
-  color: var(--ds-color-button-icon-negative-text-icon-color);
+.ds-btn-icon--xs {
+  width: var(--ds-size-6x);                    /* 24px */
+  height: var(--ds-size-6x);
+  padding: var(--ds-space-1x);                 /* 4px */
 }
-.ds-button-icon--text.ds-button-icon--positive {
-  background: var(--ds-color-button-icon-positive-text-default-background);
-  color: var(--ds-color-button-icon-positive-text-icon-color);
-}
-.ds-button-icon--text.ds-button-icon--warning {
-  background: var(--ds-color-button-icon-warning-text-default-background);
-  color: var(--ds-color-button-icon-warning-text-icon-color);
+.ds-btn-icon--xs .ds-btn-icon__icon {
+  width: var(--ds-size-4x);                    /* 16px */
+  height: var(--ds-size-4x);
 }
 
-/* ── Type=Outlined: рамка 1px, фон белый, без тени ─────────── */
+/* ── Состояния: общие ─────────────────────────────────────── */
 
-.ds-button-icon--outlined {
-  box-shadow: none;
-  border: 1px solid var(--ds-color-button-icon-neutral-outlined-border-color);
-  background: var(--ds-color-button-icon-neutral-outlined-default-background);
-  color: var(--ds-color-button-icon-neutral-outlined-icon-color);
+.ds-btn-icon:disabled,
+.ds-btn-icon--disabled {
+  pointer-events: none;
+  background: var(--ds-color-button-icon-disable-background-filled);
+  border-color: var(--ds-color-button-icon-disable-border-color);
+  color: var(--ds-color-button-icon-disable-icon-color);
 }
-.ds-button-icon--outlined:hover  { background: var(--ds-color-button-icon-neutral-outlined-hover-background); }
-.ds-button-icon--outlined:active { background: var(--ds-color-button-icon-neutral-outlined-press-background); }
-
-.ds-button-icon--outlined.ds-button-icon--accent {
-  border-color: var(--ds-color-button-icon-accent-outlined-border-color);
-  background: var(--ds-color-button-icon-accent-outlined-default-background);
-  color: var(--ds-color-button-icon-accent-outlined-icon-color);
+.ds-btn-icon--outlined:disabled,
+.ds-btn-icon--outlined.ds-btn-icon--disabled {
+  background: var(--ds-color-button-icon-disable-background-outlined);
 }
-.ds-button-icon--outlined.ds-button-icon--accent:hover  { background: var(--ds-color-button-icon-accent-outlined-hover-background); }
-.ds-button-icon--outlined.ds-button-icon--accent:active { background: var(--ds-color-button-icon-accent-outlined-press-background); }
-
-.ds-button-icon--outlined.ds-button-icon--negative {
-  border-color: var(--ds-color-button-icon-negative-outlined-border-color);
-  background: var(--ds-color-button-icon-negative-outlined-default-background);
-  color: var(--ds-color-button-icon-negative-outlined-icon-color);
+.ds-btn-icon--text:disabled,
+.ds-btn-icon--text.ds-btn-icon--disabled {
+  background: var(--ds-color-button-icon-disable-background-text);
+  border-color: transparent;
 }
 
-/* ── Type=Filled: фон Style + тень ────────────────────────── */
+/* ── Button icon group (Orientation=Horizontally / Vertically) ── */
 
-.ds-button-icon--filled {
-  border: none;
-  box-shadow: 0 0 4px rgba(33, 33, 33, .12);
-  background: var(--ds-color-button-icon-neutral-filled-default-background);
-  color: var(--ds-color-button-icon-neutral-filled-icon-color);
+.ds-btn-icon-group {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--ds-space-2x);                     /* 8px */
 }
-.ds-button-icon--filled:hover  { background: var(--ds-color-button-icon-neutral-filled-hover-background); }
-.ds-button-icon--filled:active { background: var(--ds-color-button-icon-neutral-filled-press-background); }
+.ds-btn-icon-group--vertically {
+  flex-direction: column;
+}
 
-.ds-button-icon--filled.ds-button-icon--accent {
+/* ── Стиль × Тип (все комбинации, значения из токенов ДС) ── */
+
+.ds-btn-icon--accent.ds-btn-icon--filled {
   background: var(--ds-color-button-icon-accent-filled-default-background);
   color: var(--ds-color-button-icon-accent-filled-icon-color);
 }
-.ds-button-icon--filled.ds-button-icon--accent:hover  { background: var(--ds-color-button-icon-accent-filled-hover-background); }
-.ds-button-icon--filled.ds-button-icon--accent:active { background: var(--ds-color-button-icon-accent-filled-press-background); }
-
-.ds-button-icon--filled.ds-button-icon--negative {
+.ds-btn-icon--accent.ds-btn-icon--filled:hover {
+  background: var(--ds-color-button-icon-accent-filled-hover-background);
+}
+.ds-btn-icon--accent.ds-btn-icon--filled:active {
+  background: var(--ds-color-button-icon-accent-filled-press-background);
+}
+.ds-btn-icon--accent.ds-btn-icon--outlined {
+  background: var(--ds-color-button-icon-accent-outlined-default-background);
+  color: var(--ds-color-button-icon-accent-outlined-icon-color);
+  border-color: var(--ds-color-button-icon-accent-outlined-border-color);
+}
+.ds-btn-icon--accent.ds-btn-icon--outlined:hover {
+  background: var(--ds-color-button-icon-accent-outlined-hover-background);
+}
+.ds-btn-icon--accent.ds-btn-icon--outlined:active {
+  background: var(--ds-color-button-icon-accent-outlined-press-background);
+}
+.ds-btn-icon--accent.ds-btn-icon--text {
+  background: var(--ds-color-button-icon-accent-text-default-background);
+  color: var(--ds-color-button-icon-accent-text-icon-color);
+}
+.ds-btn-icon--accent.ds-btn-icon--text:hover {
+  background: var(--ds-color-button-icon-accent-text-hover-background);
+}
+.ds-btn-icon--accent.ds-btn-icon--text:active {
+  background: var(--ds-color-button-icon-accent-text-press-background);
+}
+.ds-btn-icon--negative.ds-btn-icon--filled {
   background: var(--ds-color-button-icon-negative-filled-default-background);
   color: var(--ds-color-button-icon-negative-filled-icon-color);
 }
-.ds-button-icon--filled.ds-button-icon--positive {
+.ds-btn-icon--negative.ds-btn-icon--filled:hover {
+  background: var(--ds-color-button-icon-negative-filled-hover-background);
+}
+.ds-btn-icon--negative.ds-btn-icon--filled:active {
+  background: var(--ds-color-button-icon-negative-filled-press-background);
+}
+.ds-btn-icon--negative.ds-btn-icon--outlined {
+  background: var(--ds-color-button-icon-negative-outlined-default-background);
+  color: var(--ds-color-button-icon-negative-outlined-icon-color);
+  border-color: var(--ds-color-button-icon-negative-outlined-border-color);
+}
+.ds-btn-icon--negative.ds-btn-icon--outlined:hover {
+  background: var(--ds-color-button-icon-negative-outlined-hover-background);
+}
+.ds-btn-icon--negative.ds-btn-icon--outlined:active {
+  background: var(--ds-color-button-icon-negative-outlined-press-background);
+}
+.ds-btn-icon--negative.ds-btn-icon--text {
+  background: var(--ds-color-button-icon-negative-text-default-background);
+  color: var(--ds-color-button-icon-negative-text-icon-color);
+}
+.ds-btn-icon--negative.ds-btn-icon--text:hover {
+  background: var(--ds-color-button-icon-negative-text-hover-background);
+}
+.ds-btn-icon--negative.ds-btn-icon--text:active {
+  background: var(--ds-color-button-icon-negative-text-press-background);
+}
+.ds-btn-icon--neutral.ds-btn-icon--filled {
+  background: var(--ds-color-button-icon-neutral-filled-default-background);
+  color: var(--ds-color-button-icon-neutral-filled-icon-color);
+}
+.ds-btn-icon--neutral.ds-btn-icon--filled:hover {
+  background: var(--ds-color-button-icon-neutral-filled-hover-background);
+}
+.ds-btn-icon--neutral.ds-btn-icon--filled:active {
+  background: var(--ds-color-button-icon-neutral-filled-press-background);
+}
+.ds-btn-icon--neutral.ds-btn-icon--outlined {
+  background: var(--ds-color-button-icon-neutral-outlined-default-background);
+  color: var(--ds-color-button-icon-neutral-outlined-icon-color);
+  border-color: var(--ds-color-button-icon-neutral-outlined-border-color);
+}
+.ds-btn-icon--neutral.ds-btn-icon--outlined:hover {
+  background: var(--ds-color-button-icon-neutral-outlined-hover-background);
+}
+.ds-btn-icon--neutral.ds-btn-icon--outlined:active {
+  background: var(--ds-color-button-icon-neutral-outlined-press-background);
+}
+.ds-btn-icon--neutral.ds-btn-icon--text {
+  background: var(--ds-color-button-icon-neutral-text-default-background);
+  color: var(--ds-color-button-icon-neutral-text-icon-color);
+}
+.ds-btn-icon--neutral.ds-btn-icon--text:hover {
+  background: var(--ds-color-button-icon-neutral-text-hover-background);
+}
+.ds-btn-icon--neutral.ds-btn-icon--text:active {
+  background: var(--ds-color-button-icon-neutral-text-press-background);
+}
+.ds-btn-icon--positive.ds-btn-icon--filled {
   background: var(--ds-color-button-icon-positive-filled-default-background);
   color: var(--ds-color-button-icon-positive-filled-icon-color);
 }
-.ds-button-icon--filled.ds-button-icon--warning {
+.ds-btn-icon--positive.ds-btn-icon--filled:hover {
+  background: var(--ds-color-button-icon-positive-filled-hover-background);
+}
+.ds-btn-icon--positive.ds-btn-icon--filled:active {
+  background: var(--ds-color-button-icon-positive-filled-press-background);
+}
+.ds-btn-icon--positive.ds-btn-icon--outlined {
+  background: var(--ds-color-button-icon-positive-outlined-default-background);
+  color: var(--ds-color-button-icon-positive-outlined-icon-color);
+  border-color: var(--ds-color-button-icon-positive-outlined-border-color);
+}
+.ds-btn-icon--positive.ds-btn-icon--outlined:hover {
+  background: var(--ds-color-button-icon-positive-outlined-hover-background);
+}
+.ds-btn-icon--positive.ds-btn-icon--outlined:active {
+  background: var(--ds-color-button-icon-positive-outlined-press-background);
+}
+.ds-btn-icon--positive.ds-btn-icon--text {
+  background: var(--ds-color-button-icon-positive-text-default-background);
+  color: var(--ds-color-button-icon-positive-text-icon-color);
+}
+.ds-btn-icon--positive.ds-btn-icon--text:hover {
+  background: var(--ds-color-button-icon-positive-text-hover-background);
+}
+.ds-btn-icon--positive.ds-btn-icon--text:active {
+  background: var(--ds-color-button-icon-positive-text-press-background);
+}
+.ds-btn-icon--warning.ds-btn-icon--filled {
   background: var(--ds-color-button-icon-warning-filled-default-background);
   color: var(--ds-color-button-icon-warning-filled-icon-color);
 }
-
-/* ── State=Disable ────────────────────────────────────────── */
-
-.ds-button-icon:disabled,
-.ds-button-icon--disabled {
-  pointer-events: none;
-  color: var(--ds-color-button-icon-disable-icon-color);       /* #9E9E9E */
+.ds-btn-icon--warning.ds-btn-icon--filled:hover {
+  background: var(--ds-color-button-icon-warning-filled-hover-background);
 }
-.ds-button-icon--text:disabled     { background: var(--ds-color-button-icon-disable-background-text); }
-.ds-button-icon--outlined:disabled { background: var(--ds-color-button-icon-disable-background-outlined); border-color: var(--ds-color-button-icon-disable-border-color); }
-.ds-button-icon--filled:disabled   { background: var(--ds-color-button-icon-disable-background-filled); box-shadow: none; }
-
-/* ── Button icon group (gap 8) ────────────────────────────── */
-
-.ds-button-icon-group {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--ds-space-2x);                                  /* 8px */
+.ds-btn-icon--warning.ds-btn-icon--filled:active {
+  background: var(--ds-color-button-icon-warning-filled-press-background);
 }
-.ds-button-icon-group--vertically { flex-direction: column; }
+.ds-btn-icon--warning.ds-btn-icon--outlined {
+  background: var(--ds-color-button-icon-warning-outlined-default-background);
+  color: var(--ds-color-button-icon-warning-outlined-icon-color);
+  border-color: var(--ds-color-button-icon-warning-outlined-border-color);
+}
+.ds-btn-icon--warning.ds-btn-icon--outlined:hover {
+  background: var(--ds-color-button-icon-warning-outlined-hover-background);
+}
+.ds-btn-icon--warning.ds-btn-icon--outlined:active {
+  background: var(--ds-color-button-icon-warning-outlined-press-background);
+}
+.ds-btn-icon--warning.ds-btn-icon--text {
+  background: var(--ds-color-button-icon-warning-text-default-background);
+  color: var(--ds-color-button-icon-warning-text-icon-color);
+}
+.ds-btn-icon--warning.ds-btn-icon--text:hover {
+  background: var(--ds-color-button-icon-warning-text-hover-background);
+}
+.ds-btn-icon--warning.ds-btn-icon--text:active {
+  background: var(--ds-color-button-icon-warning-text-press-background);
+}
 
 /* ============================================================
    iiko DS — Input (Form field + Input)
