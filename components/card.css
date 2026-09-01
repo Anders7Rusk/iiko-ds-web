@@ -21,9 +21,9 @@
   border: 1px solid var(--ds-color-stroke-default);   /* #E0E0E0 */
 }
 
-/* Type=Shadow — тень 0 0 4px rgba(33,33,33,.12) */
+/* Type=Shadow — эффект-стиль ДС «Shadows/01 dp Sl» (Card/Shadows) */
 .ds-card--shadow {
-  box-shadow: 0 0 4px 0 rgba(33, 33, 33, 0.12);
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 
 /* ── Card header (Label up / Title / Label down + Divider) ── */
