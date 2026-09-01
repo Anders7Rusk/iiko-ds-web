@@ -146,10 +146,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-autocomplete-form__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -237,7 +237,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
   padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2-5x) var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -272,10 +272,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-button-toggle__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-chips-input-focus-border-color);
   white-space: nowrap;
 }
@@ -382,9 +382,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-checkbox-label-text-support-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-checkbox-label--normal.ds-checkbox-label--deselected {
@@ -428,10 +429,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -473,9 +474,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-chips-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-chips__close {
@@ -551,10 +553,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-group__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -589,10 +591,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -678,10 +680,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input-2__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -767,10 +769,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input-cell__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -966,10 +968,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-content__label {
-  font-size: var(--ds-typography-font-size-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-7x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-header-s-20-normal-regular-size);
+  line-height: var(--ds-font-header-s-20-normal-regular-line);
+  letter-spacing: var(--ds-font-header-s-20-normal-regular-spacing);
+  font-weight: var(--ds-font-header-s-20-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -1133,10 +1135,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-control-panel__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -1168,9 +1170,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-primary);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-control-panel__button-icon-group {
@@ -1213,10 +1216,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-control-panel-2__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -1248,9 +1251,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-primary);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-control-panel-2__button-icon-group {
@@ -1280,10 +1284,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-datepicker__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -1355,10 +1359,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-dialog-content__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-medium-size);
+  line-height: var(--ds-font-body-m-16-normal-medium-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-medium-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -1401,10 +1405,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-dialog-footer__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -1444,7 +1448,7 @@
   padding: var(--ds-button-m-size-pad-left) var(--ds-button-m-size-pad-right) var(--ds-button-m-size-pad-top) var(--ds-button-m-size-pad-bottom);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-button-accent-filled-default-background);
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 
 /* Dialog header [53535:1322] — 2 вариантов; оси: Type */
@@ -1456,10 +1460,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-dialog-header__label {
-  font-size: var(--ds-typography-font-size-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-7x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-header-s-20-normal-medium-size);
+  line-height: var(--ds-font-header-s-20-normal-medium-line);
+  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
+  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -1488,9 +1492,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-dialog-header-desc-color);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-dialog-header__divider {
@@ -1513,15 +1518,15 @@
   flex-direction: column;
   border-radius: var(--ds-size-3x);
   background: var(--ds-color-dialog-background);
-  box-shadow: 0.0px 0.0px 28.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-12-dp-m);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-dialog-view__label {
-  font-size: var(--ds-typography-font-size-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-7x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-header-s-20-normal-medium-size);
+  line-height: var(--ds-font-header-s-20-normal-medium-line);
+  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
+  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -1584,10 +1589,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -1656,10 +1661,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-form-field__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -1727,10 +1732,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-menu__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -1795,10 +1800,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-select__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -1864,10 +1869,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-sidenav__label {
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-3x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-m-10-normal-medium-size);
+  line-height: var(--ds-font-caption-m-10-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-m-10-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-m-10-normal-medium-weight);
+  text-transform: capitalize;
   color: var(--ds-color-chips-input-focus-border-color);
   white-space: nowrap;
 }
@@ -1914,10 +1920,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-step__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -1981,10 +1987,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-elements__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -2010,9 +2016,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-primary);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-elements--cell.ds-elements--today:disabled {
@@ -2154,10 +2161,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-elements-2__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -2220,10 +2227,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-expansion-content__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
   white-space: nowrap;
 }
@@ -2243,10 +2250,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-expansion-group-panel__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
   white-space: nowrap;
 }
@@ -2330,16 +2337,16 @@
 .ds-hint-container {
   display: flex;
   align-items: center;
-  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-08-dp-s);
   border-radius: var(--ds-size-2x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-hint-container__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -2420,10 +2427,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-hint-content__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -2491,10 +2498,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-hint-footer__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -2518,9 +2525,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-hint-footer-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
 }
 .ds-hint-footer__button-group {
@@ -2545,10 +2553,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-hint-header__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -2583,9 +2591,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-hint-header-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
 }
 .ds-hint-header__clear {
@@ -2657,10 +2666,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-cell__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
   white-space: nowrap;
 }
@@ -2720,10 +2729,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-datepicker__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
   white-space: nowrap;
 }
@@ -2779,10 +2788,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-for-number__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-input-filled-default-input-text-color);
   white-space: nowrap;
 }
@@ -2847,10 +2856,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-number__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
   white-space: nowrap;
 }
@@ -2934,10 +2943,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-number-but-icon__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
   white-space: nowrap;
 }
@@ -2971,7 +2980,7 @@
   padding: var(--ds-button-icon-m-size-pad-left) var(--ds-button-icon-m-size-pad-right) var(--ds-button-icon-m-size-pad-top) var(--ds-button-icon-m-size-pad-bottom);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-button-icon-neutral-filled-default-background);
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 .ds-input-number-but-icon__text {
   height: var(--ds-size-4x);
@@ -2982,9 +2991,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-form-field-filled-default-support-text-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
 }
 
@@ -2998,10 +3008,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-timepicker__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-input-input-label-text-color);
   white-space: nowrap;
 }
@@ -3054,10 +3064,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-list-container__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -3128,10 +3138,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-list-item__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -3169,27 +3179,30 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-list-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-list-item__text {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-list-item-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-list-item__label-down {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-list-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-list-item__element-right {
@@ -3262,15 +3275,15 @@
   padding: 0 0 var(--ds-menu-pad-top) var(--ds-menu-pad-bottom);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-menu-background);
-  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-menu-container__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-text-placeholder-color);
   white-space: nowrap;
 }
@@ -3355,10 +3368,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-menu-item__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -3396,27 +3409,30 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-menu-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-menu-item__text {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-menu-item-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-menu-item__label-down {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-menu-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-menu-item__element-right {
@@ -3601,9 +3617,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-radio-button-label-text-support-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-radio-button-label--normal.ds-radio-button-label--deselected {
@@ -3696,7 +3713,7 @@
   padding: var(--ds-button-icon-s-size-pad-left) var(--ds-button-icon-s-size-pad-right) var(--ds-button-icon-s-size-pad-top) var(--ds-button-icon-s-size-pad-bottom);
   border-radius: var(--ds-size-2x);
   background: var(--ds-color-button-icon-neutral-filled-default-background);
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 .ds-scroll-tabs__icon-size {
   height: var(--ds-size-5x);
@@ -3721,10 +3738,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-search__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-error-text-placeholder-color);
   white-space: nowrap;
 }
@@ -3753,9 +3770,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-search-default-text-color);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-error-text-placeholder-color);
 }
 .ds-search__right-icon {
@@ -3814,15 +3832,15 @@
   padding: 0 0 var(--ds-menu-pad-top) var(--ds-menu-pad-bottom);
   border-radius: var(--ds-size-3x);
   background: var(--ds-color-menu-background);
-  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-select-container__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-text-placeholder-color);
   white-space: nowrap;
 }
@@ -3916,10 +3934,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-select-cell__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -3983,10 +4001,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-select-form__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -4077,10 +4095,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-select-item__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -4120,27 +4138,31 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-select-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-select-item__subtitle {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-select-item-text-label-color);
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-3x);
+  font-size: var(--ds-font-caption-m-10-normal-medium-size);
+  line-height: var(--ds-font-caption-m-10-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-m-10-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-m-10-normal-medium-weight);
+  text-transform: capitalize;
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-select-item__label-down {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-select-item-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-select-item__element-right {
@@ -4188,10 +4210,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-control__label {
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-3x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-m-10-normal-regular-size);
+  line-height: var(--ds-font-caption-m-10-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-m-10-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-m-10-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -4228,9 +4250,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-sidenav-control-text-color);
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-3x);
+  font-size: var(--ds-font-caption-m-10-normal-regular-size);
+  line-height: var(--ds-font-caption-m-10-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-m-10-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-m-10-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
 }
 .ds-sidenav-control__divider {
@@ -4268,10 +4291,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-footer__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -4297,9 +4320,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-sidenav-footer-l2-text-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-sidenav-footer--l2.ds-sidenav-footer--expanded {
@@ -4327,10 +4351,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-header__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-medium-size);
+  line-height: var(--ds-font-body-m-16-normal-medium-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-medium-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -4399,10 +4423,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-item__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -4410,9 +4434,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-sidenav-item-l3-text-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-sidenav-item--l3.ds-sidenav-item--expanded:hover {
@@ -4462,10 +4487,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-sidenav-view__label {
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-3x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-m-10-normal-regular-size);
+  line-height: var(--ds-font-caption-m-10-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-m-10-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-m-10-normal-regular-weight);
   color: var(--ds-color-expansion-panel-block-collaps-content-background);
   white-space: nowrap;
 }
@@ -4513,15 +4538,15 @@
   display: flex;
   flex-direction: column;
   border-radius: var(--ds-size-2x);
-  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-snackbar__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-snackbar-dark-text-color);
   white-space: nowrap;
 }
@@ -4619,10 +4644,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-status__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-medium-size);
+  line-height: var(--ds-font-caption-l-12-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-medium-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -4658,9 +4683,10 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-status-neutral-filled-text-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-medium-size);
+  line-height: var(--ds-font-caption-l-12-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-medium-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-status__element-right {
@@ -4807,10 +4833,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-chips-input__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -4882,10 +4908,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-content-cell__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-tab-innactive-icon-color);
   white-space: nowrap;
 }
@@ -4938,10 +4964,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-content-row__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-tab-innactive-icon-color);
   white-space: nowrap;
 }
@@ -4964,15 +4990,15 @@
   display: flex;
   flex-direction: column;
   background: var(--ds-color-table-footer-background);
-  box-shadow: 0.0px 0.0px 4.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-footer__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-tab-innactive-counter-text-color);
   white-space: nowrap;
 }
@@ -5009,10 +5035,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-header-cell__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-tab-innactive-icon-color);
   white-space: nowrap;
 }
@@ -5067,10 +5093,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-header-row__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-tab-innactive-icon-color);
   white-space: nowrap;
 }
@@ -5085,10 +5111,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-text-ui__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -5126,27 +5152,30 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-ui-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-text-ui__list-item {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-ui-text-color);
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-text-ui__label-down {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-text-ui-text-label-color);
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-text-ui__element-right {
@@ -5181,10 +5210,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-textarea__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
   white-space: nowrap;
 }
@@ -5290,15 +5319,15 @@
   border-radius: var(--ds-size-3x);
   background: var(--ds-color-brand-neutral-default);
   border: 1px solid var(--ds-color-stroke-default);
-  box-shadow: 0.0px 0.0px 16.0px 0px #2121211f;
+  box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-timepicker__label {
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -5348,10 +5377,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-title-variant__label {
-  font-size: var(--ds-typography-font-size-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-7x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-header-s-20-normal-medium-size);
+  line-height: var(--ds-font-header-s-20-normal-medium-line);
+  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
+  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
   white-space: nowrap;
 }
@@ -5366,36 +5395,40 @@
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-super-dark);
-  font-size: var(--ds-typography-font-size-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-7x);
+  font-size: var(--ds-font-header-s-20-normal-medium-size);
+  line-height: var(--ds-font-header-s-20-normal-medium-line);
+  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
+  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
   color: var(--ds-color-chips-input-error-cursor-color);
 }
 .ds-title-variant__body-6 {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-darker);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-title-variant__body-7 {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-darker);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-title-variant__body-5 {
   display: flex;
   flex-direction: row;
   background: var(--ds-color-brand-neutral-darker);
-  font-size: var(--ds-typography-font-size-4x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-6x);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: var(--ds-color-chips-input-default-action-text-color);
 }
 .ds-title-variant__mode {
@@ -5418,10 +5451,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-toggle-buttons__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: var(--ds-typography-line-height-5x);
-  letter-spacing: var(--ds-typography-letter-spacing-0-125x);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
   color: var(--ds-color-chips-input-focus-border-color);
   white-space: nowrap;
 }
