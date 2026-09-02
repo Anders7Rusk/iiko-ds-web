@@ -568,10 +568,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: #616161;
   white-space: nowrap;
 }
@@ -658,11 +658,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input-2__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
+  color: #616161;
   white-space: nowrap;
 }
 .ds-chips-input-2__icon {
@@ -1000,10 +1000,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-datepicker__label {
-  font-size: var(--ds-font-body-s-14-normal-medium-size);
-  line-height: var(--ds-font-body-s-14-normal-medium-line);
-  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
-  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-text-primary, #333333);
   white-space: nowrap;
 }
@@ -1371,6 +1371,101 @@
   color: var(--ds-color-badge-text-color, #ffffff);
 }
 
+/* Element cell [58885:32432] — 11 вариантов; оси: Variant */
+.ds-element-cell {
+  width: fit-content;
+  display: flex;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-element-cell__label {
+  font-size: var(--ds-font-caption-l-12-normal-medium-size);
+  line-height: var(--ds-font-caption-l-12-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-medium-weight);
+  color: var(--ds-color-button-neutral-filled-default-text-color, #333333);
+  white-space: nowrap;
+}
+.ds-element-cell__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-element-cell__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-element-cell__icon svg path {
+  fill: currentColor;
+}
+.ds-element-cell__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-element-cell__info {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+}
+.ds-element-cell--icon-size {
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+}
+.ds-element-cell--icon-group {
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+}
+.ds-element-cell--button {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-button-neutral-filled-default-text-color, #333333);
+}
+.ds-element-cell--button-icon {
+  flex-direction: row;
+  background: #ffffff;
+}
+.ds-element-cell--status {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-status-neutral-filled-text-color, #616161);
+}
+.ds-element-cell--text-ui {
+  flex-direction: row;
+  color: var(--ds-color-text-ui-text-label-color, #616161);
+}
+.ds-element-cell--input-number {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-form-field-filled-default-support-text-color, #616161);
+}
+.ds-element-cell--checkbox {
+  flex-direction: row;
+  background: #ffffff;
+}
+.ds-element-cell--slide-toggle {
+  flex-direction: column;
+  background: #ffffff;
+  color: var(--ds-color-slide-toggle-text-color, #333333);
+}
+.ds-element-cell--chips {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-chips-text-color, #333333);
+}
+.ds-element-cell--cell-input {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+}
+
 /* Element Form Field [60231:76795] — 3 вариантов; оси: Variant */
 .ds-element-form-field {
   width: fit-content;
@@ -1381,11 +1476,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-form-field__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-element-form-field__input-cell {
@@ -1702,6 +1797,96 @@
 }
 .ds-element-step--disabled {
   pointer-events: none;
+}
+
+/* Elementare cell [60220:72578] — 10 вариантов; оси: Variant */
+.ds-elementare-cell {
+  width: fit-content;
+  display: flex;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-elementare-cell__label {
+  font-size: var(--ds-font-caption-l-12-normal-medium-size);
+  line-height: var(--ds-font-caption-l-12-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-medium-weight);
+  color: var(--ds-color-button-neutral-filled-default-text-color, #333333);
+  white-space: nowrap;
+}
+.ds-elementare-cell__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-elementare-cell__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-elementare-cell__icon svg path {
+  fill: currentColor;
+}
+.ds-elementare-cell__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-elementare-cell__info {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+}
+.ds-elementare-cell--icon-size {
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+}
+.ds-elementare-cell--icon-group {
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+}
+.ds-elementare-cell--button {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-button-neutral-filled-default-text-color, #333333);
+}
+.ds-elementare-cell--button-icon {
+  flex-direction: row;
+  background: #ffffff;
+}
+.ds-elementare-cell--status {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-status-neutral-filled-text-color, #616161);
+}
+.ds-elementare-cell--text-ui {
+  flex-direction: row;
+  color: var(--ds-color-text-ui-text-label-color, #616161);
+}
+.ds-elementare-cell--input-number {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-form-field-filled-default-support-text-color, #616161);
+}
+.ds-elementare-cell--checkbox {
+  flex-direction: row;
+  background: #ffffff;
+}
+.ds-elementare-cell--slide-toggle {
+  flex-direction: column;
+  background: #ffffff;
+  color: var(--ds-color-slide-toggle-text-color, #333333);
+}
+.ds-elementare-cell--chips {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-chips-text-color, #333333);
 }
 
 /* Elements [58501:4220] — 30 вариантов; оси: Type, Variant, State */
@@ -2193,7 +2378,7 @@
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-hint-footer-text-color, #ffffff);
+  color: var(--ds-color-button-accent-filled-default-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-hint-footer__icon {
@@ -2360,11 +2545,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-cell__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-input-cell__icon {
@@ -2479,11 +2664,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-number__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-input-number__icon {
@@ -2572,11 +2757,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-number-but-icon__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-input-number-but-icon__icon {
@@ -2696,11 +2881,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-list-container__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-list-item-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
+  color: var(--ds-color-list-item-text-color, #333333);
   white-space: nowrap;
 }
 .ds-list-container__icon {
@@ -2771,11 +2956,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-list-item__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-list-item-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-list-item-text-color, #333333);
   white-space: nowrap;
 }
 .ds-list-item__icon {
@@ -3004,11 +3189,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-menu-item__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-menu-item-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-menu-item-text-color, #333333);
   white-space: nowrap;
 }
 .ds-menu-item__icon {
@@ -3524,11 +3709,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-select-cell__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-select-cell__icon {
@@ -4487,11 +4672,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-content-cell__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-text-ui-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-text-ui-text-color, #333333);
   white-space: nowrap;
 }
 .ds-table-content-cell__icon {
@@ -4544,11 +4729,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-content-row__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-text-ui-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-text-ui-text-color, #333333);
   white-space: nowrap;
 }
 .ds-table-content-row:disabled {
@@ -4617,11 +4802,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-header-cell__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-text-ui-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-text-ui-text-color, #333333);
   white-space: nowrap;
 }
 .ds-table-header-cell__icon {
@@ -4677,11 +4862,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-header-row__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-text-ui-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-text-ui-text-color, #333333);
   white-space: nowrap;
 }
 
@@ -4696,11 +4881,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-text-ui__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-text-ui-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-text-ui-text-color, #333333);
   white-space: nowrap;
 }
 .ds-text-ui__icon {
@@ -4796,11 +4981,11 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-textarea__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-textarea__icon {
