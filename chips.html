@@ -1,78 +1,246 @@
 <!DOCTYPE html>
-<html lang="ru"><head>
+<html lang="ru">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chips — iiko DS</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>Chips · iiko DS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css?v=130">
-<link rel="stylesheet" href="components/components.css?v=130">
-<link rel="stylesheet" href="showcase.css?v=130">
-<style>
-.page-head h1 { font-size:20px; margin:0 0 4px; }
-.vp-t { font-size:16px; font-weight:500; margin:0 0 14px; }
-.vp-c { color:#448AFF; font-weight:500; }
-.vp-desc { font:14px/1.5 Roboto; color:#333; max-width:760px; }
-.ivx-row { display:flex; flex-wrap:wrap; gap:14px; align-items:flex-start; padding:16px; background:#fff; border:1px solid var(--ds-color-stroke,#E0E0E0); border-radius:12px; }
-.ivx-item { display:flex; flex-direction:column; gap:6px; align-items:flex-start; }
-.ivx-lbl { font:12px Roboto; color:#9E9E9E; }
-.ivx-note { margin:12px 0 0; font:12px Roboto; color:#616161; }
-.ivx-ic { width:16px; height:16px; }
-.vc-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:12px; }
-.vc { background:#fff; border:1px solid #E0E0E0; border-radius:12px; padding:12px; }
-.vc-ex { display:flex; align-items:center; justify-content:center; min-height:48px; }
-.vc-lbl { display:block; margin-top:8px; font:11px Roboto; color:#616161; text-align:center; }
-.token-table { width:100%; border-collapse:collapse; margin-top:8px; }
-.token-table th,.token-table td { text-align:left; padding:8px 12px; font:13px Roboto; border-bottom:1px solid #E0E0E0; }
-.token-table th { font-weight:500; color:#333; }
-.token-table td.tk-v code { font-size:11px; }
-</style>
-</head><body>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css?v=131">
+<link rel="stylesheet" href="components/components.css?v=131">
+<link rel="stylesheet" href="showcase.css?v=131">
+</head>
+<body>
+
 <div class="layout">
+
   <aside class="sidebar" id="sidebar"></aside>
+
   <div class="layout__main">
+
     <main>
-      <div class="page-head"><h1>Chips</h1></div>
 
+      <div class="page-head">
+        <h1>Chips</h1>
+        <p class="desc">Компактная метка-фильтр или выбранное значение, которое можно снять.</p>
+      </div>
+
+      <!-- ===== Вкладки страницы (как в мастере) ===== -->
       <div class="comp-tabs" role="tablist">
-        <button class="comp-tab is-active" data-panel="tab-component" role="tab">Компонент</button>
-        <button class="comp-tab" data-panel="tab-description" role="tab">Описание</button>
-        <button class="comp-tab" data-panel="tab-tokens" role="tab">Токены</button>
+        <button class="comp-tab is-active" data-panel="tab-component" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>Компонент</button>
+        <button class="comp-tab" data-panel="tab-description" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Описание</button>
+        <button class="comp-tab" data-panel="tab-anatomy" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>Анатомия</button>
+        <button class="comp-tab" data-panel="tab-behavior" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>Поведение</button>
+        <button class="comp-tab" data-panel="tab-tokens" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>Токены</button>
       </div>
 
+      <!-- ===== КОМПОНЕНТ ===== -->
       <div class="comp-panel is-active" id="tab-component">
-        <h2 class="vp-t">Компонент <span class="vp-c">Chips</span> · 18 вариантов</h2>
+
         <div class="comp-tabs comp-tabs--sub" role="tablist">
-          <button class="comp-tab is-active" data-panel="tab-interactive" role="tab">Интерактивный компонент</button>
-          <button class="comp-tab" data-panel="tab-variants" role="tab">Варианты компонента</button>
+          <button class="comp-tab is-active" data-panel="tab-interactive" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z"/><circle cx="12" cy="12" r="10"/></svg>Интерактивный компонент</button>
+          <button class="comp-tab" data-panel="tab-variants" role="tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>Варианты компонента</button>
         </div>
-        <div class="comp-panel is-active" id="tab-interactive"><div class="ivx-row"><div class="ivx-item"><div class="ds-chips ds-chips--filled"><span class="ds-chips__label">Чип</span><svg class="ivx-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#616161"/>
-</svg></div><span class="ivx-lbl">Filled M</span></div><div class="ivx-item"><div class="ds-chips ds-chips--outlined"><span class="ds-chips__label">Чип</span><svg class="ivx-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#616161"/>
-</svg></div><span class="ivx-lbl">Outlined M</span></div><div class="ivx-item"><div class="ds-chips ds-chips--filled ds-chips--s"><span class="ds-chips__label">Чип</span><svg class="ivx-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#616161"/>
-</svg></div><span class="ivx-lbl">Filled S</span></div><div class="ivx-item"><div class="ds-chips ds-chips--outlined ds-chips--s"><span class="ds-chips__label">Чип</span><svg class="ivx-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#616161"/>
-</svg></div><span class="ivx-lbl">Outlined S</span></div><div class="ivx-item"><div class="ds-chips ds-chips--filled ds-chips--disabled"><span class="ds-chips__label">Чип</span><svg class="ivx-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#616161"/>
-</svg></div><span class="ivx-lbl">Filled Disable</span></div></div><p class="ivx-note">Тип <code>--filled</code>/<code>--outlined</code> × размеры <code>M</code>/<code>S</code>, состояние <code>--disabled</code>. Высота <code>--ds-size-8x</code>, скругление 12px/8px, паддинги по токенам.</p></div>
-        <div class="comp-panel" id="tab-variants"><div class="vc-grid"><div class="vc"><div class="vc-ex"><div class="ds-chips ds-chips--filled"><span class="ds-chips__label">Чип</span></div></div><span class="vc-lbl">Filled M</span></div><div class="vc"><div class="vc-ex"><div class="ds-chips ds-chips--outlined"><span class="ds-chips__label">Чип</span></div></div><span class="vc-lbl">Outlined M</span></div><div class="vc"><div class="vc-ex"><div class="ds-chips ds-chips--filled ds-chips--s"><span class="ds-chips__label">Чип</span></div></div><span class="vc-lbl">Filled S</span></div><div class="vc"><div class="vc-ex"><div class="ds-chips ds-chips--outlined ds-chips--s"><span class="ds-chips__label">Чип</span></div></div><span class="vc-lbl">Outlined S</span></div><div class="vc"><div class="vc-ex"><div class="ds-chips ds-chips--filled ds-chips--disabled"><span class="ds-chips__label">Чип</span></div></div><span class="vc-lbl">Filled Disable</span></div><div class="vc"><div class="vc-ex"><div class="ds-chips ds-chips--outlined ds-chips--disabled"><span class="ds-chips__label">Чип</span></div></div><span class="vc-lbl">Outlined Disable</span></div></div></div>
+
+        <div class="comp-panel is-active" id="tab-interactive">
+          <section>
+            <h2>Интерактивный компонент</h2>
+            <p class="desc">Настройте свойства чипа и скопируйте код.</p>
+
+            <div class="card">
+              <div class="interactive-wrap">
+                <div>
+                  <div class="interactive-stage" id="stage">
+                    <div id="stage-chip-wrap"></div>
+                  </div>
+
+                  <div class="cc-title">Свойства компонента</div>
+                  <div class="prop-grid">
+                    <label class="prop"><span>Size</span>
+                      <select id="f-size"><option value="">M</option><option value="--s">S</option></select>
+                    </label>
+                    <label class="prop"><span>Type</span>
+                      <select id="f-type"><option value="--filled">Filled</option><option value="--outlined">Outlined</option></select>
+                    </label>
+                    <label class="prop"><span>State</span>
+                      <select id="f-state"><option value="">Default</option><option value="--disabled">Disabled</option></select>
+                    </label>
+                    <label class="prop check"><input id="f-close" type="checkbox" checked><span>Element right (×)</span></label>
+                  </div>
+
+                  <div class="component-code" id="component-code">
+                    <div class="cc-head">
+                      <div class="cc-tabs" role="tablist">
+                        <button class="is-active" data-cc="html" role="tab">HTML</button>
+                        <button data-cc="css" role="tab">CSS</button>
+                        <button data-cc="tokens" role="tab">Tokens</button>
+                      </div>
+                    </div>
+                    <div class="po-title-row">
+                      <div class="po-title-wrap">
+                        <div class="po-title" id="po-title">HTML</div>
+                        <button class="cc-copy" id="cc-copy" type="button" title="Copy code" aria-label="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button>
+                      </div>
+                      <div class="po-label" id="po-label">chips / m / filled / default</div>
+                    </div>
+                    <div class="cc-panel is-active" id="cc-html"></div>
+                    <div class="cc-panel" id="cc-css"></div>
+                    <div class="cc-panel" id="cc-tokens"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="comp-panel" id="tab-variants">
+          <section>
+            <p class="matrix-caption">Матрица вариантов</p>
+            <p class="desc">Наведите/нажмите на чип — работают состояния Hover, Press, Focus. Ниже — дискретные варианты (маркап-комбинации).</p>
+            <h2>Варианты компонента</h2>
+            <div class="card">
+              <div class="matrix-layout">
+                <div id="matrix-root"></div>
+                <div class="matrix-insp">
+                  <div class="cc-title">Свойства компонента</div>
+                  <div class="component-code component-code--inspector" id="var-code"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
 
+      <!-- ===== ОПИСАНИЕ ===== -->
       <div class="comp-panel" id="tab-description">
-        <h2 class="vp-t">Описание</h2>
-        <div class="vp-desc">Чип — компактная метка-фильтр или выбранное значение, которое можно снять: применённые фильтры над таблицей, выбранные товары, теги.  <br>Чип всегда относится к чему-то выбранному пользователем; для статуса объекта берите Status, для количества — Badge.  <br><br><br>Состав: текст, элемент слева (иконка или аватар) и элемент справа (крестик для снятия).  <br><br><br>Как выбрать вариант:  <br>Type=Filled — выбранный, активный чип; Outlined — доступный к выбору.  <br>Size=M — основной; S — плотные панели и строки таблиц.  <br>Состояния: Default, Hover, Focus, Press, Disable.</div>
+        <section>
+          <h2>Описание</h2>
+          <p class="desc">Чип — компактная метка-фильтр или выбранное значение, которое можно снять: применённые фильтры над таблицей, выбранные товары, теги. Чип всегда относится к чему-то выбранному пользователем; для статуса объекта используйте Status, для количества — Badge. Состав: текст, элемент слева (иконка или аватар) и элемент справа (крестик для снятия).</p>
+        </section>
       </div>
 
-      <div class="comp-panel" id="tab-tokens">
-        <h2 class="vp-t">Токены / параметры</h2>
-        <table class="token-table"><thead><tr><th>Параметр</th><th>Значение (ДС)</th></tr></thead><tbody><tr><td class="tk-k">высота</td><td class="tk-v"><code>`var(--ds-size-8x)` (фикс.)</code></td></tr><tr><td class="tk-k">ширина</td><td class="tk-v"><code>`fit-content` (фикс.)</code></td></tr><tr><td class="tk-k">внутренние отступы</td><td class="tk-v"><code>`var(--ds-chips-m-size-pad-top, 6px) var(--ds-chips-m-size-pad-right, 8px) var(--ds-chips-m-size-pad-bottom, 6px) var(--ds-chips-m-size-pad-left, 8px)`</code></td></tr><tr><td class="tk-k">промежуток между элементами</td><td class="tk-v"><code>`var(--ds-chips-m-size-gap, 8px)`</code></td></tr><tr><td class="tk-k">скругление</td><td class="tk-v"><code>`var(--ds-chips-m-size-border-radius, 12px)`</code></td></tr></tbody></table>
+      <!-- ===== АНАТОМИЯ ===== -->
+      <div class="comp-panel" id="tab-anatomy">
+        <section>
+          <h2>Анатомия</h2>
+          <div class="card">
+            <div class="matrix-layout">
+              <div class="vx-sample"><span class="ds-chips ds-chips--filled"><span class="ds-chips__label">Чип</span></span></div>
+              <div class="anatomy-list">
+                <div class="an-row"><code>.ds-chips</code><span>контейнер (класс-модификаторы: <code>--filled</code>, <code>--outlined</code>, <code>--s</code>, <code>--disabled</code>)</span></div>
+                <div class="an-row"><code>.ds-chips__icon</code><span>элемент слева (SVG 20×20)</span></div>
+                <div class="an-row"><code>.ds-chips__label</code><span>текст чипа</span></div>
+                <div class="an-row"><code>.ds-chips__close</code><span>крестик для снятия (элемент справа)</span></div>
+                <div class="an-row"><code>.ds-chips__chip-container</code><span>обёртка контента</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
+
+      <!-- ===== ПОВЕДЕНИЕ ===== -->
+      <div class="comp-panel" id="tab-behavior">
+        <section>
+          <h2>Поведение</h2>
+          <div class="card">
+            <div class="beh-rows">
+              <div class="beh-row"><span class="beh-s">Hover</span><span>подсветка фона (у <code>--filled</code>/<code>--outlined</code>)</span></div>
+              <div class="beh-row"><span class="beh-s">Press</span><span>затемнение фона при нажатии</span></div>
+              <div class="beh-row"><span class="beh-s">Focus</span><span><code>:focus-visible</code> — обводка</span></div>
+              <div class="beh-row"><span class="beh-s">Disabled</span><span><code>.ds-chips--disabled</code> → фон <code>#ebebeb</code>, текст <code>#9e9e9e</code>, <code>pointer-events:none</code></span></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ===== ТОКЕНЫ ===== -->
+      <div class="comp-panel" id="tab-tokens">
+        <div class="comp-tabs comp-tabs--sub" role="tablist">
+          <button class="comp-tab is-active" data-panel="tokens-variants" role="tab">Варианты</button>
+          <button class="comp-tab" data-panel="tokens-sizes" role="tab">Размеры</button>
+          <button class="comp-tab" data-panel="tokens-figma" role="tab">Figma</button>
+        </div>
+
+        <div class="comp-panel is-active" id="tokens-variants">
+          <section>
+            <h2>Токены вариантов</h2>
+            <div class="token-notation">
+              <p>[type] = filled, outlined</p>
+              <p>[state] = default, hover, press, focus, disable</p>
+            </div>
+            <table class="token-table">
+              <thead><tr><th>Вариант</th><th>Фон</th><th>Рамка</th><th>Текст</th></tr></thead>
+              <tbody>
+                <tr><td>Filled / default</td><td><code>--ds-color-chips-filled-default-background</code> (#f8f9fc)</td><td>—</td><td><code>#333333</code></td></tr>
+                <tr><td>Outlined / default</td><td><code>#ffffff</code></td><td><code>1px solid #e0e0e0</code></td><td><code>#333333</code></td></tr>
+                <tr><td>Disable</td><td><code>#ebebeb</code></td><td>—</td><td><code>#9e9e9e</code></td></tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+
+        <div class="comp-panel" id="tokens-sizes">
+          <section>
+            <h2>Токены размеров</h2>
+            <table class="token-table">
+              <thead><tr><th>Размер</th><th>Высота</th><th>Паддинг</th><th>Gap</th><th>Скругление</th></tr></thead>
+              <tbody>
+                <tr><td>M</td><td><code>--ds-size-8x</code></td><td>6px 8px 6px 8px</td><td><code>8px</code></td><td><code>12px</code></td></tr>
+                <tr><td>S</td><td><code>--ds-size-8x</code></td><td>4px 6px 4px 6px</td><td><code>4px</code></td><td><code>8px</code></td></tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+
+        <div class="comp-panel" id="tokens-figma">
+          <section>
+            <h2>Переменные Figma</h2>
+            <table class="token-table">
+              <thead><tr><th>Свойство</th><th>Переменная</th></tr></thead>
+              <tbody>
+                <tr><td>R</td><td>Element right ×</td></tr>
+                <tr><td>L</td><td>Element left (иконка/аватар)</td></tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+
     </main>
   </div>
 </div>
-<script src="sidebar.js?v=130"></script>
+
+<script src="sidebar.js?v=131"></script>
 <script>
+/* ── данные чипсов (sizes/types/states) из спеки ── */
+var CHIP = {
+  mods: { '--filled': 'Filled', '--outlined': 'Outlined' },
+  sizeLbl: { '': 'M', '--s': 'S' },
+  closeIcon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="currentColor"/></svg>'
+};
+
+function chipClass(m, s, state) {
+  var cls = 'ds-chips';
+  if (m) cls += ' ' + m;            // --filled | --outlined
+  if (s) cls += ' ' + s;            // --s
+  if (state) cls += ' ' + state;    // --disabled
+  return cls;
+}
+function chipHTML(m, s, state, close) {
+  return '<div class="' + chipClass(m, s, state) + '">'
+    + '<span class="ds-chips__label">Чип</span>'
+    + (close ? '<span class="ds-chips__close" style="color:#9e9e9e">' + CHIP.closeIcon + '</span>' : '')
+    + '</div>';
+}
+function chipLabel(m, s, state) {
+  var l = 'chips / ' + (CHIP.sizeLbl[s] || 'm') + ' / ' + (m ? m.slice(2) : 'filled') + ' / ' + (state ? state.slice(2) : 'default');
+  return l;
+}
+
+/* ── вкладки страницы ── */
 document.querySelectorAll('.comp-tab[data-panel]').forEach(function(tab){
   tab.addEventListener('click', function(){
     var group = tab.closest('.comp-tabs');
@@ -86,5 +254,94 @@ document.querySelectorAll('.comp-tab[data-panel]').forEach(function(tab){
     panel.classList.add('is-active');
   });
 });
+
+/* ── интерактив: рендер чипа + код ── */
+var stage = document.getElementById('stage-chip-wrap');
+function renderInteractive(){
+  var m = document.getElementById('f-type').value;
+  var s = document.getElementById('f-size').value;
+  var st = document.getElementById('f-state').value;
+  var close = document.getElementById('f-close').checked;
+  stage.innerHTML = chipHTML(m, s, st, close);
+  document.getElementById('po-label').textContent = chipLabel(m, s, st);
+  var chtml = '&lt;div class="' + (chipClass(m, s, st)) + '"&gt;\n'
+    + '  &lt;span class="ds-chips__label"&gt;Чип&lt;/span&gt;'
+    + (close ? '\n  &lt;span class="ds-chips__close"&gt;×&lt;/span&gt;' : '')
+    + '\n&lt;/div&gt;';
+  document.getElementById('cc-html').textContent = decodeHtml(chtml);
+  document.getElementById('cc-css').textContent =
+    '.ds-chips { height:var(--ds-size-8x); gap:8px; border-radius:12px; }\n'
+    + '.ds-chips__label { font:14px Roboto; color:#333; }\n'
+    + '.ds-chips__close svg { width:16px; height:16px; fill:#9e9e9e; }';
+  document.getElementById('cc-tokens').textContent =
+    '--ds-color-chips-text-color:#333333;\n--ds-color-chips-filled-default-background:#f8f9fc;\n'
+    + '--ds-color-chips-disable-background-filled:#ebebeb;\n--ds-color-chips-disable-text-color:#9e9e9e;';
+  renderCode();
+}
+function decodeHtml(s){ var d=document.createElement('div'); d.innerHTML=s; return d.textContent; }
+function renderCode(){
+  var active = document.querySelector('#component-code .cc-tabs .is-active');
+  var cc = active ? active.getAttribute('data-cc') : 'html';
+  document.getElementById('po-title').textContent = cc.toUpperCase();
+  document.querySelectorAll('#component-code .cc-panel').forEach(function(p){p.classList.toggle('is-active', p.id === 'cc-'+cc);});
+}
+document.querySelectorAll('#component-code .cc-tabs button').forEach(function(b){
+  b.addEventListener('click', function(){
+    b.parentElement.querySelectorAll('button').forEach(function(x){x.classList.remove('is-active');});
+    b.classList.add('is-active'); renderCode();
+  });
+});
+['f-size','f-type','f-state','f-close'].forEach(function(id){
+  document.getElementById(id).addEventListener('input', renderInteractive);
+  document.getElementById(id).addEventListener('change', renderInteractive);
+});
+document.getElementById('cc-copy').addEventListener('click', function(){
+  var cc = document.querySelector('#component-code .cc-tabs .is-active').getAttribute('data-cc');
+  var txt = document.getElementById('cc-'+cc).textContent;
+  if(navigator.clipboard) navigator.clipboard.writeText(txt);
+});
+renderInteractive();
+
+/* ── матрица вариантов (маркап-комбинации) ── */
+var matrixRoot = document.getElementById('matrix-root');
+var combos = [
+  ['--filled','', '', true, 'Filled M'],
+  ['--outlined','', '', true, 'Outlined M'],
+  ['--filled','--s', '', true, 'Filled S'],
+  ['--outlined','--s', '', true, 'Outlined S'],
+  ['--filled','', '--disabled', true, 'Filled Disable'],
+  ['--outlined','', '--disabled', true, 'Outlined Disable'],
+  ['--filled','--s', '--disabled', true, 'Filled S Disable'],
+  ['--outlined','--s', '--disabled', true, 'Outlined S Disable']
+];
+combos.forEach(function(c){
+  var el = document.createElement('div');
+  el.className = 'matrix-cell';
+  el.innerHTML = '<div class="vx-sample">' + chipHTML(c[0], c[1], c[2], c[3]) + '</div><span class="vx-lbl">' + c[4] + '</span>';
+  matrixRoot.appendChild(el);
+});
 </script>
-</body></html>
+<style>
+.prop-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:10px 0 14px;}
+.prop{display:flex;flex-direction:column;gap:4px;font:12px Roboto;color:#616161;}
+.prop select{padding:6px 8px;border:1px solid #E0E0E0;border-radius:8px;font:14px Roboto;}
+.prop.check{flex-direction:row;align-items:center;gap:8px;}
+.matrix-layout .vx-sample{display:flex;align-items:flex-start;padding:18px;background:#fff;border:1px solid #E0E0E0;border-radius:12px;}
+.matrix-cell{display:flex;flex-direction:column;gap:8px;padding:12px;border:1px solid #E0E0E0;border-radius:12px;background:#fff;}
+.matrix-cell .vx-sample{padding:8px;border:none;}
+.vx-lbl{font:11px Roboto;color:#616161;}
+.anatomy-list{display:flex;flex-direction:column;gap:10px;padding:16px;}
+.an-row{display:flex;flex-direction:column;gap:2px;}
+.an-row code{font-size:12px;color:#448AFF;}
+.an-row span{font:12px Roboto;color:#616161;}
+.beh-rows{display:flex;flex-direction:column;gap:12px;padding:16px;}
+.beh-row{display:flex;gap:12px;align-items:baseline;}
+.beh-s{font:13px Roboto;font-weight:500;color:#333;min-width:70px;}
+.beh-row span:last-child{font:12px Roboto;color:#616161;}
+.beh-row code{font-size:11px;color:#448AFF;}
+#matrix-root{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;flex:1;}
+.matrix-layout{align-items:flex-start;}
+.matrix-insp{flex:none;width:280px;}
+</style>
+</body>
+</html>
