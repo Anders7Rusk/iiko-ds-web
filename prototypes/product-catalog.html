@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Главная — каталог B2B Portal</title>
+<link rel="stylesheet" href="../tokens.css?v=310">
+<link rel="stylesheet" href="../components/components.css?v=310">
+<link rel="stylesheet" href="../components/button.css?v=310">
+<link rel="stylesheet" href="../components/input.css?v=310">
+<style>
+  :root{ font-family:'Roboto','Helvetica Neue',Arial,sans-serif; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background:var(--ds-color-brand-neutral-super-light);   /* #F5F5F5 */
+    color:var(--ds-color-text-primary);
+    font-family:'Roboto','Helvetica Neue',Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .app{ display:flex; flex-direction:column; min-height:100vh; }
+
+  /* ── Шапка (toolbar) ─────────────────────────────── */
+  .toolbar{
+    height:64px; flex-shrink:0; position:sticky; top:0; z-index:10;
+    background:var(--ds-color-surface-default);           /* #FFFFFF */
+    box-shadow:var(--ds-shadow-sl);
+    display:flex; align-items:center;
+  }
+  .toolbar__inner{
+    width:100%; max-width:1600px; margin:0 auto;
+    padding:0 var(--ds-space-4x);
+    display:flex; align-items:center; gap:var(--ds-space-6x);
+  }
+  .brand{ display:flex; align-items:center; gap:var(--ds-space-3x); }
+  .brand__icon{ width:32px; height:32px; display:inline-flex; align-items:center; justify-content:center; color:var(--ds-color-icon-primary); }
+  .brand__icon svg{ width:32px; height:32px; }
+  .brand__title{ font-size:var(--ds-typography-font-size-3-5x); font-weight:var(--ds-typography-font-weight-medium); line-height:16px; color:var(--ds-color-text-primary); }
+  .brand__sub{ font-size:var(--ds-typography-font-size-3x); font-weight:var(--ds-typography-font-weight-regular); line-height:14px; color:var(--ds-color-text-secondary); }
+  .nav{ flex:1; display:flex; justify-content:center; }
+  .nav__link{
+    font-size:var(--ds-typography-font-size-3-5x); font-weight:var(--ds-typography-font-weight-medium);
+    color:var(--ds-color-text-secondary); text-decoration:none;
+    padding:var(--ds-space-2x) var(--ds-space-4x);
+    border-radius:var(--ds-radius-1x); white-space:nowrap;
+  }
+  .restaurant{ display:flex; align-items:center; gap:var(--ds-space-3x); }
+  .restaurant__name{ font-size:var(--ds-typography-font-size-3-5x); font-weight:var(--ds-typography-font-weight-medium); color:var(--ds-color-text-primary); white-space:nowrap; }
+  .restaurant .ds-btn__icon svg{ width:20px; height:20px; display:block; }
+
+  /* ── Тело ─────────────────────────────────────────── */
+  .body{
+    flex:1; display:flex; justify-content:center;
+    padding:var(--ds-space-4x); overflow:auto;
+    background:var(--ds-color-brand-neutral-super-light);
+  }
+  .body__inner{ display:flex; gap:var(--ds-space-6x); width:100%; max-width:1600px; align-items:flex-start; }
+
+  /* Сайдбар */
+  .sidebar{ width:260px; flex-shrink:0; }
+  .card{ background:var(--ds-color-surface-default); box-shadow:var(--ds-shadow-sl); }
+  .sidebar .card{ border-radius:var(--ds-radius-3x); padding:var(--ds-space-5x); }
+  .card__heading{ font-size:var(--ds-typography-font-size-4-5x); font-weight:var(--ds-typography-font-weight-medium); color:var(--ds-color-text-primary); }
+  .cat-list{ display:flex; flex-direction:column; gap:var(--ds-space-1x); margin-top:var(--ds-space-4x); }
+  .cat-item{ display:flex; align-items:center; gap:var(--ds-space-3x); padding:var(--ds-space-3x) var(--ds-space-3x); border-radius:var(--ds-radius-2x); color:var(--ds-color-text-secondary); cursor:pointer; }
+  .cat-item--active{ background:var(--ds-color-surface-sidebar-selected); color:var(--ds-color-text-accent); }
+  .cat-item__icon{ width:20px; height:20px; display:inline-flex; align-items:center; justify-content:center; color:inherit; flex-shrink:0; }
+  .cat-item__icon svg{ width:20px; height:20px; display:block; }
+  .cat-item__label{ font-size:var(--ds-typography-font-size-4x); font-weight:var(--ds-typography-font-weight-medium); white-space:nowrap; }
+
+  /* Мейн */
+  .main{ flex:1; display:flex; flex-direction:column; gap:var(--ds-space-6x); min-width:0; }
+
+  /* Поиск */
+  .search-card{ display:flex; align-items:center; gap:var(--ds-space-4x); padding:var(--ds-space-5x); border-radius:var(--ds-radius-2x); }
+  .search-input{ flex:1; }
+  .search-card .ds-btn__icon svg{ width:20px; height:20px; display:block; }
+
+  /* Каталог */
+  .catalog-card{ border-radius:var(--ds-radius-2x); overflow:hidden; }
+  .panel{ border-bottom:1px solid var(--ds-color-stroke-default); }
+  .panel:last-child{ border-bottom:none; }
+  .panel__head{ width:100%; display:flex; align-items:center; padding:var(--ds-space-4x) var(--ds-space-5x); background:var(--ds-color-surface-hover); border:none; cursor:pointer; gap:var(--ds-space-2x); text-align:left; }
+  .panel__title{ font-size:var(--ds-typography-font-size-3-5x); font-weight:var(--ds-typography-font-weight-medium); color:var(--ds-color-text-primary); }
+  .panel__count{ font-size:var(--ds-typography-font-size-3x); font-weight:var(--ds-typography-font-weight-regular); color:var(--ds-color-text-secondary); }
+  .panel__chevron{ margin-left:auto; display:inline-flex; align-items:center; justify-content:center; color:var(--ds-color-icon-primary); }
+  .panel__chevron svg{ width:20px; height:20px; display:block; transition:transform .2s ease; }
+  .panel--open .panel__chevron svg{ transform:rotate(180deg); }
+  .panel__body{ display:none; padding:0 var(--ds-space-4x) var(--ds-space-4x); }
+  .panel--open .panel__body{ display:block; }
+
+  /* Таблица */
+  .tbl{ display:flex; flex-direction:column; }
+  .tbl__row{ display:grid; grid-template-columns:220px 84px minmax(0,1fr) 81px 69px 201px 72px; align-items:center; }
+  .tbl__cell{ padding:var(--ds-space-3x); font-size:var(--ds-typography-font-size-4x); color:var(--ds-color-text-primary); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .tbl__head .tbl__cell{ font-size:var(--ds-typography-font-size-3x); font-weight:var(--ds-typography-font-weight-medium); text-transform:uppercase; color:var(--ds-color-text-primary); border-bottom:1px solid var(--ds-color-stroke-default); }
+  .tbl__row:not(.tbl__head){ border-bottom:1px solid var(--ds-color-stroke-default); }
+  .tbl__row:last-child{ border-bottom:none; }
+  .c-name{ color:var(--ds-color-text-accent); font-weight:var(--ds-typography-font-weight-medium); cursor:pointer; }
+  .c-qty{ justify-self:center; }
+  .c-sum{ text-align:left; }
+
+  /* Степпер количества */
+  .qty{ display:flex; align-items:center; gap:var(--ds-space-1x); justify-content:center; }
+  .qty .ds-btn__icon svg{ width:20px; height:20px; display:block; }
+  .qty__val{
+    width:60px; height:36px; text-align:center;
+    border:1px solid var(--ds-color-stroke-default); border-radius:var(--ds-radius-2x);
+    background:var(--ds-color-surface-default); color:var(--ds-color-text-primary);
+    font-family:inherit; font-size:var(--ds-typography-font-size-3-5x); line-height:34px; padding:0;
+  }
+
+  /* ── Футер ────────────────────────────────────────── */
+  .footer{
+    flex-shrink:0; position:sticky; bottom:0; z-index:10;
+    background:var(--ds-color-surface-default);
+    border-top:1px solid var(--ds-color-stroke-default);
+    padding:var(--ds-space-4x) 0;
+  }
+  .footer__inner{ display:flex; justify-content:space-between; align-items:center; max-width:1600px; margin:0 auto; padding:0 var(--ds-space-4x); }
+  .footer__left{ display:flex; align-items:center; gap:var(--ds-space-6x); }
+  .footer__txt{ font-size:var(--ds-typography-font-size-4x); color:var(--ds-color-text-primary); }
+  .footer__txt b{ font-weight:var(--ds-typography-font-weight-medium); }
+  .footer__sum{ font-size:var(--ds-typography-font-size-4-5x); }
+  .footer__right{ display:flex; align-items:center; gap:var(--ds-space-3x); }
+  .footer .ds-btn__icon svg{ width:20px; height:20px; display:block; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- Шапка -->
+  <header class="toolbar">
+    <div class="toolbar__inner">
+      <div class="brand">
+        <span class="brand__icon" data-icon="apps"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6 20C5.45 20 4.97917 19.8042 4.5875 19.4125C4.19583 19.0208 4 18.55 4 18C4 17.45 4.19583 16.9792 4.5875 16.5875C4.97917 16.1958 5.45 16 6 16C6.55 16 7.02083 16.1958 7.4125 16.5875C7.80417 16.9792 8 17.45 8 18C8 18.55 7.80417 19.0208 7.4125 19.4125C7.02083 19.8042 6.55 20 6 20ZM12 20C11.45 20 10.9792 19.8042 10.5875 19.4125C10.1958 19.0208 10 18.55 10 18C10 17.45 10.1958 16.9792 10.5875 16.5875C10.9792 16.1958 11.45 16 12 16C12.55 16 13.0208 16.1958 13.4125 16.5875C13.8042 16.9792 14 17.45 14 18C14 18.55 13.8042 19.0208 13.4125 19.4125C13.0208 19.8042 12.55 20 12 20ZM18 20C17.45 20 16.9792 19.8042 16.5875 19.4125C16.1958 19.0208 16 18.55 16 18C16 17.45 16.1958 16.9792 16.5875 16.5875C16.9792 16.1958 17.45 16 18 16C18.55 16 19.0208 16.1958 19.4125 16.5875C19.8042 16.9792 20 17.45 20 18C20 18.55 19.8042 19.0208 19.4125 19.4125C19.0208 19.8042 18.55 20 18 20ZM6 14C5.45 14 4.97917 13.8042 4.5875 13.4125C4.19583 13.0208 4 12.55 4 12C4 11.45 4.19583 10.9792 4.5875 10.5875C4.97917 10.1958 5.45 10 6 10C6.55 10 7.02083 10.1958 7.4125 10.5875C7.80417 10.9792 8 11.45 8 12C8 12.55 7.80417 13.0208 7.4125 13.4125C7.02083 13.8042 6.55 14 6 14ZM12 14C11.45 14 10.9792 13.8042 10.5875 13.4125C10.1958 13.0208 10 12.55 10 12C10 11.45 10.1958 10.9792 10.5875 10.5875C10.9792 10.1958 11.45 10 12 10C12.55 10 13.0208 10.1958 13.4125 10.5875C13.8042 10.9792 14 11.45 14 12C14 12.55 13.8042 13.0208 13.4125 13.4125C13.0208 13.8042 12.55 14 12 14ZM18 14C17.45 14 16.9792 13.8042 16.5875 13.4125C16.1958 13.0208 16 12.55 16 12C16 11.45 16.1958 10.9792 16.5875 10.5875C16.9792 10.1958 17.45 10 18 10C18.55 10 19.0208 10.1958 19.4125 10.5875C19.8042 10.9792 20 11.45 20 12C20 12.55 19.8042 13.0208 19.4125 13.4125C19.0208 13.8042 18.55 14 18 14ZM6 8C5.45 8 4.97917 7.80417 4.5875 7.4125C4.19583 7.02083 4 6.55 4 6C4 5.45 4.19583 4.97917 4.5875 4.5875C4.97917 4.19583 5.45 4 6 4C6.55 4 7.02083 4.19583 7.4125 4.5875C7.80417 4.97917 8 5.45 8 6C8 6.55 7.80417 7.02083 7.4125 7.4125C7.02083 7.80417 6.55 8 6 8ZM12 8C11.45 8 10.9792 7.80417 10.5875 7.4125C10.1958 7.02083 10 6.55 10 6C10 5.45 10.1958 4.97917 10.5875 4.5875C10.9792 4.19583 11.45 4 12 4C12.55 4 13.0208 4.19583 13.4125 4.5875C13.8042 4.97917 14 5.45 14 6C14 6.55 13.8042 7.02083 13.4125 7.4125C13.0208 7.80417 12.55 8 12 8ZM18 8C17.45 8 16.9792 7.80417 16.5875 7.4125C16.1958 7.02083 16 6.55 16 6C16 5.45 16.1958 4.97917 16.5875 4.5875C16.9792 4.19583 17.45 4 18 4C18.55 4 19.0208 4.19583 19.4125 4.5875C19.8042 4.97917 20 5.45 20 6C20 6.55 19.8042 7.02083 19.4125 7.4125C19.0208 7.80417 18.55 8 18 8Z" fill="currentColor"/> </svg></span>
+        <div class="brand__titles">
+          <div class="brand__title">Пищевое производство</div>
+          <div class="brand__sub">B2B Portal</div>
+        </div>
+      </div>
+      <nav class="nav"><a class="nav__link" href="#">Каталог</a></nav>
+      <div class="restaurant">
+        <span class="restaurant__name">Весёлая бурёнка</span>
+        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text">
+          <span class="ds-btn__icon" data-icon="open_in_new"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H12V5H5V19H19V12H21V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM9.7 15.7L8.3 14.3L17.6 5H14V3H21V10H19V6.4L9.7 15.7Z" fill="currentColor"/> </svg></span>
+          <span class="ds-btn__label">Выход</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Тело -->
+  <div class="body">
+    <div class="body__inner">
+
+      <!-- Сайдбар: Категории -->
+      <aside class="sidebar">
+        <div class="card">
+          <div class="card__heading">Категории</div>
+          <div class="cat-list">
+            <div class="cat-item cat-item--active">
+              <span class="cat-item__icon" data-icon="apps"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6 20C5.45 20 4.97917 19.8042 4.5875 19.4125C4.19583 19.0208 4 18.55 4 18C4 17.45 4.19583 16.9792 4.5875 16.5875C4.97917 16.1958 5.45 16 6 16C6.55 16 7.02083 16.1958 7.4125 16.5875C7.80417 16.9792 8 17.45 8 18C8 18.55 7.80417 19.0208 7.4125 19.4125C7.02083 19.8042 6.55 20 6 20ZM12 20C11.45 20 10.9792 19.8042 10.5875 19.4125C10.1958 19.0208 10 18.55 10 18C10 17.45 10.1958 16.9792 10.5875 16.5875C10.9792 16.1958 11.45 16 12 16C12.55 16 13.0208 16.1958 13.4125 16.5875C13.8042 16.9792 14 17.45 14 18C14 18.55 13.8042 19.0208 13.4125 19.4125C13.0208 19.8042 12.55 20 12 20ZM18 20C17.45 20 16.9792 19.8042 16.5875 19.4125C16.1958 19.0208 16 18.55 16 18C16 17.45 16.1958 16.9792 16.5875 16.5875C16.9792 16.1958 17.45 16 18 16C18.55 16 19.0208 16.1958 19.4125 16.5875C19.8042 16.9792 20 17.45 20 18C20 18.55 19.8042 19.0208 19.4125 19.4125C19.0208 19.8042 18.55 20 18 20ZM6 14C5.45 14 4.97917 13.8042 4.5875 13.4125C4.19583 13.0208 4 12.55 4 12C4 11.45 4.19583 10.9792 4.5875 10.5875C4.97917 10.1958 5.45 10 6 10C6.55 10 7.02083 10.1958 7.4125 10.5875C7.80417 10.9792 8 11.45 8 12C8 12.55 7.80417 13.0208 7.4125 13.4125C7.02083 13.8042 6.55 14 6 14ZM12 14C11.45 14 10.9792 13.8042 10.5875 13.4125C10.1958 13.0208 10 12.55 10 12C10 11.45 10.1958 10.9792 10.5875 10.5875C10.9792 10.1958 11.45 10 12 10C12.55 10 13.0208 10.1958 13.4125 10.5875C13.8042 10.9792 14 11.45 14 12C14 12.55 13.8042 13.0208 13.4125 13.4125C13.0208 13.8042 12.55 14 12 14ZM18 14C17.45 14 16.9792 13.8042 16.5875 13.4125C16.1958 13.0208 16 12.55 16 12C16 11.45 16.1958 10.9792 16.5875 10.5875C16.9792 10.1958 17.45 10 18 10C18.55 10 19.0208 10.1958 19.4125 10.5875C19.8042 10.9792 20 11.45 20 12C20 12.55 19.8042 13.0208 19.4125 13.4125C19.0208 13.8042 18.55 14 18 14ZM6 8C5.45 8 4.97917 7.80417 4.5875 7.4125C4.19583 7.02083 4 6.55 4 6C4 5.45 4.19583 4.97917 4.5875 4.5875C4.97917 4.19583 5.45 4 6 4C6.55 4 7.02083 4.19583 7.4125 4.5875C7.80417 4.97917 8 5.45 8 6C8 6.55 7.80417 7.02083 7.4125 7.4125C7.02083 7.80417 6.55 8 6 8ZM12 8C11.45 8 10.9792 7.80417 10.5875 7.4125C10.1958 7.02083 10 6.55 10 6C10 5.45 10.1958 4.97917 10.5875 4.5875C10.9792 4.19583 11.45 4 12 4C12.55 4 13.0208 4.19583 13.4125 4.5875C13.8042 4.97917 14 5.45 14 6C14 6.55 13.8042 7.02083 13.4125 7.4125C13.0208 7.80417 12.55 8 12 8ZM18 8C17.45 8 16.9792 7.80417 16.5875 7.4125C16.1958 7.02083 16 6.55 16 6C16 5.45 16.1958 4.97917 16.5875 4.5875C16.9792 4.19583 17.45 4 18 4C18.55 4 19.0208 4.19583 19.4125 4.5875C19.8042 4.97917 20 5.45 20 6C20 6.55 19.8042 7.02083 19.4125 7.4125C19.0208 7.80417 18.55 8 18 8Z" fill="currentColor"/> </svg></span>
+              <span class="cat-item__label">Все товары</span>
+            </div>
+            <div class="cat-item">
+              <span class="cat-item__icon" data-icon="apps"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6 20C5.45 20 4.97917 19.8042 4.5875 19.4125C4.19583 19.0208 4 18.55 4 18C4 17.45 4.19583 16.9792 4.5875 16.5875C4.97917 16.1958 5.45 16 6 16C6.55 16 7.02083 16.1958 7.4125 16.5875C7.80417 16.9792 8 17.45 8 18C8 18.55 7.80417 19.0208 7.4125 19.4125C7.02083 19.8042 6.55 20 6 20ZM12 20C11.45 20 10.9792 19.8042 10.5875 19.4125C10.1958 19.0208 10 18.55 10 18C10 17.45 10.1958 16.9792 10.5875 16.5875C10.9792 16.1958 11.45 16 12 16C12.55 16 13.0208 16.1958 13.4125 16.5875C13.8042 16.9792 14 17.45 14 18C14 18.55 13.8042 19.0208 13.4125 19.4125C13.0208 19.8042 12.55 20 12 20ZM18 20C17.45 20 16.9792 19.8042 16.5875 19.4125C16.1958 19.0208 16 18.55 16 18C16 17.45 16.1958 16.9792 16.5875 16.5875C16.9792 16.1958 17.45 16 18 16C18.55 16 19.0208 16.1958 19.4125 16.5875C19.8042 16.9792 20 17.45 20 18C20 18.55 19.8042 19.0208 19.4125 19.4125C19.0208 19.8042 18.55 20 18 20ZM6 14C5.45 14 4.97917 13.8042 4.5875 13.4125C4.19583 13.0208 4 12.55 4 12C4 11.45 4.19583 10.9792 4.5875 10.5875C4.97917 10.1958 5.45 10 6 10C6.55 10 7.02083 10.1958 7.4125 10.5875C7.80417 10.9792 8 11.45 8 12C8 12.55 7.80417 13.0208 7.4125 13.4125C7.02083 13.8042 6.55 14 6 14ZM12 14C11.45 14 10.9792 13.8042 10.5875 13.4125C10.1958 13.0208 10 12.55 10 12C10 11.45 10.1958 10.9792 10.5875 10.5875C10.9792 10.1958 11.45 10 12 10C12.55 10 13.0208 10.1958 13.4125 10.5875C13.8042 10.9792 14 11.45 14 12C14 12.55 13.8042 13.0208 13.4125 13.4125C13.0208 13.8042 12.55 14 12 14ZM18 14C17.45 14 16.9792 13.8042 16.5875 13.4125C16.1958 13.0208 16 12.55 16 12C16 11.45 16.1958 10.9792 16.5875 10.5875C16.9792 10.1958 17.45 10 18 10C18.55 10 19.0208 10.1958 19.4125 10.5875C19.8042 10.9792 20 11.45 20 12C20 12.55 19.8042 13.0208 19.4125 13.4125C19.0208 13.8042 18.55 14 18 14ZM6 8C5.45 8 4.97917 7.80417 4.5875 7.4125C4.19583 7.02083 4 6.55 4 6C4 5.45 4.19583 4.97917 4.5875 4.5875C4.97917 4.19583 5.45 4 6 4C6.55 4 7.02083 4.19583 7.4125 4.5875C7.80417 4.97917 8 5.45 8 6C8 6.55 7.80417 7.02083 7.4125 7.4125C7.02083 7.80417 6.55 8 6 8ZM12 8C11.45 8 10.9792 7.80417 10.5875 7.4125C10.1958 7.02083 10 6.55 10 6C10 5.45 10.1958 4.97917 10.5875 4.5875C10.9792 4.19583 11.45 4 12 4C12.55 4 13.0208 4.19583 13.4125 4.5875C13.8042 4.97917 14 5.45 14 6C14 6.55 13.8042 7.02083 13.4125 7.4125C13.0208 7.80417 12.55 8 12 8ZM18 8C17.45 8 16.9792 7.80417 16.5875 7.4125C16.1958 7.02083 16 6.55 16 6C16 5.45 16.1958 4.97917 16.5875 4.5875C16.9792 4.19583 17.45 4 18 4C18.55 4 19.0208 4.19583 19.4125 4.5875C19.8042 4.97917 20 5.45 20 6C20 6.55 19.8042 7.02083 19.4125 7.4125C19.0208 7.80417 18.55 8 18 8Z" fill="currentColor"/> </svg></span>
+              <span class="cat-item__label">Салаты</span>
+            </div>
+            <div class="cat-item">
+              <span class="cat-item__icon" data-icon="apps"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6 20C5.45 20 4.97917 19.8042 4.5875 19.4125C4.19583 19.0208 4 18.55 4 18C4 17.45 4.19583 16.9792 4.5875 16.5875C4.97917 16.1958 5.45 16 6 16C6.55 16 7.02083 16.1958 7.4125 16.5875C7.80417 16.9792 8 17.45 8 18C8 18.55 7.80417 19.0208 7.4125 19.4125C7.02083 19.8042 6.55 20 6 20ZM12 20C11.45 20 10.9792 19.8042 10.5875 19.4125C10.1958 19.0208 10 18.55 10 18C10 17.45 10.1958 16.9792 10.5875 16.5875C10.9792 16.1958 11.45 16 12 16C12.55 16 13.0208 16.1958 13.4125 16.5875C13.8042 16.9792 14 17.45 14 18C14 18.55 13.8042 19.0208 13.4125 19.4125C13.0208 19.8042 12.55 20 12 20ZM18 20C17.45 20 16.9792 19.8042 16.5875 19.4125C16.1958 19.0208 16 18.55 16 18C16 17.45 16.1958 16.9792 16.5875 16.5875C16.9792 16.1958 17.45 16 18 16C18.55 16 19.0208 16.1958 19.4125 16.5875C19.8042 16.9792 20 17.45 20 18C20 18.55 19.8042 19.0208 19.4125 19.4125C19.0208 19.8042 18.55 20 18 20ZM6 14C5.45 14 4.97917 13.8042 4.5875 13.4125C4.19583 13.0208 4 12.55 4 12C4 11.45 4.19583 10.9792 4.5875 10.5875C4.97917 10.1958 5.45 10 6 10C6.55 10 7.02083 10.1958 7.4125 10.5875C7.80417 10.9792 8 11.45 8 12C8 12.55 7.80417 13.0208 7.4125 13.4125C7.02083 13.8042 6.55 14 6 14ZM12 14C11.45 14 10.9792 13.8042 10.5875 13.4125C10.1958 13.0208 10 12.55 10 12C10 11.45 10.1958 10.9792 10.5875 10.5875C10.9792 10.1958 11.45 10 12 10C12.55 10 13.0208 10.1958 13.4125 10.5875C13.8042 10.9792 14 11.45 14 12C14 12.55 13.8042 13.0208 13.4125 13.4125C13.0208 13.8042 12.55 14 12 14ZM18 14C17.45 14 16.9792 13.8042 16.5875 13.4125C16.1958 13.0208 16 12.55 16 12C16 11.45 16.1958 10.9792 16.5875 10.5875C16.9792 10.1958 17.45 10 18 10C18.55 10 19.0208 10.1958 19.4125 10.5875C19.8042 10.9792 20 11.45 20 12C20 12.55 19.8042 13.0208 19.4125 13.4125C19.0208 13.8042 18.55 14 18 14ZM6 8C5.45 8 4.97917 7.80417 4.5875 7.4125C4.19583 7.02083 4 6.55 4 6C4 5.45 4.19583 4.97917 4.5875 4.5875C4.97917 4.19583 5.45 4 6 4C6.55 4 7.02083 4.19583 7.4125 4.5875C7.80417 4.97917 8 5.45 8 6C8 6.55 7.80417 7.02083 7.4125 7.4125C7.02083 7.80417 6.55 8 6 8ZM12 8C11.45 8 10.9792 7.80417 10.5875 7.4125C10.1958 7.02083 10 6.55 10 6C10 5.45 10.1958 4.97917 10.5875 4.5875C10.9792 4.19583 11.45 4 12 4C12.55 4 13.0208 4.19583 13.4125 4.5875C13.8042 4.97917 14 5.45 14 6C14 6.55 13.8042 7.02083 13.4125 7.4125C13.0208 7.80417 12.55 8 12 8ZM18 8C17.45 8 16.9792 7.80417 16.5875 7.4125C16.1958 7.02083 16 6.55 16 6C16 5.45 16.1958 4.97917 16.5875 4.5875C16.9792 4.19583 17.45 4 18 4C18.55 4 19.0208 4.19583 19.4125 4.5875C19.8042 4.97917 20 5.45 20 6C20 6.55 19.8042 7.02083 19.4125 7.4125C19.0208 7.80417 18.55 8 18 8Z" fill="currentColor"/> </svg></span>
+              <span class="cat-item__label">Категория без имени</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Мейн -->
+      <main class="main">
+
+        <!-- Поиск -->
+        <div class="card search-card">
+          <div class="ds-input ds-input--s search-input">
+            <div class="ds-input__frame">
+              <span class="ds-input__icon" data-icon="search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="currentColor"/> </svg></span>
+              <div class="ds-input__content">
+                <input class="ds-input__field" placeholder="Поиск товаров">
+              </div>
+            </div>
+          </div>
+          <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text">
+            <span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7 22C5.61667 22 4.4375 21.5125 3.4625 20.5375C2.4875 19.5625 2 18.3833 2 17C2 15.6167 2.4875 14.4375 3.4625 13.4625C4.4375 12.4875 5.61667 12 7 12C8.38333 12 9.5625 12.4875 10.5375 13.4625C11.5125 14.4375 12 15.6167 12 17C12 18.3833 11.5125 19.5625 10.5375 20.5375C9.5625 21.5125 8.38333 22 7 22ZM20.6 21L14.2 14.6C14 14.3833 13.7875 14.1625 13.5625 13.9375C13.3375 13.7125 13.1167 13.5 12.9 13.3C13.5333 12.9 14.0417 12.3667 14.425 11.7C14.8083 11.0333 15 10.3 15 9.5C15 8.25 14.5625 7.1875 13.6875 6.3125C12.8125 5.4375 11.75 5 10.5 5C9.25 5 8.1875 5.4375 7.3125 6.3125C6.4375 7.1875 6 8.25 6 9.5C6 9.6 6.00417 9.69583 6.0125 9.7875C6.02083 9.87917 6.03333 9.975 6.05 10.075C5.75 10.1083 5.42083 10.175 5.0625 10.275C4.70417 10.375 4.38333 10.4917 4.1 10.625C4.06667 10.4417 4.04167 10.2583 4.025 10.075C4.00833 9.89167 4 9.7 4 9.5C4 7.68333 4.62917 6.14583 5.8875 4.8875C7.14583 3.62917 8.68333 3 10.5 3C12.3167 3 13.8542 3.62917 15.1125 4.8875C16.3708 6.14583 17 7.68333 17 9.5C17 10.2167 16.8875 10.8958 16.6625 11.5375C16.4375 12.1792 16.125 12.7667 15.725 13.3L22 19.6L20.6 21ZM5.225 19.475L7 17.7L8.75 19.475L9.475 18.775L7.7 17L9.475 15.225L8.775 14.525L7 16.3L5.225 14.525L4.525 15.225L6.3 17L4.525 18.775L5.225 19.475Z" fill="currentColor"/> </svg></span>
+            <span class="ds-btn__label">Сбросить все фильтры</span>
+          </button>
+        </div>
+
+        <!-- Каталог -->
+        <div class="card catalog-card">
+
+          <!-- PANEL 1: Салаты -->
+          <section class="panel panel--open">
+            <button class="panel__head">
+              <span class="panel__title">Салаты</span>
+              <span class="panel__count">(4)</span>
+              <span class="panel__chevron" data-icon="arrow_drop_down"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/> </svg></span>
+            </button>
+            <div class="panel__body">
+              <div class="tbl">
+                <div class="tbl__row tbl__head">
+                  <div class="tbl__cell">Наименование</div>
+                  <div class="tbl__cell">Артикул</div>
+                  <div class="tbl__cell">Описание</div>
+                  <div class="tbl__cell">Ед. изм.</div>
+                  <div class="tbl__cell">Цена</div>
+                  <div class="tbl__cell">Количество</div>
+                  <div class="tbl__cell">Сумма</div>
+                </div>
+
+                <div class="tbl__row">
+                  <div class="tbl__cell c-name">Жареная куриная грудка</div>
+                  <div class="tbl__cell">00024</div>
+                  <div class="tbl__cell">обжаренная на сливочном масле свежая курочка в панировке</div>
+                  <div class="tbl__cell">порц</div>
+                  <div class="tbl__cell">200 ₽</div>
+                  <div class="tbl__cell c-qty">
+                    <div class="qty">
+                      <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M5 13V11H19V13H5Z" fill="currentColor"/> </svg></span></button>
+                      <input class="qty__val" value="2">
+                      <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/> </svg></span></button>
+                    </div>
+                  </div>
+                  <div class="tbl__cell c-sum">400 ₽</div>
+                </div>
+
+                <div class="tbl__row">
+                  <div class="tbl__cell c-name">Апельсин</div>
+                  <div class="tbl__cell">00012</div>
+                  <div class="tbl__cell"></div>
+                  <div class="tbl__cell">кг</div>
+                  <div class="tbl__cell">200 ₽</div>
+                  <div class="tbl__cell c-qty">
+                    <div class="qty">
+                      <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M5 13V11H19V13H5Z" fill="currentColor"/> </svg></span></button>
+                      <input class="qty__val" value="1">
+                      <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/> </svg></span></button>
+                    </div>
+                  </div>
+                  <div class="tbl__cell c-sum">200 ₽</div>
+                </div>
+
+                <div class="tbl__row">
+                  <div class="tbl__cell c-name">Салат весенний</div>
+                  <div class="tbl__cell">00028</div>
+                  <div class="tbl__cell"></div>
+                  <div class="tbl__cell">порц</div>
+                  <div class="tbl__cell">170 ₽</div>
+                  <div class="tbl__cell c-qty">
+                    <div class="qty">
+                      <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text ds-btn--disabled"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M5 13V11H19V13H5Z" fill="currentColor"/> </svg></span></button>
+                      <input class="qty__val" value="0">
+                      <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/> </svg></span></button>
+                    </div>
+                  </div>
+                  <div class="tbl__cell c-sum">0 ₽</div>
+                </div>
+
+                <div class="tbl__row">
+                  <div class="tbl__cell c-name">Салат Цезарь</div>
+                  <div class="tbl__cell">00025</div>
+                  <div class="tbl__cell"></div>
+                  <div class="tbl__cell">порц</div>
+                  <div class="tbl__cell">500 ₽</div>
+                  <div class="tbl__cell c-qty">
+                    <div class="qty">
+                      <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text ds-btn--disabled"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M5 13V11H19V13H5Z" fill="currentColor"/> </svg></span></button>
+                      <input class="qty__val" value="0">
+                      <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/> </svg></span></button>
+                    </div>
+                  </div>
+                  <div class="tbl__cell c-sum">0 ₽</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- PANEL 2: Категория без имени -->
+          <section class="panel panel--open">
+            <button class="panel__head">
+              <span class="panel__title">Категория без имени</span>
+              <span class="panel__count">(1)</span>
+              <span class="panel__chevron" data-icon="arrow_drop_down"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/> </svg></span>
+            </button>
+            <div class="panel__body">
+              <div class="tbl">
+                <div class="tbl__row tbl__head">
+                  <div class="tbl__cell">Наименование</div>
+                  <div class="tbl__cell">Артикул</div>
+                  <div class="tbl__cell">Описание</div>
+                  <div class="tbl__cell">Ед. изм.</div>
+                  <div class="tbl__cell">Цена</div>
+                  <div class="tbl__cell">Количество</div>
+                  <div class="tbl__cell">Сумма</div>
+                </div>
+                <div class="tbl__row">
+                  <div class="tbl__cell c-name">Шоколадный батончик</div>
+                  <div class="tbl__cell">00003</div>
+                  <div class="tbl__cell"></div>
+                  <div class="tbl__cell">шт</div>
+                  <div class="tbl__cell">100 ₽</div>
+                  <div class="tbl__cell c-qty">
+                    <div class="qty">
+                      <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text ds-btn--disabled"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M5 13V11H19V13H5Z" fill="currentColor"/> </svg></span></button>
+                      <input class="qty__val" value="0">
+                      <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/> </svg></span></button>
+                    </div>
+                  </div>
+                  <div class="tbl__cell c-sum">0 ₽</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <span class="footer__txt">Товаров: <b>2</b></span>
+        <span class="footer__txt">Общая сумма: <b class="footer__sum">600 ₽</b></span>
+      </div>
+      <div class="footer__right">
+        <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">
+          <span class="ds-btn__icon" data-icon="open_in_new"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H12V5H5V19H19V12H21V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM9.7 15.7L8.3 14.3L17.6 5H14V3H21V10H19V6.4L9.7 15.7Z" fill="currentColor"/> </svg></span>
+          <span class="ds-btn__label">Посмотреть заказ</span>
+        </button>
+        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
+          <span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20L10.575 18.6L16.175 13Z" fill="currentColor"/> </svg></span>
+          <span class="ds-btn__label">Оформить заказ</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
