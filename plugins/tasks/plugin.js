@@ -25,12 +25,41 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const ID = 'tasks'
 const ROUTE = '/tasks'
-const PLUGIN_VER = 'v63'
+const PLUGIN_VER = 'v64'
 const STORE_KEY = 'tasks-store-v4'
 
 /* SEED_START */
 const TASKS_SEED = {"version":1,"projects":[{"id":"p1","name":"Дизайн-система — страницы компонентов"},{"id":"p2","name":"Дизайн-система — инфраструктура"},{"id":"p3","name":"Конструктор шапки KDS"},{"id":"p4","name":"Hermes — инструменты"}],"tasks":[{"id":"button-page","name":"Button — страница компонента","status":"","projectId":"p1","sessions":["20260819_150153_6a5ae4","20260819_151029_a491e3","20260821_224047_843e97","20260821_225733_63cbf4","20260821_233202_92be38","20260821_233254_1bc28f"]},{"id":"badge-page","name":"Badge — страница компонента","status":"","projectId":"p1","sessions":["20260822_023147_d13536","20260822_022651_6d8ba1"]},{"id":"checkbox-page","name":"Checkbox — страница компонента","status":"","projectId":"p1","sessions":["20260822_023147_70e722","20260822_022651_d3700b"]},{"id":"radio-page","name":"Radio — страница компонента","status":"","projectId":"p1","sessions":["20260822_023147_5d32ae","20260822_022651_80cb6e"]},{"id":"input-page","name":"Form field + Input — страница компонента","status":"","projectId":"p1","sessions":["20260822_023156_8533f0","20260822_022651_f9b6c2"]},{"id":"master-template","name":"Мастер-шаблон страницы компонента","status":"","projectId":"p1","sessions":["20260822_015454_23661d","20260822_041318_dff088"]},{"id":"ds-tokens-prototypes","name":"Токены ДС и прототипы на их основе","status":"","projectId":"p2","sessions":["20260828_111442_057f61","20260828_181035_9ad6c5"]},{"id":"figma-desc-plugin","name":"Плагин описаний компонентов в Figma","status":"","projectId":"p2","sessions":["20260829_202827_ca8aab"]},{"id":"figma-handoff-skill","name":"Скилл handoff-отчёта для Figma","status":"","projectId":"p2","sessions":["20260825_173842_58584e"]},{"id":"figma-access","name":"Доступ к Figma: комментарии и API","status":"","projectId":"p2","sessions":["20260818_132528_1fe506"]},{"id":"ds-plan","name":"Дизайн-система в код: план и подход","status":"","projectId":"p2","sessions":["20260819_113945_02f934","20260820_162923_63a115","20260825_143418_8e050d"]},{"id":"jira-queries","name":"Jira: поиск дизайн-задач и примеров","status":"","projectId":"p2","sessions":["20260813_084106_12d1ed","20260828_173709_2740df"]},{"id":"matomo","name":"Аудит Matomo","status":"","projectId":"p2","sessions":["20260825_204628_33c602"]},{"id":"kds-header","name":"Конструктор шапки KDS","status":"","projectId":"p3","sessions":["20260814_112355_dcf728"]},{"id":"hermes-setup","name":"Hermes: правила, сессии, инструменты","status":"","projectId":"p4","sessions":["20260813_064801_8fef1352","20260813_085957_26e4c0","20260819_192749_e66ebe","20260820_154051_75ca25","20260820_163800_5b9126","20260822_035349_7057cc","20260828_180018_cd39d5"]},{"id":"tasks-registry","name":"Реестр задач в Hermes","status":"","projectId":"p4","sessions":["20260829_213203_e7a662"]},{"id":"inbox","name":"Не разобрано","status":"","projectId":null,"sessions":[]}]}
 /* SEED_END */
+
+// Каталог прототипов: проект «Прототипы» всегда виден (данные зашиты в плагин,
+// НЕ хранятся в localStorage) — не пропадает при сбросе и обновляется с версией.
+const PROTOTYPE_LINKS = [
+  {
+    name: 'Настройки производства',
+    url: 'https://anders7rusk.github.io/iiko-ds-web/prototypes/production-settings.html'
+  },
+  {
+    name: 'Подтверждение заказа (Метро)',
+    url: 'https://anders7rusk.github.io/iiko-ds-web/prototypes/order-confirmation.html'
+  },
+  {
+    name: 'Правила доставки и приёмка товара (Метро)',
+    url: 'https://anders7rusk.github.io/iiko-ds-web/prototypes/receiving.html'
+  },
+  {
+    name: 'Подарок в день рождения',
+    url: 'https://anders7rusk.github.io/iiko-ds-web/prototypes/birthday-gift.html'
+  },
+  {
+    name: 'Каталог B2B Portal',
+    url: 'https://anders7rusk.github.io/iiko-ds-web/prototypes/product-catalog.html'
+  },
+  {
+    name: 'Конструктор шапки карточки заказа — KDS',
+    url: 'https://anders7rusk.github.io/kds-header-constructor/'
+  }
+]
 
 const MONTHS = ['янв', 'фев', 'мар', 'апр', 'мая', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек']
 
@@ -488,7 +517,7 @@ function ProjectBlock(props) {
     activeId,
     liveSet
   } = props
-  const empty = proj.tasks.length === 0
+  const empty = proj.tasks.length === 0 && !(proj.links && proj.links.length)
   const [showTaskInput, setShowTaskInput] = useState(false)
   const projSessions = proj.tasks.reduce((acc, t) => acc.concat(t.sessions || []), [])
   const projectOwnSessions = (proj.sessions || [])
@@ -524,7 +553,9 @@ function ProjectBlock(props) {
                   color: 'var(--ui-text-tertiary)',
                   border: '1px solid var(--ui-stroke-secondary)'
                 },
-                children: plural(proj.tasks.length, 'задача', 'задачи', 'задач')
+                children: proj.links && proj.links.length
+                  ? plural(proj.links.length, 'ссылка', 'ссылки', 'ссылок')
+                  : plural(proj.tasks.length, 'задача', 'задачи', 'задач')
               })
             ]
           }),
@@ -543,6 +574,7 @@ function ProjectBlock(props) {
           className: 'flex flex-col gap-1 px-2 pb-2 pt-1.5 pl-4',
           children: [
             // компактная строка действий: кнопки справа, сначала задача, потом сессия
+            !proj.links &&
             jsxs('div', {
               className: 'flex items-center justify-end gap-1.5',
               children: [
@@ -593,6 +625,40 @@ function ProjectBlock(props) {
                 })
               ]
             }),
+            proj.links &&
+              proj.links.length > 0 &&
+              jsxs('div', {
+                className: 'flex flex-col gap-0.5 py-1',
+                children: [
+                  jsx('div', {
+                    className: 'px-1 pb-0.5 text-[0.6875rem] font-medium',
+                    style: { color: 'var(--ui-text-tertiary)' },
+                    children: 'Прототипы'
+                  }),
+                  ...proj.links.map(l =>
+                    jsx(
+                      'a',
+                      {
+                        href: l.url,
+                        target: '_blank',
+                        rel: 'noopener noreferrer',
+                        className:
+                          'flex min-w-0 items-center gap-1.5 rounded px-1.5 py-1 text-[0.8125rem] hover:bg-(--chrome-action-hover)',
+                        style: { color: 'var(--ui-text-secondary)' },
+                        children: [
+                          jsx('span', {
+                            className: 'shrink-0',
+                            style: { color: 'var(--ui-accent, #448AFF)' },
+                            children: '↗'
+                          }),
+                          jsx('span', { className: 'truncate', children: l.name })
+                        ]
+                      },
+                      l.url
+                    )
+                  )
+                ]
+              }),
             projectOwnSessions.length
               ? projectOwnSessions.map(s =>
                   jsx(SessionLine, {
@@ -732,7 +798,7 @@ function writeStore(next) {
 
 function TasksPage() {
   const [store, setStore] = useState(null)
-  const [expanded, setExpanded] = useState({})
+  const [expanded, setExpanded] = useState({ prototypes: true })
   const [newProject, setNewProject] = useState('')
   const [newTask, setNewTask] = useState('')
 
@@ -1053,10 +1119,13 @@ function TasksPage() {
     })
   }
 
-  const projectRows = store.projects.map(p => {
-    const tasks = store.tasks.filter(t => t.projectId === p.id)
-    return { key: p.id, id: p.id, name: p.name, tasks }
-  })
+  const projectRows = [{ key: 'prototypes', id: 'prototypes', name: 'Прототипы', tasks: [], links: PROTOTYPE_LINKS, notask: true }]
+    .concat(
+      store.projects.map(p => {
+        const tasks = store.tasks.filter(t => t.projectId === p.id)
+        return { key: p.id, id: p.id, name: p.name, tasks }
+      })
+    )
   const noProject = store.tasks.filter(t => !t.projectId)
   if (noProject.length) {
     projectRows.push({ key: 'none', id: 'none', name: 'Без проекта', tasks: noProject, notask: true })
