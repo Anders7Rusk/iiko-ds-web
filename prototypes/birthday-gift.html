@@ -61,9 +61,6 @@
     display: flex; flex-direction: column; gap: var(--ds-space-4x);
     align-items: stretch;
   }
-  /* Паддинги карточек под макет: по бокам 16px, сверху заголовка ~20px, снизу контента 20px */
-  .modal .ds-card__header { padding: 20px 16px 8px; }
-  .modal .ds-card__content { padding: 8px 16px 20px; }
   .modal__foot {
     display: flex; align-items: center; justify-content: flex-end; gap: var(--ds-space-2x);
     padding: var(--ds-space-4x) var(--ds-space-6x);
@@ -71,12 +68,6 @@
   }
   .stack-16 { display: flex; flex-direction: column; gap: var(--ds-space-4x); }
   .card-title-row { display: flex; align-items: center; gap: var(--ds-space-2x); }
-  .card-title-row .ds-card__title {
-    margin: 0;
-    font-size: var(--ds-typography-body-font-size-m);   /* 16px — секционные заголовки карточек */
-    line-height: var(--ds-typography-body-line-height-m);
-    font-weight: var(--ds-typography-font-weight-medium);
-  }
   .card-title-row .card-title-icon {
     display: inline-flex; align-items: center; justify-content: center;
     width: 20px; height: 20px; flex-shrink: 0;
