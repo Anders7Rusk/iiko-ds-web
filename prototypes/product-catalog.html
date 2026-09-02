@@ -40,13 +40,16 @@ body{margin:0;background:var(--ds-palette-neutral-50,#f5f5f5);color:var(--ds-col
 /* таблица: колонки фикс. px (структура макета), rows — grid вокруг ячеек ДС */
 .catalog{overflow:hidden;}
 .catalog__content{padding:0;overflow-x:auto;}
+.catalog .ds-expansion{border:0;border-radius:0;}
+.sec-count{color:var(--ds-color-text-secondary,#616161);}
 .tbl{width:100%;min-width:1244px;}
 .tbl-row{width:100%;display:grid;grid-template-columns:318px 129px 144px 125px 106px 311px 111px;align-items:center;}
 .ds-table-header-row{border:0;border-bottom:1px solid var(--ds-color-stroke-default,#e0e0e0);border-radius:0;background:transparent;width:100%;min-height:44px;}
 .ds-table-header-cell{width:100%;border:0;background:transparent;min-height:44px;}
+.ds-table-header-cell__label{text-transform:uppercase;letter-spacing:.4px;}
 .ds-table-content-row{border:0;border-bottom:1px solid var(--ds-color-stroke-default,#e0e0e0);width:100%;}
 .ds-table-content-cell{width:100%;min-width:0;min-height:52px;}
-.ds-table-content-cell__label{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;}
+.ds-table-content-cell__label{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;font-size:var(--ds-font-body-s-14-normal-regular-size);}
 .name-cell .ds-table-content-cell__label{color:var(--ds-color-text-accent,#448aff);font-weight:500;}
 
 /* количество — ds-input-number (компактный для таблицы) + ds-btn −/+ */
