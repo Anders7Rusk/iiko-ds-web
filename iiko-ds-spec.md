@@ -284,18 +284,18 @@
 ## Компоненты
 
 
-### Каталог компонентов Figma (все 121)
+### Каталог компонентов Figma (все 106)
 
 Полный набор компонентов дизайн-системы (сканирование всех страниц файла Figma CJBjyS1OnRXqiOqaXYVCVd, включая неопубликованные и вложенные): свойства, все значения вариантов и токены компонента.
 
-**Всего компонентов: 121**
+**Всего компонентов: 106**
 
 #### Arrow `[55939:14119]` — 13 вариантов
 - **Content** (VARIANT): arrow_back, arrow_downward_alt, arrow_drop_down, arrow_drop_up, arrow_forward, arrow_left, arrow_right, arrow_upward_alt, keyboard_arrow_down, keyboard_arrow_left, keyboard_arrow_right, keyboard_arrow_up, unfold_less
 - Размеры и параметры:
     - высота: `var(--ds-size-6x)` (фикс.)
     - ширина: `var(--ds-size-6x)` (фикс.)
-    - фон: `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - фон: `#ffffff`
 - Разметка:
 
 ```html
@@ -313,7 +313,7 @@
   width: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -337,7 +337,7 @@
   height: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 ```
 </details>
@@ -347,7 +347,7 @@
 - Размеры и параметры:
     - высота: `var(--ds-size-6x)` (фикс.)
     - ширина: `var(--ds-size-6x)` (фикс.)
-    - фон: `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - фон: `#ffffff`
 - Разметка:
 
 ```html
@@ -365,7 +365,7 @@
   width: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -389,7 +389,7 @@
   height: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 ```
 </details>
@@ -399,7 +399,7 @@
 - Размеры и параметры:
     - высота: `var(--ds-size-6x)` (фикс.)
     - ширина: `var(--ds-size-6x)` (фикс.)
-    - фон: `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - фон: `#ffffff`
 - Разметка:
 
 ```html
@@ -417,7 +417,7 @@
   width: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -441,7 +441,7 @@
   height: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 ```
 </details>
@@ -451,7 +451,7 @@
 - Размеры и параметры:
     - высота: `var(--ds-size-6x)` (фикс.)
     - ширина: `var(--ds-size-6x)` (фикс.)
-    - фон: `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - фон: `#ffffff`
 - Разметка:
 
 ```html
@@ -469,7 +469,7 @@
   width: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -493,7 +493,7 @@
   height: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 ```
 </details>
@@ -503,12 +503,12 @@
 - **State** (VARIANT): Default, Disable, Error, Focus, Focus+Value, Hover
 - Размеры и параметры:
     - высота: минимум `48px`, растёт по контенту
-    - ширина: по контенту (hug)
-    - фон: `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - ширина: `250px` (фикс.)
+    - фон: `#ffffff`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
-    - `--empty`: color `var(--ds-color-chips-input-default-action-text-color)`, color `var(--ds-color-chips-input-disable-action-text-color)`
-    - `--populated`: color `var(--ds-color-chips-input-default-action-text-color)`, color `var(--ds-color-chips-input-disable-action-text-color)`
+    - `--empty`: color `var(--ds-color-form-field-input-label-text-color, #616161)`, color `var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e)`
+    - `--populated`: color `var(--ds-color-form-field-filled-default-label-text-color, #616161)`, color `var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e)`
 - Состояния: `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
 - Разметка:
 
@@ -527,9 +527,10 @@
 /* Autocomplete form [58107:8230] — 10 вариантов; оси: Variant, State */
 .ds-autocomplete-form {
   min-height: 48px;
+  width: 250px;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -538,7 +539,7 @@
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-autocomplete-form__icon {
@@ -560,51 +561,50 @@
 .ds-autocomplete-form__input {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-form-field-gap-input-support);
+  gap: var(--ds-form-field-gap-input-support, 4px);
 }
 .ds-autocomplete-form__input-frame {
   height: 48px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-form-field-gap-input-frame);
-  padding: var(--ds-form-field-m-size-pad-input-left) var(--ds-form-field-m-size-pad-input-right) var(--ds-form-field-m-size-pad-input-top) var(--ds-form-field-m-size-pad-input-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  padding: var(--ds-form-field-m-size-pad-input-top, 12px) var(--ds-form-field-m-size-pad-input-right, 12px) var(--ds-form-field-m-size-pad-input-bottom, 12px) var(--ds-form-field-m-size-pad-input-left, 12px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-autocomplete-form__support {
   display: flex;
   flex-direction: row;
 }
 .ds-autocomplete-form--empty {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
 }
 .ds-autocomplete-form--populated {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 .ds-autocomplete-form--empty:hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-form-field-filled-hover-input-background-hover, #f5f5f5);
+  border: 1px solid var(--ds-color-form-field-filled-hover-border-color, #9e9e9e);
 }
 .ds-autocomplete-form--populated:hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-hover-label-text-color, #616161);
 }
 .ds-autocomplete-form--populated:focus-visible {
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-form-field-filled-focus-label-text-color, #448aff);
 }
 .ds-autocomplete-form--empty:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e);
 }
 .ds-autocomplete-form--empty.ds-autocomplete-form--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e);
 }
 .ds-autocomplete-form--populated:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-autocomplete-form--populated.ds-autocomplete-form--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-autocomplete-form--disabled {
   pointer-events: none;
@@ -635,12 +635,6 @@
 - Прочие свойства: Element left#17025:2 (BOOLEAN), Element right#17025:123 (BOOLEAN), Button text#17039:607 (TEXT), Text#17053:733 (BOOLEAN)
 - CSS: выверено вручную, см. `components/button.css` в разделе «Полные CSS-стили всех компонентов»
 
-#### Button `[16953:14851]` — 13 вариантов
-- **Type** (VARIANT): Icon, Icon_outlined
-- **State** (VARIANT): Disable, Enabled, Error, No border, Primary, Secondary, Warning
-- **Icon** (VARIANT): Yes
-- CSS: выверено вручную, см. `components/button.css` в разделе «Полные CSS-стили всех компонентов»
-
 #### Button group `[53619:15772]` — 4 вариантов
 - **Orientation** (VARIANT): Horizontally, Vertically
 - **Margins** (VARIANT): Off, On
@@ -659,68 +653,19 @@
 - Прочие свойства: Slot#60176:0 (SLOT)
 - CSS: выверено вручную, см. `components/button-icon.css` в разделе «Полные CSS-стили всех компонентов»
 
-#### Button New `[16321:6498]` — 2 вариантов
-- **Type** (VARIANT): btn-28, btn-36
-- Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2-5x) var(--ds-size-2-5x)`
-    - тень: `var(--ds-shadow-shadows-01-dp-sl)`
-- Модификаторы (что меняет каждый):
-    - `--btn-28`: внутренние отступы `var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x)`, фон `var(--ds-color-chips-input-focus-border-color)`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
-    - `--btn-36`: фон `var(--ds-color-expansion-panel-block-collaps-content-background)`, color `var(--ds-palette-neutral-950)`
-- Разметка:
-
-```html
-<div class="ds-button-new ds-button-new--btn-28">
-  <span class="ds-button-new__label">Текст</span>
-</div>
-```
-<details><summary>CSS компонента</summary>
-
-```css
-/* Button New [16321:6498] — 2 вариантов; оси: Type */
-.ds-button-new {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2-5x) var(--ds-size-2-5x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-button-new__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: 1.25px;
-  color: var(--ds-palette-neutral-950);
-  white-space: nowrap;
-}
-.ds-button-new--btn-36 {
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-  color: var(--ds-palette-neutral-950);
-}
-.ds-button-new--btn-28 {
-  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x);
-  background: var(--ds-color-chips-input-focus-border-color);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
-}
-```
-</details>
-
 #### Button toggle `[17039:71554]` — 12 вариантов
 - **Size** (VARIANT): M, S, XS
 - **Type** (VARIANT): Filled, Outlined
 - **Content** (VARIANT): Icon, Text
 - Прочие свойства: Button container#59885:13 (SLOT)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-button-toggle-pad-left) var(--ds-button-toggle-pad-right) var(--ds-button-toggle-pad-top) var(--ds-button-toggle-pad-bottom)`
-    - промежуток между элементами: `var(--ds-button-toggle-gap)`
-    - скругление: `var(--ds-size-3x)`
+    - ширина: `fit-content` (фикс.)
+    - внутренние отступы: `var(--ds-button-toggle-pad-top, 4px) var(--ds-button-toggle-pad-right, 4px) var(--ds-button-toggle-pad-bottom, 4px) var(--ds-button-toggle-pad-left, 4px)`
+    - промежуток между элементами: `var(--ds-button-toggle-gap, 4px)`
+    - скругление: `var(--ds-button-toggle-border-radius, 12px)`
 - Модификаторы (что меняет каждый):
-    - `--filled`: фон `var(--ds-color-button-toggle-filled-background)`, color `var(--ds-color-chips-input-focus-border-color)`, рамка `none`, тень `none`
-    - `--outlined`: фон `var(--ds-color-button-toggle-outlined-background)`, рамка `1px solid var(--ds-color-button-toggle-outlined-border-color)`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`, тень `none`
+    - `--filled`: фон `var(--ds-color-button-toggle-filled-background, #ffffff)`, color `var(--ds-color-button-accent-outlined-default-text-color, #448aff)`, рамка `none`, тень `none`
+    - `--outlined`: фон `var(--ds-color-button-toggle-outlined-background, #ffffff)`, рамка `1px solid var(--ds-color-button-toggle-outlined-border-color, #e0e0e0)`, color `var(--ds-color-button-accent-filled-default-text-color, #ffffff)`, тень `none`
     - `--s`: ширина `var(--ds-size-5x)`, высота `var(--ds-size-5x)`
     - `--xs`: ширина `var(--ds-size-4x)`, высота `var(--ds-size-4x)`
 - Разметка:
@@ -736,12 +681,13 @@
 ```css
 /* Button toggle [17039:71554] — 12 вариантов; оси: Size, Type, Content */
 .ds-button-toggle {
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-toggle-gap);
-  padding: var(--ds-button-toggle-pad-left) var(--ds-button-toggle-pad-right) var(--ds-button-toggle-pad-top) var(--ds-button-toggle-pad-bottom);
-  border-radius: var(--ds-size-3x);
+  gap: var(--ds-button-toggle-gap, 4px);
+  padding: var(--ds-button-toggle-pad-top, 4px) var(--ds-button-toggle-pad-right, 4px) var(--ds-button-toggle-pad-bottom, 4px) var(--ds-button-toggle-pad-left, 4px);
+  border-radius: var(--ds-button-toggle-border-radius, 12px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -750,7 +696,7 @@
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-button-accent-outlined-default-text-color, #448aff);
   white-space: nowrap;
 }
 .ds-button-toggle__icon {
@@ -778,23 +724,23 @@
   height: var(--ds-size-4x);
 }
 .ds-button-toggle--filled.ds-button-toggle--text {
-  background: var(--ds-color-button-toggle-filled-background);
-  color: var(--ds-color-chips-input-focus-border-color);
+  background: var(--ds-color-button-toggle-filled-background, #ffffff);
+  color: var(--ds-color-button-accent-outlined-default-text-color, #448aff);
   border: none;
   box-shadow: none;
 }
 .ds-button-toggle--outlined.ds-button-toggle--text {
-  background: var(--ds-color-button-toggle-outlined-background);
-  border: 1px solid var(--ds-color-button-toggle-outlined-border-color);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: var(--ds-color-button-toggle-outlined-background, #ffffff);
+  border: 1px solid var(--ds-color-button-toggle-outlined-border-color, #e0e0e0);
+  color: var(--ds-color-button-accent-filled-default-text-color, #ffffff);
   box-shadow: none;
 }
 .ds-button-toggle--outlined.ds-button-toggle--icon {
-  background: var(--ds-color-button-toggle-outlined-background);
-  border: 1px solid var(--ds-color-button-toggle-outlined-border-color);
+  background: var(--ds-color-button-toggle-outlined-background, #ffffff);
+  border: 1px solid var(--ds-color-button-toggle-outlined-border-color, #e0e0e0);
 }
 .ds-button-toggle--filled.ds-button-toggle--icon {
-  background: var(--ds-color-button-toggle-filled-background);
+  background: var(--ds-color-button-toggle-filled-background, #ffffff);
 }
 ```
 </details>
@@ -836,12 +782,12 @@
 - Прочие свойства: Checkbox left#17172:1340 (BOOLEAN), Checkbox right#17172:1349 (BOOLEAN), Label#54065:0 (BOOLEAN), Support text#58192:0 (BOOLEAN)
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-5x)`, растёт по контенту
-    - ширина: по контенту (hug)
-    - промежуток между элементами: `var(--ds-checkbox-label-gap-support)`
+    - ширина: `fit-content` (фикс.)
+    - промежуток между элементами: `var(--ds-checkbox-label-gap-support, 4px)`
 - Модификаторы (что меняет каждый):
-    - `--disable`: color `var(--ds-color-chips-input-disable-action-text-color)`
-    - `--error`: color `var(--ds-color-chips-input-error-cursor-color)`
-    - `--normal`: color `var(--ds-color-chips-input-error-cursor-color)`
+    - `--disable`: color `var(--ds-color-checkbox-label-text-disable-color, #9e9e9e)`
+    - `--error`: color `var(--ds-color-checkbox-label-text-color, #333333)`
+    - `--normal`: color `var(--ds-color-checkbox-label-text-color, #333333)`
 - Разметка:
 
 ```html
@@ -861,9 +807,10 @@
 /* Checkbox label [53810:880] — 9 вариантов; оси: Variant, Type */
 .ds-checkbox-label {
   min-height: var(--ds-size-5x);
+  width: fit-content;
   display: flex;
   flex-direction: column;
-  gap: var(--ds-checkbox-label-gap-support);
+  gap: var(--ds-checkbox-label-gap-support, 4px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -872,7 +819,7 @@
   font-weight: var(--ds-typography-font-weight-regular);
   line-height: var(--ds-typography-line-height-5x);
   letter-spacing: 0.25px;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-checkbox-label-text-color, #333333);
   white-space: nowrap;
 }
 .ds-checkbox-label__icon {
@@ -895,7 +842,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-checkbox-label-gap);
+  gap: var(--ds-checkbox-label-gap, 8px);
 }
 .ds-checkbox-label__left {
   display: flex;
@@ -911,44 +858,44 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: var(--ds-checkbox-label-pad-left-support-7x) 0 0 0;
+  padding: 0 0 0 var(--ds-checkbox-label-pad-left-support-7x, 28px);
 }
 .ds-checkbox-label__support-text {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-checkbox-label-text-support-color);
+  background: var(--ds-color-checkbox-label-text-support-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-checkbox-label-text-support-color, #616161);
 }
 .ds-checkbox-label--normal.ds-checkbox-label--deselected {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-checkbox-label-text-color, #333333);
 }
 .ds-checkbox-label--normal.ds-checkbox-label--selected {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-checkbox-label-text-color, #333333);
 }
 .ds-checkbox-label--normal.ds-checkbox-label--inderterminate {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-checkbox-label-text-color, #333333);
 }
 .ds-checkbox-label--error.ds-checkbox-label--deselected {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-checkbox-label-text-color, #333333);
 }
 .ds-checkbox-label--error.ds-checkbox-label--selected {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-checkbox-label-text-color, #333333);
 }
 .ds-checkbox-label--error.ds-checkbox-label--inderterminate {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-checkbox-label-text-color, #333333);
 }
 .ds-checkbox-label--disable.ds-checkbox-label--deselected {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-checkbox-label-text-disable-color, #9e9e9e);
 }
 .ds-checkbox-label--disable.ds-checkbox-label--selected {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-checkbox-label-text-disable-color, #9e9e9e);
 }
 .ds-checkbox-label--disable.ds-checkbox-label--inderterminate {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-checkbox-label-text-disable-color, #9e9e9e);
 }
 ```
 </details>
@@ -960,15 +907,15 @@
 - Прочие свойства: Element left#17172:1340 (BOOLEAN), Element right#17172:1349 (BOOLEAN)
 - Размеры и параметры:
     - высота: `var(--ds-size-8x)` (фикс.)
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-chips-m-size-pad-left) var(--ds-chips-m-size-pad-right) var(--ds-chips-m-size-pad-top) var(--ds-chips-m-size-pad-bottom)`
-    - промежуток между элементами: `var(--ds-chips-m-size-gap)`
-    - скругление: `var(--ds-size-3x)`
+    - ширина: `fit-content` (фикс.)
+    - внутренние отступы: `var(--ds-chips-m-size-pad-top, 6px) var(--ds-chips-m-size-pad-right, 8px) var(--ds-chips-m-size-pad-bottom, 6px) var(--ds-chips-m-size-pad-left, 8px)`
+    - промежуток между элементами: `var(--ds-chips-m-size-gap, 8px)`
+    - скругление: `var(--ds-chips-m-size-border-radius, 12px)`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
-    - `--filled`: фон `var(--ds-color-chips-filled-default-background)`, color `var(--ds-color-chips-input-error-cursor-color)`, фон `var(--ds-color-chips-disable-background-filled)`, color `var(--ds-color-chips-input-disable-action-text-color)`
-    - `--outlined`: фон `var(--ds-color-chips-outlined-default-background)`, рамка `1px solid var(--ds-color-chips-outlined-default-border-color)`, color `var(--ds-color-chips-input-error-cursor-color)`, фон `var(--ds-color-chips-disable-background-outlined)`
-    - `--s`: промежуток между элементами `var(--ds-chips-s-size-gap)`, внутренние отступы `var(--ds-chips-s-size-pad-left) var(--ds-chips-s-size-pad-right) var(--ds-chips-s-size-pad-top) var(--ds-chips-s-size-pad-bottom)`, скругление `var(--ds-size-2x)`, ширина `var(--ds-size-4x)`
+    - `--filled`: фон `var(--ds-color-chips-filled-default-background, #f8f9fc)`, color `var(--ds-color-chips-text-color, #333333)`, фон `var(--ds-color-chips-disable-background-filled, #ebebeb)`, color `var(--ds-color-chips-disable-text-color, #9e9e9e)`
+    - `--outlined`: фон `var(--ds-color-chips-outlined-default-background, #ffffff)`, рамка `1px solid var(--ds-color-chips-outlined-default-border-color, #e0e0e0)`, color `var(--ds-color-chips-text-color, #333333)`, фон `var(--ds-color-chips-disable-background-outlined, #ffffff)`
+    - `--s`: промежуток между элементами `var(--ds-chips-s-size-gap, 4px)`, внутренние отступы `var(--ds-chips-s-size-pad-top, 4px) var(--ds-chips-s-size-pad-right, 6px) var(--ds-chips-s-size-pad-bottom, 4px) var(--ds-chips-s-size-pad-left, 6px)`, скругление `var(--ds-chips-s-size-border-radius, 8px)`, ширина `var(--ds-size-4x)`
 - Состояния: `:active` (нажатие), `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
 - Разметка:
 
@@ -988,13 +935,14 @@
 ```css
 /* Chips [17168:83542] — 18 вариантов; оси: Size, Type, State */
 .ds-chips {
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
   height: var(--ds-size-8x);
-  padding: var(--ds-chips-m-size-pad-left) var(--ds-chips-m-size-pad-right) var(--ds-chips-m-size-pad-top) var(--ds-chips-m-size-pad-bottom);
-  gap: var(--ds-chips-m-size-gap);
-  border-radius: var(--ds-size-3x);
+  padding: var(--ds-chips-m-size-pad-top, 6px) var(--ds-chips-m-size-pad-right, 8px) var(--ds-chips-m-size-pad-bottom, 6px) var(--ds-chips-m-size-pad-left, 8px);
+  gap: var(--ds-chips-m-size-gap, 8px);
+  border-radius: var(--ds-chips-m-size-border-radius, 12px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -1003,7 +951,7 @@
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-chips-text-color, #333333);
   white-space: nowrap;
 }
 .ds-chips__icon {
@@ -1032,7 +980,7 @@
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-chips__chip-container {
   display: flex;
@@ -1043,71 +991,71 @@
 .ds-chips__chip-text {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-chips-text-color);
+  background: var(--ds-color-chips-text-color, #333333);
   font-size: var(--ds-font-body-s-14-normal-regular-size);
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-chips-text-color, #333333);
 }
 .ds-chips__close {
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-chips--s {
-  gap: var(--ds-chips-s-size-gap);
-  padding: var(--ds-chips-s-size-pad-left) var(--ds-chips-s-size-pad-right) var(--ds-chips-s-size-pad-top) var(--ds-chips-s-size-pad-bottom);
-  border-radius: var(--ds-size-2x);
+  gap: var(--ds-chips-s-size-gap, 4px);
+  padding: var(--ds-chips-s-size-pad-top, 4px) var(--ds-chips-s-size-pad-right, 6px) var(--ds-chips-s-size-pad-bottom, 4px) var(--ds-chips-s-size-pad-left, 6px);
+  border-radius: var(--ds-chips-s-size-border-radius, 8px);
 }
 .ds-chips--s .ds-chips__icon {
   width: var(--ds-size-4x);
   height: var(--ds-size-4x);
 }
 .ds-chips--outlined {
-  background: var(--ds-color-chips-outlined-default-background);
-  border: 1px solid var(--ds-color-chips-outlined-default-border-color);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  background: var(--ds-color-chips-outlined-default-background, #ffffff);
+  border: 1px solid var(--ds-color-chips-outlined-default-border-color, #e0e0e0);
+  color: var(--ds-color-chips-text-color, #333333);
 }
 .ds-chips--outlined:hover {
-  background: var(--ds-color-chips-outlined-hover-background);
-  border: 1px solid var(--ds-color-chips-outlined-hover-border-color);
+  background: var(--ds-color-chips-outlined-hover-background, #ffffff);
+  border: 1px solid var(--ds-color-chips-outlined-hover-border-color, #9e9e9e);
 }
 .ds-chips--outlined:focus-visible {
-  background: var(--ds-color-chips-outlined-focus-background);
+  background: var(--ds-color-chips-outlined-focus-background, #ffffff);
 }
 .ds-chips--outlined:active {
-  background: var(--ds-color-chips-outlined-press-background);
-  border: 1px solid var(--ds-color-chips-outlined-press-border-color);
+  background: var(--ds-color-chips-outlined-press-background, #e0e0e0);
+  border: 1px solid var(--ds-color-chips-outlined-press-border-color, #e0e0e0);
 }
 .ds-chips--outlined:disabled {
-  background: var(--ds-color-chips-disable-background-outlined);
-  border: 1px solid var(--ds-color-chips-disable-border-color);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-chips-disable-background-outlined, #ffffff);
+  border: 1px solid var(--ds-color-chips-disable-border-color, #ebebeb);
+  color: var(--ds-color-chips-disable-text-color, #9e9e9e);
 }
 .ds-chips--outlined.ds-chips--disabled {
-  background: var(--ds-color-chips-disable-background-outlined);
-  border: 1px solid var(--ds-color-chips-disable-border-color);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-chips-disable-background-outlined, #ffffff);
+  border: 1px solid var(--ds-color-chips-disable-border-color, #ebebeb);
+  color: var(--ds-color-chips-disable-text-color, #9e9e9e);
 }
 .ds-chips--filled {
-  background: var(--ds-color-chips-filled-default-background);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  background: var(--ds-color-chips-filled-default-background, #f8f9fc);
+  color: var(--ds-color-chips-text-color, #333333);
 }
 .ds-chips--filled:hover {
-  background: var(--ds-color-chips-filled-hover-background);
+  background: var(--ds-color-chips-filled-hover-background, #f5f5f5);
 }
 .ds-chips--filled:active {
-  background: var(--ds-color-chips-filled-press-background);
+  background: var(--ds-color-chips-filled-press-background, #e0e0e0);
 }
 .ds-chips--filled:disabled {
-  background: var(--ds-color-chips-disable-background-filled);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-chips-disable-background-filled, #ebebeb);
+  color: var(--ds-color-chips-disable-text-color, #9e9e9e);
 }
 .ds-chips--filled.ds-chips--disabled {
-  background: var(--ds-color-chips-disable-background-filled);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-chips-disable-background-filled, #ebebeb);
+  color: var(--ds-color-chips-disable-text-color, #9e9e9e);
 }
 .ds-chips--disabled {
   pointer-events: none;
@@ -1119,8 +1067,8 @@
 - **Size** (VARIANT): M, S
 - Прочие свойства: Slot#60220:1 (SLOT)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - промежуток между элементами: `var(--ds-chips-gap-group)`
+    - ширина: `fit-content` (фикс.)
+    - промежуток между элементами: `var(--ds-chips-gap-group, 8px)`
 - Модификаторы (что меняет каждый):
     - `--s`: ширина `var(--ds-size-4x)`, высота `var(--ds-size-4x)`
 - Разметка:
@@ -1136,10 +1084,11 @@
 ```css
 /* Chips group [55750:5485] — 2 вариантов; оси: Size */
 .ds-chips-group {
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-chips-gap-group);
+  gap: var(--ds-chips-gap-group, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -1148,7 +1097,7 @@
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-chips-text-color, #333333);
   white-space: nowrap;
 }
 .ds-chips-group__icon {
@@ -1180,11 +1129,11 @@
 - **State** (VARIANT): Default, Disable, Error, Error+Hover, Focus, Focus+Placeholder, Focus+Value, Hover
 - Прочие свойства: Support text#55693:0 (BOOLEAN), Element right#55751:38 (BOOLEAN), Support#59392:7 (BOOLEAN), Hint text#59430:0 (BOOLEAN), Label text value#59432:1 (TEXT), Support text value#59437:20 (TEXT), Hint text value#59437:40 (TEXT), Action text#59437:60 (BOOLEAN), Action text value#59437:80 (TEXT), Placeholder value#59507:0 (TEXT), Text value#59507:16 (TEXT), Slot#60231:21 (SLOT)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
+    - ширина: `280px` (фикс.)
     - промежуток между элементами: `var(--ds-size-1x)`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
-    - `--s`: промежуток между элементами `var(--ds-form-field-gap-input-support)`, ширина `var(--ds-size-5x)`, высота `var(--ds-size-5x)`
+    - `--s`: промежуток между элементами `var(--ds-form-field-gap-input-support, 4px)`, ширина `var(--ds-size-5x)`, высота `var(--ds-size-5x)`
 - Состояния: `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
 - Разметка:
 
@@ -1204,6 +1153,7 @@
 ```css
 /* Chips Input [52916:14622] — 16 вариантов; оси: Size, State */
 .ds-chips-input {
+  width: 280px;
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-1x);
@@ -1215,7 +1165,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: #616161;
   white-space: nowrap;
 }
 .ds-chips-input__icon {
@@ -1238,11 +1188,11 @@
 .ds-chips-input__frame {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-chips-input-gap-chips-input-frame);
-  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-chips-input-m-size-pad-top) var(--ds-chips-input-m-size-pad-bottom);
+  gap: var(--ds-chips-input-gap-chips-input-frame, 4px);
+  padding: var(--ds-chips-input-m-size-pad-top, 4px) var(--ds-size-3x) var(--ds-chips-input-m-size-pad-bottom, 8px) var(--ds-size-3x);
   border-radius: var(--ds-size-3x);
-  background: var(--ds-color-chips-input-default-background);
-  border: 1px solid var(--ds-color-chips-input-default-border-color);
+  background: #f8f9fc;
+  border: 1px solid #e0e0e0;
 }
 .ds-chips-input__content {
   display: flex;
@@ -1259,33 +1209,33 @@
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
-  padding: var(--ds-size-3x) var(--ds-size-3x) 0 0;
+  padding: 0 var(--ds-size-3x) 0 var(--ds-size-3x);
 }
 .ds-chips-input__hint {
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
-  padding: var(--ds-size-3x) var(--ds-size-3x) 0 0;
+  padding: 0 var(--ds-size-3x) 0 var(--ds-size-3x);
 }
 .ds-chips-input--s {
-  gap: var(--ds-form-field-gap-input-support);
+  gap: var(--ds-form-field-gap-input-support, 4px);
 }
 .ds-chips-input--s .ds-chips-input__icon {
   width: var(--ds-size-5x);
   height: var(--ds-size-5x);
 }
 .ds-chips-input:hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+  background: #f5f5f5;
+  border: 1px solid #9e9e9e;
 }
 .ds-chips-input:focus-visible {
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: #448aff;
 }
 .ds-chips-input:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: #9e9e9e;
 }
 .ds-chips-input.ds-chips-input--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: #9e9e9e;
 }
 .ds-chips-input--disabled {
   pointer-events: none;
@@ -1298,8 +1248,8 @@
 - **State** (VARIANT): Default, Disable, Error, Error+Hover, Focus, Focus+Placeholder, Focus+Value, Hover
 - Прочие свойства: Support text#55693:0 (BOOLEAN), Element right#55751:38 (BOOLEAN), Support#59392:7 (BOOLEAN), Hint text#59430:0 (BOOLEAN), Label text value#59432:1 (TEXT), Support text value#59437:20 (TEXT), Hint text value#59437:40 (TEXT), Action text#59437:60 (BOOLEAN), Action text value#59437:80 (TEXT), Placeholder value#59507:0 (TEXT), Text value#59507:16 (TEXT), Slot#60231:21 (SLOT)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - промежуток между элементами: `var(--ds-form-field-gap-input-support)`
+    - ширина: `280px` (фикс.)
+    - промежуток между элементами: `var(--ds-form-field-gap-input-support, 4px)`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
     - `--s`: ширина `var(--ds-size-5x)`, высота `var(--ds-size-5x)`
@@ -1322,9 +1272,10 @@
 ```css
 /* Chips Input [61382:55775] — 16 вариантов; оси: Size, State; ДУБЛЬ имени — второй сет «Chips Input», различать по node_id */
 .ds-chips-input-2 {
+  width: 280px;
   display: flex;
   flex-direction: column;
-  gap: var(--ds-form-field-gap-input-support);
+  gap: var(--ds-form-field-gap-input-support, 4px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -1333,7 +1284,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-chips-input-2__icon {
@@ -1356,11 +1307,11 @@
 .ds-chips-input-2__frame {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-form-field-gap-input-frame);
-  padding: var(--ds-form-field-m-size-pad-input-left) var(--ds-form-field-m-size-pad-input-right) var(--ds-form-field-m-size-pad-input-top) var(--ds-form-field-m-size-pad-input-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  padding: var(--ds-form-field-m-size-pad-input-top, 12px) var(--ds-form-field-m-size-pad-input-right, 12px) var(--ds-form-field-m-size-pad-input-bottom, 12px) var(--ds-form-field-m-size-pad-input-left, 12px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-chips-input-2__content {
   display: flex;
@@ -1371,36 +1322,35 @@
 .ds-chips-input-2__support {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-form-field-gap-input-support);
+  gap: var(--ds-form-field-gap-input-support, 4px);
 }
 .ds-chips-input-2__text {
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
-  padding: var(--ds-form-field-pad-support-left) var(--ds-form-field-pad-support-right) 0 0;
+  padding: 0 var(--ds-form-field-pad-support-right, 12px) 0 var(--ds-form-field-pad-support-left, 12px);
 }
 .ds-chips-input-2__hint {
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
-  padding: var(--ds-form-field-pad-support-left) var(--ds-form-field-pad-support-right) 0 0;
+  padding: 0 var(--ds-form-field-pad-support-right, 12px) 0 var(--ds-form-field-pad-support-left, 12px);
 }
 .ds-chips-input-2--s .ds-chips-input-2__icon {
   width: var(--ds-size-5x);
   height: var(--ds-size-5x);
 }
 .ds-chips-input-2:hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-hover-label-text-color, #616161);
 }
 .ds-chips-input-2:focus-visible {
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-form-field-filled-focus-label-text-color, #448aff);
 }
 .ds-chips-input-2:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-chips-input-2.ds-chips-input-2--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-chips-input-2--disabled {
   pointer-events: none;
@@ -1412,8 +1362,8 @@
 - **State** (VARIANT): Default, Disable, Error, Error+Hover, Focus, Focus+Placeholder, Focus+Value, Hover
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-10x)`, растёт по контенту
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom)`
+    - ширина: `fit-content` (фикс.)
+    - внутренние отступы: `var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px)`
     - промежуток между элементами: `var(--ds-size-2x)`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
@@ -1434,11 +1384,12 @@
 /* Chips input cell [60231:75648] — 8 вариантов; оси: State */
 .ds-chips-input-cell {
   min-height: var(--ds-size-10x);
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  padding: var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom);
+  padding: var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -1447,7 +1398,7 @@
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: #616161;
   white-space: nowrap;
 }
 .ds-chips-input-cell__icon {
@@ -1471,10 +1422,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-chips-input-gap-chips-input-frame);
+  gap: var(--ds-chips-input-gap-chips-input-frame, 4px);
   border-radius: var(--ds-size-3x);
-  background: var(--ds-color-chips-input-default-background);
-  border: 1px solid var(--ds-color-chips-input-default-border-color);
+  background: #f8f9fc;
+  border: 1px solid #e0e0e0;
 }
 .ds-chips-input-cell__support {
   display: flex;
@@ -1482,16 +1433,16 @@
   gap: var(--ds-size-1x);
 }
 .ds-chips-input-cell:hover {
-  border: 1px solid var(--ds-color-table-cell-content-hover-border-color);
+  border: 1px solid var(--ds-color-table-cell-content-hover-border-color, #9e9e9e);
 }
 .ds-chips-input-cell:focus-visible {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: #333333;
 }
 .ds-chips-input-cell:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: #9e9e9e;
 }
 .ds-chips-input-cell.ds-chips-input-cell--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: #9e9e9e;
 }
 .ds-chips-input-cell--disabled {
   pointer-events: none;
@@ -1499,200 +1450,10 @@
 ```
 </details>
 
-#### Chrome Header desktop `[56564:1013]` — 1 вариантов
-- Размеры и параметры:
-    - высота: минимум `86px`, растёт по контенту
-    - ширина: по контенту (hug)
-- Разметка:
-
-```html
-<div class="ds-chrome-header-desktop">
-  <div class="ds-chrome-header-desktop__application-controller"></div>
-  <div class="ds-chrome-header-desktop__base"></div>
-  <span class="ds-chrome-header-desktop__label">Текст</span>
-  <div class="ds-chrome-header-desktop__navigation"></div>
-  <div class="ds-chrome-header-desktop__tabs"></div>
-  <div class="ds-chrome-header-desktop__top"></div>
-</div>
-```
-<details><summary>CSS компонента</summary>
-
-```css
-/* Chrome Header desktop [56564:1013] — 1 вариантов; оси: — */
-.ds-chrome-header-desktop {
-  min-height: 86px;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-chrome-header-desktop__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: 14.522727012634277px;
-  white-space: nowrap;
-}
-.ds-chrome-header-desktop__top {
-  height: 43px;
-  display: flex;
-  flex-direction: row;
-}
-.ds-chrome-header-desktop__tabs {
-  display: flex;
-  flex-direction: row;
-}
-.ds-chrome-header-desktop__application-controller {
-  height: 43px;
-  display: flex;
-  flex-direction: row;
-}
-.ds-chrome-header-desktop__base {
-  height: 43px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-}
-.ds-chrome-header-desktop__navigation {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-3x);
-}
-```
-</details>
-
-#### Chrome Header mobile `[56564:1062]` — 2 вариантов
-- **Dark** (VARIANT): Off, On
-- Размеры и параметры:
-    - высота: `66px` (фикс.)
-    - ширина: по контенту (hug)
-- Модификаторы (что меняет каждый):
-    - `--off`: фон `var(--ds-color-expansion-panel-block-collaps-content-background)`, color `var(--ds-color-chips-input-error-cursor-color)`
-    - `--on`: фон `var(--ds-color-chips-input-error-cursor-color)`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
-- Разметка:
-
-```html
-<div class="ds-chrome-header-mobile ds-chrome-header-mobile--off">
-  <div class="ds-chrome-header-mobile__1"></div>
-  <div class="ds-chrome-header-mobile__address"></div>
-  <div class="ds-chrome-header-mobile__address-field"></div>
-  <div class="ds-chrome-header-mobile__home"></div>
-  <span class="ds-chrome-header-mobile__label">Текст</span>
-  <div class="ds-chrome-header-mobile__lock"></div>
-  <div class="ds-chrome-header-mobile__more"></div>
-  <div class="ds-chrome-header-mobile__more-vert"></div>
-  <div class="ds-chrome-header-mobile__rectangle"></div>
-  <div class="ds-chrome-header-mobile__spacer-16px"></div>
-  <div class="ds-chrome-header-mobile__spacer-8px"></div>
-  <div class="ds-chrome-header-mobile__tabs"></div>
-</div>
-```
-<details><summary>CSS компонента</summary>
-
-```css
-/* Chrome Header mobile [56564:1062] — 2 вариантов; оси: Dark */
-.ds-chrome-header-mobile {
-  height: 66px;
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-chrome-header-mobile__label {
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: 13px;
-  color: var(--ds-color-chips-input-error-cursor-color);
-  white-space: nowrap;
-}
-.ds-chrome-header-mobile__home {
-  height: var(--ds-size-6x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-chrome-header-mobile__spacer-8px {
-  height: var(--ds-size-2x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-chrome-header-mobile__address-field {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2x);
-  padding: 11px 11px 9px 9px;
-  border-radius: 17px;
-}
-.ds-chrome-header-mobile__lock {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-chrome-header-mobile__address {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ds-chrome-header-mobile__spacer-16px {
-  height: var(--ds-size-2x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-chrome-header-mobile__tabs {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-chrome-header-mobile__rectangle {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-  border-radius: 5px;
-  border: 1.5px solid var(--ds-color-chips-input-error-cursor-color);
-}
-.ds-chrome-header-mobile__1 {
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-chips-input-error-cursor-color);
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: 11.71875px;
-  color: var(--ds-color-chips-input-error-cursor-color);
-}
-.ds-chrome-header-mobile__more {
-  height: var(--ds-size-6x);
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-}
-.ds-chrome-header-mobile__more-vert {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-chips-input-error-cursor-color);
-}
-.ds-chrome-header-mobile--off {
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-  color: var(--ds-color-chips-input-error-cursor-color);
-}
-.ds-chrome-header-mobile--on {
-  background: var(--ds-color-chips-input-error-cursor-color);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
-}
-```
-</details>
-
-#### Content `[57375:12699]` — 1 вариантов
-- Прочие свойства: Slot#57375:0 (SLOT), Slot 1#57376:0 (SLOT)
-- CSS не требуется: собственного оформления нет — компонент задаёт только структуру/поведение, вид приходит от вложенных элементов.
-
 #### Control arrow button `[52868:3935]` — 3 вариантов
 - **Size** (VARIANT): M, S, XS
 - Размеры и параметры:
-    - ширина: по контенту (hug)
+    - ширина: `fit-content` (фикс.)
     - промежуток между элементами: `var(--ds-size-0-5x)`
 - Модификаторы (что меняет каждый):
     - `--s`: ширина `var(--ds-size-3x)`, высота `var(--ds-size-3x)`
@@ -1709,6 +1470,7 @@
 ```css
 /* Control arrow button [52868:3935] — 3 вариантов; оси: Size */
 .ds-control-arrow-button {
+  width: fit-content;
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-0-5x);
@@ -1743,184 +1505,17 @@
 ```
 </details>
 
-#### Control group number button `[53828:5569]` — 2 вариантов
-- **Size** (VARIANT): S, XS
-- Размеры и параметры:
-    - ширина: по контенту (hug)
-    - промежуток между элементами: `var(--ds-size-0-25x)`
-    - скругление: `var(--ds-size-2x)`
-    - рамка: `1px solid var(--ds-color-stroke-default)`
-    - фон: `var(--ds-palette-neutral-50)`
-- Модификаторы (что меняет каждый):
-    - `--xs`: ширина `var(--ds-size-4x)`, высота `var(--ds-size-4x)`
-- Разметка:
-
-```html
-<div class="ds-control-group-number-button ds-control-group-number-button--xs">
-  <span class="ds-control-group-number-button__icon"><!-- SVG-иконка ДС --></span>
-  <div class="ds-control-group-number-button__icon-size"></div>
-</div>
-```
-<details><summary>CSS компонента</summary>
-
-```css
-/* Control group number button [53828:5569] — 2 вариантов; оси: Size */
-.ds-control-group-number-button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-0-25x);
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-palette-neutral-50);
-  border: 1px solid var(--ds-color-stroke-default);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-control-group-number-button__icon {
-  flex-shrink: 0;
-  width: var(--ds-size-4x);
-  height: var(--ds-size-4x);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-control-group-number-button__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.ds-control-group-number-button__icon svg path {
-  fill: currentColor;
-}
-.ds-control-group-number-button__icon-size {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-control-group-number-button--xs .ds-control-group-number-button__icon {
-  width: var(--ds-size-4x);
-  height: var(--ds-size-4x);
-}
-```
-</details>
-
-#### Control number button `[53829:6130]` — 16 вариантов
-- **Size** (VARIANT): S, XS
-- **Type** (VARIANT): Left, Right
-- **State** (VARIANT): Default, Disable, Hover, Press
-- Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2-5x) var(--ds-size-2-5x)`
-    - промежуток между элементами: `var(--ds-button-icon-gap)`
-- Модификаторы (что меняет каждый):
-    - `--disabled`: pointer-events `none`
-    - `--left`: фон `var(--ds-color-button-icon-neutral-filled-default-background)`, фон `var(--ds-color-button-icon-disable-background-filled)`
-    - `--right`: фон `var(--ds-color-button-icon-neutral-filled-default-background)`, фон `var(--ds-color-button-icon-disable-background-filled)`
-    - `--xs`: внутренние отступы `var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x)`, ширина `var(--ds-size-4x)`, высота `var(--ds-size-4x)`
-- Состояния: `:active` (нажатие), `:disabled` (неактивно), `:hover` (наведение)
-- Разметка:
-
-```html
-<div class="ds-control-number-button ds-control-number-button--disabled">
-  <span class="ds-control-number-button__icon"><!-- SVG-иконка ДС --></span>
-  <div class="ds-control-number-button__icon-size"></div>
-  <div class="ds-control-number-button__remove"></div>
-</div>
-```
-<details><summary>CSS компонента</summary>
-
-```css
-/* Control number button [53829:6130] — 16 вариантов; оси: Size, Type, State */
-.ds-control-number-button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-button-icon-gap);
-  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2-5x) var(--ds-size-2-5x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-control-number-button__icon {
-  flex-shrink: 0;
-  width: var(--ds-size-4x);
-  height: var(--ds-size-4x);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-control-number-button__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.ds-control-number-button__icon svg path {
-  fill: currentColor;
-}
-.ds-control-number-button__icon-size {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-control-number-button__remove {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-}
-.ds-control-number-button--xs {
-  padding: var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x);
-}
-.ds-control-number-button--xs .ds-control-number-button__icon {
-  width: var(--ds-size-4x);
-  height: var(--ds-size-4x);
-}
-.ds-control-number-button--left {
-  background: var(--ds-color-button-icon-neutral-filled-default-background);
-}
-.ds-control-number-button--left:hover {
-  background: var(--ds-color-button-icon-neutral-filled-hover-background);
-}
-.ds-control-number-button--left:active {
-  background: var(--ds-color-button-icon-neutral-filled-press-background);
-}
-.ds-control-number-button--left:disabled {
-  background: var(--ds-color-button-icon-disable-background-filled);
-}
-.ds-control-number-button--left.ds-control-number-button--disabled {
-  background: var(--ds-color-button-icon-disable-background-filled);
-}
-.ds-control-number-button--right {
-  background: var(--ds-color-button-icon-neutral-filled-default-background);
-}
-.ds-control-number-button--right:hover {
-  background: var(--ds-color-button-icon-neutral-filled-hover-background);
-}
-.ds-control-number-button--right:active {
-  background: var(--ds-color-button-icon-neutral-filled-press-background);
-}
-.ds-control-number-button--right:disabled {
-  background: var(--ds-color-button-icon-disable-background-filled);
-}
-.ds-control-number-button--right.ds-control-number-button--disabled {
-  background: var(--ds-color-button-icon-disable-background-filled);
-}
-.ds-control-number-button--disabled {
-  pointer-events: none;
-}
-```
-</details>
-
 #### Control Panel `[58501:4052]` — 3 вариантов
 - **Type** (VARIANT): Calendar, Control, Week
 - Прочие свойства: Slot Week#58546:5 (SLOT)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `0 0 var(--ds-size-1x) var(--ds-size-1x)`
+    - ширина: `280px` (фикс.)
+    - внутренние отступы: `var(--ds-size-1x) 0 var(--ds-size-1x) 0`
     - промежуток между элементами: `74px`
 - Модификаторы (что меняет каждый):
-    - `--calendar`: направление `column`, align-items `center`, фон `var(--ds-color-expansion-panel-block-collaps-content-background)`, color `var(--ds-color-chips-input-error-cursor-color)`
-    - `--control`: направление `row`, align-items `center`, color `var(--ds-color-chips-input-error-cursor-color)`
-    - `--week`: направление `row`, внутренние отступы `0 0 var(--ds-size-0-5x) var(--ds-size-0-5x)`, color `var(--ds-color-chips-input-error-cursor-color)`
+    - `--calendar`: ширина `fit-content`, направление `column`, align-items `center`, фон `#ffffff`
+    - `--control`: направление `row`, align-items `center`, color `var(--ds-color-text-primary, #333333)`
+    - `--week`: ширина `fit-content`, направление `row`, внутренние отступы `var(--ds-size-0-5x) 0 var(--ds-size-0-5x) 0`, color `var(--ds-color-text-primary, #333333)`
 - Разметка:
 
 ```html
@@ -1939,7 +1534,8 @@
 /* Control Panel [58501:4052] — 3 вариантов; оси: Type */
 .ds-control-panel {
   display: flex;
-  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
+  width: 280px;
+  padding: var(--ds-size-1x) 0 var(--ds-size-1x) 0;
   gap: 74px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -1949,7 +1545,7 @@
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
   white-space: nowrap;
 }
 .ds-control-panel__icon {
@@ -1972,48 +1568,50 @@
   display: flex;
   flex-direction: row;
   gap: var(--ds-size-2x);
-  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
-  border-radius: var(--ds-size-circular);
-  background: var(--ds-color-brand-neutral-default);
+  padding: var(--ds-size-2-5x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2x);
+  border-radius: var(--ds-radius-circular, 9999px);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
 }
 .ds-control-panel__month {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-text-primary);
+  background: var(--ds-color-text-primary, #333333);
   font-size: var(--ds-font-body-s-14-normal-medium-size);
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-control-panel__button-icon-group {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-group-gap);
+  gap: var(--ds-button-group-gap, 8px);
 }
 .ds-control-panel__button-icon {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-button-icon-gap);
-  padding: var(--ds-button-icon-m-size-pad-left) var(--ds-button-icon-m-size-pad-right) var(--ds-button-icon-m-size-pad-top) var(--ds-button-icon-m-size-pad-bottom);
-  border-radius: var(--ds-size-2x);
+  gap: var(--ds-button-icon-gap, 8px);
+  padding: var(--ds-button-icon-m-size-pad-top, 8px) var(--ds-button-icon-m-size-pad-right, 8px) var(--ds-button-icon-m-size-pad-bottom, 8px) var(--ds-button-icon-m-size-pad-left, 8px);
+  border-radius: var(--ds-button-icon-border-radius, 8px);
 }
 .ds-control-panel--control {
   flex-direction: row;
   align-items: center;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-control-panel--week {
+  width: fit-content;
   flex-direction: row;
-  padding: 0 0 var(--ds-size-0-5x) var(--ds-size-0-5x);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  padding: var(--ds-size-0-5x) 0 var(--ds-size-0-5x) 0;
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-control-panel--calendar {
+  width: fit-content;
   flex-direction: column;
   align-items: center;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  background: #ffffff;
+  color: var(--ds-color-text-primary, #333333);
 }
 ```
 </details>
@@ -2022,12 +1620,12 @@
 - **Type** (VARIANT): Control, Time
 - Прочие свойства: Slot Time#58546:5 (SLOT)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `0 0 var(--ds-size-1x) var(--ds-size-1x)`
+    - ширина: `280px` (фикс.)
+    - внутренние отступы: `var(--ds-size-1x) 0 var(--ds-size-1x) 0`
     - промежуток между элементами: `74px`
 - Модификаторы (что меняет каждый):
-    - `--control`: align-items `center`, color `var(--ds-color-chips-input-error-cursor-color)`
-    - `--time`: внутренние отступы `0 0 var(--ds-size-0-5x) var(--ds-size-0-5x)`, color `var(--ds-color-chips-input-error-cursor-color)`
+    - `--control`: align-items `center`, color `var(--ds-color-text-primary, #333333)`
+    - `--time`: ширина `fit-content`, внутренние отступы `var(--ds-size-0-5x) 0 var(--ds-size-0-5x) 0`, color `var(--ds-color-text-primary, #333333)`
 - Разметка:
 
 ```html
@@ -2046,7 +1644,8 @@
 .ds-control-panel-2 {
   display: flex;
   flex-direction: row;
-  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
+  width: 280px;
+  padding: var(--ds-size-1x) 0 var(--ds-size-1x) 0;
   gap: 74px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -2056,7 +1655,7 @@
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
   white-space: nowrap;
 }
 .ds-control-panel-2__icon {
@@ -2079,33 +1678,34 @@
   display: flex;
   flex-direction: row;
   gap: var(--ds-size-2x);
-  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
-  border-radius: var(--ds-size-circular);
-  background: var(--ds-color-brand-neutral-default);
+  padding: var(--ds-size-2-5x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2x);
+  border-radius: var(--ds-radius-circular, 9999px);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
 }
 .ds-control-panel-2__month {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-text-primary);
+  background: var(--ds-color-text-primary, #333333);
   font-size: var(--ds-font-body-s-14-normal-regular-size);
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-control-panel-2__button-icon-group {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-icon-gap);
+  gap: var(--ds-button-icon-gap, 8px);
 }
 .ds-control-panel-2--control {
   align-items: center;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-control-panel-2--time {
-  padding: 0 0 var(--ds-size-0-5x) var(--ds-size-0-5x);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  width: fit-content;
+  padding: var(--ds-size-0-5x) 0 var(--ds-size-0-5x) 0;
+  color: var(--ds-color-text-primary, #333333);
 }
 ```
 </details>
@@ -2114,14 +1714,14 @@
 - **Type** (VARIANT): Day, Month, Year
 - Прочие свойства: Headline#53001:0 (TEXT), Supporting text#53001:4 (TEXT), Supporting text (range)#53001:8 (TEXT), Headline (range)#53001:12 (TEXT), Show clear button#54584:0 (BOOLEAN), show controls#58548:10 (BOOLEAN)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x)`
+    - ширина: `fit-content` (фикс.)
+    - внутренние отступы: `var(--ds-size-2x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-4x)`
     - скругление: `var(--ds-size-3x)`
-    - рамка: `1px solid var(--ds-color-stroke-default)`
+    - рамка: `1px solid var(--ds-color-stroke-default, #e0e0e0)`
 - Модификаторы (что меняет каждый):
-    - `--day`: color `var(--ds-color-chips-input-error-cursor-color)`
-    - `--month`: color `var(--ds-color-chips-input-error-cursor-color)`
-    - `--year`: color `var(--ds-color-chips-input-error-cursor-color)`
+    - `--day`: color `var(--ds-color-text-primary, #333333)`
+    - `--month`: color `var(--ds-color-text-primary, #333333)`
+    - `--year`: color `var(--ds-color-text-primary, #333333)`
 - Разметка:
 
 ```html
@@ -2140,12 +1740,13 @@
 ```css
 /* Datepicker [58509:5439] — 3 вариантов; оси: Type */
 .ds-datepicker {
+  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-4x);
   border-radius: var(--ds-size-3x);
-  border: 1px solid var(--ds-color-stroke-default);
+  border: 1px solid var(--ds-color-stroke-default, #e0e0e0);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -2154,7 +1755,7 @@
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
   white-space: nowrap;
 }
 .ds-datepicker__icon {
@@ -2178,27 +1779,27 @@
   flex-direction: row;
   align-items: center;
   gap: 74px;
-  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
+  padding: var(--ds-size-1x) 0 var(--ds-size-1x) 0;
 }
 .ds-datepicker__elements {
   display: flex;
   flex-direction: row;
   gap: var(--ds-size-2x);
-  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
-  border-radius: var(--ds-size-circular);
-  background: var(--ds-color-brand-neutral-default);
+  padding: var(--ds-size-2-5x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2x);
+  border-radius: var(--ds-radius-circular, 9999px);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
 }
 .ds-datepicker__button-icon-group {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-group-gap);
+  gap: var(--ds-button-group-gap, 8px);
 }
 .ds-datepicker__divider {
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-datepicker__week-6 {
   height: 48px;
@@ -2206,13 +1807,13 @@
   flex-direction: row;
 }
 .ds-datepicker--day {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-datepicker--year {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-datepicker--month {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 ```
 </details>
@@ -2222,8 +1823,8 @@
 - Прочие свойства: Slot#58937:21 (SLOT), Scroll#58937:24 (BOOLEAN)
 - Размеры и параметры:
     - высота: минимум `204px`, растёт по контенту
-    - ширина: по контенту (hug)
-    - фон: `var(--ds-color-dialog-background)`
+    - ширина: `500px` (фикс.)
+    - фон: `var(--ds-color-dialog-background, #ffffff)`
 - Разметка:
 
 ```html
@@ -2240,9 +1841,10 @@
 /* Dialog content [53535:1369] — 1 вариантов; оси: State */
 .ds-dialog-content {
   min-height: 204px;
+  width: 500px;
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-dialog-background);
+  background: var(--ds-color-dialog-background, #ffffff);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -2251,7 +1853,7 @@
   line-height: var(--ds-font-body-m-16-normal-medium-line);
   letter-spacing: var(--ds-font-body-m-16-normal-medium-spacing);
   font-weight: var(--ds-font-body-m-16-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-dialog-content-title-color, #333333);
   white-space: nowrap;
 }
 .ds-dialog-content__icon {
@@ -2274,13 +1876,13 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom);
+  padding: var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px);
 }
 .ds-dialog-content__background {
   display: flex;
   flex-direction: column;
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-scroll-default-background);
+  border-radius: var(--ds-scroll-border-radius, 8px);
+  background: var(--ds-color-scroll-default-background, #fafafa);
 }
 ```
 </details>
@@ -2290,8 +1892,8 @@
 - Прочие свойства: Divider#53749:3 (BOOLEAN)
 - Размеры и параметры:
     - высота: минимум `69px`, растёт по контенту
-    - ширина: по контенту (hug)
-    - фон: `var(--ds-color-dialog-background)`
+    - ширина: `501px` (фикс.)
+    - фон: `var(--ds-color-dialog-background, #ffffff)`
 - Разметка:
 
 ```html
@@ -2309,9 +1911,10 @@
 /* Dialog footer [53749:638] — 1 вариантов; оси: State */
 .ds-dialog-footer {
   min-height: 69px;
+  width: 501px;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-dialog-background);
+  background: var(--ds-color-dialog-background, #ffffff);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -2320,7 +1923,7 @@
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-button-accent-filled-default-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-dialog-footer__icon {
@@ -2343,22 +1946,22 @@
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-dialog-footer__action {
   height: 68px;
   display: flex;
   flex-direction: column;
-  padding: var(--ds-dialog-footer-pad-left) var(--ds-dialog-footer-pad-right) var(--ds-dialog-footer-pad-top) var(--ds-dialog-footer-pad-bottom);
+  padding: var(--ds-dialog-footer-pad-top, 16px) var(--ds-dialog-footer-pad-right, 24px) var(--ds-dialog-footer-pad-bottom, 16px) var(--ds-dialog-footer-pad-left, 24px);
 }
 .ds-dialog-footer__button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-m-size-gap);
-  padding: var(--ds-button-m-size-pad-left) var(--ds-button-m-size-pad-right) var(--ds-button-m-size-pad-top) var(--ds-button-m-size-pad-bottom);
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-button-accent-filled-default-background);
+  gap: var(--ds-button-m-size-gap, 8px);
+  padding: var(--ds-button-m-size-pad-top, 8px) var(--ds-button-m-size-pad-right, 12px) var(--ds-button-m-size-pad-bottom, 8px) var(--ds-button-m-size-pad-left, 12px);
+  border-radius: var(--ds-button-border-radius, 8px);
+  background: var(--ds-color-button-accent-filled-default-background, #448aff);
   box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 ```
@@ -2368,15 +1971,14 @@
 - **Type** (VARIANT): Picture, Text
 - Прочие свойства: Divider#53619:9 (BOOLEAN), Close#59197:0 (BOOLEAN), Picture#59215:10 (SLOT), Description#59215:16 (BOOLEAN)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - фон: `var(--ds-color-dialog-background)`
+    - ширина: `500px` (фикс.)
+    - фон: `var(--ds-color-dialog-background, #ffffff)`
 - Модификаторы (что меняет каждый):
-    - `--picture`: ширина `500px`
-    - `--text`: color `var(--ds-color-chips-input-error-cursor-color)`
+    - `--text`: color `var(--ds-color-dialog-header-title-color, #333333)`
 - Разметка:
 
 ```html
-<div class="ds-dialog-header ds-dialog-header--picture">
+<div class="ds-dialog-header ds-dialog-header--text">
   <div class="ds-dialog-header__description"></div>
   <div class="ds-dialog-header__divider"></div>
   <span class="ds-dialog-header__icon"><!-- SVG-иконка ДС --></span>
@@ -2389,9 +1991,10 @@
 ```css
 /* Dialog header [53535:1322] — 2 вариантов; оси: Type */
 .ds-dialog-header {
+  width: 500px;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-dialog-background);
+  background: var(--ds-color-dialog-background, #ffffff);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -2400,7 +2003,7 @@
   line-height: var(--ds-font-header-s-20-normal-medium-line);
   letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
   font-weight: var(--ds-font-header-s-20-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-dialog-header-title-color, #333333);
   white-space: nowrap;
 }
 .ds-dialog-header__icon {
@@ -2422,29 +2025,26 @@
 .ds-dialog-header__title-container {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-dialog-header-gap);
+  gap: var(--ds-dialog-header-gap, 8px);
 }
 .ds-dialog-header__description {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-dialog-header-desc-color);
+  background: var(--ds-color-dialog-header-desc-color, #616161);
   font-size: var(--ds-font-body-m-16-normal-regular-size);
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-dialog-header-desc-color, #616161);
 }
 .ds-dialog-header__divider {
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-dialog-header--text {
-  color: var(--ds-color-chips-input-error-cursor-color);
-}
-.ds-dialog-header--picture {
-  width: 500px;
+  color: var(--ds-color-dialog-header-title-color, #333333);
 }
 ```
 </details>
@@ -2454,9 +2054,9 @@
 - Прочие свойства: Content#58947:4 (BOOLEAN)
 - Размеры и параметры:
     - высота: минимум `364px`, растёт по контенту
-    - ширина: по контенту (hug)
-    - скругление: `var(--ds-size-3x)`
-    - фон: `var(--ds-color-dialog-background)`
+    - ширина: `500px` (фикс.)
+    - скругление: `var(--ds-dialog-border-radius, 12px)`
+    - фон: `var(--ds-color-dialog-background, #ffffff)`
     - тень: `var(--ds-shadow-shadows-12-dp-m)`
 - Разметка:
 
@@ -2478,10 +2078,11 @@
 /* Dialog view [52952:1285] — 1 вариантов; оси: State */
 .ds-dialog-view {
   min-height: 364px;
+  width: 500px;
   display: flex;
   flex-direction: column;
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-dialog-background);
+  border-radius: var(--ds-dialog-border-radius, 12px);
+  background: var(--ds-color-dialog-background, #ffffff);
   box-shadow: var(--ds-shadow-shadows-12-dp-m);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -2491,7 +2092,7 @@
   line-height: var(--ds-font-header-s-20-normal-medium-line);
   letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
   font-weight: var(--ds-font-header-s-20-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-dialog-header-title-color, #333333);
   white-space: nowrap;
 }
 .ds-dialog-view__icon {
@@ -2513,35 +2114,35 @@
 .ds-dialog-view__header {
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-dialog-background);
+  background: var(--ds-color-dialog-background, #ffffff);
 }
 .ds-dialog-view__divider {
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-dialog-view__content {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-dialog-background);
+  background: var(--ds-color-dialog-background, #ffffff);
 }
 .ds-dialog-view__scroll {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom);
+  padding: var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px);
 }
 .ds-dialog-view__footer {
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-dialog-background);
+  background: var(--ds-color-dialog-background, #ffffff);
 }
 .ds-dialog-view__action {
   height: 68px;
   display: flex;
   flex-direction: column;
-  padding: var(--ds-dialog-footer-pad-left) var(--ds-dialog-footer-pad-right) var(--ds-dialog-footer-pad-top) var(--ds-dialog-footer-pad-bottom);
+  padding: var(--ds-dialog-footer-pad-top, 16px) var(--ds-dialog-footer-pad-right, 24px) var(--ds-dialog-footer-pad-bottom, 16px) var(--ds-dialog-footer-pad-left, 24px);
 }
 ```
 </details>
@@ -2559,19 +2160,19 @@
 #### Element `[54104:20956]` — 9 вариантов
 - **Content** (VARIANT): Checkbox, Counter, Icon group, Icon size, Image size, Indicator, Radio button, Slide toggle, Text default
 - Размеры и параметры:
-    - ширина: по контенту (hug)
+    - ширина: `fit-content` (фикс.)
     - промежуток между элементами: `var(--ds-size-2-5x)`
-    - фон: `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - фон: `#ffffff`
 - Модификаторы (что меняет каждый):
     - `--checkbox`: направление `row`
-    - `--counter`: направление `column`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - `--counter`: направление `column`, color `var(--ds-color-badge-text-color, #ffffff)`
     - `--icon-group`: направление `row`, align-items `center`
     - `--icon-size`: направление `row`, align-items `center`
     - `--image-size`: направление `row`, align-items `center`
-    - `--indicator`: направление `row`
+    - `--indicator`: ширина `var(--ds-size-6x)`, направление `row`
     - `--radio-button`: направление `row`
-    - `--slide-toggle`: направление `row`, color `var(--ds-color-chips-input-error-cursor-color)`
-    - `--text-default`: направление `row`, color `var(--ds-color-chips-input-error-cursor-color)`
+    - `--slide-toggle`: направление `row`, color `var(--ds-color-slide-toggle-text-color, #333333)`
+    - `--text-default`: направление `row`, color `var(--ds-color-brand-neutral-super-dark, #333333)`
 - Разметка:
 
 ```html
@@ -2587,7 +2188,8 @@
 /* Element [54104:20956] — 9 вариантов; оси: Content */
 .ds-element {
   display: flex;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
+  width: fit-content;
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -2597,7 +2199,7 @@
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-brand-neutral-super-dark, #333333);
   white-space: nowrap;
 }
 .ds-element__icon {
@@ -2636,7 +2238,7 @@
 }
 .ds-element--text-default {
   flex-direction: row;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-brand-neutral-super-dark, #333333);
 }
 .ds-element--checkbox {
   flex-direction: row;
@@ -2645,15 +2247,16 @@
   flex-direction: row;
 }
 .ds-element--indicator {
+  width: var(--ds-size-6x);
   flex-direction: row;
 }
 .ds-element--slide-toggle {
   flex-direction: row;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-slide-toggle-text-color, #333333);
 }
 .ds-element--counter {
   flex-direction: column;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-badge-text-color, #ffffff);
 }
 ```
 </details>
@@ -2665,12 +2268,12 @@
 #### Element Form Field `[60231:76795]` — 3 вариантов
 - **Variant** (VARIANT): Chips input cell, Input cell, Select cell
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - фон: `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - ширина: `fit-content` (фикс.)
+    - фон: `#ffffff`
 - Модификаторы (что меняет каждый):
-    - `--chips-input-cell`: color `var(--ds-color-chips-input-default-action-text-color)`
-    - `--input-cell`: color `var(--ds-color-chips-input-default-action-text-color)`
-    - `--select-cell`: color `var(--ds-color-chips-input-default-action-text-color)`
+    - `--chips-input-cell`: color `#616161`
+    - `--input-cell`: color `var(--ds-color-form-field-filled-default-label-text-color, #616161)`
+    - `--select-cell`: color `var(--ds-color-form-field-filled-default-label-text-color, #616161)`
 - Разметка:
 
 ```html
@@ -2685,9 +2288,10 @@
 ```css
 /* Element Form Field [60231:76795] — 3 вариантов; оси: Variant */
 .ds-element-form-field {
+  width: fit-content;
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -2696,7 +2300,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-element-form-field__input-cell {
@@ -2704,21 +2308,21 @@
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  padding: var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom);
+  padding: var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px);
 }
 .ds-element-form-field__input {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-form-field-gap-input-support);
+  gap: var(--ds-form-field-gap-input-support, 4px);
 }
 .ds-element-form-field--input-cell {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 .ds-element-form-field--select-cell {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 .ds-element-form-field--chips-input-cell {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: #616161;
 }
 ```
 </details>
@@ -2727,7 +2331,7 @@
 - **Style** (VARIANT): Accent, Negative, Neutral, Positive, Warning
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-5x)`, растёт по контенту
-    - ширина: по контенту (hug)
+    - ширина: `fit-content` (фикс.)
     - промежуток между элементами: `var(--ds-size-2-5x)`
 - Разметка:
 
@@ -2743,6 +2347,7 @@
 /* Element left [59851:11313] — 5 вариантов; оси: Style */
 .ds-element-left {
   min-height: var(--ds-size-5x);
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2770,7 +2375,7 @@
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 ```
 </details>
@@ -2778,18 +2383,18 @@
 #### Element menu `[56090:1611]` — 8 вариантов
 - **Content** (VARIANT): Checkbox, Counter, Icon size, Image size, Indicator, Radio button, Slide toggle, Text default
 - Размеры и параметры:
-    - ширина: по контенту (hug)
+    - ширина: `fit-content` (фикс.)
     - промежуток между элементами: `var(--ds-size-2-5x)`
-    - фон: `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - фон: `#ffffff`
 - Модификаторы (что меняет каждый):
     - `--checkbox`: направление `row`
-    - `--counter`: направление `column`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - `--counter`: направление `column`, color `var(--ds-color-badge-text-color, #ffffff)`
     - `--icon-size`: направление `row`, align-items `center`
     - `--image-size`: направление `row`, align-items `center`
-    - `--indicator`: направление `row`
+    - `--indicator`: ширина `var(--ds-size-6x)`, направление `row`
     - `--radio-button`: направление `row`
-    - `--slide-toggle`: направление `row`, color `var(--ds-color-chips-input-error-cursor-color)`
-    - `--text-default`: направление `row`, color `var(--ds-color-chips-input-error-cursor-color)`
+    - `--slide-toggle`: направление `row`, color `var(--ds-color-slide-toggle-text-color, #333333)`
+    - `--text-default`: направление `row`, color `var(--ds-color-brand-neutral-super-dark, #333333)`
 - Разметка:
 
 ```html
@@ -2805,7 +2410,8 @@
 /* Element menu [56090:1611] — 8 вариантов; оси: Content */
 .ds-element-menu {
   display: flex;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
+  width: fit-content;
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -2815,7 +2421,7 @@
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-brand-neutral-super-dark, #333333);
   white-space: nowrap;
 }
 .ds-element-menu__icon {
@@ -2850,7 +2456,7 @@
 }
 .ds-element-menu--text-default {
   flex-direction: row;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-brand-neutral-super-dark, #333333);
 }
 .ds-element-menu--checkbox {
   flex-direction: row;
@@ -2859,15 +2465,16 @@
   flex-direction: row;
 }
 .ds-element-menu--indicator {
+  width: var(--ds-size-6x);
   flex-direction: row;
 }
 .ds-element-menu--slide-toggle {
   flex-direction: row;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-slide-toggle-text-color, #333333);
 }
 .ds-element-menu--counter {
   flex-direction: column;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-badge-text-color, #ffffff);
 }
 ```
 </details>
@@ -2875,18 +2482,18 @@
 #### Element select `[57735:17972]` — 8 вариантов
 - **Content** (VARIANT): Checkbox, Counter, Icon size, Image size, Indicator, Radio button, Slide toggle, Text default
 - Размеры и параметры:
-    - ширина: по контенту (hug)
+    - ширина: `fit-content` (фикс.)
     - промежуток между элементами: `var(--ds-size-2-5x)`
-    - фон: `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - фон: `#ffffff`
 - Модификаторы (что меняет каждый):
     - `--checkbox`: направление `row`
-    - `--counter`: направление `column`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - `--counter`: направление `column`, color `var(--ds-color-badge-text-color, #ffffff)`
     - `--icon-size`: направление `row`, align-items `center`
     - `--image-size`: направление `row`, align-items `center`
-    - `--indicator`: направление `row`
+    - `--indicator`: ширина `var(--ds-size-6x)`, направление `row`
     - `--radio-button`: направление `row`
-    - `--slide-toggle`: направление `row`, color `var(--ds-color-chips-input-error-cursor-color)`
-    - `--text-default`: направление `row`, color `var(--ds-color-chips-input-error-cursor-color)`
+    - `--slide-toggle`: направление `row`, color `var(--ds-color-slide-toggle-text-color, #333333)`
+    - `--text-default`: направление `row`, color `var(--ds-color-brand-neutral-super-dark, #333333)`
 - Разметка:
 
 ```html
@@ -2902,7 +2509,8 @@
 /* Element select [57735:17972] — 8 вариантов; оси: Content */
 .ds-element-select {
   display: flex;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
+  width: fit-content;
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -2912,7 +2520,7 @@
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-brand-neutral-super-dark, #333333);
   white-space: nowrap;
 }
 .ds-element-select__icon {
@@ -2947,7 +2555,7 @@
 }
 .ds-element-select--text-default {
   flex-direction: row;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-brand-neutral-super-dark, #333333);
 }
 .ds-element-select--checkbox {
   flex-direction: row;
@@ -2956,15 +2564,16 @@
   flex-direction: row;
 }
 .ds-element-select--indicator {
+  width: var(--ds-size-6x);
   flex-direction: row;
 }
 .ds-element-select--slide-toggle {
   flex-direction: row;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-slide-toggle-text-color, #333333);
 }
 .ds-element-select--counter {
   flex-direction: column;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-badge-text-color, #ffffff);
 }
 ```
 </details>
@@ -2976,8 +2585,8 @@
     - ширина: `var(--ds-size-5x)` (фикс.)
     - скругление: `var(--ds-size-1x)`
 - Модификаторы (что меняет каждый):
-    - `--avatar`: направление `column`, align-items `center`, промежуток между элементами `var(--ds-size-2-5x)`, внутренние отступы `var(--ds-size-0-5x) var(--ds-size-0-5x) 3px 3px`
-    - `--collaps-icon`: направление `row`, фон `var(--ds-color-sidenav-element-collaps-icon-background)`
+    - `--avatar`: направление `column`, align-items `center`, промежуток между элементами `var(--ds-size-2-5x)`, внутренние отступы `3px var(--ds-size-0-5x) 3px var(--ds-size-0-5x)`
+    - `--collaps-icon`: направление `row`, фон `var(--ds-color-sidenav-element-collaps-icon-background, #36474e)`
 - Разметка:
 
 ```html
@@ -2993,8 +2602,8 @@
 /* Element sidenav [56598:2991] — 2 вариантов; оси: Content */
 .ds-element-sidenav {
   height: var(--ds-size-5x);
-  display: flex;
   width: var(--ds-size-5x);
+  display: flex;
   border-radius: var(--ds-size-1x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -3005,7 +2614,7 @@
   letter-spacing: var(--ds-font-caption-m-10-normal-medium-spacing);
   font-weight: var(--ds-font-caption-m-10-normal-medium-weight);
   text-transform: capitalize;
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-text-accent, #448aff);
   white-space: nowrap;
 }
 .ds-element-sidenav__icon {
@@ -3031,14 +2640,14 @@
 }
 .ds-element-sidenav--collaps-icon {
   flex-direction: row;
-  background: var(--ds-color-sidenav-element-collaps-icon-background);
+  background: var(--ds-color-sidenav-element-collaps-icon-background, #36474e);
 }
 .ds-element-sidenav--avatar {
   flex-direction: column;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) 3px 3px;
-  color: var(--ds-color-chips-input-focus-border-color);
+  padding: 3px var(--ds-size-0-5x) 3px var(--ds-size-0-5x);
+  color: var(--ds-color-text-accent, #448aff);
 }
 ```
 </details>
@@ -3049,11 +2658,11 @@
 - Прочие свойства: Text#57060:7 (TEXT)
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-6x)`, растёт по контенту
-    - ширина: по контенту (hug)
+    - ширина: `fit-content` (фикс.)
     - промежуток между элементами: `var(--ds-size-2-5x)`
-    - фон: `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - фон: `#ffffff`
 - Модификаторы (что меняет каждый):
-    - `--counter`: направление `column`, color `var(--ds-color-chips-input-error-cursor-color)`, color `var(--ds-color-chips-input-disable-action-text-color)`
+    - `--counter`: направление `column`, color `var(--ds-color-brand-neutral-super-dark, #333333)`, color `var(--ds-color-brand-neutral-neutral, #9e9e9e)`
     - `--disabled`: pointer-events `none`
     - `--icon-size`: направление `row`, align-items `center`
 - Состояния: `:active` (нажатие), `:disabled` (неактивно), `:hover` (наведение)
@@ -3073,8 +2682,9 @@
 /* Element step [55403:7248] — 12 вариантов; оси: Content, State */
 .ds-element-step {
   min-height: var(--ds-size-6x);
+  width: fit-content;
   display: flex;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -3084,7 +2694,7 @@
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-brand-neutral-super-dark, #333333);
   white-space: nowrap;
 }
 .ds-element-step__icon {
@@ -3112,7 +2722,7 @@
   height: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-element-step--icon-size {
   flex-direction: row;
@@ -3120,19 +2730,19 @@
 }
 .ds-element-step--counter {
   flex-direction: column;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-brand-neutral-super-dark, #333333);
 }
 .ds-element-step--counter:hover {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-brand-neutral-default, #ffffff);
 }
 .ds-element-step--counter:active {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-brand-neutral-default, #ffffff);
 }
 .ds-element-step--counter:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-brand-neutral-neutral, #9e9e9e);
 }
 .ds-element-step--counter.ds-element-step--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-brand-neutral-neutral, #9e9e9e);
 }
 .ds-element-step--disabled {
   pointer-events: none;
@@ -3151,13 +2761,13 @@
 - Прочие свойства: Back right#58506:0 (BOOLEAN), Back left#58506:1 (BOOLEAN), Start range#58506:2 (BOOLEAN), End range#58506:3 (BOOLEAN), Date#58506:4 (TEXT), Show focus indicator#58506:5 (BOOLEAN), Year#58506:84 (TEXT), Month#58506:165 (TEXT)
 - Размеры и параметры:
     - высота: `var(--ds-size-10x)` (фикс.)
-    - ширина: по контенту (hug)
-    - скругление: `var(--ds-size-circular)`
+    - ширина: `var(--ds-size-10x)` (фикс.)
+    - скругление: `var(--ds-radius-circular, 9999px)`
 - Модификаторы (что меняет каждый):
-    - `--cell`: фон `var(--ds-color-brand-neutral-lighter)`, color `var(--ds-color-chips-input-disable-action-text-color)`, направление `row`, align-items `center`
+    - `--cell`: фон `var(--ds-color-brand-neutral-lighter, #e0e0e0)`, color `var(--ds-color-text-disable, #9e9e9e)`, направление `row`, align-items `center`
     - `--disabled`: pointer-events `none`
-    - `--month`: направление `row`, промежуток между элементами `var(--ds-size-2x)`, внутренние отступы `var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x)`, фон `var(--ds-color-brand-neutral-default)`
-    - `--year`: направление `column`, align-items `center`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`, color `var(--ds-color-chips-input-disable-action-text-color)`
+    - `--month`: ширина `fit-content`, направление `row`, промежуток между элементами `var(--ds-size-2x)`, внутренние отступы `var(--ds-size-2-5x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2x)`
+    - `--year`: ширина `fit-content`, направление `column`, align-items `center`, color `var(--ds-color-text-inversive, #ffffff)`
 - Состояния: `:active` (нажатие), `:disabled` (неактивно), `:hover` (наведение)
 - Разметка:
 
@@ -3177,7 +2787,8 @@
 .ds-elements {
   display: flex;
   height: var(--ds-size-10x);
-  border-radius: var(--ds-size-circular);
+  width: var(--ds-size-10x);
+  border-radius: var(--ds-radius-circular, 9999px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -3186,162 +2797,166 @@
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
   white-space: nowrap;
 }
 .ds-elements__range-highlight-start {
   height: var(--ds-size-10x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-palette-accent-50);
+  background: var(--ds-palette-accent-50, #f0f5ff);
 }
 .ds-elements__range-highlight-end {
   height: var(--ds-size-10x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-palette-accent-50);
+  background: var(--ds-palette-accent-50, #f0f5ff);
 }
 .ds-elements__range-highlight-middle {
   height: var(--ds-size-10x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-palette-accent-10);
+  background: var(--ds-palette-accent-10, #f5f9ff);
 }
 .ds-elements__date {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-text-primary);
+  background: var(--ds-color-text-primary, #333333);
   font-size: var(--ds-font-body-m-16-normal-regular-size);
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-elements--cell.ds-elements--today:disabled {
-  background: var(--ds-color-brand-neutral-lighter);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-brand-neutral-lighter, #e0e0e0);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--cell.ds-elements--today.ds-elements--disabled {
-  background: var(--ds-color-brand-neutral-lighter);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-brand-neutral-lighter, #e0e0e0);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--cell.ds-elements--default:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--cell.ds-elements--default.ds-elements--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--cell.ds-elements--range:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--cell.ds-elements--range.ds-elements--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--cell.ds-elements--selected:active {
-  background: var(--ds-color-button-accent-filled-press-background);
+  background: var(--ds-color-button-accent-filled-press-background, #2651b5);
 }
 .ds-elements--cell.ds-elements--today:active {
-  background: var(--ds-color-brand-neutral-lighter);
+  background: var(--ds-color-brand-neutral-lighter, #e0e0e0);
 }
 .ds-elements--cell.ds-elements--default:active {
-  background: var(--ds-color-brand-neutral-lighter);
+  background: var(--ds-color-brand-neutral-lighter, #e0e0e0);
 }
 .ds-elements--cell.ds-elements--today:hover {
-  background: var(--ds-color-brand-neutral-super-light);
+  background: var(--ds-color-brand-neutral-super-light, #f5f5f5);
 }
 .ds-elements--cell.ds-elements--default:hover {
-  background: var(--ds-color-brand-neutral-super-light);
+  background: var(--ds-color-brand-neutral-super-light, #f5f5f5);
 }
 .ds-elements--cell.ds-elements--range {
   flex-direction: row;
   align-items: center;
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-elements--cell.ds-elements--selected {
   flex-direction: column;
   align-items: center;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-text-inversive, #ffffff);
 }
 .ds-elements--year.ds-elements--selected {
+  width: fit-content;
   flex-direction: column;
   align-items: center;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-text-inversive, #ffffff);
 }
 .ds-elements--cell.ds-elements--today {
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-brand-neutral-default);
-  border: 1px solid var(--ds-color-stroke-hover);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
+  border: 1px solid var(--ds-color-stroke-hover, #9e9e9e);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-elements--cell.ds-elements--default {
   flex-direction: column;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-2-5x) var(--ds-size-2-5x) var(--ds-size-2x) var(--ds-size-2x);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  padding: var(--ds-size-2x) var(--ds-size-2-5x) var(--ds-size-2x) var(--ds-size-2-5x);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-elements--year.ds-elements--default:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--year.ds-elements--default.ds-elements--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--year.ds-elements--today:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--year.ds-elements--today.ds-elements--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--year.ds-elements--default:active {
-  background: var(--ds-color-brand-neutral-lighter);
+  background: var(--ds-color-brand-neutral-lighter, #e0e0e0);
 }
 .ds-elements--year.ds-elements--today:active {
-  background: var(--ds-color-brand-neutral-lighter);
+  background: var(--ds-color-brand-neutral-lighter, #e0e0e0);
 }
 .ds-elements--year.ds-elements--default:hover {
-  background: var(--ds-color-brand-neutral-super-light);
+  background: var(--ds-color-brand-neutral-super-light, #f5f5f5);
 }
 .ds-elements--year.ds-elements--today:hover {
-  background: var(--ds-color-brand-neutral-super-light);
+  background: var(--ds-color-brand-neutral-super-light, #f5f5f5);
 }
 .ds-elements--year.ds-elements--default {
+  width: fit-content;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  padding: var(--ds-size-2x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-4x);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-elements--year.ds-elements--today {
+  width: fit-content;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
-  background: var(--ds-color-brand-neutral-default);
-  border: 1px solid var(--ds-color-stroke-hover);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  padding: var(--ds-size-2x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-4x);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
+  border: 1px solid var(--ds-color-stroke-hover, #9e9e9e);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-elements--month.ds-elements--default {
+  width: fit-content;
   flex-direction: row;
   gap: var(--ds-size-2x);
-  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  padding: var(--ds-size-2-5x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2x);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-elements--month.ds-elements--default:hover {
-  background: var(--ds-color-brand-neutral-super-light);
+  background: var(--ds-color-brand-neutral-super-light, #f5f5f5);
 }
 .ds-elements--month.ds-elements--default:active {
-  background: var(--ds-color-brand-neutral-lighter);
+  background: var(--ds-color-brand-neutral-lighter, #e0e0e0);
 }
 .ds-elements--month.ds-elements--default:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--month.ds-elements--default.ds-elements--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--disabled {
   pointer-events: none;
@@ -3355,11 +2970,11 @@
 - Прочие свойства: Start range#58506:2 (BOOLEAN), End range#58506:3 (BOOLEAN), Time#58506:84 (TEXT)
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-10x)`, растёт по контенту
-    - ширина: по контенту (hug)
+    - ширина: `fit-content` (фикс.)
 - Модификаторы (что меняет каждый):
-    - `--default`: color `var(--ds-color-chips-input-disable-action-text-color)`, направление `row`, промежуток между элементами `var(--ds-size-2-5x)`, внутренние отступы `var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x)`
+    - `--default`: color `var(--ds-color-text-disable, #9e9e9e)`, направление `row`, промежуток между элементами `var(--ds-size-2-5x)`, внутренние отступы `var(--ds-size-2x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-4x)`
     - `--disabled`: pointer-events `none`
-    - `--selected`: направление `column`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - `--selected`: направление `column`, color `var(--ds-color-text-inversive, #ffffff)`
 - Состояния: `:active` (нажатие), `:disabled` (неактивно), `:hover` (наведение)
 - Разметка:
 
@@ -3377,6 +2992,7 @@
 /* Elements [58982:9594] — 8 вариантов; оси: Variant, State; ДУБЛЬ имени — второй сет «Elements», различать по node_id */
 .ds-elements-2 {
   min-height: var(--ds-size-10x);
+  width: fit-content;
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -3387,53 +3003,53 @@
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-text-inversive, #ffffff);
   white-space: nowrap;
 }
 .ds-elements-2__range-highlight-start {
   height: var(--ds-size-10x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-palette-accent-50);
+  background: var(--ds-palette-accent-50, #f0f5ff);
 }
 .ds-elements-2__range-highlight-end {
   height: var(--ds-size-10x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-palette-accent-50);
+  background: var(--ds-palette-accent-50, #f0f5ff);
 }
 .ds-elements-2__date {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
-  border-radius: var(--ds-size-circular);
-  background: var(--ds-color-button-accent-filled-default-background);
+  padding: var(--ds-size-2x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-4x);
+  border-radius: var(--ds-radius-circular, 9999px);
+  background: var(--ds-color-button-accent-filled-default-background, #448aff);
 }
 .ds-elements-2--selected {
   flex-direction: column;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-text-inversive, #ffffff);
 }
 .ds-elements-2--default:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements-2--default.ds-elements-2--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements-2--default:active {
-  background: var(--ds-color-brand-neutral-lighter);
+  background: var(--ds-color-brand-neutral-lighter, #e0e0e0);
 }
 .ds-elements-2--default:hover {
-  background: var(--ds-color-brand-neutral-super-light);
+  background: var(--ds-color-brand-neutral-super-light, #f5f5f5);
 }
 .ds-elements-2--default {
   flex-direction: row;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
-  border-radius: var(--ds-size-circular);
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  padding: var(--ds-size-2x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-4x);
+  border-radius: var(--ds-radius-circular, 9999px);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-elements-2--disabled {
   pointer-events: none;
@@ -3445,11 +3061,11 @@
 - **Padding off/on** (VARIANT): False, True
 - Прочие свойства: Slot#61363:19 (SLOT)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-expansion-panel-content-pad-left) var(--ds-expansion-panel-content-pad-right) var(--ds-expansion-panel-content-pad-top) var(--ds-expansion-panel-content-pad-bottom)`
+    - ширина: `597px` (фикс.)
+    - внутренние отступы: `var(--ds-expansion-panel-content-pad-top, 16px) var(--ds-expansion-panel-content-pad-right, 16px) var(--ds-expansion-panel-content-pad-bottom, 16px) var(--ds-expansion-panel-content-pad-left, 16px)`
 - Модификаторы (что меняет каждый):
-    - `--false`: color `var(--ds-color-expansion-panel-block-collaps-content-text-color)`
-    - `--true`: color `var(--ds-color-expansion-panel-block-collaps-content-text-color)`
+    - `--false`: color `var(--ds-color-expansion-panel-content-text-color, #333333)`
+    - `--true`: color `var(--ds-color-expansion-panel-content-text-color, #333333)`
 - Разметка:
 
 ```html
@@ -3462,10 +3078,11 @@
 ```css
 /* Expansion content [61361:99603] — 2 вариантов; оси: Padding off/on */
 .ds-expansion-content {
+  width: 597px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--ds-expansion-panel-content-pad-left) var(--ds-expansion-panel-content-pad-right) var(--ds-expansion-panel-content-pad-top) var(--ds-expansion-panel-content-pad-bottom);
+  padding: var(--ds-expansion-panel-content-pad-top, 16px) var(--ds-expansion-panel-content-pad-right, 16px) var(--ds-expansion-panel-content-pad-bottom, 16px) var(--ds-expansion-panel-content-pad-left, 16px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -3474,14 +3091,14 @@
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+  color: var(--ds-color-expansion-panel-content-text-color, #333333);
   white-space: nowrap;
 }
 .ds-expansion-content--true {
-  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+  color: var(--ds-color-expansion-panel-content-text-color, #333333);
 }
 .ds-expansion-content--false {
-  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+  color: var(--ds-color-expansion-panel-content-text-color, #333333);
 }
 ```
 </details>
@@ -3490,11 +3107,11 @@
 - **Type ?** (VARIANT): Collaps, Expand
 - Прочие свойства: Slot#61364:25 (SLOT)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - промежуток между элементами: `var(--ds-expansion-panel-collaps-gap-group)`
+    - ширина: `597px` (фикс.)
+    - промежуток между элементами: `var(--ds-expansion-panel-collaps-gap-group, 8px)`
 - Модификаторы (что меняет каждый):
-    - `--collaps`: color `var(--ds-color-expansion-panel-block-collaps-content-text-color)`
-    - `--expand`: color `var(--ds-color-expansion-panel-block-collaps-content-text-color)`
+    - `--collaps`: color `var(--ds-color-expansion-panel-collaps-text-color, #333333)`
+    - `--expand`: color `var(--ds-color-expansion-panel-collaps-text-color, #333333)`
 - Разметка:
 
 ```html
@@ -3507,9 +3124,10 @@
 ```css
 /* Expansion group panel [56155:1676] — 2 вариантов; оси: Type ? */
 .ds-expansion-group-panel {
+  width: 597px;
   display: flex;
   flex-direction: column;
-  gap: var(--ds-expansion-panel-collaps-gap-group);
+  gap: var(--ds-expansion-panel-collaps-gap-group, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -3518,14 +3136,14 @@
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+  color: var(--ds-color-expansion-panel-collaps-text-color, #333333);
   white-space: nowrap;
 }
 .ds-expansion-group-panel--collaps {
-  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+  color: var(--ds-color-expansion-panel-collaps-text-color, #333333);
 }
 .ds-expansion-group-panel--expand {
-  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+  color: var(--ds-color-expansion-panel-collaps-text-color, #333333);
 }
 ```
 </details>
@@ -3544,8 +3162,8 @@
 - **Variant** (VARIANT): Table content cell Chips input
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-10x)`, растёт по контенту
-    - ширина: по контенту (hug)
-    - фон: `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - ширина: `fit-content` (фикс.)
+    - фон: `#ffffff`
 - Разметка:
 
 ```html
@@ -3560,95 +3178,24 @@
 /* Form field cell [60220:72732] — 1 вариантов; оси: Variant */
 .ds-form-field-cell {
   min-height: var(--ds-size-10x);
+  width: fit-content;
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-form-field-cell__table-content-chips-input {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-form-field-cell__table-content {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  padding: var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom);
-}
-```
-</details>
-
-#### Header components `[53535:1244]` — 2 вариантов
-- **Type** (VARIANT): Default, Mini
-- Прочие свойства: Show Doc#17828:0 (BOOLEAN), Show Designer#17828:1 (BOOLEAN), Show Name#17828:2 (BOOLEAN), Show Figma#17828:3 (BOOLEAN), Description#57740:0 (BOOLEAN)
-- Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x)`
-    - скругление: `var(--ds-size-8x)`
-- Модификаторы (что меняет каждый):
-    - `--default`: направление `column`, фон `var(--ds-color-brand-neutral-default)`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
-    - `--mini`: направление `row`, промежуток между элементами `var(--ds-size-6x)`, скругление `var(--ds-size-6x)`, фон `var(--ds-palette-neutral-50)`
-- Разметка:
-
-```html
-<div class="ds-header-components ds-header-components--default">
-  <div class="ds-header-components__badge-group"></div>
-  <div class="ds-header-components__container"></div>
-  <div class="ds-header-components__frame-1"></div>
-  <span class="ds-header-components__label">Текст</span>
-</div>
-```
-<details><summary>CSS компонента</summary>
-
-```css
-/* Header components [53535:1244] — 2 вариантов; оси: Type */
-.ds-header-components {
-  display: flex;
-  padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x);
-  border-radius: var(--ds-size-8x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-header-components__label {
-  font-size: var(--ds-typography-font-size-6x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: 0.18000000715255737px;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
-  white-space: nowrap;
-}
-.ds-header-components__container {
-  display: flex;
-  flex-direction: row;
-  gap: var(--ds-size-6x);
-  padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x);
-  border-radius: var(--ds-size-6x);
-  background: var(--ds-palette-neutral-50);
-}
-.ds-header-components__badge-group {
-  display: flex;
-  flex-direction: row;
-  gap: var(--ds-size-2x);
-}
-.ds-header-components__frame-1 {
-  display: flex;
-  flex-direction: column;
-  gap: var(--ds-size-2x);
-}
-.ds-header-components--default {
-  flex-direction: column;
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
-}
-.ds-header-components--mini {
-  flex-direction: row;
-  gap: var(--ds-size-6x);
-  border-radius: var(--ds-size-6x);
-  background: var(--ds-palette-neutral-50);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  padding: var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px);
 }
 ```
 </details>
@@ -3658,15 +3205,15 @@
 - **Orientation** (VARIANT): Default, Down, Left, Right, Up
 - Прочие свойства: Header#54713:4 (BOOLEAN), Content#54713:15 (BOOLEAN), Footer#54713:26 (BOOLEAN)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - скругление: `var(--ds-size-2x)`
+    - ширина: `250px` (фикс.)
+    - скругление: `var(--ds-hint-border-radius, 8px)`
     - тень: `var(--ds-shadow-shadows-08-dp-s)`
 - Модификаторы (что меняет каждый):
-    - `--default`: направление `column`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
-    - `--down`: направление `column`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
-    - `--left`: направление `row`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
-    - `--right`: направление `row`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
-    - `--up`: направление `column`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - `--default`: направление `column`, color `var(--ds-color-hint-header-text-color, #ffffff)`
+    - `--down`: направление `column`, color `var(--ds-color-hint-header-text-color, #ffffff)`
+    - `--left`: направление `row`, color `var(--ds-color-hint-header-text-color, #ffffff)`
+    - `--right`: направление `row`, color `var(--ds-color-hint-header-text-color, #ffffff)`
+    - `--up`: направление `column`, color `var(--ds-color-hint-header-text-color, #ffffff)`
 - Разметка:
 
 ```html
@@ -3684,10 +3231,11 @@
 ```css
 /* Hint container [54593:479] — 10 вариантов; оси: Size, Orientation */
 .ds-hint-container {
+  width: 250px;
   display: flex;
   align-items: center;
   box-shadow: var(--ds-shadow-shadows-08-dp-s);
-  border-radius: var(--ds-size-2x);
+  border-radius: var(--ds-hint-border-radius, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -3696,7 +3244,7 @@
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-hint-container__icon {
@@ -3719,50 +3267,50 @@
   height: var(--ds-size-1x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-hint-background-color);
+  background: var(--ds-color-hint-background-color, #424242);
 }
 .ds-hint-container__header {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-hint-header-gap);
-  padding: var(--ds-hint-header-pad-left) var(--ds-hint-header-pad-right) var(--ds-hint-header-pad-top) var(--ds-hint-header-pad-bottom);
-  background: var(--ds-color-hint-background-color);
+  gap: var(--ds-hint-header-gap, 8px);
+  padding: var(--ds-hint-header-pad-top, 8px) var(--ds-hint-header-pad-right, 12px) var(--ds-hint-header-pad-bottom, 4px) var(--ds-hint-header-pad-left, 12px);
+  background: var(--ds-color-hint-background-color, #424242);
 }
 .ds-hint-container__content {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-hint-content-gap);
-  padding: var(--ds-hint-content-pad-left) var(--ds-hint-content-pad-right) var(--ds-hint-content-pad-top) var(--ds-hint-content-pad-bottom);
-  background: var(--ds-color-hint-background-color);
+  gap: var(--ds-hint-content-gap, 8px);
+  padding: var(--ds-hint-content-pad-top, 8px) var(--ds-hint-content-pad-right, 12px) var(--ds-hint-content-pad-bottom, 8px) var(--ds-hint-content-pad-left, 12px);
+  background: var(--ds-color-hint-background-color, #424242);
 }
 .ds-hint-container__footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-hint-footer-gap);
-  padding: var(--ds-hint-footer-pad-left) var(--ds-hint-footer-pad-right) var(--ds-hint-footer-pad-top) var(--ds-hint-footer-pad-bottom);
-  background: var(--ds-color-hint-background-color);
+  gap: var(--ds-hint-footer-gap, 12px);
+  padding: var(--ds-hint-footer-pad-top, 16px) var(--ds-hint-footer-pad-right, 12px) var(--ds-hint-footer-pad-bottom, 12px) var(--ds-hint-footer-pad-left, 12px);
+  background: var(--ds-color-hint-background-color, #424242);
 }
 .ds-hint-container--up {
   flex-direction: column;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-container--down {
   flex-direction: column;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-container--right {
   flex-direction: row;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-container--left {
   flex-direction: row;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-container--default {
   flex-direction: column;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 ```
 </details>
@@ -3771,13 +3319,13 @@
 - **Content** (VARIANT): Group content, Single content
 - Прочие свойства: Element right#56260:9 (BOOLEAN), Element left#56260:12 (BOOLEAN)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-hint-content-pad-left) var(--ds-hint-content-pad-right) var(--ds-hint-content-pad-top) var(--ds-hint-content-pad-bottom)`
-    - промежуток между элементами: `var(--ds-hint-content-gap)`
-    - фон: `var(--ds-color-hint-background-color)`
+    - ширина: `250px` (фикс.)
+    - внутренние отступы: `var(--ds-hint-content-pad-top, 8px) var(--ds-hint-content-pad-right, 12px) var(--ds-hint-content-pad-bottom, 8px) var(--ds-hint-content-pad-left, 12px)`
+    - промежуток между элементами: `var(--ds-hint-content-gap, 8px)`
+    - фон: `var(--ds-color-hint-background-color, #424242)`
 - Модификаторы (что меняет каждый):
-    - `--group-content`: color `var(--ds-color-expansion-panel-block-collaps-content-background)`
-    - `--single-content`: align-items `center`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - `--group-content`: color `var(--ds-color-hint-content-text-color, #ffffff)`
+    - `--single-content`: align-items `center`, color `var(--ds-color-hint-content-text-color, #ffffff)`
 - Разметка:
 
 ```html
@@ -3796,11 +3344,12 @@
 ```css
 /* Hint content [54713:3325] — 2 вариантов; оси: Content */
 .ds-hint-content {
+  width: 250px;
   display: flex;
   flex-direction: row;
-  gap: var(--ds-hint-content-gap);
-  padding: var(--ds-hint-content-pad-left) var(--ds-hint-content-pad-right) var(--ds-hint-content-pad-top) var(--ds-hint-content-pad-bottom);
-  background: var(--ds-color-hint-background-color);
+  gap: var(--ds-hint-content-gap, 8px);
+  padding: var(--ds-hint-content-pad-top, 8px) var(--ds-hint-content-pad-right, 12px) var(--ds-hint-content-pad-bottom, 8px) var(--ds-hint-content-pad-left, 12px);
+  background: var(--ds-color-hint-background-color, #424242);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -3809,7 +3358,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-content-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-hint-content__icon {
@@ -3837,12 +3386,12 @@
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-hint-content__block {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-hint-content-gap-content);
+  gap: var(--ds-hint-content-gap-content, 4px);
 }
 .ds-hint-content__clear {
   height: var(--ds-size-5x);
@@ -3853,14 +3402,14 @@
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-hint-content--group-content {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-content-text-color, #ffffff);
 }
 .ds-hint-content--single-content {
   align-items: center;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-content-text-color, #ffffff);
 }
 ```
 </details>
@@ -3870,12 +3419,12 @@
 - Прочие свойства: Step text#54600:1 (BOOLEAN)
 - Размеры и параметры:
     - высота: минимум `56px`, растёт по контенту
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-hint-footer-pad-left) var(--ds-hint-footer-pad-right) var(--ds-hint-footer-pad-top) var(--ds-hint-footer-pad-bottom)`
-    - промежуток между элементами: `var(--ds-hint-footer-gap)`
-    - фон: `var(--ds-color-hint-background-color)`
+    - ширина: `250px` (фикс.)
+    - внутренние отступы: `var(--ds-hint-footer-pad-top, 16px) var(--ds-hint-footer-pad-right, 12px) var(--ds-hint-footer-pad-bottom, 12px) var(--ds-hint-footer-pad-left, 12px)`
+    - промежуток между элементами: `var(--ds-hint-footer-gap, 12px)`
+    - фон: `var(--ds-color-hint-background-color, #424242)`
 - Модификаторы (что меняет каждый):
-    - `--default`: color `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - `--default`: color `var(--ds-color-hint-footer-text-color, #ffffff)`
 - Разметка:
 
 ```html
@@ -3891,12 +3440,13 @@
 /* Hint footer [54600:517] — 1 вариантов; оси: Content */
 .ds-hint-footer {
   min-height: 56px;
+  width: 250px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-hint-footer-gap);
-  padding: var(--ds-hint-footer-pad-left) var(--ds-hint-footer-pad-right) var(--ds-hint-footer-pad-top) var(--ds-hint-footer-pad-bottom);
-  background: var(--ds-color-hint-background-color);
+  gap: var(--ds-hint-footer-gap, 12px);
+  padding: var(--ds-hint-footer-pad-top, 16px) var(--ds-hint-footer-pad-right, 12px) var(--ds-hint-footer-pad-bottom, 12px) var(--ds-hint-footer-pad-left, 12px);
+  background: var(--ds-color-hint-background-color, #424242);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -3905,7 +3455,7 @@
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-footer-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-hint-footer__icon {
@@ -3927,21 +3477,21 @@
 .ds-hint-footer__цвет-и-палитра {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-hint-footer-text-color);
+  background: var(--ds-color-hint-footer-text-color, #ffffff);
   font-size: var(--ds-font-body-s-14-normal-medium-size);
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-footer-text-color, #ffffff);
 }
 .ds-hint-footer__button-group {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-group-gap);
+  gap: var(--ds-button-group-gap, 8px);
 }
 .ds-hint-footer--default {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-footer-text-color, #ffffff);
 }
 ```
 </details>
@@ -3951,16 +3501,16 @@
 - Прочие свойства: Element left#54594:55 (BOOLEAN), Element right#54594:56 (BOOLEAN)
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-8x)`, растёт по контенту
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-hint-header-pad-left) var(--ds-hint-header-pad-right) var(--ds-hint-header-pad-top) var(--ds-hint-header-pad-bottom)`
-    - промежуток между элементами: `var(--ds-hint-header-gap)`
-    - фон: `var(--ds-color-hint-background-color)`
+    - ширина: `250px` (фикс.)
+    - внутренние отступы: `var(--ds-hint-header-pad-top, 8px) var(--ds-hint-header-pad-right, 12px) var(--ds-hint-header-pad-bottom, 4px) var(--ds-hint-header-pad-left, 12px)`
+    - промежуток между элементами: `var(--ds-hint-header-gap, 8px)`
+    - фон: `var(--ds-color-hint-background-color, #424242)`
 - Модификаторы (что меняет каждый):
-    - `--error`: color `var(--ds-color-expansion-panel-block-collaps-content-background)`
-    - `--neutral`: color `var(--ds-color-expansion-panel-block-collaps-content-background)`
-    - `--primary`: color `var(--ds-color-expansion-panel-block-collaps-content-background)`
-    - `--secondary`: color `var(--ds-color-expansion-panel-block-collaps-content-background)`
-    - `--warning`: color `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - `--error`: color `var(--ds-color-hint-header-text-color, #ffffff)`
+    - `--neutral`: color `var(--ds-color-hint-header-text-color, #ffffff)`
+    - `--primary`: color `var(--ds-color-hint-header-text-color, #ffffff)`
+    - `--secondary`: color `var(--ds-color-hint-header-text-color, #ffffff)`
+    - `--warning`: color `var(--ds-color-hint-header-text-color, #ffffff)`
 - Разметка:
 
 ```html
@@ -3980,11 +3530,12 @@
 /* Hint header [54594:2219] — 5 вариантов; оси: Style */
 .ds-hint-header {
   min-height: var(--ds-size-8x);
+  width: 250px;
   display: flex;
   flex-direction: row;
-  gap: var(--ds-hint-header-gap);
-  padding: var(--ds-hint-header-pad-left) var(--ds-hint-header-pad-right) var(--ds-hint-header-pad-top) var(--ds-hint-header-pad-bottom);
-  background: var(--ds-color-hint-background-color);
+  gap: var(--ds-hint-header-gap, 8px);
+  padding: var(--ds-hint-header-pad-top, 8px) var(--ds-hint-header-pad-right, 12px) var(--ds-hint-header-pad-bottom, 4px) var(--ds-hint-header-pad-left, 12px);
+  background: var(--ds-color-hint-background-color, #424242);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -3993,7 +3544,7 @@
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-hint-header__icon {
@@ -4021,17 +3572,17 @@
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-hint-header__title {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-hint-header-text-color);
+  background: var(--ds-color-hint-header-text-color, #ffffff);
   font-size: var(--ds-font-body-s-14-normal-medium-size);
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-header__clear {
   height: var(--ds-size-5x);
@@ -4042,22 +3593,22 @@
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-hint-header--neutral {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-header--primary {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-header--secondary {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-header--warning {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-header--error {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 ```
 </details>
@@ -4067,10 +3618,10 @@
 - Прочие свойства: Slot#60190:14 (SLOT)
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-5x)`, растёт по контенту
-    - ширина: по контенту (hug)
-    - промежуток между элементами: `var(--ds-icon-size-gap-group-2x)`
+    - ширина: `fit-content` (фикс.)
+    - промежуток между элементами: `var(--ds-icon-size-gap-group-2x, 8px)`
 - Модификаторы (что меняет каждый):
-    - `--4x`: промежуток между элементами `var(--ds-icon-size-gap-group-4x)`
+    - `--4x`: промежуток между элементами `var(--ds-icon-size-gap-group-4x, 16px)`
 - Разметка:
 
 ```html
@@ -4084,10 +3635,11 @@
 /* Icon group [53467:1060] — 2 вариантов; оси: Size gap */
 .ds-icon-group {
   min-height: var(--ds-size-5x);
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-icon-size-gap-group-2x);
+  gap: var(--ds-icon-size-gap-group-2x, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -4108,7 +3660,7 @@
   fill: currentColor;
 }
 .ds-icon-group--4x {
-  gap: var(--ds-icon-size-gap-group-4x);
+  gap: var(--ds-icon-size-gap-group-4x, 16px);
 }
 ```
 </details>
@@ -4117,10 +3669,6 @@
 - **Size** (VARIANT): 16, 20, 24, 32, 36, 40
 - **Content** (VARIANT): Icon, Img
 - Прочие свойства: State#54063:8 (BOOLEAN), Instance#60108:34 (INSTANCE_SWAP)
-- CSS не требуется: это **слот-контейнер** — пустая обёртка под вложенный компонент (иконку, ячейку). Оформление задаёт вложенный компонент, а размер — контент.
-
-#### Icon size_Draft `[54063:12911]` — 6 вариантов
-- **Size** (VARIANT): 16, 20, 24, 32, 36, 40
 - CSS не требуется: это **слот-контейнер** — пустая обёртка под вложенный компонент (иконку, ячейку). Оформление задаёт вложенный компонент, а размер — контент.
 
 #### Input `[52670:7573]` — 29 вариантов
@@ -4134,8 +3682,8 @@
 - **State** (VARIANT): Default, Disable, Error, Error+Hover, Focus, Focus+Placeholder, Hover, Vocus+Value
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-9x)`, растёт по контенту
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom)`
+    - ширина: `200px` (фикс.)
+    - внутренние отступы: `var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px)`
     - промежуток между элементами: `var(--ds-size-2x)`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
@@ -4156,11 +3704,12 @@
 /* Input cell [60229:74436] — 8 вариантов; оси: State */
 .ds-input-cell {
   min-height: var(--ds-size-9x);
+  width: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  padding: var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom);
+  padding: var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -4169,7 +3718,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-input-cell__icon {
@@ -4192,27 +3741,27 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-form-field-gap-input-frame);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-input-cell__support {
   display: flex;
   flex-direction: row;
 }
 .ds-input-cell:hover {
-  background: var(--ds-palette-neutral-50);
-  border: 1px solid var(--ds-color-table-cell-content-hover-border-color);
+  background: var(--ds-palette-neutral-50, #f5f5f5);
+  border: 1px solid var(--ds-color-table-cell-content-hover-border-color, #9e9e9e);
 }
 .ds-input-cell:focus-visible {
-  color: var(--ds-color-input-filled-focus-border-color);
+  color: var(--ds-color-form-field-filled-focus-label-text-color, #448aff);
 }
 .ds-input-cell:disabled {
-  color: var(--ds-color-input-filled-disable-icon-color-disable);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-input-cell.ds-input-cell--disabled {
-  color: var(--ds-color-input-filled-disable-icon-color-disable);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-input-cell--disabled {
   pointer-events: none;
@@ -4224,11 +3773,11 @@
 - **Type** (VARIANT): Empty, Populated
 - Размеры и параметры:
     - высота: минимум `48px`, растёт по контенту
-    - ширина: по контенту (hug)
-    - фон: `var(--ds-color-input-input-outlined-background)`
+    - ширина: `250px` (фикс.)
+    - фон: `#ffffff`
 - Модификаторы (что меняет каждый):
-    - `--empty`: color `var(--ds-color-input-input-label-text-color)`
-    - `--populated`: color `var(--ds-color-input-input-label-text-color)`
+    - `--empty`: color `var(--ds-color-form-field-input-label-text-color, #616161)`
+    - `--populated`: color `var(--ds-color-form-field-filled-default-label-text-color, #616161)`
 - Разметка:
 
 ```html
@@ -4245,9 +3794,10 @@
 /* Input Datepicker [58548:4764] — 2 вариантов; оси: Type */
 .ds-input-datepicker {
   min-height: 48px;
+  width: 250px;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-input-input-outlined-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -4256,7 +3806,7 @@
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-input-datepicker__icon {
@@ -4280,125 +3830,21 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-form-field-gap-input-frame);
-  padding: var(--ds-form-field-m-size-pad-input-left) var(--ds-form-field-m-size-pad-input-right) var(--ds-form-field-m-size-pad-input-top) var(--ds-form-field-m-size-pad-input-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  padding: var(--ds-form-field-m-size-pad-input-top, 12px) var(--ds-form-field-m-size-pad-input-right, 12px) var(--ds-form-field-m-size-pad-input-bottom, 12px) var(--ds-form-field-m-size-pad-input-left, 12px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-input-datepicker__support {
   display: flex;
   flex-direction: row;
 }
 .ds-input-datepicker--empty {
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
 }
 .ds-input-datepicker--populated {
-  color: var(--ds-color-input-input-label-text-color);
-}
-```
-</details>
-
-#### Input for number `[53827:5155]` — 10 вариантов
-- **Size** (VARIANT): Compact, Normal
-- **State** (VARIANT): Default, Disable, Error, Focus, Hover
-- Прочие свойства: Icon left#53827:2 (BOOLEAN), Icon right#53827:3 (BOOLEAN)
-- Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-input-number-input-pad-left) var(--ds-input-number-input-pad-right) var(--ds-input-number-input-pad-top) var(--ds-input-number-input-pad-bottom)`
-    - промежуток между элементами: `var(--ds-input-number-input-gap)`
-    - скругление: `var(--ds-size-2x)`
-    - рамка: `1px solid var(--ds-color-input-number-input-default-border-color)`
-    - фон: `var(--ds-color-input-number-input-background)`
-- Модификаторы (что меняет каждый):
-    - `--disabled`: pointer-events `none`
-- Состояния: `:disabled` (неактивно), `:hover` (наведение)
-- Разметка:
-
-```html
-<div class="ds-input-for-number ds-input-for-number--disabled">
-  <div class="ds-input-for-number__content"></div>
-  <span class="ds-input-for-number__icon"><!-- SVG-иконка ДС --></span>
-  <div class="ds-input-for-number__icon-size"></div>
-  <div class="ds-input-for-number__info"></div>
-  <span class="ds-input-for-number__label">Текст</span>
-  <span class="ds-input-for-number__text">Текст</span>
-</div>
-```
-<details><summary>CSS компонента</summary>
-
-```css
-/* Input for number [53827:5155] — 10 вариантов; оси: Size, State */
-.ds-input-for-number {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-input-number-input-gap);
-  border-radius: var(--ds-size-2x);
-  padding: var(--ds-input-number-input-pad-left) var(--ds-input-number-input-pad-right) var(--ds-input-number-input-pad-top) var(--ds-input-number-input-pad-bottom);
-  background: var(--ds-color-input-number-input-background);
-  border: 1px solid var(--ds-color-input-number-input-default-border-color);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-input-for-number__label {
-  font-size: var(--ds-font-body-s-14-normal-regular-size);
-  line-height: var(--ds-font-body-s-14-normal-regular-line);
-  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
-  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-input-filled-default-input-text-color);
-  white-space: nowrap;
-}
-.ds-input-for-number__icon {
-  flex-shrink: 0;
-  width: var(--ds-size-5x);
-  height: var(--ds-size-5x);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-input-for-number__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.ds-input-for-number__icon svg path {
-  fill: currentColor;
-}
-.ds-input-for-number__icon-size {
-  height: var(--ds-size-5x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-input-for-number__info {
-  height: var(--ds-size-5x);
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-input-input-outlined-background);
-}
-.ds-input-for-number__content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--ds-form-field-gap-input-content);
-}
-.ds-input-for-number__text {
-  display: flex;
-  flex-direction: row;
-  gap: 3px;
-}
-.ds-input-for-number:hover {
-  border: 1px solid var(--ds-color-input-number-input-hover-border-color);
-}
-.ds-input-for-number:disabled {
-  border: 1px solid var(--ds-color-input-number-input-disable-border-color);
-  color: var(--ds-color-input-filled-disable-icon-color-disable);
-}
-.ds-input-for-number.ds-input-for-number--disabled {
-  border: 1px solid var(--ds-color-input-number-input-disable-border-color);
-  color: var(--ds-color-input-filled-disable-icon-color-disable);
-}
-.ds-input-for-number--disabled {
-  pointer-events: none;
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 ```
 </details>
@@ -4409,13 +3855,14 @@
 - **State** (VARIANT): Default, Disable, Error, Error+Hover, Focus, Focus+Placeholder, Focus+Value, Hover
 - Прочие свойства: Close icon#57962:0 (BOOLEAN)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
+    - ширина: `138px` (фикс.)
     - промежуток между элементами: `18px`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
-    - `--empty`: align-items `center`, color `var(--ds-color-input-input-label-text-color)`, color `var(--ds-color-input-filled-disable-icon-color-disable)`
-    - `--populated`: align-items `center`, color `var(--ds-color-input-input-label-text-color)`, color `var(--ds-color-input-filled-disable-icon-color-disable)`
-    - `--xs`: ширина `var(--ds-size-6x)`, высота `var(--ds-size-6x)`
+    - `--empty`: align-items `center`, color `var(--ds-color-form-field-input-label-text-color, #616161)`, color `var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e)`
+    - `--populated`: align-items `center`, color `var(--ds-color-form-field-filled-default-label-text-color, #616161)`, color `var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e)`
+    - `--s`: ширина `fit-content`
+    - `--xs`: ширина `fit-content`, ширина `var(--ds-size-6x)`, высота `var(--ds-size-6x)`
 - Состояния: `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
 - Разметка:
 
@@ -4434,6 +3881,7 @@
 .ds-input-number {
   display: flex;
   flex-direction: row;
+  width: 138px;
   gap: 18px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -4443,7 +3891,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-input-number__icon {
@@ -4467,15 +3915,21 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-form-field-gap-input-frame);
-  padding: var(--ds-form-field-m-size-pad-input-left) var(--ds-form-field-m-size-pad-input-right) var(--ds-form-field-m-size-pad-input-top) var(--ds-form-field-m-size-pad-input-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  padding: var(--ds-form-field-m-size-pad-input-top, 12px) var(--ds-form-field-m-size-pad-input-right, 12px) var(--ds-form-field-m-size-pad-input-bottom, 12px) var(--ds-form-field-m-size-pad-input-left, 12px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-input-number__support {
   display: flex;
   flex-direction: row;
+}
+.ds-input-number--s {
+  width: fit-content;
+}
+.ds-input-number--xs {
+  width: fit-content;
 }
 .ds-input-number--xs .ds-input-number__icon {
   width: var(--ds-size-6x);
@@ -4483,34 +3937,33 @@
 }
 .ds-input-number--populated {
   align-items: center;
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 .ds-input-number--empty {
   align-items: center;
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
 }
 .ds-input-number--populated:focus-visible {
-  color: var(--ds-color-input-filled-focus-border-color);
+  color: var(--ds-color-form-field-filled-focus-label-text-color, #448aff);
 }
 .ds-input-number--populated:hover {
-  background: var(--ds-color-input-filled-disable-input-background);
-  border: 1px solid var(--ds-color-input-filled-disable-icon-color-disable);
+  color: var(--ds-color-form-field-filled-hover-label-text-color, #616161);
 }
 .ds-input-number--empty:hover {
-  background: var(--ds-color-input-filled-disable-input-background);
-  border: 1px solid var(--ds-color-input-filled-disable-icon-color-disable);
+  background: var(--ds-color-form-field-filled-hover-input-background-hover, #f5f5f5);
+  border: 1px solid var(--ds-color-form-field-filled-hover-border-color, #9e9e9e);
 }
 .ds-input-number--populated:disabled {
-  color: var(--ds-color-input-filled-disable-icon-color-disable);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-input-number--populated.ds-input-number--disabled {
-  color: var(--ds-color-input-filled-disable-icon-color-disable);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-input-number--empty:disabled {
-  color: var(--ds-color-input-filled-disable-icon-color-disable);
+  color: var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e);
 }
 .ds-input-number--empty.ds-input-number--disabled {
-  color: var(--ds-color-input-filled-disable-icon-color-disable);
+  color: var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e);
 }
 .ds-input-number--disabled {
   pointer-events: none;
@@ -4522,7 +3975,7 @@
 - Прочие свойства: Support#57977:0 (BOOLEAN)
 - Размеры и параметры:
     - высота: минимум `56px`, растёт по контенту
-    - ширина: по контенту (hug)
+    - ширина: `fit-content` (фикс.)
     - промежуток между элементами: `var(--ds-size-1x)`
 - Разметка:
 
@@ -4542,6 +3995,7 @@
 /* Input number_but icon [56967:10506] — 1 вариантов; оси: — */
 .ds-input-number-but-icon {
   min-height: 56px;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-1x);
@@ -4553,7 +4007,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-input-number-but-icon__icon {
@@ -4582,10 +4036,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-icon-gap);
-  padding: var(--ds-button-icon-m-size-pad-left) var(--ds-button-icon-m-size-pad-right) var(--ds-button-icon-m-size-pad-top) var(--ds-button-icon-m-size-pad-bottom);
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-button-icon-neutral-filled-default-background);
+  gap: var(--ds-button-icon-gap, 8px);
+  padding: var(--ds-button-icon-m-size-pad-top, 8px) var(--ds-button-icon-m-size-pad-right, 8px) var(--ds-button-icon-m-size-pad-bottom, 8px) var(--ds-button-icon-m-size-pad-left, 8px);
+  border-radius: var(--ds-button-icon-border-radius, 8px);
+  background: var(--ds-color-button-icon-neutral-filled-default-background, #ffffff);
   box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 .ds-input-number-but-icon__text {
@@ -4596,12 +4050,12 @@
 .ds-input-number-but-icon__support-text {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-form-field-filled-default-support-text-color);
+  background: var(--ds-color-form-field-filled-default-support-text-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-filled-default-support-text-color, #616161);
 }
 ```
 </details>
@@ -4610,11 +4064,11 @@
 - **Type** (VARIANT): Empty, Populated
 - Размеры и параметры:
     - высота: минимум `48px`, растёт по контенту
-    - ширина: по контенту (hug)
-    - фон: `var(--ds-color-input-input-outlined-background)`
+    - ширина: `250px` (фикс.)
+    - фон: `#ffffff`
 - Модификаторы (что меняет каждый):
-    - `--empty`: color `var(--ds-color-input-input-label-text-color)`
-    - `--populated`: color `var(--ds-color-input-input-label-text-color)`
+    - `--empty`: color `var(--ds-color-form-field-input-label-text-color, #616161)`
+    - `--populated`: color `var(--ds-color-form-field-filled-default-label-text-color, #616161)`
 - Разметка:
 
 ```html
@@ -4631,9 +4085,10 @@
 /* Input Timepicker [58982:9561] — 2 вариантов; оси: Type */
 .ds-input-timepicker {
   min-height: 48px;
+  width: 250px;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-input-input-outlined-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -4642,7 +4097,7 @@
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-input-timepicker__icon {
@@ -4666,21 +4121,21 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-form-field-gap-input-frame);
-  padding: var(--ds-form-field-m-size-pad-input-left) var(--ds-form-field-m-size-pad-input-right) var(--ds-form-field-m-size-pad-input-top) var(--ds-form-field-m-size-pad-input-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  padding: var(--ds-form-field-m-size-pad-input-top, 12px) var(--ds-form-field-m-size-pad-input-right, 12px) var(--ds-form-field-m-size-pad-input-bottom, 12px) var(--ds-form-field-m-size-pad-input-left, 12px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-input-timepicker__support {
   display: flex;
   flex-direction: row;
 }
 .ds-input-timepicker--empty {
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
 }
 .ds-input-timepicker--populated {
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 ```
 </details>
@@ -4690,11 +4145,12 @@
 - Прочие свойства: List container#57620:0 (SLOT), Scroll#57620:2 (BOOLEAN), Title#57623:6 (BOOLEAN), Divider header#57862:0 (BOOLEAN)
 - Размеры и параметры:
     - высота: минимум `257px`, растёт по контенту
-    - ширина: по контенту (hug)
-    - внутренние отступы: `0 0 var(--ds-list-pad-top) var(--ds-list-pad-bottom)`
-    - фон: `var(--ds-color-list-background)`
+    - ширина: `258px` (фикс.)
+    - внутренние отступы: `var(--ds-list-pad-top, 8px) 0 var(--ds-list-pad-bottom, 8px) 0`
+    - скругление: `var(--ds-list-border-radius)`
+    - фон: `var(--ds-color-list-background, #ffffff)`
 - Модификаторы (что меняет каждый):
-    - `--container`: color `var(--ds-color-chips-input-default-action-text-color)`
+    - `--container`: color `var(--ds-color-list-item-text-label-color, #616161)`
 - Разметка:
 
 ```html
@@ -4715,10 +4171,12 @@
 /* List (Сontainer) [57604:4762] — 1 вариантов; оси: Type */
 .ds-list-container {
   min-height: 257px;
+  width: 258px;
   display: flex;
   flex-direction: column;
-  padding: 0 0 var(--ds-list-pad-top) var(--ds-list-pad-bottom);
-  background: var(--ds-color-list-background);
+  padding: var(--ds-list-pad-top, 8px) 0 var(--ds-list-pad-bottom, 8px) 0;
+  border-radius: var(--ds-list-border-radius);
+  background: var(--ds-color-list-background, #ffffff);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -4727,7 +4185,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-list-item-text-label-color, #616161);
   white-space: nowrap;
 }
 .ds-list-container__icon {
@@ -4749,14 +4207,14 @@
 .ds-list-container__item {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-list-item-gap);
-  padding: var(--ds-list-item-pad-left) var(--ds-list-item-pad-right) var(--ds-list-item-pad-top) var(--ds-list-item-pad-bottom);
-  background: var(--ds-color-list-item-default-background);
+  gap: var(--ds-list-item-gap, 8px);
+  padding: var(--ds-list-item-pad-top, 8px) var(--ds-list-item-pad-right, 16px) var(--ds-list-item-pad-bottom, 8px) var(--ds-list-item-pad-left, 16px);
+  background: var(--ds-color-list-item-default-background, #ffffff);
 }
 .ds-list-container__element-left {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-list-container__content {
   display: flex;
@@ -4767,22 +4225,22 @@
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-list-container__divider {
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-list-container__scroll {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom);
+  padding: var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px);
 }
 .ds-list-container--container {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-list-item-text-label-color, #616161);
 }
 ```
 </details>
@@ -4792,10 +4250,10 @@
 - Прочие свойства: Element left#54167:1 (BOOLEAN), Element right#54167:6 (BOOLEAN), Label up#54741:15 (BOOLEAN), Label down#54741:30 (BOOLEAN)
 - Размеры и параметры:
     - высота: минимум `68px`, растёт по контенту
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-list-item-pad-left) var(--ds-list-item-pad-right) var(--ds-list-item-pad-top) var(--ds-list-item-pad-bottom)`
-    - промежуток между элементами: `var(--ds-list-item-gap)`
-    - фон: `var(--ds-color-list-item-default-background)`
+    - ширина: `258px` (фикс.)
+    - внутренние отступы: `var(--ds-list-item-pad-top, 8px) var(--ds-list-item-pad-right, 16px) var(--ds-list-item-pad-bottom, 8px) var(--ds-list-item-pad-left, 16px)`
+    - промежуток между элементами: `var(--ds-list-item-gap, 8px)`
+    - фон: `var(--ds-color-list-item-default-background, #ffffff)`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
 - Состояния: `:active` (нажатие), `:disabled` (неактивно), `:hover` (наведение)
@@ -4821,11 +4279,12 @@
 /* List item [54101:7922] — 8 вариантов; оси: State */
 .ds-list-item {
   min-height: 68px;
+  width: 258px;
   display: flex;
   flex-direction: row;
-  gap: var(--ds-list-item-gap);
-  padding: var(--ds-list-item-pad-left) var(--ds-list-item-pad-right) var(--ds-list-item-pad-top) var(--ds-list-item-pad-bottom);
-  background: var(--ds-color-list-item-default-background);
+  gap: var(--ds-list-item-gap, 8px);
+  padding: var(--ds-list-item-pad-top, 8px) var(--ds-list-item-pad-right, 16px) var(--ds-list-item-pad-bottom, 8px) var(--ds-list-item-pad-left, 16px);
+  background: var(--ds-color-list-item-default-background, #ffffff);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -4834,7 +4293,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-list-item-text-label-color, #616161);
   white-space: nowrap;
 }
 .ds-list-item__icon {
@@ -4856,7 +4315,7 @@
 .ds-list-item__element-left {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-list-item__checkbox {
   display: flex;
@@ -4870,39 +4329,39 @@
 .ds-list-item__label-up {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-list-item-text-label-color);
+  background: var(--ds-color-list-item-text-label-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-list-item-text-label-color, #616161);
 }
 .ds-list-item__text {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-list-item-text-color);
+  background: var(--ds-color-list-item-text-color, #333333);
   font-size: var(--ds-font-body-s-14-normal-regular-size);
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-list-item-text-color, #333333);
 }
 .ds-list-item__label-down {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-list-item-text-label-color);
+  background: var(--ds-color-list-item-text-label-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-list-item-text-label-color, #616161);
 }
 .ds-list-item__element-right {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-list-item__icon-size {
   height: var(--ds-size-5x);
@@ -4910,18 +4369,18 @@
   flex-direction: row;
 }
 .ds-list-item:hover {
-  background: var(--ds-color-list-item-hover-background);
+  background: var(--ds-color-list-item-hover-background, #f5f5f5);
 }
 .ds-list-item:active {
-  background: var(--ds-color-list-item-press-background);
+  background: var(--ds-color-list-item-press-background, #e0e0e0);
 }
 .ds-list-item:disabled {
-  background: var(--ds-color-list-item-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-list-item-disable-background, #ffffff);
+  color: var(--ds-color-list-item-disable-label-text-color, #9e9e9e);
 }
 .ds-list-item.ds-list-item--disabled {
-  background: var(--ds-color-list-item-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-list-item-disable-background, #ffffff);
+  color: var(--ds-color-list-item-disable-label-text-color, #9e9e9e);
 }
 .ds-list-item--disabled {
   pointer-events: none;
@@ -4935,7 +4394,7 @@
 - Размеры и параметры:
     - высота: `72px` (фикс.)
     - ширина: по контенту (hug)
-    - фон: `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - фон: `#ffffff`
 - Разметка:
 
 ```html
@@ -4951,7 +4410,7 @@
   height: 72px;
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -4959,7 +4418,7 @@
   height: 72px;
   display: flex;
   flex-direction: row;
-  background: var(--ds-palette-neutral-0);
+  background: var(--ds-palette-neutral-0, #ffffff);
 }
 ```
 </details>
@@ -4970,7 +4429,7 @@
 - Размеры и параметры:
     - высота: `72px` (фикс.)
     - ширина: по контенту (hug)
-    - фон: `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - фон: `#ffffff`
 - Разметка:
 
 ```html
@@ -4986,7 +4445,7 @@
   height: 72px;
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -4994,6 +4453,7 @@
   height: 70.9px;
   display: flex;
   flex-direction: row;
+  background: #00062b;
 }
 ```
 </details>
@@ -5003,14 +4463,14 @@
 - Прочие свойства: Scroll#55632:0 (BOOLEAN), Menu container#56968:88 (SLOT), Title#57636:8 (BOOLEAN), Search#57750:7 (BOOLEAN), Button#57848:0 (BOOLEAN), Divider header#57848:2 (BOOLEAN), Divider footer#57848:4 (BOOLEAN)
 - Размеры и параметры:
     - высота: минимум `418px`, растёт по контенту
-    - ширина: по контенту (hug)
-    - внутренние отступы: `0 0 var(--ds-menu-pad-top) var(--ds-menu-pad-bottom)`
+    - ширина: `240px` (фикс.)
+    - внутренние отступы: `var(--ds-menu-pad-top, 8px) 0 var(--ds-menu-pad-bottom, 8px) 0`
     - промежуток между элементами: `var(--ds-menu-gap)`
-    - скругление: `var(--ds-size-2x)`
-    - фон: `var(--ds-color-menu-background)`
+    - скругление: `var(--ds-menu-border-radius, 8px)`
+    - фон: `var(--ds-color-menu-background, #ffffff)`
     - тень: `var(--ds-shadow-shadows-08-dp-s)`
 - Модификаторы (что меняет каждый):
-    - `--container`: color `var(--ds-color-chips-input-error-text-placeholder-color)`
+    - `--container`: color `var(--ds-color-search-default-text-color, #d6d6d6)`
 - Разметка:
 
 ```html
@@ -5033,12 +4493,13 @@
 /* Menu (Container) [54163:6705] — 1 вариантов; оси: Type */
 .ds-menu-container {
   min-height: 418px;
+  width: 240px;
   display: flex;
   flex-direction: column;
   gap: var(--ds-menu-gap);
-  padding: 0 0 var(--ds-menu-pad-top) var(--ds-menu-pad-bottom);
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-menu-background);
+  padding: var(--ds-menu-pad-top, 8px) 0 var(--ds-menu-pad-bottom, 8px) 0;
+  border-radius: var(--ds-menu-border-radius, 8px);
+  background: var(--ds-color-menu-background, #ffffff);
   box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -5048,7 +4509,7 @@
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-text-placeholder-color);
+  color: var(--ds-color-search-default-text-color, #d6d6d6);
   white-space: nowrap;
 }
 .ds-menu-container__icon {
@@ -5071,19 +4532,19 @@
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-4x) var(--ds-size-4x) 0 var(--ds-size-1x);
+  padding: 0 var(--ds-size-4x) var(--ds-size-1x) var(--ds-size-4x);
 }
 .ds-menu-container__title {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-menu-item-gap);
-  padding: var(--ds-menu-item-pad-left) var(--ds-menu-item-pad-right) var(--ds-menu-item-pad-top) var(--ds-menu-item-pad-bottom);
-  background: var(--ds-color-menu-item-default-background);
+  gap: var(--ds-menu-item-gap, 8px);
+  padding: var(--ds-menu-item-pad-top, 8px) var(--ds-menu-item-pad-right, 16px) var(--ds-menu-item-pad-bottom, 8px) var(--ds-menu-item-pad-left, 16px);
+  background: var(--ds-color-menu-item-default-background, #ffffff);
 }
 .ds-menu-container__element-left {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-menu-container__content {
   display: flex;
@@ -5094,30 +4555,30 @@
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-menu-container__divider {
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-menu-container__scroll {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom);
+  padding: var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px);
 }
 .ds-menu-container__button-group {
   height: 52px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-group-gap);
-  padding: var(--ds-button-group-margins-pad-left) var(--ds-button-group-margins-pad-right) var(--ds-button-group-margins-pad-top) var(--ds-button-group-margins-pad-bottom);
+  gap: var(--ds-button-group-gap, 8px);
+  padding: var(--ds-button-group-margins-pad-top, 8px) var(--ds-button-group-margins-pad-right, 16px) var(--ds-button-group-margins-pad-bottom, 8px) var(--ds-button-group-margins-pad-left, 16px);
 }
 .ds-menu-container--container {
-  color: var(--ds-color-chips-input-error-text-placeholder-color);
+  color: var(--ds-color-search-default-text-color, #d6d6d6);
 }
 ```
 </details>
@@ -5127,10 +4588,10 @@
 - Прочие свойства: Element left#54167:1 (BOOLEAN), Element right#54167:6 (BOOLEAN), Label up#54741:15 (BOOLEAN), Label down#54741:30 (BOOLEAN)
 - Размеры и параметры:
     - высота: минимум `68px`, растёт по контенту
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-menu-item-pad-left) var(--ds-menu-item-pad-right) var(--ds-menu-item-pad-top) var(--ds-menu-item-pad-bottom)`
-    - промежуток между элементами: `var(--ds-menu-item-gap)`
-    - фон: `var(--ds-color-menu-item-default-background)`
+    - ширина: `258px` (фикс.)
+    - внутренние отступы: `var(--ds-menu-item-pad-top, 8px) var(--ds-menu-item-pad-right, 16px) var(--ds-menu-item-pad-bottom, 8px) var(--ds-menu-item-pad-left, 16px)`
+    - промежуток между элементами: `var(--ds-menu-item-gap, 8px)`
+    - фон: `var(--ds-color-menu-item-default-background, #ffffff)`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
 - Состояния: `:active` (нажатие), `:disabled` (неактивно), `:hover` (наведение)
@@ -5156,11 +4617,12 @@
 /* Menu item [56090:1476] — 7 вариантов; оси: State */
 .ds-menu-item {
   min-height: 68px;
+  width: 258px;
   display: flex;
   flex-direction: row;
-  gap: var(--ds-menu-item-gap);
-  padding: var(--ds-menu-item-pad-left) var(--ds-menu-item-pad-right) var(--ds-menu-item-pad-top) var(--ds-menu-item-pad-bottom);
-  background: var(--ds-color-menu-item-default-background);
+  gap: var(--ds-menu-item-gap, 8px);
+  padding: var(--ds-menu-item-pad-top, 8px) var(--ds-menu-item-pad-right, 16px) var(--ds-menu-item-pad-bottom, 8px) var(--ds-menu-item-pad-left, 16px);
+  background: var(--ds-color-menu-item-default-background, #ffffff);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -5169,7 +4631,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-menu-item-text-label-color, #616161);
   white-space: nowrap;
 }
 .ds-menu-item__icon {
@@ -5191,7 +4653,7 @@
 .ds-menu-item__element-left {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-menu-item__checkbox {
   display: flex;
@@ -5205,39 +4667,39 @@
 .ds-menu-item__label-up {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-menu-item-text-label-color);
+  background: var(--ds-color-menu-item-text-label-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-menu-item-text-label-color, #616161);
 }
 .ds-menu-item__text {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-menu-item-text-color);
+  background: var(--ds-color-menu-item-text-color, #333333);
   font-size: var(--ds-font-body-s-14-normal-regular-size);
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-menu-item-text-color, #333333);
 }
 .ds-menu-item__label-down {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-menu-item-text-label-color);
+  background: var(--ds-color-menu-item-text-label-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-menu-item-text-label-color, #616161);
 }
 .ds-menu-item__element-right {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-menu-item__icon-size {
   height: var(--ds-size-5x);
@@ -5245,54 +4707,21 @@
   flex-direction: row;
 }
 .ds-menu-item:hover {
-  background: var(--ds-color-menu-item-hover-background);
+  background: var(--ds-color-menu-item-hover-background, #f5f5f5);
 }
 .ds-menu-item:active {
-  background: var(--ds-color-menu-item-press-background);
+  background: var(--ds-color-menu-item-press-background, #e0e0e0);
 }
 .ds-menu-item:disabled {
-  background: var(--ds-color-menu-item-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-menu-item-disable-background, #ffffff);
+  color: var(--ds-color-menu-item-disable-label-text-color, #9e9e9e);
 }
 .ds-menu-item.ds-menu-item--disabled {
-  background: var(--ds-color-menu-item-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-menu-item-disable-background, #ffffff);
+  color: var(--ds-color-menu-item-disable-label-text-color, #9e9e9e);
 }
 .ds-menu-item--disabled {
   pointer-events: none;
-}
-```
-</details>
-
-#### Navigation Bar `[56564:1057]` — 2 вариантов
-- **Dark** (VARIANT): Off, On
-- Размеры и параметры:
-    - высота: `var(--ds-size-5x)` (фикс.)
-    - ширина: по контенту (hug)
-- Разметка:
-
-```html
-<div class="ds-navigation-bar">
-  <div class="ds-navigation-bar__pill"></div>
-</div>
-```
-<details><summary>CSS компонента</summary>
-
-```css
-/* Navigation Bar [56564:1057] — 2 вариантов; оси: Dark */
-.ds-navigation-bar {
-  height: var(--ds-size-5x);
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-navigation-bar__pill {
-  height: var(--ds-size-1x);
-  display: flex;
-  flex-direction: row;
-  border-radius: var(--ds-size-1x);
-  background: var(--ds-color-chips-input-error-cursor-color);
 }
 ```
 </details>
@@ -5305,7 +4734,7 @@
     - внутренние отступы: `var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x)`
     - промежуток между элементами: `var(--ds-size-2-5x)`
     - скругление: `var(--ds-size-2x)`
-    - фон: `var(--ds-color-brand-accent-super-lightest)`
+    - фон: `var(--ds-color-brand-accent-super-lightest, #f8f9fc)`
 - Разметка:
 
 ```html
@@ -5326,7 +4755,7 @@
   gap: var(--ds-size-2-5x);
   padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
   border-radius: var(--ds-size-2x);
-  background: var(--ds-color-brand-accent-super-lightest);
+  background: var(--ds-color-brand-accent-super-lightest, #f8f9fc);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -5335,7 +4764,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-2-5x);
-  border: 1px dashed var(--ds-color-stroke-hover);
+  border: 1px dashed var(--ds-color-stroke-hover, #9e9e9e);
 }
 .ds-picture__frame-1000001806 {
   height: 100%;
@@ -5343,67 +4772,6 @@
   flex-direction: row;
   align-items: center;
   gap: 440px;
-}
-```
-</details>
-
-#### Preview `[54063:12946]` — 3 вариантов
-- **Property 1** (VARIANT): Default, Variant2, Variant3
-- Размеры и параметры:
-    - высота: `var(--ds-size-6x)` (фикс.)
-    - ширина: `var(--ds-size-6x)` (фикс.)
-    - внутренние отступы: `var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x)`
-    - промежуток между элементами: `var(--ds-size-2-5x)`
-- Разметка:
-
-```html
-<div class="ds-preview">
-  <span class="ds-preview__icon"><!-- SVG-иконка ДС --></span>
-  <div class="ds-preview__icon-size-draft"></div>
-  <div class="ds-preview__info"></div>
-</div>
-```
-<details><summary>CSS компонента</summary>
-
-```css
-/* Preview [54063:12946] — 3 вариантов; оси: Property 1 */
-.ds-preview {
-  height: var(--ds-size-6x);
-  width: var(--ds-size-6x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-preview__icon {
-  flex-shrink: 0;
-  width: var(--ds-size-4x);
-  height: var(--ds-size-4x);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-preview__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.ds-preview__icon svg path {
-  fill: currentColor;
-}
-.ds-preview__icon-size-draft {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-preview__info {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
 }
 ```
 </details>
@@ -5425,12 +4793,12 @@
 - Прочие свойства: Icon left#17172:1340 (BOOLEAN), Icon right#17172:1349 (BOOLEAN), Label#54065:0 (BOOLEAN), Support#58197:0 (BOOLEAN)
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-5x)`, растёт по контенту
-    - ширина: по контенту (hug)
-    - промежуток между элементами: `var(--ds-radio-button-label-gap-support)`
+    - ширина: `fit-content` (фикс.)
+    - промежуток между элементами: `var(--ds-radio-button-label-gap-support, 4px)`
 - Модификаторы (что меняет каждый):
-    - `--disable`: color `var(--ds-color-chips-input-disable-action-text-color)`
-    - `--error`: color `var(--ds-color-chips-input-error-cursor-color)`
-    - `--normal`: color `var(--ds-color-chips-input-error-cursor-color)`
+    - `--disable`: color `var(--ds-color-radio-button-label-text-disable-color, #9e9e9e)`
+    - `--error`: color `var(--ds-color-radio-button-label-text-color, #333333)`
+    - `--normal`: color `var(--ds-color-radio-button-label-text-color, #333333)`
 - Разметка:
 
 ```html
@@ -5450,9 +4818,10 @@
 /* Radio button label [54095:4306] — 6 вариантов; оси: Variant, Type */
 .ds-radio-button-label {
   min-height: var(--ds-size-5x);
+  width: fit-content;
   display: flex;
   flex-direction: column;
-  gap: var(--ds-radio-button-label-gap-support);
+  gap: var(--ds-radio-button-label-gap-support, 4px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -5461,7 +4830,7 @@
   font-weight: var(--ds-typography-font-weight-regular);
   line-height: var(--ds-typography-line-height-5x);
   letter-spacing: 0.25px;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-radio-button-label-text-color, #333333);
   white-space: nowrap;
 }
 .ds-radio-button-label__icon {
@@ -5484,7 +4853,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-radio-button-label-gap);
+  gap: var(--ds-radio-button-label-gap, 8px);
 }
 .ds-radio-button-label__left {
   display: flex;
@@ -5494,11 +4863,11 @@
 .ds-radio-button-label__цвет-и-палитра {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-radio-button-label-text-color);
+  background: var(--ds-color-radio-button-label-text-color, #333333);
   font-size: var(--ds-typography-font-size-3-5x);
   font-weight: var(--ds-typography-font-weight-regular);
   line-height: var(--ds-typography-line-height-5x);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-radio-button-label-text-color, #333333);
 }
 .ds-radio-button-label__right {
   display: flex;
@@ -5509,35 +4878,35 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: var(--ds-radio-button-label-pad-left-support-7x) 0 0 0;
+  padding: 0 0 0 var(--ds-radio-button-label-pad-left-support-7x, 28px);
 }
 .ds-radio-button-label__support-text {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-radio-button-label-text-support-color);
+  background: var(--ds-color-radio-button-label-text-support-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-radio-button-label-text-support-color, #616161);
 }
 .ds-radio-button-label--normal.ds-radio-button-label--deselected {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-radio-button-label-text-color, #333333);
 }
 .ds-radio-button-label--normal.ds-radio-button-label--selected {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-radio-button-label-text-color, #333333);
 }
 .ds-radio-button-label--error.ds-radio-button-label--deselected {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-radio-button-label-text-color, #333333);
 }
 .ds-radio-button-label--error.ds-radio-button-label--selected {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-radio-button-label-text-color, #333333);
 }
 .ds-radio-button-label--disable.ds-radio-button-label--deselected {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-radio-button-label-text-disable-color, #9e9e9e);
 }
 .ds-radio-button-label--disable.ds-radio-button-label--selected {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-radio-button-label-text-disable-color, #9e9e9e);
 }
 ```
 </details>
@@ -5547,12 +4916,13 @@
 - **Position** (VARIANT): First, Last, Middle
 - **State** (VARIANT): Default, Hover
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom)`
+    - ширина: `184px` (фикс.)
+    - внутренние отступы: `var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px)`
 - Модификаторы (что меняет каждый):
     - `--first`
     - `--last`
     - `--middle`: align-items `center`
+    - `--s`: ширина `var(--ds-size-2x)`
 - Состояния: `:hover` (наведение)
 - Разметка:
 
@@ -5569,15 +4939,16 @@
 .ds-scroll {
   display: flex;
   flex-direction: column;
-  padding: var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom);
+  padding: var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px);
+  width: 184px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-scroll__background {
   display: flex;
   flex-direction: column;
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-scroll-default-background);
+  border-radius: var(--ds-scroll-border-radius, 8px);
+  background: var(--ds-color-scroll-default-background, #fafafa);
 }
 .ds-scroll__knob {
   height: var(--ds-size-2x);
@@ -5585,20 +4956,23 @@
   flex-direction: row;
   gap: var(--ds-size-2-5x);
   padding: var(--ds-size-2-5x) var(--ds-size-2-5x) var(--ds-size-2-5x) var(--ds-size-2-5x);
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-scroll-default-knob-color);
+  border-radius: var(--ds-scroll-knob-radius, 8px);
+  background: var(--ds-color-scroll-default-knob-color, #d6d6d6);
+}
+.ds-scroll--s {
+  width: var(--ds-size-2x);
 }
 .ds-scroll--first:hover {
-  background: var(--ds-color-chips-input-disable-border-color);
+  background: var(--ds-color-scroll-hover-background, #ebebeb);
 }
 .ds-scroll--middle {
   align-items: center;
 }
 .ds-scroll--middle:hover {
-  background: var(--ds-color-chips-input-disable-border-color);
+  background: var(--ds-color-scroll-hover-background, #ebebeb);
 }
 .ds-scroll--last:hover {
-  background: var(--ds-color-chips-input-disable-border-color);
+  background: var(--ds-color-scroll-hover-background, #ebebeb);
 }
 ```
 </details>
@@ -5608,8 +4982,8 @@
 - **State** (VARIANT): Default, Hover
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-7x)`, растёт по контенту
-    - ширина: по контенту (hug)
-    - внутренние отступы: `48px 0 0 0`
+    - ширина: `fit-content` (фикс.)
+    - внутренние отступы: `0 0 0 48px`
     - промежуток между элементами: `var(--ds-size-2-5x)`
 - Модификаторы (что меняет каждый):
     - `--left`: внутренние отступы `0 48px 0 0`
@@ -5628,11 +5002,12 @@
 /* Scroll tabs [59032:1821] — 4 вариантов; оси: Orientation, State */
 .ds-scroll-tabs {
   min-height: var(--ds-size-7x);
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  padding: 48px 0 0 0;
+  padding: 0 0 0 48px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -5656,10 +5031,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-icon-gap);
-  padding: var(--ds-button-icon-s-size-pad-left) var(--ds-button-icon-s-size-pad-right) var(--ds-button-icon-s-size-pad-top) var(--ds-button-icon-s-size-pad-bottom);
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-button-icon-neutral-filled-default-background);
+  gap: var(--ds-button-icon-gap, 8px);
+  padding: var(--ds-button-icon-s-size-pad-top, 4px) var(--ds-button-icon-s-size-pad-right, 4px) var(--ds-button-icon-s-size-pad-bottom, 4px) var(--ds-button-icon-s-size-pad-left, 4px);
+  border-radius: var(--ds-button-icon-border-radius, 8px);
+  background: var(--ds-color-button-icon-neutral-filled-default-background, #ffffff);
   box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 .ds-scroll-tabs__icon-size {
@@ -5678,16 +5053,16 @@
 - **State** (VARIANT): Completed, Default, Disable, Focus, Focus+Value, Hover
 - Прочие свойства: Left icon#54453:0 (BOOLEAN), Right icon#54459:3 (BOOLEAN)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-search-m-size-pad-left) var(--ds-search-m-size-pad-right) var(--ds-search-m-size-pad-top) var(--ds-search-m-size-pad-bottom)`
-    - промежуток между элементами: `var(--ds-search-gap)`
-    - скругление: `var(--ds-size-3x)`
-    - рамка: `1px solid var(--ds-color-search-default-border-color)`
-    - фон: `var(--ds-color-search-background)`
+    - ширина: `243px` (фикс.)
+    - внутренние отступы: `var(--ds-search-m-size-pad-top, 12px) var(--ds-search-m-size-pad-right, 12px) var(--ds-search-m-size-pad-bottom, 12px) var(--ds-search-m-size-pad-left, 12px)`
+    - промежуток между элементами: `var(--ds-search-gap, 8px)`
+    - скругление: `var(--ds-search-border-radius, 12px)`
+    - рамка: `1px solid var(--ds-color-search-default-border-color, #e0e0e0)`
+    - фон: `var(--ds-color-search-background, #f8f9fc)`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
-    - `--s`: внутренние отступы `var(--ds-search-s-size-pad-left) var(--ds-search-s-size-pad-right) var(--ds-search-s-size-pad-top) var(--ds-search-s-size-pad-bottom)`, ширина `var(--ds-size-5x)`, высота `var(--ds-size-5x)`
-    - `--xs`: высота `var(--ds-size-9x)`, внутренние отступы `var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x)`, скругление `var(--ds-size-circular)`, ширина `var(--ds-size-5x)`
+    - `--s`: внутренние отступы `var(--ds-search-s-size-pad-top, 8px) var(--ds-search-s-size-pad-right, 12px) var(--ds-search-s-size-pad-bottom, 8px) var(--ds-search-s-size-pad-left, 12px)`, ширина `var(--ds-size-5x)`, высота `var(--ds-size-5x)`
+    - `--xs`: высота `var(--ds-size-9x)`, ширина `var(--ds-size-9x)`, внутренние отступы `var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x)`, скругление `var(--ds-size-circular)`
 - Состояния: `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
 - Разметка:
 
@@ -5709,11 +5084,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-search-gap);
-  padding: var(--ds-search-m-size-pad-left) var(--ds-search-m-size-pad-right) var(--ds-search-m-size-pad-top) var(--ds-search-m-size-pad-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-search-background);
-  border: 1px solid var(--ds-color-search-default-border-color);
+  gap: var(--ds-search-gap, 8px);
+  width: 243px;
+  padding: var(--ds-search-m-size-pad-top, 12px) var(--ds-search-m-size-pad-right, 12px) var(--ds-search-m-size-pad-bottom, 12px) var(--ds-search-m-size-pad-left, 12px);
+  border-radius: var(--ds-search-border-radius, 12px);
+  background: var(--ds-color-search-background, #f8f9fc);
+  border: 1px solid var(--ds-color-search-default-border-color, #e0e0e0);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -5722,7 +5098,7 @@
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-text-placeholder-color);
+  color: var(--ds-color-search-default-text-color, #d6d6d6);
   white-space: nowrap;
 }
 .ds-search__icon {
@@ -5749,12 +5125,12 @@
 .ds-search__text {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-search-default-text-color);
+  background: var(--ds-color-search-default-text-color, #d6d6d6);
   font-size: var(--ds-font-body-m-16-normal-regular-size);
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-text-placeholder-color);
+  color: var(--ds-color-search-default-text-color, #d6d6d6);
 }
 .ds-search__right-icon {
   height: 100%;
@@ -5767,10 +5143,10 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-search--s {
-  padding: var(--ds-search-s-size-pad-left) var(--ds-search-s-size-pad-right) var(--ds-search-s-size-pad-top) var(--ds-search-s-size-pad-bottom);
+  padding: var(--ds-search-s-size-pad-top, 8px) var(--ds-search-s-size-pad-right, 12px) var(--ds-search-s-size-pad-bottom, 8px) var(--ds-search-s-size-pad-left, 12px);
 }
 .ds-search--s .ds-search__icon {
   width: var(--ds-size-5x);
@@ -5778,6 +5154,7 @@
 }
 .ds-search--xs {
   height: var(--ds-size-9x);
+  width: var(--ds-size-9x);
   padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x);
   border-radius: var(--ds-size-circular);
 }
@@ -5786,18 +5163,18 @@
   height: var(--ds-size-5x);
 }
 .ds-search:disabled {
-  background: var(--ds-color-search-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-search-disable-background, #ebebeb);
+  color: var(--ds-color-search-disable-text-color, #9e9e9e);
 }
 .ds-search.ds-search--disabled {
-  background: var(--ds-color-search-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-search-disable-background, #ebebeb);
+  color: var(--ds-color-search-disable-text-color, #9e9e9e);
 }
 .ds-search:focus-visible {
-  color: var(--ds-color-search-focus-value-text-color);
+  color: var(--ds-color-search-focusvalue-text-color, #333333);
 }
 .ds-search:hover {
-  border: 1px solid var(--ds-color-search-hover-border-color);
+  border: 1px solid var(--ds-color-search-hover-border-color, #9e9e9e);
 }
 .ds-search--disabled {
   pointer-events: none;
@@ -5810,14 +5187,14 @@
 - Прочие свойства: Scroll#55632:0 (BOOLEAN), Item container#56968:88 (SLOT), Title#57636:8 (BOOLEAN), Search#57740:3 (BOOLEAN), Button#57740:5 (BOOLEAN), Divider header#57862:2 (BOOLEAN), Divider footer#57862:4 (BOOLEAN)
 - Размеры и параметры:
     - высота: минимум `406px`, растёт по контенту
-    - ширина: по контенту (hug)
-    - внутренние отступы: `0 0 var(--ds-menu-pad-top) var(--ds-menu-pad-bottom)`
+    - ширина: `240px` (фикс.)
+    - внутренние отступы: `var(--ds-menu-pad-top, 8px) 0 var(--ds-menu-pad-bottom, 8px) 0`
     - промежуток между элементами: `var(--ds-space-0)`
-    - скругление: `var(--ds-size-3x)`
-    - фон: `var(--ds-color-menu-background)`
+    - скругление: `var(--ds-radius-3x, 12px)`
+    - фон: `var(--ds-color-menu-background, #ffffff)`
     - тень: `var(--ds-shadow-shadows-08-dp-s)`
 - Модификаторы (что меняет каждый):
-    - `--container`: color `var(--ds-color-chips-input-error-text-placeholder-color)`
+    - `--container`: color `var(--ds-color-search-default-text-color, #d6d6d6)`
 - Разметка:
 
 ```html
@@ -5841,12 +5218,13 @@
 /* Select (Сontainer) [57735:17612] — 1 вариантов; оси: Type */
 .ds-select-container {
   min-height: 406px;
+  width: 240px;
   display: flex;
   flex-direction: column;
   gap: var(--ds-space-0);
-  padding: 0 0 var(--ds-menu-pad-top) var(--ds-menu-pad-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-menu-background);
+  padding: var(--ds-menu-pad-top, 8px) 0 var(--ds-menu-pad-bottom, 8px) 0;
+  border-radius: var(--ds-radius-3x, 12px);
+  background: var(--ds-color-menu-background, #ffffff);
   box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -5856,7 +5234,7 @@
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-text-placeholder-color);
+  color: var(--ds-color-search-default-text-color, #d6d6d6);
   white-space: nowrap;
 }
 .ds-select-container__icon {
@@ -5879,19 +5257,19 @@
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-2x) var(--ds-size-2x) 0 0;
+  padding: 0 var(--ds-size-2x) 0 var(--ds-size-2x);
 }
 .ds-select-container__title {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-select-item-gap);
-  padding: var(--ds-select-item-pad-left) var(--ds-select-item-pad-right) var(--ds-select-item-pad-top) var(--ds-select-item-pad-bottom);
-  background: var(--ds-color-menu-item-default-background);
+  gap: var(--ds-select-item-gap, 8px);
+  padding: var(--ds-select-item-pad-top, 8px) var(--ds-select-item-pad-right, 16px) var(--ds-select-item-pad-bottom, 8px) var(--ds-select-item-pad-left, 16px);
+  background: var(--ds-color-menu-item-default-background, #ffffff);
 }
 .ds-select-container__element-left {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-select-container__content {
   display: flex;
@@ -5902,39 +5280,39 @@
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-select-container__divider {
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-select-container__scroll {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom);
+  padding: var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px);
 }
 .ds-select-container__button-group {
   height: 44px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-group-gap);
-  padding: var(--ds-button-group-margins-pad-left) var(--ds-button-group-margins-pad-right) var(--ds-button-group-margins-pad-top) var(--ds-button-group-margins-pad-bottom);
+  gap: var(--ds-button-group-gap, 8px);
+  padding: var(--ds-button-group-margins-pad-top, 8px) var(--ds-button-group-margins-pad-right, 16px) var(--ds-button-group-margins-pad-bottom, 8px) var(--ds-button-group-margins-pad-left, 16px);
 }
 .ds-select-container__button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-s-size-gap);
-  padding: var(--ds-button-s-size-pad-left) var(--ds-button-s-size-pad-right) var(--ds-button-s-size-pad-top) var(--ds-button-s-size-pad-bottom);
-  border-radius: var(--ds-size-2x);
-  border: 1px solid var(--ds-color-button-neutral-outlined-default-border-color);
+  gap: var(--ds-button-s-size-gap, 4px);
+  padding: var(--ds-button-s-size-pad-top, 4px) var(--ds-button-s-size-pad-right, 8px) var(--ds-button-s-size-pad-bottom, 4px) var(--ds-button-s-size-pad-left, 8px);
+  border-radius: var(--ds-button-border-radius, 8px);
+  border: 1px solid var(--ds-color-button-neutral-outlined-default-border-color, #e0e0e0);
 }
 .ds-select-container--container {
-  color: var(--ds-color-chips-input-error-text-placeholder-color);
+  color: var(--ds-color-search-default-text-color, #d6d6d6);
 }
 ```
 </details>
@@ -5943,8 +5321,8 @@
 - **State** (VARIANT): Default, Disable, Error, Error+Hover, Focus, Focus+Value, Hover
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-9x)`, растёт по контенту
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom)`
+    - ширина: `200px` (фикс.)
+    - внутренние отступы: `var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px)`
     - промежуток между элементами: `var(--ds-size-2x)`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
@@ -5966,11 +5344,12 @@
 /* Select cell [60231:74976] — 7 вариантов; оси: State */
 .ds-select-cell {
   min-height: var(--ds-size-9x);
+  width: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  padding: var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom);
+  padding: var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -5979,7 +5358,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-select-cell__icon {
@@ -6001,33 +5380,33 @@
 .ds-select-cell__input {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-form-field-gap-input-support);
+  gap: var(--ds-form-field-gap-input-support, 4px);
 }
 .ds-select-cell__input-frame {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-form-field-gap-input-frame);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-select-cell__support {
   display: flex;
   flex-direction: row;
 }
 .ds-select-cell:hover {
-  background: var(--ds-palette-neutral-50);
-  border: 1px solid var(--ds-color-table-cell-content-hover-border-color);
+  background: var(--ds-palette-neutral-50, #f5f5f5);
+  border: 1px solid var(--ds-color-table-cell-content-hover-border-color, #9e9e9e);
 }
 .ds-select-cell:focus-visible {
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-form-field-filled-focus-label-text-color, #448aff);
 }
 .ds-select-cell:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-select-cell.ds-select-cell--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-select-cell--disabled {
   pointer-events: none;
@@ -6040,12 +5419,12 @@
 - **Variant** (VARIANT): Empty, Populated
 - **State** (VARIANT): Default, Disable, Error, Focus, Focus+Value, Hover
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - фон: `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - ширина: `250px` (фикс.)
+    - фон: `#ffffff`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
-    - `--empty`: color `var(--ds-color-chips-input-default-action-text-color)`, color `var(--ds-color-chips-input-disable-action-text-color)`
-    - `--populated`: color `var(--ds-color-chips-input-default-action-text-color)`, color `var(--ds-color-chips-input-disable-action-text-color)`
+    - `--empty`: color `var(--ds-color-form-field-input-label-text-color, #616161)`, color `var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e)`
+    - `--populated`: color `var(--ds-color-form-field-filled-default-label-text-color, #616161)`, color `var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e)`
     - `--s`: ширина `var(--ds-size-5x)`, высота `var(--ds-size-5x)`
     - `--xs`: ширина `var(--ds-size-5x)`, высота `var(--ds-size-5x)`
 - Состояния: `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
@@ -6065,9 +5444,10 @@
 ```css
 /* Select form [57862:17226] — 22 вариантов; оси: Size, Variant, State */
 .ds-select-form {
+  width: 250px;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -6076,7 +5456,7 @@
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-select-form__icon {
@@ -6098,18 +5478,18 @@
 .ds-select-form__input {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-form-field-gap-input-support);
+  gap: var(--ds-form-field-gap-input-support, 4px);
 }
 .ds-select-form__input-frame {
   height: 48px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-form-field-gap-input-frame);
-  padding: var(--ds-form-field-m-size-pad-input-left) var(--ds-form-field-m-size-pad-input-right) var(--ds-form-field-m-size-pad-input-top) var(--ds-form-field-m-size-pad-input-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  padding: var(--ds-form-field-m-size-pad-input-top, 12px) var(--ds-form-field-m-size-pad-input-right, 12px) var(--ds-form-field-m-size-pad-input-bottom, 12px) var(--ds-form-field-m-size-pad-input-left, 12px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-select-form__support {
   display: flex;
@@ -6124,33 +5504,32 @@
   height: var(--ds-size-5x);
 }
 .ds-select-form--empty {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
 }
 .ds-select-form--populated {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 .ds-select-form--empty:hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-form-field-filled-hover-input-background-hover, #f5f5f5);
+  border: 1px solid var(--ds-color-form-field-filled-hover-border-color, #9e9e9e);
 }
 .ds-select-form--populated:hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-hover-label-text-color, #616161);
 }
 .ds-select-form--populated:focus-visible {
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-form-field-filled-focus-label-text-color, #448aff);
 }
 .ds-select-form--empty:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e);
 }
 .ds-select-form--empty.ds-select-form--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e);
 }
 .ds-select-form--populated:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-select-form--populated.ds-select-form--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-select-form--disabled {
   pointer-events: none;
@@ -6163,13 +5542,13 @@
 - **Subtitle** (VARIANT): False, True
 - Прочие свойства: Element left#54167:1 (BOOLEAN), Element right#54167:6 (BOOLEAN), Label up#54741:15 (BOOLEAN), Label down#54741:30 (BOOLEAN), Left#60868:0 (BOOLEAN), Right#60868:1 (BOOLEAN)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-select-item-pad-left) var(--ds-select-item-pad-right) var(--ds-select-item-pad-top-sub) var(--ds-select-item-pad-bottom-sub)`
-    - промежуток между элементами: `var(--ds-select-item-gap)`
+    - ширина: `258px` (фикс.)
+    - внутренние отступы: `var(--ds-select-item-pad-top-sub, 12px) var(--ds-select-item-pad-right, 16px) var(--ds-select-item-pad-bottom-sub, 6px) var(--ds-select-item-pad-left, 16px)`
+    - промежуток между элементами: `var(--ds-select-item-gap, 8px)`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
-    - `--false`: внутренние отступы `var(--ds-select-item-pad-left) var(--ds-select-item-pad-right) var(--ds-select-item-pad-top) var(--ds-select-item-pad-bottom)`, фон `var(--ds-color-select-item-default-background)`, color `var(--ds-color-chips-input-default-action-text-color)`, фон `var(--ds-color-select-item-disable-background)`
-    - `--true`: align-items `center`, фон `var(--ds-color-select-item-default-background)`, color `var(--ds-color-chips-input-default-action-text-color)`
+    - `--false`: внутренние отступы `var(--ds-select-item-pad-top, 8px) var(--ds-select-item-pad-right, 16px) var(--ds-select-item-pad-bottom, 8px) var(--ds-select-item-pad-left, 16px)`, фон `var(--ds-color-select-item-default-background, #ffffff)`, color `var(--ds-color-select-item-text-label-color, #616161)`, фон `var(--ds-color-select-item-disable-background, #ffffff)`
+    - `--true`: align-items `center`, фон `var(--ds-color-select-item-default-background, #ffffff)`, color `var(--ds-color-select-item-text-label-color, #616161)`
 - Состояния: `:active` (нажатие), `:disabled` (неактивно), `:hover` (наведение)
 - Разметка:
 
@@ -6191,10 +5570,11 @@
 ```css
 /* Select item [57735:17872] — 8 вариантов; оси: State, Subtitle */
 .ds-select-item {
+  width: 258px;
   display: flex;
   flex-direction: row;
-  gap: var(--ds-select-item-gap);
-  padding: var(--ds-select-item-pad-left) var(--ds-select-item-pad-right) var(--ds-select-item-pad-top-sub) var(--ds-select-item-pad-bottom-sub);
+  gap: var(--ds-select-item-gap, 8px);
+  padding: var(--ds-select-item-pad-top-sub, 12px) var(--ds-select-item-pad-right, 16px) var(--ds-select-item-pad-bottom-sub, 6px) var(--ds-select-item-pad-left, 16px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -6203,7 +5583,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-select-item-text-label-color, #616161);
   white-space: nowrap;
 }
 .ds-select-item__icon {
@@ -6227,7 +5607,7 @@
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-select-item__icon-size {
   height: var(--ds-size-5x);
@@ -6241,64 +5621,64 @@
 .ds-select-item__label-up {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-select-item-text-label-color);
+  background: var(--ds-color-select-item-text-label-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-select-item-text-label-color, #616161);
 }
 .ds-select-item__subtitle {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-select-item-text-label-color);
+  background: var(--ds-color-select-item-text-label-color, #616161);
   font-size: var(--ds-font-caption-m-10-normal-medium-size);
   line-height: var(--ds-font-caption-m-10-normal-medium-line);
   letter-spacing: var(--ds-font-caption-m-10-normal-medium-spacing);
   font-weight: var(--ds-font-caption-m-10-normal-medium-weight);
   text-transform: capitalize;
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-select-item-text-label-color, #616161);
 }
 .ds-select-item__label-down {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-select-item-text-label-color);
+  background: var(--ds-color-select-item-text-label-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-select-item-text-label-color, #616161);
 }
 .ds-select-item__element-right {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-select-item--true {
   align-items: center;
-  background: var(--ds-color-select-item-default-background);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  background: var(--ds-color-select-item-default-background, #ffffff);
+  color: var(--ds-color-select-item-text-label-color, #616161);
 }
 .ds-select-item--false {
-  padding: var(--ds-select-item-pad-left) var(--ds-select-item-pad-right) var(--ds-select-item-pad-top) var(--ds-select-item-pad-bottom);
-  background: var(--ds-color-select-item-default-background);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  padding: var(--ds-select-item-pad-top, 8px) var(--ds-select-item-pad-right, 16px) var(--ds-select-item-pad-bottom, 8px) var(--ds-select-item-pad-left, 16px);
+  background: var(--ds-color-select-item-default-background, #ffffff);
+  color: var(--ds-color-select-item-text-label-color, #616161);
 }
 .ds-select-item--false:hover {
-  background: var(--ds-color-select-item-hover-background);
+  background: var(--ds-color-select-item-hover-background, #f5f5f5);
 }
 .ds-select-item--false:active {
-  background: var(--ds-color-select-item-press-background);
+  background: var(--ds-color-select-item-press-background, #e0e0e0);
 }
 .ds-select-item--false:disabled {
-  background: var(--ds-color-select-item-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-select-item-disable-background, #ffffff);
+  color: var(--ds-color-select-item-disable-label-text-color, #9e9e9e);
 }
 .ds-select-item--false.ds-select-item--disabled {
-  background: var(--ds-color-select-item-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-select-item-disable-background, #ffffff);
+  color: var(--ds-color-select-item-disable-label-text-color, #9e9e9e);
 }
 .ds-select-item--disabled {
   pointer-events: none;
@@ -6312,11 +5692,11 @@
 - Прочие свойства: Divider#55147:0 (BOOLEAN)
 - Размеры и параметры:
     - высота: минимум `41px`, растёт по контенту
-    - ширина: по контенту (hug)
+    - ширина: `200px` (фикс.)
     - промежуток между элементами: `var(--ds-sidenav-control-expanded-gap)`
 - Модификаторы (что меняет каждый):
-    - `--collapsed`: промежуток между элементами `var(--ds-sidenav-control-collapsed-gap)`
-    - `--expanded`: фон `var(--ds-color-sidenav-control-background)`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`
+    - `--collapsed`: ширина `fit-content`, промежуток между элементами `var(--ds-sidenav-control-collapsed-gap)`
+    - `--expanded`: фон `var(--ds-color-sidenav-control-background, #263136)`, color `var(--ds-color-sidenav-control-text-color, #ffffff)`
 - Состояния: `:active` (нажатие), `:hover` (наведение)
 - Разметка:
 
@@ -6337,6 +5717,7 @@
   min-height: 41px;
   display: flex;
   flex-direction: column;
+  width: 200px;
   gap: var(--ds-sidenav-control-expanded-gap);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -6346,7 +5727,7 @@
   line-height: var(--ds-font-caption-m-10-normal-regular-line);
   letter-spacing: var(--ds-font-caption-m-10-normal-regular-spacing);
   font-weight: var(--ds-font-caption-m-10-normal-regular-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-sidenav-control-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-sidenav-control__icon {
@@ -6369,9 +5750,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-sidenav-control-expanded-gap-content);
-  padding: var(--ds-sidenav-control-pad-left) var(--ds-sidenav-control-pad-right) var(--ds-sidenav-control-pad-top) var(--ds-sidenav-control-pad-bottom);
-  background: var(--ds-color-sidenav-control-background);
+  gap: var(--ds-sidenav-control-expanded-gap-content, 8px);
+  padding: var(--ds-sidenav-control-pad-top, 8px) var(--ds-sidenav-control-pad-right, 16px) var(--ds-sidenav-control-pad-bottom, 12px) var(--ds-sidenav-control-pad-left, 16px);
+  background: var(--ds-color-sidenav-control-background, #263136);
 }
 .ds-sidenav-control__icon-size {
   height: var(--ds-size-5x);
@@ -6381,36 +5762,37 @@
 .ds-sidenav-control__свернуть-меню {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-sidenav-control-text-color);
+  background: var(--ds-color-sidenav-control-text-color, #ffffff);
   font-size: var(--ds-font-caption-m-10-normal-regular-size);
   line-height: var(--ds-font-caption-m-10-normal-regular-line);
   letter-spacing: var(--ds-font-caption-m-10-normal-regular-spacing);
   font-weight: var(--ds-font-caption-m-10-normal-regular-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-sidenav-control-text-color, #ffffff);
 }
 .ds-sidenav-control__divider {
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-sidenav-control--collapsed:hover {
-  background: var(--ds-color-sidenav-control-background-hover);
+  background: var(--ds-color-sidenav-control-background-hover, #36474e);
 }
 .ds-sidenav-control--collapsed:active {
-  background: var(--ds-palette-contrast-3-900);
+  background: var(--ds-color-sidenav-control-background-press, #36474e);
 }
 .ds-sidenav-control--expanded {
-  background: var(--ds-color-sidenav-control-background);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: var(--ds-color-sidenav-control-background, #263136);
+  color: var(--ds-color-sidenav-control-text-color, #ffffff);
 }
 .ds-sidenav-control--expanded:hover {
-  background: var(--ds-color-sidenav-control-background-hover);
+  background: var(--ds-color-sidenav-control-background-hover, #36474e);
 }
 .ds-sidenav-control--expanded:active {
-  background: var(--ds-color-sidenav-control-background-press);
+  background: var(--ds-color-sidenav-control-background-press, #36474e);
 }
 .ds-sidenav-control--collapsed {
+  width: fit-content;
   gap: var(--ds-sidenav-control-collapsed-gap);
 }
 ```
@@ -6421,12 +5803,12 @@
 - **Mode** (VARIANT): Collapsed, Expanded
 - Прочие свойства: Divider#55147:10 (BOOLEAN), Container#59128:17 (SLOT), Container#59128:25 (SLOT)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-sidenav-footer-l2-pad-left) var(--ds-sidenav-footer-l2-pad-right) var(--ds-sidenav-footer-l2-pad-top) var(--ds-sidenav-footer-l2-pad-bottom)`
-    - промежуток между элементами: `var(--ds-sidenav-footer-l2-gap)`
+    - ширина: `260px` (фикс.)
+    - внутренние отступы: `var(--ds-sidenav-footer-l2-pad-top, 12px) var(--ds-sidenav-footer-l2-pad-right, 16px) var(--ds-sidenav-footer-l2-pad-bottom, 12px) var(--ds-sidenav-footer-l2-pad-left, 16px)`
+    - промежуток между элементами: `var(--ds-sidenav-footer-l2-gap, 12px)`
 - Модификаторы (что меняет каждый):
-    - `--l1`: направление `column`, color `var(--ds-color-expansion-panel-block-collaps-content-background)`, color `var(--ds-color-chips-input-focus-border-color)`
-    - `--l2`: направление `row`, align-items `center`, фон `var(--ds-color-sidenav-footer-l2-background)`, color `var(--ds-color-chips-input-default-action-text-color)`
+    - `--l1`: ширина `200px`, направление `column`, color `var(--ds-color-sidenav-item-l1-text-color, #ffffff)`, ширина `52px`
+    - `--l2`: направление `row`, align-items `center`, фон `var(--ds-color-sidenav-footer-l2-background, #ffffff)`, color `var(--ds-color-sidenav-footer-l2-text-color, #616161)`
 - Разметка:
 
 ```html
@@ -6444,8 +5826,9 @@
 /* Sidenav Footer [55111:1056] — 3 вариантов; оси: Type, Mode */
 .ds-sidenav-footer {
   display: flex;
-  padding: var(--ds-sidenav-footer-l2-pad-left) var(--ds-sidenav-footer-l2-pad-right) var(--ds-sidenav-footer-l2-pad-top) var(--ds-sidenav-footer-l2-pad-bottom);
-  gap: var(--ds-sidenav-footer-l2-gap);
+  width: 260px;
+  padding: var(--ds-sidenav-footer-l2-pad-top, 12px) var(--ds-sidenav-footer-l2-pad-right, 16px) var(--ds-sidenav-footer-l2-pad-bottom, 12px) var(--ds-sidenav-footer-l2-pad-left, 16px);
+  gap: var(--ds-sidenav-footer-l2-gap, 12px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -6454,50 +5837,52 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-sidenav-footer-l2-text-color, #616161);
   white-space: nowrap;
 }
 .ds-sidenav-footer__logo-iiko {
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-sidenav-footer__vector {
   height: 9.8px;
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-sidenav-footer-l2-logo);
+  background: var(--ds-color-sidenav-footer-l2-logo, #ff5252);
 }
 .ds-sidenav-footer__divider {
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-sidenav-footer__ver-7-8-6-29440 {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-sidenav-footer-l2-text-color);
+  background: var(--ds-color-sidenav-footer-l2-text-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-sidenav-footer-l2-text-color, #616161);
 }
 .ds-sidenav-footer--l2.ds-sidenav-footer--expanded {
   flex-direction: row;
   align-items: center;
-  background: var(--ds-color-sidenav-footer-l2-background);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  background: var(--ds-color-sidenav-footer-l2-background, #ffffff);
+  color: var(--ds-color-sidenav-footer-l2-text-color, #616161);
 }
 .ds-sidenav-footer--l1.ds-sidenav-footer--expanded {
+  width: 200px;
   flex-direction: column;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-sidenav-item-l1-text-color, #ffffff);
 }
 .ds-sidenav-footer--l1.ds-sidenav-footer--collapsed {
+  width: 52px;
   flex-direction: column;
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-text-accent, #448aff);
 }
 ```
 </details>
@@ -6507,12 +5892,12 @@
 - **Mode** (VARIANT): Collapsed, Expanded
 - Прочие свойства: Element right#55074:0 (BOOLEAN), Element left#55661:0 (BOOLEAN), Divider#59107:0 (BOOLEAN), Informer#59128:5 (BOOLEAN)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-sidenav-header-l1-expanded-pad-left) var(--ds-sidenav-header-l1-expanded-pad-right) var(--ds-sidenav-header-pad-top) var(--ds-sidenav-header-pad-bottom)`
-    - промежуток между элементами: `var(--ds-sidenav-header-l1-expanded-gap)`
+    - ширина: `200px` (фикс.)
+    - внутренние отступы: `var(--ds-sidenav-header-pad-top, 12px) var(--ds-sidenav-header-l1-expanded-pad-right, 16px) var(--ds-sidenav-header-pad-bottom, 12px) var(--ds-sidenav-header-l1-expanded-pad-left, 16px)`
+    - промежуток между элементами: `var(--ds-sidenav-header-l1-expanded-gap, 92px)`
 - Модификаторы (что меняет каждый):
-    - `--l1`: направление `row`, фон `var(--ds-color-sidenav-header-l1-background)`, направление `column`, внутренние отступы `var(--ds-sidenav-header-l1-collapsed-pad-left) var(--ds-sidenav-header-l1-collapsed-pad-right) var(--ds-sidenav-header-pad-top) var(--ds-sidenav-header-pad-bottom)`
-    - `--l2`: высота `48px`, направление `row`, промежуток между элементами `var(--ds-sidenav-header-l2-gap)`, внутренние отступы `var(--ds-sidenav-header-l2-pad-left) var(--ds-sidenav-header-l2-pad-right) var(--ds-sidenav-header-pad-top) var(--ds-sidenav-header-pad-bottom)`
+    - `--l1`: направление `row`, фон `var(--ds-color-sidenav-header-l1-background, #263136)`, ширина `52px`, направление `column`
+    - `--l2`: высота `48px`, ширина `260px`, направление `row`, промежуток между элементами `var(--ds-sidenav-header-l2-gap, 8px)`
 - Разметка:
 
 ```html
@@ -6532,8 +5917,9 @@
 .ds-sidenav-header {
   display: flex;
   align-items: center;
-  padding: var(--ds-sidenav-header-l1-expanded-pad-left) var(--ds-sidenav-header-l1-expanded-pad-right) var(--ds-sidenav-header-pad-top) var(--ds-sidenav-header-pad-bottom);
-  gap: var(--ds-sidenav-header-l1-expanded-gap);
+  width: 200px;
+  padding: var(--ds-sidenav-header-pad-top, 12px) var(--ds-sidenav-header-l1-expanded-pad-right, 16px) var(--ds-sidenav-header-pad-bottom, 12px) var(--ds-sidenav-header-l1-expanded-pad-left, 16px);
+  gap: var(--ds-sidenav-header-l1-expanded-gap, 92px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -6542,7 +5928,7 @@
   line-height: var(--ds-font-body-m-16-normal-medium-line);
   letter-spacing: var(--ds-font-body-m-16-normal-medium-spacing);
   font-weight: var(--ds-font-body-m-16-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-sidenav-header-l2-text-color, #333333);
   white-space: nowrap;
 }
 .ds-sidenav-header__icon {
@@ -6570,7 +5956,7 @@
   height: 14.7px;
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-sidenav-header-l1-expanded-logo);
+  background: var(--ds-color-sidenav-header-l1-expanded-logo, #ffffff);
 }
 .ds-sidenav-header__icon-size {
   height: var(--ds-size-5x);
@@ -6581,24 +5967,26 @@
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-sidenav-header--l1.ds-sidenav-header--expanded {
   flex-direction: row;
-  background: var(--ds-color-sidenav-header-l1-background);
+  background: var(--ds-color-sidenav-header-l1-background, #263136);
 }
 .ds-sidenav-header--l2.ds-sidenav-header--expanded {
   height: 48px;
+  width: 260px;
   flex-direction: row;
-  gap: var(--ds-sidenav-header-l2-gap);
-  padding: var(--ds-sidenav-header-l2-pad-left) var(--ds-sidenav-header-l2-pad-right) var(--ds-sidenav-header-pad-top) var(--ds-sidenav-header-pad-bottom);
-  background: var(--ds-color-sidenav-header-l2-background);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  gap: var(--ds-sidenav-header-l2-gap, 8px);
+  padding: var(--ds-sidenav-header-pad-top, 12px) var(--ds-sidenav-header-l2-pad-right, 16px) var(--ds-sidenav-header-pad-bottom, 12px) var(--ds-sidenav-header-l2-pad-left, 16px);
+  background: var(--ds-color-sidenav-header-l2-background, #ffffff);
+  color: var(--ds-color-sidenav-header-l2-text-color, #333333);
 }
 .ds-sidenav-header--l1.ds-sidenav-header--collapsed {
+  width: 52px;
   flex-direction: column;
-  padding: var(--ds-sidenav-header-l1-collapsed-pad-left) var(--ds-sidenav-header-l1-collapsed-pad-right) var(--ds-sidenav-header-pad-top) var(--ds-sidenav-header-pad-bottom);
-  background: var(--ds-color-sidenav-header-l1-background);
+  padding: var(--ds-sidenav-header-pad-top, 12px) var(--ds-sidenav-header-l1-collapsed-pad-right, 14px) var(--ds-sidenav-header-pad-bottom, 12px) var(--ds-sidenav-header-l1-collapsed-pad-left, 14px);
+  background: var(--ds-color-sidenav-header-l1-background, #263136);
 }
 ```
 </details>
@@ -6609,13 +5997,13 @@
 - **State** (VARIANT): Active, Default, Hover, Selected
 - Прочие свойства: Element right#55070:0 (BOOLEAN), Badge#55083:0 (BOOLEAN), Divider#55219:13 (BOOLEAN), Indicator#59087:0 (BOOLEAN)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-sidenav-item-l3-pad-left) var(--ds-sidenav-item-l3-pad-right) var(--ds-sidenav-item-l3-pad-top) var(--ds-sidenav-item-l3-pad-bottom)`
-    - промежуток между элементами: `var(--ds-sidenav-item-l3-gap)`
+    - ширина: `260px` (фикс.)
+    - внутренние отступы: `var(--ds-sidenav-item-l3-pad-top, 8px) var(--ds-sidenav-item-l3-pad-right, 16px) var(--ds-sidenav-item-l3-pad-bottom, 8px) var(--ds-sidenav-item-l3-pad-left, 32px)`
+    - промежуток между элементами: `var(--ds-sidenav-item-l3-gap, 8px)`
 - Модификаторы (что меняет каждый):
-    - `--l1`: направление `row`, align-items `center`, промежуток между элементами `var(--ds-sidenav-item-l1-gap-container)`, внутренние отступы `var(--ds-sidenav-item-l1-pad-left) var(--ds-sidenav-item-l1-pad-right) var(--ds-sidenav-item-l1-pad-top) var(--ds-sidenav-item-l1-pad-bottom)`
-    - `--l2`: направление `column`, фон `var(--ds-color-sidenav-item-l2-background)`, color `var(--ds-color-chips-input-error-cursor-color)`
-    - `--l3`: направление `row`, align-items `center`, фон `var(--ds-color-sidenav-item-l3-background)`, color `var(--ds-color-chips-input-error-cursor-color)`
+    - `--l1`: ширина `200px`, направление `row`, align-items `center`, промежуток между элементами `var(--ds-sidenav-item-l1-gap-container, 8px)`
+    - `--l2`: направление `column`, фон `var(--ds-color-sidenav-item-l2-background, #ffffff)`, color `var(--ds-color-sidenav-item-l2-text-color, #333333)`
+    - `--l3`: направление `row`, align-items `center`, фон `var(--ds-color-sidenav-item-l3-background, #ffffff)`, color `var(--ds-color-sidenav-item-l3-text-color, #333333)`
 - Состояния: `:hover` (наведение)
 - Разметка:
 
@@ -6631,8 +6019,9 @@
 /* Sidenav item [55070:3734] — 13 вариантов; оси: Type, Mode, State */
 .ds-sidenav-item {
   display: flex;
-  padding: var(--ds-sidenav-item-l3-pad-left) var(--ds-sidenav-item-l3-pad-right) var(--ds-sidenav-item-l3-pad-top) var(--ds-sidenav-item-l3-pad-bottom);
-  gap: var(--ds-sidenav-item-l3-gap);
+  width: 260px;
+  padding: var(--ds-sidenav-item-l3-pad-top, 8px) var(--ds-sidenav-item-l3-pad-right, 16px) var(--ds-sidenav-item-l3-pad-bottom, 8px) var(--ds-sidenav-item-l3-pad-left, 32px);
+  gap: var(--ds-sidenav-item-l3-gap, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -6641,54 +6030,56 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-sidenav-item-l3-text-color, #333333);
   white-space: nowrap;
 }
 .ds-sidenav-item__l3 {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-sidenav-item-l3-text-color);
+  background: var(--ds-color-sidenav-item-l3-text-color, #333333);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-sidenav-item-l3-text-color, #333333);
 }
 .ds-sidenav-item--l3.ds-sidenav-item--expanded:hover {
-  background: var(--ds-color-sidenav-item-l3-background-hover);
+  background: var(--ds-color-sidenav-item-l3-background-hover, #f8f9fc);
 }
 .ds-sidenav-item--l3.ds-sidenav-item--expanded {
   flex-direction: row;
   align-items: center;
-  background: var(--ds-color-sidenav-item-l3-background);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  background: var(--ds-color-sidenav-item-l3-background, #ffffff);
+  color: var(--ds-color-sidenav-item-l3-text-color, #333333);
 }
 .ds-sidenav-item--l2.ds-sidenav-item--expanded {
   flex-direction: column;
-  background: var(--ds-color-sidenav-item-l2-background);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  background: var(--ds-color-sidenav-item-l2-background, #ffffff);
+  color: var(--ds-color-sidenav-item-l2-text-color, #333333);
 }
 .ds-sidenav-item--l2.ds-sidenav-item--expanded:hover {
-  background: var(--ds-color-sidenav-item-l2-background-hover);
+  background: var(--ds-color-sidenav-item-l2-background-hover, #f8f9fc);
 }
 .ds-sidenav-item--l1.ds-sidenav-item--expanded:hover {
-  background: var(--ds-color-sidenav-item-l1-background-hover);
+  background: var(--ds-color-sidenav-item-l1-background-hover, #36474e);
 }
 .ds-sidenav-item--l1.ds-sidenav-item--expanded {
+  width: 200px;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-sidenav-item-l1-gap-container);
-  padding: var(--ds-sidenav-item-l1-pad-left) var(--ds-sidenav-item-l1-pad-right) var(--ds-sidenav-item-l1-pad-top) var(--ds-sidenav-item-l1-pad-bottom);
-  background: var(--ds-color-sidenav-item-l1-background);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  gap: var(--ds-sidenav-item-l1-gap-container, 8px);
+  padding: var(--ds-sidenav-item-l1-pad-top, 12px) var(--ds-sidenav-item-l1-pad-right, 16px) var(--ds-sidenav-item-l1-pad-bottom, 12px) var(--ds-sidenav-item-l1-pad-left, 16px);
+  background: var(--ds-color-sidenav-item-l1-background, #263136);
+  color: var(--ds-color-sidenav-item-l1-text-color, #ffffff);
 }
 .ds-sidenav-item--l1.ds-sidenav-item--collapsed:hover {
-  background: var(--ds-color-sidenav-item-l1-background-hover);
+  background: var(--ds-color-sidenav-item-l1-background-hover, #36474e);
 }
 .ds-sidenav-item--l1.ds-sidenav-item--collapsed {
+  width: fit-content;
   flex-direction: row;
-  padding: var(--ds-sidenav-item-l1-pad-left) var(--ds-sidenav-item-l1-pad-right) var(--ds-sidenav-item-l1-pad-top) var(--ds-sidenav-item-l1-pad-bottom);
-  background: var(--ds-color-sidenav-item-l1-background);
+  padding: var(--ds-sidenav-item-l1-pad-top, 12px) var(--ds-sidenav-item-l1-pad-right, 16px) var(--ds-sidenav-item-l1-pad-bottom, 12px) var(--ds-sidenav-item-l1-pad-left, 16px);
+  background: var(--ds-color-sidenav-item-l1-background, #263136);
 }
 ```
 </details>
@@ -6710,12 +6101,12 @@
 - **Mode** (VARIANT): Dark, Light
 - Прочие свойства: Element left#54373:16 (BOOLEAN), Element right#54426:0 (BOOLEAN), Progress#58768:0 (BOOLEAN), Content#58768:6 (BOOLEAN), Bottom actions#58768:12 (BOOLEAN)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - скругление: `var(--ds-size-2x)`
+    - ширина: `fit-content` (фикс.)
+    - скругление: `var(--ds-snackbar-border-radius, 8px)`
     - тень: `var(--ds-shadow-shadows-08-dp-s)`
 - Модификаторы (что меняет каждый):
-    - `--complex`: фон `var(--ds-color-snackbar-complex-dark-background)`, color `var(--ds-color-snackbar-dark-text-color)`, фон `var(--ds-color-snackbar-complex-light-background)`, color `var(--ds-color-snackbar-light-text-color)`
-    - `--single`: фон `var(--ds-color-snackbar-complex-dark-background)`, color `var(--ds-color-snackbar-dark-text-color)`, фон `var(--ds-color-snackbar-complex-light-background)`, color `var(--ds-color-snackbar-light-text-color)`
+    - `--complex`: ширина `232px`, фон `var(--ds-color-snackbar-complex-dark-background, #424242)`, color `var(--ds-color-snackbar-complex-dark-text-color, #ffffff)`, ширина `370px`
+    - `--single`: фон `var(--ds-color-snackbar-complex-dark-background, #424242)`, color `var(--ds-color-snackbar-complex-dark-text-color, #ffffff)`, ширина `370px`, фон `var(--ds-color-snackbar-complex-light-background, #ffffff)`
 - Разметка:
 
 ```html
@@ -6736,8 +6127,9 @@
 .ds-snackbar {
   display: flex;
   flex-direction: column;
-  border-radius: var(--ds-size-2x);
+  border-radius: var(--ds-snackbar-border-radius, 8px);
   box-shadow: var(--ds-shadow-shadows-08-dp-s);
+  width: fit-content;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -6746,7 +6138,7 @@
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-snackbar-dark-text-color);
+  color: var(--ds-color-snackbar-complex-dark-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-snackbar__icon {
@@ -6769,22 +6161,23 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-snackbar-gap);
-  padding: var(--ds-snackbar-pad-left) var(--ds-snackbar-pad-right) var(--ds-snackbar-pad-top) var(--ds-snackbar-pad-bottom);
+  gap: var(--ds-snackbar-gap, 8px);
+  padding: var(--ds-snackbar-pad-top, 12px) var(--ds-snackbar-pad-right, 12px) var(--ds-snackbar-pad-bottom, 12px) var(--ds-snackbar-pad-left, 12px);
 }
 .ds-snackbar__content {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-snackbar-gap);
+  gap: var(--ds-snackbar-gap, 8px);
   padding: var(--ds-space-0) var(--ds-space-0) var(--ds-space-0) var(--ds-space-0);
+  border-radius: var(--ds-radius-0);
 }
 .ds-snackbar__button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-s-size-gap);
-  padding: var(--ds-button-s-size-pad-left) var(--ds-button-s-size-pad-right) var(--ds-button-s-size-pad-top) var(--ds-button-s-size-pad-bottom);
-  border-radius: var(--ds-size-2x);
+  gap: var(--ds-button-s-size-gap, 4px);
+  padding: var(--ds-button-s-size-pad-top, 4px) var(--ds-button-s-size-pad-right, 8px) var(--ds-button-s-size-pad-bottom, 4px) var(--ds-button-s-size-pad-left, 8px);
+  border-radius: var(--ds-button-border-radius, 8px);
 }
 .ds-snackbar__element-right {
   height: var(--ds-size-5x);
@@ -6795,24 +6188,27 @@
   height: var(--ds-size-1x);
   display: flex;
   flex-direction: row;
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-snackbar-progress-color);
+  border-radius: var(--ds-snackbar-border-radius, 8px);
+  background: var(--ds-color-snackbar-progress-color, #448aff);
 }
 .ds-snackbar--single.ds-snackbar--dark {
-  background: var(--ds-color-snackbar-complex-dark-background);
-  color: var(--ds-color-snackbar-dark-text-color);
+  background: var(--ds-color-snackbar-complex-dark-background, #424242);
+  color: var(--ds-color-snackbar-complex-dark-text-color, #ffffff);
 }
 .ds-snackbar--single.ds-snackbar--light {
-  background: var(--ds-color-snackbar-complex-light-background);
-  color: var(--ds-color-snackbar-light-text-color);
+  width: 370px;
+  background: var(--ds-color-snackbar-complex-light-background, #ffffff);
+  color: var(--ds-color-snackbar-complex-light-text-color, #333333);
 }
 .ds-snackbar--complex.ds-snackbar--dark {
-  background: var(--ds-color-snackbar-complex-dark-background);
-  color: var(--ds-color-snackbar-dark-text-color);
+  width: 232px;
+  background: var(--ds-color-snackbar-complex-dark-background, #424242);
+  color: var(--ds-color-snackbar-complex-dark-text-color, #ffffff);
 }
 .ds-snackbar--complex.ds-snackbar--light {
-  background: var(--ds-color-snackbar-complex-light-background);
-  color: var(--ds-color-snackbar-light-text-color);
+  width: 370px;
+  background: var(--ds-color-snackbar-complex-light-background, #ffffff);
+  color: var(--ds-color-snackbar-complex-light-text-color, #333333);
 }
 ```
 </details>
@@ -6836,10 +6232,10 @@
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-state:hover {
-  background: var(--ds-color-chips-input-disable-border-color);
+  background: #ebebeb;
 }
 .ds-state:active {
-  background: var(--ds-color-chips-input-default-border-color);
+  background: #e0e0e0;
 }
 ```
 </details>
@@ -6849,20 +6245,20 @@
 - **Type** (VARIANT): Filled, Text
 - Прочие свойства: Element left#17172:1340 (BOOLEAN), Element right#17172:1349 (BOOLEAN)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-status-pad-left) var(--ds-status-pad-right) var(--ds-status-pad-top) var(--ds-status-pad-bottom)`
-    - промежуток между элементами: `var(--ds-status-gap)`
-    - скругление: `var(--ds-size-2x)`
+    - ширина: `fit-content` (фикс.)
+    - внутренние отступы: `var(--ds-status-pad-top, 4px) var(--ds-status-pad-right, 6px) var(--ds-status-pad-bottom, 4px) var(--ds-status-pad-left, 6px)`
+    - промежуток между элементами: `var(--ds-status-gap, 4px)`
+    - скругление: `var(--ds-status-border-radius, 8px)`
 - Модификаторы (что меняет каждый):
-    - `--accent`: фон `var(--ds-color-status-accent-filled-background)`, color `var(--ds-color-chips-input-focus-border-color)`, внутренние отступы `var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text)`
-    - `--contrast-1`: фон `var(--ds-color-status-contrast-1-filled-background)`, color `var(--ds-palette-contrast-1-700)`, внутренние отступы `var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text)`
-    - `--contrast-2`: фон `var(--ds-color-status-contrast-2-filled-background)`, color `var(--ds-palette-contrast-2-950)`, внутренние отступы `var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text)`
-    - `--contrast-3`: фон `var(--ds-color-status-contrast-3-filled-background)`, color `var(--ds-palette-contrast-3-950)`, внутренние отступы `var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text)`
-    - `--contrast-4`: фон `var(--ds-color-status-contrast-4-filled-background)`, color `var(--ds-palette-contrast-4-950)`, внутренние отступы `var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text)`
-    - `--negative`: фон `var(--ds-color-status-negative-filled-background)`, color `var(--ds-color-chips-input-error-border-color)`, внутренние отступы `var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text)`
-    - `--neutral`: фон `var(--ds-color-status-neutral-filled-background)`, color `var(--ds-color-chips-input-default-action-text-color)`, внутренние отступы `var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text)`
-    - `--positive`: фон `var(--ds-color-status-positive-filled-background)`, color `var(--ds-color-snackbar-dark-complex-positive-icon-color)`, внутренние отступы `var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text)`
-    - `--warning`: фон `var(--ds-color-status-warning-filled-background)`, color `var(--ds-color-input-filled-default-icon-color-warning)`, внутренние отступы `var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text)`
+    - `--accent`: фон `var(--ds-color-status-accent-filled-background, #f5f9ff)`, color `var(--ds-color-status-accent-filled-text-color, #448aff)`, внутренние отступы `var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text)`, color `var(--ds-color-status-accent-text-text-color, #448aff)`
+    - `--contrast-1`: фон `var(--ds-color-status-contrast-1-filled-background, #fcf6fd)`, color `var(--ds-color-status-contrast-1-filled-text-color, #9c27b0)`, внутренние отступы `var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text)`, color `var(--ds-color-status-contrast-1-text-text-color, #9c27b0)`
+    - `--contrast-2`: фон `var(--ds-color-status-contrast-2-filled-background, #fcf8f6)`, color `var(--ds-color-status-contrast-2-filled-text-color, #3e261e)`, внутренние отступы `var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text)`, color `var(--ds-color-status-contrast-2-text-text-color, #3e261e)`
+    - `--contrast-3`: фон `var(--ds-color-status-contrast-3-filled-background, #f8fafc)`, color `var(--ds-color-status-contrast-3-filled-text-color, #263136)`, внутренние отступы `var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text)`, color `var(--ds-color-status-contrast-3-text-text-color, #263136)`
+    - `--contrast-4`: фон `var(--ds-color-status-contrast-4-filled-background, #f9fbea)`, color `var(--ds-color-status-contrast-4-filled-text-color, #4f5412)`, внутренние отступы `var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text)`, color `var(--ds-color-status-contrast-4-text-text-color, #4f5412)`
+    - `--negative`: фон `var(--ds-color-status-negative-filled-background, #fff8f8)`, color `var(--ds-color-status-negative-filled-text-color, #ff5252)`, внутренние отступы `var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text)`, color `var(--ds-color-status-negative-text-text-color, #ff5252)`
+    - `--neutral`: фон `var(--ds-color-status-neutral-filled-background, #fafafa)`, color `var(--ds-color-status-neutral-filled-text-color, #616161)`, внутренние отступы `var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text)`, color `var(--ds-color-status-neutral-text-text-color, #616161)`
+    - `--positive`: фон `var(--ds-color-status-positive-filled-background, #f3fcf7)`, color `var(--ds-color-status-positive-filled-text-color, #14b456)`, внутренние отступы `var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text)`, color `var(--ds-color-status-positive-text-text-color, #14b456)`
+    - `--warning`: фон `var(--ds-color-status-warning-filled-background, #fffcf8)`, color `var(--ds-color-status-warning-filled-text-color, #ea7806)`, внутренние отступы `var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text)`, color `var(--ds-color-status-warning-text-text-color, #ea7806)`
 - Разметка:
 
 ```html
@@ -6880,12 +6276,13 @@
 ```css
 /* Status [52928:6588] — 18 вариантов; оси: Style, Type */
 .ds-status {
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-status-gap);
-  border-radius: var(--ds-size-2x);
-  padding: var(--ds-status-pad-left) var(--ds-status-pad-right) var(--ds-status-pad-top) var(--ds-status-pad-bottom);
+  gap: var(--ds-status-gap, 4px);
+  border-radius: var(--ds-status-border-radius, 8px);
+  padding: var(--ds-status-pad-top, 4px) var(--ds-status-pad-right, 6px) var(--ds-status-pad-bottom, 4px) var(--ds-status-pad-left, 6px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -6894,7 +6291,7 @@
   line-height: var(--ds-font-caption-l-12-normal-medium-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-medium-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-medium-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-status-neutral-filled-text-color, #616161);
   white-space: nowrap;
 }
 .ds-status__icon {
@@ -6923,17 +6320,17 @@
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-status__content {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-status-neutral-filled-text-color);
+  background: var(--ds-color-status-neutral-filled-text-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-medium-size);
   line-height: var(--ds-font-caption-l-12-normal-medium-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-medium-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-medium-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-status-neutral-filled-text-color, #616161);
 }
 .ds-status__element-right {
   height: var(--ds-size-4x);
@@ -6941,129 +6338,76 @@
   flex-direction: row;
 }
 .ds-status--neutral.ds-status--filled {
-  background: var(--ds-color-status-neutral-filled-background);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  background: var(--ds-color-status-neutral-filled-background, #fafafa);
+  color: var(--ds-color-status-neutral-filled-text-color, #616161);
 }
 .ds-status--accent.ds-status--filled {
-  background: var(--ds-color-status-accent-filled-background);
-  color: var(--ds-color-chips-input-focus-border-color);
+  background: var(--ds-color-status-accent-filled-background, #f5f9ff);
+  color: var(--ds-color-status-accent-filled-text-color, #448aff);
 }
 .ds-status--positive.ds-status--filled {
-  background: var(--ds-color-status-positive-filled-background);
-  color: var(--ds-color-snackbar-dark-complex-positive-icon-color);
+  background: var(--ds-color-status-positive-filled-background, #f3fcf7);
+  color: var(--ds-color-status-positive-filled-text-color, #14b456);
 }
 .ds-status--warning.ds-status--filled {
-  background: var(--ds-color-status-warning-filled-background);
-  color: var(--ds-color-input-filled-default-icon-color-warning);
+  background: var(--ds-color-status-warning-filled-background, #fffcf8);
+  color: var(--ds-color-status-warning-filled-text-color, #ea7806);
 }
 .ds-status--negative.ds-status--filled {
-  background: var(--ds-color-status-negative-filled-background);
-  color: var(--ds-color-chips-input-error-border-color);
+  background: var(--ds-color-status-negative-filled-background, #fff8f8);
+  color: var(--ds-color-status-negative-filled-text-color, #ff5252);
 }
 .ds-status--contrast-1.ds-status--filled {
-  background: var(--ds-color-status-contrast-1-filled-background);
-  color: var(--ds-palette-contrast-1-700);
+  background: var(--ds-color-status-contrast-1-filled-background, #fcf6fd);
+  color: var(--ds-color-status-contrast-1-filled-text-color, #9c27b0);
 }
 .ds-status--contrast-2.ds-status--filled {
-  background: var(--ds-color-status-contrast-2-filled-background);
-  color: var(--ds-palette-contrast-2-950);
+  background: var(--ds-color-status-contrast-2-filled-background, #fcf8f6);
+  color: var(--ds-color-status-contrast-2-filled-text-color, #3e261e);
 }
 .ds-status--contrast-3.ds-status--filled {
-  background: var(--ds-color-status-contrast-3-filled-background);
-  color: var(--ds-palette-contrast-3-950);
+  background: var(--ds-color-status-contrast-3-filled-background, #f8fafc);
+  color: var(--ds-color-status-contrast-3-filled-text-color, #263136);
 }
 .ds-status--contrast-4.ds-status--filled {
-  background: var(--ds-color-status-contrast-4-filled-background);
-  color: var(--ds-palette-contrast-4-950);
+  background: var(--ds-color-status-contrast-4-filled-background, #f9fbea);
+  color: var(--ds-color-status-contrast-4-filled-text-color, #4f5412);
 }
 .ds-status--neutral.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-neutral-text-text-color, #616161);
 }
 .ds-status--accent.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-color-chips-input-focus-border-color);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-accent-text-text-color, #448aff);
 }
 .ds-status--positive.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-color-snackbar-dark-complex-positive-icon-color);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-positive-text-text-color, #14b456);
 }
 .ds-status--warning.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-color-input-filled-default-icon-color-warning);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-warning-text-text-color, #ea7806);
 }
 .ds-status--negative.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-color-chips-input-error-border-color);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-negative-text-text-color, #ff5252);
 }
 .ds-status--contrast-1.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-palette-contrast-1-700);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-contrast-1-text-text-color, #9c27b0);
 }
 .ds-status--contrast-2.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-palette-contrast-2-950);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-contrast-2-text-text-color, #3e261e);
 }
 .ds-status--contrast-3.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-palette-contrast-3-950);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-contrast-3-text-text-color, #263136);
 }
 .ds-status--contrast-4.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-palette-contrast-4-950);
-}
-```
-</details>
-
-#### Status Bar `[56564:1236]` — 1 вариантов
-- Размеры и параметры:
-    - высота: `44px` (фикс.)
-    - ширина: по контенту (hug)
-- Разметка:
-
-```html
-<div class="ds-status-bar">
-  <div class="ds-status-bar__8-00"></div>
-  <span class="ds-status-bar__label">Текст</span>
-  <div class="ds-status-bar__stats"></div>
-  <div class="ds-status-bar__time"></div>
-</div>
-```
-<details><summary>CSS компонента</summary>
-
-```css
-/* Status Bar [56564:1236] — 1 вариантов; оси: — */
-.ds-status-bar {
-  height: 44px;
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-status-bar__label {
-  font-size: 15px;
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: 18.28499984741211px;
-  white-space: nowrap;
-}
-.ds-status-bar__time {
-  height: 18px;
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-}
-.ds-status-bar__8-00 {
-  display: flex;
-  flex-direction: row;
-  font-size: 15px;
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: 18.28499984741211px;
-}
-.ds-status-bar__stats {
-  height: var(--ds-size-3x);
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-contrast-4-text-text-color, #4f5412);
 }
 ```
 </details>
@@ -7099,10 +6443,10 @@
 - Прочие свойства: Header 2 lvl#60074:0 (SLOT)
 - Размеры и параметры:
     - высота: минимум `72px`, растёт по контенту
-    - ширина: по контенту (hug)
+    - ширина: `162px` (фикс.)
 - Модификаторы (что меняет каждый):
-    - `--table-cell-2-lvl`: направление `column`, рамка `1px solid var(--ds-color-stroke-default)`
-    - `--table-row-2-lvl`: направление `row`, align-items `center`
+    - `--table-cell-2-lvl`: направление `column`, рамка `1px solid var(--ds-color-stroke-default, #e0e0e0)`
+    - `--table-row-2-lvl`: ширина `fit-content`, направление `row`, align-items `center`
 - Разметка:
 
 ```html
@@ -7117,20 +6461,22 @@
 .ds-table-2-lvl {
   min-height: 72px;
   display: flex;
+  width: 162px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-2-lvl__header-row {
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-table-row-header-background-header);
-  border: 1px solid var(--ds-color-stroke-default);
+  background: var(--ds-color-table-row-header-background-header, #f0f5ff);
+  border: 1px solid var(--ds-color-stroke-default, #e0e0e0);
 }
 .ds-table-2-lvl--table-cell-2-lvl {
   flex-direction: column;
-  border: 1px solid var(--ds-color-stroke-default);
+  border: 1px solid var(--ds-color-stroke-default, #e0e0e0);
 }
 .ds-table-2-lvl--table-row-2-lvl {
+  width: fit-content;
   flex-direction: row;
   align-items: center;
 }
@@ -7141,17 +6487,17 @@
 - **Style** (VARIANT): Default, Disable, Error, Error+Hover, Focus, Focus+Placeholder, Hover, Vocus+Value
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-6x)`, растёт по контенту
-    - ширина: по контенту (hug)
-    - фон: `var(--ds-color-input-input-outlined-background)`
+    - ширина: `fit-content` (фикс.)
+    - фон: `#ffffff`
 - Модификаторы (что меняет каждый):
-    - `--default`: color `var(--ds-color-chips-input-default-action-text-color)`
-    - `--disable`: color `var(--ds-color-chips-input-disable-action-text-color)`
-    - `--error`: color `var(--ds-color-chips-input-default-action-text-color)`
-    - `--error-hover`: color `var(--ds-color-chips-input-default-action-text-color)`
-    - `--focus`: color `var(--ds-color-chips-input-error-cursor-color)`
-    - `--focus-placeholder`: color `var(--ds-color-chips-input-error-cursor-color)`
-    - `--hover`: color `var(--ds-color-chips-input-default-action-text-color)`
-    - `--vocus-value`: color `var(--ds-color-chips-input-error-cursor-color)`
+    - `--default`: color `#616161`
+    - `--disable`: color `#9e9e9e`
+    - `--error`: color `#616161`
+    - `--error-hover`: color `#616161`
+    - `--focus`: color `#333333`
+    - `--focus-placeholder`: color `#333333`
+    - `--hover`: color `#616161`
+    - `--vocus-value`: color `#333333`
 - Разметка:
 
 ```html
@@ -7168,9 +6514,10 @@
 /* Table Chips Input [60220:70978] — 8 вариантов; оси: Style */
 .ds-table-chips-input {
   min-height: var(--ds-size-6x);
+  width: fit-content;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-input-input-outlined-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -7179,7 +6526,7 @@
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: #616161;
   white-space: nowrap;
 }
 .ds-table-chips-input__icon {
@@ -7203,10 +6550,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-chips-input-gap-chips-input-frame);
+  gap: var(--ds-chips-input-gap-chips-input-frame, 4px);
   border-radius: var(--ds-size-3x);
-  background: var(--ds-color-chips-input-default-background);
-  border: 1px solid var(--ds-color-chips-input-default-border-color);
+  background: #f8f9fc;
+  border: 1px solid #e0e0e0;
 }
 .ds-table-chips-input__support {
   display: flex;
@@ -7214,28 +6561,28 @@
   gap: var(--ds-size-1x);
 }
 .ds-table-chips-input--default {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: #616161;
 }
 .ds-table-chips-input--hover {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: #616161;
 }
 .ds-table-chips-input--focus {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: #333333;
 }
 .ds-table-chips-input--focus-placeholder {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: #333333;
 }
 .ds-table-chips-input--vocus-value {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: #333333;
 }
 .ds-table-chips-input--error {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: #616161;
 }
 .ds-table-chips-input--error-hover {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: #616161;
 }
 .ds-table-chips-input--disable {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: #9e9e9e;
 }
 ```
 </details>
@@ -7244,8 +6591,8 @@
 - **State** (VARIANT): Default, Disable, Edit, Error, Focus, Hover, Link, Null
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-9x)`, растёт по контенту
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom)`
+    - ширина: `fit-content` (фикс.)
+    - внутренние отступы: `var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px)`
     - промежуток между элементами: `var(--ds-size-2x)`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
@@ -7266,11 +6613,12 @@
 /* Table content cell [52954:1253] — 8 вариантов; оси: State */
 .ds-table-content-cell {
   min-height: var(--ds-size-9x);
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  padding: var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom);
+  padding: var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -7279,7 +6627,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-tab-innactive-icon-color);
+  color: var(--ds-color-text-ui-text-label-color, #616161);
   white-space: nowrap;
 }
 .ds-table-content-cell__icon {
@@ -7305,16 +6653,16 @@
 .ds-table-content-cell__text-ui {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-list-item-gap);
+  gap: var(--ds-list-item-gap, 8px);
 }
 .ds-table-content-cell:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-ui-disable-label-text-color, #9e9e9e);
 }
 .ds-table-content-cell.ds-table-content-cell--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-ui-disable-label-text-color, #9e9e9e);
 }
 .ds-table-content-cell:hover {
-  border: 1px solid var(--ds-color-table-cell-content-hover-border-color);
+  border: 1px solid var(--ds-color-table-cell-content-hover-border-color, #9e9e9e);
 }
 .ds-table-content-cell--disabled {
   pointer-events: none;
@@ -7327,9 +6675,9 @@
 - Прочие свойства: Content#60036:0 (SLOT)
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-9x)`, растёт по контенту
-    - ширина: по контенту (hug)
-    - рамка: `1px solid var(--ds-color-stroke-default)`
-    - фон: `var(--ds-color-table-row-content-default-background)`
+    - ширина: `fit-content` (фикс.)
+    - рамка: `1px solid var(--ds-color-stroke-default, #e0e0e0)`
+    - фон: `var(--ds-color-table-row-content-default-background, #ffffff)`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
 - Состояния: `:disabled` (неактивно), `:hover` (наведение)
@@ -7346,10 +6694,11 @@
 /* Table content row [60105:56764] — 5 вариантов; оси: State */
 .ds-table-content-row {
   min-height: var(--ds-size-9x);
+  width: fit-content;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--ds-color-stroke-default);
-  background: var(--ds-color-table-row-content-default-background);
+  border: 1px solid var(--ds-color-stroke-default, #e0e0e0);
+  background: var(--ds-color-table-row-content-default-background, #ffffff);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -7358,17 +6707,17 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-tab-innactive-icon-color);
+  color: var(--ds-color-text-ui-text-label-color, #616161);
   white-space: nowrap;
 }
 .ds-table-content-row:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-ui-disable-label-text-color, #9e9e9e);
 }
 .ds-table-content-row.ds-table-content-row--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-ui-disable-label-text-color, #9e9e9e);
 }
 .ds-table-content-row:hover {
-  background: var(--ds-color-table-row-content-hover-background);
+  background: var(--ds-color-table-row-content-hover-background, #f5f5f5);
 }
 .ds-table-content-row--disabled {
   pointer-events: none;
@@ -7381,11 +6730,11 @@
 - Прочие свойства: Slot Content#59249:0 (SLOT)
 - Размеры и параметры:
     - высота: `65px` (фикс.)
-    - ширина: по контенту (hug)
-    - фон: `var(--ds-color-table-footer-background)`
+    - ширина: `980px` (фикс.)
+    - фон: `var(--ds-color-table-footer-background, #ffffff)`
     - тень: `var(--ds-shadow-shadows-01-dp-sl)`
 - Модификаторы (что меняет каждый):
-    - `--default`: color `var(--ds-color-tab-innactive-counter-text-color)`
+    - `--default`: color `var(--ds-color-expansion-panel-content-text-color, #333333)`
 - Разметка:
 
 ```html
@@ -7401,9 +6750,10 @@
 /* Table footer [59207:20759] — 1 вариантов; оси: Type */
 .ds-table-footer {
   height: 65px;
+  width: 980px;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-table-footer-background);
+  background: var(--ds-color-table-footer-background, #ffffff);
   box-shadow: var(--ds-shadow-shadows-01-dp-sl);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -7413,14 +6763,14 @@
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-tab-innactive-counter-text-color);
+  color: var(--ds-color-expansion-panel-content-text-color, #333333);
   white-space: nowrap;
 }
 .ds-table-footer__divider {
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-table-footer__content {
   height: 100%;
@@ -7428,11 +6778,11 @@
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-table-footer-pad-left) var(--ds-table-footer-pad-right) var(--ds-table-footer-pad-top) var(--ds-table-footer-pad-bottom);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  padding: var(--ds-table-footer-pad-top, 12px) var(--ds-table-footer-pad-right, 32px) var(--ds-table-footer-pad-bottom, 12px) var(--ds-table-footer-pad-left, 32px);
+  background: #ffffff;
 }
 .ds-table-footer--default {
-  color: var(--ds-color-tab-innactive-counter-text-color);
+  color: var(--ds-color-expansion-panel-content-text-color, #333333);
 }
 ```
 </details>
@@ -7441,11 +6791,11 @@
 - **State** (VARIANT): Default, Disable, Hover
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-9x)`, растёт по контенту
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom)`
+    - ширина: `fit-content` (фикс.)
+    - внутренние отступы: `var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px)`
     - промежуток между элементами: `var(--ds-size-2x)`
-    - рамка: `1px solid var(--ds-color-stroke-default)`
-    - фон: `var(--ds-color-table-cell-header-default-background)`
+    - рамка: `1px solid var(--ds-color-stroke-default, #e0e0e0)`
+    - фон: `var(--ds-color-table-cell-header-default-background, #f0f5ff)`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
 - Состояния: `:disabled` (неактивно), `:hover` (наведение)
@@ -7465,13 +6815,14 @@
 /* Table header cell [60098:45424] — 3 вариантов; оси: State */
 .ds-table-header-cell {
   min-height: var(--ds-size-9x);
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  padding: var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom);
-  border: 1px solid var(--ds-color-stroke-default);
-  background: var(--ds-color-table-cell-header-default-background);
+  padding: var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px);
+  border: 1px solid var(--ds-color-stroke-default, #e0e0e0);
+  background: var(--ds-color-table-cell-header-default-background, #f0f5ff);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -7480,7 +6831,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-tab-innactive-icon-color);
+  color: var(--ds-color-text-ui-text-label-color, #616161);
   white-space: nowrap;
 }
 .ds-table-header-cell__icon {
@@ -7506,18 +6857,18 @@
 .ds-table-header-cell__text-ui {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-list-item-gap);
+  gap: var(--ds-list-item-gap, 8px);
 }
 .ds-table-header-cell:hover {
-  background: var(--ds-color-table-cell-header-hover-background);
+  background: var(--ds-color-table-cell-header-hover-background, #f8f9fc);
 }
 .ds-table-header-cell:disabled {
-  background: var(--ds-color-table-cell-header-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-table-cell-header-disable-background, #f0f5ff);
+  color: var(--ds-color-text-ui-disable-label-text-color, #9e9e9e);
 }
 .ds-table-header-cell.ds-table-header-cell--disabled {
-  background: var(--ds-color-table-cell-header-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-table-cell-header-disable-background, #f0f5ff);
+  color: var(--ds-color-text-ui-disable-label-text-color, #9e9e9e);
 }
 .ds-table-header-cell--disabled {
   pointer-events: none;
@@ -7530,9 +6881,10 @@
 - Прочие свойства: Header#59320:28 (SLOT)
 - Размеры и параметры:
     - высота: минимум `var(--ds-size-9x)`, растёт по контенту
-    - ширина: по контенту (hug)
-    - рамка: `1px solid var(--ds-color-stroke-default)`
-    - фон: `var(--ds-color-table-row-header-background-header)`
+    - ширина: `fit-content` (фикс.)
+    - скругление: `var(--ds-table-row-header-border-radius-top-left)`
+    - рамка: `1px solid var(--ds-color-stroke-default, #e0e0e0)`
+    - фон: `var(--ds-color-table-row-header-background-header, #f0f5ff)`
 - Разметка:
 
 ```html
@@ -7546,10 +6898,12 @@
 /* Table header row [53556:3571] — 1 вариантов; оси: State */
 .ds-table-header-row {
   min-height: var(--ds-size-9x);
+  width: fit-content;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-table-row-header-background-header);
-  border: 1px solid var(--ds-color-stroke-default);
+  border-radius: var(--ds-table-row-header-border-radius-top-left);
+  background: var(--ds-color-table-row-header-background-header, #f0f5ff);
+  border: 1px solid var(--ds-color-stroke-default, #e0e0e0);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -7558,7 +6912,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-tab-innactive-icon-color);
+  color: var(--ds-color-text-ui-text-label-color, #616161);
   white-space: nowrap;
 }
 ```
@@ -7575,8 +6929,8 @@
 - Прочие свойства: Element left#54167:1 (BOOLEAN), Element right#54167:6 (BOOLEAN), Label up#54741:15 (BOOLEAN), Label down#54741:30 (BOOLEAN)
 - Размеры и параметры:
     - высота: минимум `52px`, растёт по контенту
-    - ширина: по контенту (hug)
-    - промежуток между элементами: `var(--ds-list-item-gap)`
+    - ширина: `fit-content` (фикс.)
+    - промежуток между элементами: `var(--ds-list-item-gap, 8px)`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
 - Состояния: `:disabled` (неактивно)
@@ -7602,9 +6956,10 @@
 /* Text UI [57938:18290] — 7 вариантов; оси: State */
 .ds-text-ui {
   min-height: 52px;
+  width: fit-content;
   display: flex;
   flex-direction: row;
-  gap: var(--ds-list-item-gap);
+  gap: var(--ds-list-item-gap, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -7613,7 +6968,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-text-ui-text-label-color, #616161);
   white-space: nowrap;
 }
 .ds-text-ui__icon {
@@ -7635,7 +6990,7 @@
 .ds-text-ui__element-left {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-text-ui__checkbox {
   display: flex;
@@ -7649,39 +7004,39 @@
 .ds-text-ui__label-up {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-text-ui-text-label-color);
+  background: var(--ds-color-text-ui-text-label-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-text-ui-text-label-color, #616161);
 }
 .ds-text-ui__list-item {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-text-ui-text-color);
+  background: var(--ds-color-text-ui-text-color, #333333);
   font-size: var(--ds-font-body-s-14-normal-regular-size);
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-ui-text-color, #333333);
 }
 .ds-text-ui__label-down {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-text-ui-text-label-color);
+  background: var(--ds-color-text-ui-text-label-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-text-ui-text-label-color, #616161);
 }
 .ds-text-ui__element-right {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-text-ui__icon-size {
   height: var(--ds-size-5x);
@@ -7689,10 +7044,10 @@
   flex-direction: row;
 }
 .ds-text-ui:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-ui-disable-label-text-color, #9e9e9e);
 }
 .ds-text-ui.ds-text-ui--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-ui-disable-label-text-color, #9e9e9e);
 }
 .ds-text-ui--disabled {
   pointer-events: none;
@@ -7707,12 +7062,12 @@
 - Прочие свойства: Input text#52678:0 (TEXT), Label text#52678:3 (TEXT), Support text#52678:6 (TEXT), Label#56934:32 (BOOLEAN), Element left#56934:282 (BOOLEAN), Element right#56934:407 (BOOLEAN), Support text#56934:532 (BOOLEAN), Input text#56968:66 (BOOLEAN), Hint text#57893:0 (BOOLEAN), Support#57893:30 (BOOLEAN), Hint text#57893:60 (TEXT), Scroll#57994:0 (BOOLEAN)
 - Размеры и параметры:
     - высота: минимум `96px`, растёт по контенту
-    - ширина: по контенту (hug)
-    - промежуток между элементами: `var(--ds-form-field-gap-input-support)`
+    - ширина: `250px` (фикс.)
+    - промежуток между элементами: `var(--ds-form-field-gap-input-support, 4px)`
 - Модификаторы (что меняет каждый):
     - `--disabled`: pointer-events `none`
-    - `--empty`: color `var(--ds-color-chips-input-disable-action-text-color)`, color `var(--ds-color-chips-input-default-action-text-color)`
-    - `--populated`: color `var(--ds-color-chips-input-disable-action-text-color)`, color `var(--ds-color-chips-input-default-action-text-color)`
+    - `--empty`: color `var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e)`, color `var(--ds-color-form-field-input-label-text-color, #616161)`
+    - `--populated`: color `var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e)`, color `var(--ds-color-form-field-filled-default-label-text-color, #616161)`
 - Состояния: `:disabled` (неактивно), `:focus-visible`, `:hover` (наведение)
 - Разметка:
 
@@ -7736,9 +7091,10 @@
 /* Textarea [57916:9023] — 13 вариантов; оси: Size, Variant, State */
 .ds-textarea {
   min-height: 96px;
+  width: 250px;
   display: flex;
   flex-direction: column;
-  gap: var(--ds-form-field-gap-input-support);
+  gap: var(--ds-form-field-gap-input-support, 4px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -7747,7 +7103,7 @@
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-textarea__icon {
@@ -7770,11 +7126,11 @@
   height: 76px;
   display: flex;
   flex-direction: row;
-  gap: var(--ds-form-field-gap-input-frame);
-  padding: var(--ds-form-field-m-size-pad-input-left) var(--ds-form-field-m-size-pad-input-right) var(--ds-form-field-pad-textarea-top) var(--ds-form-field-m-size-pad-input-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  padding: var(--ds-form-field-pad-textarea-top, 4px) var(--ds-form-field-m-size-pad-input-right, 12px) var(--ds-form-field-m-size-pad-input-bottom, 12px) var(--ds-form-field-m-size-pad-input-left, 12px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-textarea__element-left {
   height: var(--ds-size-5x);
@@ -7794,7 +7150,7 @@
 .ds-textarea__scroll {
   display: flex;
   flex-direction: column;
-  padding: var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom);
+  padding: var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px);
 }
 .ds-textarea__support {
   display: flex;
@@ -7804,42 +7160,41 @@
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
-  padding: var(--ds-form-field-pad-support-left) var(--ds-form-field-pad-support-right) 0 0;
+  padding: 0 var(--ds-form-field-pad-support-right, 12px) 0 var(--ds-form-field-pad-support-left, 12px);
 }
 .ds-textarea__hint {
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
-  padding: var(--ds-form-field-pad-support-left) var(--ds-form-field-pad-support-right) 0 0;
+  padding: 0 var(--ds-form-field-pad-support-right, 12px) 0 var(--ds-form-field-pad-support-left, 12px);
 }
 .ds-textarea--populated:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-textarea--populated.ds-textarea--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-textarea--empty:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e);
 }
 .ds-textarea--empty.ds-textarea--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e);
 }
 .ds-textarea--populated:focus-visible {
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-form-field-filled-focus-label-text-color, #448aff);
 }
 .ds-textarea--populated {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 .ds-textarea--empty {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
 }
 .ds-textarea--populated:hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-hover-label-text-color, #616161);
 }
 .ds-textarea--empty:hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-form-field-filled-hover-input-background-hover, #f5f5f5);
+  border: 1px solid var(--ds-color-form-field-filled-hover-border-color, #9e9e9e);
 }
 .ds-textarea--disabled {
   pointer-events: none;
@@ -7851,15 +7206,15 @@
 - **Type** (VARIANT): Time grid, Time line
 - Прочие свойства: Slot Time#58983:4 (SLOT), Control Panel#58983:7 (SLOT), Scroll#58983:10 (BOOLEAN)
 - Размеры и параметры:
-    - ширина: по контенту (hug)
-    - внутренние отступы: `0 0 var(--ds-size-2x) var(--ds-size-2x)`
+    - ширина: `fit-content` (фикс.)
+    - внутренние отступы: `var(--ds-size-2x) 0 var(--ds-size-2x) 0`
     - скругление: `var(--ds-size-3x)`
-    - рамка: `1px solid var(--ds-color-stroke-default)`
-    - фон: `var(--ds-color-brand-neutral-default)`
+    - рамка: `1px solid var(--ds-color-stroke-default, #e0e0e0)`
+    - фон: `var(--ds-color-brand-neutral-default, #ffffff)`
     - тень: `var(--ds-shadow-shadows-08-dp-s)`
 - Модификаторы (что меняет каждый):
-    - `--time-grid`: направление `column`, align-items `center`, color `var(--ds-color-chips-input-error-cursor-color)`
-    - `--time-line`: направление `row`, color `var(--ds-color-chips-input-error-cursor-color)`
+    - `--time-grid`: направление `column`, align-items `center`, color `var(--ds-color-text-primary, #333333)`
+    - `--time-line`: направление `row`, color `var(--ds-color-text-primary, #333333)`
 - Разметка:
 
 ```html
@@ -7875,11 +7230,12 @@
 ```css
 /* Timepicker [58982:9858] — 2 вариантов; оси: Type */
 .ds-timepicker {
+  width: fit-content;
   display: flex;
-  padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
+  padding: var(--ds-size-2x) 0 var(--ds-size-2x) 0;
   border-radius: var(--ds-size-3x);
-  background: var(--ds-color-brand-neutral-default);
-  border: 1px solid var(--ds-color-stroke-default);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
+  border: 1px solid var(--ds-color-stroke-default, #e0e0e0);
   box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -7889,7 +7245,7 @@
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
   white-space: nowrap;
 }
 .ds-timepicker__icon {
@@ -7917,208 +7273,16 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom);
+  padding: var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px);
 }
 .ds-timepicker--time-grid {
   flex-direction: column;
   align-items: center;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-timepicker--time-line {
   flex-direction: row;
-  color: var(--ds-color-chips-input-error-cursor-color);
-}
-```
-</details>
-
-#### Title variant `[17034:68611]` — 1 вариантов
-- Прочие свойства: Name#53575:0 (BOOLEAN), Size#53575:1 (BOOLEAN), State#53575:2 (BOOLEAN), Style#53575:3 (BOOLEAN)
-- Размеры и параметры:
-    - высота: минимум `140px`, растёт по контенту
-    - ширина: по контенту (hug)
-- Разметка:
-
-```html
-<div class="ds-title-variant">
-  <div class="ds-title-variant__body-4"></div>
-  <div class="ds-title-variant__body-5"></div>
-  <div class="ds-title-variant__body-6"></div>
-  <div class="ds-title-variant__body-7"></div>
-  <span class="ds-title-variant__label">Текст</span>
-  <div class="ds-title-variant__mode"></div>
-  <div class="ds-title-variant__size"></div>
-</div>
-```
-<details><summary>CSS компонента</summary>
-
-```css
-/* Title variant [17034:68611] — 1 вариантов; оси: — */
-.ds-title-variant {
-  min-height: 140px;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-title-variant__label {
-  font-size: var(--ds-font-header-s-20-normal-medium-size);
-  line-height: var(--ds-font-header-s-20-normal-medium-line);
-  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
-  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
-  white-space: nowrap;
-}
-.ds-title-variant__size {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2-5x);
-  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
-}
-.ds-title-variant__body-4 {
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-super-dark);
-  font-size: var(--ds-font-header-s-20-normal-medium-size);
-  line-height: var(--ds-font-header-s-20-normal-medium-line);
-  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
-  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
-}
-.ds-title-variant__body-6 {
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-darker);
-  font-size: var(--ds-font-body-m-16-normal-regular-size);
-  line-height: var(--ds-font-body-m-16-normal-regular-line);
-  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
-  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
-}
-.ds-title-variant__body-7 {
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-darker);
-  font-size: var(--ds-font-body-m-16-normal-regular-size);
-  line-height: var(--ds-font-body-m-16-normal-regular-line);
-  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
-  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
-}
-.ds-title-variant__body-5 {
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-darker);
-  font-size: var(--ds-font-body-m-16-normal-regular-size);
-  line-height: var(--ds-font-body-m-16-normal-regular-line);
-  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
-  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
-}
-.ds-title-variant__mode {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2-5x);
-  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
-}
-```
-</details>
-
-#### Toggle buttons `[16992:8639]` — 5 вариантов
-- **Type** (VARIANT): 1 button, 2 buttons, 3 buttons, 3 text, Text
-- Размеры и параметры:
-    - высота: минимум `var(--ds-size-9x)`, растёт по контенту
-    - ширина: по контенту (hug)
-    - внутренние отступы: `var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x)`
-    - промежуток между элементами: `var(--ds-size-2-5x)`
-    - скругление: `var(--ds-size-0-5x)`
-- Модификаторы (что меняет каждый):
-    - `--1-button`: фон `var(--ds-color-expansion-panel-block-collaps-content-background)`
-    - `--2-buttons`: промежуток между элементами `var(--ds-size-1x)`, фон `var(--ds-color-surface-default)`
-    - `--3-buttons`: промежуток между элементами `var(--ds-size-1x)`, фон `var(--ds-color-surface-default)`
-    - `--3-text`: скругление `var(--ds-size-1x)`, рамка `1px solid var(--ds-color-stroke-default)`, color `var(--ds-color-chips-input-focus-border-color)`
-    - `--text`: внутренние отступы `var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x)`, фон `var(--ds-color-expansion-panel-block-collaps-content-background)`, color `var(--ds-color-chips-input-focus-border-color)`, рамка `none`
-- Разметка:
-
-```html
-<div class="ds-toggle-buttons ds-toggle-buttons--1-button">
-  <span class="ds-toggle-buttons__icon"><!-- SVG-иконка ДС --></span>
-  <span class="ds-toggle-buttons__label">Текст</span>
-  <div class="ds-toggle-buttons__notifications"></div>
-  <div class="ds-toggle-buttons__vector"></div>
-</div>
-```
-<details><summary>CSS компонента</summary>
-
-```css
-/* Toggle buttons [16992:8639] — 5 вариантов; оси: Type */
-.ds-toggle-buttons {
-  min-height: var(--ds-size-9x);
-  display: flex;
-  flex-direction: row;
-  padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x);
-  gap: var(--ds-size-2-5x);
-  border-radius: var(--ds-size-0-5x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-toggle-buttons__label {
-  font-size: var(--ds-font-body-s-14-normal-regular-size);
-  line-height: var(--ds-font-body-s-14-normal-regular-line);
-  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
-  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-focus-border-color);
-  white-space: nowrap;
-}
-.ds-toggle-buttons__icon {
-  flex-shrink: 0;
-  width: var(--ds-size-6x);
-  height: var(--ds-size-6x);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-toggle-buttons__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.ds-toggle-buttons__icon svg path {
-  fill: currentColor;
-}
-.ds-toggle-buttons__notifications {
-  height: var(--ds-size-6x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-toggle-buttons__vector {
-  height: var(--ds-size-6x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-toggle-buttons--1-button {
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-}
-.ds-toggle-buttons--text {
-  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-  color: var(--ds-color-chips-input-focus-border-color);
-  border: none;
-  box-shadow: none;
-}
-.ds-toggle-buttons--2-buttons {
-  gap: var(--ds-size-1x);
-  background: var(--ds-color-surface-default);
-}
-.ds-toggle-buttons--3-buttons {
-  gap: var(--ds-size-1x);
-  background: var(--ds-color-surface-default);
-}
-.ds-toggle-buttons--3-text {
-  border-radius: var(--ds-size-1x);
-  border: 1px solid var(--ds-color-stroke-default);
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 ```
 </details>
@@ -8129,7 +7293,7 @@
 - **For icon** (VARIANT): Off, On
 - Размеры и параметры:
     - высота: `44px` (фикс.)
-    - ширина: по контенту (hug)
+    - ширина: `fit-content` (фикс.)
     - промежуток между элементами: `var(--ds-size-2-5x)`
 - Модификаторы (что меняет каждый):
     - `--2`: направление `row`, направление `column`, align-items `center`
@@ -8149,6 +7313,7 @@
 /* Tree [59564:1473] — 8 вариантов; оси: Level, Mode, For icon */
 .ds-tree {
   height: 44px;
+  width: fit-content;
   display: flex;
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
@@ -8176,12 +7341,13 @@
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  padding: 11px 0 0 var(--ds-size-5x);
+  padding: 0 0 var(--ds-size-5x) 11px;
 }
 .ds-tree__separator-stroke {
   height: 100%;
   display: flex;
   flex-direction: row;
+  background: #d7d8d9;
 }
 .ds-tree--2.ds-tree--end.ds-tree--on {
   flex-direction: row;
@@ -8218,15 +7384,15 @@
 - **Mode** (VARIANT): End, End-long, Middle, Middle-long, Start
 - Размеры и параметры:
     - высота: `44px` (фикс.)
-    - ширина: по контенту (hug)
-    - внутренние отступы: `11px 0 0 var(--ds-size-5x)`
+    - ширина: `fit-content` (фикс.)
+    - внутренние отступы: `0 0 var(--ds-size-5x) 11px`
     - промежуток между элементами: `var(--ds-size-2-5x)`
 - Модификаторы (что меняет каждый):
-    - `--end`: направление `row`, align-items `center`, направление `column`, внутренние отступы `11px 0 0 21px`
-    - `--end-long`: направление `column`, внутренние отступы `11px 0 0 21px`
-    - `--middle`: направление `row`, align-items `center`, внутренние отступы `11px 0 0 0`
-    - `--middle-long`: направление `row`, align-items `center`, внутренние отступы `11px 0 0 0`
-    - `--start`: направление `row`, align-items `center`, внутренние отступы `11px var(--ds-size-3x) 0 0`
+    - `--end`: направление `row`, align-items `center`, ширина `48px`, направление `column`
+    - `--end-long`: ширина `48px`, направление `column`, внутренние отступы `0 0 21px 11px`
+    - `--middle`: направление `row`, align-items `center`, внутренние отступы `0 0 0 11px`, ширина `48px`
+    - `--middle-long`: ширина `48px`, направление `row`, align-items `center`, внутренние отступы `0 0 0 11px`
+    - `--start`: ширина `var(--ds-size-6x)`, направление `row`, align-items `center`, внутренние отступы `0 var(--ds-size-3x) 0 11px`
 - Разметка:
 
 ```html
@@ -8241,7 +7407,8 @@
 .ds-tree-item {
   height: 44px;
   display: flex;
-  padding: 11px 0 0 var(--ds-size-5x);
+  width: fit-content;
+  padding: 0 0 var(--ds-size-5x) 11px;
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -8250,29 +7417,33 @@
   height: 100%;
   display: flex;
   flex-direction: row;
+  background: #d7d8d9;
 }
 .ds-tree-item--end {
   flex-direction: row;
   align-items: center;
 }
 .ds-tree-item--end-long {
+  width: 48px;
   flex-direction: column;
-  padding: 11px 0 0 21px;
+  padding: 0 0 21px 11px;
 }
 .ds-tree-item--middle {
   flex-direction: row;
   align-items: center;
-  padding: 11px 0 0 0;
+  padding: 0 0 0 11px;
 }
 .ds-tree-item--middle-long {
+  width: 48px;
   flex-direction: row;
   align-items: center;
-  padding: 11px 0 0 0;
+  padding: 0 0 0 11px;
 }
 .ds-tree-item--start {
+  width: var(--ds-size-6x);
   flex-direction: row;
   align-items: center;
-  padding: 11px var(--ds-size-3x) 0 0;
+  padding: 0 var(--ds-size-3x) 0 11px;
 }
 ```
 </details>
@@ -8303,7 +7474,6 @@
 | Arrow select | `.ds-arrow-select` |
 | Autocomplete form | `.ds-autocomplete-form` · `--empty` `--populated` `--empty` `--populated` `--populated` `--empty` `--empty` `--populated` `--populated` `--disabled` · :disabled, :focus, :hover |
 | Backdrop | `.ds-backdrop` |
-| Button New | `.ds-button-new` · `--btn-36` `--btn-28` |
 | Button toggle | `.ds-button-toggle` · `--s` `--xs` `--filled` `--outlined` `--outlined` `--filled` |
 | Checkbox label | `.ds-checkbox-label` · `--normal` `--normal` `--normal` `--error` `--error` `--error` `--disable` `--disable` `--disable` |
 | Chips | `.ds-chips` · `--s` `--s` `--outlined` `--outlined` `--outlined` `--outlined` `--outlined` `--outlined` `--filled` `--filled` `--filled` `--filled` `--filled` `--disabled` · :active, :disabled, :focus, :hover |
@@ -8311,18 +7481,13 @@
 | Chips Input | `.ds-chips-input` · `--s` `--s` `--disabled` · :disabled, :focus, :hover |
 | Chips Input | `.ds-chips-input-2` · `--s` `--disabled` · :disabled, :focus, :hover |
 | Chips input cell | `.ds-chips-input-cell` · `--disabled` · :disabled, :focus, :hover |
-| Chrome Header desktop | `.ds-chrome-header-desktop` |
-| Chrome Header mobile | `.ds-chrome-header-mobile` · `--off` `--on` |
-| Content | `.ds-content` |
 | Control arrow button | `.ds-control-arrow-button` · `--s` |
-| Control group number button | `.ds-control-group-number-button` · `--xs` |
-| Control number button | `.ds-control-number-button` · `--xs` `--xs` `--left` `--left` `--left` `--left` `--left` `--right` `--right` `--right` `--right` `--right` `--disabled` · :active, :disabled, :hover |
 | Control Panel | `.ds-control-panel` · `--control` `--week` `--calendar` |
 | Control Panel | `.ds-control-panel-2` · `--control` `--time` |
 | Datepicker | `.ds-datepicker` · `--day` `--year` `--month` |
 | Dialog content | `.ds-dialog-content` |
 | Dialog footer | `.ds-dialog-footer` |
-| Dialog header | `.ds-dialog-header` · `--text` `--picture` |
+| Dialog header | `.ds-dialog-header` · `--text` |
 | Dialog view | `.ds-dialog-view` |
 | Element | `.ds-element` · `--image-size` `--icon-size` `--icon-group` `--text-default` `--checkbox` `--radio-button` `--indicator` `--slide-toggle` `--counter` |
 | Element Form Field | `.ds-element-form-field` · `--input-cell` `--select-cell` `--chips-input-cell` |
@@ -8336,7 +7501,6 @@
 | Expansion content | `.ds-expansion-content` · `--true` `--false` |
 | Expansion group panel | `.ds-expansion-group-panel` · `--collaps` `--expand` |
 | Form field cell | `.ds-form-field-cell` |
-| Header components | `.ds-header-components` · `--default` `--mini` |
 | Hint container | `.ds-hint-container` · `--up` `--down` `--right` `--left` `--default` |
 | Hint content | `.ds-hint-content` · `--group-content` `--single-content` |
 | Hint footer | `.ds-hint-footer` · `--default` |
@@ -8344,8 +7508,7 @@
 | Icon group | `.ds-icon-group` · `--4x` |
 | Input cell | `.ds-input-cell` · `--disabled` · :disabled, :focus, :hover |
 | Input Datepicker | `.ds-input-datepicker` · `--empty` `--populated` |
-| Input for number | `.ds-input-for-number` · `--disabled` · :disabled, :hover |
-| Input number | `.ds-input-number` · `--xs` `--populated` `--empty` `--populated` `--populated` `--empty` `--populated` `--populated` `--empty` `--empty` `--disabled` · :disabled, :focus, :hover |
+| Input number | `.ds-input-number` · `--s` `--xs` `--xs` `--populated` `--empty` `--populated` `--populated` `--empty` `--populated` `--populated` `--empty` `--empty` `--disabled` · :disabled, :focus, :hover |
 | Input number_but icon | `.ds-input-number-but-icon` |
 | Input Timepicker | `.ds-input-timepicker` · `--empty` `--populated` |
 | List (Сontainer) | `.ds-list-container` · `--container` |
@@ -8354,11 +7517,9 @@
 | Logo Syrve | `.ds-logo-syrve` |
 | Menu (Container) | `.ds-menu-container` · `--container` |
 | Menu item | `.ds-menu-item` · `--disabled` · :active, :disabled, :hover |
-| Navigation Bar | `.ds-navigation-bar` |
 | Picture | `.ds-picture` |
-| Preview | `.ds-preview` |
 | Radio button label | `.ds-radio-button-label` · `--normal` `--normal` `--error` `--error` `--disable` `--disable` |
-| Scroll | `.ds-scroll` · `--first` `--middle` `--middle` `--last` · :hover |
+| Scroll | `.ds-scroll` · `--s` `--first` `--middle` `--middle` `--last` · :hover |
 | Scroll tabs | `.ds-scroll-tabs` · `--left` |
 | Search | `.ds-search` · `--s` `--s` `--xs` `--xs` `--disabled` · :disabled, :focus, :hover |
 | Select (Сontainer) | `.ds-select-container` · `--container` |
@@ -8373,7 +7534,6 @@
 | Snackbar | `.ds-snackbar` · `--single` `--single` `--complex` `--complex` |
 | State | `.ds-state` · :active, :hover |
 | Status | `.ds-status` · `--neutral` `--accent` `--positive` `--warning` `--negative` `--contrast-1` `--contrast-2` `--contrast-3` `--contrast-4` `--neutral` `--accent` `--positive` `--warning` `--negative` `--contrast-1` `--contrast-2` `--contrast-3` `--contrast-4` |
-| Status Bar | `.ds-status-bar` |
 | Table 2 lvl | `.ds-table-2-lvl` · `--table-cell-2-lvl` `--table-row-2-lvl` |
 | Table Chips Input | `.ds-table-chips-input` · `--default` `--hover` `--focus` `--focus-placeholder` `--vocus-value` `--error` `--error-hover` `--disable` |
 | Table content cell | `.ds-table-content-cell` · `--disabled` · :disabled, :hover |
@@ -8384,8 +7544,6 @@
 | Text UI | `.ds-text-ui` · `--disabled` · :disabled |
 | Textarea | `.ds-textarea` · `--populated` `--populated` `--empty` `--empty` `--populated` `--populated` `--empty` `--populated` `--empty` `--disabled` · :disabled, :focus, :hover |
 | Timepicker | `.ds-timepicker` · `--time-grid` `--time-line` |
-| Title variant | `.ds-title-variant` |
-| Toggle buttons | `.ds-toggle-buttons` · `--1-button` `--text` `--2-buttons` `--3-buttons` `--3-text` |
 | Tree | `.ds-tree` · `--2` `--2` `--3` `--3` `--2` `--2` `--3` `--3` |
 | Tree item | `.ds-tree-item` · `--end` `--end-long` `--middle` `--middle-long` `--start` |
 
@@ -12000,7 +11158,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   width: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -12024,7 +11182,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 
 /* Arrow list [55939:13307] — 13 вариантов; оси: Content */
@@ -12033,7 +11191,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   width: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -12057,7 +11215,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 
 /* Arrow menu [56090:1628] — 13 вариантов; оси: Content */
@@ -12066,7 +11224,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   width: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -12090,7 +11248,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 
 /* Arrow select [57735:17989] — 13 вариантов; оси: Content */
@@ -12099,7 +11257,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   width: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -12123,15 +11281,16 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 
 /* Autocomplete form [58107:8230] — 10 вариантов; оси: Variant, State */
 .ds-autocomplete-form {
   min-height: 48px;
+  width: 250px;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -12140,7 +11299,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-autocomplete-form__icon {
@@ -12162,51 +11321,50 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-autocomplete-form__input {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-form-field-gap-input-support);
+  gap: var(--ds-form-field-gap-input-support, 4px);
 }
 .ds-autocomplete-form__input-frame {
   height: 48px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-form-field-gap-input-frame);
-  padding: var(--ds-form-field-m-size-pad-input-left) var(--ds-form-field-m-size-pad-input-right) var(--ds-form-field-m-size-pad-input-top) var(--ds-form-field-m-size-pad-input-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  padding: var(--ds-form-field-m-size-pad-input-top, 12px) var(--ds-form-field-m-size-pad-input-right, 12px) var(--ds-form-field-m-size-pad-input-bottom, 12px) var(--ds-form-field-m-size-pad-input-left, 12px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-autocomplete-form__support {
   display: flex;
   flex-direction: row;
 }
 .ds-autocomplete-form--empty {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
 }
 .ds-autocomplete-form--populated {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 .ds-autocomplete-form--empty:hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-form-field-filled-hover-input-background-hover, #f5f5f5);
+  border: 1px solid var(--ds-color-form-field-filled-hover-border-color, #9e9e9e);
 }
 .ds-autocomplete-form--populated:hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-hover-label-text-color, #616161);
 }
 .ds-autocomplete-form--populated:focus-visible {
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-form-field-filled-focus-label-text-color, #448aff);
 }
 .ds-autocomplete-form--empty:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e);
 }
 .ds-autocomplete-form--empty.ds-autocomplete-form--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e);
 }
 .ds-autocomplete-form--populated:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-autocomplete-form--populated.ds-autocomplete-form--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-autocomplete-form--disabled {
   pointer-events: none;
@@ -12217,47 +11375,20 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-backdrop {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-backdrop-background);
+  background: var(--ds-color-backdrop-background, #333333);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-
-/* Button New [16321:6498] — 2 вариантов; оси: Type */
-.ds-button-new {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: var(--ds-shadow-shadows-01-dp-sl);
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2-5x) var(--ds-size-2-5x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-button-new__label {
-  font-size: var(--ds-typography-font-size-3-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-4x);
-  letter-spacing: 1.25px;
-  color: var(--ds-palette-neutral-950);
-  white-space: nowrap;
-}
-.ds-button-new--btn-36 {
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-  color: var(--ds-palette-neutral-950);
-}
-.ds-button-new--btn-28 {
-  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x);
-  background: var(--ds-color-chips-input-focus-border-color);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
 }
 
 /* Button toggle [17039:71554] — 12 вариантов; оси: Size, Type, Content */
 .ds-button-toggle {
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-toggle-gap);
-  padding: var(--ds-button-toggle-pad-left) var(--ds-button-toggle-pad-right) var(--ds-button-toggle-pad-top) var(--ds-button-toggle-pad-bottom);
-  border-radius: var(--ds-size-3x);
+  gap: var(--ds-button-toggle-gap, 4px);
+  padding: var(--ds-button-toggle-pad-top, 4px) var(--ds-button-toggle-pad-right, 4px) var(--ds-button-toggle-pad-bottom, 4px) var(--ds-button-toggle-pad-left, 4px);
+  border-radius: var(--ds-button-toggle-border-radius, 12px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -12266,7 +11397,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-button-accent-outlined-default-text-color, #448aff);
   white-space: nowrap;
 }
 .ds-button-toggle__icon {
@@ -12294,31 +11425,32 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-4x);
 }
 .ds-button-toggle--filled.ds-button-toggle--text {
-  background: var(--ds-color-button-toggle-filled-background);
-  color: var(--ds-color-chips-input-focus-border-color);
+  background: var(--ds-color-button-toggle-filled-background, #ffffff);
+  color: var(--ds-color-button-accent-outlined-default-text-color, #448aff);
   border: none;
   box-shadow: none;
 }
 .ds-button-toggle--outlined.ds-button-toggle--text {
-  background: var(--ds-color-button-toggle-outlined-background);
-  border: 1px solid var(--ds-color-button-toggle-outlined-border-color);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: var(--ds-color-button-toggle-outlined-background, #ffffff);
+  border: 1px solid var(--ds-color-button-toggle-outlined-border-color, #e0e0e0);
+  color: var(--ds-color-button-accent-filled-default-text-color, #ffffff);
   box-shadow: none;
 }
 .ds-button-toggle--outlined.ds-button-toggle--icon {
-  background: var(--ds-color-button-toggle-outlined-background);
-  border: 1px solid var(--ds-color-button-toggle-outlined-border-color);
+  background: var(--ds-color-button-toggle-outlined-background, #ffffff);
+  border: 1px solid var(--ds-color-button-toggle-outlined-border-color, #e0e0e0);
 }
 .ds-button-toggle--filled.ds-button-toggle--icon {
-  background: var(--ds-color-button-toggle-filled-background);
+  background: var(--ds-color-button-toggle-filled-background, #ffffff);
 }
 
 /* Checkbox label [53810:880] — 9 вариантов; оси: Variant, Type */
 .ds-checkbox-label {
   min-height: var(--ds-size-5x);
+  width: fit-content;
   display: flex;
   flex-direction: column;
-  gap: var(--ds-checkbox-label-gap-support);
+  gap: var(--ds-checkbox-label-gap-support, 4px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -12327,7 +11459,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-weight: var(--ds-typography-font-weight-regular);
   line-height: var(--ds-typography-line-height-5x);
   letter-spacing: 0.25px;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-checkbox-label-text-color, #333333);
   white-space: nowrap;
 }
 .ds-checkbox-label__icon {
@@ -12350,7 +11482,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-checkbox-label-gap);
+  gap: var(--ds-checkbox-label-gap, 8px);
 }
 .ds-checkbox-label__left {
   display: flex;
@@ -12366,55 +11498,56 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: var(--ds-checkbox-label-pad-left-support-7x) 0 0 0;
+  padding: 0 0 0 var(--ds-checkbox-label-pad-left-support-7x, 28px);
 }
 .ds-checkbox-label__support-text {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-checkbox-label-text-support-color);
+  background: var(--ds-color-checkbox-label-text-support-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-checkbox-label-text-support-color, #616161);
 }
 .ds-checkbox-label--normal.ds-checkbox-label--deselected {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-checkbox-label-text-color, #333333);
 }
 .ds-checkbox-label--normal.ds-checkbox-label--selected {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-checkbox-label-text-color, #333333);
 }
 .ds-checkbox-label--normal.ds-checkbox-label--inderterminate {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-checkbox-label-text-color, #333333);
 }
 .ds-checkbox-label--error.ds-checkbox-label--deselected {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-checkbox-label-text-color, #333333);
 }
 .ds-checkbox-label--error.ds-checkbox-label--selected {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-checkbox-label-text-color, #333333);
 }
 .ds-checkbox-label--error.ds-checkbox-label--inderterminate {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-checkbox-label-text-color, #333333);
 }
 .ds-checkbox-label--disable.ds-checkbox-label--deselected {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-checkbox-label-text-disable-color, #9e9e9e);
 }
 .ds-checkbox-label--disable.ds-checkbox-label--selected {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-checkbox-label-text-disable-color, #9e9e9e);
 }
 .ds-checkbox-label--disable.ds-checkbox-label--inderterminate {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-checkbox-label-text-disable-color, #9e9e9e);
 }
 
 /* Chips [17168:83542] — 18 вариантов; оси: Size, Type, State */
 .ds-chips {
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
   height: var(--ds-size-8x);
-  padding: var(--ds-chips-m-size-pad-left) var(--ds-chips-m-size-pad-right) var(--ds-chips-m-size-pad-top) var(--ds-chips-m-size-pad-bottom);
-  gap: var(--ds-chips-m-size-gap);
-  border-radius: var(--ds-size-3x);
+  padding: var(--ds-chips-m-size-pad-top, 6px) var(--ds-chips-m-size-pad-right, 8px) var(--ds-chips-m-size-pad-bottom, 6px) var(--ds-chips-m-size-pad-left, 8px);
+  gap: var(--ds-chips-m-size-gap, 8px);
+  border-radius: var(--ds-chips-m-size-border-radius, 12px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -12423,7 +11556,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-chips-text-color, #333333);
   white-space: nowrap;
 }
 .ds-chips__icon {
@@ -12452,7 +11585,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-chips__chip-container {
   display: flex;
@@ -12463,71 +11596,71 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-chips__chip-text {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-chips-text-color);
+  background: var(--ds-color-chips-text-color, #333333);
   font-size: var(--ds-font-body-s-14-normal-regular-size);
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-chips-text-color, #333333);
 }
 .ds-chips__close {
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-chips--s {
-  gap: var(--ds-chips-s-size-gap);
-  padding: var(--ds-chips-s-size-pad-left) var(--ds-chips-s-size-pad-right) var(--ds-chips-s-size-pad-top) var(--ds-chips-s-size-pad-bottom);
-  border-radius: var(--ds-size-2x);
+  gap: var(--ds-chips-s-size-gap, 4px);
+  padding: var(--ds-chips-s-size-pad-top, 4px) var(--ds-chips-s-size-pad-right, 6px) var(--ds-chips-s-size-pad-bottom, 4px) var(--ds-chips-s-size-pad-left, 6px);
+  border-radius: var(--ds-chips-s-size-border-radius, 8px);
 }
 .ds-chips--s .ds-chips__icon {
   width: var(--ds-size-4x);
   height: var(--ds-size-4x);
 }
 .ds-chips--outlined {
-  background: var(--ds-color-chips-outlined-default-background);
-  border: 1px solid var(--ds-color-chips-outlined-default-border-color);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  background: var(--ds-color-chips-outlined-default-background, #ffffff);
+  border: 1px solid var(--ds-color-chips-outlined-default-border-color, #e0e0e0);
+  color: var(--ds-color-chips-text-color, #333333);
 }
 .ds-chips--outlined:hover {
-  background: var(--ds-color-chips-outlined-hover-background);
-  border: 1px solid var(--ds-color-chips-outlined-hover-border-color);
+  background: var(--ds-color-chips-outlined-hover-background, #ffffff);
+  border: 1px solid var(--ds-color-chips-outlined-hover-border-color, #9e9e9e);
 }
 .ds-chips--outlined:focus-visible {
-  background: var(--ds-color-chips-outlined-focus-background);
+  background: var(--ds-color-chips-outlined-focus-background, #ffffff);
 }
 .ds-chips--outlined:active {
-  background: var(--ds-color-chips-outlined-press-background);
-  border: 1px solid var(--ds-color-chips-outlined-press-border-color);
+  background: var(--ds-color-chips-outlined-press-background, #e0e0e0);
+  border: 1px solid var(--ds-color-chips-outlined-press-border-color, #e0e0e0);
 }
 .ds-chips--outlined:disabled {
-  background: var(--ds-color-chips-disable-background-outlined);
-  border: 1px solid var(--ds-color-chips-disable-border-color);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-chips-disable-background-outlined, #ffffff);
+  border: 1px solid var(--ds-color-chips-disable-border-color, #ebebeb);
+  color: var(--ds-color-chips-disable-text-color, #9e9e9e);
 }
 .ds-chips--outlined.ds-chips--disabled {
-  background: var(--ds-color-chips-disable-background-outlined);
-  border: 1px solid var(--ds-color-chips-disable-border-color);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-chips-disable-background-outlined, #ffffff);
+  border: 1px solid var(--ds-color-chips-disable-border-color, #ebebeb);
+  color: var(--ds-color-chips-disable-text-color, #9e9e9e);
 }
 .ds-chips--filled {
-  background: var(--ds-color-chips-filled-default-background);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  background: var(--ds-color-chips-filled-default-background, #f8f9fc);
+  color: var(--ds-color-chips-text-color, #333333);
 }
 .ds-chips--filled:hover {
-  background: var(--ds-color-chips-filled-hover-background);
+  background: var(--ds-color-chips-filled-hover-background, #f5f5f5);
 }
 .ds-chips--filled:active {
-  background: var(--ds-color-chips-filled-press-background);
+  background: var(--ds-color-chips-filled-press-background, #e0e0e0);
 }
 .ds-chips--filled:disabled {
-  background: var(--ds-color-chips-disable-background-filled);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-chips-disable-background-filled, #ebebeb);
+  color: var(--ds-color-chips-disable-text-color, #9e9e9e);
 }
 .ds-chips--filled.ds-chips--disabled {
-  background: var(--ds-color-chips-disable-background-filled);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-chips-disable-background-filled, #ebebeb);
+  color: var(--ds-color-chips-disable-text-color, #9e9e9e);
 }
 .ds-chips--disabled {
   pointer-events: none;
@@ -12535,10 +11668,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 
 /* Chips group [55750:5485] — 2 вариантов; оси: Size */
 .ds-chips-group {
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-chips-gap-group);
+  gap: var(--ds-chips-gap-group, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -12547,7 +11681,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-chips-text-color, #333333);
   white-space: nowrap;
 }
 .ds-chips-group__icon {
@@ -12574,6 +11708,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 
 /* Chips Input [52916:14622] — 16 вариантов; оси: Size, State */
 .ds-chips-input {
+  width: 280px;
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-1x);
@@ -12585,7 +11720,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: #616161;
   white-space: nowrap;
 }
 .ds-chips-input__icon {
@@ -12608,11 +11743,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-chips-input__frame {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-chips-input-gap-chips-input-frame);
-  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-chips-input-m-size-pad-top) var(--ds-chips-input-m-size-pad-bottom);
+  gap: var(--ds-chips-input-gap-chips-input-frame, 4px);
+  padding: var(--ds-chips-input-m-size-pad-top, 4px) var(--ds-size-3x) var(--ds-chips-input-m-size-pad-bottom, 8px) var(--ds-size-3x);
   border-radius: var(--ds-size-3x);
-  background: var(--ds-color-chips-input-default-background);
-  border: 1px solid var(--ds-color-chips-input-default-border-color);
+  background: #f8f9fc;
+  border: 1px solid #e0e0e0;
 }
 .ds-chips-input__content {
   display: flex;
@@ -12629,33 +11764,33 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
-  padding: var(--ds-size-3x) var(--ds-size-3x) 0 0;
+  padding: 0 var(--ds-size-3x) 0 var(--ds-size-3x);
 }
 .ds-chips-input__hint {
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
-  padding: var(--ds-size-3x) var(--ds-size-3x) 0 0;
+  padding: 0 var(--ds-size-3x) 0 var(--ds-size-3x);
 }
 .ds-chips-input--s {
-  gap: var(--ds-form-field-gap-input-support);
+  gap: var(--ds-form-field-gap-input-support, 4px);
 }
 .ds-chips-input--s .ds-chips-input__icon {
   width: var(--ds-size-5x);
   height: var(--ds-size-5x);
 }
 .ds-chips-input:hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+  background: #f5f5f5;
+  border: 1px solid #9e9e9e;
 }
 .ds-chips-input:focus-visible {
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: #448aff;
 }
 .ds-chips-input:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: #9e9e9e;
 }
 .ds-chips-input.ds-chips-input--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: #9e9e9e;
 }
 .ds-chips-input--disabled {
   pointer-events: none;
@@ -12663,9 +11798,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 
 /* Chips Input [61382:55775] — 16 вариантов; оси: Size, State; ДУБЛЬ имени — второй сет «Chips Input», различать по node_id */
 .ds-chips-input-2 {
+  width: 280px;
   display: flex;
   flex-direction: column;
-  gap: var(--ds-form-field-gap-input-support);
+  gap: var(--ds-form-field-gap-input-support, 4px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -12674,7 +11810,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-chips-input-2__icon {
@@ -12697,11 +11833,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-chips-input-2__frame {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-form-field-gap-input-frame);
-  padding: var(--ds-form-field-m-size-pad-input-left) var(--ds-form-field-m-size-pad-input-right) var(--ds-form-field-m-size-pad-input-top) var(--ds-form-field-m-size-pad-input-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  padding: var(--ds-form-field-m-size-pad-input-top, 12px) var(--ds-form-field-m-size-pad-input-right, 12px) var(--ds-form-field-m-size-pad-input-bottom, 12px) var(--ds-form-field-m-size-pad-input-left, 12px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-chips-input-2__content {
   display: flex;
@@ -12712,36 +11848,35 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-chips-input-2__support {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-form-field-gap-input-support);
+  gap: var(--ds-form-field-gap-input-support, 4px);
 }
 .ds-chips-input-2__text {
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
-  padding: var(--ds-form-field-pad-support-left) var(--ds-form-field-pad-support-right) 0 0;
+  padding: 0 var(--ds-form-field-pad-support-right, 12px) 0 var(--ds-form-field-pad-support-left, 12px);
 }
 .ds-chips-input-2__hint {
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
-  padding: var(--ds-form-field-pad-support-left) var(--ds-form-field-pad-support-right) 0 0;
+  padding: 0 var(--ds-form-field-pad-support-right, 12px) 0 var(--ds-form-field-pad-support-left, 12px);
 }
 .ds-chips-input-2--s .ds-chips-input-2__icon {
   width: var(--ds-size-5x);
   height: var(--ds-size-5x);
 }
 .ds-chips-input-2:hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-hover-label-text-color, #616161);
 }
 .ds-chips-input-2:focus-visible {
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-form-field-filled-focus-label-text-color, #448aff);
 }
 .ds-chips-input-2:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-chips-input-2.ds-chips-input-2--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-chips-input-2--disabled {
   pointer-events: none;
@@ -12750,11 +11885,12 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 /* Chips input cell [60231:75648] — 8 вариантов; оси: State */
 .ds-chips-input-cell {
   min-height: var(--ds-size-10x);
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  padding: var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom);
+  padding: var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -12763,7 +11899,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: #616161;
   white-space: nowrap;
 }
 .ds-chips-input-cell__icon {
@@ -12787,10 +11923,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-chips-input-gap-chips-input-frame);
+  gap: var(--ds-chips-input-gap-chips-input-frame, 4px);
   border-radius: var(--ds-size-3x);
-  background: var(--ds-color-chips-input-default-background);
-  border: 1px solid var(--ds-color-chips-input-default-border-color);
+  background: #f8f9fc;
+  border: 1px solid #e0e0e0;
 }
 .ds-chips-input-cell__support {
   display: flex;
@@ -12798,176 +11934,24 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   gap: var(--ds-size-1x);
 }
 .ds-chips-input-cell:hover {
-  border: 1px solid var(--ds-color-table-cell-content-hover-border-color);
+  border: 1px solid var(--ds-color-table-cell-content-hover-border-color, #9e9e9e);
 }
 .ds-chips-input-cell:focus-visible {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: #333333;
 }
 .ds-chips-input-cell:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: #9e9e9e;
 }
 .ds-chips-input-cell.ds-chips-input-cell--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: #9e9e9e;
 }
 .ds-chips-input-cell--disabled {
   pointer-events: none;
 }
 
-/* Chrome Header desktop [56564:1013] — 1 вариантов; оси: — */
-.ds-chrome-header-desktop {
-  min-height: 86px;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-chrome-header-desktop__label {
-  font-size: var(--ds-typography-font-size-3x);
-  font-weight: var(--ds-typography-font-weight-regular);
-  line-height: 14.522727012634277px;
-  white-space: nowrap;
-}
-.ds-chrome-header-desktop__top {
-  height: 43px;
-  display: flex;
-  flex-direction: row;
-}
-.ds-chrome-header-desktop__tabs {
-  display: flex;
-  flex-direction: row;
-}
-.ds-chrome-header-desktop__application-controller {
-  height: 43px;
-  display: flex;
-  flex-direction: row;
-}
-.ds-chrome-header-desktop__base {
-  height: 43px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-}
-.ds-chrome-header-desktop__navigation {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-3x);
-}
-
-/* Chrome Header mobile [56564:1062] — 2 вариантов; оси: Dark */
-.ds-chrome-header-mobile {
-  height: 66px;
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-chrome-header-mobile__label {
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: 13px;
-  color: var(--ds-color-chips-input-error-cursor-color);
-  white-space: nowrap;
-}
-.ds-chrome-header-mobile__home {
-  height: var(--ds-size-6x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-chrome-header-mobile__spacer-8px {
-  height: var(--ds-size-2x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-chrome-header-mobile__address-field {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2x);
-  padding: 11px 11px 9px 9px;
-  border-radius: 17px;
-}
-.ds-chrome-header-mobile__lock {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-chrome-header-mobile__address {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ds-chrome-header-mobile__spacer-16px {
-  height: var(--ds-size-2x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-chrome-header-mobile__tabs {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-chrome-header-mobile__rectangle {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-  border-radius: 5px;
-  border: 1.5px solid var(--ds-color-chips-input-error-cursor-color);
-}
-.ds-chrome-header-mobile__1 {
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-chips-input-error-cursor-color);
-  font-size: var(--ds-typography-font-size-2-5x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: 11.71875px;
-  color: var(--ds-color-chips-input-error-cursor-color);
-}
-.ds-chrome-header-mobile__more {
-  height: var(--ds-size-6x);
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-}
-.ds-chrome-header-mobile__more-vert {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-chips-input-error-cursor-color);
-}
-.ds-chrome-header-mobile--off {
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-  color: var(--ds-color-chips-input-error-cursor-color);
-}
-.ds-chrome-header-mobile--on {
-  background: var(--ds-color-chips-input-error-cursor-color);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
-}
-
-/* Content [57375:12699] — 1 вариантов; оси: — */
-/* height из макета Figma: 750px — размер примера, задавайте по месту */
-.ds-content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--ds-space-4x);
-  padding: var(--ds-space-6x) var(--ds-space-6x) var(--ds-space-4x) var(--ds-space-6x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-content__label {
-  font-size: var(--ds-font-header-s-20-normal-regular-size);
-  line-height: var(--ds-font-header-s-20-normal-regular-line);
-  letter-spacing: var(--ds-font-header-s-20-normal-regular-spacing);
-  font-weight: var(--ds-font-header-s-20-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
-  white-space: nowrap;
-}
-
 /* Control arrow button [52868:3935] — 3 вариантов; оси: Size */
 .ds-control-arrow-button {
+  width: fit-content;
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-0-5x);
@@ -13000,126 +11984,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-3x);
 }
 
-/* Control group number button [53828:5569] — 2 вариантов; оси: Size */
-.ds-control-group-number-button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-0-25x);
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-palette-neutral-50);
-  border: 1px solid var(--ds-color-stroke-default);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-control-group-number-button__icon {
-  flex-shrink: 0;
-  width: var(--ds-size-4x);
-  height: var(--ds-size-4x);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-control-group-number-button__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.ds-control-group-number-button__icon svg path {
-  fill: currentColor;
-}
-.ds-control-group-number-button__icon-size {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-control-group-number-button--xs .ds-control-group-number-button__icon {
-  width: var(--ds-size-4x);
-  height: var(--ds-size-4x);
-}
-
-/* Control number button [53829:6130] — 16 вариантов; оси: Size, Type, State */
-.ds-control-number-button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-button-icon-gap);
-  padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2-5x) var(--ds-size-2-5x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-control-number-button__icon {
-  flex-shrink: 0;
-  width: var(--ds-size-4x);
-  height: var(--ds-size-4x);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-control-number-button__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.ds-control-number-button__icon svg path {
-  fill: currentColor;
-}
-.ds-control-number-button__icon-size {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-control-number-button__remove {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-}
-.ds-control-number-button--xs {
-  padding: var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x);
-}
-.ds-control-number-button--xs .ds-control-number-button__icon {
-  width: var(--ds-size-4x);
-  height: var(--ds-size-4x);
-}
-.ds-control-number-button--left {
-  background: var(--ds-color-button-icon-neutral-filled-default-background);
-}
-.ds-control-number-button--left:hover {
-  background: var(--ds-color-button-icon-neutral-filled-hover-background);
-}
-.ds-control-number-button--left:active {
-  background: var(--ds-color-button-icon-neutral-filled-press-background);
-}
-.ds-control-number-button--left:disabled {
-  background: var(--ds-color-button-icon-disable-background-filled);
-}
-.ds-control-number-button--left.ds-control-number-button--disabled {
-  background: var(--ds-color-button-icon-disable-background-filled);
-}
-.ds-control-number-button--right {
-  background: var(--ds-color-button-icon-neutral-filled-default-background);
-}
-.ds-control-number-button--right:hover {
-  background: var(--ds-color-button-icon-neutral-filled-hover-background);
-}
-.ds-control-number-button--right:active {
-  background: var(--ds-color-button-icon-neutral-filled-press-background);
-}
-.ds-control-number-button--right:disabled {
-  background: var(--ds-color-button-icon-disable-background-filled);
-}
-.ds-control-number-button--right.ds-control-number-button--disabled {
-  background: var(--ds-color-button-icon-disable-background-filled);
-}
-.ds-control-number-button--disabled {
-  pointer-events: none;
-}
-
 /* Control Panel [58501:4052] — 3 вариантов; оси: Type */
 .ds-control-panel {
   display: flex;
-  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
+  width: 280px;
+  padding: var(--ds-size-1x) 0 var(--ds-size-1x) 0;
   gap: 74px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -13129,7 +11998,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
   white-space: nowrap;
 }
 .ds-control-panel__icon {
@@ -13152,55 +12021,58 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   gap: var(--ds-size-2x);
-  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
-  border-radius: var(--ds-size-circular);
-  background: var(--ds-color-brand-neutral-default);
+  padding: var(--ds-size-2-5x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2x);
+  border-radius: var(--ds-radius-circular, 9999px);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
 }
 .ds-control-panel__month {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-text-primary);
+  background: var(--ds-color-text-primary, #333333);
   font-size: var(--ds-font-body-s-14-normal-medium-size);
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-control-panel__button-icon-group {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-group-gap);
+  gap: var(--ds-button-group-gap, 8px);
 }
 .ds-control-panel__button-icon {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-button-icon-gap);
-  padding: var(--ds-button-icon-m-size-pad-left) var(--ds-button-icon-m-size-pad-right) var(--ds-button-icon-m-size-pad-top) var(--ds-button-icon-m-size-pad-bottom);
-  border-radius: var(--ds-size-2x);
+  gap: var(--ds-button-icon-gap, 8px);
+  padding: var(--ds-button-icon-m-size-pad-top, 8px) var(--ds-button-icon-m-size-pad-right, 8px) var(--ds-button-icon-m-size-pad-bottom, 8px) var(--ds-button-icon-m-size-pad-left, 8px);
+  border-radius: var(--ds-button-icon-border-radius, 8px);
 }
 .ds-control-panel--control {
   flex-direction: row;
   align-items: center;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-control-panel--week {
+  width: fit-content;
   flex-direction: row;
-  padding: 0 0 var(--ds-size-0-5x) var(--ds-size-0-5x);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  padding: var(--ds-size-0-5x) 0 var(--ds-size-0-5x) 0;
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-control-panel--calendar {
+  width: fit-content;
   flex-direction: column;
   align-items: center;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  background: #ffffff;
+  color: var(--ds-color-text-primary, #333333);
 }
 
 /* Control Panel [58982:11018] — 2 вариантов; оси: Type; ДУБЛЬ имени — второй сет «Control Panel», различать по node_id */
 .ds-control-panel-2 {
   display: flex;
   flex-direction: row;
-  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
+  width: 280px;
+  padding: var(--ds-size-1x) 0 var(--ds-size-1x) 0;
   gap: 74px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -13210,7 +12082,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
   white-space: nowrap;
 }
 .ds-control-panel-2__icon {
@@ -13233,43 +12105,45 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   gap: var(--ds-size-2x);
-  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
-  border-radius: var(--ds-size-circular);
-  background: var(--ds-color-brand-neutral-default);
+  padding: var(--ds-size-2-5x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2x);
+  border-radius: var(--ds-radius-circular, 9999px);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
 }
 .ds-control-panel-2__month {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-text-primary);
+  background: var(--ds-color-text-primary, #333333);
   font-size: var(--ds-font-body-s-14-normal-regular-size);
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-control-panel-2__button-icon-group {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-icon-gap);
+  gap: var(--ds-button-icon-gap, 8px);
 }
 .ds-control-panel-2--control {
   align-items: center;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-control-panel-2--time {
-  padding: 0 0 var(--ds-size-0-5x) var(--ds-size-0-5x);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  width: fit-content;
+  padding: var(--ds-size-0-5x) 0 var(--ds-size-0-5x) 0;
+  color: var(--ds-color-text-primary, #333333);
 }
 
 /* Datepicker [58509:5439] — 3 вариантов; оси: Type */
 .ds-datepicker {
+  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
+  padding: var(--ds-size-2x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-4x);
   border-radius: var(--ds-size-3x);
-  border: 1px solid var(--ds-color-stroke-default);
+  border: 1px solid var(--ds-color-stroke-default, #e0e0e0);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -13278,7 +12152,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
   white-space: nowrap;
 }
 .ds-datepicker__icon {
@@ -13302,27 +12176,27 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
   align-items: center;
   gap: 74px;
-  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
+  padding: var(--ds-size-1x) 0 var(--ds-size-1x) 0;
 }
 .ds-datepicker__elements {
   display: flex;
   flex-direction: row;
   gap: var(--ds-size-2x);
-  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
-  border-radius: var(--ds-size-circular);
-  background: var(--ds-color-brand-neutral-default);
+  padding: var(--ds-size-2-5x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2x);
+  border-radius: var(--ds-radius-circular, 9999px);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
 }
 .ds-datepicker__button-icon-group {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-group-gap);
+  gap: var(--ds-button-group-gap, 8px);
 }
 .ds-datepicker__divider {
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-datepicker__week-6 {
   height: 48px;
@@ -13330,21 +12204,22 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
 }
 .ds-datepicker--day {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-datepicker--year {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-datepicker--month {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 
 /* Dialog content [53535:1369] — 1 вариантов; оси: State */
 .ds-dialog-content {
   min-height: 204px;
+  width: 500px;
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-dialog-background);
+  background: var(--ds-color-dialog-background, #ffffff);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -13353,7 +12228,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-m-16-normal-medium-line);
   letter-spacing: var(--ds-font-body-m-16-normal-medium-spacing);
   font-weight: var(--ds-font-body-m-16-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-dialog-content-title-color, #333333);
   white-space: nowrap;
 }
 .ds-dialog-content__icon {
@@ -13376,21 +12251,22 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom);
+  padding: var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px);
 }
 .ds-dialog-content__background {
   display: flex;
   flex-direction: column;
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-scroll-default-background);
+  border-radius: var(--ds-scroll-border-radius, 8px);
+  background: var(--ds-color-scroll-default-background, #fafafa);
 }
 
 /* Dialog footer [53749:638] — 1 вариантов; оси: State */
 .ds-dialog-footer {
   min-height: 69px;
+  width: 501px;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-dialog-background);
+  background: var(--ds-color-dialog-background, #ffffff);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -13399,7 +12275,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-button-accent-filled-default-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-dialog-footer__icon {
@@ -13422,30 +12298,31 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-dialog-footer__action {
   height: 68px;
   display: flex;
   flex-direction: column;
-  padding: var(--ds-dialog-footer-pad-left) var(--ds-dialog-footer-pad-right) var(--ds-dialog-footer-pad-top) var(--ds-dialog-footer-pad-bottom);
+  padding: var(--ds-dialog-footer-pad-top, 16px) var(--ds-dialog-footer-pad-right, 24px) var(--ds-dialog-footer-pad-bottom, 16px) var(--ds-dialog-footer-pad-left, 24px);
 }
 .ds-dialog-footer__button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-m-size-gap);
-  padding: var(--ds-button-m-size-pad-left) var(--ds-button-m-size-pad-right) var(--ds-button-m-size-pad-top) var(--ds-button-m-size-pad-bottom);
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-button-accent-filled-default-background);
+  gap: var(--ds-button-m-size-gap, 8px);
+  padding: var(--ds-button-m-size-pad-top, 8px) var(--ds-button-m-size-pad-right, 12px) var(--ds-button-m-size-pad-bottom, 8px) var(--ds-button-m-size-pad-left, 12px);
+  border-radius: var(--ds-button-border-radius, 8px);
+  background: var(--ds-color-button-accent-filled-default-background, #448aff);
   box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 
 /* Dialog header [53535:1322] — 2 вариантов; оси: Type */
 .ds-dialog-header {
+  width: 500px;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-dialog-background);
+  background: var(--ds-color-dialog-background, #ffffff);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -13454,7 +12331,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-header-s-20-normal-medium-line);
   letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
   font-weight: var(--ds-font-header-s-20-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-dialog-header-title-color, #333333);
   white-space: nowrap;
 }
 .ds-dialog-header__icon {
@@ -13476,38 +12353,36 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-dialog-header__title-container {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-dialog-header-gap);
+  gap: var(--ds-dialog-header-gap, 8px);
 }
 .ds-dialog-header__description {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-dialog-header-desc-color);
+  background: var(--ds-color-dialog-header-desc-color, #616161);
   font-size: var(--ds-font-body-m-16-normal-regular-size);
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-dialog-header-desc-color, #616161);
 }
 .ds-dialog-header__divider {
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-dialog-header--text {
-  color: var(--ds-color-chips-input-error-cursor-color);
-}
-.ds-dialog-header--picture {
-  width: 500px;
+  color: var(--ds-color-dialog-header-title-color, #333333);
 }
 
 /* Dialog view [52952:1285] — 1 вариантов; оси: State */
 .ds-dialog-view {
   min-height: 364px;
+  width: 500px;
   display: flex;
   flex-direction: column;
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-dialog-background);
+  border-radius: var(--ds-dialog-border-radius, 12px);
+  background: var(--ds-color-dialog-background, #ffffff);
   box-shadow: var(--ds-shadow-shadows-12-dp-m);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -13517,7 +12392,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-header-s-20-normal-medium-line);
   letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
   font-weight: var(--ds-font-header-s-20-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-dialog-header-title-color, #333333);
   white-space: nowrap;
 }
 .ds-dialog-view__icon {
@@ -13539,41 +12414,42 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-dialog-view__header {
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-dialog-background);
+  background: var(--ds-color-dialog-background, #ffffff);
 }
 .ds-dialog-view__divider {
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-dialog-view__content {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-dialog-background);
+  background: var(--ds-color-dialog-background, #ffffff);
 }
 .ds-dialog-view__scroll {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom);
+  padding: var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px);
 }
 .ds-dialog-view__footer {
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-dialog-background);
+  background: var(--ds-color-dialog-background, #ffffff);
 }
 .ds-dialog-view__action {
   height: 68px;
   display: flex;
   flex-direction: column;
-  padding: var(--ds-dialog-footer-pad-left) var(--ds-dialog-footer-pad-right) var(--ds-dialog-footer-pad-top) var(--ds-dialog-footer-pad-bottom);
+  padding: var(--ds-dialog-footer-pad-top, 16px) var(--ds-dialog-footer-pad-right, 24px) var(--ds-dialog-footer-pad-bottom, 16px) var(--ds-dialog-footer-pad-left, 24px);
 }
 
 /* Element [54104:20956] — 9 вариантов; оси: Content */
 .ds-element {
   display: flex;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
+  width: fit-content;
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -13583,7 +12459,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-brand-neutral-super-dark, #333333);
   white-space: nowrap;
 }
 .ds-element__icon {
@@ -13622,7 +12498,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 }
 .ds-element--text-default {
   flex-direction: row;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-brand-neutral-super-dark, #333333);
 }
 .ds-element--checkbox {
   flex-direction: row;
@@ -13631,22 +12507,24 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
 }
 .ds-element--indicator {
+  width: var(--ds-size-6x);
   flex-direction: row;
 }
 .ds-element--slide-toggle {
   flex-direction: row;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-slide-toggle-text-color, #333333);
 }
 .ds-element--counter {
   flex-direction: column;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-badge-text-color, #ffffff);
 }
 
 /* Element Form Field [60231:76795] — 3 вариантов; оси: Variant */
 .ds-element-form-field {
+  width: fit-content;
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -13655,7 +12533,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-element-form-field__input-cell {
@@ -13663,26 +12541,27 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  padding: var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom);
+  padding: var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px);
 }
 .ds-element-form-field__input {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-form-field-gap-input-support);
+  gap: var(--ds-form-field-gap-input-support, 4px);
 }
 .ds-element-form-field--input-cell {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 .ds-element-form-field--select-cell {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 .ds-element-form-field--chips-input-cell {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: #616161;
 }
 
 /* Element left [59851:11313] — 5 вариантов; оси: Style */
 .ds-element-left {
   min-height: var(--ds-size-5x);
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -13710,13 +12589,14 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 
 /* Element menu [56090:1611] — 8 вариантов; оси: Content */
 .ds-element-menu {
   display: flex;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
+  width: fit-content;
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -13726,7 +12606,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-brand-neutral-super-dark, #333333);
   white-space: nowrap;
 }
 .ds-element-menu__icon {
@@ -13761,7 +12641,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 }
 .ds-element-menu--text-default {
   flex-direction: row;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-brand-neutral-super-dark, #333333);
 }
 .ds-element-menu--checkbox {
   flex-direction: row;
@@ -13770,21 +12650,23 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
 }
 .ds-element-menu--indicator {
+  width: var(--ds-size-6x);
   flex-direction: row;
 }
 .ds-element-menu--slide-toggle {
   flex-direction: row;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-slide-toggle-text-color, #333333);
 }
 .ds-element-menu--counter {
   flex-direction: column;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-badge-text-color, #ffffff);
 }
 
 /* Element select [57735:17972] — 8 вариантов; оси: Content */
 .ds-element-select {
   display: flex;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
+  width: fit-content;
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -13794,7 +12676,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-brand-neutral-super-dark, #333333);
   white-space: nowrap;
 }
 .ds-element-select__icon {
@@ -13829,7 +12711,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 }
 .ds-element-select--text-default {
   flex-direction: row;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-brand-neutral-super-dark, #333333);
 }
 .ds-element-select--checkbox {
   flex-direction: row;
@@ -13838,22 +12720,23 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
 }
 .ds-element-select--indicator {
+  width: var(--ds-size-6x);
   flex-direction: row;
 }
 .ds-element-select--slide-toggle {
   flex-direction: row;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-slide-toggle-text-color, #333333);
 }
 .ds-element-select--counter {
   flex-direction: column;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-badge-text-color, #ffffff);
 }
 
 /* Element sidenav [56598:2991] — 2 вариантов; оси: Content */
 .ds-element-sidenav {
   height: var(--ds-size-5x);
-  display: flex;
   width: var(--ds-size-5x);
+  display: flex;
   border-radius: var(--ds-size-1x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -13864,7 +12747,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   letter-spacing: var(--ds-font-caption-m-10-normal-medium-spacing);
   font-weight: var(--ds-font-caption-m-10-normal-medium-weight);
   text-transform: capitalize;
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-text-accent, #448aff);
   white-space: nowrap;
 }
 .ds-element-sidenav__icon {
@@ -13890,21 +12773,22 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 }
 .ds-element-sidenav--collaps-icon {
   flex-direction: row;
-  background: var(--ds-color-sidenav-element-collaps-icon-background);
+  background: var(--ds-color-sidenav-element-collaps-icon-background, #36474e);
 }
 .ds-element-sidenav--avatar {
   flex-direction: column;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-0-5x) var(--ds-size-0-5x) 3px 3px;
-  color: var(--ds-color-chips-input-focus-border-color);
+  padding: 3px var(--ds-size-0-5x) 3px var(--ds-size-0-5x);
+  color: var(--ds-color-text-accent, #448aff);
 }
 
 /* Element step [55403:7248] — 12 вариантов; оси: Content, State */
 .ds-element-step {
   min-height: var(--ds-size-6x);
+  width: fit-content;
   display: flex;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -13914,7 +12798,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-brand-neutral-super-dark, #333333);
   white-space: nowrap;
 }
 .ds-element-step__icon {
@@ -13942,7 +12826,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-6x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-element-step--icon-size {
   flex-direction: row;
@@ -13950,19 +12834,19 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 }
 .ds-element-step--counter {
   flex-direction: column;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-brand-neutral-super-dark, #333333);
 }
 .ds-element-step--counter:hover {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-brand-neutral-default, #ffffff);
 }
 .ds-element-step--counter:active {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-brand-neutral-default, #ffffff);
 }
 .ds-element-step--counter:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-brand-neutral-neutral, #9e9e9e);
 }
 .ds-element-step--counter.ds-element-step--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-brand-neutral-neutral, #9e9e9e);
 }
 .ds-element-step--disabled {
   pointer-events: none;
@@ -13972,7 +12856,8 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-elements {
   display: flex;
   height: var(--ds-size-10x);
-  border-radius: var(--ds-size-circular);
+  width: var(--ds-size-10x);
+  border-radius: var(--ds-radius-circular, 9999px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -13981,162 +12866,166 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
   white-space: nowrap;
 }
 .ds-elements__range-highlight-start {
   height: var(--ds-size-10x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-palette-accent-50);
+  background: var(--ds-palette-accent-50, #f0f5ff);
 }
 .ds-elements__range-highlight-end {
   height: var(--ds-size-10x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-palette-accent-50);
+  background: var(--ds-palette-accent-50, #f0f5ff);
 }
 .ds-elements__range-highlight-middle {
   height: var(--ds-size-10x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-palette-accent-10);
+  background: var(--ds-palette-accent-10, #f5f9ff);
 }
 .ds-elements__date {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-text-primary);
+  background: var(--ds-color-text-primary, #333333);
   font-size: var(--ds-font-body-m-16-normal-regular-size);
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-elements--cell.ds-elements--today:disabled {
-  background: var(--ds-color-brand-neutral-lighter);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-brand-neutral-lighter, #e0e0e0);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--cell.ds-elements--today.ds-elements--disabled {
-  background: var(--ds-color-brand-neutral-lighter);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-brand-neutral-lighter, #e0e0e0);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--cell.ds-elements--default:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--cell.ds-elements--default.ds-elements--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--cell.ds-elements--range:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--cell.ds-elements--range.ds-elements--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--cell.ds-elements--selected:active {
-  background: var(--ds-color-button-accent-filled-press-background);
+  background: var(--ds-color-button-accent-filled-press-background, #2651b5);
 }
 .ds-elements--cell.ds-elements--today:active {
-  background: var(--ds-color-brand-neutral-lighter);
+  background: var(--ds-color-brand-neutral-lighter, #e0e0e0);
 }
 .ds-elements--cell.ds-elements--default:active {
-  background: var(--ds-color-brand-neutral-lighter);
+  background: var(--ds-color-brand-neutral-lighter, #e0e0e0);
 }
 .ds-elements--cell.ds-elements--today:hover {
-  background: var(--ds-color-brand-neutral-super-light);
+  background: var(--ds-color-brand-neutral-super-light, #f5f5f5);
 }
 .ds-elements--cell.ds-elements--default:hover {
-  background: var(--ds-color-brand-neutral-super-light);
+  background: var(--ds-color-brand-neutral-super-light, #f5f5f5);
 }
 .ds-elements--cell.ds-elements--range {
   flex-direction: row;
   align-items: center;
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-elements--cell.ds-elements--selected {
   flex-direction: column;
   align-items: center;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-text-inversive, #ffffff);
 }
 .ds-elements--year.ds-elements--selected {
+  width: fit-content;
   flex-direction: column;
   align-items: center;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-text-inversive, #ffffff);
 }
 .ds-elements--cell.ds-elements--today {
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-brand-neutral-default);
-  border: 1px solid var(--ds-color-stroke-hover);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
+  border: 1px solid var(--ds-color-stroke-hover, #9e9e9e);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-elements--cell.ds-elements--default {
   flex-direction: column;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-2-5x) var(--ds-size-2-5x) var(--ds-size-2x) var(--ds-size-2x);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  padding: var(--ds-size-2x) var(--ds-size-2-5x) var(--ds-size-2x) var(--ds-size-2-5x);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-elements--year.ds-elements--default:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--year.ds-elements--default.ds-elements--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--year.ds-elements--today:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--year.ds-elements--today.ds-elements--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--year.ds-elements--default:active {
-  background: var(--ds-color-brand-neutral-lighter);
+  background: var(--ds-color-brand-neutral-lighter, #e0e0e0);
 }
 .ds-elements--year.ds-elements--today:active {
-  background: var(--ds-color-brand-neutral-lighter);
+  background: var(--ds-color-brand-neutral-lighter, #e0e0e0);
 }
 .ds-elements--year.ds-elements--default:hover {
-  background: var(--ds-color-brand-neutral-super-light);
+  background: var(--ds-color-brand-neutral-super-light, #f5f5f5);
 }
 .ds-elements--year.ds-elements--today:hover {
-  background: var(--ds-color-brand-neutral-super-light);
+  background: var(--ds-color-brand-neutral-super-light, #f5f5f5);
 }
 .ds-elements--year.ds-elements--default {
+  width: fit-content;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  padding: var(--ds-size-2x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-4x);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-elements--year.ds-elements--today {
+  width: fit-content;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
-  background: var(--ds-color-brand-neutral-default);
-  border: 1px solid var(--ds-color-stroke-hover);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  padding: var(--ds-size-2x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-4x);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
+  border: 1px solid var(--ds-color-stroke-hover, #9e9e9e);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-elements--month.ds-elements--default {
+  width: fit-content;
   flex-direction: row;
   gap: var(--ds-size-2x);
-  padding: var(--ds-size-2x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2-5x);
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  padding: var(--ds-size-2-5x) var(--ds-size-1x) var(--ds-size-2-5x) var(--ds-size-2x);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-elements--month.ds-elements--default:hover {
-  background: var(--ds-color-brand-neutral-super-light);
+  background: var(--ds-color-brand-neutral-super-light, #f5f5f5);
 }
 .ds-elements--month.ds-elements--default:active {
-  background: var(--ds-color-brand-neutral-lighter);
+  background: var(--ds-color-brand-neutral-lighter, #e0e0e0);
 }
 .ds-elements--month.ds-elements--default:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--month.ds-elements--default.ds-elements--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements--disabled {
   pointer-events: none;
@@ -14145,6 +13034,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 /* Elements [58982:9594] — 8 вариантов; оси: Variant, State; ДУБЛЬ имени — второй сет «Elements», различать по node_id */
 .ds-elements-2 {
   min-height: var(--ds-size-10x);
+  width: fit-content;
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -14155,53 +13045,53 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-text-inversive, #ffffff);
   white-space: nowrap;
 }
 .ds-elements-2__range-highlight-start {
   height: var(--ds-size-10x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-palette-accent-50);
+  background: var(--ds-palette-accent-50, #f0f5ff);
 }
 .ds-elements-2__range-highlight-end {
   height: var(--ds-size-10x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-palette-accent-50);
+  background: var(--ds-palette-accent-50, #f0f5ff);
 }
 .ds-elements-2__date {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
-  border-radius: var(--ds-size-circular);
-  background: var(--ds-color-button-accent-filled-default-background);
+  padding: var(--ds-size-2x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-4x);
+  border-radius: var(--ds-radius-circular, 9999px);
+  background: var(--ds-color-button-accent-filled-default-background, #448aff);
 }
 .ds-elements-2--selected {
   flex-direction: column;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-text-inversive, #ffffff);
 }
 .ds-elements-2--default:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements-2--default.ds-elements-2--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-disable, #9e9e9e);
 }
 .ds-elements-2--default:active {
-  background: var(--ds-color-brand-neutral-lighter);
+  background: var(--ds-color-brand-neutral-lighter, #e0e0e0);
 }
 .ds-elements-2--default:hover {
-  background: var(--ds-color-brand-neutral-super-light);
+  background: var(--ds-color-brand-neutral-super-light, #f5f5f5);
 }
 .ds-elements-2--default {
   flex-direction: row;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-4x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-2x);
-  border-radius: var(--ds-size-circular);
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  padding: var(--ds-size-2x) var(--ds-size-4x) var(--ds-size-2x) var(--ds-size-4x);
+  border-radius: var(--ds-radius-circular, 9999px);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-elements-2--disabled {
   pointer-events: none;
@@ -14209,10 +13099,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 
 /* Expansion content [61361:99603] — 2 вариантов; оси: Padding off/on */
 .ds-expansion-content {
+  width: 597px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--ds-expansion-panel-content-pad-left) var(--ds-expansion-panel-content-pad-right) var(--ds-expansion-panel-content-pad-top) var(--ds-expansion-panel-content-pad-bottom);
+  padding: var(--ds-expansion-panel-content-pad-top, 16px) var(--ds-expansion-panel-content-pad-right, 16px) var(--ds-expansion-panel-content-pad-bottom, 16px) var(--ds-expansion-panel-content-pad-left, 16px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -14221,21 +13112,22 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+  color: var(--ds-color-expansion-panel-content-text-color, #333333);
   white-space: nowrap;
 }
 .ds-expansion-content--true {
-  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+  color: var(--ds-color-expansion-panel-content-text-color, #333333);
 }
 .ds-expansion-content--false {
-  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+  color: var(--ds-color-expansion-panel-content-text-color, #333333);
 }
 
 /* Expansion group panel [56155:1676] — 2 вариантов; оси: Type ? */
 .ds-expansion-group-panel {
+  width: 597px;
   display: flex;
   flex-direction: column;
-  gap: var(--ds-expansion-panel-collaps-gap-group);
+  gap: var(--ds-expansion-panel-collaps-gap-group, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -14244,91 +13136,46 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+  color: var(--ds-color-expansion-panel-collaps-text-color, #333333);
   white-space: nowrap;
 }
 .ds-expansion-group-panel--collaps {
-  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+  color: var(--ds-color-expansion-panel-collaps-text-color, #333333);
 }
 .ds-expansion-group-panel--expand {
-  color: var(--ds-color-expansion-panel-block-collaps-content-text-color);
+  color: var(--ds-color-expansion-panel-collaps-text-color, #333333);
 }
 
 /* Form field cell [60220:72732] — 1 вариантов; оси: Variant */
 .ds-form-field-cell {
   min-height: var(--ds-size-10x);
+  width: fit-content;
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-form-field-cell__table-content-chips-input {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-form-field-cell__table-content {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  padding: var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom);
-}
-
-/* Header components [53535:1244] — 2 вариантов; оси: Type */
-.ds-header-components {
-  display: flex;
-  padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x);
-  border-radius: var(--ds-size-8x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-header-components__label {
-  font-size: var(--ds-typography-font-size-6x);
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-line-height-6x);
-  letter-spacing: 0.18000000715255737px;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
-  white-space: nowrap;
-}
-.ds-header-components__container {
-  display: flex;
-  flex-direction: row;
-  gap: var(--ds-size-6x);
-  padding: var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x) var(--ds-size-6x);
-  border-radius: var(--ds-size-6x);
-  background: var(--ds-palette-neutral-50);
-}
-.ds-header-components__badge-group {
-  display: flex;
-  flex-direction: row;
-  gap: var(--ds-size-2x);
-}
-.ds-header-components__frame-1 {
-  display: flex;
-  flex-direction: column;
-  gap: var(--ds-size-2x);
-}
-.ds-header-components--default {
-  flex-direction: column;
-  background: var(--ds-color-brand-neutral-default);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
-}
-.ds-header-components--mini {
-  flex-direction: row;
-  gap: var(--ds-size-6x);
-  border-radius: var(--ds-size-6x);
-  background: var(--ds-palette-neutral-50);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  padding: var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px);
 }
 
 /* Hint container [54593:479] — 10 вариантов; оси: Size, Orientation */
 .ds-hint-container {
+  width: 250px;
   display: flex;
   align-items: center;
   box-shadow: var(--ds-shadow-shadows-08-dp-s);
-  border-radius: var(--ds-size-2x);
+  border-radius: var(--ds-hint-border-radius, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -14337,7 +13184,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-hint-container__icon {
@@ -14360,59 +13207,60 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-1x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-hint-background-color);
+  background: var(--ds-color-hint-background-color, #424242);
 }
 .ds-hint-container__header {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-hint-header-gap);
-  padding: var(--ds-hint-header-pad-left) var(--ds-hint-header-pad-right) var(--ds-hint-header-pad-top) var(--ds-hint-header-pad-bottom);
-  background: var(--ds-color-hint-background-color);
+  gap: var(--ds-hint-header-gap, 8px);
+  padding: var(--ds-hint-header-pad-top, 8px) var(--ds-hint-header-pad-right, 12px) var(--ds-hint-header-pad-bottom, 4px) var(--ds-hint-header-pad-left, 12px);
+  background: var(--ds-color-hint-background-color, #424242);
 }
 .ds-hint-container__content {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-hint-content-gap);
-  padding: var(--ds-hint-content-pad-left) var(--ds-hint-content-pad-right) var(--ds-hint-content-pad-top) var(--ds-hint-content-pad-bottom);
-  background: var(--ds-color-hint-background-color);
+  gap: var(--ds-hint-content-gap, 8px);
+  padding: var(--ds-hint-content-pad-top, 8px) var(--ds-hint-content-pad-right, 12px) var(--ds-hint-content-pad-bottom, 8px) var(--ds-hint-content-pad-left, 12px);
+  background: var(--ds-color-hint-background-color, #424242);
 }
 .ds-hint-container__footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-hint-footer-gap);
-  padding: var(--ds-hint-footer-pad-left) var(--ds-hint-footer-pad-right) var(--ds-hint-footer-pad-top) var(--ds-hint-footer-pad-bottom);
-  background: var(--ds-color-hint-background-color);
+  gap: var(--ds-hint-footer-gap, 12px);
+  padding: var(--ds-hint-footer-pad-top, 16px) var(--ds-hint-footer-pad-right, 12px) var(--ds-hint-footer-pad-bottom, 12px) var(--ds-hint-footer-pad-left, 12px);
+  background: var(--ds-color-hint-background-color, #424242);
 }
 .ds-hint-container--up {
   flex-direction: column;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-container--down {
   flex-direction: column;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-container--right {
   flex-direction: row;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-container--left {
   flex-direction: row;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-container--default {
   flex-direction: column;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 
 /* Hint content [54713:3325] — 2 вариантов; оси: Content */
 .ds-hint-content {
+  width: 250px;
   display: flex;
   flex-direction: row;
-  gap: var(--ds-hint-content-gap);
-  padding: var(--ds-hint-content-pad-left) var(--ds-hint-content-pad-right) var(--ds-hint-content-pad-top) var(--ds-hint-content-pad-bottom);
-  background: var(--ds-color-hint-background-color);
+  gap: var(--ds-hint-content-gap, 8px);
+  padding: var(--ds-hint-content-pad-top, 8px) var(--ds-hint-content-pad-right, 12px) var(--ds-hint-content-pad-bottom, 8px) var(--ds-hint-content-pad-left, 12px);
+  background: var(--ds-color-hint-background-color, #424242);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -14421,7 +13269,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-content-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-hint-content__icon {
@@ -14449,12 +13297,12 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-hint-content__block {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-hint-content-gap-content);
+  gap: var(--ds-hint-content-gap-content, 4px);
 }
 .ds-hint-content__clear {
   height: var(--ds-size-5x);
@@ -14465,25 +13313,26 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-hint-content--group-content {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-content-text-color, #ffffff);
 }
 .ds-hint-content--single-content {
   align-items: center;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-content-text-color, #ffffff);
 }
 
 /* Hint footer [54600:517] — 1 вариантов; оси: Content */
 .ds-hint-footer {
   min-height: 56px;
+  width: 250px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-hint-footer-gap);
-  padding: var(--ds-hint-footer-pad-left) var(--ds-hint-footer-pad-right) var(--ds-hint-footer-pad-top) var(--ds-hint-footer-pad-bottom);
-  background: var(--ds-color-hint-background-color);
+  gap: var(--ds-hint-footer-gap, 12px);
+  padding: var(--ds-hint-footer-pad-top, 16px) var(--ds-hint-footer-pad-right, 12px) var(--ds-hint-footer-pad-bottom, 12px) var(--ds-hint-footer-pad-left, 12px);
+  background: var(--ds-color-hint-background-color, #424242);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -14492,7 +13341,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-footer-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-hint-footer__icon {
@@ -14514,31 +13363,32 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-hint-footer__цвет-и-палитра {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-hint-footer-text-color);
+  background: var(--ds-color-hint-footer-text-color, #ffffff);
   font-size: var(--ds-font-body-s-14-normal-medium-size);
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-footer-text-color, #ffffff);
 }
 .ds-hint-footer__button-group {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-group-gap);
+  gap: var(--ds-button-group-gap, 8px);
 }
 .ds-hint-footer--default {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-footer-text-color, #ffffff);
 }
 
 /* Hint header [54594:2219] — 5 вариантов; оси: Style */
 .ds-hint-header {
   min-height: var(--ds-size-8x);
+  width: 250px;
   display: flex;
   flex-direction: row;
-  gap: var(--ds-hint-header-gap);
-  padding: var(--ds-hint-header-pad-left) var(--ds-hint-header-pad-right) var(--ds-hint-header-pad-top) var(--ds-hint-header-pad-bottom);
-  background: var(--ds-color-hint-background-color);
+  gap: var(--ds-hint-header-gap, 8px);
+  padding: var(--ds-hint-header-pad-top, 8px) var(--ds-hint-header-pad-right, 12px) var(--ds-hint-header-pad-bottom, 4px) var(--ds-hint-header-pad-left, 12px);
+  background: var(--ds-color-hint-background-color, #424242);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -14547,7 +13397,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-hint-header__icon {
@@ -14575,17 +13425,17 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-hint-header__title {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-hint-header-text-color);
+  background: var(--ds-color-hint-header-text-color, #ffffff);
   font-size: var(--ds-font-body-s-14-normal-medium-size);
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-header__clear {
   height: var(--ds-size-5x);
@@ -14596,31 +13446,32 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-hint-header--neutral {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-header--primary {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-header--secondary {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-header--warning {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 .ds-hint-header--error {
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 
 /* Icon group [53467:1060] — 2 вариантов; оси: Size gap */
 .ds-icon-group {
   min-height: var(--ds-size-5x);
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-icon-size-gap-group-2x);
+  gap: var(--ds-icon-size-gap-group-2x, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -14641,17 +13492,18 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   fill: currentColor;
 }
 .ds-icon-group--4x {
-  gap: var(--ds-icon-size-gap-group-4x);
+  gap: var(--ds-icon-size-gap-group-4x, 16px);
 }
 
 /* Input cell [60229:74436] — 8 вариантов; оси: State */
 .ds-input-cell {
   min-height: var(--ds-size-9x);
+  width: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  padding: var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom);
+  padding: var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -14660,7 +13512,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-input-cell__icon {
@@ -14683,27 +13535,27 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-form-field-gap-input-frame);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-input-cell__support {
   display: flex;
   flex-direction: row;
 }
 .ds-input-cell:hover {
-  background: var(--ds-palette-neutral-50);
-  border: 1px solid var(--ds-color-table-cell-content-hover-border-color);
+  background: var(--ds-palette-neutral-50, #f5f5f5);
+  border: 1px solid var(--ds-color-table-cell-content-hover-border-color, #9e9e9e);
 }
 .ds-input-cell:focus-visible {
-  color: var(--ds-color-input-filled-focus-border-color);
+  color: var(--ds-color-form-field-filled-focus-label-text-color, #448aff);
 }
 .ds-input-cell:disabled {
-  color: var(--ds-color-input-filled-disable-icon-color-disable);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-input-cell.ds-input-cell--disabled {
-  color: var(--ds-color-input-filled-disable-icon-color-disable);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-input-cell--disabled {
   pointer-events: none;
@@ -14712,9 +13564,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 /* Input Datepicker [58548:4764] — 2 вариантов; оси: Type */
 .ds-input-datepicker {
   min-height: 48px;
+  width: 250px;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-input-input-outlined-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -14723,7 +13576,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-input-datepicker__icon {
@@ -14747,100 +13600,28 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-form-field-gap-input-frame);
-  padding: var(--ds-form-field-m-size-pad-input-left) var(--ds-form-field-m-size-pad-input-right) var(--ds-form-field-m-size-pad-input-top) var(--ds-form-field-m-size-pad-input-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  padding: var(--ds-form-field-m-size-pad-input-top, 12px) var(--ds-form-field-m-size-pad-input-right, 12px) var(--ds-form-field-m-size-pad-input-bottom, 12px) var(--ds-form-field-m-size-pad-input-left, 12px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-input-datepicker__support {
   display: flex;
   flex-direction: row;
 }
 .ds-input-datepicker--empty {
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
 }
 .ds-input-datepicker--populated {
-  color: var(--ds-color-input-input-label-text-color);
-}
-
-/* Input for number [53827:5155] — 10 вариантов; оси: Size, State */
-.ds-input-for-number {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-input-number-input-gap);
-  border-radius: var(--ds-size-2x);
-  padding: var(--ds-input-number-input-pad-left) var(--ds-input-number-input-pad-right) var(--ds-input-number-input-pad-top) var(--ds-input-number-input-pad-bottom);
-  background: var(--ds-color-input-number-input-background);
-  border: 1px solid var(--ds-color-input-number-input-default-border-color);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-input-for-number__label {
-  font-size: var(--ds-font-body-s-14-normal-regular-size);
-  line-height: var(--ds-font-body-s-14-normal-regular-line);
-  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
-  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-input-filled-default-input-text-color);
-  white-space: nowrap;
-}
-.ds-input-for-number__icon {
-  flex-shrink: 0;
-  width: var(--ds-size-5x);
-  height: var(--ds-size-5x);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-input-for-number__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.ds-input-for-number__icon svg path {
-  fill: currentColor;
-}
-.ds-input-for-number__icon-size {
-  height: var(--ds-size-5x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-input-for-number__info {
-  height: var(--ds-size-5x);
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-input-input-outlined-background);
-}
-.ds-input-for-number__content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--ds-form-field-gap-input-content);
-}
-.ds-input-for-number__text {
-  display: flex;
-  flex-direction: row;
-  gap: 3px;
-}
-.ds-input-for-number:hover {
-  border: 1px solid var(--ds-color-input-number-input-hover-border-color);
-}
-.ds-input-for-number:disabled {
-  border: 1px solid var(--ds-color-input-number-input-disable-border-color);
-  color: var(--ds-color-input-filled-disable-icon-color-disable);
-}
-.ds-input-for-number.ds-input-for-number--disabled {
-  border: 1px solid var(--ds-color-input-number-input-disable-border-color);
-  color: var(--ds-color-input-filled-disable-icon-color-disable);
-}
-.ds-input-for-number--disabled {
-  pointer-events: none;
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 
 /* Input number [17193:84750] — 29 вариантов; оси: Size, Variant, State */
 .ds-input-number {
   display: flex;
   flex-direction: row;
+  width: 138px;
   gap: 18px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -14850,7 +13631,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-input-number__icon {
@@ -14874,15 +13655,21 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-form-field-gap-input-frame);
-  padding: var(--ds-form-field-m-size-pad-input-left) var(--ds-form-field-m-size-pad-input-right) var(--ds-form-field-m-size-pad-input-top) var(--ds-form-field-m-size-pad-input-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  padding: var(--ds-form-field-m-size-pad-input-top, 12px) var(--ds-form-field-m-size-pad-input-right, 12px) var(--ds-form-field-m-size-pad-input-bottom, 12px) var(--ds-form-field-m-size-pad-input-left, 12px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-input-number__support {
   display: flex;
   flex-direction: row;
+}
+.ds-input-number--s {
+  width: fit-content;
+}
+.ds-input-number--xs {
+  width: fit-content;
 }
 .ds-input-number--xs .ds-input-number__icon {
   width: var(--ds-size-6x);
@@ -14890,34 +13677,33 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 }
 .ds-input-number--populated {
   align-items: center;
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 .ds-input-number--empty {
   align-items: center;
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
 }
 .ds-input-number--populated:focus-visible {
-  color: var(--ds-color-input-filled-focus-border-color);
+  color: var(--ds-color-form-field-filled-focus-label-text-color, #448aff);
 }
 .ds-input-number--populated:hover {
-  background: var(--ds-color-input-filled-disable-input-background);
-  border: 1px solid var(--ds-color-input-filled-disable-icon-color-disable);
+  color: var(--ds-color-form-field-filled-hover-label-text-color, #616161);
 }
 .ds-input-number--empty:hover {
-  background: var(--ds-color-input-filled-disable-input-background);
-  border: 1px solid var(--ds-color-input-filled-disable-icon-color-disable);
+  background: var(--ds-color-form-field-filled-hover-input-background-hover, #f5f5f5);
+  border: 1px solid var(--ds-color-form-field-filled-hover-border-color, #9e9e9e);
 }
 .ds-input-number--populated:disabled {
-  color: var(--ds-color-input-filled-disable-icon-color-disable);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-input-number--populated.ds-input-number--disabled {
-  color: var(--ds-color-input-filled-disable-icon-color-disable);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-input-number--empty:disabled {
-  color: var(--ds-color-input-filled-disable-icon-color-disable);
+  color: var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e);
 }
 .ds-input-number--empty.ds-input-number--disabled {
-  color: var(--ds-color-input-filled-disable-icon-color-disable);
+  color: var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e);
 }
 .ds-input-number--disabled {
   pointer-events: none;
@@ -14926,6 +13712,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 /* Input number_but icon [56967:10506] — 1 вариантов; оси: — */
 .ds-input-number-but-icon {
   min-height: 56px;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-1x);
@@ -14937,7 +13724,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-input-number-but-icon__icon {
@@ -14966,10 +13753,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-icon-gap);
-  padding: var(--ds-button-icon-m-size-pad-left) var(--ds-button-icon-m-size-pad-right) var(--ds-button-icon-m-size-pad-top) var(--ds-button-icon-m-size-pad-bottom);
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-button-icon-neutral-filled-default-background);
+  gap: var(--ds-button-icon-gap, 8px);
+  padding: var(--ds-button-icon-m-size-pad-top, 8px) var(--ds-button-icon-m-size-pad-right, 8px) var(--ds-button-icon-m-size-pad-bottom, 8px) var(--ds-button-icon-m-size-pad-left, 8px);
+  border-radius: var(--ds-button-icon-border-radius, 8px);
+  background: var(--ds-color-button-icon-neutral-filled-default-background, #ffffff);
   box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 .ds-input-number-but-icon__text {
@@ -14980,20 +13767,21 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-input-number-but-icon__support-text {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-form-field-filled-default-support-text-color);
+  background: var(--ds-color-form-field-filled-default-support-text-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-filled-default-support-text-color, #616161);
 }
 
 /* Input Timepicker [58982:9561] — 2 вариантов; оси: Type */
 .ds-input-timepicker {
   min-height: 48px;
+  width: 250px;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-input-input-outlined-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -15002,7 +13790,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-input-timepicker__icon {
@@ -15026,30 +13814,32 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-form-field-gap-input-frame);
-  padding: var(--ds-form-field-m-size-pad-input-left) var(--ds-form-field-m-size-pad-input-right) var(--ds-form-field-m-size-pad-input-top) var(--ds-form-field-m-size-pad-input-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  padding: var(--ds-form-field-m-size-pad-input-top, 12px) var(--ds-form-field-m-size-pad-input-right, 12px) var(--ds-form-field-m-size-pad-input-bottom, 12px) var(--ds-form-field-m-size-pad-input-left, 12px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-input-timepicker__support {
   display: flex;
   flex-direction: row;
 }
 .ds-input-timepicker--empty {
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
 }
 .ds-input-timepicker--populated {
-  color: var(--ds-color-input-input-label-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 
 /* List (Сontainer) [57604:4762] — 1 вариантов; оси: Type */
 .ds-list-container {
   min-height: 257px;
+  width: 258px;
   display: flex;
   flex-direction: column;
-  padding: 0 0 var(--ds-list-pad-top) var(--ds-list-pad-bottom);
-  background: var(--ds-color-list-background);
+  padding: var(--ds-list-pad-top, 8px) 0 var(--ds-list-pad-bottom, 8px) 0;
+  border-radius: var(--ds-list-border-radius);
+  background: var(--ds-color-list-background, #ffffff);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -15058,7 +13848,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-list-item-text-label-color, #616161);
   white-space: nowrap;
 }
 .ds-list-container__icon {
@@ -15080,14 +13870,14 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-list-container__item {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-list-item-gap);
-  padding: var(--ds-list-item-pad-left) var(--ds-list-item-pad-right) var(--ds-list-item-pad-top) var(--ds-list-item-pad-bottom);
-  background: var(--ds-color-list-item-default-background);
+  gap: var(--ds-list-item-gap, 8px);
+  padding: var(--ds-list-item-pad-top, 8px) var(--ds-list-item-pad-right, 16px) var(--ds-list-item-pad-bottom, 8px) var(--ds-list-item-pad-left, 16px);
+  background: var(--ds-color-list-item-default-background, #ffffff);
 }
 .ds-list-container__element-left {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-list-container__content {
   display: flex;
@@ -15098,32 +13888,33 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-list-container__divider {
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-list-container__scroll {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom);
+  padding: var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px);
 }
 .ds-list-container--container {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-list-item-text-label-color, #616161);
 }
 
 /* List item [54101:7922] — 8 вариантов; оси: State */
 .ds-list-item {
   min-height: 68px;
+  width: 258px;
   display: flex;
   flex-direction: row;
-  gap: var(--ds-list-item-gap);
-  padding: var(--ds-list-item-pad-left) var(--ds-list-item-pad-right) var(--ds-list-item-pad-top) var(--ds-list-item-pad-bottom);
-  background: var(--ds-color-list-item-default-background);
+  gap: var(--ds-list-item-gap, 8px);
+  padding: var(--ds-list-item-pad-top, 8px) var(--ds-list-item-pad-right, 16px) var(--ds-list-item-pad-bottom, 8px) var(--ds-list-item-pad-left, 16px);
+  background: var(--ds-color-list-item-default-background, #ffffff);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -15132,7 +13923,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-list-item-text-label-color, #616161);
   white-space: nowrap;
 }
 .ds-list-item__icon {
@@ -15154,7 +13945,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-list-item__element-left {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-list-item__checkbox {
   display: flex;
@@ -15168,39 +13959,39 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-list-item__label-up {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-list-item-text-label-color);
+  background: var(--ds-color-list-item-text-label-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-list-item-text-label-color, #616161);
 }
 .ds-list-item__text {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-list-item-text-color);
+  background: var(--ds-color-list-item-text-color, #333333);
   font-size: var(--ds-font-body-s-14-normal-regular-size);
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-list-item-text-color, #333333);
 }
 .ds-list-item__label-down {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-list-item-text-label-color);
+  background: var(--ds-color-list-item-text-label-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-list-item-text-label-color, #616161);
 }
 .ds-list-item__element-right {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-list-item__icon-size {
   height: var(--ds-size-5x);
@@ -15208,18 +13999,18 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
 }
 .ds-list-item:hover {
-  background: var(--ds-color-list-item-hover-background);
+  background: var(--ds-color-list-item-hover-background, #f5f5f5);
 }
 .ds-list-item:active {
-  background: var(--ds-color-list-item-press-background);
+  background: var(--ds-color-list-item-press-background, #e0e0e0);
 }
 .ds-list-item:disabled {
-  background: var(--ds-color-list-item-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-list-item-disable-background, #ffffff);
+  color: var(--ds-color-list-item-disable-label-text-color, #9e9e9e);
 }
 .ds-list-item.ds-list-item--disabled {
-  background: var(--ds-color-list-item-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-list-item-disable-background, #ffffff);
+  color: var(--ds-color-list-item-disable-label-text-color, #9e9e9e);
 }
 .ds-list-item--disabled {
   pointer-events: none;
@@ -15230,7 +14021,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: 72px;
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -15238,7 +14029,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: 72px;
   display: flex;
   flex-direction: row;
-  background: var(--ds-palette-neutral-0);
+  background: var(--ds-palette-neutral-0, #ffffff);
 }
 
 /* Logo Syrve [56079:771] — 4 вариантов; оси: Size, Style */
@@ -15246,7 +14037,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: 72px;
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -15254,17 +14045,19 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: 70.9px;
   display: flex;
   flex-direction: row;
+  background: #00062b;
 }
 
 /* Menu (Container) [54163:6705] — 1 вариантов; оси: Type */
 .ds-menu-container {
   min-height: 418px;
+  width: 240px;
   display: flex;
   flex-direction: column;
   gap: var(--ds-menu-gap);
-  padding: 0 0 var(--ds-menu-pad-top) var(--ds-menu-pad-bottom);
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-menu-background);
+  padding: var(--ds-menu-pad-top, 8px) 0 var(--ds-menu-pad-bottom, 8px) 0;
+  border-radius: var(--ds-menu-border-radius, 8px);
+  background: var(--ds-color-menu-background, #ffffff);
   box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -15274,7 +14067,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-text-placeholder-color);
+  color: var(--ds-color-search-default-text-color, #d6d6d6);
   white-space: nowrap;
 }
 .ds-menu-container__icon {
@@ -15297,19 +14090,19 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-4x) var(--ds-size-4x) 0 var(--ds-size-1x);
+  padding: 0 var(--ds-size-4x) var(--ds-size-1x) var(--ds-size-4x);
 }
 .ds-menu-container__title {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-menu-item-gap);
-  padding: var(--ds-menu-item-pad-left) var(--ds-menu-item-pad-right) var(--ds-menu-item-pad-top) var(--ds-menu-item-pad-bottom);
-  background: var(--ds-color-menu-item-default-background);
+  gap: var(--ds-menu-item-gap, 8px);
+  padding: var(--ds-menu-item-pad-top, 8px) var(--ds-menu-item-pad-right, 16px) var(--ds-menu-item-pad-bottom, 8px) var(--ds-menu-item-pad-left, 16px);
+  background: var(--ds-color-menu-item-default-background, #ffffff);
 }
 .ds-menu-container__element-left {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-menu-container__content {
   display: flex;
@@ -15320,40 +14113,41 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-menu-container__divider {
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-menu-container__scroll {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom);
+  padding: var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px);
 }
 .ds-menu-container__button-group {
   height: 52px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-group-gap);
-  padding: var(--ds-button-group-margins-pad-left) var(--ds-button-group-margins-pad-right) var(--ds-button-group-margins-pad-top) var(--ds-button-group-margins-pad-bottom);
+  gap: var(--ds-button-group-gap, 8px);
+  padding: var(--ds-button-group-margins-pad-top, 8px) var(--ds-button-group-margins-pad-right, 16px) var(--ds-button-group-margins-pad-bottom, 8px) var(--ds-button-group-margins-pad-left, 16px);
 }
 .ds-menu-container--container {
-  color: var(--ds-color-chips-input-error-text-placeholder-color);
+  color: var(--ds-color-search-default-text-color, #d6d6d6);
 }
 
 /* Menu item [56090:1476] — 7 вариантов; оси: State */
 .ds-menu-item {
   min-height: 68px;
+  width: 258px;
   display: flex;
   flex-direction: row;
-  gap: var(--ds-menu-item-gap);
-  padding: var(--ds-menu-item-pad-left) var(--ds-menu-item-pad-right) var(--ds-menu-item-pad-top) var(--ds-menu-item-pad-bottom);
-  background: var(--ds-color-menu-item-default-background);
+  gap: var(--ds-menu-item-gap, 8px);
+  padding: var(--ds-menu-item-pad-top, 8px) var(--ds-menu-item-pad-right, 16px) var(--ds-menu-item-pad-bottom, 8px) var(--ds-menu-item-pad-left, 16px);
+  background: var(--ds-color-menu-item-default-background, #ffffff);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -15362,7 +14156,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-menu-item-text-label-color, #616161);
   white-space: nowrap;
 }
 .ds-menu-item__icon {
@@ -15384,7 +14178,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-menu-item__element-left {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-menu-item__checkbox {
   display: flex;
@@ -15398,39 +14192,39 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-menu-item__label-up {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-menu-item-text-label-color);
+  background: var(--ds-color-menu-item-text-label-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-menu-item-text-label-color, #616161);
 }
 .ds-menu-item__text {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-menu-item-text-color);
+  background: var(--ds-color-menu-item-text-color, #333333);
   font-size: var(--ds-font-body-s-14-normal-regular-size);
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-menu-item-text-color, #333333);
 }
 .ds-menu-item__label-down {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-menu-item-text-label-color);
+  background: var(--ds-color-menu-item-text-label-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-menu-item-text-label-color, #616161);
 }
 .ds-menu-item__element-right {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-menu-item__icon-size {
   height: var(--ds-size-5x);
@@ -15438,37 +14232,21 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
 }
 .ds-menu-item:hover {
-  background: var(--ds-color-menu-item-hover-background);
+  background: var(--ds-color-menu-item-hover-background, #f5f5f5);
 }
 .ds-menu-item:active {
-  background: var(--ds-color-menu-item-press-background);
+  background: var(--ds-color-menu-item-press-background, #e0e0e0);
 }
 .ds-menu-item:disabled {
-  background: var(--ds-color-menu-item-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-menu-item-disable-background, #ffffff);
+  color: var(--ds-color-menu-item-disable-label-text-color, #9e9e9e);
 }
 .ds-menu-item.ds-menu-item--disabled {
-  background: var(--ds-color-menu-item-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-menu-item-disable-background, #ffffff);
+  color: var(--ds-color-menu-item-disable-label-text-color, #9e9e9e);
 }
 .ds-menu-item--disabled {
   pointer-events: none;
-}
-
-/* Navigation Bar [56564:1057] — 2 вариантов; оси: Dark */
-.ds-navigation-bar {
-  height: var(--ds-size-5x);
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-navigation-bar__pill {
-  height: var(--ds-size-1x);
-  display: flex;
-  flex-direction: row;
-  border-radius: var(--ds-size-1x);
-  background: var(--ds-color-chips-input-error-cursor-color);
 }
 
 /* Picture [58937:3985] — 1 вариантов; оси: — */
@@ -15480,7 +14258,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   gap: var(--ds-size-2-5x);
   padding: var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x) var(--ds-size-2x);
   border-radius: var(--ds-size-2x);
-  background: var(--ds-color-brand-accent-super-lightest);
+  background: var(--ds-color-brand-accent-super-lightest, #f8f9fc);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -15489,7 +14267,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-2-5x);
-  border: 1px dashed var(--ds-color-stroke-hover);
+  border: 1px dashed var(--ds-color-stroke-hover, #9e9e9e);
 }
 .ds-picture__frame-1000001806 {
   height: 100%;
@@ -15499,52 +14277,13 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   gap: 440px;
 }
 
-/* Preview [54063:12946] — 3 вариантов; оси: Property 1 */
-.ds-preview {
-  height: var(--ds-size-6x);
-  width: var(--ds-size-6x);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x) var(--ds-size-1x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-preview__icon {
-  flex-shrink: 0;
-  width: var(--ds-size-4x);
-  height: var(--ds-size-4x);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-preview__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.ds-preview__icon svg path {
-  fill: currentColor;
-}
-.ds-preview__icon-size-draft {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-preview__info {
-  height: var(--ds-size-4x);
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-}
-
 /* Radio button label [54095:4306] — 6 вариантов; оси: Variant, Type */
 .ds-radio-button-label {
   min-height: var(--ds-size-5x);
+  width: fit-content;
   display: flex;
   flex-direction: column;
-  gap: var(--ds-radio-button-label-gap-support);
+  gap: var(--ds-radio-button-label-gap-support, 4px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -15553,7 +14292,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-weight: var(--ds-typography-font-weight-regular);
   line-height: var(--ds-typography-line-height-5x);
   letter-spacing: 0.25px;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-radio-button-label-text-color, #333333);
   white-space: nowrap;
 }
 .ds-radio-button-label__icon {
@@ -15576,7 +14315,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-radio-button-label-gap);
+  gap: var(--ds-radio-button-label-gap, 8px);
 }
 .ds-radio-button-label__left {
   display: flex;
@@ -15586,11 +14325,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-radio-button-label__цвет-и-палитра {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-radio-button-label-text-color);
+  background: var(--ds-color-radio-button-label-text-color, #333333);
   font-size: var(--ds-typography-font-size-3-5x);
   font-weight: var(--ds-typography-font-weight-regular);
   line-height: var(--ds-typography-line-height-5x);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-radio-button-label-text-color, #333333);
 }
 .ds-radio-button-label__right {
   display: flex;
@@ -15601,50 +14340,51 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: var(--ds-radio-button-label-pad-left-support-7x) 0 0 0;
+  padding: 0 0 0 var(--ds-radio-button-label-pad-left-support-7x, 28px);
 }
 .ds-radio-button-label__support-text {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-radio-button-label-text-support-color);
+  background: var(--ds-color-radio-button-label-text-support-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-radio-button-label-text-support-color, #616161);
 }
 .ds-radio-button-label--normal.ds-radio-button-label--deselected {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-radio-button-label-text-color, #333333);
 }
 .ds-radio-button-label--normal.ds-radio-button-label--selected {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-radio-button-label-text-color, #333333);
 }
 .ds-radio-button-label--error.ds-radio-button-label--deselected {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-radio-button-label-text-color, #333333);
 }
 .ds-radio-button-label--error.ds-radio-button-label--selected {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-radio-button-label-text-color, #333333);
 }
 .ds-radio-button-label--disable.ds-radio-button-label--deselected {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-radio-button-label-text-disable-color, #9e9e9e);
 }
 .ds-radio-button-label--disable.ds-radio-button-label--selected {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-radio-button-label-text-disable-color, #9e9e9e);
 }
 
 /* Scroll [53615:15339] — 12 вариантов; оси: Size, Position, State */
 .ds-scroll {
   display: flex;
   flex-direction: column;
-  padding: var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom);
+  padding: var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px);
+  width: 184px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-scroll__background {
   display: flex;
   flex-direction: column;
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-scroll-default-background);
+  border-radius: var(--ds-scroll-border-radius, 8px);
+  background: var(--ds-color-scroll-default-background, #fafafa);
 }
 .ds-scroll__knob {
   height: var(--ds-size-2x);
@@ -15652,30 +14392,34 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
   gap: var(--ds-size-2-5x);
   padding: var(--ds-size-2-5x) var(--ds-size-2-5x) var(--ds-size-2-5x) var(--ds-size-2-5x);
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-scroll-default-knob-color);
+  border-radius: var(--ds-scroll-knob-radius, 8px);
+  background: var(--ds-color-scroll-default-knob-color, #d6d6d6);
+}
+.ds-scroll--s {
+  width: var(--ds-size-2x);
 }
 .ds-scroll--first:hover {
-  background: var(--ds-color-chips-input-disable-border-color);
+  background: var(--ds-color-scroll-hover-background, #ebebeb);
 }
 .ds-scroll--middle {
   align-items: center;
 }
 .ds-scroll--middle:hover {
-  background: var(--ds-color-chips-input-disable-border-color);
+  background: var(--ds-color-scroll-hover-background, #ebebeb);
 }
 .ds-scroll--last:hover {
-  background: var(--ds-color-chips-input-disable-border-color);
+  background: var(--ds-color-scroll-hover-background, #ebebeb);
 }
 
 /* Scroll tabs [59032:1821] — 4 вариантов; оси: Orientation, State */
 .ds-scroll-tabs {
   min-height: var(--ds-size-7x);
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  padding: 48px 0 0 0;
+  padding: 0 0 0 48px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -15699,10 +14443,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-icon-gap);
-  padding: var(--ds-button-icon-s-size-pad-left) var(--ds-button-icon-s-size-pad-right) var(--ds-button-icon-s-size-pad-top) var(--ds-button-icon-s-size-pad-bottom);
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-button-icon-neutral-filled-default-background);
+  gap: var(--ds-button-icon-gap, 8px);
+  padding: var(--ds-button-icon-s-size-pad-top, 4px) var(--ds-button-icon-s-size-pad-right, 4px) var(--ds-button-icon-s-size-pad-bottom, 4px) var(--ds-button-icon-s-size-pad-left, 4px);
+  border-radius: var(--ds-button-icon-border-radius, 8px);
+  background: var(--ds-color-button-icon-neutral-filled-default-background, #ffffff);
   box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 .ds-scroll-tabs__icon-size {
@@ -15719,11 +14463,12 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-search-gap);
-  padding: var(--ds-search-m-size-pad-left) var(--ds-search-m-size-pad-right) var(--ds-search-m-size-pad-top) var(--ds-search-m-size-pad-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-search-background);
-  border: 1px solid var(--ds-color-search-default-border-color);
+  gap: var(--ds-search-gap, 8px);
+  width: 243px;
+  padding: var(--ds-search-m-size-pad-top, 12px) var(--ds-search-m-size-pad-right, 12px) var(--ds-search-m-size-pad-bottom, 12px) var(--ds-search-m-size-pad-left, 12px);
+  border-radius: var(--ds-search-border-radius, 12px);
+  background: var(--ds-color-search-background, #f8f9fc);
+  border: 1px solid var(--ds-color-search-default-border-color, #e0e0e0);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -15732,7 +14477,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-text-placeholder-color);
+  color: var(--ds-color-search-default-text-color, #d6d6d6);
   white-space: nowrap;
 }
 .ds-search__icon {
@@ -15759,12 +14504,12 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-search__text {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-search-default-text-color);
+  background: var(--ds-color-search-default-text-color, #d6d6d6);
   font-size: var(--ds-font-body-m-16-normal-regular-size);
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-text-placeholder-color);
+  color: var(--ds-color-search-default-text-color, #d6d6d6);
 }
 .ds-search__right-icon {
   height: 100%;
@@ -15777,10 +14522,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-search--s {
-  padding: var(--ds-search-s-size-pad-left) var(--ds-search-s-size-pad-right) var(--ds-search-s-size-pad-top) var(--ds-search-s-size-pad-bottom);
+  padding: var(--ds-search-s-size-pad-top, 8px) var(--ds-search-s-size-pad-right, 12px) var(--ds-search-s-size-pad-bottom, 8px) var(--ds-search-s-size-pad-left, 12px);
 }
 .ds-search--s .ds-search__icon {
   width: var(--ds-size-5x);
@@ -15788,6 +14533,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 }
 .ds-search--xs {
   height: var(--ds-size-9x);
+  width: var(--ds-size-9x);
   padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x);
   border-radius: var(--ds-size-circular);
 }
@@ -15796,18 +14542,18 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-5x);
 }
 .ds-search:disabled {
-  background: var(--ds-color-search-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-search-disable-background, #ebebeb);
+  color: var(--ds-color-search-disable-text-color, #9e9e9e);
 }
 .ds-search.ds-search--disabled {
-  background: var(--ds-color-search-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-search-disable-background, #ebebeb);
+  color: var(--ds-color-search-disable-text-color, #9e9e9e);
 }
 .ds-search:focus-visible {
-  color: var(--ds-color-search-focus-value-text-color);
+  color: var(--ds-color-search-focusvalue-text-color, #333333);
 }
 .ds-search:hover {
-  border: 1px solid var(--ds-color-search-hover-border-color);
+  border: 1px solid var(--ds-color-search-hover-border-color, #9e9e9e);
 }
 .ds-search--disabled {
   pointer-events: none;
@@ -15816,12 +14562,13 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 /* Select (Сontainer) [57735:17612] — 1 вариантов; оси: Type */
 .ds-select-container {
   min-height: 406px;
+  width: 240px;
   display: flex;
   flex-direction: column;
   gap: var(--ds-space-0);
-  padding: 0 0 var(--ds-menu-pad-top) var(--ds-menu-pad-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-menu-background);
+  padding: var(--ds-menu-pad-top, 8px) 0 var(--ds-menu-pad-bottom, 8px) 0;
+  border-radius: var(--ds-radius-3x, 12px);
+  background: var(--ds-color-menu-background, #ffffff);
   box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -15831,7 +14578,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-text-placeholder-color);
+  color: var(--ds-color-search-default-text-color, #d6d6d6);
   white-space: nowrap;
 }
 .ds-select-container__icon {
@@ -15854,19 +14601,19 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-size-2x) var(--ds-size-2x) 0 0;
+  padding: 0 var(--ds-size-2x) 0 var(--ds-size-2x);
 }
 .ds-select-container__title {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-select-item-gap);
-  padding: var(--ds-select-item-pad-left) var(--ds-select-item-pad-right) var(--ds-select-item-pad-top) var(--ds-select-item-pad-bottom);
-  background: var(--ds-color-menu-item-default-background);
+  gap: var(--ds-select-item-gap, 8px);
+  padding: var(--ds-select-item-pad-top, 8px) var(--ds-select-item-pad-right, 16px) var(--ds-select-item-pad-bottom, 8px) var(--ds-select-item-pad-left, 16px);
+  background: var(--ds-color-menu-item-default-background, #ffffff);
 }
 .ds-select-container__element-left {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-select-container__content {
   display: flex;
@@ -15877,49 +14624,50 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-select-container__divider {
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-select-container__scroll {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom);
+  padding: var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px);
 }
 .ds-select-container__button-group {
   height: 44px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-group-gap);
-  padding: var(--ds-button-group-margins-pad-left) var(--ds-button-group-margins-pad-right) var(--ds-button-group-margins-pad-top) var(--ds-button-group-margins-pad-bottom);
+  gap: var(--ds-button-group-gap, 8px);
+  padding: var(--ds-button-group-margins-pad-top, 8px) var(--ds-button-group-margins-pad-right, 16px) var(--ds-button-group-margins-pad-bottom, 8px) var(--ds-button-group-margins-pad-left, 16px);
 }
 .ds-select-container__button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-s-size-gap);
-  padding: var(--ds-button-s-size-pad-left) var(--ds-button-s-size-pad-right) var(--ds-button-s-size-pad-top) var(--ds-button-s-size-pad-bottom);
-  border-radius: var(--ds-size-2x);
-  border: 1px solid var(--ds-color-button-neutral-outlined-default-border-color);
+  gap: var(--ds-button-s-size-gap, 4px);
+  padding: var(--ds-button-s-size-pad-top, 4px) var(--ds-button-s-size-pad-right, 8px) var(--ds-button-s-size-pad-bottom, 4px) var(--ds-button-s-size-pad-left, 8px);
+  border-radius: var(--ds-button-border-radius, 8px);
+  border: 1px solid var(--ds-color-button-neutral-outlined-default-border-color, #e0e0e0);
 }
 .ds-select-container--container {
-  color: var(--ds-color-chips-input-error-text-placeholder-color);
+  color: var(--ds-color-search-default-text-color, #d6d6d6);
 }
 
 /* Select cell [60231:74976] — 7 вариантов; оси: State */
 .ds-select-cell {
   min-height: var(--ds-size-9x);
+  width: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  padding: var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom);
+  padding: var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -15928,7 +14676,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-select-cell__icon {
@@ -15950,33 +14698,33 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-select-cell__input {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-form-field-gap-input-support);
+  gap: var(--ds-form-field-gap-input-support, 4px);
 }
 .ds-select-cell__input-frame {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-form-field-gap-input-frame);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-select-cell__support {
   display: flex;
   flex-direction: row;
 }
 .ds-select-cell:hover {
-  background: var(--ds-palette-neutral-50);
-  border: 1px solid var(--ds-color-table-cell-content-hover-border-color);
+  background: var(--ds-palette-neutral-50, #f5f5f5);
+  border: 1px solid var(--ds-color-table-cell-content-hover-border-color, #9e9e9e);
 }
 .ds-select-cell:focus-visible {
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-form-field-filled-focus-label-text-color, #448aff);
 }
 .ds-select-cell:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-select-cell.ds-select-cell--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-select-cell--disabled {
   pointer-events: none;
@@ -15984,9 +14732,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 
 /* Select form [57862:17226] — 22 вариантов; оси: Size, Variant, State */
 .ds-select-form {
+  width: 250px;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -15995,7 +14744,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-select-form__icon {
@@ -16017,18 +14766,18 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-select-form__input {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-form-field-gap-input-support);
+  gap: var(--ds-form-field-gap-input-support, 4px);
 }
 .ds-select-form__input-frame {
   height: 48px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-form-field-gap-input-frame);
-  padding: var(--ds-form-field-m-size-pad-input-left) var(--ds-form-field-m-size-pad-input-right) var(--ds-form-field-m-size-pad-input-top) var(--ds-form-field-m-size-pad-input-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  padding: var(--ds-form-field-m-size-pad-input-top, 12px) var(--ds-form-field-m-size-pad-input-right, 12px) var(--ds-form-field-m-size-pad-input-bottom, 12px) var(--ds-form-field-m-size-pad-input-left, 12px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-select-form__support {
   display: flex;
@@ -16043,33 +14792,32 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-5x);
 }
 .ds-select-form--empty {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
 }
 .ds-select-form--populated {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 .ds-select-form--empty:hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-form-field-filled-hover-input-background-hover, #f5f5f5);
+  border: 1px solid var(--ds-color-form-field-filled-hover-border-color, #9e9e9e);
 }
 .ds-select-form--populated:hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-hover-label-text-color, #616161);
 }
 .ds-select-form--populated:focus-visible {
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-form-field-filled-focus-label-text-color, #448aff);
 }
 .ds-select-form--empty:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e);
 }
 .ds-select-form--empty.ds-select-form--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e);
 }
 .ds-select-form--populated:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-select-form--populated.ds-select-form--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-select-form--disabled {
   pointer-events: none;
@@ -16077,10 +14825,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 
 /* Select item [57735:17872] — 8 вариантов; оси: State, Subtitle */
 .ds-select-item {
+  width: 258px;
   display: flex;
   flex-direction: row;
-  gap: var(--ds-select-item-gap);
-  padding: var(--ds-select-item-pad-left) var(--ds-select-item-pad-right) var(--ds-select-item-pad-top-sub) var(--ds-select-item-pad-bottom-sub);
+  gap: var(--ds-select-item-gap, 8px);
+  padding: var(--ds-select-item-pad-top-sub, 12px) var(--ds-select-item-pad-right, 16px) var(--ds-select-item-pad-bottom-sub, 6px) var(--ds-select-item-pad-left, 16px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -16089,7 +14838,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-select-item-text-label-color, #616161);
   white-space: nowrap;
 }
 .ds-select-item__icon {
@@ -16113,7 +14862,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-select-item__icon-size {
   height: var(--ds-size-5x);
@@ -16127,64 +14876,64 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-select-item__label-up {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-select-item-text-label-color);
+  background: var(--ds-color-select-item-text-label-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-select-item-text-label-color, #616161);
 }
 .ds-select-item__subtitle {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-select-item-text-label-color);
+  background: var(--ds-color-select-item-text-label-color, #616161);
   font-size: var(--ds-font-caption-m-10-normal-medium-size);
   line-height: var(--ds-font-caption-m-10-normal-medium-line);
   letter-spacing: var(--ds-font-caption-m-10-normal-medium-spacing);
   font-weight: var(--ds-font-caption-m-10-normal-medium-weight);
   text-transform: capitalize;
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-select-item-text-label-color, #616161);
 }
 .ds-select-item__label-down {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-select-item-text-label-color);
+  background: var(--ds-color-select-item-text-label-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-select-item-text-label-color, #616161);
 }
 .ds-select-item__element-right {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-select-item--true {
   align-items: center;
-  background: var(--ds-color-select-item-default-background);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  background: var(--ds-color-select-item-default-background, #ffffff);
+  color: var(--ds-color-select-item-text-label-color, #616161);
 }
 .ds-select-item--false {
-  padding: var(--ds-select-item-pad-left) var(--ds-select-item-pad-right) var(--ds-select-item-pad-top) var(--ds-select-item-pad-bottom);
-  background: var(--ds-color-select-item-default-background);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  padding: var(--ds-select-item-pad-top, 8px) var(--ds-select-item-pad-right, 16px) var(--ds-select-item-pad-bottom, 8px) var(--ds-select-item-pad-left, 16px);
+  background: var(--ds-color-select-item-default-background, #ffffff);
+  color: var(--ds-color-select-item-text-label-color, #616161);
 }
 .ds-select-item--false:hover {
-  background: var(--ds-color-select-item-hover-background);
+  background: var(--ds-color-select-item-hover-background, #f5f5f5);
 }
 .ds-select-item--false:active {
-  background: var(--ds-color-select-item-press-background);
+  background: var(--ds-color-select-item-press-background, #e0e0e0);
 }
 .ds-select-item--false:disabled {
-  background: var(--ds-color-select-item-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-select-item-disable-background, #ffffff);
+  color: var(--ds-color-select-item-disable-label-text-color, #9e9e9e);
 }
 .ds-select-item--false.ds-select-item--disabled {
-  background: var(--ds-color-select-item-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-select-item-disable-background, #ffffff);
+  color: var(--ds-color-select-item-disable-label-text-color, #9e9e9e);
 }
 .ds-select-item--disabled {
   pointer-events: none;
@@ -16195,6 +14944,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   min-height: 41px;
   display: flex;
   flex-direction: column;
+  width: 200px;
   gap: var(--ds-sidenav-control-expanded-gap);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -16204,7 +14954,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-m-10-normal-regular-line);
   letter-spacing: var(--ds-font-caption-m-10-normal-regular-spacing);
   font-weight: var(--ds-font-caption-m-10-normal-regular-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-sidenav-control-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-sidenav-control__icon {
@@ -16227,9 +14977,9 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-sidenav-control-expanded-gap-content);
-  padding: var(--ds-sidenav-control-pad-left) var(--ds-sidenav-control-pad-right) var(--ds-sidenav-control-pad-top) var(--ds-sidenav-control-pad-bottom);
-  background: var(--ds-color-sidenav-control-background);
+  gap: var(--ds-sidenav-control-expanded-gap-content, 8px);
+  padding: var(--ds-sidenav-control-pad-top, 8px) var(--ds-sidenav-control-pad-right, 16px) var(--ds-sidenav-control-pad-bottom, 12px) var(--ds-sidenav-control-pad-left, 16px);
+  background: var(--ds-color-sidenav-control-background, #263136);
 }
 .ds-sidenav-control__icon-size {
   height: var(--ds-size-5x);
@@ -16239,44 +14989,46 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-sidenav-control__свернуть-меню {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-sidenav-control-text-color);
+  background: var(--ds-color-sidenav-control-text-color, #ffffff);
   font-size: var(--ds-font-caption-m-10-normal-regular-size);
   line-height: var(--ds-font-caption-m-10-normal-regular-line);
   letter-spacing: var(--ds-font-caption-m-10-normal-regular-spacing);
   font-weight: var(--ds-font-caption-m-10-normal-regular-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-sidenav-control-text-color, #ffffff);
 }
 .ds-sidenav-control__divider {
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-sidenav-control--collapsed:hover {
-  background: var(--ds-color-sidenav-control-background-hover);
+  background: var(--ds-color-sidenav-control-background-hover, #36474e);
 }
 .ds-sidenav-control--collapsed:active {
-  background: var(--ds-palette-contrast-3-900);
+  background: var(--ds-color-sidenav-control-background-press, #36474e);
 }
 .ds-sidenav-control--expanded {
-  background: var(--ds-color-sidenav-control-background);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: var(--ds-color-sidenav-control-background, #263136);
+  color: var(--ds-color-sidenav-control-text-color, #ffffff);
 }
 .ds-sidenav-control--expanded:hover {
-  background: var(--ds-color-sidenav-control-background-hover);
+  background: var(--ds-color-sidenav-control-background-hover, #36474e);
 }
 .ds-sidenav-control--expanded:active {
-  background: var(--ds-color-sidenav-control-background-press);
+  background: var(--ds-color-sidenav-control-background-press, #36474e);
 }
 .ds-sidenav-control--collapsed {
+  width: fit-content;
   gap: var(--ds-sidenav-control-collapsed-gap);
 }
 
 /* Sidenav Footer [55111:1056] — 3 вариантов; оси: Type, Mode */
 .ds-sidenav-footer {
   display: flex;
-  padding: var(--ds-sidenav-footer-l2-pad-left) var(--ds-sidenav-footer-l2-pad-right) var(--ds-sidenav-footer-l2-pad-top) var(--ds-sidenav-footer-l2-pad-bottom);
-  gap: var(--ds-sidenav-footer-l2-gap);
+  width: 260px;
+  padding: var(--ds-sidenav-footer-l2-pad-top, 12px) var(--ds-sidenav-footer-l2-pad-right, 16px) var(--ds-sidenav-footer-l2-pad-bottom, 12px) var(--ds-sidenav-footer-l2-pad-left, 16px);
+  gap: var(--ds-sidenav-footer-l2-gap, 12px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -16285,58 +15037,61 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-sidenav-footer-l2-text-color, #616161);
   white-space: nowrap;
 }
 .ds-sidenav-footer__logo-iiko {
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-sidenav-footer__vector {
   height: 9.8px;
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-sidenav-footer-l2-logo);
+  background: var(--ds-color-sidenav-footer-l2-logo, #ff5252);
 }
 .ds-sidenav-footer__divider {
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-sidenav-footer__ver-7-8-6-29440 {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-sidenav-footer-l2-text-color);
+  background: var(--ds-color-sidenav-footer-l2-text-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-sidenav-footer-l2-text-color, #616161);
 }
 .ds-sidenav-footer--l2.ds-sidenav-footer--expanded {
   flex-direction: row;
   align-items: center;
-  background: var(--ds-color-sidenav-footer-l2-background);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  background: var(--ds-color-sidenav-footer-l2-background, #ffffff);
+  color: var(--ds-color-sidenav-footer-l2-text-color, #616161);
 }
 .ds-sidenav-footer--l1.ds-sidenav-footer--expanded {
+  width: 200px;
   flex-direction: column;
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-sidenav-item-l1-text-color, #ffffff);
 }
 .ds-sidenav-footer--l1.ds-sidenav-footer--collapsed {
+  width: 52px;
   flex-direction: column;
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-text-accent, #448aff);
 }
 
 /* Sidenav header [55045:637] — 3 вариантов; оси: Type, Mode */
 .ds-sidenav-header {
   display: flex;
   align-items: center;
-  padding: var(--ds-sidenav-header-l1-expanded-pad-left) var(--ds-sidenav-header-l1-expanded-pad-right) var(--ds-sidenav-header-pad-top) var(--ds-sidenav-header-pad-bottom);
-  gap: var(--ds-sidenav-header-l1-expanded-gap);
+  width: 200px;
+  padding: var(--ds-sidenav-header-pad-top, 12px) var(--ds-sidenav-header-l1-expanded-pad-right, 16px) var(--ds-sidenav-header-pad-bottom, 12px) var(--ds-sidenav-header-l1-expanded-pad-left, 16px);
+  gap: var(--ds-sidenav-header-l1-expanded-gap, 92px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -16345,7 +15100,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-m-16-normal-medium-line);
   letter-spacing: var(--ds-font-body-m-16-normal-medium-spacing);
   font-weight: var(--ds-font-body-m-16-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-sidenav-header-l2-text-color, #333333);
   white-space: nowrap;
 }
 .ds-sidenav-header__icon {
@@ -16373,7 +15128,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: 14.7px;
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-sidenav-header-l1-expanded-logo);
+  background: var(--ds-color-sidenav-header-l1-expanded-logo, #ffffff);
 }
 .ds-sidenav-header__icon-size {
   height: var(--ds-size-5x);
@@ -16384,31 +15139,34 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-5x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-sidenav-header--l1.ds-sidenav-header--expanded {
   flex-direction: row;
-  background: var(--ds-color-sidenav-header-l1-background);
+  background: var(--ds-color-sidenav-header-l1-background, #263136);
 }
 .ds-sidenav-header--l2.ds-sidenav-header--expanded {
   height: 48px;
+  width: 260px;
   flex-direction: row;
-  gap: var(--ds-sidenav-header-l2-gap);
-  padding: var(--ds-sidenav-header-l2-pad-left) var(--ds-sidenav-header-l2-pad-right) var(--ds-sidenav-header-pad-top) var(--ds-sidenav-header-pad-bottom);
-  background: var(--ds-color-sidenav-header-l2-background);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  gap: var(--ds-sidenav-header-l2-gap, 8px);
+  padding: var(--ds-sidenav-header-pad-top, 12px) var(--ds-sidenav-header-l2-pad-right, 16px) var(--ds-sidenav-header-pad-bottom, 12px) var(--ds-sidenav-header-l2-pad-left, 16px);
+  background: var(--ds-color-sidenav-header-l2-background, #ffffff);
+  color: var(--ds-color-sidenav-header-l2-text-color, #333333);
 }
 .ds-sidenav-header--l1.ds-sidenav-header--collapsed {
+  width: 52px;
   flex-direction: column;
-  padding: var(--ds-sidenav-header-l1-collapsed-pad-left) var(--ds-sidenav-header-l1-collapsed-pad-right) var(--ds-sidenav-header-pad-top) var(--ds-sidenav-header-pad-bottom);
-  background: var(--ds-color-sidenav-header-l1-background);
+  padding: var(--ds-sidenav-header-pad-top, 12px) var(--ds-sidenav-header-l1-collapsed-pad-right, 14px) var(--ds-sidenav-header-pad-bottom, 12px) var(--ds-sidenav-header-l1-collapsed-pad-left, 14px);
+  background: var(--ds-color-sidenav-header-l1-background, #263136);
 }
 
 /* Sidenav item [55070:3734] — 13 вариантов; оси: Type, Mode, State */
 .ds-sidenav-item {
   display: flex;
-  padding: var(--ds-sidenav-item-l3-pad-left) var(--ds-sidenav-item-l3-pad-right) var(--ds-sidenav-item-l3-pad-top) var(--ds-sidenav-item-l3-pad-bottom);
-  gap: var(--ds-sidenav-item-l3-gap);
+  width: 260px;
+  padding: var(--ds-sidenav-item-l3-pad-top, 8px) var(--ds-sidenav-item-l3-pad-right, 16px) var(--ds-sidenav-item-l3-pad-bottom, 8px) var(--ds-sidenav-item-l3-pad-left, 32px);
+  gap: var(--ds-sidenav-item-l3-gap, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -16417,54 +15175,56 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-sidenav-item-l3-text-color, #333333);
   white-space: nowrap;
 }
 .ds-sidenav-item__l3 {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-sidenav-item-l3-text-color);
+  background: var(--ds-color-sidenav-item-l3-text-color, #333333);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-sidenav-item-l3-text-color, #333333);
 }
 .ds-sidenav-item--l3.ds-sidenav-item--expanded:hover {
-  background: var(--ds-color-sidenav-item-l3-background-hover);
+  background: var(--ds-color-sidenav-item-l3-background-hover, #f8f9fc);
 }
 .ds-sidenav-item--l3.ds-sidenav-item--expanded {
   flex-direction: row;
   align-items: center;
-  background: var(--ds-color-sidenav-item-l3-background);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  background: var(--ds-color-sidenav-item-l3-background, #ffffff);
+  color: var(--ds-color-sidenav-item-l3-text-color, #333333);
 }
 .ds-sidenav-item--l2.ds-sidenav-item--expanded {
   flex-direction: column;
-  background: var(--ds-color-sidenav-item-l2-background);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  background: var(--ds-color-sidenav-item-l2-background, #ffffff);
+  color: var(--ds-color-sidenav-item-l2-text-color, #333333);
 }
 .ds-sidenav-item--l2.ds-sidenav-item--expanded:hover {
-  background: var(--ds-color-sidenav-item-l2-background-hover);
+  background: var(--ds-color-sidenav-item-l2-background-hover, #f8f9fc);
 }
 .ds-sidenav-item--l1.ds-sidenav-item--expanded:hover {
-  background: var(--ds-color-sidenav-item-l1-background-hover);
+  background: var(--ds-color-sidenav-item-l1-background-hover, #36474e);
 }
 .ds-sidenav-item--l1.ds-sidenav-item--expanded {
+  width: 200px;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-sidenav-item-l1-gap-container);
-  padding: var(--ds-sidenav-item-l1-pad-left) var(--ds-sidenav-item-l1-pad-right) var(--ds-sidenav-item-l1-pad-top) var(--ds-sidenav-item-l1-pad-bottom);
-  background: var(--ds-color-sidenav-item-l1-background);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  gap: var(--ds-sidenav-item-l1-gap-container, 8px);
+  padding: var(--ds-sidenav-item-l1-pad-top, 12px) var(--ds-sidenav-item-l1-pad-right, 16px) var(--ds-sidenav-item-l1-pad-bottom, 12px) var(--ds-sidenav-item-l1-pad-left, 16px);
+  background: var(--ds-color-sidenav-item-l1-background, #263136);
+  color: var(--ds-color-sidenav-item-l1-text-color, #ffffff);
 }
 .ds-sidenav-item--l1.ds-sidenav-item--collapsed:hover {
-  background: var(--ds-color-sidenav-item-l1-background-hover);
+  background: var(--ds-color-sidenav-item-l1-background-hover, #36474e);
 }
 .ds-sidenav-item--l1.ds-sidenav-item--collapsed {
+  width: fit-content;
   flex-direction: row;
-  padding: var(--ds-sidenav-item-l1-pad-left) var(--ds-sidenav-item-l1-pad-right) var(--ds-sidenav-item-l1-pad-top) var(--ds-sidenav-item-l1-pad-bottom);
-  background: var(--ds-color-sidenav-item-l1-background);
+  padding: var(--ds-sidenav-item-l1-pad-top, 12px) var(--ds-sidenav-item-l1-pad-right, 16px) var(--ds-sidenav-item-l1-pad-bottom, 12px) var(--ds-sidenav-item-l1-pad-left, 16px);
+  background: var(--ds-color-sidenav-item-l1-background, #263136);
 }
 
 /* Sidenav View [55074:393] — 3 вариантов; оси: Type, State */
@@ -16472,7 +15232,8 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-sidenav-view {
   display: flex;
   flex-direction: column;
-  padding: 0 0 var(--ds-sidenav-sidebar-pad-top) var(--ds-sidenav-sidebar-pad-bottom);
+  padding: var(--ds-sidenav-sidebar-pad-top, 8px) 0 var(--ds-sidenav-sidebar-pad-bottom, 8px) 0;
+  width: fit-content;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -16481,7 +15242,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-m-10-normal-regular-line);
   letter-spacing: var(--ds-font-caption-m-10-normal-regular-spacing);
   font-weight: var(--ds-font-caption-m-10-normal-regular-weight);
-  color: var(--ds-color-expansion-panel-block-collaps-content-background);
+  color: var(--ds-color-sidenav-control-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-sidenav-view__icon {
@@ -16520,15 +15281,16 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 
 /* Snackbar [54373:10303] — 4 вариантов; оси: Type, Mode */
 .ds-snackbar {
   display: flex;
   flex-direction: column;
-  border-radius: var(--ds-size-2x);
+  border-radius: var(--ds-snackbar-border-radius, 8px);
   box-shadow: var(--ds-shadow-shadows-08-dp-s);
+  width: fit-content;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -16537,7 +15299,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-snackbar-dark-text-color);
+  color: var(--ds-color-snackbar-complex-dark-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-snackbar__icon {
@@ -16560,22 +15322,23 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-snackbar-gap);
-  padding: var(--ds-snackbar-pad-left) var(--ds-snackbar-pad-right) var(--ds-snackbar-pad-top) var(--ds-snackbar-pad-bottom);
+  gap: var(--ds-snackbar-gap, 8px);
+  padding: var(--ds-snackbar-pad-top, 12px) var(--ds-snackbar-pad-right, 12px) var(--ds-snackbar-pad-bottom, 12px) var(--ds-snackbar-pad-left, 12px);
 }
 .ds-snackbar__content {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-snackbar-gap);
+  gap: var(--ds-snackbar-gap, 8px);
   padding: var(--ds-space-0) var(--ds-space-0) var(--ds-space-0) var(--ds-space-0);
+  border-radius: var(--ds-radius-0);
 }
 .ds-snackbar__button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-button-s-size-gap);
-  padding: var(--ds-button-s-size-pad-left) var(--ds-button-s-size-pad-right) var(--ds-button-s-size-pad-top) var(--ds-button-s-size-pad-bottom);
-  border-radius: var(--ds-size-2x);
+  gap: var(--ds-button-s-size-gap, 4px);
+  padding: var(--ds-button-s-size-pad-top, 4px) var(--ds-button-s-size-pad-right, 8px) var(--ds-button-s-size-pad-bottom, 4px) var(--ds-button-s-size-pad-left, 8px);
+  border-radius: var(--ds-button-border-radius, 8px);
 }
 .ds-snackbar__element-right {
   height: var(--ds-size-5x);
@@ -16586,24 +15349,27 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-1x);
   display: flex;
   flex-direction: row;
-  border-radius: var(--ds-size-2x);
-  background: var(--ds-color-snackbar-progress-color);
+  border-radius: var(--ds-snackbar-border-radius, 8px);
+  background: var(--ds-color-snackbar-progress-color, #448aff);
 }
 .ds-snackbar--single.ds-snackbar--dark {
-  background: var(--ds-color-snackbar-complex-dark-background);
-  color: var(--ds-color-snackbar-dark-text-color);
+  background: var(--ds-color-snackbar-complex-dark-background, #424242);
+  color: var(--ds-color-snackbar-complex-dark-text-color, #ffffff);
 }
 .ds-snackbar--single.ds-snackbar--light {
-  background: var(--ds-color-snackbar-complex-light-background);
-  color: var(--ds-color-snackbar-light-text-color);
+  width: 370px;
+  background: var(--ds-color-snackbar-complex-light-background, #ffffff);
+  color: var(--ds-color-snackbar-complex-light-text-color, #333333);
 }
 .ds-snackbar--complex.ds-snackbar--dark {
-  background: var(--ds-color-snackbar-complex-dark-background);
-  color: var(--ds-color-snackbar-dark-text-color);
+  width: 232px;
+  background: var(--ds-color-snackbar-complex-dark-background, #424242);
+  color: var(--ds-color-snackbar-complex-dark-text-color, #ffffff);
 }
 .ds-snackbar--complex.ds-snackbar--light {
-  background: var(--ds-color-snackbar-complex-light-background);
-  color: var(--ds-color-snackbar-light-text-color);
+  width: 370px;
+  background: var(--ds-color-snackbar-complex-light-background, #ffffff);
+  color: var(--ds-color-snackbar-complex-light-text-color, #333333);
 }
 
 /* State [54063:12395] — 2 вариантов; оси: State */
@@ -16616,20 +15382,21 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-state:hover {
-  background: var(--ds-color-chips-input-disable-border-color);
+  background: #ebebeb;
 }
 .ds-state:active {
-  background: var(--ds-color-chips-input-default-border-color);
+  background: #e0e0e0;
 }
 
 /* Status [52928:6588] — 18 вариантов; оси: Style, Type */
 .ds-status {
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-status-gap);
-  border-radius: var(--ds-size-2x);
-  padding: var(--ds-status-pad-left) var(--ds-status-pad-right) var(--ds-status-pad-top) var(--ds-status-pad-bottom);
+  gap: var(--ds-status-gap, 4px);
+  border-radius: var(--ds-status-border-radius, 8px);
+  padding: var(--ds-status-pad-top, 4px) var(--ds-status-pad-right, 6px) var(--ds-status-pad-bottom, 4px) var(--ds-status-pad-left, 6px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -16638,7 +15405,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-medium-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-medium-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-medium-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-status-neutral-filled-text-color, #616161);
   white-space: nowrap;
 }
 .ds-status__icon {
@@ -16667,17 +15434,17 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-status__content {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-status-neutral-filled-text-color);
+  background: var(--ds-color-status-neutral-filled-text-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-medium-size);
   line-height: var(--ds-font-caption-l-12-normal-medium-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-medium-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-medium-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-status-neutral-filled-text-color, #616161);
 }
 .ds-status__element-right {
   height: var(--ds-size-4x);
@@ -16685,130 +15452,98 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
 }
 .ds-status--neutral.ds-status--filled {
-  background: var(--ds-color-status-neutral-filled-background);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  background: var(--ds-color-status-neutral-filled-background, #fafafa);
+  color: var(--ds-color-status-neutral-filled-text-color, #616161);
 }
 .ds-status--accent.ds-status--filled {
-  background: var(--ds-color-status-accent-filled-background);
-  color: var(--ds-color-chips-input-focus-border-color);
+  background: var(--ds-color-status-accent-filled-background, #f5f9ff);
+  color: var(--ds-color-status-accent-filled-text-color, #448aff);
 }
 .ds-status--positive.ds-status--filled {
-  background: var(--ds-color-status-positive-filled-background);
-  color: var(--ds-color-snackbar-dark-complex-positive-icon-color);
+  background: var(--ds-color-status-positive-filled-background, #f3fcf7);
+  color: var(--ds-color-status-positive-filled-text-color, #14b456);
 }
 .ds-status--warning.ds-status--filled {
-  background: var(--ds-color-status-warning-filled-background);
-  color: var(--ds-color-input-filled-default-icon-color-warning);
+  background: var(--ds-color-status-warning-filled-background, #fffcf8);
+  color: var(--ds-color-status-warning-filled-text-color, #ea7806);
 }
 .ds-status--negative.ds-status--filled {
-  background: var(--ds-color-status-negative-filled-background);
-  color: var(--ds-color-chips-input-error-border-color);
+  background: var(--ds-color-status-negative-filled-background, #fff8f8);
+  color: var(--ds-color-status-negative-filled-text-color, #ff5252);
 }
 .ds-status--contrast-1.ds-status--filled {
-  background: var(--ds-color-status-contrast-1-filled-background);
-  color: var(--ds-palette-contrast-1-700);
+  background: var(--ds-color-status-contrast-1-filled-background, #fcf6fd);
+  color: var(--ds-color-status-contrast-1-filled-text-color, #9c27b0);
 }
 .ds-status--contrast-2.ds-status--filled {
-  background: var(--ds-color-status-contrast-2-filled-background);
-  color: var(--ds-palette-contrast-2-950);
+  background: var(--ds-color-status-contrast-2-filled-background, #fcf8f6);
+  color: var(--ds-color-status-contrast-2-filled-text-color, #3e261e);
 }
 .ds-status--contrast-3.ds-status--filled {
-  background: var(--ds-color-status-contrast-3-filled-background);
-  color: var(--ds-palette-contrast-3-950);
+  background: var(--ds-color-status-contrast-3-filled-background, #f8fafc);
+  color: var(--ds-color-status-contrast-3-filled-text-color, #263136);
 }
 .ds-status--contrast-4.ds-status--filled {
-  background: var(--ds-color-status-contrast-4-filled-background);
-  color: var(--ds-palette-contrast-4-950);
+  background: var(--ds-color-status-contrast-4-filled-background, #f9fbea);
+  color: var(--ds-color-status-contrast-4-filled-text-color, #4f5412);
 }
 .ds-status--neutral.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-neutral-text-text-color, #616161);
 }
 .ds-status--accent.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-color-chips-input-focus-border-color);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-accent-text-text-color, #448aff);
 }
 .ds-status--positive.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-color-snackbar-dark-complex-positive-icon-color);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-positive-text-text-color, #14b456);
 }
 .ds-status--warning.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-color-input-filled-default-icon-color-warning);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-warning-text-text-color, #ea7806);
 }
 .ds-status--negative.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-color-chips-input-error-border-color);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-negative-text-text-color, #ff5252);
 }
 .ds-status--contrast-1.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-palette-contrast-1-700);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-contrast-1-text-text-color, #9c27b0);
 }
 .ds-status--contrast-2.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-palette-contrast-2-950);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-contrast-2-text-text-color, #3e261e);
 }
 .ds-status--contrast-3.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-palette-contrast-3-950);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-contrast-3-text-text-color, #263136);
 }
 .ds-status--contrast-4.ds-status--text {
-  padding: var(--ds-status-pad-left-text) var(--ds-status-pad-right-text) var(--ds-status-pad-top-text) var(--ds-status-pad-bottom-text);
-  color: var(--ds-palette-contrast-4-950);
-}
-
-/* Status Bar [56564:1236] — 1 вариантов; оси: — */
-.ds-status-bar {
-  height: 44px;
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-status-bar__label {
-  font-size: 15px;
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: 18.28499984741211px;
-  white-space: nowrap;
-}
-.ds-status-bar__time {
-  height: 18px;
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-}
-.ds-status-bar__8-00 {
-  display: flex;
-  flex-direction: row;
-  font-size: 15px;
-  font-weight: var(--ds-typography-font-weight-medium);
-  line-height: 18.28499984741211px;
-}
-.ds-status-bar__stats {
-  height: var(--ds-size-3x);
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  padding: var(--ds-status-pad-top-text) var(--ds-status-pad-right-text) var(--ds-status-pad-bottom-text) var(--ds-status-pad-left-text);
+  color: var(--ds-color-status-contrast-4-text-text-color, #4f5412);
 }
 
 /* Table 2 lvl [60074:44684] — 2 вариантов; оси: Type */
 .ds-table-2-lvl {
   min-height: 72px;
   display: flex;
+  width: 162px;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-2-lvl__header-row {
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-table-row-header-background-header);
-  border: 1px solid var(--ds-color-stroke-default);
+  background: var(--ds-color-table-row-header-background-header, #f0f5ff);
+  border: 1px solid var(--ds-color-stroke-default, #e0e0e0);
 }
 .ds-table-2-lvl--table-cell-2-lvl {
   flex-direction: column;
-  border: 1px solid var(--ds-color-stroke-default);
+  border: 1px solid var(--ds-color-stroke-default, #e0e0e0);
 }
 .ds-table-2-lvl--table-row-2-lvl {
+  width: fit-content;
   flex-direction: row;
   align-items: center;
 }
@@ -16816,9 +15551,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 /* Table Chips Input [60220:70978] — 8 вариантов; оси: Style */
 .ds-table-chips-input {
   min-height: var(--ds-size-6x);
+  width: fit-content;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-input-input-outlined-background);
+  background: #ffffff;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -16827,7 +15563,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: #616161;
   white-space: nowrap;
 }
 .ds-table-chips-input__icon {
@@ -16851,10 +15587,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-chips-input-gap-chips-input-frame);
+  gap: var(--ds-chips-input-gap-chips-input-frame, 4px);
   border-radius: var(--ds-size-3x);
-  background: var(--ds-color-chips-input-default-background);
-  border: 1px solid var(--ds-color-chips-input-default-border-color);
+  background: #f8f9fc;
+  border: 1px solid #e0e0e0;
 }
 .ds-table-chips-input__support {
   display: flex;
@@ -16862,38 +15598,39 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   gap: var(--ds-size-1x);
 }
 .ds-table-chips-input--default {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: #616161;
 }
 .ds-table-chips-input--hover {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: #616161;
 }
 .ds-table-chips-input--focus {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: #333333;
 }
 .ds-table-chips-input--focus-placeholder {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: #333333;
 }
 .ds-table-chips-input--vocus-value {
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: #333333;
 }
 .ds-table-chips-input--error {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: #616161;
 }
 .ds-table-chips-input--error-hover {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: #616161;
 }
 .ds-table-chips-input--disable {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: #9e9e9e;
 }
 
 /* Table content cell [52954:1253] — 8 вариантов; оси: State */
 .ds-table-content-cell {
   min-height: var(--ds-size-9x);
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  padding: var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom);
+  padding: var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -16902,7 +15639,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-tab-innactive-icon-color);
+  color: var(--ds-color-text-ui-text-label-color, #616161);
   white-space: nowrap;
 }
 .ds-table-content-cell__icon {
@@ -16928,16 +15665,16 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-table-content-cell__text-ui {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-list-item-gap);
+  gap: var(--ds-list-item-gap, 8px);
 }
 .ds-table-content-cell:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-ui-disable-label-text-color, #9e9e9e);
 }
 .ds-table-content-cell.ds-table-content-cell--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-ui-disable-label-text-color, #9e9e9e);
 }
 .ds-table-content-cell:hover {
-  border: 1px solid var(--ds-color-table-cell-content-hover-border-color);
+  border: 1px solid var(--ds-color-table-cell-content-hover-border-color, #9e9e9e);
 }
 .ds-table-content-cell--disabled {
   pointer-events: none;
@@ -16946,10 +15683,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 /* Table content row [60105:56764] — 5 вариантов; оси: State */
 .ds-table-content-row {
   min-height: var(--ds-size-9x);
+  width: fit-content;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--ds-color-stroke-default);
-  background: var(--ds-color-table-row-content-default-background);
+  border: 1px solid var(--ds-color-stroke-default, #e0e0e0);
+  background: var(--ds-color-table-row-content-default-background, #ffffff);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -16958,17 +15696,17 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-tab-innactive-icon-color);
+  color: var(--ds-color-text-ui-text-label-color, #616161);
   white-space: nowrap;
 }
 .ds-table-content-row:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-ui-disable-label-text-color, #9e9e9e);
 }
 .ds-table-content-row.ds-table-content-row--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-ui-disable-label-text-color, #9e9e9e);
 }
 .ds-table-content-row:hover {
-  background: var(--ds-color-table-row-content-hover-background);
+  background: var(--ds-color-table-row-content-hover-background, #f5f5f5);
 }
 .ds-table-content-row--disabled {
   pointer-events: none;
@@ -16977,9 +15715,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 /* Table footer [59207:20759] — 1 вариантов; оси: Type */
 .ds-table-footer {
   height: 65px;
+  width: 980px;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-table-footer-background);
+  background: var(--ds-color-table-footer-background, #ffffff);
   box-shadow: var(--ds-shadow-shadows-01-dp-sl);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -16989,14 +15728,14 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-tab-innactive-counter-text-color);
+  color: var(--ds-color-expansion-panel-content-text-color, #333333);
   white-space: nowrap;
 }
 .ds-table-footer__divider {
   height: var(--ds-size-0-25x);
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-table-footer__content {
   height: 100%;
@@ -17004,23 +15743,24 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  padding: var(--ds-table-footer-pad-left) var(--ds-table-footer-pad-right) var(--ds-table-footer-pad-top) var(--ds-table-footer-pad-bottom);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  padding: var(--ds-table-footer-pad-top, 12px) var(--ds-table-footer-pad-right, 32px) var(--ds-table-footer-pad-bottom, 12px) var(--ds-table-footer-pad-left, 32px);
+  background: #ffffff;
 }
 .ds-table-footer--default {
-  color: var(--ds-color-tab-innactive-counter-text-color);
+  color: var(--ds-color-expansion-panel-content-text-color, #333333);
 }
 
 /* Table header cell [60098:45424] — 3 вариантов; оси: State */
 .ds-table-header-cell {
   min-height: var(--ds-size-9x);
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2x);
-  padding: var(--ds-table-cell-pad-left) var(--ds-table-cell-pad-right) var(--ds-table-cell-pad-top) var(--ds-table-cell-pad-bottom);
-  border: 1px solid var(--ds-color-stroke-default);
-  background: var(--ds-color-table-cell-header-default-background);
+  padding: var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px);
+  border: 1px solid var(--ds-color-stroke-default, #e0e0e0);
+  background: var(--ds-color-table-cell-header-default-background, #f0f5ff);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -17029,7 +15769,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-tab-innactive-icon-color);
+  color: var(--ds-color-text-ui-text-label-color, #616161);
   white-space: nowrap;
 }
 .ds-table-header-cell__icon {
@@ -17055,18 +15795,18 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-table-header-cell__text-ui {
   display: flex;
   flex-direction: row;
-  gap: var(--ds-list-item-gap);
+  gap: var(--ds-list-item-gap, 8px);
 }
 .ds-table-header-cell:hover {
-  background: var(--ds-color-table-cell-header-hover-background);
+  background: var(--ds-color-table-cell-header-hover-background, #f8f9fc);
 }
 .ds-table-header-cell:disabled {
-  background: var(--ds-color-table-cell-header-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-table-cell-header-disable-background, #f0f5ff);
+  color: var(--ds-color-text-ui-disable-label-text-color, #9e9e9e);
 }
 .ds-table-header-cell.ds-table-header-cell--disabled {
-  background: var(--ds-color-table-cell-header-disable-background);
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-table-cell-header-disable-background, #f0f5ff);
+  color: var(--ds-color-text-ui-disable-label-text-color, #9e9e9e);
 }
 .ds-table-header-cell--disabled {
   pointer-events: none;
@@ -17075,10 +15815,12 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 /* Table header row [53556:3571] — 1 вариантов; оси: State */
 .ds-table-header-row {
   min-height: var(--ds-size-9x);
+  width: fit-content;
   display: flex;
   flex-direction: column;
-  background: var(--ds-color-table-row-header-background-header);
-  border: 1px solid var(--ds-color-stroke-default);
+  border-radius: var(--ds-table-row-header-border-radius-top-left);
+  background: var(--ds-color-table-row-header-background-header, #f0f5ff);
+  border: 1px solid var(--ds-color-stroke-default, #e0e0e0);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -17087,16 +15829,17 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-tab-innactive-icon-color);
+  color: var(--ds-color-text-ui-text-label-color, #616161);
   white-space: nowrap;
 }
 
 /* Text UI [57938:18290] — 7 вариантов; оси: State */
 .ds-text-ui {
   min-height: 52px;
+  width: fit-content;
   display: flex;
   flex-direction: row;
-  gap: var(--ds-list-item-gap);
+  gap: var(--ds-list-item-gap, 8px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -17105,7 +15848,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-text-ui-text-label-color, #616161);
   white-space: nowrap;
 }
 .ds-text-ui__icon {
@@ -17127,7 +15870,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-text-ui__element-left {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-text-ui__checkbox {
   display: flex;
@@ -17141,39 +15884,39 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-text-ui__label-up {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-text-ui-text-label-color);
+  background: var(--ds-color-text-ui-text-label-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-text-ui-text-label-color, #616161);
 }
 .ds-text-ui__list-item {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-text-ui-text-color);
+  background: var(--ds-color-text-ui-text-color, #333333);
   font-size: var(--ds-font-body-s-14-normal-regular-size);
   line-height: var(--ds-font-body-s-14-normal-regular-line);
   letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
   font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-ui-text-color, #333333);
 }
 .ds-text-ui__label-down {
   display: flex;
   flex-direction: row;
-  background: var(--ds-color-text-ui-text-label-color);
+  background: var(--ds-color-text-ui-text-label-color, #616161);
   font-size: var(--ds-font-caption-l-12-normal-regular-size);
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-text-ui-text-label-color, #616161);
 }
 .ds-text-ui__element-right {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
+  background: #ffffff;
 }
 .ds-text-ui__icon-size {
   height: var(--ds-size-5x);
@@ -17181,10 +15924,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
 }
 .ds-text-ui:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-ui-disable-label-text-color, #9e9e9e);
 }
 .ds-text-ui.ds-text-ui--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-text-ui-disable-label-text-color, #9e9e9e);
 }
 .ds-text-ui--disabled {
   pointer-events: none;
@@ -17193,9 +15936,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 /* Textarea [57916:9023] — 13 вариантов; оси: Size, Variant, State */
 .ds-textarea {
   min-height: 96px;
+  width: 250px;
   display: flex;
   flex-direction: column;
-  gap: var(--ds-form-field-gap-input-support);
+  gap: var(--ds-form-field-gap-input-support, 4px);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -17204,7 +15948,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-caption-l-12-normal-regular-line);
   letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
   font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
   white-space: nowrap;
 }
 .ds-textarea__icon {
@@ -17227,11 +15971,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: 76px;
   display: flex;
   flex-direction: row;
-  gap: var(--ds-form-field-gap-input-frame);
-  padding: var(--ds-form-field-m-size-pad-input-left) var(--ds-form-field-m-size-pad-input-right) var(--ds-form-field-pad-textarea-top) var(--ds-form-field-m-size-pad-input-bottom);
-  border-radius: var(--ds-size-3x);
-  background: var(--ds-color-form-field-input-filled-background);
-  border: 1px solid var(--ds-color-form-field-filled-default-border-color);
+  gap: var(--ds-form-field-gap-input-frame, 8px);
+  padding: var(--ds-form-field-pad-textarea-top, 4px) var(--ds-form-field-m-size-pad-input-right, 12px) var(--ds-form-field-m-size-pad-input-bottom, 12px) var(--ds-form-field-m-size-pad-input-left, 12px);
+  border-radius: var(--ds-form-field-border-radius, 12px);
+  background: var(--ds-color-form-field-input-filled-background, #f8f9fc);
+  border: 1px solid var(--ds-color-form-field-filled-default-border-color, #e0e0e0);
 }
 .ds-textarea__element-left {
   height: var(--ds-size-5x);
@@ -17251,7 +15995,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-textarea__scroll {
   display: flex;
   flex-direction: column;
-  padding: var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom);
+  padding: var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px);
 }
 .ds-textarea__support {
   display: flex;
@@ -17261,42 +16005,41 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
-  padding: var(--ds-form-field-pad-support-left) var(--ds-form-field-pad-support-right) 0 0;
+  padding: 0 var(--ds-form-field-pad-support-right, 12px) 0 var(--ds-form-field-pad-support-left, 12px);
 }
 .ds-textarea__hint {
   height: var(--ds-size-4x);
   display: flex;
   flex-direction: row;
-  padding: var(--ds-form-field-pad-support-left) var(--ds-form-field-pad-support-right) 0 0;
+  padding: 0 var(--ds-form-field-pad-support-right, 12px) 0 var(--ds-form-field-pad-support-left, 12px);
 }
 .ds-textarea--populated:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-textarea--populated.ds-textarea--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-label-text-color, #9e9e9e);
 }
 .ds-textarea--empty:disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e);
 }
 .ds-textarea--empty.ds-textarea--disabled {
-  color: var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-disable-input-text-color, #9e9e9e);
 }
 .ds-textarea--populated:focus-visible {
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-form-field-filled-focus-label-text-color, #448aff);
 }
 .ds-textarea--populated {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 .ds-textarea--empty {
-  color: var(--ds-color-chips-input-default-action-text-color);
+  color: var(--ds-color-form-field-input-label-text-color, #616161);
 }
 .ds-textarea--populated:hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+  color: var(--ds-color-form-field-filled-hover-label-text-color, #616161);
 }
 .ds-textarea--empty:hover {
-  background: var(--ds-color-chips-input-disable-background);
-  border: 1px solid var(--ds-color-chips-input-disable-action-text-color);
+  background: var(--ds-color-form-field-filled-hover-input-background-hover, #f5f5f5);
+  border: 1px solid var(--ds-color-form-field-filled-hover-border-color, #9e9e9e);
 }
 .ds-textarea--disabled {
   pointer-events: none;
@@ -17304,11 +16047,12 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 
 /* Timepicker [58982:9858] — 2 вариантов; оси: Type */
 .ds-timepicker {
+  width: fit-content;
   display: flex;
-  padding: 0 0 var(--ds-size-2x) var(--ds-size-2x);
+  padding: var(--ds-size-2x) 0 var(--ds-size-2x) 0;
   border-radius: var(--ds-size-3x);
-  background: var(--ds-color-brand-neutral-default);
-  border: 1px solid var(--ds-color-stroke-default);
+  background: var(--ds-color-brand-neutral-default, #ffffff);
+  border: 1px solid var(--ds-color-stroke-default, #e0e0e0);
   box-shadow: var(--ds-shadow-shadows-08-dp-s);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -17318,7 +16062,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-m-16-normal-regular-line);
   letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
   font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
   white-space: nowrap;
 }
 .ds-timepicker__icon {
@@ -17346,161 +16090,22 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: var(--ds-scroll-pad-left) var(--ds-scroll-pad-right) var(--ds-scroll-pad-top) var(--ds-scroll-pad-bottom);
+  padding: var(--ds-scroll-pad-top, 2px) var(--ds-scroll-pad-right, 2px) var(--ds-scroll-pad-bottom, 2px) var(--ds-scroll-pad-left, 2px);
 }
 .ds-timepicker--time-grid {
   flex-direction: column;
   align-items: center;
-  color: var(--ds-color-chips-input-error-cursor-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 .ds-timepicker--time-line {
   flex-direction: row;
-  color: var(--ds-color-chips-input-error-cursor-color);
-}
-
-/* Title variant [17034:68611] — 1 вариантов; оси: — */
-.ds-title-variant {
-  min-height: 140px;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-title-variant__label {
-  font-size: var(--ds-font-header-s-20-normal-medium-size);
-  line-height: var(--ds-font-header-s-20-normal-medium-line);
-  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
-  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
-  white-space: nowrap;
-}
-.ds-title-variant__size {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2-5x);
-  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
-}
-.ds-title-variant__body-4 {
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-super-dark);
-  font-size: var(--ds-font-header-s-20-normal-medium-size);
-  line-height: var(--ds-font-header-s-20-normal-medium-line);
-  letter-spacing: var(--ds-font-header-s-20-normal-medium-spacing);
-  font-weight: var(--ds-font-header-s-20-normal-medium-weight);
-  color: var(--ds-color-chips-input-error-cursor-color);
-}
-.ds-title-variant__body-6 {
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-darker);
-  font-size: var(--ds-font-body-m-16-normal-regular-size);
-  line-height: var(--ds-font-body-m-16-normal-regular-line);
-  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
-  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
-}
-.ds-title-variant__body-7 {
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-darker);
-  font-size: var(--ds-font-body-m-16-normal-regular-size);
-  line-height: var(--ds-font-body-m-16-normal-regular-line);
-  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
-  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
-}
-.ds-title-variant__body-5 {
-  display: flex;
-  flex-direction: row;
-  background: var(--ds-color-brand-neutral-darker);
-  font-size: var(--ds-font-body-m-16-normal-regular-size);
-  line-height: var(--ds-font-body-m-16-normal-regular-line);
-  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
-  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
-  color: var(--ds-color-chips-input-default-action-text-color);
-}
-.ds-title-variant__mode {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--ds-size-2-5x);
-  padding: 0 0 var(--ds-size-1x) var(--ds-size-1x);
-}
-
-/* Toggle buttons [16992:8639] — 5 вариантов; оси: Type */
-.ds-toggle-buttons {
-  min-height: var(--ds-size-9x);
-  display: flex;
-  flex-direction: row;
-  padding: var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x) var(--ds-size-1-5x);
-  gap: var(--ds-size-2-5x);
-  border-radius: var(--ds-size-0-5x);
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
-.ds-toggle-buttons__label {
-  font-size: var(--ds-font-body-s-14-normal-regular-size);
-  line-height: var(--ds-font-body-s-14-normal-regular-line);
-  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
-  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
-  color: var(--ds-color-chips-input-focus-border-color);
-  white-space: nowrap;
-}
-.ds-toggle-buttons__icon {
-  flex-shrink: 0;
-  width: var(--ds-size-6x);
-  height: var(--ds-size-6x);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-toggle-buttons__icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.ds-toggle-buttons__icon svg path {
-  fill: currentColor;
-}
-.ds-toggle-buttons__notifications {
-  height: var(--ds-size-6x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-toggle-buttons__vector {
-  height: var(--ds-size-6x);
-  display: flex;
-  flex-direction: row;
-}
-.ds-toggle-buttons--1-button {
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-}
-.ds-toggle-buttons--text {
-  padding: var(--ds-size-3x) var(--ds-size-3x) var(--ds-size-1-5x) var(--ds-size-1-5x);
-  background: var(--ds-color-expansion-panel-block-collaps-content-background);
-  color: var(--ds-color-chips-input-focus-border-color);
-  border: none;
-  box-shadow: none;
-}
-.ds-toggle-buttons--2-buttons {
-  gap: var(--ds-size-1x);
-  background: var(--ds-color-surface-default);
-}
-.ds-toggle-buttons--3-buttons {
-  gap: var(--ds-size-1x);
-  background: var(--ds-color-surface-default);
-}
-.ds-toggle-buttons--3-text {
-  border-radius: var(--ds-size-1x);
-  border: 1px solid var(--ds-color-stroke-default);
-  color: var(--ds-color-chips-input-focus-border-color);
+  color: var(--ds-color-text-primary, #333333);
 }
 
 /* Tree [59564:1473] — 8 вариантов; оси: Level, Mode, For icon */
 .ds-tree {
   height: 44px;
+  width: fit-content;
   display: flex;
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
@@ -17528,12 +16133,13 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-direction: row;
   align-items: center;
   gap: var(--ds-size-2-5x);
-  padding: 11px 0 0 var(--ds-size-5x);
+  padding: 0 0 var(--ds-size-5x) 11px;
 }
 .ds-tree__separator-stroke {
   height: 100%;
   display: flex;
   flex-direction: row;
+  background: #d7d8d9;
 }
 .ds-tree--2.ds-tree--end.ds-tree--on {
   flex-direction: row;
@@ -17568,7 +16174,8 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-tree-item {
   height: 44px;
   display: flex;
-  padding: 11px 0 0 var(--ds-size-5x);
+  width: fit-content;
+  padding: 0 0 var(--ds-size-5x) 11px;
   gap: var(--ds-size-2-5x);
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -17577,29 +16184,33 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: 100%;
   display: flex;
   flex-direction: row;
+  background: #d7d8d9;
 }
 .ds-tree-item--end {
   flex-direction: row;
   align-items: center;
 }
 .ds-tree-item--end-long {
+  width: 48px;
   flex-direction: column;
-  padding: 11px 0 0 21px;
+  padding: 0 0 21px 11px;
 }
 .ds-tree-item--middle {
   flex-direction: row;
   align-items: center;
-  padding: 11px 0 0 0;
+  padding: 0 0 0 11px;
 }
 .ds-tree-item--middle-long {
+  width: 48px;
   flex-direction: row;
   align-items: center;
-  padding: 11px 0 0 0;
+  padding: 0 0 0 11px;
 }
 .ds-tree-item--start {
+  width: var(--ds-size-6x);
   flex-direction: row;
   align-items: center;
-  padding: 11px var(--ds-size-3x) 0 0;
+  padding: 0 var(--ds-size-3x) 0 11px;
 }
 
 /* ============================================================
