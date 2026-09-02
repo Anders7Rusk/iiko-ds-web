@@ -456,19 +456,19 @@ var CB = {
   // [variant][type][state] → { bg: цвет подложки (круг 28×28), icon: цвет иконки }
   colors: {
     Normal: {
-      Deselected:    { Default: { bg: '#ffffff00', icon: '#616161' }, Hover: { bg: '#ebebeb', icon: '#616161' }, Press: { bg: '#e0e0e0', icon: '#616161' } },
-      Selected:      { Default: { bg: '#ffffff00', icon: '#448aff' }, Hover: { bg: '#e8f0ff', icon: '#448aff' }, Press: { bg: '#ccdfff', icon: '#448aff' } },
-      Indeterminate: { Default: { bg: '#ffffff00', icon: '#448aff' }, Hover: { bg: '#e8f0ff', icon: '#448aff' }, Press: { bg: '#ccdfff', icon: '#448aff' } }
+      Deselected:    { Default: { bg: 'var(--ds-color-checkbox-normal-deselected-default-background)', icon: 'var(--ds-color-checkbox-normal-deselected-icon-color)' }, Hover: { bg: 'var(--ds-color-checkbox-normal-deselected-hover-background)', icon: 'var(--ds-color-checkbox-normal-deselected-icon-color)' }, Press: { bg: 'var(--ds-color-checkbox-normal-deselected-press-background)', icon: 'var(--ds-color-checkbox-normal-deselected-icon-color)' } },
+      Selected:      { Default: { bg: 'var(--ds-color-checkbox-normal-selected-default-background)', icon: 'var(--ds-color-checkbox-normal-selected-icon-color)' }, Hover: { bg: 'var(--ds-color-checkbox-normal-selected-hover-background)', icon: 'var(--ds-color-checkbox-normal-selected-icon-color)' }, Press: { bg: 'var(--ds-color-checkbox-normal-selected-press-background)', icon: 'var(--ds-color-checkbox-normal-selected-icon-color)' } },
+      Indeterminate: { Default: { bg: 'var(--ds-color-checkbox-normal-inderterminate-default-background)', icon: 'var(--ds-color-checkbox-normal-inderterminate-icon-color)' }, Hover: { bg: 'var(--ds-color-checkbox-normal-inderterminate-hover-background)', icon: 'var(--ds-color-checkbox-normal-inderterminate-icon-color)' }, Press: { bg: 'var(--ds-color-checkbox-normal-inderterminate-press-background)', icon: 'var(--ds-color-checkbox-normal-inderterminate-icon-color)' } }
     },
     Error: {
-      Deselected:    { Default: { bg: '#ffffff00', icon: '#ff5252' }, Hover: { bg: '#ffe5e5', icon: '#ff5252' }, Press: { bg: '#ffcccc', icon: '#ff5252' } },
-      Selected:      { Default: { bg: '#ffffff00', icon: '#ff5252' }, Hover: { bg: '#ffe5e5', icon: '#ff5252' }, Press: { bg: '#ffcccc', icon: '#ff5252' } },
-      Indeterminate: { Default: { bg: '#ffffff00', icon: '#ff5252' }, Hover: { bg: '#ffe5e5', icon: '#ff5252' }, Press: { bg: '#ffcccc', icon: '#ff5252' } }
+      Deselected:    { Default: { bg: 'var(--ds-color-checkbox-error-deselected-default-background)', icon: 'var(--ds-color-checkbox-error-icon-color)' }, Hover: { bg: 'var(--ds-color-checkbox-error-deselected-hover-background)', icon: 'var(--ds-color-checkbox-error-icon-color)' }, Press: { bg: 'var(--ds-color-checkbox-error-deselected-press-background)', icon: 'var(--ds-color-checkbox-error-icon-color)' } },
+      Selected:      { Default: { bg: 'var(--ds-color-checkbox-error-selected-default-background)', icon: 'var(--ds-color-checkbox-error-icon-color)' }, Hover: { bg: 'var(--ds-color-checkbox-error-selected-hover-background)', icon: 'var(--ds-color-checkbox-error-icon-color)' }, Press: { bg: 'var(--ds-color-checkbox-error-selected-press-background)', icon: 'var(--ds-color-checkbox-error-icon-color)' } },
+      Indeterminate: { Default: { bg: 'var(--ds-color-checkbox-error-inderterminate-default-background)', icon: 'var(--ds-color-checkbox-error-icon-color)' }, Hover: { bg: 'var(--ds-color-checkbox-error-inderterminate-hover-background)', icon: 'var(--ds-color-checkbox-error-icon-color)' }, Press: { bg: 'var(--ds-color-checkbox-error-inderterminate-press-background)', icon: 'var(--ds-color-checkbox-error-icon-color)' } }
     },
     Disable: {
-      Deselected:    { Default: { bg: null, icon: '#9e9e9e' } },
-      Selected:      { Default: { bg: null, icon: '#9e9e9e' } },
-      Indeterminate: { Default: { bg: null, icon: '#9e9e9e' } }
+      Deselected:    { Default: { bg: null, icon: 'var(--ds-color-checkbox-disable-deselected-icon-color)' } },
+      Selected:      { Default: { bg: null, icon: 'var(--ds-color-checkbox-disable-selected-icon-color)' } },
+      Indeterminate: { Default: { bg: null, icon: 'var(--ds-color-checkbox-disable-inderterminate-icon-color)' } }
     }
   },
   // CSS-переменная цвета иконки по [variant][type] — точные токены Checkbox из DS.json
@@ -478,7 +478,7 @@ var CB = {
     Disable: { Deselected: '--ds-color-checkbox-disable-deselected-icon-color', Selected: '--ds-color-checkbox-disable-selected-icon-color', Indeterminate: '--ds-color-checkbox-disable-inderterminate-icon-color' }
   },
   labelVar: { Normal: '--ds-color-checkbox-label-text-color', Error: '--ds-color-checkbox-label-text-color', Disable: '--ds-color-checkbox-label-text-disable-color' },
-  labelHex: { Normal: '#333333', Error: '#333333', Disable: '#9e9e9e' },
+  labelHex: { Normal: 'var(--ds-color-checkbox-label-text-color)', Error: 'var(--ds-color-checkbox-label-text-color)', Disable: 'var(--ds-color-checkbox-label-text-disable-color)' },
   // имя Figma-переменной подложки (фактические имена DS.json: «Inderterminate» с опечаткой)
   bgVarName: function (v, t, s) {
     if (v === 'Disable') return 'Checkbox/Disable/Background';
