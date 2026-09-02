@@ -40,6 +40,7 @@
 
 ## Общие правила
 
+0. **⛔ НЕ ГАДАТЬ (закон над законом).** Права гадать нет. Каждое значение (ширина, цвет, размер, шрифт, иконка, состояние) берётся ТОЛЬКО из источника — код макета (`mockup.md`) + этот спек. Нет значения/компонента в источнике → СТОП, СПРОСИТЬ и предложить замену из ДС. «Свериться, а не гадать» = действие ДО правки, не фраза; сказать «сверюсь» и угадать = нарушение.
 0. **Приоритет ДС над референсом (главное правило).** Референс (скриншот, макет, описание) задаёт **структуру, состав блоков и тексты**. Внешний вид берётся **только из этой дизайн-системы**. Если компонент на референсе отличается от ДС (другой цвет, радиус, высота, шрифт, самодельная панель) — использовать компонент ДС, а не копировать референс. Ничего не подгонять «на глаз» под картинку: размеры, отступы, типографика — только из токенов и параметров компонентов ниже. Если подходящего компонента в ДС нет — взять ближайший из каталога и явно пометить это в результате.
 
 **ЗАКОН №1 (никогда не нарушать): компоненты — ТОЛЬКО из ДС.** Есть ДС-компонент (ds-card, ds-stepper, ds-expansion-panel/group/content, ds-table-header/content-row/cell, ds-list-item, ds-search, ds-btn, ds-input, ds-banner, ds-tabs, ds-slide-toggle, ds-input-number) → использовать ЕГО, **НЕ рисовать свой класс**. Свои классы допускаются **только** для каркаса/лейаута, у которого нет ДС-компонента (page/grid/modal/toolbar/footer). Нет ДС-компонента или иконки в наборе → **остановиться, СПРОСИТЬ и ПРЕДЛОЖИТЬ замену из ДС**; если замены нет — только тогда рисовать своё, строго в рамках ДС (токены), ничего не выдумывать и не подбирать «похожее».
@@ -1399,10 +1400,10 @@ Size=M — основной; S — плотные формы и панели.
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: #616161;
   white-space: nowrap;
 }
@@ -1519,11 +1520,11 @@ _Описание компонента в Figma отсутствует._
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input-2__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
+  color: #616161;
   white-space: nowrap;
 }
 .ds-chips-input-2__icon {
@@ -2023,10 +2024,10 @@ Type=Year — выбор года.
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-datepicker__label {
-  font-size: var(--ds-font-body-s-14-normal-medium-size);
-  line-height: var(--ds-font-body-s-14-normal-medium-line);
-  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
-  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-text-primary, #333333);
   white-space: nowrap;
 }
@@ -2614,11 +2615,11 @@ Size=M, L — по длине и толщине линии.
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-form-field__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-element-form-field__input-cell {
@@ -3865,7 +3866,7 @@ Orientation — сторона, с которой подсказка выход�
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-hint-footer-text-color, #ffffff);
+  color: var(--ds-color-button-accent-filled-default-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-hint-footer__icon {
@@ -4166,11 +4167,11 @@ State: Default, Hover, Focus, Focus+Placeholder, Focus+Value, Error, Error+Hover
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-cell__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-input-cell__icon {
@@ -4355,11 +4356,11 @@ Size=M — основной; S и XS — плотные формы, панели
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-number__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-input-number__icon {
@@ -4472,11 +4473,11 @@ _Описание компонента в Figma отсутствует._
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-number-but-icon__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-input-number-but-icon__icon {
@@ -4659,11 +4660,11 @@ _Описание компонента в Figma отсутствует._
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-list-container__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-list-item-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
+  color: var(--ds-color-list-item-text-color, #333333);
   white-space: nowrap;
 }
 .ds-list-container__icon {
@@ -4773,11 +4774,11 @@ _Описание компонента в Figma отсутствует._
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-list-item__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-list-item-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-list-item-text-color, #333333);
   white-space: nowrap;
 }
 .ds-list-item__icon {
@@ -5136,11 +5137,11 @@ Style=Main — основной; Inverse — инверсный для тёмн�
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-menu-item__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-menu-item-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-menu-item-text-color, #333333);
   white-space: nowrap;
 }
 .ds-menu-item__icon {
@@ -5934,11 +5935,11 @@ Size=M — основной; S — панели и шапки блоков; XS �
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-select-cell__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-select-cell__icon {
@@ -7352,11 +7353,11 @@ Lvl=1 — основной уровень; Lvl=2 — вложенный.
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-content-cell__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-text-ui-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-text-ui-text-color, #333333);
   white-space: nowrap;
 }
 .ds-table-content-cell__icon {
@@ -7438,11 +7439,11 @@ Lvl=1 — основной уровень; Lvl=2 — вложенный.
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-content-row__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-text-ui-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-text-ui-text-color, #333333);
   white-space: nowrap;
 }
 .ds-table-content-row:disabled {
@@ -7571,11 +7572,11 @@ Lvl=1 — основной уровень; Lvl=2 — вложенный.
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-header-cell__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-text-ui-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-text-ui-text-color, #333333);
   white-space: nowrap;
 }
 .ds-table-header-cell__icon {
@@ -7655,11 +7656,11 @@ Lvl=1 — основной уровень; Lvl=2 — вложенный.
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-header-row__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-text-ui-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-text-ui-text-color, #333333);
   white-space: nowrap;
 }
 ```
@@ -7730,11 +7731,11 @@ Content=Text — с текстом; Icon — только иконки, когд
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-text-ui__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-text-ui-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-text-ui-text-color, #333333);
   white-space: nowrap;
 }
 .ds-text-ui__icon {
@@ -7877,11 +7878,11 @@ Variant=Empty — поле без текста; Populated — с введённ�
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-textarea__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-textarea__icon {
@@ -8288,12 +8289,14 @@ For icon=On — с местом под иконку у ветки; Off — бе�
 | Dialog header | `.ds-dialog-header` · `--text` |
 | Dialog view | `.ds-dialog-view` |
 | Element | `.ds-element` · `--image-size` `--icon-size` `--icon-group` `--text-default` `--checkbox` `--radio-button` `--indicator` `--slide-toggle` `--counter` |
+| Element cell | `.ds-element-cell` · `--icon-size` `--icon-group` `--button` `--button-icon` `--status` `--text-ui` `--input-number` `--checkbox` `--slide-toggle` `--chips` `--cell-input` |
 | Element Form Field | `.ds-element-form-field` · `--input-cell` `--select-cell` `--chips-input-cell` |
 | Element left | `.ds-element-left` |
 | Element menu | `.ds-element-menu` · `--image-size` `--icon-size` `--text-default` `--checkbox` `--radio-button` `--indicator` `--slide-toggle` `--counter` |
 | Element select | `.ds-element-select` · `--image-size` `--icon-size` `--text-default` `--checkbox` `--radio-button` `--indicator` `--slide-toggle` `--counter` |
 | Element sidenav | `.ds-element-sidenav` · `--collaps-icon` `--avatar` |
 | Element step | `.ds-element-step` · `--icon-size` `--counter` `--counter` `--counter` `--counter` `--counter` `--disabled` · :active, :disabled, :hover |
+| Elementare cell | `.ds-elementare-cell` · `--icon-size` `--icon-group` `--button` `--button-icon` `--status` `--text-ui` `--input-number` `--checkbox` `--slide-toggle` `--chips` |
 | Elements | `.ds-elements` · `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--cell` `--year` `--cell` `--cell` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--year` `--month` `--month` `--month` `--month` `--month` `--disabled` · :active, :disabled, :hover |
 | Elements | `.ds-elements-2` · `--selected` `--default` `--default` `--default` `--default` `--default` `--disabled` · :active, :disabled, :hover |
 | Expansion content | `.ds-expansion-content` · `--true` `--false` |
@@ -12521,10 +12524,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
   color: #616161;
   white-space: nowrap;
 }
@@ -12611,11 +12614,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-chips-input-2__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
+  color: #616161;
   white-space: nowrap;
 }
 .ds-chips-input-2__icon {
@@ -12953,10 +12956,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-datepicker__label {
-  font-size: var(--ds-font-body-s-14-normal-medium-size);
-  line-height: var(--ds-font-body-s-14-normal-medium-line);
-  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
-  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
+  font-size: var(--ds-font-caption-l-12-normal-regular-size);
+  line-height: var(--ds-font-caption-l-12-normal-regular-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
   color: var(--ds-color-text-primary, #333333);
   white-space: nowrap;
 }
@@ -13324,6 +13327,101 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-badge-text-color, #ffffff);
 }
 
+/* Element cell [58885:32432] — 11 вариантов; оси: Variant */
+.ds-element-cell {
+  width: fit-content;
+  display: flex;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-element-cell__label {
+  font-size: var(--ds-font-caption-l-12-normal-medium-size);
+  line-height: var(--ds-font-caption-l-12-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-medium-weight);
+  color: var(--ds-color-button-neutral-filled-default-text-color, #333333);
+  white-space: nowrap;
+}
+.ds-element-cell__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-element-cell__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-element-cell__icon svg path {
+  fill: currentColor;
+}
+.ds-element-cell__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-element-cell__info {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+}
+.ds-element-cell--icon-size {
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+}
+.ds-element-cell--icon-group {
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+}
+.ds-element-cell--button {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-button-neutral-filled-default-text-color, #333333);
+}
+.ds-element-cell--button-icon {
+  flex-direction: row;
+  background: #ffffff;
+}
+.ds-element-cell--status {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-status-neutral-filled-text-color, #616161);
+}
+.ds-element-cell--text-ui {
+  flex-direction: row;
+  color: var(--ds-color-text-ui-text-label-color, #616161);
+}
+.ds-element-cell--input-number {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-form-field-filled-default-support-text-color, #616161);
+}
+.ds-element-cell--checkbox {
+  flex-direction: row;
+  background: #ffffff;
+}
+.ds-element-cell--slide-toggle {
+  flex-direction: column;
+  background: #ffffff;
+  color: var(--ds-color-slide-toggle-text-color, #333333);
+}
+.ds-element-cell--chips {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-chips-text-color, #333333);
+}
+.ds-element-cell--cell-input {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+}
+
 /* Element Form Field [60231:76795] — 3 вариантов; оси: Variant */
 .ds-element-form-field {
   width: fit-content;
@@ -13334,11 +13432,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-element-form-field__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-element-form-field__input-cell {
@@ -13655,6 +13753,96 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 }
 .ds-element-step--disabled {
   pointer-events: none;
+}
+
+/* Elementare cell [60220:72578] — 10 вариантов; оси: Variant */
+.ds-elementare-cell {
+  width: fit-content;
+  display: flex;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+.ds-elementare-cell__label {
+  font-size: var(--ds-font-caption-l-12-normal-medium-size);
+  line-height: var(--ds-font-caption-l-12-normal-medium-line);
+  letter-spacing: var(--ds-font-caption-l-12-normal-medium-spacing);
+  font-weight: var(--ds-font-caption-l-12-normal-medium-weight);
+  color: var(--ds-color-button-neutral-filled-default-text-color, #333333);
+  white-space: nowrap;
+}
+.ds-elementare-cell__icon {
+  flex-shrink: 0;
+  width: var(--ds-size-5x);
+  height: var(--ds-size-5x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-elementare-cell__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ds-elementare-cell__icon svg path {
+  fill: currentColor;
+}
+.ds-elementare-cell__icon-size {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+}
+.ds-elementare-cell__info {
+  height: var(--ds-size-5x);
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+}
+.ds-elementare-cell--icon-size {
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+}
+.ds-elementare-cell--icon-group {
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+}
+.ds-elementare-cell--button {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-button-neutral-filled-default-text-color, #333333);
+}
+.ds-elementare-cell--button-icon {
+  flex-direction: row;
+  background: #ffffff;
+}
+.ds-elementare-cell--status {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-status-neutral-filled-text-color, #616161);
+}
+.ds-elementare-cell--text-ui {
+  flex-direction: row;
+  color: var(--ds-color-text-ui-text-label-color, #616161);
+}
+.ds-elementare-cell--input-number {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-form-field-filled-default-support-text-color, #616161);
+}
+.ds-elementare-cell--checkbox {
+  flex-direction: row;
+  background: #ffffff;
+}
+.ds-elementare-cell--slide-toggle {
+  flex-direction: column;
+  background: #ffffff;
+  color: var(--ds-color-slide-toggle-text-color, #333333);
+}
+.ds-elementare-cell--chips {
+  flex-direction: row;
+  background: #ffffff;
+  color: var(--ds-color-chips-text-color, #333333);
 }
 
 /* Elements [58501:4220] — 30 вариантов; оси: Type, Variant, State */
@@ -14146,7 +14334,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: var(--ds-font-body-s-14-normal-medium-line);
   letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
   font-weight: var(--ds-font-body-s-14-normal-medium-weight);
-  color: var(--ds-color-hint-footer-text-color, #ffffff);
+  color: var(--ds-color-button-accent-filled-default-text-color, #ffffff);
   white-space: nowrap;
 }
 .ds-hint-footer__icon {
@@ -14313,11 +14501,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-cell__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-input-cell__icon {
@@ -14432,11 +14620,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-number__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-input-number__icon {
@@ -14525,11 +14713,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-input-number-but-icon__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-input-number-but-icon__icon {
@@ -14649,11 +14837,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-list-container__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-list-item-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-medium-size);
+  line-height: var(--ds-font-body-s-14-normal-medium-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-medium-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-medium-weight);
+  color: var(--ds-color-list-item-text-color, #333333);
   white-space: nowrap;
 }
 .ds-list-container__icon {
@@ -14724,11 +14912,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-list-item__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-list-item-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-list-item-text-color, #333333);
   white-space: nowrap;
 }
 .ds-list-item__icon {
@@ -14957,11 +15145,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-menu-item__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-menu-item-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-menu-item-text-color, #333333);
   white-space: nowrap;
 }
 .ds-menu-item__icon {
@@ -15477,11 +15665,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-select-cell__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-select-cell__icon {
@@ -16440,11 +16628,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-content-cell__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-text-ui-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-text-ui-text-color, #333333);
   white-space: nowrap;
 }
 .ds-table-content-cell__icon {
@@ -16497,11 +16685,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-content-row__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-text-ui-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-text-ui-text-color, #333333);
   white-space: nowrap;
 }
 .ds-table-content-row:disabled {
@@ -16570,11 +16758,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-header-cell__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-text-ui-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-text-ui-text-color, #333333);
   white-space: nowrap;
 }
 .ds-table-header-cell__icon {
@@ -16630,11 +16818,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-table-header-row__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-text-ui-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-text-ui-text-color, #333333);
   white-space: nowrap;
 }
 
@@ -16649,11 +16837,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-text-ui__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-text-ui-text-label-color, #616161);
+  font-size: var(--ds-font-body-s-14-normal-regular-size);
+  line-height: var(--ds-font-body-s-14-normal-regular-line);
+  letter-spacing: var(--ds-font-body-s-14-normal-regular-spacing);
+  font-weight: var(--ds-font-body-s-14-normal-regular-weight);
+  color: var(--ds-color-text-ui-text-color, #333333);
   white-space: nowrap;
 }
 .ds-text-ui__icon {
@@ -16749,11 +16937,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 .ds-textarea__label {
-  font-size: var(--ds-font-caption-l-12-normal-regular-size);
-  line-height: var(--ds-font-caption-l-12-normal-regular-line);
-  letter-spacing: var(--ds-font-caption-l-12-normal-regular-spacing);
-  font-weight: var(--ds-font-caption-l-12-normal-regular-weight);
-  color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
+  font-size: var(--ds-font-body-m-16-normal-regular-size);
+  line-height: var(--ds-font-body-m-16-normal-regular-line);
+  letter-spacing: var(--ds-font-body-m-16-normal-regular-spacing);
+  font-weight: var(--ds-font-body-m-16-normal-regular-weight);
+  color: var(--ds-color-form-field-filled-default-input-text-color, #333333);
   white-space: nowrap;
 }
 .ds-textarea__icon {
