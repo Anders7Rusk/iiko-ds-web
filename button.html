@@ -574,36 +574,78 @@ var BTN = {
   // [style][type][state] → {bg, border, label}
   colors: {
     accent: {
-      filled:   { default: {bg:'#448AFF', border:'transparent', label:'#FFFFFF'}, hover: {bg:'#3969D5', border:'transparent', label:'#FFFFFF'}, press: {bg:'#2651B5', border:'transparent', label:'#FFFFFF'}, disable:{bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'} },
-      outlined: { default: {bg:'#FFFFFF', border:'#448AFF', label:'#448AFF'}, hover: {bg:'#F5F9FF', border:'#448AFF', label:'#448AFF'}, press: {bg:'#E8F0FF', border:'#448AFF', label:'#448AFF'}, disable:{bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'} },
-      text:     { default: {bg:'#FFFFFF', border:'transparent', label:'#448AFF'}, hover: {bg:'#F5F9FF', border:'transparent', label:'#448AFF'}, press: {bg:'#E8F0FF', border:'transparent', label:'#448AFF'}, disable:{bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'} }
+      filled: { default: {bg:'var(--ds-color-button-accent-filled-default-background)', border:'transparent', label:'var(--ds-color-button-accent-filled-default-text-color)'},
+hover: {bg:'var(--ds-color-button-accent-filled-hover-background)', border:'transparent', label:'var(--ds-color-button-accent-filled-hover-text-color)'},
+press: {bg:'var(--ds-color-button-accent-filled-press-background)', border:'transparent', label:'var(--ds-color-button-accent-filled-press-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-filled)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'} },       outlined: { default: {bg:'var(--ds-color-button-accent-outlined-default-background)', border:'var(--ds-color-button-accent-outlined-default-border-color)', label:'var(--ds-color-button-accent-outlined-default-text-color)'},
+hover: {bg:'var(--ds-color-button-accent-outlined-hover-background)', border:'var(--ds-color-button-accent-outlined-hover-border-color)', label:'var(--ds-color-button-accent-outlined-hover-text-color)'},
+press: {bg:'var(--ds-color-button-accent-outlined-press-background)', border:'var(--ds-color-button-accent-outlined-press-border-color)', label:'var(--ds-color-button-accent-outlined-press-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-outlined)', border:'var(--ds-color-button-disable-border-color)', label:'var(--ds-color-button-disable-text-color)'} },       text: { default: {bg:'var(--ds-color-button-accent-text-default-background)', border:'transparent', label:'var(--ds-color-button-accent-text-default-text-color)'},
+hover: {bg:'var(--ds-color-button-accent-text-hover-background)', border:'transparent', label:'var(--ds-color-button-accent-text-hover-text-color)'},
+press: {bg:'var(--ds-color-button-accent-text-press-background)', border:'transparent', label:'var(--ds-color-button-accent-text-press-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-text)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'} }
     },
     neutral: {
-      filled:   { default: {bg:'#FFFFFF', border:'transparent', label:'#333333'}, hover: {bg:'#FAFAFA', border:'transparent', label:'#333333'}, press: {bg:'#EBEBEB', border:'transparent', label:'#333333'}, disable:{bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'} },
-      outlined: { default: {bg:'#FFFFFF', border:'#E0E0E0', label:'#333333'}, hover: {bg:'#FAFAFA', border:'#E0E0E0', label:'#333333'}, press: {bg:'#EBEBEB', border:'#E0E0E0', label:'#333333'}, disable:{bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'} },
-      text:     { default: {bg:'#FFFFFF', border:'transparent', label:'#333333'}, hover: {bg:'#FAFAFA', border:'transparent', label:'#333333'}, press: {bg:'#EBEBEB', border:'transparent', label:'#333333'}, disable:{bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'} }
+      filled: { default: {bg:'var(--ds-color-button-neutral-filled-default-background)', border:'transparent', label:'var(--ds-color-button-neutral-filled-default-text-color)'},
+hover: {bg:'var(--ds-color-button-neutral-filled-hover-background)', border:'transparent', label:'var(--ds-color-button-neutral-filled-hover-text-color)'},
+press: {bg:'var(--ds-color-button-neutral-filled-press-background)', border:'transparent', label:'var(--ds-color-button-neutral-filled-press-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-filled)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'} },       outlined: { default: {bg:'var(--ds-color-button-neutral-outlined-default-background)', border:'var(--ds-color-button-neutral-outlined-default-border-color)', label:'var(--ds-color-button-neutral-outlined-default-text-color)'},
+hover: {bg:'var(--ds-color-button-neutral-outlined-hover-background)', border:'var(--ds-color-button-neutral-outlined-hover-border-color)', label:'var(--ds-color-button-neutral-outlined-hover-text-color)'},
+press: {bg:'var(--ds-color-button-neutral-outlined-press-background)', border:'var(--ds-color-button-neutral-outlined-press-border-color)', label:'var(--ds-color-button-neutral-outlined-press-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-outlined)', border:'var(--ds-color-button-disable-border-color)', label:'var(--ds-color-button-disable-text-color)'} },       text: { default: {bg:'var(--ds-color-button-neutral-text-default-background)', border:'transparent', label:'var(--ds-color-button-neutral-text-default-text-color)'},
+hover: {bg:'var(--ds-color-button-neutral-text-hover-background)', border:'transparent', label:'var(--ds-color-button-neutral-text-hover-text-color)'},
+press: {bg:'var(--ds-color-button-neutral-text-press-background)', border:'transparent', label:'var(--ds-color-button-neutral-text-press-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-text)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'} }
     },
     positive: {
-      filled:   { default: {bg:'#14B456', border:'transparent', label:'#FFFFFF'}, hover: {bg:'#119C34', border:'transparent', label:'#FFFFFF'}, press: {bg:'#0F852C', border:'transparent', label:'#FFFFFF'}, disable:{bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'} },
-      outlined: { default: {bg:'#FFFFFF', border:'#14B456', label:'#14B456'}, hover: {bg:'#F3FCF7', border:'#14B456', label:'#14B456'}, press: {bg:'#E0F8EA', border:'#14B456', label:'#14B456'}, disable:{bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'} },
-      text:     { default: {bg:'#FFFFFF', border:'transparent', label:'#14B456'}, hover: {bg:'#F3FCF7', border:'transparent', label:'#14B456'}, press: {bg:'#E0F8EA', border:'transparent', label:'#14B456'}, disable:{bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'} }
+      filled: { default: {bg:'var(--ds-color-button-positive-filled-default-background)', border:'transparent', label:'var(--ds-color-button-positive-filled-default-text-color)'},
+hover: {bg:'var(--ds-color-button-positive-filled-hover-background)', border:'transparent', label:'var(--ds-color-button-positive-filled-hover-text-color)'},
+press: {bg:'var(--ds-color-button-positive-filled-press-background)', border:'transparent', label:'var(--ds-color-button-positive-filled-press-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-filled)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'} },       outlined: { default: {bg:'var(--ds-color-button-positive-outlined-default-background)', border:'var(--ds-color-button-positive-outlined-default-border-color)', label:'var(--ds-color-button-positive-outlined-default-text-color)'},
+hover: {bg:'var(--ds-color-button-positive-outlined-hover-background)', border:'var(--ds-color-button-positive-outlined-hover-border-color)', label:'var(--ds-color-button-positive-outlined-hover-text-color)'},
+press: {bg:'var(--ds-color-button-positive-outlined-press-background)', border:'var(--ds-color-button-positive-outlined-press-border-color)', label:'var(--ds-color-button-positive-outlined-press-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-outlined)', border:'var(--ds-color-button-disable-border-color)', label:'var(--ds-color-button-disable-text-color)'} },       text: { default: {bg:'var(--ds-color-button-positive-text-default-background)', border:'transparent', label:'var(--ds-color-button-positive-text-default-text-color)'},
+hover: {bg:'var(--ds-color-button-positive-text-hover-background)', border:'transparent', label:'var(--ds-color-button-positive-text-hover-text-color)'},
+press: {bg:'var(--ds-color-button-positive-text-press-background)', border:'transparent', label:'var(--ds-color-button-positive-text-press-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-text)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'} }
     },
     negative: {
-      filled:   { default: {bg:'#FF5252', border:'transparent', label:'#FFFFFF'}, hover: {bg:'#F4372F', border:'transparent', label:'#FFFFFF'}, press: {bg:'#DE1A12', border:'transparent', label:'#FFFFFF'}, disable:{bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'} },
-      outlined: { default: {bg:'#FFFFFF', border:'#FF5252', label:'#FF5252'}, hover: {bg:'#FFF8F8', border:'#FF5252', label:'#FF5252'}, press: {bg:'#FFE5E5', border:'#FF5252', label:'#FF5252'}, disable:{bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'} },
-      text:     { default: {bg:'#FFFFFF', border:'transparent', label:'#FF5252'}, hover: {bg:'#FFF8F8', border:'transparent', label:'#FF5252'}, press: {bg:'#FFE5E5', border:'transparent', label:'#FF5252'}, disable:{bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'} }
+      filled: { default: {bg:'var(--ds-color-button-negative-filled-default-background)', border:'transparent', label:'var(--ds-color-button-negative-filled-default-text-color)'},
+hover: {bg:'var(--ds-color-button-negative-filled-hover-background)', border:'transparent', label:'var(--ds-color-button-negative-filled-hover-text-color)'},
+press: {bg:'var(--ds-color-button-negative-filled-press-background)', border:'transparent', label:'var(--ds-color-button-negative-filled-press-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-filled)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'} },       outlined: { default: {bg:'var(--ds-color-button-negative-outlined-default-background)', border:'var(--ds-color-button-negative-outlined-default-border-color)', label:'var(--ds-color-button-negative-outlined-default-text-color)'},
+hover: {bg:'var(--ds-color-button-negative-outlined-hover-background)', border:'var(--ds-color-button-negative-outlined-hover-border-color)', label:'var(--ds-color-button-negative-outlined-hover-text-color)'},
+press: {bg:'var(--ds-color-button-negative-outlined-press-background)', border:'var(--ds-color-button-negative-outlined-press-border-color)', label:'var(--ds-color-button-negative-outlined-press-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-outlined)', border:'var(--ds-color-button-disable-border-color)', label:'var(--ds-color-button-disable-text-color)'} },       text: { default: {bg:'var(--ds-color-button-negative-text-default-background)', border:'transparent', label:'var(--ds-color-button-negative-text-default-text-color)'},
+hover: {bg:'var(--ds-color-button-negative-text-hover-background)', border:'transparent', label:'var(--ds-color-button-negative-text-hover-text-color)'},
+press: {bg:'var(--ds-color-button-negative-text-press-background)', border:'transparent', label:'var(--ds-color-button-negative-text-press-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-text)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'} }
     },
     warning: {
-      filled:   { default: {bg:'#FFAB40', border:'transparent', label:'#FFFFFF'}, hover: {bg:'#FE8C06', border:'transparent', label:'#FFFFFF'}, press: {bg:'#EA7806', border:'transparent', label:'#FFFFFF'}, disable:{bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'} },
-      outlined: { default: {bg:'#FFFFFF', border:'#FFAB40', label:'#EA7806'}, hover: {bg:'#FFFCF8', border:'#FFAB40', label:'#EA7806'}, press: {bg:'#FFF4E5', border:'#FFAB40', label:'#EA7806'}, disable:{bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'} },
-      text:     { default: {bg:'#FFFFFF', border:'transparent', label:'#EA7806'}, hover: {bg:'#FFFCF8', border:'transparent', label:'#EA7806'}, press: {bg:'#FFF4E5', border:'transparent', label:'#EA7806'}, disable:{bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'} }
+      filled: { default: {bg:'var(--ds-color-button-warning-filled-default-background)', border:'transparent', label:'var(--ds-color-button-warning-filled-default-text-color)'},
+hover: {bg:'var(--ds-color-button-warning-filled-hover-background)', border:'transparent', label:'var(--ds-color-button-warning-filled-hover-text-color)'},
+press: {bg:'var(--ds-color-button-warning-filled-press-background)', border:'transparent', label:'var(--ds-color-button-warning-filled-press-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-filled)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'} },       outlined: { default: {bg:'var(--ds-color-button-warning-outlined-default-background)', border:'var(--ds-color-button-warning-outlined-default-border-color)', label:'var(--ds-color-button-warning-outlined-default-text-color)'},
+hover: {bg:'var(--ds-color-button-warning-outlined-hover-background)', border:'var(--ds-color-button-warning-outlined-hover-border-color)', label:'var(--ds-color-button-warning-outlined-hover-text-color)'},
+press: {bg:'var(--ds-color-button-warning-outlined-press-background)', border:'var(--ds-color-button-warning-outlined-press-border-color)', label:'var(--ds-color-button-warning-outlined-press-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-outlined)', border:'var(--ds-color-button-disable-border-color)', label:'var(--ds-color-button-disable-text-color)'} },       text: { default: {bg:'var(--ds-color-button-warning-text-default-background)', border:'transparent', label:'var(--ds-color-button-warning-text-default-text-color)'},
+hover: {bg:'var(--ds-color-button-warning-text-hover-background)', border:'transparent', label:'var(--ds-color-button-warning-text-hover-text-color)'},
+press: {bg:'var(--ds-color-button-warning-text-press-background)', border:'transparent', label:'var(--ds-color-button-warning-text-press-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-text)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'} }
     },
     disable: {
-      filled:   { default: {bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'}, hover: {bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'}, press: {bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'}, disable:{bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'} },
-      outlined: { default: {bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'}, hover: {bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'}, press: {bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'}, disable:{bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'} },
-      text:     { default: {bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'}, hover: {bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'}, press: {bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'}, disable:{bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'} }
+      filled: { default: {bg:'var(--ds-color-button-disable-background-filled)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'},
+hover: {bg:'var(--ds-color-button-disable-background-filled)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'},
+press: {bg:'var(--ds-color-button-disable-background-filled)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-filled)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'} },       outlined: { default: {bg:'var(--ds-color-button-disable-background-outlined)', border:'var(--ds-color-button-disable-border-color)', label:'var(--ds-color-button-disable-text-color)'},
+hover: {bg:'var(--ds-color-button-disable-background-outlined)', border:'var(--ds-color-button-disable-border-color)', label:'var(--ds-color-button-disable-text-color)'},
+press: {bg:'var(--ds-color-button-disable-background-outlined)', border:'var(--ds-color-button-disable-border-color)', label:'var(--ds-color-button-disable-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-outlined)', border:'var(--ds-color-button-disable-border-color)', label:'var(--ds-color-button-disable-text-color)'} },       text: { default: {bg:'var(--ds-color-button-disable-background-text)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'},
+hover: {bg:'var(--ds-color-button-disable-background-text)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'},
+press: {bg:'var(--ds-color-button-disable-background-text)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'},
+disable: {bg:'var(--ds-color-button-disable-background-text)', border:'transparent', label:'var(--ds-color-button-disable-text-color)'} }
     }
-  },
+  }
   // CSS-переменные для таблицы «Варианты»
   vars: function (style, type, state) {
     var s = style === 'disable' ? 'neutral' : style;
