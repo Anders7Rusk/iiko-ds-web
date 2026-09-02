@@ -11,68 +11,57 @@
 <link rel="stylesheet" href="../components/card.css?v=311">
 <link rel="stylesheet" href="../components/expansion.css?v=311">
 <style>
-/* ===== КАРКАС (page-chrome — ДС-компонента нет), лейаут на токенах ===== */
-body{margin:0;background:#F5F5F5;color:var(--ds-color-text-primary,#333333);font-family:'Roboto','Helvetica Neue',Arial,sans-serif;}
+/* ===== КАРКАС (page-chrome — ДС-компонента нет): только токены, текст — ds-text-* ===== */
+body{margin:0;background:var(--ds-palette-neutral-50,#f5f5f5);color:var(--ds-color-text-primary,#333333);font-family:'Roboto','Helvetica Neue',Arial,sans-serif;}
 .page{display:flex;flex-direction:column;min-height:100vh;}
-.chrome-top{height:64px;flex-shrink:0;position:sticky;top:0;z-index:20;background:var(--ds-color-surface-default,#ffffff);box-shadow:0 2px 4px rgba(0,0,0,.08);display:flex;align-items:center;}
-.chrome-top__in{width:100%;max-width:1600px;margin:0 auto;padding:0 16px;display:flex;align-items:center;gap:32px;}
-.brand{display:flex;align-items:center;gap:12px;}
-.brand__glyph{width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;color:#424242;}
-.brand__name{font-size:13px;font-weight:500;line-height:16px;color:#212121;}
-.brand__sub{font-size:11px;font-weight:400;line-height:14px;color:#757575;}
+.chrome-top{height:var(--ds-size-16x,64px);flex-shrink:0;position:sticky;top:0;z-index:20;background:var(--ds-color-surface-default,#ffffff);box-shadow:var(--ds-shadow-shadows-01-dp-sl);display:flex;align-items:center;}
+.chrome-top__in{width:100%;max-width:1600px;margin:0 auto;padding:0 var(--ds-space-4x);display:flex;align-items:center;gap:var(--ds-space-8x);}
+.brand{display:flex;align-items:center;gap:var(--ds-space-3x);}
+.brand__glyph{width:var(--ds-size-8x);height:var(--ds-size-8x);display:inline-flex;align-items:center;justify-content:center;color:var(--ds-color-icon-primary,#616161);}
 .topnav{flex:1;display:flex;justify-content:center;}
-.topnav a{font-size:14px;font-weight:500;color:#616161;text-decoration:none;padding:4px 16px;border-radius:4px;white-space:nowrap;}
-.topright{display:flex;align-items:center;gap:12px;}
-.topright__name{font-size:14px;font-weight:500;color:#424242;white-space:nowrap;}
+.topnav a{color:var(--ds-color-text-primary,#333333);text-decoration:none;padding:var(--ds-space-1x) var(--ds-space-4x);border-radius:var(--ds-radius-1x);white-space:nowrap;display:inline-flex;align-items:center;}
+.topright{display:flex;align-items:center;gap:var(--ds-space-3x);}
 
-.body{flex:1;display:flex;justify-content:center;padding:16px;overflow:auto;}
-.layout{display:flex;gap:24px;width:100%;max-width:1600px;align-items:flex-start;}
+.body{flex:1;display:flex;justify-content:center;padding:var(--ds-space-4x);overflow:auto;}
+.layout{display:flex;gap:var(--ds-space-6x);width:100%;max-width:1600px;align-items:flex-start;}
 .sidebar{width:260px;flex-shrink:0;}
-.main{flex:1;display:flex;flex-direction:column;gap:16px;min-width:0;}
+.main{flex:1;display:flex;flex-direction:column;gap:var(--ds-space-4x);min-width:0;}
 
 /* поисковая карточка: поле + кнопка в одну строку */
-.search-row{display:flex;flex-direction:row;align-items:center;gap:24px;}
+.search-row{display:flex;flex-direction:row;align-items:center;gap:var(--ds-space-6x);}
 .search-row .ds-search{flex:1;width:auto;}
 
-/* список категорий (ds-list-item, компактно) */
-.cat .ds-list-item{width:100%;min-height:44px;border-radius:8px;margin-bottom:2px;}
-.cat .ds-list-item__icon{color:#616161;}
-.cat .ds-list-item__label{font-size:15px;font-weight:500;color:#616161;}
-.cat .ds-list-item.is-selected{background:var(--ds-color-surface-sidebar-selected,#E3F2FD);}
-.cat .ds-list-item.is-selected .ds-list-item__icon{color:var(--ds-color-text-accent,#448AFF);}
-.cat .ds-list-item.is-selected .ds-list-item__label{color:var(--ds-color-text-accent,#448AFF);}
+/* список категорий (ds-list-item): лейаут — заполнить контейнер */
+.cat .ds-list-item{width:100%;margin-bottom:var(--ds-size-0-5x);}
+.cat .ds-list-item.is-selected{background:var(--ds-color-surface-sidebar-selected,#f0f5ff);}
+.cat .ds-list-item.is-selected .ds-list-item__icon{color:var(--ds-color-icon-accent,#448aff);}
+.cat .ds-list-item.is-selected .ds-list-item__label{color:var(--ds-color-text-accent,#448aff);}
 
-/* панели (ds-expansion): контент без внешнего паддинга */
+/* таблица: колонки фикс. px (структура макета), rows — grid вокруг ячеек ДС */
 .catalog{overflow:hidden;}
 .catalog__content{padding:0;overflow-x:auto;}
-.catalog .ds-expansion{width:100%;}
-.ds-expansion__content--no-padding{width:100%;}
-.sec-count{color:#757575;font-weight:400;margin-left:6px;}
-
-/* таблица: колонки фикс. px (по макету), rows — grid вокруг ячеек ДС */
-.tbl{width:100%;min-width:1244px;overflow:hidden;}
+.tbl{width:100%;min-width:1244px;}
 .tbl-row{width:100%;display:grid;grid-template-columns:318px 129px 144px 125px 106px 311px 111px;align-items:center;}
-.ds-table-header-row{border:0;border-bottom:1px solid var(--ds-color-stroke-default,#e0e0e0);border-radius:0;background:transparent;min-height:44px;}
+.ds-table-header-row{border:0;border-bottom:1px solid var(--ds-color-stroke-default,#e0e0e0);border-radius:0;background:transparent;width:100%;min-height:44px;}
 .ds-table-header-cell{width:100%;border:0;background:transparent;min-height:44px;}
-.ds-table-header-cell__label{font-size:11px;font-weight:500;letter-spacing:.4px;text-transform:uppercase;color:#757575;}
-.ds-table-content-row{border:0;border-bottom:1px solid var(--ds-color-stroke-default,#e0e0e0);}
-.ds-table-content-cell{width:100%;min-height:52px;}
-.ds-table-content-cell__label{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;font-size:14px;color:#333333;}
-.name-cell .ds-table-content-cell__label{color:var(--ds-color-text-accent,#448AFF);font-weight:500;}
+.ds-table-content-row{border:0;border-bottom:1px solid var(--ds-color-stroke-default,#e0e0e0);width:100%;}
+.ds-table-content-cell{width:100%;min-width:0;min-height:52px;}
+.ds-table-content-cell__label{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;}
+.name-cell .ds-table-content-cell__label{color:var(--ds-color-text-accent,#448aff);font-weight:500;}
 
-/* количество — ds-input-number (компактный) + ds-btn −/+ */
+/* количество — ds-input-number (компактный для таблицы) + ds-btn −/+ */
 .qty{display:inline-flex;align-items:center;gap:var(--ds-size-1x,4px);}
-.qty .ds-btn.qop{width:48px;height:48px;min-width:0;padding:0;border:none;box-shadow:none;background:transparent;border-radius:6px;color:#616161;}
-.qty .ds-btn.qop:disabled{color:#BDBDBD;}
-.qty .ds-btn.qop:hover{background:#F5F5F5;}
-.qty .ds-input-number__frame{width:60px;height:32px;padding:0;border:1px solid var(--ds-color-stroke-default,#e0e0e0);border-radius:4px;background:#ffffff;justify-content:center;}
+.qty .ds-btn.qop{width:var(--ds-size-8x);height:var(--ds-size-6x);min-width:0;padding:0;border:none;box-shadow:none;background:transparent;border-radius:var(--ds-radius-1-5x);color:var(--ds-color-text-secondary,#616161);}
+.qty .ds-btn.qop:disabled{color:var(--ds-palette-neutral-400,#bdbdbd);}
+.qty .ds-btn.qop:hover{background:var(--ds-palette-neutral-50,#f5f5f5);}
+.qty .ds-input-number__frame{width:var(--ds-size-15x,60px);height:var(--ds-size-8x);padding:0;border:1px solid var(--ds-color-stroke-default,#e0e0e0);border-radius:var(--ds-radius-1x);background:var(--ds-color-surface-default,#ffffff);justify-content:center;}
 
 /* нижняя панель (page-chrome) */
-.chrome-bottom{flex-shrink:0;position:sticky;bottom:0;z-index:20;background:var(--ds-color-surface-default,#ffffff);border-top:1px solid var(--ds-color-stroke-default,#e0e0e0);padding:16px 0;}
-.chrome-bottom__in{display:flex;justify-content:space-between;align-items:center;max-width:1600px;margin:0 auto;padding:0 16px;}
-.fb-left{display:flex;align-items:center;gap:24px;font-size:15px;color:#424242;}
-.fb-left b{color:#212121;}
-.fb-sum b{font-size:18px;}
+.chrome-bottom{flex-shrink:0;position:sticky;bottom:0;z-index:20;background:var(--ds-color-surface-default,#ffffff);border-top:1px solid var(--ds-color-stroke-default,#e0e0e0);padding:var(--ds-space-4x) 0;}
+.chrome-bottom__in{display:flex;justify-content:space-between;align-items:center;max-width:1600px;margin:0 auto;padding:0 var(--ds-space-4x);}
+.fb-left{display:flex;align-items:center;gap:var(--ds-space-6x);}
+.fb-left b{font-weight:500;}
+.fb-sum b{font-size:var(--ds-typography-font-size-4-5x);}
 </style>
 </head>
 <body>
@@ -86,13 +75,13 @@ body{margin:0;background:#F5F5F5;color:var(--ds-color-text-primary,#333333);font
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M22,10v12H2V10l7-3v2l5-2l0,0l0,3H22z M17.2,8.5L18,2h3l0.8,6.5H17.2z M11,18h2v-4h-2V18z M7,18h2v-4H7V18z M17,14h-2v4h2V14z" fill="currentColor"/></svg>
         </span>
         <div>
-          <div class="brand__name">Пищевое производство</div>
-          <div class="brand__sub">B2B Portal</div>
+          <div class="ds-text-body-s-14-normal-medium">Пищевое производство</div>
+          <div class="ds-text-caption-l-12-normal-regular">B2B Portal</div>
         </div>
       </div>
-      <nav class="topnav"><a href="#">Каталог</a></nav>
+      <nav class="topnav"><a href="#" class="ds-text-body-s-14-normal-medium">Каталог</a></nav>
       <div class="topright">
-        <span class="topright__name">Весёлая бурёнка</span>
+        <span class="ds-text-body-s-14-normal-medium">Весёлая бурёнка</span>
         <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text" type="button">
           <span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59z" fill="currentColor"/><path d="M19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" fill="currentColor"/></svg></span>
           <span class="ds-btn__label">Выход</span>
@@ -151,7 +140,7 @@ body{margin:0;background:#F5F5F5;color:var(--ds-color-text-primary,#333333);font
             <!-- Салаты (4) -->
             <div class="ds-expansion ds-expansion--open" id="p1">
               <div class="ds-expansion__header" data-panel="p1">
-                <div class="ds-expansion__title">Салаты <span class="sec-count">(4)</span></div>
+                <div class="ds-expansion__title">Салаты <span class="ds-text-caption-l-12-normal-regular">(4)</span></div>
                 <div class="ds-expansion__arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M7.41 8.58997L12 13.17L16.59 8.58997L18 9.99997L12 16L6 9.99997L7.41 8.58997Z" fill="currentColor"/></svg></div>
               </div>
               <div class="ds-expansion__content ds-expansion__content--no-padding">
@@ -208,7 +197,7 @@ body{margin:0;background:#F5F5F5;color:var(--ds-color-text-primary,#333333);font
             <!-- Категория без имени (1) -->
             <div class="ds-expansion ds-expansion--open" id="p2">
               <div class="ds-expansion__header" data-panel="p2">
-                <div class="ds-expansion__title">Категория без имени <span class="sec-count">(1)</span></div>
+                <div class="ds-expansion__title">Категория без имени <span class="ds-text-caption-l-12-normal-regular">(1)</span></div>
                 <div class="ds-expansion__arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M7.41 8.58997L12 13.17L16.59 8.58997L18 9.99997L12 16L6 9.99997L7.41 8.58997Z" fill="currentColor"/></svg></div>
               </div>
               <div class="ds-expansion__content ds-expansion__content--no-padding">
@@ -246,8 +235,8 @@ body{margin:0;background:#F5F5F5;color:var(--ds-color-text-primary,#333333);font
   <footer class="chrome-bottom">
     <div class="chrome-bottom__in">
       <div class="fb-left">
-        <span>Товаров: <b id="fitems">2</b></span>
-        <span class="fb-sum">Общая сумма: <b id="fsum">600 ₽</b></span>
+        <span class="ds-text-body-m-16-normal-regular">Товаров: <b id="fitems">2</b></span>
+        <span class="ds-text-body-m-16-normal-regular">Общая сумма: <b id="fsum">600 ₽</b></span>
       </div>
       <div class="ds-btn-group ds-btn-group--horizontal">
         <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" type="button">
@@ -266,13 +255,9 @@ body{margin:0;background:#F5F5F5;color:var(--ds-color-text-primary,#333333);font
 
 <script>
 (function(){
-  // Сворачивание панелей (ds-expansion toggle)
   document.querySelectorAll('.ds-expansion__header').forEach(function(h){
-    h.addEventListener('click',function(){
-      h.closest('.ds-expansion').classList.toggle('ds-expansion--open');
-    });
+    h.addEventListener('click',function(){h.closest('.ds-expansion').classList.toggle('ds-expansion--open');});
   });
-  // Счётчики количества + пересчёт
   function recalc(){
     var items=0,total=0;
     document.querySelectorAll('.qty').forEach(function(box){
