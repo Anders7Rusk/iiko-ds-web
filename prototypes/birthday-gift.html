@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Подарок в день рождения — iiko DS</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css?v=310">
+<link rel="stylesheet" href="../components/components.css?v=310">
+<link rel="stylesheet" href="../components/button.css?v=310">
+<link rel="stylesheet" href="../components/button-icon.css?v=310">
+<link rel="stylesheet" href="../components/input.css?v=310">
+<link rel="stylesheet" href="../components/navigation.css?v=310">
+<link rel="stylesheet" href="../components/card.css?v=310">
+<link rel="stylesheet" href="../components/toggle.css?v=310">
+<style>
+  /* Каркас раскладки (сетка/отступы модалки). Вид элементов — только классы ds-* на токенах */
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ds-color-surface-default-variant);
+    color: var(--ds-color-text-primary);
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: var(--ds-typography-body-font-size-s);
+    line-height: var(--ds-typography-body-line-height-s);
+  }
+  .modal-overlay {
+    position: fixed; inset: 0;
+    display: flex; align-items: flex-start; justify-content: center;
+    padding: 48px 24px 24px;
+    background: rgba(0, 0, 0, .45);
+    overflow: auto;
+  }
+  .modal {
+    width: 880px; max-width: 100%;
+    display: flex; flex-direction: column;
+    background: var(--ds-color-dialog-background);
+    border-radius: var(--ds-dialog-border-radius);
+    box-shadow: var(--ds-shadow-shadows-12-dp-m);
+    max-height: calc(100vh - 72px);
+  }
+  .modal__head {
+    display: flex; align-items: center; gap: var(--ds-space-4x);
+    padding: var(--ds-space-4x) var(--ds-space-6x);
+  }
+  .modal__title {
+    flex: 1; margin: 0;
+    font-size: var(--ds-typography-header-font-size-s);
+    line-height: var(--ds-typography-header-line-height-s);
+    font-weight: var(--ds-typography-font-weight-medium);
+    letter-spacing: var(--ds-typography-letter-spacing-none);
+    color: var(--ds-color-text-primary);
+  }
+  .modal__body {
+    flex: 1;
+    padding: 0 var(--ds-space-6x) var(--ds-space-6x);
+    overflow: auto;
+    display: flex; flex-direction: column; gap: var(--ds-space-4x);
+    align-items: stretch;
+  }
+  .modal__foot {
+    display: flex; align-items: center; justify-content: flex-end; gap: var(--ds-space-2x);
+    padding: var(--ds-space-4x) var(--ds-space-6x);
+    border-top: 1px solid var(--ds-color-stroke-default);
+  }
+  .stack-16 { display: flex; flex-direction: column; gap: var(--ds-space-4x); }
+  .card-title-row { display: flex; align-items: center; gap: var(--ds-space-2x); }
+  .card-title-row .ds-card__title { margin: 0; }
+  .card-title-row .card-title-icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 20px; height: 20px; flex-shrink: 0;
+    color: var(--ds-color-icon-primary);
+  }
+  .card-title-icon svg { width: 20px; height: 20px; display: block; }
+  .hint-row { display: flex; align-items: center; justify-content: space-between; }
+  .toolbar-row { display: flex; align-items: center; gap: var(--ds-space-2x); }
+  .toolbar-row .toolbar-title {
+    flex: 1; margin: 0;
+    font-size: var(--ds-typography-body-font-size-m);
+    line-height: var(--ds-typography-body-line-height-m);
+    font-weight: var(--ds-typography-font-weight-medium);
+  }
+  .card-subtitle { margin: var(--ds-space-1x) 0 0; color: var(--ds-color-text-secondary); }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ds-space-4x); }
+  .field { display: flex; flex-direction: column; gap: var(--ds-space-1x); }
+
+  /* Таблица позиций (каркас; вид — компонентные токены) */
+  .pos-table { width: 100%; border-collapse: collapse; }
+  .pos-table th, .pos-table td { padding: var(--ds-space-2x) var(--ds-space-3x); white-space: nowrap; }
+  .pos-table thead th {
+    background: var(--ds-color-table-row-header-background-header);
+    color: var(--ds-color-text-primary);
+    font-size: var(--ds-typography-body-font-size-s);
+    line-height: var(--ds-typography-body-line-height-s);
+    font-weight: var(--ds-typography-font-weight-medium);
+    text-align: left;
+  }
+  .pos-table tbody td {
+    border-top: 1px solid var(--ds-color-stroke-default);
+    color: var(--ds-color-text-primary);
+    font-size: var(--ds-typography-body-font-size-s);
+    line-height: var(--ds-typography-body-line-height-s);
+  }
+  .pos-cell { display: flex; align-items: center; gap: var(--ds-space-2x); }
+  .pos-thumb {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 24px; height: 24px; border-radius: var(--ds-size-circular);
+    background: var(--ds-color-shapes-default-variant);
+    font-size: 14px; line-height: 1;
+  }
+  .pos-drop { display: inline-flex; align-items: center; gap: var(--ds-space-1x); color: var(--ds-color-icon-primary); }
+  .pos-drop svg { width: 20px; height: 20px; display: block; }
+
+  /* Счётчик дней: метка + поле с − значение + */
+  .stepper {
+    display: flex; align-items: center; gap: var(--ds-space-1x);
+    box-sizing: border-box; width: 100%;
+    height: 40px; padding: 0 var(--ds-space-1x) 0 var(--ds-space-1x);
+    border: 1px solid var(--ds-color-stroke-default);
+    border-radius: var(--ds-radius-3x);
+    background: var(--ds-color-shapes-default-variant);
+  }
+  .stepper__value {
+    flex: 1; text-align: center; outline: none; border: none; background: transparent;
+    font-family: inherit; font-size: var(--ds-typography-body-font-size-m);
+    font-weight: var(--ds-typography-font-weight-medium);
+    line-height: var(--ds-typography-body-line-height-m);
+    color: var(--ds-color-text-primary);
+  }
+  .stepper__btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: var(--ds-radius-2x);
+    border: none; background: var(--ds-color-shapes-hover);
+    color: var(--ds-color-icon-primary); cursor: pointer;
+    transition: background-color .15s ease;
+  }
+  .stepper__btn:hover { background: var(--ds-color-shapes-disable); }
+  .stepper__btn svg { width: 20px; height: 20px; flex-shrink: 0; display: block; }
+  .stepper__btn svg path { fill: currentColor; }
+</style>
+</head>
+<body>
+
+<div class="modal-overlay">
+  <div class="modal">
+
+    <!-- Шапка: заголовок + закрыть -->
+    <div class="modal__head">
+      <h1 class="modal__title">Подарок в день рождения</h1>
+      <button class="ds-button-icon ds-button-icon--m ds-button-icon--neutral ds-button-icon--text" type="button" aria-label="Закрыть">
+        <span class="ds-button-icon__icon" data-icon="close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="currentColor"/></svg></span>
+      </button>
+    </div>
+
+    <div class="modal__body">
+
+      <!-- Табы: Настройка (активный) / Рассылка -->
+      <nav class="ds-tabs">
+        <button class="ds-tab ds-tab--active" type="button" role="tab" aria-selected="true">Настройка</button>
+        <button class="ds-tab" type="button" role="tab" aria-selected="false">Рассылка</button>
+      </nav>
+
+      <!-- Зелёный баннер -->
+      <div class="ds-banner ds-banner--positive ds-banner--horizontal">
+        <span class="ds-banner__icon" data-icon="info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 17H13V11H11V17ZM12 9C12.2833 9 12.5208 8.90417 12.7125 8.7125C12.9042 8.52083 13 8.28333 13 8C13 7.71667 12.9042 7.47917 12.7125 7.2875C12.5208 7.09583 12.2833 7 12 7C11.7167 7 11.4792 7.09583 11.2875 7.2875C11.0958 7.47917 11 7.71667 11 8C11 8.28333 11.0958 8.52083 11.2875 8.7125C11.4792 9 11.71667 9 12 9ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z" fill="currentColor"/></svg></span>
+        <span class="ds-banner__text">Гость получает подарок, если сделает заказ в ресторане за определенное количество дней до и после своего дня рождения</span>
+      </div>
+
+      <!-- Карточка 1: тумблер + название акции -->
+      <div class="ds-card ds-card--outlined">
+        <div class="ds-card__content">
+          <div class="stack-16">
+            <label class="ds-slide-toggle">
+              <span class="ds-slide-toggle__row">
+                <input type="checkbox" class="ds-slide-toggle__input" checked>
+                <span class="ds-slide-toggle__track"></span>
+                <span class="ds-slide-toggle__title">Активировать акцию</span>
+              </span>
+            </label>
+            <div class="ds-input ds-input--m">
+              <div class="ds-input__frame">
+                <div class="ds-input__content">
+                  <label class="ds-input__label" for="campaign-name">Название акции</label>
+                  <input class="ds-input__field" id="campaign-name" type="text" value="Подарок в день рождения копия">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка 2: Период действия -->
+      <div class="ds-card ds-card--outlined">
+        <div class="ds-card__header">
+          <div class="card-title-row">
+            <h3 class="ds-card__title">Период действия</h3>
+            <span class="card-title-icon" data-icon="info" title="Период, в который действует акция"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 17H13V11H11V17ZM12 9C12.2833 9 12.5208 8.90417 12.7125 8.7125C12.9042 8.52083 13 8.28333 13 8C13 7.71667 12.9042 7.47917 12.7125 7.2875C12.5208 7.09583 12.2833 7 12 7C11.7167 7 11.4792 7.09583 11.2875 7.2875C11.0958 7.47917 11 7.71667 11 8C11 8.28333 11.0958 8.52083 11.2875 8.7125C11.4792 8.90417 11.7167 9 12 9ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z" fill="currentColor"/></svg></span>
+          </div>
+        </div>
+        <div class="ds-card__content">
+          <div class="stack-16">
+            <div class="grid-2">
+              <div class="ds-input ds-input--m">
+                <div class="ds-input__frame">
+                  <div class="ds-input__content">
+                    <label class="ds-input__label" for="date-start">Дата начала</label>
+                    <input class="ds-input__field" id="date-start" type="text" value="01.01.2026" readonly>
+                  </div>
+                  <span class="ds-input__icon" data-icon="date_range"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 14C7.71667 14 7.47917 13.9042 7.2875 13.7125C7.09583 13.5208 7 13.2833 7 13C7 12.7167 7.09583 12.4792 7.2875 12.2875C7.47917 12.0958 7.71667 12 8 12C8.28333 12 8.52083 12.0958 8.7125 12.2875C8.90417 12.4792 9 12.7167 9 13C9 13.2833 8.90417 13.5208 8.7125 13.7125C8.52083 13.9042 8.28333 14 8 14ZM12 14C11.7167 14 11.4792 13.9042 11.2875 13.7125C11.0958 13.5208 11 13.2833 11 13C11 12.7167 11.0958 12.4792 11.2875 12.2875C11.4792 12.0958 11.7167 12 12 12C12.2833 12 12.5208 12.0958 12.7125 12.2875C12.9042 12.4792 13 12.7167 13 13C13 13.2833 12.9042 13.5208 12.7125 13.7125C12.5208 13.9042 12.2833 14 12 14ZM16 14C15.7167 14 15.4792 13.9042 15.2875 13.7125C15.0958 13.5208 15 13.2833 15 13C15 12.7167 15.0958 12.4792 15.2875 12.2875C15.4792 12.0958 15.7167 12 16 12C16.2833 12 16.5208 12.0958 16.7125 12.2875C16.9042 12.4792 17 12.7167 17 13C17 13.2833 16.9042 13.5208 16.7125 13.7125C16.5208 13.9042 16.2833 14 16 14ZM5 22C4.45 22 3.97917 21.8042 3.5875 21.4125C3.19583 21.0208 3 20.55 3 20V6C3 5.45 3.19583 4.97917 3.5875 4.5875C3.97917 4.19583 4.45 4 5 4H6V2H8V4H16V2H18V4H19C19.55 4 20.0208 4.19583 20.4125 4.5875C20.8042 4.97917 21 5.45 21 6V20C21 20.55 20.8042 21.0208 20.4125 21.4125C20.0208 21.8042 19.55 22 19 22H5ZM5 20H19V10H5V20ZM5 8H19V6H5V8Z" fill="currentColor"/></svg></span>
+                </div>
+              </div>
+              <div class="ds-input ds-input--m">
+                <div class="ds-input__frame">
+                  <div class="ds-input__content">
+                    <label class="ds-input__label" for="date-end">Дата окончания</label>
+                    <input class="ds-input__field" id="date-end" type="text" value="01.01.2026" readonly>
+                  </div>
+                  <span class="ds-input__icon" data-icon="date_range"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 14C7.71667 14 7.47917 13.9042 7.2875 13.7125C7.09583 13.5208 7 13.2833 7 13C7 12.7167 7.09583 12.4792 7.2875 12.2875C7.47917 12.0958 7.71667 12 8 12C8.28333 12 8.52083 12.0958 8.7125 12.2875C8.90417 12.4792 9 12.7167 9 13C9 13.2833 8.90417 13.5208 8.7125 13.7125C8.52083 13.9042 8.28333 14 8 14ZM12 14C11.7167 14 11.4792 13.9042 11.2875 13.7125C11.0958 13.5208 11 13.2833 11 13C11 12.7167 11.0958 12.4792 11.2875 12.2875C11.4792 12.0958 11.7167 12 12 12C12.2833 12 12.5208 12.0958 12.7125 12.2875C12.9042 12.4792 13 12.7167 13 13C13 13.2833 12.9042 13.5208 12.7125 13.7125C12.5208 13.9042 12.2833 14 12 14ZM16 14C15.7167 14 15.4792 13.9042 15.2875 13.7125C15.0958 13.5208 15 13.2833 15 13C15 12.7167 15.0958 12.4792 15.2875 12.2875C15.4792 12.0958 15.7167 12 16 12C16.2833 12 16.5208 12.0958 16.7125 12.2875C16.9042 12.4792 17 12.7167 17 13C17 13.2833 16.9042 13.5208 16.7125 13.7125C16.5208 13.9042 16.2833 14 16 14ZM5 22C4.45 22 3.97917 21.8042 3.5875 21.4125C3.19583 21.0208 3 20.55 3 20V6C3 5.45 3.19583 4.97917 3.5875 4.5875C3.97917 4.19583 4.45 4 5 4H6V2H8V4H16V2H18V4H19C19.55 4 20.0208 4.19583 20.4125 4.5875C20.8042 4.97917 21 5.45 21 6V20C21 20.55 20.8042 21.0208 20.4125 21.4125C20.0208 21.8042 19.55 22 19 22H5ZM5 20H19V10H5V20ZM5 8H19V6H5V8Z" fill="currentColor"/></svg></span>
+                </div>
+              </div>
+            </div>
+            <div class="grid-2">
+              <div class="field">
+                <span class="ds-input__label">Количество дней до</span>
+                <div class="stepper">
+                  <button class="stepper__btn" type="button" aria-label="Уменьшить"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13V11H19V13H5Z" fill="currentColor"/></svg></button>
+                  <input class="stepper__value" type="text" inputmode="numeric" value="2">
+                  <button class="stepper__btn" type="button" aria-label="Увеличить"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></button>
+                </div>
+              </div>
+              <div class="field">
+                <span class="ds-input__label">Количество дней после</span>
+                <div class="stepper">
+                  <button class="stepper__btn" type="button" aria-label="Уменьшить"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13V11H19V13H5Z" fill="currentColor"/></svg></button>
+                  <input class="stepper__value" type="text" inputmode="numeric" value="2">
+                  <button class="stepper__btn" type="button" aria-label="Увеличить"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка 3: Выбрать подарок -->
+      <div class="ds-card ds-card--outlined">
+        <div class="ds-card__content">
+          <div class="stack-16">
+
+            <!-- Тип подарка -->
+            <div class="ds-input ds-input--m">
+              <div class="ds-input__frame">
+                <div class="ds-input__content">
+                  <label class="ds-input__label" for="gift-type">Тип подарка</label>
+                  <input class="ds-input__field" id="gift-type" type="text" value="Блюдо" readonly>
+                </div>
+                <span class="ds-input__icon" data-icon="arrow_drop_down"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15L7 10H17L12 15Z" fill="currentColor"/></svg></span>
+              </div>
+            </div>
+
+            <!-- Список подарочных позиций: заголовок + кнопки -->
+            <div>
+              <div class="toolbar-row">
+                <h3 class="toolbar-title">Список подарочных позиций</h3>
+                <div class="toolbar-row__buttons">
+                  <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button">
+                    <span class="ds-btn__icon" data-icon="add"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span>
+                    <span class="ds-btn__label">Очистить</span>
+                  </button>
+                  <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button">
+                    <span class="ds-btn__icon" data-icon="add"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span>
+                    <span class="ds-btn__label">Добавить</span>
+                  </button>
+                </div>
+              </div>
+              <p class="card-subtitle">Укажите одно или несколько блюд, из которых можно выбрать подарок</p>
+            </div>
+
+            <!-- Таблица позиций -->
+            <table class="pos-table">
+              <thead>
+                <tr>
+                  <th>Тип номенклатуры</th>
+                  <th>Название</th>
+                  <th>Артикул</th>
+                  <th>Размер</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="pos-cell">
+                      <span class="pos-thumb">🍽️</span>
+                      <span class="pos-drop">Товар<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15L7 10H17L12 15Z" fill="currentColor"/></svg></span>
+                    </span>
+                  </td>
+                  <td>Фруктовый салат</td>
+                  <td>00018</td>
+                  <td>
+                    <span class="pos-drop">Стандартный<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15L7 10H17L12 15Z" fill="currentColor"/></svg></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="pos-cell">
+                      <span class="pos-thumb">☕</span>
+                      <span class="pos-drop">Товар<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15L7 10H17L12 15Z" fill="currentColor"/></svg></span>
+                    </span>
+                  </td>
+                  <td>Капучино</td>
+                  <td>00019</td>
+                  <td>
+                    <span class="pos-drop">Маленький<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15L7 10H17L12 15Z" fill="currentColor"/></svg></span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Персональная рекомендация -->
+            <div class="ds-banner ds-banner--accent ds-banner--horizontal">
+              <span class="ds-banner__icon" data-icon="info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 17H13V11H11V17ZM12 9C12.2833 9 12.5208 8.90417 12.7125 8.7125C12.9042 8.52083 13 8.28333 13 8C13 7.71667 12.9042 7.47917 12.7125 7.2875C12.5208 7.09583 12.2833 7 12 7C11.7167 7 11.4792 7.09583 11.2875 7.2875C11.0958 7.47917 11 7.71667 11 8C11 8.28333 11.0958 8.52083 11.2875 8.7125C11.4792 8.90417 11.7167 9 12 9ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7175 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z" fill="currentColor"/></svg></span>
+              <span class="ds-banner__text"><strong>Будет работать персональная рекомендация.</strong> Каждый гость получит одно своё блюдо из выбранных на основе истории заказов.</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Футер: Отменить / Создать -->
+    <div class="modal__foot">
+      <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text" type="button">
+        <span class="ds-btn__label">Отменить</span>
+      </button>
+      <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button">
+        <span class="ds-btn__label">Создать</span>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // Счётчики (− / +)
+  document.querySelectorAll('.stepper').forEach(function (st) {
+    var input = st.querySelector('.stepper__value');
+    var step = function (dir) {
+      var v = parseInt(input.value, 10) || 0;
+      input.value = Math.max(0, v + dir);
+    };
+    st.querySelector('.stepper__btn[aria-label="Уменьшить"]').addEventListener('click', function () { step(-1); });
+    st.querySelector('.stepper__btn[aria-label="Увеличить"]').addEventListener('click', function () { step(1); });
+  });
+
+  // Табы: переключение активного состояния
+  document.querySelectorAll('.ds-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.ds-tab').forEach(function (t) {
+        t.classList.remove('ds-tab--active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('ds-tab--active');
+      tab.setAttribute('aria-selected', 'true');
+    });
+  });
+</script>
+
+</body>
+</html>
