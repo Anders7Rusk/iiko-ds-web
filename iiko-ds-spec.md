@@ -8254,15 +8254,12 @@ For icon=On — с местом под иконку у ветки; Off — бе�
 
 **✓ выверено по узлам Figma вручную** (размеры, шрифты, состояния сняты поштучно): Button, Input, Checkbox, Radio button, Badge, Tabs (Lvl 1/2), Divider, Banners, Card view (+header/content/footer), Expansion panel (+content), Stepper (+Step), Slide toggle. Остальные — сгенерированы автоматически: цвета/размеры/радиусы на токенах верные, структура упрощённая (при первом использовании стоит сверить с макетом).
 
-Подключение:
-
+**Весь нужный CSS уже в этом файле** — ничего скачивать не нужно. Если собираете прототип в отдельной странице на GitHub Pages, подключите CSS по прямой ссылке (или возьмите из раздела «Полные CSS-стили всех компонентов»):\n
 ```html
-<link rel="stylesheet" href="tokens.css">
-<link rel="stylesheet" href="components/button.css">
-<link rel="stylesheet" href="components/input.css">
-<link rel="stylesheet" href="components/selection.css">
-<link rel="stylesheet" href="components/badge.css">
-<link rel="stylesheet" href="components/components.css">
+<link rel="stylesheet" href="https://anders7rusk.github.io/iiko-ds-web/tokens.css">
+<link rel="stylesheet" href="https://anders7rusk.github.io/iiko-ds-web/components/button.css">
+<link rel="stylesheet" href="https://anders7rusk.github.io/iiko-ds-web/components/input.css">
+<link rel="stylesheet" href="https://anders7rusk.github.io/iiko-ds-web/components/components.css">
 ```
 
 | Компонент | Класс | Модификаторы |
