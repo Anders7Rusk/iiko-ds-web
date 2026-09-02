@@ -7570,7 +7570,7 @@
 | `.ds-divider-line` | `--dashed` `--disable` `--lite` `--selected` | — |
 | `.ds-banner` | `--accent` `--horizontal` `--negative` `--neutral` `--positive` `--vertical` `--warning` | `__buttons` `__icon` `__row` `__text` |
 | `.ds-field-label` | — | — |
-| `.ds-card` | `--filled` `--outlined` `--shadow` | `__content` `__footer` `__footer--right` `__header` `__label-down` `__label-up` `__title` |
+| `.ds-card` | `--filled` `--outlined` `--shadow` | `__content` `__divider` `__footer` `__footer--right` `__footer__action` `__header` `__label-down` `__label-up` `__title` |
 | `.ds-expansion` | `--disabled` `--info` `--open` | `__actions` `__arrow` `__content` `__content--no-padding` `__header` `__icon` `__title` |
 | `.ds-stepper` | — | `__divider` |
 | `.ds-step` | `--bg` `--disabled` `--error` `--selected` | `__icon` `__num` |
@@ -8536,16 +8536,22 @@ CSS-правила компонента:
 - `--filled` — без рамки и тени (фон `Surface/Default`)
 - `--outlined` — рамка 1px `Stroke/Default` (#E0E0E0)
 - `--shadow` — тень эффект-стиля ДС `Shadows/01 dp Sl`
-- Скругление 8px (`Card/Border radius` → `Radius/2x`), боковые отступы 24px (`Card/Pad left|right` → `Space/6x`)
+- Скругление 8px (`Card/Border radius` → `Radius/2x`); паддинги из свежего дерева:
+  header сверху 16 · content 16/16/16 · footer action бока/низ 16
 
 Структура из Figma: `Card header` (Label up · Title · Label down) → `Divider` →
-`Card content` (Title · Content) → `Divider` → `Card footer` (кнопки).
+`Card content` (SLOT · Title · Content) → `Divider` → `Card footer` (Action с кнопками).
+
+Размер представителя: 501×248 (header 108 · content 88 · footer 52).
+Разметка автогена `Card view` строится по классам `ds-card`, `ds-card__header`,
+`ds-card__label-up|down`, `ds-card__title`, `ds-card__divider`, `ds-card__content`,
+`ds-card__footer`, `ds-card__footer__action`.
 
 **Части необязательные.** Если на референсе нет подвала — блок `ds-card__footer`
 в разметку не добавлять (правило: состав экрана берётся с референса).
 
 ```html
-<div class="ds-card ds-card--outlined">\n  <div class="ds-card__header">\n    <span class="ds-card__label-up">Подпись сверху</span>\n    <h3 class="ds-card__title">Заголовок карточки</h3>\n    <span class="ds-card__label-down">Подпись снизу</span>\n  </div>\n  <div class="ds-divider ds-divider--m"></div>\n  <div class="ds-card__content">\n    <span>Содержимое карточки</span>\n  </div>\n  <div class="ds-divider ds-divider--m"></div>\n  <div class="ds-card__footer ds-card__footer--right">\n    <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text" type="button"><span class="ds-btn__label">Отмена</span></button>\n    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Сохранить</span></button>\n  </div>\n</div>
+<div class="ds-card ds-card--outlined">\n  <div class="ds-card__header">\n    <span class="ds-card__label-up">Подпись сверху</span>\n    <h3 class="ds-card__title">Заголовок карточки</h3>\n    <span class="ds-card__label-down">Подпись снизу</span>\n  </div>\n  <div class="ds-card__divider"></div>\n  <div class="ds-card__content">\n    <span>Содержимое карточки</span>\n  </div>\n  <div class="ds-card__footer ds-card__footer--right">\n    <div class="ds-card__divider"></div>\n    <div class="ds-card__footer__action">\n      <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text" type="button"><span class="ds-btn__label">Отмена</span></button>\n      <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Сохранить</span></button>\n    </div>\n  </div>\n</div>
 ```
 
 Минимальная карточка — только контент:
@@ -17351,8 +17357,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 
 /* ============================================================
    iiko DS — Card view (Filled / Outlined / Shadow)
-   Источник: Figma, страница «🟡Card», COMPONENT_SET «Card view»
-   Структура: Card header + Card content + Card footer
+   Источник: Figma, страница «🟡Card_DS», COMPONENT_SET «Card view»
+   Обновлено: Card header / Card content (SLOT) / Card footer
+   Размер: 501×248 · header 108 · content 88 · footer 52
+   Разметка — ровно по свежему дереву Figma.
    ============================================================ */
 
 .ds-card {
@@ -17377,20 +17385,23 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 
-/* ── Card header (Label up / Title / Label down + Divider) ── */
+/* ── Card header (16px сверху/по бокам, gap 8) ────────────────
+   РЕАЛЬНОЕ значение паддинга = 16px (токен Space/6x устарел=24, не берём). */
 
 .ds-card__header {
   display: flex;
   flex-direction: column;
-  padding: var(--ds-space-2x) var(--ds-space-6x);     /* 8px 24px */
+  gap: var(--ds-space-2x);                            /* 8px */
+  padding: 16px 16px 0;                               /* сверху/бока 16, низ 0 (padBottom=None в Figma) */
 }
 
 .ds-card__label-up,
 .ds-card__label-down {
   color: var(--ds-color-text-secondary);              /* #616161 */
-  font-size: var(--ds-typography-body-font-size-s);   /* 14px */
-  line-height: var(--ds-typography-body-line-height-l); /* 24px */
-  letter-spacing: var(--ds-typography-letter-spacing-s);
+  font-size: var(--ds-typography-body-font-size-m);   /* 16px (Body M) */
+  font-weight: var(--ds-typography-font-weight-regular); /* 400 */
+  line-height: var(--ds-typography-body-line-height-m); /* 24px */
+  letter-spacing: var(--ds-typography-letter-spacing-none);
 }
 
 .ds-card__title {
@@ -17402,23 +17413,32 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   letter-spacing: var(--ds-typography-letter-spacing-none);
 }
 
-/* ── Card content (pad 8/24) ─────────────────────────────── */
+/* ── Card content (SLOT, паддинг 16/16/16) ─────────────────── */
 
 .ds-card__content {
   display: flex;
   flex-direction: column;
-  padding: var(--ds-space-2x) var(--ds-space-6x);     /* 8px 24px */
+  padding: 16px;                                      /* 16/16/16 (было 8/24) */
 }
 
-/* ── Card footer ─────────────────────────────────────────── */
+/* ── Card footer — Divider + Action (Action pad 16 по бокам/снизу) ── */
 
 .ds-card__footer {
   display: flex;
-  align-items: center;
-  gap: var(--ds-space-2x);
-  padding: var(--ds-space-4x) var(--ds-space-6x);     /* 16px 24px */
+  flex-direction: column;
 }
-.ds-card__footer--right { justify-content: flex-end; }
+.ds-card__divider {
+  height: 1px;
+  background: var(--ds-color-stroke-default);         /* #E0E0E0 */
+  border: none;
+}
+.ds-card__footer__action {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2x);                            /* 8px */
+  padding: 0 16px 16px;                               /* бока/низ 16 */
+}
+.ds-card__footer--right .ds-card__footer__action { justify-content: flex-end; }
 
 /* ============================================================
    iiko DS — Expansion panel + Expansion content
