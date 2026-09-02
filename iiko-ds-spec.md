@@ -7595,7 +7595,7 @@
 | `.ds-divider-line` | `--dashed` `--disable` `--lite` `--selected` | — |
 | `.ds-banner` | `--accent` `--horizontal` `--negative` `--neutral` `--positive` `--vertical` `--warning` | `__buttons` `__icon` `__row` `__text` |
 | `.ds-field-label` | — | — |
-| `.ds-card` | `--filled` `--outlined` `--shadow` | `__content` `__divider` `__footer` `__footer--right` `__footer__action` `__header` `__label-down` `__label-up` `__title` |
+| `.ds-card` | `--custom` `--filled` `--outlined` `--shadow` | `__content` `__divider` `__footer` `__footer--right` `__footer__action` `__header` `__label-down` `__label-up` `__title` |
 | `.ds-expansion` | `--disabled` `--info` `--open` | `__actions` `__arrow` `__content` `__content--no-padding` `__header` `__icon` `__title` |
 | `.ds-stepper` | — | `__divider` |
 | `.ds-step` | `--bg` `--disabled` `--error` `--selected` | `__icon` `__num` |
@@ -8561,16 +8561,17 @@ CSS-правила компонента:
 - `--filled` — без рамки и тени (фон `Surface/Default`)
 - `--outlined` — рамка 1px `Stroke/Default` (#E0E0E0)
 - `--shadow` — тень эффект-стиля ДС `Shadows/01 dp Sl`
-- Скругление 8px (`Card/Border radius` → `Radius/2x`); паддинги из свежего дерева:
-  header сверху 16 · content 16/16/16 · footer action бока/низ 16
+- `--custom` — карточка только с контентом (SLOT, 500×88, pad 16)
+- Скругление 8px (`Card/Border radius` → `Radius/2x`); паддинги из текущего дерева:
+  header сверху/бока 16, низ 4 · content 16/16/16 · footer action сверху 4, бока/низ 16
 
 Структура из Figma: `Card header` (Label up · Title · Label down) → `Divider` →
 `Card content` (SLOT · Title · Content) → `Divider` → `Card footer` (Action с кнопками).
 
-Размер представителя: 501×248 (header 108 · content 88 · footer 52).
+Размер представителя: 501×256 (header 112 · content 88 · footer 56).
 Разметка автогена `Card view` строится по классам `ds-card`, `ds-card__header`,
 `ds-card__label-up|down`, `ds-card__title`, `ds-card__divider`, `ds-card__content`,
-`ds-card__footer`, `ds-card__footer__action`.
+`ds-card__footer`, `ds-card__footer__action`, `ds-card--custom`.
 
 **Части необязательные.** Если на референсе нет подвала — блок `ds-card__footer`
 в разметку не добавлять (правило: состав экрана берётся с референса).
@@ -17410,6 +17411,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 
+/* Type=Custom — карточка только с контентом (SLOT, 500×88, pad 16) */
+.ds-card--custom {
+  padding: 16px;
+}
+
 /* ── Card header (16px сверху/по бокам, gap 8) ────────────────
    РЕАЛЬНОЕ значение паддинга = 16px (токен Space/6x устарел=24, не берём). */
 
@@ -17417,7 +17423,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   flex-direction: column;
   gap: var(--ds-space-2x);                            /* 8px */
-  padding: 16px 16px 0;                               /* сверху/бока 16, низ 0 (padBottom=None в Figma) */
+  padding: 16px 16px 4px;                            /* сверху/бока 16, низ 4 (текущее дерево) */
 }
 
 .ds-card__label-up,
@@ -17461,7 +17467,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex;
   align-items: center;
   gap: var(--ds-space-2x);                            /* 8px */
-  padding: 0 16px 16px;                               /* бока/низ 16 */
+  padding: 4px 16px 16px;                             /* сверху 4, бока/низ 16 */
 }
 .ds-card__footer--right .ds-card__footer__action { justify-content: flex-end; }
 
