@@ -490,6 +490,10 @@ var RD = {
     if (variant === 'Error') return '--ds-color-radio-button-error-icon-color';
     return '--ds-color-radio-button-normal-' + (type === 'Selected' ? 'selected' : 'deselected') + '-icon-color';
   },
+  bgVar: function (variant, type, state) {
+    if (variant === 'Disable') return '--ds-color-radio-button-disable-background';
+    return '--ds-color-radio-button-' + variant.toLowerCase() + '-' + (type === 'Selected' ? 'selected' : 'deselected') + '-' + state.toLowerCase() + '-background';
+  },
   labelVar: function (variant) {
     return variant === 'Disable' ? '--ds-color-radio-button-label-text-disable-color' : '--ds-color-radio-button-label-text-color';
   },
@@ -805,13 +809,13 @@ function matrixRadio(variant, type, state) {
   var isDisable = variant === 'Disable';
   // подложка 28×28 (Hover/Press); Default/Disable — иконка 20×20
   var size = isDisable || state === 'Default' ? '20px' : '28px';
-  var bg = isDisable || state === 'Default' ? '' : 'background:' + colors.bg + ';';
+  var bg = isDisable || state === 'Default' ? '' : 'background:var(' + RD.bgVar(variant, type, state) + ', ' + colors.bg + ');';
   var radius = isDisable || state === 'Default' ? '' : 'border-radius:50%;';
   var iconSvg = type === 'Selected' ? RD_ICON_CHECKED : RD_ICON_UNCHECKED;
   return '<span class="mc-radio matrix-btn" data-variant="' + variant + '" data-type="' + type + '" data-state="' + state +
          '" style="width:' + size + ';height:' + size + ';' + radius + bg +
          'display:inline-flex;align-items:center;justify-content:center;cursor:pointer;" title="' + variant + ' / ' + type + ' / ' + state + '">' +
-         '<span style="display:inline-flex;color:' + colors.icon + '">' + iconSvg + '</span></span>';
+         '<span style="display:inline-flex;color:var(' + RD.iconVar(variant, type) + ', ' + colors.icon + ')">' + iconSvg + '</span></span>';
 }
 
 (function buildMatrix() {
