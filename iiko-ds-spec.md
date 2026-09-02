@@ -79,6 +79,12 @@
 (`--margins`, паддинг 8px 16px) — она в основном для **футера/нижней панели** (отступ от краёв контейнера,
 напр. «Отмена/Сохранить» в `__footer`); в тулбаре/списке (середина экрана) группа — **без маржинс**.
 
+**Зазор между кнопками в группе — только из токена, НЕ ставить произвольный отступ.**
+`Button group` задаёт `gap` токеном `--ds-button-group-gap` (= `--ds-space-2x`, 8px). Не выставлять
+`margin`/`gap` у отдельных кнопок вручную — это ломает единый интервал и «разъезжается» вид.
+Разметка горизонтальной группы: `<div class="ds-btn-group ds-btn-group--horizontal">КНОПКИ</div>`.
+Одна кнопка — обычный `Button`, **без** обёртки `ds-btn-group`.
+
 **Шаг 4. Определить данные и состояния.** Что заполнено, что плейсхолдер, что обязательно, что включено или
 выключено, что недоступно, где ошибка. Тексты — дословно из задания, без переписывания и «улучшений».
 
@@ -8507,10 +8513,10 @@ CSS-правила компонента (значения — только то�
 .ds-btn-group {
   display: flex;
 }
-.ds-btn-group--horizontal { flex-direction: row; gap: var(--ds-space-2x); }   /* 8px */
-.ds-btn-group--vertical   { flex-direction: column; gap: var(--ds-space-2x); }
+.ds-btn-group--horizontal { flex-direction: row; gap: var(--ds-button-group-gap); }    /* 8px */
+.ds-btn-group--vertical   { flex-direction: column; gap: var(--ds-button-group-gap); } /* 8px */
 .ds-btn-group--margins {
-  padding: 8px 16px;
+  padding: var(--ds-button-group-margins-pad-top) var(--ds-button-group-margins-pad-right); /* 8px 16px */
 }
 
 /* ── Иконки ──────────────────────────────────────────────── */
@@ -17087,10 +17093,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-btn-group {
   display: flex;
 }
-.ds-btn-group--horizontal { flex-direction: row; gap: var(--ds-space-2x); }   /* 8px */
-.ds-btn-group--vertical   { flex-direction: column; gap: var(--ds-space-2x); }
+.ds-btn-group--horizontal { flex-direction: row; gap: var(--ds-button-group-gap); }    /* 8px */
+.ds-btn-group--vertical   { flex-direction: column; gap: var(--ds-button-group-gap); } /* 8px */
 .ds-btn-group--margins {
-  padding: 8px 16px;
+  padding: var(--ds-button-group-margins-pad-top) var(--ds-button-group-margins-pad-right); /* 8px 16px */
 }
 
 /* ── Иконки ──────────────────────────────────────────────── */
