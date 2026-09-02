@@ -23,7 +23,7 @@
     { name: 'Textarea',          file: null },
     { name: 'Slide toggle',      file: null },
     { name: 'Badge',             file: 'badge.html' },
-    { name: 'Chips',             file: null },
+    { name: 'Chips',             file: 'chips.html' },
     { name: 'Divider',           file: null },
     { name: 'Scroll',            file: null },
   ];
