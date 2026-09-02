@@ -72,10 +72,10 @@
 .ds-btn-group {
   display: flex;
 }
-.ds-btn-group--horizontal { flex-direction: row; gap: var(--ds-space-2x); }   /* 8px */
-.ds-btn-group--vertical   { flex-direction: column; gap: var(--ds-space-2x); }
+.ds-btn-group--horizontal { flex-direction: row; gap: var(--ds-button-group-gap); }    /* 8px */
+.ds-btn-group--vertical   { flex-direction: column; gap: var(--ds-button-group-gap); } /* 8px */
 .ds-btn-group--margins {
-  padding: 8px 16px;
+  padding: var(--ds-button-group-margins-pad-top) var(--ds-button-group-margins-pad-right); /* 8px 16px */
 }
 
 /* ── Иконки ──────────────────────────────────────────────── */
