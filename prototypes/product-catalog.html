@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Пищевое производство — каталог</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../font.css?v=311">
 <link rel="stylesheet" href="../tokens.css?v=311">
 <link rel="stylesheet" href="../components/components.css?v=311">
 <link rel="stylesheet" href="../components/button.css?v=311">
-<link rel="stylesheet" href="../components/input.css?v=311">
 <link rel="stylesheet" href="../components/card.css?v=311">
+<link rel="stylesheet" href="../components/expansion.css?v=311">
 <style>
-/* ==== КАРКАС (page-chrome — ДС-компонента нет): лейаут на токенах ==== */
+/* ===== КАРКАС (page-chrome — ДС-компонента нет), лейаут на токенах ===== */
 body{margin:0;background:#F5F5F5;color:var(--ds-color-text-primary,#333333);font-family:'Roboto','Helvetica Neue',Arial,sans-serif;}
 .page{display:flex;flex-direction:column;min-height:100vh;}
 .chrome-top{height:64px;flex-shrink:0;position:sticky;top:0;z-index:20;background:var(--ds-color-surface-default,#ffffff);box-shadow:0 2px 4px rgba(0,0,0,.08);display:flex;align-items:center;}
@@ -32,53 +32,47 @@ body{margin:0;background:#F5F5F5;color:var(--ds-color-text-primary,#333333);font
 
 /* поисковая карточка: поле + кнопка в одну строку */
 .search-row{display:flex;flex-direction:row;align-items:center;gap:24px;}
+.search-row .ds-search{flex:1;width:auto;}
 
-/* список категорий — компактные пункты меню */
-.cat .ds-menu-item{width:100%;min-height:44px;border-radius:8px;margin-bottom:2px;cursor:pointer;}
-.cat .ds-menu-item__icon{color:#616161;}
-.cat .ds-menu-item__label{font-size:15px;font-weight:500;color:#616161;}
-.cat .ds-menu-item--selected{background:var(--ds-color-surface-sidebar-selected,#E3F2FD);}
-.cat .ds-menu-item--selected .ds-menu-item__icon{color:var(--ds-color-text-accent,#448AFF);}
-.cat .ds-menu-item--selected .ds-menu-item__label{color:var(--ds-color-text-accent,#448AFF);}
+/* список категорий (ds-list-item, компактно) */
+.cat .ds-list-item{width:100%;min-height:44px;border-radius:8px;margin-bottom:2px;}
+.cat .ds-list-item__icon{color:#616161;}
+.cat .ds-list-item__label{font-size:15px;font-weight:500;color:#616161;}
+.cat .ds-list-item.is-selected{background:var(--ds-color-surface-sidebar-selected,#E3F2FD);}
+.cat .ds-list-item.is-selected .ds-list-item__icon{color:var(--ds-color-text-accent,#448AFF);}
+.cat .ds-list-item.is-selected .ds-list-item__label{color:var(--ds-color-text-accent,#448AFF);}
 
-/* панель-раскрытие (автоген): переопределяем фиксированную ширину 597px */
-.ds-expansion-group-panel,.ds-expansion-content{width:100%;}
-.ds-expansion-content{align-items:stretch;padding:0 16px 16px;}
-.phead{width:100%;display:flex;align-items:center;gap:8px;background:var(--ds-color-surface-default,#ffffff);border:none;border-bottom:1px solid var(--ds-color-stroke-default,#e0e0e0);padding:20px 16px;cursor:pointer;text-align:left;font-family:inherit;}
-.phead__title{font-size:14px;font-weight:500;color:#212121;}
-.phead__count{font-size:12px;color:#757575;}
-.phead__arrow{margin-left:auto;display:inline-flex;color:#616161;transition:transform .2s;}
-.ds-expansion-group-panel--closed .ds-expansion-content{display:none;}
+/* панели (ds-expansion): контент без внешнего паддинга */
+.catalog{overflow:hidden;}
+.catalog__content{padding:0;overflow-x:auto;}
+.catalog .ds-expansion{width:100%;}
+.ds-expansion__content--no-padding{width:100%;}
+.sec-count{color:#757575;font-weight:400;margin-left:6px;}
 
-/* таблица: колонки по коду макета (318/129/144/125/106/311/111), min-width = 1244px */
+/* таблица: колонки фикс. px (по макету), rows — grid вокруг ячеек ДС */
 .tbl{width:100%;min-width:1244px;overflow:hidden;}
-.thead{display:grid;grid-template-columns:318px 129px 144px 125px 106px 311px 111px;align-items:center;}
-.trow{display:grid;grid-template-columns:318px 129px 144px 125px 106px 311px 111px;align-items:center;border-bottom:1px solid var(--ds-color-stroke-default,#e0e0e0);}
-.tcell{min-width:0;}
-.tcell .ds-table-content-cell{width:100%;}
-.thead .ds-table-header-cell{width:100%;}
-.tcell .ds-table-content-cell__label{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;font-size:14px;color:#333333;}
-.tcell--name .ds-table-content-cell__label{color:var(--ds-color-text-accent,#448AFF);font-weight:500;}
-.tcell--price .ds-table-content-cell__label,.tcell--sum .ds-table-content-cell__label{color:#333333;}
-.tcell--name:first-child .ds-table-content-cell__label,
-.trow :first-child .ds-table-content-cell__label{padding-left:0;}
-/* шапка-ячейки: автоген ds-table-header-cell */
-.ds-table-header-cell{min-height:44px;width:auto;border:0;background:transparent;}
+.tbl-row{width:100%;display:grid;grid-template-columns:318px 129px 144px 125px 106px 311px 111px;align-items:center;}
+.ds-table-header-row{border:0;border-bottom:1px solid var(--ds-color-stroke-default,#e0e0e0);border-radius:0;background:transparent;min-height:44px;}
+.ds-table-header-cell{width:100%;border:0;background:transparent;min-height:44px;}
 .ds-table-header-cell__label{font-size:11px;font-weight:500;letter-spacing:.4px;text-transform:uppercase;color:#757575;}
+.ds-table-content-row{border:0;border-bottom:1px solid var(--ds-color-stroke-default,#e0e0e0);}
+.ds-table-content-cell{width:100%;min-height:52px;}
+.ds-table-content-cell__label{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;font-size:14px;color:#333333;}
+.name-cell .ds-table-content-cell__label{color:var(--ds-color-text-accent,#448AFF);font-weight:500;}
 
-/* количество — ds-input-number (автоген) + кнопки −/+ как ds-btn */
+/* количество — ds-input-number (компактный) + ds-btn −/+ */
 .qty{display:inline-flex;align-items:center;gap:var(--ds-size-1x,4px);}
-.qty .ds-btn.ql{width:48px;height:48px;min-width:0;padding:0;border:none;box-shadow:none;background:transparent;border-radius:6px;color:#616161;}
-.qty .ds-btn.ql:disabled{color:#BDBDBD;}
-.qty .ds-btn.ql:hover{background:#F5F5F5;}
-.qty-val{width:60px;height:32px;text-align:center;border:1px solid var(--ds-color-stroke-default,#e0e0e0);border-radius:4px;background:#ffffff;color:var(--ds-color-text-primary,#333333);font:inherit;box-sizing:border-box;}
+.qty .ds-btn.qop{width:48px;height:48px;min-width:0;padding:0;border:none;box-shadow:none;background:transparent;border-radius:6px;color:#616161;}
+.qty .ds-btn.qop:disabled{color:#BDBDBD;}
+.qty .ds-btn.qop:hover{background:#F5F5F5;}
+.qty .ds-input-number__frame{width:60px;height:32px;padding:0;border:1px solid var(--ds-color-stroke-default,#e0e0e0);border-radius:4px;background:#ffffff;justify-content:center;}
 
-/* нижняя панель */
+/* нижняя панель (page-chrome) */
 .chrome-bottom{flex-shrink:0;position:sticky;bottom:0;z-index:20;background:var(--ds-color-surface-default,#ffffff);border-top:1px solid var(--ds-color-stroke-default,#e0e0e0);padding:16px 0;}
 .chrome-bottom__in{display:flex;justify-content:space-between;align-items:center;max-width:1600px;margin:0 auto;padding:0 16px;}
 .fb-left{display:flex;align-items:center;gap:24px;font-size:15px;color:#424242;}
 .fb-left b{color:#212121;}
-.fb-left .fb-sum b{font-size:18px;}
+.fb-sum b{font-size:18px;}
 </style>
 </head>
 <body>
@@ -116,17 +110,17 @@ body{margin:0;background:#F5F5F5;color:var(--ds-color-text-primary,#333333);font
         <div class="ds-card ds-card--shadow">
           <div class="ds-card__header"><h3 class="ds-card__title">Категории</h3></div>
           <div class="ds-card__content cat">
-            <div class="ds-menu-item ds-menu-item--selected">
-              <span class="ds-menu-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 20C5.45 20 4.97917 19.8042 4.5875 19.4125C4.19583 19.0208 4 18.55 4 18C4 17.45 4.19583 16.9792 4.5875 16.5875C4.97917 16.1958 5.45 16 6 16C6.55 16 7.02083 16.1958 7.4125 16.5875C7.80417 16.9792 8 17.45 8 18C8 18.55 7.80417 19.0208 7.4125 19.4125C7.02083 19.8042 6.55 20 6 20ZM12 20C11.45 20 10.9792 19.8042 10.5875 19.4125C10.1958 19.0208 10 18.55 10 18C10 17.45 10.1958 16.9792 10.5875 16.5875C10.9792 16.1958 11.45 16 12 16C12.55 16 13.0208 16.1958 13.4125 16.5875C13.8042 16.9792 14 17.45 14 18C14 18.55 13.8042 19.0208 13.4125 19.4125C13.0208 19.8042 12.55 20 12 20ZM18 20C17.45 20 16.9792 19.8042 16.5875 19.4125C16.1958 19.0208 16 18.55 16 18C16 17.45 16.1958 16.9792 16.5875 16.5875C16.9792 16.1958 17.45 16 18 16C18.55 16 19.0208 16.1958 19.4125 16.5875C19.8042 16.9792 20 17.45 20 18C20 18.55 19.8042 19.0208 19.4125 19.4125C19.0208 19.8042 18.55 20 18 20ZM6 14C5.45 14 4.97917 13.8042 4.5875 13.4125C4.19583 13.0208 4 12.55 4 12C4 11.45 4.19583 10.9792 4.5875 10.5875C4.97917 10.1958 5.45 10 6 10C6.55 10 7.02083 10.1958 7.4125 10.5875C7.80417 10.9792 8 11.45 8 12C8 12.55 7.80417 13.0208 7.4125 13.4125C7.02083 13.8042 6.55 14 6 14ZM12 14C11.45 14 10.9792 13.8042 10.5875 13.4125C10.1958 13.0208 10 12.55 10 12C10 11.45 10.1958 10.9792 10.5875 10.5875C10.9792 10.1958 11.45 10 12 10C12.55 10 13.0208 10.1958 13.4125 10.5875C13.8042 10.9792 14 11.45 14 12C14 12.55 13.8042 13.0208 13.4125 13.4125C13.0208 13.8042 12.55 14 12 14ZM18 14C17.45 14 16.9792 13.8042 16.5875 13.4125C16.1958 13.0208 16 12.55 16 12C16 11.45 16.1958 10.9792 16.5875 10.5875C16.9792 10.1958 17.45 10 18 10C18.55 10 19.0208 10.1958 19.4125 10.5875C19.8042 10.9792 20 11.45 20 12C20 12.55 19.8042 13.0208 19.4125 13.4125C19.0208 13.8042 18.55 14 18 14ZM6 8C5.45 8 4.97917 7.80417 4.5875 7.4125C4.19583 7.02083 4 6.55 4 6C4 5.45 4.19583 4.97917 4.5875 4.5875C4.97917 4.19583 5.45 4 6 4C6.55 4 7.02083 4.19583 7.4125 4.5875C7.80417 4.97917 8 5.45 8 6C8 6.55 7.80417 7.02083 7.4125 7.4125C7.02083 7.80417 6.55 8 6 8ZM12 8C11.45 8 10.9792 7.80417 10.5875 7.4125C10.1958 7.02083 10 6.55 10 6C10 5.45 10.1958 4.97917 10.5875 4.5875C10.9792 4.19583 11.45 4 12 4C12.55 4 13.0208 4.19583 13.4125 4.5875C13.8042 4.97917 14 5.45 14 6C14 6.55 13.8042 7.02083 13.4125 7.4125C13.0208 7.80417 12.55 8 12 8ZM18 8C17.45 8 16.9792 7.80417 16.5875 7.4125C16.1958 7.02083 16 6.55 16 6C16 5.45 16.1958 4.97917 16.5875 4.5875C16.9792 4.19583 17.45 4 18 4C18.55 4 19.0208 4.19583 19.4125 4.5875C19.8042 4.97917 20 5.45 20 6C20 6.55 19.8042 7.02083 19.4125 7.4125C19.0208 7.80417 18.55 8 18 8Z" fill="currentColor"/></svg></span>
-              <span class="ds-menu-item__label">Все товары</span>
+            <div class="ds-list-item is-selected">
+              <span class="ds-list-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 20C5.45 20 4.97917 19.8042 4.5875 19.4125C4.19583 19.0208 4 18.55 4 18C4 17.45 4.19583 16.9792 4.5875 16.5875C4.97917 16.1958 5.45 16 6 16C6.55 16 7.02083 16.1958 7.4125 16.5875C7.80417 16.9792 8 17.45 8 18C8 18.55 7.80417 19.0208 7.4125 19.4125C7.02083 19.8042 6.55 20 6 20ZM12 20C11.45 20 10.9792 19.8042 10.5875 19.4125C10.1958 19.0208 10 18.55 10 18C10 17.45 10.1958 16.9792 10.5875 16.5875C10.9792 16.1958 11.45 16 12 16C12.55 16 13.0208 16.1958 13.4125 16.5875C13.8042 16.9792 14 17.45 14 18C14 18.55 13.8042 19.0208 13.4125 19.4125C13.0208 19.8042 12.55 20 12 20ZM18 20C17.45 20 16.9792 19.8042 16.5875 19.4125C16.1958 19.0208 16 18.55 16 18C16 17.45 16.1958 16.9792 16.5875 16.5875C16.9792 16.1958 17.45 16 18 16C18.55 16 19.0208 16.1958 19.4125 16.5875C19.8042 16.9792 20 17.45 20 18C20 18.55 19.8042 19.0208 19.4125 19.4125C19.0208 19.8042 18.55 20 18 20ZM6 14C5.45 14 4.97917 13.8042 4.5875 13.4125C4.19583 13.0208 4 12.55 4 12C4 11.45 4.19583 10.9792 4.5875 10.5875C4.97917 10.1958 5.45 10 6 10C6.55 10 7.02083 10.1958 7.4125 10.5875C7.80417 10.9792 8 11.45 8 12C8 12.55 7.80417 13.0208 7.4125 13.4125C7.02083 13.8042 6.55 14 6 14ZM12 14C11.45 14 10.9792 13.8042 10.5875 13.4125C10.1958 13.0208 10 12.55 10 12C10 11.45 10.1958 10.9792 10.5875 10.5875C10.9792 10.1958 11.45 10 12 10C12.55 10 13.0208 10.1958 13.4125 10.5875C13.8042 10.9792 14 11.45 14 12C14 12.55 13.8042 13.0208 13.4125 13.4125C13.0208 13.8042 12.55 14 12 14ZM18 14C17.45 14 16.9792 13.8042 16.5875 13.4125C16.1958 13.0208 16 12.55 16 12C16 11.45 16.1958 10.9792 16.5875 10.5875C16.9792 10.1958 17.45 10 18 10C18.55 10 19.0208 10.1958 19.4125 10.5875C19.8042 10.9792 20 11.45 20 12C20 12.55 19.8042 13.0208 19.4125 13.4125C19.0208 13.8042 18.55 14 18 14ZM6 8C5.45 8 4.97917 7.80417 4.5875 7.4125C4.19583 7.02083 4 6.55 4 6C4 5.45 4.19583 4.97917 4.5875 4.5875C4.97917 4.19583 5.45 4 6 4C6.55 4 7.02083 4.19583 7.4125 4.5875C7.80417 4.97917 8 5.45 8 6C8 6.55 7.80417 7.02083 7.4125 7.4125C7.02083 7.80417 6.55 8 6 8ZM12 8C11.45 8 10.9792 7.80417 10.5875 7.4125C10.1958 7.02083 10 6.55 10 6C10 5.45 10.1958 4.97917 10.5875 4.5875C10.9792 4.19583 11.45 4 12 4C12.55 4 13.0208 4.19583 13.4125 4.5875C13.8042 4.97917 14 5.45 14 6C14 6.55 13.8042 7.02083 13.4125 7.4125C13.0208 7.80417 12.55 8 12 8ZM18 8C17.45 8 16.9792 7.80417 16.5875 7.4125C16.1958 7.02083 16 6.55 16 6C16 5.45 16.1958 4.97917 16.5875 4.5875C16.9792 4.19583 17.45 4 18 4C18.55 4 19.0208 4.19583 19.4125 4.5875C19.8042 4.97917 20 5.45 20 6C20 6.55 19.8042 7.02083 19.4125 7.4125C19.0208 7.80417 18.55 8 18 8Z" fill="currentColor"/></svg></span>
+              <span class="ds-list-item__label">Все товары</span>
             </div>
-            <div class="ds-menu-item">
-              <span class="ds-menu-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l-5.5 9h11z" fill="currentColor"/><circle cx="17.5" cy="17.5" r="4.5" fill="currentColor"/><path d="M3 13.5h8v8H3z" fill="currentColor"/></svg></span>
-              <span class="ds-menu-item__label">Салаты</span>
+            <div class="ds-list-item">
+              <span class="ds-list-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l-5.5 9h11z" fill="currentColor"/><circle cx="17.5" cy="17.5" r="4.5" fill="currentColor"/><path d="M3 13.5h8v8H3z" fill="currentColor"/></svg></span>
+              <span class="ds-list-item__label">Салаты</span>
             </div>
-            <div class="ds-menu-item">
-              <span class="ds-menu-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l-5.5 9h11z" fill="currentColor"/><circle cx="17.5" cy="17.5" r="4.5" fill="currentColor"/><path d="M3 13.5h8v8H3z" fill="currentColor"/></svg></span>
-              <span class="ds-menu-item__label">Категория без имени</span>
+            <div class="ds-list-item">
+              <span class="ds-list-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l-5.5 9h11z" fill="currentColor"/><circle cx="17.5" cy="17.5" r="4.5" fill="currentColor"/><path d="M3 13.5h8v8H3z" fill="currentColor"/></svg></span>
+              <span class="ds-list-item__label">Категория без имени</span>
             </div>
           </div>
         </div>
@@ -135,16 +129,15 @@ body{margin:0;background:#F5F5F5;color:var(--ds-color-text-primary,#333333);font
       <!-- ОСНОВНАЯ ЗОНА -->
       <main class="main">
 
-        <!-- ПОИСК + СБРОСИТЬ ФИЛЬТРЫ (в одну строку) -->
+        <!-- ПОИСК + СБРОСИТЬ ФИЛЬТРЫ -->
         <div class="ds-card ds-card--shadow">
           <div class="ds-card__content search-row">
-            <div class="ds-input ds-input--m ds-input--icon" style="flex:1;">
-              <div class="ds-input__frame">
-                <span class="ds-input__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="currentColor"/></svg></span>
-                <div class="ds-input__content"><input class="ds-input__field" type="text" placeholder="Поиск товар"></div>
-              </div>
+            <div class="ds-search ds-search--m">
+              <span class="ds-search__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="currentColor"/></svg></span>
+              <span class="ds-search__label">Поиск товар</span>
+              <span class="ds-search__right-icon"></span>
             </div>
-            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text" type="button" style="flex-shrink:0;">
+            <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text" type="button">
               <span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.25 5.61C6.27 8.2 10 13 10 13v6c0 0.55 0.45 1 1 1h2c0.55 0 1-0.45 1-1v-6c0 0 3.72-4.8 5.74-7.39C20.25 4.95 19.78 4 18.95 4H5.04C4.21 4 3.74 4.95 4.25 5.61z" fill="currentColor"/></svg></span>
               <span class="ds-btn__label">Сбросить все фильтры</span>
             </button>
@@ -152,19 +145,18 @@ body{margin:0;background:#F5F5F5;color:var(--ds-color-text-primary,#333333);font
         </div>
 
         <!-- КАТАЛОГ -->
-        <div class="ds-card ds-card--shadow" style="overflow:hidden;">
-          <div class="ds-card__content" style="padding:0;overflow-x:auto;">
+        <div class="ds-card ds-card--shadow catalog">
+          <div class="ds-card__content catalog__content">
 
             <!-- Салаты (4) -->
-            <div class="ds-expansion-group-panel ds-expansion-group-panel--collaps" id="p1">
-              <button type="button" class="phead" data-panel="p1">
-                <span class="phead__title">Салаты</span>
-                <span class="phead__count">(4)</span>
-                <span class="phead__arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M7.41 15.41L12 10.83L16.59 15.41L18 14L12 8L6 14L7.41 15.41Z" fill="currentColor"/></svg></span>
-              </button>
-              <div class="ds-expansion-content">
+            <div class="ds-expansion ds-expansion--open" id="p1">
+              <div class="ds-expansion__header" data-panel="p1">
+                <div class="ds-expansion__title">Салаты <span class="sec-count">(4)</span></div>
+                <div class="ds-expansion__arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M7.41 8.58997L12 13.17L16.59 8.58997L18 9.99997L12 16L6 9.99997L7.41 8.58997Z" fill="currentColor"/></svg></div>
+              </div>
+              <div class="ds-expansion__content ds-expansion__content--no-padding">
                 <div class="tbl">
-                  <div class="thead">
+                  <div class="ds-table-header-row tbl-row">
                     <div class="ds-table-header-cell"><span class="ds-table-header-cell__label">Наименование</span></div>
                     <div class="ds-table-header-cell"><span class="ds-table-header-cell__label">Артикул</span></div>
                     <div class="ds-table-header-cell"><span class="ds-table-header-cell__label">Описание</span></div>
@@ -173,56 +165,55 @@ body{margin:0;background:#F5F5F5;color:var(--ds-color-text-primary,#333333);font
                     <div class="ds-table-header-cell"><span class="ds-table-header-cell__label">Количество</span></div>
                     <div class="ds-table-header-cell"><span class="ds-table-header-cell__label">Сумма</span></div>
                   </div>
-                  <div class="trow">
-                    <div class="tcell tcell--name"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">Жареная куриная грудка</span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">00024</span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">обжаренная на сливочном масле свежая курочка в панировке</span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">порц</span></div></div>
-                    <div class="tcell tcell--price"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">200 ₽</span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><div class="ds-input-number ds-input-number--s ds-input-number--populated qty" data-price="200"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text ql qty-minus" aria-label="Уменьшить" disabled><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13V11H19V13H5Z" fill="currentColor"/></svg></span></button><input class="qty-val" type="text" inputmode="numeric" readonly value="2"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text ql qty-plus" aria-label="Увеличить"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span></button></div></div></div>
-                    <div class="tcell tcell--sum"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label c-sum">400 ₽</span></div></div>
+                  <div class="ds-table-content-row tbl-row">
+                    <div class="ds-table-content-cell name-cell"><span class="ds-table-content-cell__label">Жареная куриная грудка</span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label">00024</span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label">обжаренная на сливочном масле свежая курочка в панировке</span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label">порц</span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label">200 ₽</span></div>
+                    <div class="ds-table-content-cell"><div class="ds-input-number ds-input-number--s ds-input-number--populated qty" data-price="200"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text qop qminus" aria-label="Уменьшить" disabled><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13V11H19V13H5Z" fill="currentColor"/></svg></span></button><input class="ds-input-number__frame" type="text" inputmode="numeric" readonly value="2"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text qop qplus" aria-label="Увеличить"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span></button></div></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label c-sum">400 ₽</span></div>
                   </div>
-                  <div class="trow">
-                    <div class="tcell tcell--name"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">Апельсин</span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">00012</span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label"></span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">кг</span></div></div>
-                    <div class="tcell tcell--price"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">200 ₽</span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><div class="ds-input-number ds-input-number--s ds-input-number--populated qty" data-price="200"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text ql qty-minus" aria-label="Уменьшить"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13V11H19V13H5Z" fill="currentColor"/></svg></span></button><input class="qty-val" type="text" inputmode="numeric" readonly value="1"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text ql qty-plus" aria-label="Увеличить"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span></button></div></div></div>
-                    <div class="tcell tcell--sum"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label c-sum">200 ₽</span></div></div>
+                  <div class="ds-table-content-row tbl-row">
+                    <div class="ds-table-content-cell name-cell"><span class="ds-table-content-cell__label">Апельсин</span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label">00012</span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label"></span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label">кг</span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label">200 ₽</span></div>
+                    <div class="ds-table-content-cell"><div class="ds-input-number ds-input-number--s ds-input-number--populated qty" data-price="200"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text qop qminus" aria-label="Уменьшить"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13V11H19V13H5Z" fill="currentColor"/></svg></span></button><input class="ds-input-number__frame" type="text" inputmode="numeric" readonly value="1"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text qop qplus" aria-label="Увеличить"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span></button></div></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label c-sum">200 ₽</span></div>
                   </div>
-                  <div class="trow">
-                    <div class="tcell tcell--name"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">Салат весенний</span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">00028</span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label"></span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">порц</span></div></div>
-                    <div class="tcell tcell--price"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">170 ₽</span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><div class="ds-input-number ds-input-number--s ds-input-number--populated qty" data-price="170"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text ql qty-minus" aria-label="Уменьшить" disabled><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13V11H19V13H5Z" fill="currentColor"/></svg></span></button><input class="qty-val" type="text" inputmode="numeric" readonly value="0"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text ql qty-plus" aria-label="Увеличить"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span></button></div></div></div>
-                    <div class="tcell tcell--sum"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label c-sum">0 ₽</span></div></div>
+                  <div class="ds-table-content-row tbl-row">
+                    <div class="ds-table-content-cell name-cell"><span class="ds-table-content-cell__label">Салат весенний</span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label">00028</span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label"></span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label">порц</span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label">170 ₽</span></div>
+                    <div class="ds-table-content-cell"><div class="ds-input-number ds-input-number--s ds-input-number--populated qty" data-price="170"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text qop qminus" aria-label="Уменьшить" disabled><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13V11H19V13H5Z" fill="currentColor"/></svg></span></button><input class="ds-input-number__frame" type="text" inputmode="numeric" readonly value="0"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text qop qplus" aria-label="Увеличить"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span></button></div></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label c-sum">0 ₽</span></div>
                   </div>
-                  <div class="trow">
-                    <div class="tcell tcell--name"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">Салат Цезарь</span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">00025</span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label"></span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">порц</span></div></div>
-                    <div class="tcell tcell--price"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">100 ₽</span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><div class="ds-input-number ds-input-number--s ds-input-number--populated qty" data-price="100"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text ql qty-minus" aria-label="Уменьшить" disabled><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13V11H19V13H5Z" fill="currentColor"/></svg></span></button><input class="qty-val" type="text" inputmode="numeric" readonly value="0"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text ql qty-plus" aria-label="Увеличить"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span></button></div></div></div>
-                    <div class="tcell tcell--sum"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label c-sum">0 ₽</span></div></div>
+                  <div class="ds-table-content-row tbl-row">
+                    <div class="ds-table-content-cell name-cell"><span class="ds-table-content-cell__label">Салат Цезарь</span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label">00025</span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label"></span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label">порц</span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label">100 ₽</span></div>
+                    <div class="ds-table-content-cell"><div class="ds-input-number ds-input-number--s ds-input-number--populated qty" data-price="100"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text qop qminus" aria-label="Уменьшить" disabled><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13V11H19V13H5Z" fill="currentColor"/></svg></span></button><input class="ds-input-number__frame" type="text" inputmode="numeric" readonly value="0"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text qop qplus" aria-label="Увеличить"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span></button></div></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label c-sum">0 ₽</span></div>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Категория без имени (1) -->
-            <div class="ds-expansion-group-panel ds-expansion-group-panel--collaps" id="p2">
-              <button type="button" class="phead" data-panel="p2">
-                <span class="phead__title">Категория без имени</span>
-                <span class="phead__count">(1)</span>
-                <span class="phead__arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M7.41 15.41L12 10.83L16.59 15.41L18 14L12 8L6 14L7.41 15.41Z" fill="currentColor"/></svg></span>
-              </button>
-              <div class="ds-expansion-content">
+            <div class="ds-expansion ds-expansion--open" id="p2">
+              <div class="ds-expansion__header" data-panel="p2">
+                <div class="ds-expansion__title">Категория без имени <span class="sec-count">(1)</span></div>
+                <div class="ds-expansion__arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M7.41 8.58997L12 13.17L16.59 8.58997L18 9.99997L12 16L6 9.99997L7.41 8.58997Z" fill="currentColor"/></svg></div>
+              </div>
+              <div class="ds-expansion__content ds-expansion__content--no-padding">
                 <div class="tbl">
-                  <div class="thead">
+                  <div class="ds-table-header-row tbl-row">
                     <div class="ds-table-header-cell"><span class="ds-table-header-cell__label">Наименование</span></div>
                     <div class="ds-table-header-cell"><span class="ds-table-header-cell__label">Артикул</span></div>
                     <div class="ds-table-header-cell"><span class="ds-table-header-cell__label">Описание</span></div>
@@ -231,14 +222,14 @@ body{margin:0;background:#F5F5F5;color:var(--ds-color-text-primary,#333333);font
                     <div class="ds-table-header-cell"><span class="ds-table-header-cell__label">Количество</span></div>
                     <div class="ds-table-header-cell"><span class="ds-table-header-cell__label">Сумма</span></div>
                   </div>
-                  <div class="trow">
-                    <div class="tcell tcell--name"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">Шоколадный батончик</span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">00003</span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label"></span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">шт</span></div></div>
-                    <div class="tcell tcell--price"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label">100 ₽</span></div></div>
-                    <div class="tcell"><div class="ds-table-content-cell"><div class="ds-input-number ds-input-number--s ds-input-number--populated qty" data-price="100"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text ql qty-minus" aria-label="Уменьшить" disabled><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13V11H19V13H5Z" fill="currentColor"/></svg></span></button><input class="qty-val" type="text" inputmode="numeric" readonly value="0"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text ql qty-plus" aria-label="Увеличить"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span></button></div></div></div>
-                    <div class="tcell tcell--sum"><div class="ds-table-content-cell"><span class="ds-table-content-cell__label c-sum">0 ₽</span></div></div>
+                  <div class="ds-table-content-row tbl-row">
+                    <div class="ds-table-content-cell name-cell"><span class="ds-table-content-cell__label">Шоколадный батончик</span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label">00003</span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label"></span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label">шт</span></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label">100 ₽</span></div>
+                    <div class="ds-table-content-cell"><div class="ds-input-number ds-input-number--s ds-input-number--populated qty" data-price="100"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text qop qminus" aria-label="Уменьшить" disabled><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13V11H19V13H5Z" fill="currentColor"/></svg></span></button><input class="ds-input-number__frame" type="text" inputmode="numeric" readonly value="0"><button type="button" class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text qop qplus" aria-label="Увеличить"><span class="ds-btn__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span></button></div></div>
+                    <div class="ds-table-content-cell"><span class="ds-table-content-cell__label c-sum">0 ₽</span></div>
                   </div>
                 </div>
               </div>
@@ -275,45 +266,30 @@ body{margin:0;background:#F5F5F5;color:var(--ds-color-text-primary,#333333);font
 
 <script>
 (function(){
-  // Раскрытие/сворачивание панелей
-  function toggle(id){
-    var panel=document.getElementById(id);
-    var closed=panel.classList.toggle('ds-expansion-group-panel--closed');
-    var arrow=panel.querySelector('.phead__arrow svg');
-    arrow.innerHTML=closed
-      ? '<path d="M7.41 8.58997L12 13.17L16.59 8.58997L18 9.99997L12 16L6 9.99997L7.41 8.58997Z" fill="currentColor"/>'
-      : '<path d="M7.41 15.41L12 10.83L16.59 15.41L18 14L12 8L6 14L7.41 15.41Z" fill="currentColor"/>';
-  }
-  document.querySelectorAll('.phead').forEach(function(h){
-    h.addEventListener('click',function(){toggle(h.getAttribute('data-panel'));});
+  // Сворачивание панелей (ds-expansion toggle)
+  document.querySelectorAll('.ds-expansion__header').forEach(function(h){
+    h.addEventListener('click',function(){
+      h.closest('.ds-expansion').classList.toggle('ds-expansion--open');
+    });
   });
-
-  // Счётчики количества + пересчёт сумм
+  // Счётчики количества + пересчёт
   function recalc(){
     var items=0,total=0;
     document.querySelectorAll('.qty').forEach(function(box){
       var price=parseInt(box.getAttribute('data-price'))||0;
-      var inp=box.querySelector('.qty-val');var v=parseInt(inp.value)||0;
-      var minus=box.querySelector('.qty-minus');
-      if(minus) minus.disabled=(v<=0);
-      var sum=box.closest('.trow')?box.closest('.trow').querySelector('.c-sum'):null;
-      if(sum) sum.textContent=(v*price)+' ₽';
-      if(v>0) items++;
+      var inp=box.querySelector('.ds-input-number__frame');var v=parseInt(inp.value)||0;
+      var minus=box.querySelector('.qminus');if(minus)minus.disabled=(v<=0);
+      var sum=box.closest('.ds-table-content-row').querySelector('.c-sum');
+      if(sum)sum.textContent=(v*price)+' ₽';
+      if(v>0)items++;
       total+=v*price;
     });
     document.getElementById('fitems').textContent=items;
     document.getElementById('fsum').textContent=total+' ₽';
   }
-  function delta(box,d){
-    var inp=box.querySelector('.qty-val');var v=parseInt(inp.value)||0;
-    var n=Math.max(0,v+d);inp.value=n;recalc();
-  }
-  document.querySelectorAll('.qty-plus').forEach(function(b){
-    b.addEventListener('click',function(){delta(b.closest('.qty'),1);});
-  });
-  document.querySelectorAll('.qty-minus').forEach(function(b){
-    b.addEventListener('click',function(){delta(b.closest('.qty'),-1);});
-  });
+  function delta(box,d){var inp=box.querySelector('.ds-input-number__frame');var v=parseInt(inp.value)||0;inp.value=Math.max(0,v+d);recalc();}
+  document.querySelectorAll('.qplus').forEach(function(b){b.addEventListener('click',function(){delta(b.closest('.qty'),1);});});
+  document.querySelectorAll('.qminus').forEach(function(b){b.addEventListener('click',function(){delta(b.closest('.qty'),-1);});});
   recalc();
 })();
 </script>
