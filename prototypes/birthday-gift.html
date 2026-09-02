@@ -61,6 +61,9 @@
     display: flex; flex-direction: column; gap: var(--ds-space-4x);
     align-items: stretch;
   }
+  /* Паддинги карточек под макет: по бокам 16px, сверху заголовка ~20px, снизу контента 20px */
+  .modal .ds-card__header { padding: 20px 16px 8px; }
+  .modal .ds-card__content { padding: 8px 16px 20px; }
   .modal__foot {
     display: flex; align-items: center; justify-content: flex-end; gap: var(--ds-space-2x);
     padding: var(--ds-space-4x) var(--ds-space-6x);
@@ -68,7 +71,12 @@
   }
   .stack-16 { display: flex; flex-direction: column; gap: var(--ds-space-4x); }
   .card-title-row { display: flex; align-items: center; gap: var(--ds-space-2x); }
-  .card-title-row .ds-card__title { margin: 0; }
+  .card-title-row .ds-card__title {
+    margin: 0;
+    font-size: var(--ds-typography-body-font-size-m);   /* 16px — секционные заголовки карточек */
+    line-height: var(--ds-typography-body-line-height-m);
+    font-weight: var(--ds-typography-font-weight-medium);
+  }
   .card-title-row .card-title-icon {
     display: inline-flex; align-items: center; justify-content: center;
     width: 20px; height: 20px; flex-shrink: 0;
@@ -165,7 +173,6 @@
 
       <!-- Зелёный баннер -->
       <div class="ds-banner ds-banner--positive ds-banner--horizontal">
-        <span class="ds-banner__icon" data-icon="info"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 17H13V11H11V17ZM12 9C12.2833 9 12.5208 8.90417 12.7125 8.7125C12.9042 8.52083 13 8.28333 13 8C13 7.71667 12.9042 7.47917 12.7125 7.2875C12.5208 7.09583 12.2833 7 12 7C11.7167 7 11.4792 7.09583 11.2875 7.2875C11.0958 7.47917 11 7.71667 11 8C11 8.28333 11.0958 8.52083 11.2875 8.7125C11.4792 9 11.71667 9 12 9ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z" fill="currentColor"/></svg></span>
         <span class="ds-banner__text">Гость получает подарок, если сделает заказ в ресторане за определенное количество дней до и после своего дня рождения</span>
       </div>
 
@@ -246,6 +253,11 @@
 
       <!-- Карточка 3: Выбрать подарок -->
       <div class="ds-card ds-card--outlined">
+        <div class="ds-card__header">
+          <div class="card-title-row">
+            <h3 class="ds-card__title">Выбрать подарок</h3>
+          </div>
+        </div>
         <div class="ds-card__content">
           <div class="stack-16">
 
@@ -265,11 +277,11 @@
               <div class="toolbar-row">
                 <h3 class="toolbar-title">Список подарочных позиций</h3>
                 <div class="toolbar-row__buttons">
-                  <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button">
+                  <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" type="button">
                     <span class="ds-btn__icon" data-icon="add"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span>
                     <span class="ds-btn__label">Очистить</span>
                   </button>
-                  <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button">
+                  <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined" type="button">
                     <span class="ds-btn__icon" data-icon="add"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span>
                     <span class="ds-btn__label">Добавить</span>
                   </button>
@@ -292,8 +304,7 @@
                 <tr>
                   <td>
                     <span class="pos-cell">
-                      <span class="pos-thumb">🍽️</span>
-                      <span class="pos-drop">Товар<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15L7 10H17L12 15Z" fill="currentColor"/></svg></span>
+                                            <span class="pos-drop">Товар<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15L7 10H17L12 15Z" fill="currentColor"/></svg></span>
                     </span>
                   </td>
                   <td>Фруктовый салат</td>
@@ -305,8 +316,7 @@
                 <tr>
                   <td>
                     <span class="pos-cell">
-                      <span class="pos-thumb">☕</span>
-                      <span class="pos-drop">Товар<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15L7 10H17L12 15Z" fill="currentColor"/></svg></span>
+                                            <span class="pos-drop">Товар<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15L7 10H17L12 15Z" fill="currentColor"/></svg></span>
                     </span>
                   </td>
                   <td>Капучино</td>
