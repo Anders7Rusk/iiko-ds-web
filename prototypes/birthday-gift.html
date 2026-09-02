@@ -68,6 +68,12 @@
   }
   .stack-16 { display: flex; flex-direction: column; gap: var(--ds-space-4x); }
   .card-title-row { display: flex; align-items: center; gap: var(--ds-space-2x); }
+  .card-title-row .ds-card__title {
+    margin: 0;
+    font-size: var(--ds-typography-body-font-size-m);   /* 16px — секционные заголовки карточек (страница 20 > секции 16) */
+    line-height: var(--ds-typography-body-line-height-m);
+    font-weight: var(--ds-typography-font-weight-medium);
+  }
   .card-title-row .card-title-icon {
     display: inline-flex; align-items: center; justify-content: center;
     width: 20px; height: 20px; flex-shrink: 0;
@@ -78,8 +84,8 @@
   .toolbar-row { display: flex; align-items: center; gap: var(--ds-space-2x); }
   .toolbar-row .toolbar-title {
     flex: 1; margin: 0;
-    font-size: var(--ds-typography-header-font-size-s);   /* 20px — секционный заголовок (как карточные) */
-    line-height: var(--ds-typography-header-line-height-s);
+    font-size: var(--ds-typography-body-font-size-m);   /* 16px — секционный заголовок (как карточные) */
+    line-height: var(--ds-typography-body-line-height-m);
     font-weight: var(--ds-typography-font-weight-medium);
   }
   .card-subtitle { margin: var(--ds-space-1x) 0 0; color: var(--ds-color-text-secondary); }
