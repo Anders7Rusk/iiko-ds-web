@@ -1,7 +1,9 @@
 /* ============================================================
    iiko DS — Card view (Filled / Outlined / Shadow)
-   Источник: Figma, страница «🟡Card», COMPONENT_SET «Card view»
-   Структура: Card header + Card content + Card footer
+   Источник: Figma, страница «🟡Card_DS», COMPONENT_SET «Card view»
+   Обновлено: Card header / Card content (SLOT) / Card footer
+   Размер: 501×248 · header 108 · content 88 · footer 52
+   Разметка — ровно по свежему дереву Figma.
    ============================================================ */
 
 .ds-card {
@@ -26,20 +28,23 @@
   box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 
-/* ── Card header (Label up / Title / Label down + Divider) ── */
+/* ── Card header (16px сверху/по бокам, gap 8) ────────────────
+   РЕАЛЬНОЕ значение паддинга = 16px (токен Space/6x устарел=24, не берём). */
 
 .ds-card__header {
   display: flex;
   flex-direction: column;
-  padding: var(--ds-space-2x) var(--ds-space-6x);     /* 8px 24px */
+  gap: var(--ds-space-2x);                            /* 8px */
+  padding: 16px 16px 0;                               /* сверху/бока 16, низ 0 (padBottom=None в Figma) */
 }
 
 .ds-card__label-up,
 .ds-card__label-down {
   color: var(--ds-color-text-secondary);              /* #616161 */
-  font-size: var(--ds-typography-body-font-size-s);   /* 14px */
-  line-height: var(--ds-typography-body-line-height-l); /* 24px */
-  letter-spacing: var(--ds-typography-letter-spacing-s);
+  font-size: var(--ds-typography-body-font-size-m);   /* 16px (Body M) */
+  font-weight: var(--ds-typography-font-weight-regular); /* 400 */
+  line-height: var(--ds-typography-body-line-height-m); /* 24px */
+  letter-spacing: var(--ds-typography-letter-spacing-none);
 }
 
 .ds-card__title {
@@ -51,20 +56,29 @@
   letter-spacing: var(--ds-typography-letter-spacing-none);
 }
 
-/* ── Card content (pad 8/24) ─────────────────────────────── */
+/* ── Card content (SLOT, паддинг 16/16/16) ─────────────────── */
 
 .ds-card__content {
   display: flex;
   flex-direction: column;
-  padding: var(--ds-space-2x) var(--ds-space-6x);     /* 8px 24px */
+  padding: 16px;                                      /* 16/16/16 (было 8/24) */
 }
 
-/* ── Card footer ─────────────────────────────────────────── */
+/* ── Card footer — Divider + Action (Action pad 16 по бокам/снизу) ── */
 
 .ds-card__footer {
   display: flex;
-  align-items: center;
-  gap: var(--ds-space-2x);
-  padding: var(--ds-space-4x) var(--ds-space-6x);     /* 16px 24px */
+  flex-direction: column;
 }
-.ds-card__footer--right { justify-content: flex-end; }
+.ds-card__divider {
+  height: 1px;
+  background: var(--ds-color-stroke-default);         /* #E0E0E0 */
+  border: none;
+}
+.ds-card__footer__action {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2x);                            /* 8px */
+  padding: 0 16px 16px;                               /* бока/низ 16 */
+}
+.ds-card__footer--right .ds-card__footer__action { justify-content: flex-end; }
