@@ -28,24 +28,6 @@
 <link rel="stylesheet" href="components/button.css?v=115">
 <link rel="stylesheet" href="components/badge.css?v=115">
 <link rel="stylesheet" href="showcase.css?v=115">
-<style>
-  /* ===== «Рыба» — плейсхолдер «Любой компонент ДС» (мастер универсальный) ===== */
-  .ds-any-comp {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px dashed #9E9E9E;
-    border-radius: 8px;
-    background: #FFFFFF;
-    color: #616161;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 10px 16px;
-    white-space: nowrap;
-    min-width: 120px;
-  }
-  .ds-any-comp--small { min-width: 56px; padding: 6px 10px; font-size: 12px; }
-</style>
 </head>
 <body>
 
@@ -82,7 +64,7 @@
 
         <section>
           <h2>Интерактивный компонент</h2>
-          <p class="desc">Настройте свойства кнопки и скопируйте код.</p>
+          <p class="desc">Настройте свойства компонента и скопируйте код.</p>
 
           <div class="card">
             <div class="interactive-wrap">
@@ -250,8 +232,8 @@
                     <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-text" checked><span class="track"></span><span class="thumb"></span></span></label>
                   </div>
                   <div class="control-row">
-                    <label class="control-label" for="ctl-textval">Button text</label>
-                    <input class="control-input" id="ctl-textval" type="text" value="Button">
+                    <label class="control-label" for="ctl-textval">Текст компонента</label>
+                    <input class="control-input" id="ctl-textval" type="text" value="Любой компонент ДС">
                   </div>
                 </div>
             </div>
@@ -264,7 +246,7 @@
 
         <section>
           <p class="matrix-caption">Интерактивная матрица</p>
-          <p class="desc">Нажмите на любую кнопку в таблице ниже, чтобы увидеть подробную информацию о используемых дизайн-токенах для этого состояния.</p>
+          <p class="desc">Нажмите на любую компонент в таблице ниже, чтобы увидеть подробную информацию о используемых дизайн-токенах для этого состояния.</p>
           <h2>Варианты компонента</h2>
           <div class="card">
             <div class="matrix-layout">
@@ -286,7 +268,7 @@
 
         <section>
           <h2>Описание</h2>
-          <p class="desc">Button — это фундаментальный компонент интерфейса, инициирующий действие. Кнопки сообщают пользователям, что произойдёт после нажатия, и направляют их через сценарии использования.</p>
+          <p class="desc">Любой компонент ДС — это фундаментальный компонент интерфейса, инициирующий действие. Компоненты сообщают пользователям, что произойдёт после нажатия, и направляют их через сценарии использования.</p>
         </section>
 
         <section>
@@ -294,29 +276,29 @@
 
           <div class="card">
             <h3>Neutral variant</h3>
-            <p class="desc">Нейтральная кнопка имеет низкий визуальный вес и предназначена для второстепенных действий. Она часто используется в паре с другими типами кнопок (например, для действия «Отмена») или для опций, которые не требуют активного привлечения внимания. Старайтесь не использовать её как единственную кнопку в группе, если это не контекст навигации.</p>
+            <p class="desc">Нейтральная компонент имеет низкий визуальный вес и предназначена для второстепенных действий. Она часто используется в паре с другими типами компонентов (например, для действия «Отмена») или для опций, которые не требуют активного привлечения внимания. Старайтесь не использовать её как единственную компонент в группе, если это не контекст навигации.</p>
             <div class="row">
-              <span class="ds-any-comp">Любой компонент ДС</span>
-              <span class="ds-any-comp">Любой компонент ДС</span>
-              <span class="ds-any-comp">Любой компонент ДС</span>
+              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled">Любой компонент ДС</button>
+              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">Любой компонент ДС</button>
+              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text">Любой компонент ДС</button>
             </div>
           </div>
 
           <div class="card">
             <h3>Accent variant</h3>
-            <p class="desc">Основная кнопка сообщает о высоком приоритете и предназначена для ключевых действий в интерфейсе. Не используйте более одной основной кнопки в одной области просмотра. Они выделяют самые важные действия (например, «Сохранить», «Опубликовать») и устанавливают чёткую визуальную иерархию.</p>
+            <p class="desc">Основная компонент сообщает о высоком приоритете и предназначена для ключевых действий в интерфейсе. Не используйте более одной основной компоненты в одной области просмотра. Они выделяют самые важные действия (например, «Сохранить», «Опубликовать») и устанавливают чёткую визуальную иерархию.</p>
             <div class="row">
-              <span class="ds-any-comp">Любой компонент ДС</span>
-              <span class="ds-any-comp">Любой компонент ДС</span>
+              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">Любой компонент ДС</button>
+              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined">Любой компонент ДС</button>
             </div>
           </div>
 
           <div class="card">
             <h3>Positive variant</h3>
-            <p class="desc">Позитивная кнопка используется для действий среднего приоритета с благоприятным исходом. Она подходит для ситуаций, когда действие важно, но не является основным целевым действием страницы. Также может использоваться для позитивных альтернативных действий, чтобы отделить их от основного потока.</p>
+            <p class="desc">Позитивная компонент используется для действий среднего приоритета с благоприятным исходом. Она подходит для ситуаций, когда действие важно, но не является основным целевым действием страницы. Также может использоваться для позитивных альтернативных действий, чтобы отделить их от основного потока.</p>
             <div class="row">
-              <span class="ds-any-comp">Любой компонент ДС</span>
-              <span class="ds-any-comp">Любой компонент ДС</span>
+              <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--filled">Любой компонент ДС</button>
+              <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--outlined">Любой компонент ДС</button>
             </div>
           </div>
 
@@ -324,8 +306,8 @@
             <h3>Warning variant</h3>
             <p class="desc">Предупреждающий вариант используется для действий, которые требуют осторожности, но не являются разрушительными. Оранжевый цвет привлекает внимание пользователя, сигнализируя о необходимости проверки перед продолжением (например, «Выйти из аккаунта», «Изменить статус»).</p>
             <div class="row">
-              <span class="ds-any-comp">Любой компонент ДС</span>
-              <span class="ds-any-comp">Любой компонент ДС</span>
+              <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--filled">Любой компонент ДС</button>
+              <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--outlined">Любой компонент ДС</button>
             </div>
           </div>
 
@@ -333,8 +315,8 @@
             <h3>Negative variant</h3>
             <p class="desc">Этот вариант предназначен для акцентирования внимания на разрушительных действиях или действиях с негативными последствиями (например, «Удалить», «Заблокировать»). Красный цвет служит сигналом опасности, заставляя пользователя задуматься перед нажатием. Используйте этот стиль экономно.</p>
             <div class="row">
-              <span class="ds-any-comp">Любой компонент ДС</span>
-              <span class="ds-any-comp">Любой компонент ДС</span>
+              <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--filled">Любой компонент ДС</button>
+              <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--outlined">Любой компонент ДС</button>
             </div>
           </div>
         </section>
@@ -346,8 +328,14 @@
             <h3>С иконками</h3>
             <p class="desc">Иконки усиливают смысл действия. Ставьте иконку слева для действий и справа для навигации.</p>
             <div class="row">
-              <span class="ds-any-comp">Любой компонент ДС</span>
-              <span class="ds-any-comp">Любой компонент ДС</span>
+              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
+                <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
+                <span class="ds-btn__label">Create New</span>
+              </button>
+              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
+                <span class="ds-btn__label">Next Step</span>
+                <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
+              </button>
             </div>
           </div>
 
@@ -355,8 +343,13 @@
             <h3>Опасные действия</h3>
             <p class="desc">Используйте стиль <code>Negative</code> для действий, которые необратимы.</p>
             <div class="row">
-              <span class="ds-any-comp">Любой компонент ДС</span>
-              <span class="ds-any-comp">Любой компонент ДС</span>
+              <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--filled">
+                <span class="ds-btn__icon material-icons" aria-hidden="true">delete</span>
+                <span class="ds-btn__label">Delete Account</span>
+              </button>
+              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">
+                <span class="ds-btn__label">Cancel</span>
+              </button>
             </div>
           </div>
         </section>
@@ -368,14 +361,14 @@
             <h3>✓ Делайте</h3>
             <ul>
               <li>Используйте глаголы в названиях (Сохранить, Отправить).</li>
-              <li>Используйте одну Accent-кнопку на группу действий.</li>
-              <li>Соблюдайте отступы между кнопками (минимум 8px).</li>
+              <li>Используйте одну Accent-компонент на группу действий.</li>
+              <li>Соблюдайте отступы между компонентми (минимум 8px).</li>
             </ul>
             <h3 style="margin-top:20px">✕ Не делайте</h3>
             <ul>
               <li>Не используйте слишком длинные названия.</li>
-              <li>Не ставьте две Accent-кнопки рядом.</li>
-              <li>Не используйте кнопку для навигации, если это выглядит как ссылка.</li>
+              <li>Не ставьте две Accent-компоненты рядом.</li>
+              <li>Не используйте компонент для навигации, если это выглядит как ссылка.</li>
             </ul>
           </div>
         </section>
@@ -386,7 +379,7 @@
       <div class="comp-panel" id="tab-anatomy">
 
         <div class="anatomy">
-<div class="anatomy-sec"><h3>Accent / Filled / Default</h3><div class="anatomy-sub"><h4>Horizontal Padding</h4><div class="anatomy-stage"><div class="anatomy-cell"><span class="anatomy-cell__name">M</span><span class="ds-any-comp ds-any-comp--small">Любой компонент ДС</span><span class="an-pad" style="left:0;top:0;width:12px;height:100%"></span><span class="an-measure-h" style="left:0;width:12px"><span class="an-line"></span><span>12px</span></span><span class="an-pad" style="right:0;top:0;width:12px;height:100%"></span><span class="an-measure-h" style="right:0;width:12px"><span class="an-line"></span><span>12px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">S</span><span class="ds-any-comp ds-any-comp--small">Любой компонент ДС</span><span class="an-pad" style="left:0;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="left:0;width:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="right:0;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="right:0;width:8px"><span class="an-line"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">XS</span><span class="ds-any-comp ds-any-comp--small">Любой компонент ДС</span><span class="an-pad" style="left:0;top:0;width:6px;height:100%"></span><span class="an-measure-h" style="left:0;width:6px"><span class="an-line"></span><span>6px</span></span><span class="an-pad" style="right:0;top:0;width:6px;height:100%"></span><span class="an-measure-h" style="right:0;width:6px"><span class="an-line"></span><span>6px</span></span></div></div><div class="an-code"><div class="an-code-row an-code-head"><span class="an-code-tag">Размер</span><span class="an-code-head-val">Значение</span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Padding Left</span><span class="an-code-colon">:</span> <span class="an-code-val">12px</span></span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Padding Right</span><span class="an-code-colon">:</span> <span class="an-code-val">12px</span></span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Text Style</span><span class="an-code-colon">:</span> <span class="an-code-val">Body · S · (14)/Normal/Medium · 14/20</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Padding Left</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Padding Right</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Text Style</span><span class="an-code-colon">:</span> <span class="an-code-val">Body · S · (14)/Normal/Medium · 14/20</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Padding Left</span><span class="an-code-colon">:</span> <span class="an-code-val">6px</span></span></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Padding Right</span><span class="an-code-colon">:</span> <span class="an-code-val">6px</span></span></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Text Style</span><span class="an-code-colon">:</span> <span class="an-code-val">Caption · L · (12)/Normal/Medium · 12/16</span></span></div></div></div><div class="anatomy-sub"><h4>Vertical Padding &amp; Height</h4><div class="anatomy-stage"><div class="anatomy-cell"><span class="anatomy-cell__name">M</span><span class="ds-any-comp ds-any-comp--small">Любой компонент ДС</span><span class="an-measure-v" style="left:-48px;top:0;height:36px"><span>36px</span><span class="an-line"></span></span><span class="an-pad" style="left:0;top:0;width:100%;height:8px"></span><span class="an-measure-v" style="right:-48px;top:0;height:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="left:0;bottom:0;width:100%;height:8px"></span><span class="an-measure-v" style="right:-48px;bottom:0;height:8px"><span class="an-line"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">S</span><span class="ds-any-comp ds-any-comp--small">Любой компонент ДС</span><span class="an-measure-v" style="left:-48px;top:0;height:28px"><span>28px</span><span class="an-line"></span></span><span class="an-pad" style="left:0;top:0;width:100%;height:4px"></span><span class="an-measure-v" style="right:-48px;top:0;height:4px"><span class="an-line"></span><span>4px</span></span><span class="an-pad" style="left:0;bottom:0;width:100%;height:4px"></span><span class="an-measure-v" style="right:-48px;bottom:0;height:4px"><span class="an-line"></span><span>4px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">XS</span><span class="ds-any-comp ds-any-comp--small">Любой компонент ДС</span><span class="an-measure-v" style="left:-48px;top:0;height:24px"><span>24px</span><span class="an-line"></span></span><span class="an-pad" style="left:0;top:0;width:100%;height:4px"></span><span class="an-measure-v" style="right:-48px;top:0;height:4px"><span class="an-line"></span><span>4px</span></span><span class="an-pad" style="left:0;bottom:0;width:100%;height:4px"></span><span class="an-measure-v" style="right:-48px;bottom:0;height:4px"><span class="an-line"></span><span>4px</span></span></div></div><div class="an-code"><div class="an-code-row an-code-head"><span class="an-code-tag">Размер</span><span class="an-code-head-val">Значение</span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Padding Top</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Padding Bottom</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Height</span><span class="an-code-colon">:</span> <span class="an-code-val">36px</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Padding Top</span><span class="an-code-colon">:</span> <span class="an-code-val">4px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Padding Bottom</span><span class="an-code-colon">:</span> <span class="an-code-val">4px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Height</span><span class="an-code-colon">:</span> <span class="an-code-val">28px</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Padding Top</span><span class="an-code-colon">:</span> <span class="an-code-val">4px</span></span></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Padding Bottom</span><span class="an-code-colon">:</span> <span class="an-code-val">4px</span></span></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Height</span><span class="an-code-colon">:</span> <span class="an-code-val">24px</span></span></div></div></div><div class="anatomy-sub"><h4>Border Radius</h4><div class="anatomy-stage"><div class="anatomy-cell"><span class="anatomy-cell__name">M</span><span class="ds-any-comp ds-any-comp--small">Любой компонент ДС</span><span class="an-radius"><span class="an-radius-corner"></span><span class="an-radius-tail"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">S</span><span class="ds-any-comp ds-any-comp--small">Любой компонент ДС</span><span class="an-radius"><span class="an-radius-corner"></span><span class="an-radius-tail"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">XS</span><span class="ds-any-comp ds-any-comp--small">Любой компонент ДС</span><span class="an-radius"><span class="an-radius-corner"></span><span class="an-radius-tail"></span><span>8px</span></span></div></div><div class="an-code"><div class="an-code-row an-code-head"><span class="an-code-tag">Размер</span><span class="an-code-head-val">Значение</span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Border Radius</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Border Radius</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Border Radius</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div></div></div><div class="anatomy-sub"><h4>Accent / Icon</h4><div class="anatomy-stage anatomy-stage--tall"><div class="anatomy-center"><span class="ds-any-comp ds-any-comp--small">Любой компонент ДС</span><span class="an-pad" style="left:0;top:0;width:12px;height:100%"></span><span class="an-measure-h" style="left:0;width:12px"><span class="an-line"></span><span>12px</span></span><span class="an-pad" style="left:32px;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="left:32px;width:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="right:32px;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="right:32px;width:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="right:0;top:0;width:12px;height:100%"></span><span class="an-measure-h" style="right:0;width:12px"><span class="an-line"></span><span>12px</span></span><span class="an-num" style="left:22px;transform:translateX(-50%)"><span class="an-num-dot">1</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span><span class="an-num" style="left:50%;transform:translateX(-50%)"><span class="an-num-dot">2</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span><span class="an-num" style="right:22px;transform:translateX(-50%)"><span class="an-num-dot">3</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span></div></div><div class="an-legend"><p><b>1.</b> Иконка слева (может не использоваться)</p><p><b>2.</b> Label: действие кнопки</p><p><b>3.</b> Иконка справа (может не использоваться)</p></div></div></div>
+<div class="anatomy-sec"><h3>Accent / Filled / Default</h3><div class="anatomy-sub"><h4>Horizontal Padding</h4><div class="anatomy-stage"><div class="anatomy-cell"><span class="anatomy-cell__name">M</span><button class="an-btn an-btn--m an-btn--accent"><span>Любой компонент ДС</span></button><span class="an-pad" style="left:0;top:0;width:12px;height:100%"></span><span class="an-measure-h" style="left:0;width:12px"><span class="an-line"></span><span>12px</span></span><span class="an-pad" style="right:0;top:0;width:12px;height:100%"></span><span class="an-measure-h" style="right:0;width:12px"><span class="an-line"></span><span>12px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">S</span><button class="an-btn an-btn--s an-btn--accent"><span>Любой компонент ДС</span></button><span class="an-pad" style="left:0;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="left:0;width:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="right:0;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="right:0;width:8px"><span class="an-line"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">XS</span><button class="an-btn an-btn--xs an-btn--accent"><span>Любой компонент ДС</span></button><span class="an-pad" style="left:0;top:0;width:6px;height:100%"></span><span class="an-measure-h" style="left:0;width:6px"><span class="an-line"></span><span>6px</span></span><span class="an-pad" style="right:0;top:0;width:6px;height:100%"></span><span class="an-measure-h" style="right:0;width:6px"><span class="an-line"></span><span>6px</span></span></div></div><div class="an-code"><div class="an-code-row an-code-head"><span class="an-code-tag">Размер</span><span class="an-code-head-val">Значение</span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Padding Left</span><span class="an-code-colon">:</span> <span class="an-code-val">12px</span></span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Padding Right</span><span class="an-code-colon">:</span> <span class="an-code-val">12px</span></span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Text Style</span><span class="an-code-colon">:</span> <span class="an-code-val">Body · S · (14)/Normal/Medium · 14/20</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Padding Left</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Padding Right</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Text Style</span><span class="an-code-colon">:</span> <span class="an-code-val">Body · S · (14)/Normal/Medium · 14/20</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Padding Left</span><span class="an-code-colon">:</span> <span class="an-code-val">6px</span></span></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Padding Right</span><span class="an-code-colon">:</span> <span class="an-code-val">6px</span></span></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Text Style</span><span class="an-code-colon">:</span> <span class="an-code-val">Caption · L · (12)/Normal/Medium · 12/16</span></span></div></div></div><div class="anatomy-sub"><h4>Vertical Padding &amp; Height</h4><div class="anatomy-stage"><div class="anatomy-cell"><span class="anatomy-cell__name">M</span><button class="an-btn an-btn--m an-btn--accent"><span>Любой компонент ДС</span></button><span class="an-measure-v" style="left:-48px;top:0;height:36px"><span>36px</span><span class="an-line"></span></span><span class="an-pad" style="left:0;top:0;width:100%;height:8px"></span><span class="an-measure-v" style="right:-48px;top:0;height:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="left:0;bottom:0;width:100%;height:8px"></span><span class="an-measure-v" style="right:-48px;bottom:0;height:8px"><span class="an-line"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">S</span><button class="an-btn an-btn--s an-btn--accent"><span>Любой компонент ДС</span></button><span class="an-measure-v" style="left:-48px;top:0;height:28px"><span>28px</span><span class="an-line"></span></span><span class="an-pad" style="left:0;top:0;width:100%;height:4px"></span><span class="an-measure-v" style="right:-48px;top:0;height:4px"><span class="an-line"></span><span>4px</span></span><span class="an-pad" style="left:0;bottom:0;width:100%;height:4px"></span><span class="an-measure-v" style="right:-48px;bottom:0;height:4px"><span class="an-line"></span><span>4px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">XS</span><button class="an-btn an-btn--xs an-btn--accent"><span>Любой компонент ДС</span></button><span class="an-measure-v" style="left:-48px;top:0;height:24px"><span>24px</span><span class="an-line"></span></span><span class="an-pad" style="left:0;top:0;width:100%;height:4px"></span><span class="an-measure-v" style="right:-48px;top:0;height:4px"><span class="an-line"></span><span>4px</span></span><span class="an-pad" style="left:0;bottom:0;width:100%;height:4px"></span><span class="an-measure-v" style="right:-48px;bottom:0;height:4px"><span class="an-line"></span><span>4px</span></span></div></div><div class="an-code"><div class="an-code-row an-code-head"><span class="an-code-tag">Размер</span><span class="an-code-head-val">Значение</span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Padding Top</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Padding Bottom</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Height</span><span class="an-code-colon">:</span> <span class="an-code-val">36px</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Padding Top</span><span class="an-code-colon">:</span> <span class="an-code-val">4px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Padding Bottom</span><span class="an-code-colon">:</span> <span class="an-code-val">4px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Height</span><span class="an-code-colon">:</span> <span class="an-code-val">28px</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Padding Top</span><span class="an-code-colon">:</span> <span class="an-code-val">4px</span></span></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Padding Bottom</span><span class="an-code-colon">:</span> <span class="an-code-val">4px</span></span></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Height</span><span class="an-code-colon">:</span> <span class="an-code-val">24px</span></span></div></div></div><div class="anatomy-sub"><h4>Border Radius</h4><div class="anatomy-stage"><div class="anatomy-cell"><span class="anatomy-cell__name">M</span><button class="an-btn an-btn--m an-btn--accent"><span>Любой компонент ДС</span></button><span class="an-radius"><span class="an-radius-corner"></span><span class="an-radius-tail"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">S</span><button class="an-btn an-btn--s an-btn--accent"><span>Любой компонент ДС</span></button><span class="an-radius"><span class="an-radius-corner"></span><span class="an-radius-tail"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">XS</span><button class="an-btn an-btn--xs an-btn--accent"><span>Любой компонент ДС</span></button><span class="an-radius"><span class="an-radius-corner"></span><span class="an-radius-tail"></span><span>8px</span></span></div></div><div class="an-code"><div class="an-code-row an-code-head"><span class="an-code-tag">Размер</span><span class="an-code-head-val">Значение</span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Border Radius</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Border Radius</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Border Radius</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div></div></div><div class="anatomy-sub"><h4>Accent / Icon</h4><div class="anatomy-stage anatomy-stage--tall"><div class="anatomy-center"><button class="an-btn an-btn--m an-btn--accent"><span class="an-btn__ic material-icons" aria-hidden="true">add</span><span>Любой компонент ДС</span><span class="an-btn__ic material-icons" aria-hidden="true">add</span></button><span class="an-pad" style="left:0;top:0;width:12px;height:100%"></span><span class="an-measure-h" style="left:0;width:12px"><span class="an-line"></span><span>12px</span></span><span class="an-pad" style="left:32px;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="left:32px;width:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="right:32px;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="right:32px;width:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="right:0;top:0;width:12px;height:100%"></span><span class="an-measure-h" style="right:0;width:12px"><span class="an-line"></span><span>12px</span></span><span class="an-num" style="left:22px;transform:translateX(-50%)"><span class="an-num-dot">1</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span><span class="an-num" style="left:50%;transform:translateX(-50%)"><span class="an-num-dot">2</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span><span class="an-num" style="right:22px;transform:translateX(-50%)"><span class="an-num-dot">3</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span></div></div><div class="an-legend"><p><b>1.</b> Иконка слева (может не использоваться)</p><p><b>2.</b> Label: действие компоненты</p><p><b>3.</b> Иконка справа (может не использоваться)</p></div></div></div>
 </div>
 
       </div>
@@ -395,7 +388,7 @@
       <div class="comp-panel" id="tab-behavior">
 
         <section class="beh-intro">
-          <p class="beh-lead">Кнопки должны обеспечивать чёткую обратную связь. Ниже представлены реальные интерактивные примеры и демонстрации анимаций перехода между состояниями.</p>
+          <p class="beh-lead">Компоненты должны обеспечивать чёткую обратную связь. Ниже представлены реальные интерактивные примеры и демонстрации анимаций перехода между состояниями.</p>
         </section>
 
         <section>
@@ -404,11 +397,11 @@
               <h3>Интерактивная песочница</h3>
               <span class="beh-badge">Try it yourself</span>
             </div>
-            <p class="beh-sub">Попробуйте навести курсор и нажать на кнопки ниже. Они реагируют на ваши действия, демонстрируя реальную скорость анимации и смену цветов.</p>
+            <p class="beh-sub">Попробуйте навести курсор и нажать на компоненты ниже. Они реагируют на ваши действия, демонстрируя реальную скорость анимации и смену цветов.</p>
             <div class="beh-sandbox">
-              <span class="ds-any-comp">Любой компонент ДС</span>
-              <span class="ds-any-comp">Любой компонент ДС</span>
-              <span class="ds-any-comp">Любой компонент ДС</span>
+              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Primary Любой компонент ДС</span></button>
+              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button"><span class="ds-btn__label">Secondary Любой компонент ДС</span></button>
+              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--text" type="button"><span class="ds-btn__icon material-icons" aria-hidden="true">add</span><span class="ds-btn__label">Любой компонент ДС</span></button>
             </div>
           </div>
         </section>
@@ -429,7 +422,7 @@
                 <p class="beh-demo__label">Animation Demo</p>
                 <div class="beh-demo__stage">
                   <div class="beh-cursor-wrap">
-                    <span class="ds-any-comp">Любой компонент ДС</span>
+                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button" data-beh-anim="hover"><span class="ds-btn__label">Hover Me</span></button>
                     <span class="beh-cursor beh-cursor--hover" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg></span>
                   </div>
                   <span class="beh-state">default</span>
@@ -450,7 +443,7 @@
                 <p class="beh-demo__label">Animation Demo</p>
                 <div class="beh-demo__stage">
                   <div class="beh-cursor-wrap">
-                    <span class="ds-any-comp">Любой компонент ДС</span>
+                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button" data-beh-anim="press"><span class="ds-btn__label">Click Me</span></button>
                     <span class="beh-cursor beh-cursor--press" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg></span>
                   </div>
                   <span class="beh-state">default</span>
@@ -464,7 +457,7 @@
                 <p>Визуальный маркер для навигации с клавиатуры (Tab). Никогда не убирайте outline без замены на другой стиль фокуса.</p>
               </div>
               <div class="beh-demo">
-                <span class="ds-any-comp">Любой компонент ДС</span>
+                <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled beh-focus-ring" type="button"><span class="ds-btn__label">Focused Любой компонент ДС</span></button>
                 <p class="beh-demo__caption">Focus ring styling</p>
               </div>
             </div>
@@ -477,11 +470,11 @@
             <h3>Интерактивный Loader</h3>
             <div class="beh-loader">
               <div class="beh-loader__text">
-                <p>Нажмите на кнопку справа, чтобы увидеть симуляцию загрузки. Состояние загрузки предотвращает повторную отправку формы и информирует пользователя о прогрессе.</p>
+                <p>Нажмите на компонент справа, чтобы увидеть симуляцию загрузки. Состояние загрузки предотвращает повторную отправку формы и информирует пользователя о прогрессе.</p>
               </div>
               <div class="beh-loader__panel">
                 <div class="beh-demo__stage">
-                  <span class="ds-any-comp">Любой компонент ДС</span>
+                  <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled beh-loader__btn" id="beh-loader-btn" type="button"><span class="ds-btn__label">Save Changes</span></button>
                   <p class="beh-demo__caption beh-loader__cap">Click to test loader</p>
                 </div>
               </div>
@@ -497,8 +490,8 @@
                 <h4>Горизонтальная</h4>
                 <div class="beh-group__h">
                   <div class="ds-btn-group ds-btn-group--horizontal">
-                    <span class="ds-any-comp">Любой компонент ДС</span>
-                    <span class="ds-any-comp">Любой компонент ДС</span>
+                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button"><span class="ds-btn__label">Cancel</span></button>
+                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Confirm</span></button>
                   </div>
                 </div>
               </div>
@@ -506,8 +499,8 @@
                 <h4>Вертикальная</h4>
                 <div class="beh-group__v">
                   <div class="ds-btn-group ds-btn-group--vertical">
-                    <span class="ds-any-comp">Любой компонент ДС</span>
-                    <span class="ds-any-comp">Любой компонент ДС</span>
+                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Sign In</span></button>
+                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--text" type="button"><span class="ds-btn__label">Create Account</span></button>
                   </div>
                 </div>
               </div>
@@ -720,14 +713,29 @@ function renderStage() {
   var text = document.getElementById('ctl-textval').value || 'Button';
   var dark = document.getElementById('ctl-dark').checked;
 
-  // превью: вместо конкретного компонента — «рыба» (мастер универсальный, сюда встаёт любой компонент ДС)
-  document.getElementById('stage-btn-wrap').innerHTML =
-    '<div class="ds-any-comp">Любой компонент ДС</div>';
+  var colors = BTN.colors[style][type][state] || BTN.colors[style][type]['default'];
+  var cls = 'ds-btn ds-btn--' + size + ' ds-btn--' + style + ' ds-btn--' + type;
+  var styleAttr = 'background:' + colors.bg + ';border-color:' + colors.border + ';color:' + colors.label + ';';
+  if (state !== 'default' && state !== 'disable' && state !== 'loading') styleAttr += 'cursor:default;';
+  var disabled = state === 'disable' ? ' disabled' : '';
+  var html = '<button class="' + cls + '" style="' + styleAttr + '"' + disabled + '>';
+  if (state === 'loading') html += '<span class="ds-spinner" aria-hidden="true"></span>';
+  else if (iconL) html += '<span class="ds-btn__icon material-icons" aria-hidden="true">add</span>';
+  if (showText) html += '<span class="ds-btn__label">' + text.replace(/</g, '&lt;') + '</span>';
+  if (iconR) html += '<span class="ds-btn__icon material-icons" aria-hidden="true">add</span>';
+  html += '</button>';
+  document.getElementById('stage-btn-wrap').innerHTML = html;
   document.getElementById('stage').classList.toggle('is-dark', dark);
 
-  // панель кода: вместо кода конкретного компонента — «рыба» (мастер универсальный)
-  lastHtmlLines = ['Любой компонент ДС'];
-  document.getElementById('cc-html').innerHTML = '<div class="ds-any-comp">Любой компонент ДС</div>';
+  // код
+  var code = '<button class="' + cls + '"' + (disabled ? ' disabled' : '') + '>\n';
+  if (state === 'loading') code += '  <span class="ds-spinner" aria-hidden="true"></span>\n';
+  else if (iconL) code += '  <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>\n';
+  if (showText) code += '  <span class="ds-btn__label">' + text.replace(/</g, '&lt;') + '</span>\n';
+  if (iconR) code += '  <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>\n';
+  code += '</button>';
+  document.getElementById('cc-html').innerHTML = renderHtml(code.split('\n'));
+  lastHtmlLines = code.split('\n');
 
   // CSS и Tokens — по текущим настройкам
   updateCodePanels();
@@ -788,10 +796,17 @@ var STATE_LABEL = { default: 'Default', hover: 'Hover', press: 'Press' };
 var selectedBtn = null;
 
 function matrixBtn(style, type, size, state) {
-  // Мастер универсальный: вместо кнопки в матрице — «рыба» (сетка/структура сохраняется,
-  // класс matrix-btn сохранён, чтобы клик/автовыбор в инспекторе работали)
-  return '<span class="ds-any-comp ds-any-comp--small matrix-btn" data-style="' + style + '" data-type="' + type +
-         '" data-size="' + size + '" data-state="' + state + '">Любой компонент ДС</span>';
+  var colors = BTN.colors[style][type][state];
+  var cls = 'ds-btn ds-btn--' + size + ' ds-btn--' + style + ' ds-btn--' + type;
+  var styleAttr = 'background:' + colors.bg + ';border-color:' + colors.border + ';color:' + colors.label + ';';
+  var dis = state === 'disable' ? ' disabled' : '';
+  // как в Figma: Element left = add, Element right = add
+  return '<button class="' + cls + ' matrix-btn" data-style="' + style + '" data-type="' + type +
+         '" data-size="' + size + '" data-state="' + state + '" style="' + styleAttr + '"' + dis + '>' +
+         '<span class="ds-btn__icon material-icons" aria-hidden="true">add</span>' +
+         '<span class="ds-btn__label">Любой компонент ДС</span>' +
+         '<span class="ds-btn__icon material-icons" aria-hidden="true">add</span>' +
+         '</button>';
 }
 
 (function buildMatrix() {
@@ -839,7 +854,8 @@ function matrixBtn(style, type, size, state) {
     html += '<div class="matrix-size__title">' + BTN.sizes[size].label + '</div>';
     html += '<div class="matrix-card">';
     html += '<div class="matrix-row">';
-    html += '<span class="matrix-cell"><span class="ds-any-comp">Любой компонент ДС</span></span>';
+    html += '<span class="matrix-cell"><button class="ds-btn ds-btn--' + size + ' ds-btn--neutral ds-btn--filled" disabled style="gap:8px">' +
+            '<span class="ds-spinner" aria-hidden="true"></span><span class="ds-btn__label">Любой компонент ДС</span></button></span>';
     html += '<span></span><span></span>';
     html += '</div>';
     html += '</div></div>';
@@ -876,18 +892,72 @@ function updateVarInspector(d) {
   var type = d.type;
   var state = d.state;
   var size = d.size;
+  var colors = BTN.colors[style][type][state] || BTN.colors[style][type]['default'];
+  var vars = BTN.vars(style, type, state);
+  var padVar = size === 'm' ? '--ds-space-3x' : size === 's' ? '--ds-space-2x' : '--ds-space-1-5x';
+  var padVal = size === 'm' ? '12px' : size === 's' ? '8px' : '6px';
+  var pyVar = size === 'm' ? '--ds-space-2x' : '--ds-space-1x';
+  var pyVal = size === 'm' ? '8px' : '4px';
+  var gapVar = size === 'm' ? '--ds-space-2x' : '--ds-space-1x';
+  var gapVal = size === 'm' ? '8px' : '4px';
+  var bw = type === 'outlined' ? '1' : '0';
 
-  // Мастер универсальный: инспектор показывает «рыбу»-плейсхолдер вместо кода конкретного компонента
-  document.getElementById('vc-label').textContent = 'мастер страница · Любой компонент ДС';
-  document.getElementById('vc-label-text').textContent = 'Любой компонент';
+  // подпись
+  document.getElementById('vc-label').textContent = 'мастер страница / ' + size.toUpperCase() + ' / ' + style + ' / ' + type + ' / ' + state;
+
+  // фигура
+  document.querySelectorAll('#vc-tokens .pf-r').forEach(function (c) { c.textContent = '8'; });
+  document.querySelectorAll('#vc-tokens .pf-bw').forEach(function (c) { c.textContent = bw; });
+  document.getElementById('vc-py-t').textContent = pyVal.replace('px', '');
+  document.getElementById('vc-py-b').textContent = pyVal.replace('px', '');
+  document.getElementById('vc-px-l').textContent = padVal.replace('px', '');
+  document.getElementById('vc-px-r').textContent = padVal.replace('px', '');
+  // Label × N = высота кнопки − 2×py (m: 36−16=20, s: 28−8=20)
+  document.getElementById('vc-label-text').textContent =
+    'Label × ' + (BTN.sizes[size].height - 2 * parseInt(pyVal, 10));
+
+  // Layout
+  document.getElementById('vc-pad-v').innerHTML =
+    escVar('var(' + pyVar + ', ' + pyVal + ') var(' + padVar + ', ' + padVal + ');');
+  document.getElementById('vc-gap-v').innerHTML =
+    escVar('var(' + gapVar + ', ' + gapVal + ');');
+
+  // Style
+  document.getElementById('vc-r-v').innerHTML = escVar('var(--ds-radius-2x, 8px);');
+  document.getElementById('vc-bg-v').innerHTML =
+    '<span class="fn">var</span>(' + vars.bg + ', <span class="dot" style="background:' + colors.bg + '"></span> ' + colors.bg + ');';
+  var shadow = type === 'text' ? 'none' : '0px 2px 2px #E0E0E0...';
+  document.getElementById('vc-sh-v').textContent = shadow + ';';
+
+  // Colors (как Layout/Style — строки с var())
+  document.getElementById('vc-cbg-v').innerHTML = escVar('var(' + vars.bg + ', ' + colors.bg + ');');
+  document.getElementById('vc-ctl-v').innerHTML = escVar('var(' + vars.label + ', ' + colors.label + ');');
 
   // CSS
-  lastVcCss = ['Любой компонент ДС'];
-  document.getElementById('vc-css').innerHTML = '<div class="ds-any-comp">Любой компонент ДС</div>';
+  var lines = [
+    'display: inline-flex;',
+    'padding: var(' + pyVar + ', ' + pyVal + ') var(' + padVar + ', ' + padVal + ');',
+    'justify-content: center;',
+    'align-items: center;',
+    'gap: var(' + gapVar + ', ' + gapVal + ');',
+    'border-radius: var(--ds-radius-2x, 8px);',
+    'background: var(' + vars.bg + ', ' + colors.bg + ');'
+  ];
+  if (type === 'outlined') lines.push('border: 1px solid var(' + vars.border + ', ' + colors.border + ');');
+  lines.push('box-shadow: ' + shadow + ';');
+  lines.push('color: var(' + vars.label + ', ' + colors.label + ');');
+  lastVcCss = lines;
+  document.getElementById('vc-css').innerHTML = renderCss(lines);
 
   // HTML — как в «Компоненте» (Element left/right = add, как в Figma)
-  lastVcHtml = ['Любой компонент ДС'];
-  document.getElementById('vc-html').innerHTML = '<div class="ds-any-comp">Любой компонент ДС</div>';
+  var htmlCode = '<button class="ds-btn ds-btn--' + size + ' ds-btn--' + style + ' ds-btn--' + type + '"' +
+                 (state === 'disable' ? ' disabled' : '') + '>\n' +
+                 '  <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>\n' +
+                 '  <span class="ds-btn__label">Любой компонент ДС</span>\n' +
+                 '  <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>\n' +
+                 '</button>';
+  lastVcHtml = htmlCode.split('\n');
+  document.getElementById('vc-html').innerHTML = renderHtml(htmlCode.split('\n'));
 }
 
 // вкладки HTML | CSS | TOKENS (как в «Компоненте»)
@@ -1430,8 +1500,14 @@ function stateColors(style, type, state) {
 // Иконка кнопки из Figma — «+» (add), как в DS; размер M 20px
 var ICON_PLUS = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0" aria-hidden="true"><path d="M5 12h14M12 5v14"/></svg>';
 function stateButton(style, type, state, group) {
-  // Мастер универсальный: в колонке «Пример» таблиц токенов — рыба вместо кнопки
-  return '<span class="ds-any-comp ds-any-comp--small">Любой компонент ДС</span>';
+  var c = stateColors(style, type, state); // ТОЛЬКО реальные значения этого состояния, без подстановок
+  var icon = '<span style="display:inline-flex;align-items:center;justify-content:center;color:' + c.icon + '">' + ICON_PLUS + '</span>';
+  var border = type === 'outlined' ? ('border:1px solid ' + c.border + ';') : 'border:1px solid transparent;';
+  var shadow = (state !== 'disable' && type === 'filled') ? 'box-shadow:0 0 4px rgba(33,33,33,0.12),0 2px 2px rgba(33,33,33,0.04);' : '';
+  return '<button type="button" tabindex="-1"' + (state==='disable' ? ' disabled' : '') +
+         ' style="display:inline-flex;align-items:center;justify-content:center;height:36px;padding:8px 12px;gap:8px;border-radius:8px;font-size:14px;font-weight:500;color:' + c.text + ';background:' + c.bg + ';' + border +
+         shadow + 'font-family:inherit;cursor:default;pointer-events:none">' +
+         icon + '<span>Label</span>' + icon + '</button>';
 }
 
 // Значение токена для таблицы — реальное значение переменной Figma
@@ -1556,12 +1632,59 @@ function updateCodePanels() {
   var type = selVal('type');
   var state = selVal('state');
   var size = selVal('size');
+  var colors = BTN.colors[style][type][state] || BTN.colors[style][type]['default'];
+  var vars = BTN.vars(style, type, state);
+  var padVar = size === 'm' ? '--ds-space-3x' : size === 's' ? '--ds-space-2x' : '--ds-space-1-5x';
+  var padVal = size === 'm' ? '12px' : size === 's' ? '8px' : '6px';
+  var pyVar = size === 'm' ? '--ds-space-2x' : '--ds-space-1x';
+  var pyVal = size === 'm' ? '8px' : '4px';
+  var gapVar = size === 'm' ? '--ds-space-2x' : '--ds-space-1x';
+  var gapVal = size === 'm' ? '8px' : '4px';
+  var bw = type === 'outlined' ? '1' : '0';
 
-  // Мастер универсальный: панель кода показывает «рыбу»-плейсхолдер вместо кода конкретного компонента
-  document.getElementById('po-label').textContent = 'мастер страница · Любой компонент ДС';
-  lastCssLines = ['Любой компонент ДС'];
-  document.getElementById('cc-css').innerHTML = '<div class="ds-any-comp">Любой компонент ДС</div>';
-  document.getElementById('cc-tokens').innerHTML = '<div class="ds-any-comp">Любой компонент ДС</div>';
+  // Tokens: подпись
+  document.getElementById('po-label').textContent = 'мастер страница / ' + size.toUpperCase() + ' / ' + style + ' / ' + type + ' / ' + state;
+
+  // Tokens: фигура
+  document.querySelectorAll('.pf-r').forEach(function (c) { c.textContent = '8'; });
+  document.querySelectorAll('.pf-bw').forEach(function (c) { c.textContent = bw; });
+  document.getElementById('pf-py-t').textContent = pyVal.replace('px', '');
+  document.getElementById('pf-py-b').textContent = pyVal.replace('px', '');
+  document.getElementById('pf-px-l').textContent = padVal.replace('px', '');
+  document.getElementById('pf-px-r').textContent = padVal.replace('px', '');
+
+  // Tokens: Layout
+  document.getElementById('po-pad-v').innerHTML =
+    escVar('var(' + pyVar + ', ' + pyVal + ') var(' + padVar + ', ' + padVal + ');');
+  document.getElementById('po-gap-v').innerHTML =
+    escVar('var(' + gapVar + ', ' + gapVal + ');');
+
+  // Tokens: Style
+  document.getElementById('po-r-v').innerHTML = escVar('var(--ds-radius-2x, 8px);');
+  document.getElementById('po-bg-v').innerHTML =
+    '<span class="fn">var</span>(' + vars.bg + ', <span class="dot" style="background:' + colors.bg + '"></span> ' + colors.bg + ');';
+  var shadow = type === 'text' ? 'none' : '0px 2px 2px #E0E0E0...';
+  document.getElementById('po-sh-v').textContent = shadow + ';';
+
+  // Tokens: Colors (как Layout/Style — строки с var())
+  document.getElementById('po-cbg-v').innerHTML = escVar('var(' + vars.bg + ', ' + colors.bg + ');');
+  document.getElementById('po-ctl-v').innerHTML = escVar('var(' + vars.label + ', ' + colors.label + ');');
+
+  // CSS: код с номерами строк и подсветкой
+  var lines = [
+    'display: inline-flex;',
+    'padding: var(' + pyVar + ', ' + pyVal + ') var(' + padVar + ', ' + padVal + ');',
+    'justify-content: center;',
+    'align-items: center;',
+    'gap: var(' + gapVar + ', ' + gapVal + ');',
+    'border-radius: var(--ds-radius-2x, 8px);',
+    'background: var(' + vars.bg + ', ' + colors.bg + ');'
+  ];
+  if (type === 'outlined') lines.push('border: 1px solid var(' + vars.border + ', ' + colors.border + ');');
+  lines.push('box-shadow: ' + shadow + ';');
+  lines.push('color: var(' + vars.label + ', ' + colors.label + ');');
+  lastCssLines = lines;
+  document.getElementById('cc-css').innerHTML = renderCss(lines);
 }
 
 // вкладки HTML | CSS | Tokens (только блок «Компонента», не «Вариантов»)
