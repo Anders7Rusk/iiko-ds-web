@@ -722,13 +722,12 @@ function renderStage() {
 
   // превью: вместо конкретного компонента — «рыба» (мастер универсальный, сюда встаёт любой компонент ДС)
   document.getElementById('stage-btn-wrap').innerHTML =
-    '<span class="ds-any-comp">Любой компонент ДС</span>';
+    '<div class="ds-any-comp">Любой компонент ДС</div>';
   document.getElementById('stage').classList.toggle('is-dark', dark);
 
-  // код-панель: вместо кода конкретного компонента — «рыба» (мастер универсальный)
-  var code = '<span class="ds-any-comp">Любой компонент ДС</span>';
-  document.getElementById('cc-html').innerHTML = renderHtml(code.split('\n'));
-  lastHtmlLines = code.split('\n');
+  // панель кода: вместо кода конкретного компонента — «рыба» (мастер универсальный)
+  lastHtmlLines = ['Любой компонент ДС'];
+  document.getElementById('cc-html').innerHTML = '<div class="ds-any-comp">Любой компонент ДС</div>';
 
   // CSS и Tokens — по текущим настройкам
   updateCodePanels();
@@ -789,8 +788,9 @@ var STATE_LABEL = { default: 'Default', hover: 'Hover', press: 'Press' };
 var selectedBtn = null;
 
 function matrixBtn(style, type, size, state) {
-  // Мастер универсальный: вместо кнопки в матрице — рыба (структура/сетка сохраняется)
-  return '<span class="ds-any-comp ds-any-comp--small" data-style="' + style + '" data-type="' + type +
+  // Мастер универсальный: вместо кнопки в матрице — «рыба» (сетка/структура сохраняется,
+  // класс matrix-btn сохранён, чтобы клик/автовыбор в инспекторе работали)
+  return '<span class="ds-any-comp ds-any-comp--small matrix-btn" data-style="' + style + '" data-type="' + type +
          '" data-size="' + size + '" data-state="' + state + '">Любой компонент ДС</span>';
 }
 
@@ -877,19 +877,17 @@ function updateVarInspector(d) {
   var state = d.state;
   var size = d.size;
 
-  // Мастер универсальный: инспектор показывает рыбу вместо кода конкретного компонента
+  // Мастер универсальный: инспектор показывает «рыбу»-плейсхолдер вместо кода конкретного компонента
   document.getElementById('vc-label').textContent = 'мастер страница · Любой компонент ДС';
   document.getElementById('vc-label-text').textContent = 'Любой компонент';
-  var fishLine = '<span class="ds-any-comp">Любой компонент ДС</span>';
 
   // CSS
-  lastVcCss = [fishLine];
-  document.getElementById('vc-css').innerHTML = renderHtml(fishLine.split('\n'));
+  lastVcCss = ['Любой компонент ДС'];
+  document.getElementById('vc-css').innerHTML = '<div class="ds-any-comp">Любой компонент ДС</div>';
 
   // HTML — как в «Компоненте» (Element left/right = add, как в Figma)
-  var htmlCode = '<span class="ds-any-comp">Любой компонент ДС</span>';
-  lastVcHtml = htmlCode.split('\n');
-  document.getElementById('vc-html').innerHTML = renderHtml(htmlCode.split('\n'));
+  lastVcHtml = ['Любой компонент ДС'];
+  document.getElementById('vc-html').innerHTML = '<div class="ds-any-comp">Любой компонент ДС</div>';
 }
 
 // вкладки HTML | CSS | TOKENS (как в «Компоненте»)
@@ -1559,11 +1557,11 @@ function updateCodePanels() {
   var state = selVal('state');
   var size = selVal('size');
 
-  // Мастер универсальный: панель кода показывает рыбу вместо кода конкретного компонента
+  // Мастер универсальный: панель кода показывает «рыбу»-плейсхолдер вместо кода конкретного компонента
   document.getElementById('po-label').textContent = 'мастер страница · Любой компонент ДС';
-  var fishLine = '<span class="ds-any-comp">Любой компонент ДС</span>';
-  document.getElementById('cc-css').innerHTML = renderHtml(fishLine.split('\n'));
-  document.getElementById('cc-tokens').innerHTML = renderHtml(fishLine.split('\n'));
+  lastCssLines = ['Любой компонент ДС'];
+  document.getElementById('cc-css').innerHTML = '<div class="ds-any-comp">Любой компонент ДС</div>';
+  document.getElementById('cc-tokens').innerHTML = '<div class="ds-any-comp">Любой компонент ДС</div>';
 }
 
 // вкладки HTML | CSS | Tokens (только блок «Компонента», не «Вариантов»)
