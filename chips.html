@@ -218,254 +218,92 @@
       </div>
 
       <!-- ===== ОПИСАНИЕ ===== -->
+      <div class="comp-panel"       <!-- ===== ОПИСАНИЕ ===== -->
       <div class="comp-panel" id="tab-description">
 
         <section>
           <h2>Описание</h2>
-          <p class="desc">Button — это фундаментальный компонент интерфейса, инициирующий действие. Кнопки сообщают пользователям, что произойдёт после нажатия, и направляют их через сценарии использования.</p>
+          <p class="desc">Чип — компактная метка-фильтр или выбранное значение, которое можно снять: применённые фильтры над таблицей, выбранные товары, теги. Чип всегда относится к чему-то выбранному пользователем; для статуса объекта берите Status, для количества — Badge.<br><br>Состав: текст, элемент слева (иконка «+» или аватар) и элемент справа (крестик для снятия).<br><br>Как выбрать вариант: Type=Filled — выбранный, активный чип; Outlined — доступный к выбору.<br>Size=M — основной; S — плотные панели и строки таблиц.<br>Состояния: Default, Hover, Press, Focus, Disable.<br><br><b>Вариант Filled НЕ используем в Chips Input</b>.</p>
         </section>
 
         <section>
-          <h2>Варианты</h2>
-
+          <h2>Примеры</h2>
           <div class="card">
-            <h3>Neutral variant</h3>
-            <p class="desc">Нейтральная кнопка имеет низкий визуальный вес и предназначена для второстепенных действий. Она часто используется в паре с другими типами кнопок (например, для действия «Отмена») или для опций, которые не требуют активного привлечения внимания. Старайтесь не использовать её как единственную кнопку в группе, если это не контекст навигации.</p>
+            <h3>Применённые фильтры</h3>
+            <p class="desc">Filled-чипы показывают выбранные фильтры, каждый можно снять крестиком.</p>
             <div class="row">
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled">Action</button>
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">Action</button>
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text">Action</button>
+<div class="ds-chips ds-chips--filled"><span class="ds-chips__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span><span class="ds-chips__label">Москва</span><span class="ds-chips__close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="currentColor"/></svg></span></div>
+<div class="ds-chips ds-chips--filled"><span class="ds-chips__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span><span class="ds-chips__label">Кофе</span><span class="ds-chips__close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="currentColor"/></svg></span></div>
+<div class="ds-chips ds-chips--filled"><span class="ds-chips__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span><span class="ds-chips__label">Доставка</span><span class="ds-chips__close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="currentColor"/></svg></span></div>
             </div>
           </div>
-
           <div class="card">
-            <h3>Accent variant</h3>
-            <p class="desc">Основная кнопка сообщает о высоком приоритете и предназначена для ключевых действий в интерфейсе. Не используйте более одной основной кнопки в одной области просмотра. Они выделяют самые важные действия (например, «Сохранить», «Опубликовать») и устанавливают чёткую визуальную иерархию.</p>
+            <h3>Теги</h3>
+            <p class="desc">Outlined-чипы показывают доступные к выбору теги.</p>
             <div class="row">
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">Action</button>
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined">Action</button>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Positive variant</h3>
-            <p class="desc">Позитивная кнопка используется для действий среднего приоритета с благоприятным исходом. Она подходит для ситуаций, когда действие важно, но не является основным целевым действием страницы. Также может использоваться для позитивных альтернативных действий, чтобы отделить их от основного потока.</p>
-            <div class="row">
-              <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--filled">Action</button>
-              <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--outlined">Action</button>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Warning variant</h3>
-            <p class="desc">Предупреждающий вариант используется для действий, которые требуют осторожности, но не являются разрушительными. Оранжевый цвет привлекает внимание пользователя, сигнализируя о необходимости проверки перед продолжением (например, «Выйти из аккаунта», «Изменить статус»).</p>
-            <div class="row">
-              <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--filled">Action</button>
-              <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--outlined">Action</button>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Negative variant</h3>
-            <p class="desc">Этот вариант предназначен для акцентирования внимания на разрушительных действиях или действиях с негативными последствиями (например, «Удалить», «Заблокировать»). Красный цвет служит сигналом опасности, заставляя пользователя задуматься перед нажатием. Используйте этот стиль экономно.</p>
-            <div class="row">
-              <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--filled">Action</button>
-              <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--outlined">Action</button>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h2>Примеры использования</h2>
-
-          <div class="card">
-            <h3>С иконками</h3>
-            <p class="desc">Иконки усиливают смысл действия. Ставьте иконку слева для действий и справа для навигации.</p>
-            <div class="row">
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
-                <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
-                <span class="ds-btn__label">Create New</span>
-              </button>
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
-                <span class="ds-btn__label">Next Step</span>
-                <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Опасные действия</h3>
-            <p class="desc">Используйте стиль <code>Negative</code> для действий, которые необратимы.</p>
-            <div class="row">
-              <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--filled">
-                <span class="ds-btn__icon material-icons" aria-hidden="true">delete</span>
-                <span class="ds-btn__label">Delete Account</span>
-              </button>
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">
-                <span class="ds-btn__label">Cancel</span>
-              </button>
+<div class="ds-chips ds-chips--outlined"><span class="ds-chips__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span><span class="ds-chips__label">Акция</span><span class="ds-chips__close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="currentColor"/></svg></span></div>
+<div class="ds-chips ds-chips--outlined"><span class="ds-chips__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span><span class="ds-chips__label">Новинка</span><span class="ds-chips__close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="currentColor"/></svg></span></div>
+<div class="ds-chips ds-chips--outlined ds-chips--s"><span class="ds-chips__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span><span class="ds-chips__label">Хит</span><span class="ds-chips__close"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="currentColor"/></svg></span></div>
             </div>
           </div>
         </section>
 
         <section>
           <h2>Рекомендации</h2>
-
           <div class="card">
             <h3>✓ Делайте</h3>
             <ul>
-              <li>Используйте глаголы в названиях (Сохранить, Отправить).</li>
-              <li>Используйте одну Accent-кнопку на группу действий.</li>
-              <li>Соблюдайте отступы между кнопками (минимум 8px).</li>
+              <li>Используйте чип для выбранного пользователем значения, которое можно снять.</li>
+              <li>Слева ставьте иконку «+» или аватар, справа — крестик для снятия.</li>
+              <li>Соблюдайте отступы между чипами (gap-group 8px).</li>
             </ul>
             <h3 style="margin-top:20px">✕ Не делайте</h3>
             <ul>
-              <li>Не используйте слишком длинные названия.</li>
-              <li>Не ставьте две Accent-кнопки рядом.</li>
-              <li>Не используйте кнопку для навигации, если это выглядит как ссылка.</li>
+              <li>Не используйте чип для статуса объекта (для этого Status) или количества (Badge).</li>
+              <li>Не используйте Filled-вариант в Chips Input.</li>
+              <li>Не делайте чип ссылкой, если это выглядит как кнопка.</li>
             </ul>
           </div>
         </section>
 
-      </div>
-
-      <!-- ===== АНАТОМИЯ ===== -->
+      </div>      <!-- ===== АНАТОМИЯ ===== -->
       <div class="comp-panel" id="tab-anatomy">
 
         <div class="anatomy">
-<div class="anatomy-sec"><h3>Accent / Filled / Default</h3><div class="anatomy-sub"><h4>Horizontal Padding</h4><div class="anatomy-stage"><div class="anatomy-cell"><span class="anatomy-cell__name">M</span><button class="an-btn an-btn--m an-btn--accent"><span>Button</span></button><span class="an-pad" style="left:0;top:0;width:12px;height:100%"></span><span class="an-measure-h" style="left:0;width:12px"><span class="an-line"></span><span>12px</span></span><span class="an-pad" style="right:0;top:0;width:12px;height:100%"></span><span class="an-measure-h" style="right:0;width:12px"><span class="an-line"></span><span>12px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">S</span><button class="an-btn an-btn--s an-btn--accent"><span>Button</span></button><span class="an-pad" style="left:0;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="left:0;width:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="right:0;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="right:0;width:8px"><span class="an-line"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">XS</span><button class="an-btn an-btn--xs an-btn--accent"><span>Button</span></button><span class="an-pad" style="left:0;top:0;width:6px;height:100%"></span><span class="an-measure-h" style="left:0;width:6px"><span class="an-line"></span><span>6px</span></span><span class="an-pad" style="right:0;top:0;width:6px;height:100%"></span><span class="an-measure-h" style="right:0;width:6px"><span class="an-line"></span><span>6px</span></span></div></div><div class="an-code"><div class="an-code-row an-code-head"><span class="an-code-tag">Размер</span><span class="an-code-head-val">Значение</span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Padding Left</span><span class="an-code-colon">:</span> <span class="an-code-val">12px</span></span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Padding Right</span><span class="an-code-colon">:</span> <span class="an-code-val">12px</span></span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Text Style</span><span class="an-code-colon">:</span> <span class="an-code-val">Body · S · (14)/Normal/Medium · 14/20</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Padding Left</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Padding Right</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Text Style</span><span class="an-code-colon">:</span> <span class="an-code-val">Body · S · (14)/Normal/Medium · 14/20</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Padding Left</span><span class="an-code-colon">:</span> <span class="an-code-val">6px</span></span></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Padding Right</span><span class="an-code-colon">:</span> <span class="an-code-val">6px</span></span></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Text Style</span><span class="an-code-colon">:</span> <span class="an-code-val">Caption · L · (12)/Normal/Medium · 12/16</span></span></div></div></div><div class="anatomy-sub"><h4>Vertical Padding &amp; Height</h4><div class="anatomy-stage"><div class="anatomy-cell"><span class="anatomy-cell__name">M</span><button class="an-btn an-btn--m an-btn--accent"><span>Button</span></button><span class="an-measure-v" style="left:-48px;top:0;height:36px"><span>36px</span><span class="an-line"></span></span><span class="an-pad" style="left:0;top:0;width:100%;height:8px"></span><span class="an-measure-v" style="right:-48px;top:0;height:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="left:0;bottom:0;width:100%;height:8px"></span><span class="an-measure-v" style="right:-48px;bottom:0;height:8px"><span class="an-line"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">S</span><button class="an-btn an-btn--s an-btn--accent"><span>Button</span></button><span class="an-measure-v" style="left:-48px;top:0;height:28px"><span>28px</span><span class="an-line"></span></span><span class="an-pad" style="left:0;top:0;width:100%;height:4px"></span><span class="an-measure-v" style="right:-48px;top:0;height:4px"><span class="an-line"></span><span>4px</span></span><span class="an-pad" style="left:0;bottom:0;width:100%;height:4px"></span><span class="an-measure-v" style="right:-48px;bottom:0;height:4px"><span class="an-line"></span><span>4px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">XS</span><button class="an-btn an-btn--xs an-btn--accent"><span>Button</span></button><span class="an-measure-v" style="left:-48px;top:0;height:24px"><span>24px</span><span class="an-line"></span></span><span class="an-pad" style="left:0;top:0;width:100%;height:4px"></span><span class="an-measure-v" style="right:-48px;top:0;height:4px"><span class="an-line"></span><span>4px</span></span><span class="an-pad" style="left:0;bottom:0;width:100%;height:4px"></span><span class="an-measure-v" style="right:-48px;bottom:0;height:4px"><span class="an-line"></span><span>4px</span></span></div></div><div class="an-code"><div class="an-code-row an-code-head"><span class="an-code-tag">Размер</span><span class="an-code-head-val">Значение</span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Padding Top</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Padding Bottom</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Height</span><span class="an-code-colon">:</span> <span class="an-code-val">36px</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Padding Top</span><span class="an-code-colon">:</span> <span class="an-code-val">4px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Padding Bottom</span><span class="an-code-colon">:</span> <span class="an-code-val">4px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Height</span><span class="an-code-colon">:</span> <span class="an-code-val">28px</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Padding Top</span><span class="an-code-colon">:</span> <span class="an-code-val">4px</span></span></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Padding Bottom</span><span class="an-code-colon">:</span> <span class="an-code-val">4px</span></span></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Height</span><span class="an-code-colon">:</span> <span class="an-code-val">24px</span></span></div></div></div><div class="anatomy-sub"><h4>Border Radius</h4><div class="anatomy-stage"><div class="anatomy-cell"><span class="anatomy-cell__name">M</span><button class="an-btn an-btn--m an-btn--accent"><span>Button</span></button><span class="an-radius"><span class="an-radius-corner"></span><span class="an-radius-tail"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">S</span><button class="an-btn an-btn--s an-btn--accent"><span>Button</span></button><span class="an-radius"><span class="an-radius-corner"></span><span class="an-radius-tail"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">XS</span><button class="an-btn an-btn--xs an-btn--accent"><span>Button</span></button><span class="an-radius"><span class="an-radius-corner"></span><span class="an-radius-tail"></span><span>8px</span></span></div></div><div class="an-code"><div class="an-code-row an-code-head"><span class="an-code-tag">Размер</span><span class="an-code-head-val">Значение</span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Border Radius</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Border Radius</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Border Radius</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div></div></div><div class="anatomy-sub"><h4>Accent / Icon</h4><div class="anatomy-stage anatomy-stage--tall"><div class="anatomy-center"><button class="an-btn an-btn--m an-btn--accent"><span class="an-btn__ic material-icons" aria-hidden="true">add</span><span>Button</span><span class="an-btn__ic material-icons" aria-hidden="true">add</span></button><span class="an-pad" style="left:0;top:0;width:12px;height:100%"></span><span class="an-measure-h" style="left:0;width:12px"><span class="an-line"></span><span>12px</span></span><span class="an-pad" style="left:32px;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="left:32px;width:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="right:32px;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="right:32px;width:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="right:0;top:0;width:12px;height:100%"></span><span class="an-measure-h" style="right:0;width:12px"><span class="an-line"></span><span>12px</span></span><span class="an-num" style="left:22px;transform:translateX(-50%)"><span class="an-num-dot">1</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span><span class="an-num" style="left:50%;transform:translateX(-50%)"><span class="an-num-dot">2</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span><span class="an-num" style="right:22px;transform:translateX(-50%)"><span class="an-num-dot">3</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span></div></div><div class="an-legend"><p><b>1.</b> Иконка слева (может не использоваться)</p><p><b>2.</b> Label: действие кнопки</p><p><b>3.</b> Иконка справа (может не использоваться)</p></div></div></div>
+<div class="anatomy-sec"><h3>Filled / Default</h3><div class="anatomy-sub"><h4>Horizontal Padding</h4><div class="anatomy-stage"><div class="anatomy-cell"><span class="anatomy-cell__name">M</span><div class="ds-chips ds-chips--filled"><span class="ds-chips__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span><span class="ds-chips__label">Chip text</span><span class="ds-chips__close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="currentColor"/></svg></span></div><span class="an-pad" style="left:0;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="left:0;width:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="right:0;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="right:0;width:8px"><span class="an-line"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">S</span><div class="ds-chips ds-chips--filled ds-chips--s"><span class="ds-chips__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span><span class="ds-chips__label">Chip text</span><span class="ds-chips__close"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="currentColor"/></svg></span></div><span class="an-pad" style="left:0;top:0;width:6px;height:100%"></span><span class="an-measure-h" style="left:0;width:6px"><span class="an-line"></span><span>6px</span></span><span class="an-pad" style="right:0;top:0;width:6px;height:100%"></span><span class="an-measure-h" style="right:0;width:6px"><span class="an-line"></span><span>6px</span></span></div></div><div class="an-code"><div class="an-code-row an-code-head"><span class="an-code-tag">Размер</span><span class="an-code-head-val">Значение</span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">padding-inline</span><span class="an-code-colon">:</span> <span class="an-code-val">var(--ds-chips-m-size-pad-left, 8px)</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">padding-inline</span><span class="an-code-colon">:</span> <span class="an-code-val">var(--ds-chips-s-size-pad-left, 6px)</span></span></div></div></div>
+<div class="anatomy-sub"><h4>Vertical Padding &amp; Height</h4><div class="anatomy-stage"><div class="anatomy-cell"><span class="anatomy-cell__name">M</span><div class="ds-chips ds-chips--filled"><span class="ds-chips__label">Chip text</span></div><span class="an-measure-v" style="left:-48px;top:0;height:32px"><span>32px</span><span class="an-line"></span></span><span class="an-pad" style="left:0;top:0;width:100%;height:6px"></span><span class="an-pad" style="left:0;bottom:0;width:100%;height:6px"></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">S</span><div class="ds-chips ds-chips--filled ds-chips--s"><span class="ds-chips__label">Chip text</span></div><span class="an-measure-v" style="left:-48px;top:0;height:32px"><span>32px</span><span class="an-line"></span></span><span class="an-pad" style="left:0;top:0;width:100%;height:4px"></span><span class="an-pad" style="left:0;bottom:0;width:100%;height:4px"></span></div></div><div class="an-code"><div class="an-code-row an-code-head"><span class="an-code-tag">Размер</span><span class="an-code-head-val">Значение</span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Height</span><span class="an-code-colon">:</span> <span class="an-code-val">var(--ds-size-8x) · 32px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Height</span><span class="an-code-colon">:</span> <span class="an-code-val">var(--ds-size-8x) · 32px</span></span></div></div></div>
+<div class="anatomy-sub"><h4>Border Radius</h4><div class="anatomy-stage"><div class="anatomy-cell"><span class="anatomy-cell__name">M</span><div class="ds-chips ds-chips--filled"><span class="ds-chips__label">Chip text</span></div><span class="an-radius"><span class="an-radius-corner"></span><span class="an-radius-tail"></span><span>12px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">S</span><div class="ds-chips ds-chips--filled ds-chips--s"><span class="ds-chips__label">Chip text</span></div><span class="an-radius"><span class="an-radius-corner"></span><span class="an-radius-tail"></span><span>8px</span></span></div></div><div class="an-code"><div class="an-code-row an-code-head"><span class="an-code-tag">Размер</span><span class="an-code-head-val">Значение</span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Border Radius</span><span class="an-code-colon">:</span> <span class="an-code-val">var(--ds-radius-3x) · 12px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Border Radius</span><span class="an-code-colon">:</span> <span class="an-code-val">var(--ds-radius-2x) · 8px</span></span></div></div></div>
+<div class="anatomy-sub"><h4>Состав</h4><div class="anatomy-stage anatomy-stage--tall"><div class="anatomy-center"><span class="an-num" style="left:22px;transform:translateX(-50%)"><span class="an-num-dot">1</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span><div class="ds-chips ds-chips--filled"><span class="ds-chips__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span><span class="ds-chips__label">Chip text</span><span class="ds-chips__close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="currentColor"/></svg></span></div><span class="an-num" style="right:22px;transform:translateX(-50%)"><span class="an-num-dot">2</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span></div></div><div class="an-legend"><p><b>1.</b> Иконка «+» слева (может не использоваться)</p><p><b>2.</b> Текст чипа (Chip text)</p><p><b>3.</b> Крестик × справа (для снятия)</p></div></div>
 </div>
 
-      </div>
-
-      <!-- ===== ПОВЕДЕНИЕ (точная копия figma.site; кнопки — наши токены) ===== -->
+      </div>      <!-- ===== ПОВЕДЕНИЕ ===== -->
       <div class="comp-panel" id="tab-behavior">
 
         <section class="beh-intro">
-          <p class="beh-lead">Кнопки должны обеспечивать чёткую обратную связь. Ниже представлены реальные интерактивные примеры и демонстрации анимаций перехода между состояниями.</p>
+          <p class="beh-lead">Чипы должны давать чёткую обратную связь. Ниже — реальные интерактивные примеры перехода между состояниями (из components.css).</p>
         </section>
 
         <section>
           <div class="beh-block">
-            <div class="beh-head">
-              <h3>Интерактивная песочница</h3>
-              <span class="beh-badge">Try it yourself</span>
-            </div>
-            <p class="beh-sub">Попробуйте навести курсор и нажать на кнопки ниже. Они реагируют на ваши действия, демонстрируя реальную скорость анимации и смену цветов.</p>
+            <div class="beh-head"><h3>Интерактивная песочница</h3><span class="beh-badge">Try it yourself</span></div>
+            <p class="beh-sub">Наведите курсор и нажмите на чипы ниже — hover/press нативные.</p>
             <div class="beh-sandbox">
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Primary Button</span></button>
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button"><span class="ds-btn__label">Secondary Button</span></button>
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--text" type="button"><span class="ds-btn__icon material-icons" aria-hidden="true">add</span><span class="ds-btn__label">Action</span></button>
+<div class="ds-chips ds-chips--filled"><span class="ds-chips__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span><span class="ds-chips__label">Chip text</span><span class="ds-chips__close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="currentColor"/></svg></span></div>
+<div class="ds-chips ds-chips--outlined"><span class="ds-chips__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span><span class="ds-chips__label">Chip text</span><span class="ds-chips__close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="currentColor"/></svg></span></div>
+<div class="ds-chips ds-chips--filled ds-chips--s"><span class="ds-chips__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="currentColor"/></svg></span><span class="ds-chips__label">Chip text</span><span class="ds-chips__close"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="currentColor"/></svg></span></div>
             </div>
           </div>
         </section>
 
         <section>
           <div class="beh-states">
-
-            <div class="beh-row">
-              <div class="beh-info">
-                <h4><span class="beh-dot beh-dot--blue" aria-hidden="true"></span>Hover (Наведение)</h4>
-                <p>Состояние Hover показывает, что элемент интерактивен. Плавный переход (transition) важен для ощущения качества интерфейса. Обычно длится 150-200ms.</p>
-                <ul>
-                  <li>Изменяется фон (становится темнее/светлее).</li>
-                  <li>Курсор меняется на pointer.</li>
-                </ul>
-              </div>
-              <div class="beh-demo">
-                <p class="beh-demo__label">Animation Demo</p>
-                <div class="beh-demo__stage">
-                  <div class="beh-cursor-wrap">
-                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button" data-beh-anim="hover"><span class="ds-btn__label">Hover Me</span></button>
-                    <span class="beh-cursor beh-cursor--hover" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg></span>
-                  </div>
-                  <span class="beh-state">default</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="beh-row">
-              <div class="beh-info">
-                <h4><span class="beh-dot beh-dot--indigo" aria-hidden="true"></span>Press / Active (Нажатие)</h4>
-                <p>Момент клика. Даёт немедленную тактильную обратную связь. Переход в это состояние должен быть мгновенным или очень быстрым (50-100ms).</p>
-                <ul>
-                  <li>Цвет становится ещё более насыщенным.</li>
-                  <li>Может меняться тень или масштаб (scale).</li>
-                </ul>
-              </div>
-              <div class="beh-demo">
-                <p class="beh-demo__label">Animation Demo</p>
-                <div class="beh-demo__stage">
-                  <div class="beh-cursor-wrap">
-                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button" data-beh-anim="press"><span class="ds-btn__label">Click Me</span></button>
-                    <span class="beh-cursor beh-cursor--press" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg></span>
-                  </div>
-                  <span class="beh-state">default</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="beh-row">
-              <div class="beh-info">
-                <h4><span class="beh-dot beh-dot--purple" aria-hidden="true"></span>Focus (Фокус)</h4>
-                <p>Визуальный маркер для навигации с клавиатуры (Tab). Никогда не убирайте outline без замены на другой стиль фокуса.</p>
-              </div>
-              <div class="beh-demo">
-                <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled beh-focus-ring" type="button"><span class="ds-btn__label">Focused Button</span></button>
-                <p class="beh-demo__caption">Focus ring styling</p>
-              </div>
-            </div>
-
+            <div class="beh-row"><div class="beh-info"><h4><span class="beh-dot beh-dot--blue"></span>Hover (наведение)</h4><p>Плавный переход фона (Filled: #f5f5f5; Outlined: рамка #9e9e9e).</p></div>              <div class="beh-demo"><p class="beh-demo__label">Animation Demo</p><div class="beh-demo__stage"><div class="ds-chips ds-chips--filled" style="cursor:pointer"><span class="ds-chips__label">Hover Me</span></div><span class="beh-state">default</span></div></div></div>
+            <div class="beh-row"><div class="beh-info"><h4><span class="beh-dot beh-dot--indigo"></span>Press / Active (нажатие)</h4><p>Мгновенная обратная связь: фон #e0e0e0.</p></div>              <div class="beh-demo"><p class="beh-demo__label">Animation Demo</p><div class="beh-demo__stage"><div class="ds-chips ds-chips--outlined" style="cursor:pointer"><span class="ds-chips__label">Click Me</span></div><span class="beh-state">default</span></div></div></div>
+            <div class="beh-row"><div class="beh-info"><h4><span class="beh-dot beh-dot--purple"></span>Focus (фокус)</h4><p>Синяя рамка #448aff — маркер клавиатурной навигации.</p></div>              <div class="beh-demo"><div class="ds-chips ds-chips--outlined beh-focus-ring" style="border:1px solid #448aff" tabindex="0"><span class="ds-chips__label">Focused Chip</span></div><p class="beh-demo__caption">Focus ring</p></div></div>
           </div>
         </section>
 
-        <section>
-          <div class="beh-block">
-            <h3>Интерактивный Loader</h3>
-            <div class="beh-loader">
-              <div class="beh-loader__text">
-                <p>Нажмите на кнопку справа, чтобы увидеть симуляцию загрузки. Состояние загрузки предотвращает повторную отправку формы и информирует пользователя о прогрессе.</p>
-              </div>
-              <div class="beh-loader__panel">
-                <div class="beh-demo__stage">
-                  <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled beh-loader__btn" id="beh-loader-btn" type="button"><span class="ds-btn__label">Save Changes</span></button>
-                  <p class="beh-demo__caption beh-loader__cap">Click to test loader</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <div class="beh-block">
-            <h3>Группировка</h3>
-            <div class="beh-group">
-              <div class="beh-group__card">
-                <h4>Горизонтальная</h4>
-                <div class="beh-group__h">
-                  <div class="ds-btn-group ds-btn-group--horizontal">
-                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button"><span class="ds-btn__label">Cancel</span></button>
-                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Confirm</span></button>
-                  </div>
-                </div>
-              </div>
-              <div class="beh-group__card">
-                <h4>Вертикальная</h4>
-                <div class="beh-group__v">
-                  <div class="ds-btn-group ds-btn-group--vertical">
-                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Sign In</span></button>
-                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--text" type="button"><span class="ds-btn__label">Create Account</span></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </div>
-
-      <!-- ===== ТОКЕНЫ ===== -->
-      <div class="comp-panel" id="tab-tokens">
+      </div>id="tab-tokens">
 
         <div class="comp-tabs comp-tabs--sub" role="tablist">
           <button class="comp-tab is-active" data-panel="tokens-variants" role="tab">Варианты</button>
