@@ -1,15 +1,16 @@
 <!-- ==========================================================================
   МАСТЕР-ШАБЛОН страницы компонента iiko DS.
-  Наполнен ПРИМЕРОМ (дефолтные значения — данные Button), как мастер в Figma.
+  УНИВЕРСАЛЬНЫЙ: компонент НЕ задан — вместо реального компонента здесь
+  «рыба»-плейсхолдер «Любой компонент ДС». Показывает, что в секции
+  вставляется любой компонент из дизайн-системы.
 
   КАК СОЗДАТЬ ИНСТАНС (страницу компонента X):
   1. Скопировать этот файл в <component>.html.
-  2. Заменить Мастер страница / мастер страница на имя компонента
-     (title, h1, заголовок панели свойств, подписи, вкладка Figma).
-  3. Заменить примерные данные Button (var BTN, матрица, токены, интерактив)
-     на данные компонента X — ТОЛЬКО 1:1 из Figma (Figma API / DS.json),
-     оформление/структуру не менять.
-  4. Подключить components/<component>.css в head (и убрать button.css/badge.css).
+  2. Заменить «Мастер страница» на имя компонента X
+     (title, h1, подписи).
+  3. Заменить каждый блок «Рыба: Любой компонент ДС» на данные компонента X
+     — ТОЛЬКО 1:1 из Figma (Figma API / DS.json), структуру не менять.
+  4. Подключить components/<component>.css в head (и убрать лишние компонентные css).
   5. Добавить страницу в sidebar.js.
 
   button.html — первый инстанс (эталон). Вкладка Figma — подвкладка «Токены».
@@ -25,9 +26,48 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="tokens.css?v=115">
-<link rel="stylesheet" href="components/button.css?v=115">
-<link rel="stylesheet" href="components/badge.css?v=115">
 <link rel="stylesheet" href="showcase.css?v=115">
+<style>
+  /* ===== «Рыба» — плейсхолдер «Любой компонент ДС» ===== */
+  .ds-fish {
+    border: 1px dashed #9E9E9E;
+    border-radius: 12px;
+    background: #FFFFFF;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    text-align: center;
+  }
+  .ds-fish__inner { max-width: 480px; }
+  .ds-fish__ic {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    border: 1px solid #E0E0E0;
+    background: #FAFAFA;
+    color: #9E9E9E;
+    margin: 0 auto 16px;
+  }
+  .ds-fish__title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333333;
+    margin: 0 0 8px;
+    line-height: 1.4;
+  }
+  .ds-fish__sub {
+    font-size: 14px;
+    color: #616161;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .ds-fish--small { min-height: 120px; padding: 24px; }
+</style>
 </head>
 <body>
 
@@ -62,205 +102,42 @@
 
         <div class="comp-panel is-active" id="tab-interactive">
 
-        <section>
-          <h2>Интерактивный компонент</h2>
-          <p class="desc">Настройте свойства кнопки и скопируйте код.</p>
+          <section>
+            <h2>Интерактивный компонент</h2>
+            <p class="desc">Настройте свойства компонента и скопируйте код.</p>
 
-          <div class="card">
-            <div class="interactive-wrap">
-              <div>
-                <div class="interactive-stage" id="stage">
-                  <div id="stage-btn-wrap"></div>
-                </div>
-
-                <div class="cc-title">Свойства компонента</div>
-
-                <div class="component-code" id="component-code">
-                  <div class="cc-head">
-                    <div class="cc-tabs" role="tablist">
-                      <button class="is-active" data-cc="html" role="tab">HTML</button>
-                      <button data-cc="css" role="tab">CSS</button>
-                      <button data-cc="tokens" role="tab">Tokens</button>
-                    </div>
-                  </div>
-                  <div class="po-title-row">
-                    <div class="po-title-wrap">
-                      <div class="po-title" id="po-title">HTML</div>
-                      <button class="cc-copy" id="cc-copy" type="button" title="Copy code" aria-label="Copy code">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-                      </button>
-                    </div>
-                    <div class="po-label" id="po-label">мастер страница / M / neutral / filled / default</div>
-                  </div>
-                  <div class="cc-panel is-active" id="cc-html"></div>
-                  <div class="cc-panel" id="cc-css"></div>
-                  <div class="cc-panel" id="cc-tokens">
-                    <div class="po-figure">
-                      <span class="pf-corner pf-c-tl"></span>
-                      <span class="pf-corner pf-c-tr"></span>
-                      <span class="pf-corner pf-c-bl"></span>
-                      <span class="pf-corner pf-c-br"></span>
-                      <div class="pf-card">
-                        <span class="pf-cap pf-cap--border">Border</span>
-                        <span class="pf-chip pf-r" id="pf-r-tl">8</span>
-                        <span class="pf-chip pf-r" id="pf-r-tr">8</span>
-                        <span class="pf-chip pf-r" id="pf-r-bl">8</span>
-                        <span class="pf-chip pf-r" id="pf-r-br">8</span>
-                        <span class="pf-chip pf-bw pf-bw--t" id="pf-bw-t">0</span>
-                        <span class="pf-chip pf-bw pf-bw--b" id="pf-bw-b">0</span>
-                        <span class="pf-chip pf-bw pf-bw--l" id="pf-bw-l">0</span>
-                        <span class="pf-chip pf-bw pf-bw--r" id="pf-bw-r">0</span>
-                        <div class="pf-inner">
-                          <span class="pf-cap pf-cap--padding">Padding</span>
-                          <span class="pf-chip pf-py pf-py--t" id="pf-py-t">8</span>
-                          <span class="pf-chip pf-py pf-py--b" id="pf-py-b">8</span>
-                          <span class="pf-chip pf-px pf-px--l" id="pf-px-l">12</span>
-                          <span class="pf-chip pf-px pf-px--r" id="pf-px-r">12</span>
-                          <span class="pf-labelbox"><span class="pf-labelbox__text">Label × 20</span></span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="po-code">
-                      <div class="insp-section">
-                        <div class="insp-title">Layout</div>
-                        <div class="insp-rows">
-                          <div class="insp-row"><span class="k">padding:</span><span class="v" id="po-pad-v"></span></div>
-                          <div class="insp-row"><span class="k">gap:</span><span class="v" id="po-gap-v"></span></div>
-                        </div>
-                      </div>
-                      <div class="insp-section">
-                        <div class="insp-title">Style</div>
-                        <div class="insp-rows">
-                          <div class="insp-row"><span class="k">border-radius:</span><span class="v" id="po-r-v"></span></div>
-                          <div class="insp-row"><span class="k">background:</span><span class="v" id="po-bg-v"></span></div>
-                          <div class="insp-row"><span class="k">box-shadow:</span><span class="v" id="po-sh-v"></span></div>
-                        </div>
-                      </div>
-                      <div class="insp-section">
-                        <div class="insp-title">Colors</div>
-                        <div class="insp-rows">
-                          <div class="insp-row"><span class="k">background:</span><span class="v" id="po-cbg-v"></span></div>
-                          <div class="insp-row"><span class="k">color:</span><span class="v" id="po-ctl-v"></span></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <div class="card">
+              <div class="ds-fish">
+                <div class="ds-fish__inner">
+                  <span class="ds-fish__ic"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/></svg></span>
+                  <p class="ds-fish__title">Любой компонент ДС</p>
+                  <p class="ds-fish__sub">Здесь будет интерактивный компонент из дизайн-системы — с настройкой свойств, панелью «Свойства компонента» и кодом HTML / CSS / Tokens.</p>
                 </div>
               </div>
-              <div class="props-panel" id="props-panel">
-                <div class="props-title">
-                  <h3>Мастер страница</h3>
-                  <p class="props-caption">Настройки</p>
-                </div>
-                  <div class="control-row">
-                    <span class="control-label">Dark Mode</span>
-                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-dark"><span class="track"></span><span class="thumb"></span></span></label>
-                  </div>
-                  <div class="props-divider"></div>
-                  <div class="control-row">
-                    <span class="control-label">Size</span>
-                    <div class="ds-select" data-sel="size" data-value="m">
-                      <button type="button" class="ds-select__trigger" aria-expanded="false">
-                        <span class="ds-select__value">M</span>
-                        <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
-                      </button>
-                      <div class="ds-select__menu" role="listbox">
-                        <div class="ds-select__item is-selected" data-value="m" role="option">M<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="s" role="option">S<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="xs" role="option">XS<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="control-row">
-                    <span class="control-label">Style</span>
-                    <div class="ds-select" data-sel="style" data-value="neutral">
-                      <button type="button" class="ds-select__trigger" aria-expanded="false">
-                        <span class="ds-select__value">Neutral</span>
-                        <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
-                      </button>
-                      <div class="ds-select__menu" role="listbox">
-                        <div class="ds-select__item is-selected" data-value="neutral" role="option">Neutral<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="accent" role="option">Accent<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="positive" role="option">Positive<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="warning" role="option">Warning<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="negative" role="option">Negative<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="disable" role="option">Disable<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="control-row">
-                    <span class="control-label">Type</span>
-                    <div class="ds-select" data-sel="type" data-value="filled">
-                      <button type="button" class="ds-select__trigger" aria-expanded="false">
-                        <span class="ds-select__value">Filled</span>
-                        <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
-                      </button>
-                      <div class="ds-select__menu" role="listbox">
-                        <div class="ds-select__item is-selected" data-value="filled" role="option">Filled<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="outlined" role="option">Outlined<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="text" role="option">Text<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="control-row">
-                    <span class="control-label">State</span>
-                    <div class="ds-select" data-sel="state" data-value="default">
-                      <button type="button" class="ds-select__trigger" aria-expanded="false">
-                        <span class="ds-select__value">Default</span>
-                        <svg class="ds-select__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
-                      </button>
-                      <div class="ds-select__menu" role="listbox">
-                        <div class="ds-select__item is-selected" data-value="default" role="option">Default<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="hover" role="option">Hover<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="press" role="option">Press<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="disable" role="option">Disable<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                        <div class="ds-select__item" data-value="loading" role="option">Loading<span class="ds-select__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="props-divider"></div>
-                  <div class="control-row">
-                    <span class="control-label">Element left</span>
-                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-icon-left" checked><span class="track"></span><span class="thumb"></span></span></label>
-                  </div>
-                  <div class="control-row">
-                    <span class="control-label">Element right</span>
-                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-icon-right" checked><span class="track"></span><span class="thumb"></span></span></label>
-                  </div>
-                  <div class="control-row">
-                    <span class="control-label">Text</span>
-                    <label class="control-switch"><span class="toggle"><input type="checkbox" id="ctl-text" checked><span class="track"></span><span class="thumb"></span></span></label>
-                  </div>
-                  <div class="control-row">
-                    <label class="control-label" for="ctl-textval">Button text</label>
-                    <input class="control-input" id="ctl-textval" type="text" value="Button">
-                  </div>
-                </div>
             </div>
-          </div>
-        </section>
+          </section>
 
         </div>
 
         <div class="comp-panel" id="tab-variants">
 
-        <section>
-          <p class="matrix-caption">Интерактивная матрица</p>
-          <p class="desc">Нажмите на любую кнопку в таблице ниже, чтобы увидеть подробную информацию о используемых дизайн-токенах для этого состояния.</p>
-          <h2>Варианты компонента</h2>
-          <div class="card">
-            <div class="matrix-layout">
-              <div id="matrix-root"></div>
+          <section>
+            <h2>Варианты компонента</h2>
+            <p class="desc">Матрица вариантов компонента из дизайн-системы.</p>
 
-              <div class="matrix-insp">
-              <div class="cc-title">Свойства компонента</div>
-              <div class="component-code component-code--inspector" id="var-code"></div>
+            <div class="card">
+              <div class="ds-fish">
+                <div class="ds-fish__inner">
+                  <span class="ds-fish__ic"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg></span>
+                  <p class="ds-fish__title">Любой компонент ДС</p>
+                  <p class="ds-fish__sub">Здесь будет матрица вариантов компонента — все комбинации 1:1 из Figma.</p>
+                </div>
+              </div>
             </div>
-            </div>
-          </div>
-        </section>
+          </section>
 
         </div>
+
       </div>
 
       <!-- ===== ОПИСАНИЕ ===== -->
@@ -268,108 +145,15 @@
 
         <section>
           <h2>Описание</h2>
-          <p class="desc">Button — это фундаментальный компонент интерфейса, инициирующий действие. Кнопки сообщают пользователям, что произойдёт после нажатия, и направляют их через сценарии использования.</p>
-        </section>
-
-        <section>
-          <h2>Варианты</h2>
+          <p class="desc">Здесь будет описание компонента дизайн-системы.</p>
 
           <div class="card">
-            <h3>Neutral variant</h3>
-            <p class="desc">Нейтральная кнопка имеет низкий визуальный вес и предназначена для второстепенных действий. Она часто используется в паре с другими типами кнопок (например, для действия «Отмена») или для опций, которые не требуют активного привлечения внимания. Старайтесь не использовать её как единственную кнопку в группе, если это не контекст навигации.</p>
-            <div class="row">
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--filled">Action</button>
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">Action</button>
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--text">Action</button>
+            <div class="ds-fish ds-fish--small">
+              <div class="ds-fish__inner">
+                <p class="ds-fish__title">Любой компонент ДС</p>
+                <p class="ds-fish__sub">Описание, варианты, примеры использования и рекомендации компонента.</p>
+              </div>
             </div>
-          </div>
-
-          <div class="card">
-            <h3>Accent variant</h3>
-            <p class="desc">Основная кнопка сообщает о высоком приоритете и предназначена для ключевых действий в интерфейсе. Не используйте более одной основной кнопки в одной области просмотра. Они выделяют самые важные действия (например, «Сохранить», «Опубликовать») и устанавливают чёткую визуальную иерархию.</p>
-            <div class="row">
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">Action</button>
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined">Action</button>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Positive variant</h3>
-            <p class="desc">Позитивная кнопка используется для действий среднего приоритета с благоприятным исходом. Она подходит для ситуаций, когда действие важно, но не является основным целевым действием страницы. Также может использоваться для позитивных альтернативных действий, чтобы отделить их от основного потока.</p>
-            <div class="row">
-              <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--filled">Action</button>
-              <button class="ds-btn ds-btn--m ds-btn--positive ds-btn--outlined">Action</button>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Warning variant</h3>
-            <p class="desc">Предупреждающий вариант используется для действий, которые требуют осторожности, но не являются разрушительными. Оранжевый цвет привлекает внимание пользователя, сигнализируя о необходимости проверки перед продолжением (например, «Выйти из аккаунта», «Изменить статус»).</p>
-            <div class="row">
-              <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--filled">Action</button>
-              <button class="ds-btn ds-btn--m ds-btn--warning ds-btn--outlined">Action</button>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Negative variant</h3>
-            <p class="desc">Этот вариант предназначен для акцентирования внимания на разрушительных действиях или действиях с негативными последствиями (например, «Удалить», «Заблокировать»). Красный цвет служит сигналом опасности, заставляя пользователя задуматься перед нажатием. Используйте этот стиль экономно.</p>
-            <div class="row">
-              <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--filled">Action</button>
-              <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--outlined">Action</button>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h2>Примеры использования</h2>
-
-          <div class="card">
-            <h3>С иконками</h3>
-            <p class="desc">Иконки усиливают смысл действия. Ставьте иконку слева для действий и справа для навигации.</p>
-            <div class="row">
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
-                <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
-                <span class="ds-btn__label">Create New</span>
-              </button>
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
-                <span class="ds-btn__label">Next Step</span>
-                <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Опасные действия</h3>
-            <p class="desc">Используйте стиль <code>Negative</code> для действий, которые необратимы.</p>
-            <div class="row">
-              <button class="ds-btn ds-btn--m ds-btn--negative ds-btn--filled">
-                <span class="ds-btn__icon material-icons" aria-hidden="true">delete</span>
-                <span class="ds-btn__label">Delete Account</span>
-              </button>
-              <button class="ds-btn ds-btn--m ds-btn--neutral ds-btn--outlined">
-                <span class="ds-btn__label">Cancel</span>
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h2>Рекомендации</h2>
-
-          <div class="card">
-            <h3>✓ Делайте</h3>
-            <ul>
-              <li>Используйте глаголы в названиях (Сохранить, Отправить).</li>
-              <li>Используйте одну Accent-кнопку на группу действий.</li>
-              <li>Соблюдайте отступы между кнопками (минимум 8px).</li>
-            </ul>
-            <h3 style="margin-top:20px">✕ Не делайте</h3>
-            <ul>
-              <li>Не используйте слишком длинные названия.</li>
-              <li>Не ставьте две Accent-кнопки рядом.</li>
-              <li>Не используйте кнопку для навигации, если это выглядит как ссылка.</li>
-            </ul>
           </div>
         </section>
 
@@ -378,131 +162,36 @@
       <!-- ===== АНАТОМИЯ ===== -->
       <div class="comp-panel" id="tab-anatomy">
 
-        <div class="anatomy">
-<div class="anatomy-sec"><h3>Accent / Filled / Default</h3><div class="anatomy-sub"><h4>Horizontal Padding</h4><div class="anatomy-stage"><div class="anatomy-cell"><span class="anatomy-cell__name">M</span><button class="an-btn an-btn--m an-btn--accent"><span>Button</span></button><span class="an-pad" style="left:0;top:0;width:12px;height:100%"></span><span class="an-measure-h" style="left:0;width:12px"><span class="an-line"></span><span>12px</span></span><span class="an-pad" style="right:0;top:0;width:12px;height:100%"></span><span class="an-measure-h" style="right:0;width:12px"><span class="an-line"></span><span>12px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">S</span><button class="an-btn an-btn--s an-btn--accent"><span>Button</span></button><span class="an-pad" style="left:0;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="left:0;width:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="right:0;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="right:0;width:8px"><span class="an-line"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">XS</span><button class="an-btn an-btn--xs an-btn--accent"><span>Button</span></button><span class="an-pad" style="left:0;top:0;width:6px;height:100%"></span><span class="an-measure-h" style="left:0;width:6px"><span class="an-line"></span><span>6px</span></span><span class="an-pad" style="right:0;top:0;width:6px;height:100%"></span><span class="an-measure-h" style="right:0;width:6px"><span class="an-line"></span><span>6px</span></span></div></div><div class="an-code"><div class="an-code-row an-code-head"><span class="an-code-tag">Размер</span><span class="an-code-head-val">Значение</span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Padding Left</span><span class="an-code-colon">:</span> <span class="an-code-val">12px</span></span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Padding Right</span><span class="an-code-colon">:</span> <span class="an-code-val">12px</span></span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Text Style</span><span class="an-code-colon">:</span> <span class="an-code-val">Body · S · (14)/Normal/Medium · 14/20</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Padding Left</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Padding Right</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Text Style</span><span class="an-code-colon">:</span> <span class="an-code-val">Body · S · (14)/Normal/Medium · 14/20</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Padding Left</span><span class="an-code-colon">:</span> <span class="an-code-val">6px</span></span></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Padding Right</span><span class="an-code-colon">:</span> <span class="an-code-val">6px</span></span></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Text Style</span><span class="an-code-colon">:</span> <span class="an-code-val">Caption · L · (12)/Normal/Medium · 12/16</span></span></div></div></div><div class="anatomy-sub"><h4>Vertical Padding &amp; Height</h4><div class="anatomy-stage"><div class="anatomy-cell"><span class="anatomy-cell__name">M</span><button class="an-btn an-btn--m an-btn--accent"><span>Button</span></button><span class="an-measure-v" style="left:-48px;top:0;height:36px"><span>36px</span><span class="an-line"></span></span><span class="an-pad" style="left:0;top:0;width:100%;height:8px"></span><span class="an-measure-v" style="right:-48px;top:0;height:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="left:0;bottom:0;width:100%;height:8px"></span><span class="an-measure-v" style="right:-48px;bottom:0;height:8px"><span class="an-line"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">S</span><button class="an-btn an-btn--s an-btn--accent"><span>Button</span></button><span class="an-measure-v" style="left:-48px;top:0;height:28px"><span>28px</span><span class="an-line"></span></span><span class="an-pad" style="left:0;top:0;width:100%;height:4px"></span><span class="an-measure-v" style="right:-48px;top:0;height:4px"><span class="an-line"></span><span>4px</span></span><span class="an-pad" style="left:0;bottom:0;width:100%;height:4px"></span><span class="an-measure-v" style="right:-48px;bottom:0;height:4px"><span class="an-line"></span><span>4px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">XS</span><button class="an-btn an-btn--xs an-btn--accent"><span>Button</span></button><span class="an-measure-v" style="left:-48px;top:0;height:24px"><span>24px</span><span class="an-line"></span></span><span class="an-pad" style="left:0;top:0;width:100%;height:4px"></span><span class="an-measure-v" style="right:-48px;top:0;height:4px"><span class="an-line"></span><span>4px</span></span><span class="an-pad" style="left:0;bottom:0;width:100%;height:4px"></span><span class="an-measure-v" style="right:-48px;bottom:0;height:4px"><span class="an-line"></span><span>4px</span></span></div></div><div class="an-code"><div class="an-code-row an-code-head"><span class="an-code-tag">Размер</span><span class="an-code-head-val">Значение</span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Padding Top</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Padding Bottom</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Height</span><span class="an-code-colon">:</span> <span class="an-code-val">36px</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Padding Top</span><span class="an-code-colon">:</span> <span class="an-code-val">4px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Padding Bottom</span><span class="an-code-colon">:</span> <span class="an-code-val">4px</span></span></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Height</span><span class="an-code-colon">:</span> <span class="an-code-val">28px</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Padding Top</span><span class="an-code-colon">:</span> <span class="an-code-val">4px</span></span></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Padding Bottom</span><span class="an-code-colon">:</span> <span class="an-code-val">4px</span></span></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Height</span><span class="an-code-colon">:</span> <span class="an-code-val">24px</span></span></div></div></div><div class="anatomy-sub"><h4>Border Radius</h4><div class="anatomy-stage"><div class="anatomy-cell"><span class="anatomy-cell__name">M</span><button class="an-btn an-btn--m an-btn--accent"><span>Button</span></button><span class="an-radius"><span class="an-radius-corner"></span><span class="an-radius-tail"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">S</span><button class="an-btn an-btn--s an-btn--accent"><span>Button</span></button><span class="an-radius"><span class="an-radius-corner"></span><span class="an-radius-tail"></span><span>8px</span></span></div><div class="anatomy-cell"><span class="anatomy-cell__name">XS</span><button class="an-btn an-btn--xs an-btn--accent"><span>Button</span></button><span class="an-radius"><span class="an-radius-corner"></span><span class="an-radius-tail"></span><span>8px</span></span></div></div><div class="an-code"><div class="an-code-row an-code-head"><span class="an-code-tag">Размер</span><span class="an-code-head-val">Значение</span></div><div class="an-code-row"><span class="an-code-tag">M</span><span><span class="an-code-prop">Border Radius</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">S</span><span><span class="an-code-prop">Border Radius</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div><div class="an-code-divider"></div><div class="an-code-row"><span class="an-code-tag">XS</span><span><span class="an-code-prop">Border Radius</span><span class="an-code-colon">:</span> <span class="an-code-val">8px</span></span></div></div></div><div class="anatomy-sub"><h4>Accent / Icon</h4><div class="anatomy-stage anatomy-stage--tall"><div class="anatomy-center"><button class="an-btn an-btn--m an-btn--accent"><span class="an-btn__ic material-icons" aria-hidden="true">add</span><span>Button</span><span class="an-btn__ic material-icons" aria-hidden="true">add</span></button><span class="an-pad" style="left:0;top:0;width:12px;height:100%"></span><span class="an-measure-h" style="left:0;width:12px"><span class="an-line"></span><span>12px</span></span><span class="an-pad" style="left:32px;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="left:32px;width:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="right:32px;top:0;width:8px;height:100%"></span><span class="an-measure-h" style="right:32px;width:8px"><span class="an-line"></span><span>8px</span></span><span class="an-pad" style="right:0;top:0;width:12px;height:100%"></span><span class="an-measure-h" style="right:0;width:12px"><span class="an-line"></span><span>12px</span></span><span class="an-num" style="left:22px;transform:translateX(-50%)"><span class="an-num-dot">1</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span><span class="an-num" style="left:50%;transform:translateX(-50%)"><span class="an-num-dot">2</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span><span class="an-num" style="right:22px;transform:translateX(-50%)"><span class="an-num-dot">3</span><span class="an-num-stem"></span><span class="an-num-tip"></span></span></div></div><div class="an-legend"><p><b>1.</b> Иконка слева (может не использоваться)</p><p><b>2.</b> Label: действие кнопки</p><p><b>3.</b> Иконка справа (может не использоваться)</p></div></div></div>
-</div>
+        <section>
+          <h2>Анатомия</h2>
+          <p class="desc">Здесь будет анатомия компонента дизайн-системы — размеры, отступы, скругления, замеры.</p>
+
+          <div class="card">
+            <div class="ds-fish">
+              <div class="ds-fish__inner">
+                <span class="ds-fish__ic"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg></span>
+                <p class="ds-fish__title">Любой компонент ДС</p>
+                <p class="ds-fish__sub">Горизонтальные/вертикальные отступы, высота, скругление, замеры компонента.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
       </div>
 
-      <!-- ===== ПОВЕДЕНИЕ (точная копия figma.site; кнопки — наши токены) ===== -->
+      <!-- ===== ПОВЕДЕНИЕ ===== -->
       <div class="comp-panel" id="tab-behavior">
 
-        <section class="beh-intro">
-          <p class="beh-lead">Кнопки должны обеспечивать чёткую обратную связь. Ниже представлены реальные интерактивные примеры и демонстрации анимаций перехода между состояниями.</p>
-        </section>
-
         <section>
-          <div class="beh-block">
-            <div class="beh-head">
-              <h3>Интерактивная песочница</h3>
-              <span class="beh-badge">Try it yourself</span>
-            </div>
-            <p class="beh-sub">Попробуйте навести курсор и нажать на кнопки ниже. Они реагируют на ваши действия, демонстрируя реальную скорость анимации и смену цветов.</p>
-            <div class="beh-sandbox">
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Primary Button</span></button>
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button"><span class="ds-btn__label">Secondary Button</span></button>
-              <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--text" type="button"><span class="ds-btn__icon material-icons" aria-hidden="true">add</span><span class="ds-btn__label">Action</span></button>
-            </div>
-          </div>
-        </section>
+          <h2>Поведение</h2>
+          <p class="desc">Здесь будет поведение компонента дизайн-системы — интерактивные примеры, состояния, анимации.</p>
 
-        <section>
-          <div class="beh-states">
-
-            <div class="beh-row">
-              <div class="beh-info">
-                <h4><span class="beh-dot beh-dot--blue" aria-hidden="true"></span>Hover (Наведение)</h4>
-                <p>Состояние Hover показывает, что элемент интерактивен. Плавный переход (transition) важен для ощущения качества интерфейса. Обычно длится 150-200ms.</p>
-                <ul>
-                  <li>Изменяется фон (становится темнее/светлее).</li>
-                  <li>Курсор меняется на pointer.</li>
-                </ul>
-              </div>
-              <div class="beh-demo">
-                <p class="beh-demo__label">Animation Demo</p>
-                <div class="beh-demo__stage">
-                  <div class="beh-cursor-wrap">
-                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button" data-beh-anim="hover"><span class="ds-btn__label">Hover Me</span></button>
-                    <span class="beh-cursor beh-cursor--hover" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg></span>
-                  </div>
-                  <span class="beh-state">default</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="beh-row">
-              <div class="beh-info">
-                <h4><span class="beh-dot beh-dot--indigo" aria-hidden="true"></span>Press / Active (Нажатие)</h4>
-                <p>Момент клика. Даёт немедленную тактильную обратную связь. Переход в это состояние должен быть мгновенным или очень быстрым (50-100ms).</p>
-                <ul>
-                  <li>Цвет становится ещё более насыщенным.</li>
-                  <li>Может меняться тень или масштаб (scale).</li>
-                </ul>
-              </div>
-              <div class="beh-demo">
-                <p class="beh-demo__label">Animation Demo</p>
-                <div class="beh-demo__stage">
-                  <div class="beh-cursor-wrap">
-                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button" data-beh-anim="press"><span class="ds-btn__label">Click Me</span></button>
-                    <span class="beh-cursor beh-cursor--press" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg></span>
-                  </div>
-                  <span class="beh-state">default</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="beh-row">
-              <div class="beh-info">
-                <h4><span class="beh-dot beh-dot--purple" aria-hidden="true"></span>Focus (Фокус)</h4>
-                <p>Визуальный маркер для навигации с клавиатуры (Tab). Никогда не убирайте outline без замены на другой стиль фокуса.</p>
-              </div>
-              <div class="beh-demo">
-                <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled beh-focus-ring" type="button"><span class="ds-btn__label">Focused Button</span></button>
-                <p class="beh-demo__caption">Focus ring styling</p>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <section>
-          <div class="beh-block">
-            <h3>Интерактивный Loader</h3>
-            <div class="beh-loader">
-              <div class="beh-loader__text">
-                <p>Нажмите на кнопку справа, чтобы увидеть симуляцию загрузки. Состояние загрузки предотвращает повторную отправку формы и информирует пользователя о прогрессе.</p>
-              </div>
-              <div class="beh-loader__panel">
-                <div class="beh-demo__stage">
-                  <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled beh-loader__btn" id="beh-loader-btn" type="button"><span class="ds-btn__label">Save Changes</span></button>
-                  <p class="beh-demo__caption beh-loader__cap">Click to test loader</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <div class="beh-block">
-            <h3>Группировка</h3>
-            <div class="beh-group">
-              <div class="beh-group__card">
-                <h4>Горизонтальная</h4>
-                <div class="beh-group__h">
-                  <div class="ds-btn-group ds-btn-group--horizontal">
-                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--outlined" type="button"><span class="ds-btn__label">Cancel</span></button>
-                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Confirm</span></button>
-                  </div>
-                </div>
-              </div>
-              <div class="beh-group__card">
-                <h4>Вертикальная</h4>
-                <div class="beh-group__v">
-                  <div class="ds-btn-group ds-btn-group--vertical">
-                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled" type="button"><span class="ds-btn__label">Sign In</span></button>
-                    <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--text" type="button"><span class="ds-btn__label">Create Account</span></button>
-                  </div>
-                </div>
+          <div class="card">
+            <div class="ds-fish">
+              <div class="ds-fish__inner">
+                <span class="ds-fish__ic"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span>
+                <p class="ds-fish__title">Любой компонент ДС</p>
+                <p class="ds-fish__sub">Интерактивная песочница, состояния (hover / press / focus), группы и анимации компонента.</p>
               </div>
             </div>
           </div>
@@ -522,21 +211,13 @@
         <div class="comp-panel is-active" id="tokens-variants">
           <section>
             <h2>Токены вариантов</h2>
-            <div class="token-notation">
-              <p>[style] = accent, neutral, positive, negative, warning, disable</p>
-              <p>[type] = filled, outlined, text</p>
-              <p>[state] = default, hover, press, disable</p>
-            </div>
-            <div class="token-examples">
-              <div class="token-example-row"><span>Пример итогового токена:</span><code>button.accent.filled.bg.color.default</code></div>
-              <div class="token-example-row"><span>Пример Figma-переменной:</span><code>Button/Accent/Filled/Default/Background</code></div>
-              <div class="token-example-row"><span>Пример CSS-переменной:</span><code>--ds-color-button-accent-default</code></div>
-            </div>
-
-            <div class="comp-tabs comp-tabs--pills" id="style-tabs" role="tablist"></div>
-
-            <div class="token-card">
-              <div id="token-tables"></div>
+            <div class="card">
+              <div class="ds-fish ds-fish--small">
+                <div class="ds-fish__inner">
+                  <p class="ds-fish__title">Любой компонент ДС</p>
+                  <p class="ds-fish__sub">Таблица токенов вариантов компонента — по стилям / типам / состояниям.</p>
+                </div>
+              </div>
             </div>
           </section>
         </div>
@@ -544,8 +225,13 @@
         <div class="comp-panel" id="tokens-sizes">
           <section>
             <h2>Токены размеров</h2>
-            <div class="token-card">
-              <table class="token-table" id="sizes-table"></table>
+            <div class="card">
+              <div class="ds-fish ds-fish--small">
+                <div class="ds-fish__inner">
+                  <p class="ds-fish__title">Любой компонент ДС</p>
+                  <p class="ds-fish__sub">Таблица токенов размеров компонента.</p>
+                </div>
+              </div>
             </div>
           </section>
         </div>
@@ -553,13 +239,19 @@
         <div class="comp-panel" id="tokens-figma">
           <section>
             <h2>Токены Мастер страница — переменные Figma</h2>
-            <div class="token-card">
-              <div id="figma-table"></div>
+            <div class="card">
+              <div class="ds-fish ds-fish--small">
+                <div class="ds-fish__inner">
+                  <p class="ds-fish__title">Любой компонент ДС</p>
+                  <p class="ds-fish__sub">Дерево переменных Figma компонента в иерархии переменных.</p>
+                </div>
+              </div>
             </div>
           </section>
         </div>
 
       </div>
+
     </main>
 
   </div>
@@ -568,70 +260,7 @@
 
 <script>
 /* ============================================================
-   Данные токенов Мастер страница — ПРИМЕР: Button (заменить на данные компонента из Figma)
-   ============================================================ */
-var BTN = {
-  sizes: {
-    xs: { label: 'XS', height: 24, minWidth: 24, spacing: 4, pad: 6, radius: 'var(--ds-radius-2x)', font: 12 },
-    s:  { label: 'S',  height: 28, minWidth: 28, spacing: 4, pad: 8, radius: 'var(--ds-radius-2x)', font: 14 },
-    m:  { label: 'M',  height: 36, minWidth: 36, spacing: 8, pad: 12, radius: 'var(--ds-radius-2x)', font: 14 }
-  },
-  styles: {
-    accent:   { label: 'Accent' },
-    neutral:  { label: 'Neutral' },
-    positive: { label: 'Positive' },
-    negative: { label: 'Negative' },
-    warning:  { label: 'Warning' },
-    disable:  { label: 'Disable' }
-  },
-  // [style][type][state] → {bg, border, label}
-  colors: {
-    accent: {
-      filled:   { default: {bg:'#448AFF', border:'transparent', label:'#FFFFFF'}, hover: {bg:'#3969D5', border:'transparent', label:'#FFFFFF'}, press: {bg:'#2651B5', border:'transparent', label:'#FFFFFF'}, disable:{bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'} },
-      outlined: { default: {bg:'#FFFFFF', border:'#448AFF', label:'#448AFF'}, hover: {bg:'#F5F9FF', border:'#448AFF', label:'#448AFF'}, press: {bg:'#E8F0FF', border:'#448AFF', label:'#448AFF'}, disable:{bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'} },
-      text:     { default: {bg:'#FFFFFF', border:'transparent', label:'#448AFF'}, hover: {bg:'#F5F9FF', border:'transparent', label:'#448AFF'}, press: {bg:'#E8F0FF', border:'transparent', label:'#448AFF'}, disable:{bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'} }
-    },
-    neutral: {
-      filled:   { default: {bg:'#FFFFFF', border:'transparent', label:'#333333'}, hover: {bg:'#FAFAFA', border:'transparent', label:'#333333'}, press: {bg:'#EBEBEB', border:'transparent', label:'#333333'}, disable:{bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'} },
-      outlined: { default: {bg:'#FFFFFF', border:'#E0E0E0', label:'#333333'}, hover: {bg:'#FAFAFA', border:'#E0E0E0', label:'#333333'}, press: {bg:'#EBEBEB', border:'#E0E0E0', label:'#333333'}, disable:{bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'} },
-      text:     { default: {bg:'#FFFFFF', border:'transparent', label:'#333333'}, hover: {bg:'#FAFAFA', border:'transparent', label:'#333333'}, press: {bg:'#EBEBEB', border:'transparent', label:'#333333'}, disable:{bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'} }
-    },
-    positive: {
-      filled:   { default: {bg:'#14B456', border:'transparent', label:'#FFFFFF'}, hover: {bg:'#119C34', border:'transparent', label:'#FFFFFF'}, press: {bg:'#0F852C', border:'transparent', label:'#FFFFFF'}, disable:{bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'} },
-      outlined: { default: {bg:'#FFFFFF', border:'#14B456', label:'#14B456'}, hover: {bg:'#F3FCF7', border:'#14B456', label:'#14B456'}, press: {bg:'#E0F8EA', border:'#14B456', label:'#14B456'}, disable:{bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'} },
-      text:     { default: {bg:'#FFFFFF', border:'transparent', label:'#14B456'}, hover: {bg:'#F3FCF7', border:'transparent', label:'#14B456'}, press: {bg:'#E0F8EA', border:'transparent', label:'#14B456'}, disable:{bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'} }
-    },
-    negative: {
-      filled:   { default: {bg:'#FF5252', border:'transparent', label:'#FFFFFF'}, hover: {bg:'#F4372F', border:'transparent', label:'#FFFFFF'}, press: {bg:'#DE1A12', border:'transparent', label:'#FFFFFF'}, disable:{bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'} },
-      outlined: { default: {bg:'#FFFFFF', border:'#FF5252', label:'#FF5252'}, hover: {bg:'#FFF8F8', border:'#FF5252', label:'#FF5252'}, press: {bg:'#FFE5E5', border:'#FF5252', label:'#FF5252'}, disable:{bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'} },
-      text:     { default: {bg:'#FFFFFF', border:'transparent', label:'#FF5252'}, hover: {bg:'#FFF8F8', border:'transparent', label:'#FF5252'}, press: {bg:'#FFE5E5', border:'transparent', label:'#FF5252'}, disable:{bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'} }
-    },
-    warning: {
-      filled:   { default: {bg:'#FFAB40', border:'transparent', label:'#FFFFFF'}, hover: {bg:'#FE8C06', border:'transparent', label:'#FFFFFF'}, press: {bg:'#EA7806', border:'transparent', label:'#FFFFFF'}, disable:{bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'} },
-      outlined: { default: {bg:'#FFFFFF', border:'#FFAB40', label:'#EA7806'}, hover: {bg:'#FFFCF8', border:'#FFAB40', label:'#EA7806'}, press: {bg:'#FFF4E5', border:'#FFAB40', label:'#EA7806'}, disable:{bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'} },
-      text:     { default: {bg:'#FFFFFF', border:'transparent', label:'#EA7806'}, hover: {bg:'#FFFCF8', border:'transparent', label:'#EA7806'}, press: {bg:'#FFF4E5', border:'transparent', label:'#EA7806'}, disable:{bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'} }
-    },
-    disable: {
-      filled:   { default: {bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'}, hover: {bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'}, press: {bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'}, disable:{bg:'#EBEBEB', border:'transparent', label:'#9E9E9E'} },
-      outlined: { default: {bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'}, hover: {bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'}, press: {bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'}, disable:{bg:'#FFFFFF', border:'#EBEBEB', label:'#9E9E9E'} },
-      text:     { default: {bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'}, hover: {bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'}, press: {bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'}, disable:{bg:'#FFFFFF', border:'transparent', label:'#9E9E9E'} }
-    }
-  },
-  // CSS-переменные для таблицы «Варианты»
-  vars: function (style, type, state) {
-    var s = style === 'disable' ? 'neutral' : style;
-    var v = '--ds-color-button-' + s;
-    var lite = type !== 'filled';
-    var st = state;
-    if (st === 'loading') st = 'default';
-    if (lite) v += '-lite';
-    if (st === 'disable') return { bg: '--ds-color-button-neutral-disable', border: '--ds-color-button-neutral-disable', label: '--ds-color-text-disable' };
-    return { bg: v + '-' + st, border: v + '-' + st, label: lite ? v + '-' + st : '--ds-color-text-inversive' };
-  }
-};
-
-/* ============================================================
-   Вкладки страницы
+   Переключение вкладок страницы (универсальное)
    ============================================================ */
 document.querySelectorAll('.comp-tab[data-panel]').forEach(function (tab) {
   tab.addEventListener('click', function () {
@@ -654,1287 +283,6 @@ document.querySelectorAll('.comp-tab[data-panel]').forEach(function (tab) {
     chain.forEach(function (p) { p.classList.add('is-active'); });
   });
 });
-
-// HTML-блок под превью: код с номерами строк и подсветкой тегов (как CSS-вкладка инспектора)
-function renderHtml(lines) {
-  var nums = lines.map(function (_, i) { return '<span>' + (i + 1) + '</span>'; }).join('');
-  var code = lines.map(function (line) {
-    var esc = line.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    // атрибуты — через плейсхолдеры, чтобы не ломать последующие замены
-    var parts = [];
-    esc = esc.replace(/([\w-]+)="([^"]*)"/g, function (m, a, v) {
-      parts.push('<span class="c-attr">' + a + '</span>="<span class="c-str">' + v + '</span>"');
-      return '\u0001' + (parts.length - 1) + '\u0002';
-    });
-    esc = esc.replace(/&lt;(\/?)([\w-]+)/g, '<span class="c-tag">&lt;$1$2</span>');
-    esc = esc.replace(/(&gt;)/g, '<span class="c-tag">&gt;</span>');
-    esc = esc.replace(/\u0001(\d+)\u0002/g, function (m, i) { return parts[+i]; });
-    return '<div>' + esc + '</div>';
-  }).join('');
-  return '<div class="po-css__row"><div class="po-css__nums">' + nums + '</div><div class="po-css__code">' + code + '</div></div>';
-}
-
-// копия панели «Свойства компонента» из «Интерактивного компонента» (1:1, id → vc-*)
-(function clonePropsPanel() {
-  var src = document.getElementById('component-code');
-  var dst = document.getElementById('var-code');
-  if (!src || !dst) return;
-  dst.innerHTML = src.innerHTML;
-  // id: cc-*/po-*/pf-* → vc-*
-  dst.querySelectorAll('[id]').forEach(function (el) {
-    var id = el.id;
-    if (id.indexOf('cc-') === 0) el.id = 'vc-' + id.slice(3);
-    else if (id.indexOf('po-') === 0) el.id = 'vc-' + id.slice(3);
-    else if (id.indexOf('pf-') === 0) el.id = 'vc-' + id.slice(3);
-  });
-  // вкладки: data-cc → data-vc
-  dst.querySelectorAll('[data-cc]').forEach(function (el) {
-    el.dataset.vc = el.dataset.cc;
-    delete el.dataset.cc;
-  });
-  // Label × N (в оригинале без id) — нужен для обновления по размерам
-  var lt = dst.querySelector('.pf-labelbox__text');
-  if (lt) lt.id = 'vc-label-text';
-  // html-вкладка активна по умолчанию
-  dst.querySelectorAll('.cc-panel').forEach(function (p, i) { p.classList.toggle('is-active', i === 0); });
-})();
-
-/* ============================================================
-   Интерактивный компонент
-   ============================================================ */
-function renderStage() {
-  var size = selVal('size');
-  var style = selVal('style');
-  var type = selVal('type');
-  var state = selVal('state');
-  var iconL = document.getElementById('ctl-icon-left').checked;
-  var iconR = document.getElementById('ctl-icon-right').checked;
-  var showText = document.getElementById('ctl-text').checked;
-  var text = document.getElementById('ctl-textval').value || 'Button';
-  var dark = document.getElementById('ctl-dark').checked;
-
-  var colors = BTN.colors[style][type][state] || BTN.colors[style][type]['default'];
-  var cls = 'ds-btn ds-btn--' + size + ' ds-btn--' + style + ' ds-btn--' + type;
-  var styleAttr = 'background:' + colors.bg + ';border-color:' + colors.border + ';color:' + colors.label + ';';
-  if (state !== 'default' && state !== 'disable' && state !== 'loading') styleAttr += 'cursor:default;';
-  var disabled = state === 'disable' ? ' disabled' : '';
-  var html = '<button class="' + cls + '" style="' + styleAttr + '"' + disabled + '>';
-  if (state === 'loading') html += '<span class="ds-spinner" aria-hidden="true"></span>';
-  else if (iconL) html += '<span class="ds-btn__icon material-icons" aria-hidden="true">add</span>';
-  if (showText) html += '<span class="ds-btn__label">' + text.replace(/</g, '&lt;') + '</span>';
-  if (iconR) html += '<span class="ds-btn__icon material-icons" aria-hidden="true">add</span>';
-  html += '</button>';
-  document.getElementById('stage-btn-wrap').innerHTML = html;
-  document.getElementById('stage').classList.toggle('is-dark', dark);
-
-  // код
-  var code = '<button class="' + cls + '"' + (disabled ? ' disabled' : '') + '>\n';
-  if (state === 'loading') code += '  <span class="ds-spinner" aria-hidden="true"></span>\n';
-  else if (iconL) code += '  <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>\n';
-  if (showText) code += '  <span class="ds-btn__label">' + text.replace(/</g, '&lt;') + '</span>\n';
-  if (iconR) code += '  <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>\n';
-  code += '</button>';
-  document.getElementById('cc-html').innerHTML = renderHtml(code.split('\n'));
-  lastHtmlLines = code.split('\n');
-
-  // CSS и Tokens — по текущим настройкам
-  updateCodePanels();
-}
-['ctl-icon-left','ctl-icon-right','ctl-text','ctl-textval','ctl-dark'].forEach(function (id) {
-  var el = document.getElementById(id);
-  el.addEventListener('input', renderStage);
-});
-
-/* Кастомные селекты (как Radix Select в оригинале: кнопка + выпадающая панель) */
-function selVal(id) {
-  var d = document.querySelector('.ds-select[data-sel="' + id + '"]');
-  return d ? d.dataset.value : '';
-}
-function closeSelects() {
-  document.querySelectorAll('.ds-select__menu.is-open').forEach(function (m) { m.classList.remove('is-open'); });
-  document.querySelectorAll('.ds-select__trigger[aria-expanded="true"]').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); });
-}
-document.querySelectorAll('.ds-select').forEach(function (sel) {
-  var btn = sel.querySelector('.ds-select__trigger');
-  var menu = sel.querySelector('.ds-select__menu');
-  btn.addEventListener('click', function (e) {
-    e.stopPropagation();
-    var open = menu.classList.contains('is-open');
-    closeSelects();
-    if (!open) {
-      menu.classList.add('is-open');
-      btn.setAttribute('aria-expanded', 'true');
-    }
-  });
-  sel.querySelectorAll('.ds-select__item').forEach(function (item) {
-    item.addEventListener('click', function (e) {
-      e.stopPropagation();
-      sel.dataset.value = item.dataset.value;
-      sel.querySelector('.ds-select__value').textContent = item.textContent.replace(/\s*$/, '');
-      sel.querySelectorAll('.ds-select__item').forEach(function (i) {
-        i.classList.remove('is-selected');
-        i.querySelector('.ds-select__check').style.display = 'none';
-      });
-      item.classList.add('is-selected');
-      item.querySelector('.ds-select__check').style.display = 'inline-flex';
-      closeSelects();
-      renderStage();
-    });
-  });
-});
-document.addEventListener('click', closeSelects);
-renderStage();
-
-/* ============================================================
-   Матрица вариантов
-   ============================================================ */
-var TYPES = ['filled', 'outlined', 'text'];
-// 3 размера как в Figma: M / S / XS
-var SIZES = ['m', 's', 'xs'];
-var STATES = ['default', 'hover', 'press'];
-var STATE_LABEL = { default: 'Default', hover: 'Hover', press: 'Press' };
-var selectedBtn = null;
-
-function matrixBtn(style, type, size, state) {
-  var colors = BTN.colors[style][type][state];
-  var cls = 'ds-btn ds-btn--' + size + ' ds-btn--' + style + ' ds-btn--' + type;
-  var styleAttr = 'background:' + colors.bg + ';border-color:' + colors.border + ';color:' + colors.label + ';';
-  var dis = state === 'disable' ? ' disabled' : '';
-  // как в Figma: Element left = add, Element right = add
-  return '<button class="' + cls + ' matrix-btn" data-style="' + style + '" data-type="' + type +
-         '" data-size="' + size + '" data-state="' + state + '" style="' + styleAttr + '"' + dis + '>' +
-         '<span class="ds-btn__icon material-icons" aria-hidden="true">add</span>' +
-         '<span class="ds-btn__label">Button</span>' +
-         '<span class="ds-btn__icon material-icons" aria-hidden="true">add</span>' +
-         '</button>';
-}
-
-(function buildMatrix() {
-  var root = document.getElementById('matrix-root');
-  var html = '';
-  // порядок блоков — как в Figma: Neutral, Accent, Positive, Warning, Negative, Disable
-  ['neutral', 'accent', 'positive', 'warning', 'negative', 'disable'].forEach(function (style) {
-    html += '<div class="matrix-block">';
-    html += '<div class="matrix-headwrap"><h3 class="matrix-title">' + BTN.styles[style].label + '</h3></div>';
-    // типы — один раз слева для всех размеров (как в оригинале)
-    html += '<div class="matrix-body">';
-    html += '<div class="matrix-types">';
-    TYPES.forEach(function (t) { html += '<span class="matrix-type">' + t + '</span>'; });
-    html += '</div>';
-    // размеры в строчку (как Figma): M | S | XS
-    SIZES.forEach(function (size) {
-      html += '<div class="matrix-size">';
-      html += '<div class="matrix-size__title">' + BTN.sizes[size].label + '</div>';
-      html += '<div class="matrix-card">';
-      // подписи состояний (сверху, по центру)
-      html += '<div class="matrix-states">';
-      STATES.forEach(function (st) { html += '<span class="matrix-state">' + st + '</span>'; });
-      html += '</div>';
-      // ряды кнопок: типы (строки) × состояния (колонки)
-      TYPES.forEach(function (t) {
-        html += '<div class="matrix-row">';
-        STATES.forEach(function (st) {
-          html += '<span class="matrix-cell">' + matrixBtn(style, t, size, st) + '</span>';
-        });
-        html += '</div>';
-      });
-      html += '</div></div>';
-    });
-    html += '</div>';
-    html += '</div>';
-  });
-
-  // Loader
-  html += '<div class="matrix-block">';
-  html += '<div class="matrix-headwrap"><h3 class="matrix-title">Loader</h3></div>';
-  html += '<div class="matrix-body">';
-  html += '<div class="matrix-types"><span class="matrix-type">filled</span></div>';
-  SIZES.forEach(function (size) {
-    html += '<div class="matrix-size">';
-    html += '<div class="matrix-size__title">' + BTN.sizes[size].label + '</div>';
-    html += '<div class="matrix-card">';
-    html += '<div class="matrix-row">';
-    html += '<span class="matrix-cell"><button class="ds-btn ds-btn--' + size + ' ds-btn--neutral ds-btn--filled" disabled style="gap:8px">' +
-            '<span class="ds-spinner" aria-hidden="true"></span><span class="ds-btn__label">Button</span></button></span>';
-    html += '<span></span><span></span>';
-    html += '</div>';
-    html += '</div></div>';
-  });
-  html += '</div></div>';
-
-  root.innerHTML = html;
-
-  root.addEventListener('click', function (e) {
-    var btn = e.target.closest('.matrix-btn');
-    if (!btn) return;
-    if (selectedBtn) selectedBtn.classList.remove('is-selected');
-    btn.classList.add('is-selected');
-    selectedBtn = btn;
-    updateVarInspector(btn.dataset);
-  });
-
-  // автовыбор первого варианта — инспектор справа сразу заполнен (как в «Компоненте»)
-  var first = root.querySelector('.matrix-btn');
-  if (first) {
-    first.classList.add('is-selected');
-    selectedBtn = first;
-    updateVarInspector(first.dataset);
-  }
-})();
-
-// инспектор «Вариантов» — точная копия блока «Свойства компонента» (id vc-*), размеры по выбранному варианту
-var vcActive = 'html';
-var lastVcHtml = [];
-var lastVcCss = [];
-
-function updateVarInspector(d) {
-  var style = d.style;
-  var type = d.type;
-  var state = d.state;
-  var size = d.size;
-  var colors = BTN.colors[style][type][state] || BTN.colors[style][type]['default'];
-  var vars = BTN.vars(style, type, state);
-  var padVar = size === 'm' ? '--ds-space-3x' : size === 's' ? '--ds-space-2x' : '--ds-space-1-5x';
-  var padVal = size === 'm' ? '12px' : size === 's' ? '8px' : '6px';
-  var pyVar = size === 'm' ? '--ds-space-2x' : '--ds-space-1x';
-  var pyVal = size === 'm' ? '8px' : '4px';
-  var gapVar = size === 'm' ? '--ds-space-2x' : '--ds-space-1x';
-  var gapVal = size === 'm' ? '8px' : '4px';
-  var bw = type === 'outlined' ? '1' : '0';
-
-  // подпись
-  document.getElementById('vc-label').textContent = 'мастер страница / ' + size.toUpperCase() + ' / ' + style + ' / ' + type + ' / ' + state;
-
-  // фигура
-  document.querySelectorAll('#vc-tokens .pf-r').forEach(function (c) { c.textContent = '8'; });
-  document.querySelectorAll('#vc-tokens .pf-bw').forEach(function (c) { c.textContent = bw; });
-  document.getElementById('vc-py-t').textContent = pyVal.replace('px', '');
-  document.getElementById('vc-py-b').textContent = pyVal.replace('px', '');
-  document.getElementById('vc-px-l').textContent = padVal.replace('px', '');
-  document.getElementById('vc-px-r').textContent = padVal.replace('px', '');
-  // Label × N = высота кнопки − 2×py (m: 36−16=20, s: 28−8=20)
-  document.getElementById('vc-label-text').textContent =
-    'Label × ' + (BTN.sizes[size].height - 2 * parseInt(pyVal, 10));
-
-  // Layout
-  document.getElementById('vc-pad-v').innerHTML =
-    escVar('var(' + pyVar + ', ' + pyVal + ') var(' + padVar + ', ' + padVal + ');');
-  document.getElementById('vc-gap-v').innerHTML =
-    escVar('var(' + gapVar + ', ' + gapVal + ');');
-
-  // Style
-  document.getElementById('vc-r-v').innerHTML = escVar('var(--ds-radius-2x, 8px);');
-  document.getElementById('vc-bg-v').innerHTML =
-    '<span class="fn">var</span>(' + vars.bg + ', <span class="dot" style="background:' + colors.bg + '"></span> ' + colors.bg + ');';
-  var shadow = type === 'text' ? 'none' : '0px 2px 2px #E0E0E0...';
-  document.getElementById('vc-sh-v').textContent = shadow + ';';
-
-  // Colors (как Layout/Style — строки с var())
-  document.getElementById('vc-cbg-v').innerHTML = escVar('var(' + vars.bg + ', ' + colors.bg + ');');
-  document.getElementById('vc-ctl-v').innerHTML = escVar('var(' + vars.label + ', ' + colors.label + ');');
-
-  // CSS
-  var lines = [
-    'display: inline-flex;',
-    'padding: var(' + pyVar + ', ' + pyVal + ') var(' + padVar + ', ' + padVal + ');',
-    'justify-content: center;',
-    'align-items: center;',
-    'gap: var(' + gapVar + ', ' + gapVal + ');',
-    'border-radius: var(--ds-radius-2x, 8px);',
-    'background: var(' + vars.bg + ', ' + colors.bg + ');'
-  ];
-  if (type === 'outlined') lines.push('border: 1px solid var(' + vars.border + ', ' + colors.border + ');');
-  lines.push('box-shadow: ' + shadow + ';');
-  lines.push('color: var(' + vars.label + ', ' + colors.label + ');');
-  lastVcCss = lines;
-  document.getElementById('vc-css').innerHTML = renderCss(lines);
-
-  // HTML — как в «Компоненте» (Element left/right = add, как в Figma)
-  var htmlCode = '<button class="ds-btn ds-btn--' + size + ' ds-btn--' + style + ' ds-btn--' + type + '"' +
-                 (state === 'disable' ? ' disabled' : '') + '>\n' +
-                 '  <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>\n' +
-                 '  <span class="ds-btn__label">Button</span>\n' +
-                 '  <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>\n' +
-                 '</button>';
-  lastVcHtml = htmlCode.split('\n');
-  document.getElementById('vc-html').innerHTML = renderHtml(htmlCode.split('\n'));
-}
-
-// вкладки HTML | CSS | TOKENS (как в «Компоненте»)
-function showVcPanel(view) {
-  ['html', 'css', 'tokens'].forEach(function (v) {
-    document.getElementById('vc-' + v).classList.toggle('is-active', v === view);
-  });
-  document.getElementById('vc-title').textContent = view === 'tokens' ? 'TOKENS' : view.toUpperCase();
-}
-document.querySelectorAll('#var-code .cc-tabs button').forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    document.querySelectorAll('#var-code .cc-tabs button').forEach(function (b) { b.classList.remove('is-active'); });
-    btn.classList.add('is-active');
-    vcActive = btn.dataset.vc;
-    showVcPanel(vcActive);
-  });
-});
-// копирование активной вкладки
-document.getElementById('vc-copy').addEventListener('click', function () {
-  var text;
-  if (vcActive === 'html') text = lastVcHtml.join('\n');
-  else if (vcActive === 'css') text = lastVcCss.join('\n');
-  else text = collectTokensText('vc-tokens');
-  function done() {
-    var copy = document.getElementById('vc-copy');
-    copy.classList.add('copied');
-    setTimeout(function () { copy.classList.remove('copied'); }, 1500);
-  }
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(done).catch(function () { fallbackCopy(text); done(); });
-  } else { fallbackCopy(text); done(); }
-});
-
-/* ============================================================
-   Токены → Варианты: табы стилей → типов → таблица
-   ============================================================ */
-var GROUPS = [
-  { key: 'bg', label: 'Background (Фон)', row: 'Background' },
-  { key: 'border', label: 'Border (Обводка)', row: 'Border' },
-  { key: 'label', label: 'Label (Текст)', row: 'Label' },
-  { key: 'icon', label: 'Icon (Иконка)', row: 'Icon' },
-  { key: 'shadow', label: 'Shadow (Тень)', row: 'Shadow' }
-];
-var TOKEN_STATES = [
-  { key: 'default', label: 'Default' },
-  { key: 'hover', label: 'Hover' },
-  { key: 'press', label: 'Press' },
-  { key: 'disable', label: 'Disable' }
-];
-// Цвета иконок — из DS.json (Button/[Style]/[Type]/[State]/Icon color)
-var BTN_ICONS = {
-  accent:   { filled: '#FFFFFF', outlined: '#448AFF', text: '#448AFF' },
-  neutral:  { filled: '#616161', outlined: '#616161', text: '#616161' },
-  positive: { filled: '#FFFFFF', outlined: '#14B456', text: '#14B456' },
-  negative: { filled: '#FFFFFF', outlined: '#FF5252', text: '#FF5252' },
-  warning:  { filled: '#FFFFFF', outlined: '#EA7806', text: '#EA7806' },
-  disable:  { filled: '#9E9E9E', outlined: '#9E9E9E', text: '#9E9E9E' }
-};
-
-// Цвета маркеров (свотчей) для табов стилей — из DS.json (характерный цвет стиля)
-var BTN_SWATCH = {
-  accent:   '#448AFF',
-  neutral:  '#E0E0E0',
-  positive: '#14B456',
-  negative: '#FF5252',
-  warning:  '#FFAB40',
-  disable:  '#EBEBEB'
-};
-
-var FIGMA = {
-  'Button/Accent/Default': '#448AFF',
-  'Button/Accent/Hover': '#3969D5',
-  'Button/Accent/Lite default': '#FFFFFF',
-  'Button/Accent/Lite default transparent': '#FFFFFF00',
-  'Button/Accent/Lite hover': '#F5F9FF',
-  'Button/Accent/Lite press': '#E8F0FF',
-  'Button/Accent/Press': '#2651B5',
-  'Button/Negative/Default': '#FF5252',
-  'Button/Negative/Hover': '#F4372F',
-  'Button/Negative/Lite default': '#FFFFFF',
-  'Button/Negative/Lite default transparent': '#FFFFFF00',
-  'Button/Negative/Lite hover': '#FFF8F8',
-  'Button/Negative/Lite press': '#FFE5E5',
-  'Button/Negative/Press': '#DE1A12',
-  'Button/Neutral/Default': '#FFFFFF',
-  'Button/Neutral/Default transparent': '#FFFFFF00',
-  'Button/Neutral/Disable': '#EBEBEB',
-  'Button/Neutral/Hover': '#FAFAFA',
-  'Button/Neutral/Press': '#EBEBEB',
-  'Button/Positive/Default': '#14B456',
-  'Button/Positive/Hover': '#119C34',
-  'Button/Positive/Lite default': '#FFFFFF',
-  'Button/Positive/Lite default transparent': '#FFFFFF00',
-  'Button/Positive/Lite hover': '#F3FCF7',
-  'Button/Positive/Lite press': '#E0F8EA',
-  'Button/Positive/Press': '#0F852C',
-  'Button/Warning/Default': '#FFAB40',
-  'Button/Warning/Hover': '#FE8C06',
-  'Button/Warning/Lite default': '#FFFFFF',
-  'Button/Warning/Lite default transparent': '#FFFFFF00',
-  'Button/Warning/Lite hover': '#FFFCF8',
-  'Button/Warning/Lite press': '#FFF4E5',
-  'Button/Warning/Press': '#EA7806',
-  'Button/Accent/Filled/Default/Background': '#448AFF',
-  'Button/Accent/Filled/Default/Icon color': '#FFFFFF',
-  'Button/Accent/Filled/Default/Text color': '#FFFFFF',
-  'Button/Accent/Filled/Hover/Background': '#3969D5',
-  'Button/Accent/Filled/Hover/Icon color': '#FFFFFF',
-  'Button/Accent/Filled/Hover/Text color': '#FFFFFF',
-  'Button/Accent/Filled/Press/Background': '#2651B5',
-  'Button/Accent/Filled/Press/Icon color': '#FFFFFF',
-  'Button/Accent/Filled/Press/Text color': '#FFFFFF',
-  'Button/Accent/Outlined/Default/Background': '#FFFFFF00',
-  'Button/Accent/Outlined/Default/Border color': '#448AFF',
-  'Button/Accent/Outlined/Default/Icon color': '#448AFF',
-  'Button/Accent/Outlined/Default/Text color': '#448AFF',
-  'Button/Accent/Outlined/Hover/Background': '#F5F9FF',
-  'Button/Accent/Outlined/Hover/Border color': '#448AFF',
-  'Button/Accent/Outlined/Hover/Icon color': '#448AFF',
-  'Button/Accent/Outlined/Hover/Text color': '#448AFF',
-  'Button/Accent/Outlined/Press/Background': '#E8F0FF',
-  'Button/Accent/Outlined/Press/Border color': '#448AFF',
-  'Button/Accent/Outlined/Press/Icon color': '#448AFF',
-  'Button/Accent/Outlined/Press/Text color': '#448AFF',
-  'Button/Accent/Text/Default/Background': '#FFFFFF00',
-  'Button/Accent/Text/Default/Icon color': '#448AFF',
-  'Button/Accent/Text/Default/Text color': '#448AFF',
-  'Button/Accent/Text/Hover/Background': '#F5F9FF',
-  'Button/Accent/Text/Hover/Icon color': '#448AFF',
-  'Button/Accent/Text/Hover/Text color': '#448AFF',
-  'Button/Accent/Text/Press/Background': '#E8F0FF',
-  'Button/Accent/Text/Press/Icon color': '#448AFF',
-  'Button/Accent/Text/Press/Text color': '#448AFF',
-  'Button/Disable/Background filled': '#EBEBEB',
-  'Button/Disable/Background outlined': '#FFFFFF00',
-  'Button/Disable/Background text': '#FFFFFF00',
-  'Button/Disable/Border color': '#EBEBEB',
-  'Button/Disable/Icon color': '#9E9E9E',
-  'Button/Disable/Text color': '#9E9E9E',
-  'Button/Negative/Filled/Default/Background': '#FF5252',
-  'Button/Negative/Filled/Default/Icon color': '#FFFFFF',
-  'Button/Negative/Filled/Default/Text color': '#FFFFFF',
-  'Button/Negative/Filled/Hover/Background': '#F4372F',
-  'Button/Negative/Filled/Hover/Icon color': '#FFFFFF',
-  'Button/Negative/Filled/Hover/Text color': '#FFFFFF',
-  'Button/Negative/Filled/Press/Background': '#DE1A12',
-  'Button/Negative/Filled/Press/Icon color': '#FFFFFF',
-  'Button/Negative/Filled/Press/Text color': '#FFFFFF',
-  'Button/Negative/Outlined/Default/Background': '#FFFFFF00',
-  'Button/Negative/Outlined/Default/Border color': '#FF5252',
-  'Button/Negative/Outlined/Default/Icon color': '#FF5252',
-  'Button/Negative/Outlined/Default/Text color': '#FF5252',
-  'Button/Negative/Outlined/Hover/Background': '#FFF8F8',
-  'Button/Negative/Outlined/Hover/Border color': '#FF5252',
-  'Button/Negative/Outlined/Hover/Icon color': '#FF5252',
-  'Button/Negative/Outlined/Hover/Text color': '#FF5252',
-  'Button/Negative/Outlined/Press/Background': '#FFE5E5',
-  'Button/Negative/Outlined/Press/Border color': '#FF5252',
-  'Button/Negative/Outlined/Press/Icon color': '#FF5252',
-  'Button/Negative/Outlined/Press/Text color': '#FF5252',
-  'Button/Negative/Text/Default/Background': '#FFFFFF00',
-  'Button/Negative/Text/Default/Icon color': '#FF5252',
-  'Button/Negative/Text/Default/Text color': '#FF5252',
-  'Button/Negative/Text/Hover/Background': '#FFF8F8',
-  'Button/Negative/Text/Hover/Icon color': '#FF5252',
-  'Button/Negative/Text/Hover/Text color': '#FF5252',
-  'Button/Negative/Text/Press/Background': '#FFE5E5',
-  'Button/Negative/Text/Press/Icon color': '#FF5252',
-  'Button/Negative/Text/Press/Text color': '#FF5252',
-  'Button/Neutral/Filled/Default/Background': '#FFFFFF',
-  'Button/Neutral/Filled/Default/Icon color': '#616161',
-  'Button/Neutral/Filled/Default/Text color': '#333333',
-  'Button/Neutral/Filled/Hover/Background': '#FAFAFA',
-  'Button/Neutral/Filled/Hover/Icon color': '#616161',
-  'Button/Neutral/Filled/Hover/Text color': '#333333',
-  'Button/Neutral/Filled/Press/Background': '#EBEBEB',
-  'Button/Neutral/Filled/Press/Icon color': '#616161',
-  'Button/Neutral/Filled/Press/Text color': '#333333',
-  'Button/Neutral/Outlined/Default/Background': '#FFFFFF00',
-  'Button/Neutral/Outlined/Default/Border color': '#E0E0E0',
-  'Button/Neutral/Outlined/Default/Icon color': '#616161',
-  'Button/Neutral/Outlined/Default/Text color': '#333333',
-  'Button/Neutral/Outlined/Hover/Background': '#FAFAFA',
-  'Button/Neutral/Outlined/Hover/Border color': '#E0E0E0',
-  'Button/Neutral/Outlined/Hover/Icon color': '#616161',
-  'Button/Neutral/Outlined/Hover/Text color': '#333333',
-  'Button/Neutral/Outlined/Press/Background': '#EBEBEB',
-  'Button/Neutral/Outlined/Press/Border color': '#E0E0E0',
-  'Button/Neutral/Outlined/Press/Icon color': '#616161',
-  'Button/Neutral/Outlined/Press/Text color': '#333333',
-  'Button/Neutral/Text/Default/Background': '#FFFFFF00',
-  'Button/Neutral/Text/Default/Icon color': '#616161',
-  'Button/Neutral/Text/Default/Text color': '#333333',
-  'Button/Neutral/Text/Hover/Background': '#FAFAFA',
-  'Button/Neutral/Text/Hover/Icon color': '#616161',
-  'Button/Neutral/Text/Hover/Text color': '#333333',
-  'Button/Neutral/Text/Press/Background': '#EBEBEB',
-  'Button/Neutral/Text/Press/Icon color': '#616161',
-  'Button/Neutral/Text/Press/Text color': '#333333',
-  'Button/Positive/Filled/Default/Background': '#14B456',
-  'Button/Positive/Filled/Default/Icon color': '#FFFFFF',
-  'Button/Positive/Filled/Default/Text color': '#FFFFFF',
-  'Button/Positive/Filled/Hover/Background': '#119C34',
-  'Button/Positive/Filled/Hover/Icon color': '#FFFFFF',
-  'Button/Positive/Filled/Hover/Text color': '#FFFFFF',
-  'Button/Positive/Filled/Press/Background': '#0F852C',
-  'Button/Positive/Filled/Press/Icon color': '#FFFFFF',
-  'Button/Positive/Filled/Press/Text color': '#FFFFFF',
-  'Button/Positive/Outlined/Default/Background': '#FFFFFF00',
-  'Button/Positive/Outlined/Default/Border color': '#14B456',
-  'Button/Positive/Outlined/Default/Icon color': '#14B456',
-  'Button/Positive/Outlined/Default/Text color': '#14B456',
-  'Button/Positive/Outlined/Hover/Background': '#F3FCF7',
-  'Button/Positive/Outlined/Hover/Border color': '#14B456',
-  'Button/Positive/Outlined/Hover/Icon color': '#14B456',
-  'Button/Positive/Outlined/Hover/Text color': '#14B456',
-  'Button/Positive/Outlined/Press/Background': '#E0F8EA',
-  'Button/Positive/Outlined/Press/Border color': '#14B456',
-  'Button/Positive/Outlined/Press/Icon color': '#14B456',
-  'Button/Positive/Outlined/Press/Text color': '#14B456',
-  'Button/Positive/Text/Default/Background': '#FFFFFF00',
-  'Button/Positive/Text/Default/Icon color': '#14B456',
-  'Button/Positive/Text/Default/Text color': '#14B456',
-  'Button/Positive/Text/Hover/Background': '#F3FCF7',
-  'Button/Positive/Text/Hover/Icon color': '#14B456',
-  'Button/Positive/Text/Hover/Text color': '#14B456',
-  'Button/Positive/Text/Press/Background': '#E0F8EA',
-  'Button/Positive/Text/Press/Icon color': '#14B456',
-  'Button/Positive/Text/Press/Text color': '#14B456',
-  'Button/Warning/Filled/Default/Background': '#FFAB40',
-  'Button/Warning/Filled/Default/Icon color': '#FFFFFF',
-  'Button/Warning/Filled/Default/Text color': '#FFFFFF',
-  'Button/Warning/Filled/Hover/Background': '#FE8C06',
-  'Button/Warning/Filled/Hover/Icon color': '#FFFFFF',
-  'Button/Warning/Filled/Hover/Text color': '#FFFFFF',
-  'Button/Warning/Filled/Press/Background': '#EA7806',
-  'Button/Warning/Filled/Press/Icon color': '#FFFFFF',
-  'Button/Warning/Filled/Press/Text color': '#FFFFFF',
-  'Button/Warning/Outlined/Default/Background': '#FFFFFF00',
-  'Button/Warning/Outlined/Default/Border color': '#FFAB40',
-  'Button/Warning/Outlined/Default/Icon color': '#EA7806',
-  'Button/Warning/Outlined/Default/Text color': '#EA7806',
-  'Button/Warning/Outlined/Hover/Background': '#FFFCF8',
-  'Button/Warning/Outlined/Hover/Border color': '#FFAB40',
-  'Button/Warning/Outlined/Hover/Icon color': '#EA7806',
-  'Button/Warning/Outlined/Hover/Text color': '#EA7806',
-  'Button/Warning/Outlined/Press/Background': '#FFF4E5',
-  'Button/Warning/Outlined/Press/Border color': '#FFAB40',
-  'Button/Warning/Outlined/Press/Icon color': '#EA7806',
-  'Button/Warning/Outlined/Press/Text color': '#EA7806',
-  'Button/Warning/Text/Default/Background': '#FFFFFF00',
-  'Button/Warning/Text/Default/Icon color': '#EA7806',
-  'Button/Warning/Text/Default/Text color': '#EA7806',
-  'Button/Warning/Text/Hover/Background': '#FFFCF8',
-  'Button/Warning/Text/Hover/Icon color': '#EA7806',
-  'Button/Warning/Text/Hover/Text color': '#EA7806',
-  'Button/Warning/Text/Press/Background': '#FFF4E5',
-  'Button/Warning/Text/Press/Icon color': '#EA7806',
-  'Button/Warning/Text/Press/Text color': '#EA7806',
-  'Button/Border size': '1px',
-  'Button/Border radius': '8px',
-  'Button/M size/Gap': '8px',
-  'Button/M size/Pad bottom': '8px',
-  'Button/M size/Pad top': '8px',
-  'Button/M size/Pad left': '12px',
-  'Button/M size/Pad right': '12px',
-  'Button/M size/Text size': '14px',
-  'Button/M size/Icon size': '20px',
-  'Button/M size/Text weight': '500px',
-  'Button/S size/Gap': '4px',
-  'Button/S size/Pad bottom': '4px',
-  'Button/S size/Pad top': '4px',
-  'Button/S size/Pad left': '8px',
-  'Button/S size/Pad right': '8px',
-  'Button/S size/Text size': '14px',
-  'Button/S size/Icon size': '20px',
-  'Button/S size/Text weight': '500px',
-  'Button/XS size/Gap': '4px',
-  'Button/XS size/Pad bottom': '4px',
-  'Button/XS size/Pad top': '4px',
-  'Button/XS size/Pad left': '6px',
-  'Button/XS size/Pad right': '6px',
-  'Button/XS size/Text size': '12px',
-  'Button/XS size/Icon size': '16px',
-  'Button/XS size/Text weight': '500px',
-};
-
-// Имя реальной переменной Figma: Button/[Стиль]/[Тип]/[Состояние]/[Свойство]
-var FIGMA_ALIAS = {
-  'Button/Accent/Default': 'Accent/500',
-  'Button/Accent/Hover': 'Accent/600',
-  'Button/Accent/Lite default': 'Neutral/0',
-  'Button/Accent/Lite default transparent': 'Neutral/Transparent',
-  'Button/Accent/Lite hover': 'Accent/10',
-  'Button/Accent/Lite press': 'Accent/100',
-  'Button/Accent/Press': 'Accent/700',
-  'Button/Negative/Default': 'Negative/500',
-  'Button/Negative/Hover': 'Negative/600',
-  'Button/Negative/Lite default': 'Neutral/0',
-  'Button/Negative/Lite default transparent': 'Neutral/Transparent',
-  'Button/Negative/Lite hover': 'Negative/10',
-  'Button/Negative/Lite press': 'Negative/100',
-  'Button/Negative/Press': 'Negative/700',
-  'Button/Neutral/Default': 'Neutral/0',
-  'Button/Neutral/Default transparent': 'Neutral/Transparent',
-  'Button/Neutral/Disable': 'Neutral/100',
-  'Button/Neutral/Hover': 'Neutral/10',
-  'Button/Neutral/Press': 'Neutral/100',
-  'Button/Positive/Default': 'Positive/500',
-  'Button/Positive/Hover': 'Positive/600',
-  'Button/Positive/Lite default': 'Neutral/0',
-  'Button/Positive/Lite default transparent': 'Neutral/Transparent',
-  'Button/Positive/Lite hover': 'Positive/10',
-  'Button/Positive/Lite press': 'Positive/100',
-  'Button/Positive/Press': 'Positive/700',
-  'Button/Warning/Default': 'Warning/500',
-  'Button/Warning/Hover': 'Warning/600',
-  'Button/Warning/Lite default': 'Neutral/0',
-  'Button/Warning/Lite default transparent': 'Neutral/Transparent',
-  'Button/Warning/Lite hover': 'Warning/10',
-  'Button/Warning/Lite press': 'Warning/100',
-  'Button/Warning/Press': 'Warning/700',
-  'Button/Accent/Filled/Default/Background': 'Button/Accent/Default',
-  'Button/Accent/Filled/Default/Icon color': 'Icon/Inversive',
-  'Button/Accent/Filled/Default/Text color': 'Text/Inversive',
-  'Button/Accent/Filled/Hover/Background': 'Button/Accent/Hover',
-  'Button/Accent/Filled/Hover/Icon color': 'Icon/Inversive',
-  'Button/Accent/Filled/Hover/Text color': 'Text/Inversive',
-  'Button/Accent/Filled/Press/Background': 'Button/Accent/Press',
-  'Button/Accent/Filled/Press/Icon color': 'Icon/Inversive',
-  'Button/Accent/Filled/Press/Text color': 'Text/Inversive',
-  'Button/Accent/Outlined/Default/Background': 'Button/Accent/Lite default transparent',
-  'Button/Accent/Outlined/Default/Border color': 'Stroke/Accent',
-  'Button/Accent/Outlined/Default/Icon color': 'Icon/Accent',
-  'Button/Accent/Outlined/Default/Text color': 'Text/Accent',
-  'Button/Accent/Outlined/Hover/Background': 'Button/Accent/Lite hover',
-  'Button/Accent/Outlined/Hover/Border color': 'Stroke/Accent',
-  'Button/Accent/Outlined/Hover/Icon color': 'Icon/Accent',
-  'Button/Accent/Outlined/Hover/Text color': 'Text/Accent',
-  'Button/Accent/Outlined/Press/Background': 'Button/Accent/Lite press',
-  'Button/Accent/Outlined/Press/Border color': 'Stroke/Accent',
-  'Button/Accent/Outlined/Press/Icon color': 'Icon/Accent',
-  'Button/Accent/Outlined/Press/Text color': 'Text/Accent',
-  'Button/Accent/Text/Default/Background': 'Button/Accent/Lite default transparent',
-  'Button/Accent/Text/Default/Icon color': 'Icon/Accent',
-  'Button/Accent/Text/Default/Text color': 'Text/Accent',
-  'Button/Accent/Text/Hover/Background': 'Button/Accent/Lite hover',
-  'Button/Accent/Text/Hover/Icon color': 'Icon/Accent',
-  'Button/Accent/Text/Hover/Text color': 'Text/Accent',
-  'Button/Accent/Text/Press/Background': 'Button/Accent/Lite press',
-  'Button/Accent/Text/Press/Icon color': 'Icon/Accent',
-  'Button/Accent/Text/Press/Text color': 'Text/Accent',
-  'Button/Disable/Background filled': 'Button/Neutral/Disable',
-  'Button/Disable/Background outlined': 'Button/Neutral/Default transparent',
-  'Button/Disable/Background text': 'Button/Neutral/Default transparent',
-  'Button/Disable/Border color': 'Stroke/Disable',
-  'Button/Disable/Icon color': 'Icon/Disable',
-  'Button/Disable/Text color': 'Text/Disable',
-  'Button/Negative/Filled/Default/Background': 'Button/Negative/Default',
-  'Button/Negative/Filled/Default/Icon color': 'Icon/Inversive',
-  'Button/Negative/Filled/Default/Text color': 'Text/Inversive',
-  'Button/Negative/Filled/Hover/Background': 'Button/Negative/Hover',
-  'Button/Negative/Filled/Hover/Icon color': 'Icon/Inversive',
-  'Button/Negative/Filled/Hover/Text color': 'Text/Inversive',
-  'Button/Negative/Filled/Press/Background': 'Button/Negative/Press',
-  'Button/Negative/Filled/Press/Icon color': 'Icon/Inversive',
-  'Button/Negative/Filled/Press/Text color': 'Text/Inversive',
-  'Button/Negative/Outlined/Default/Background': 'Button/Negative/Lite default transparent',
-  'Button/Negative/Outlined/Default/Border color': 'Stroke/Negative',
-  'Button/Negative/Outlined/Default/Icon color': 'Icon/Negative',
-  'Button/Negative/Outlined/Default/Text color': 'Text/Negative',
-  'Button/Negative/Outlined/Hover/Background': 'Button/Negative/Lite hover',
-  'Button/Negative/Outlined/Hover/Border color': 'Stroke/Negative',
-  'Button/Negative/Outlined/Hover/Icon color': 'Icon/Negative',
-  'Button/Negative/Outlined/Hover/Text color': 'Text/Negative',
-  'Button/Negative/Outlined/Press/Background': 'Button/Negative/Lite press',
-  'Button/Negative/Outlined/Press/Border color': 'Stroke/Negative',
-  'Button/Negative/Outlined/Press/Icon color': 'Icon/Negative',
-  'Button/Negative/Outlined/Press/Text color': 'Text/Negative',
-  'Button/Negative/Text/Default/Background': 'Button/Negative/Lite default transparent',
-  'Button/Negative/Text/Default/Icon color': 'Icon/Negative',
-  'Button/Negative/Text/Default/Text color': 'Text/Negative',
-  'Button/Negative/Text/Hover/Background': 'Button/Negative/Lite hover',
-  'Button/Negative/Text/Hover/Icon color': 'Icon/Negative',
-  'Button/Negative/Text/Hover/Text color': 'Text/Negative',
-  'Button/Negative/Text/Press/Background': 'Button/Negative/Lite press',
-  'Button/Negative/Text/Press/Icon color': 'Icon/Negative',
-  'Button/Negative/Text/Press/Text color': 'Text/Negative',
-  'Button/Neutral/Filled/Default/Background': 'Button/Neutral/Default',
-  'Button/Neutral/Filled/Default/Icon color': 'Icon/Primary',
-  'Button/Neutral/Filled/Default/Text color': 'Text/Primary',
-  'Button/Neutral/Filled/Hover/Background': 'Button/Neutral/Hover',
-  'Button/Neutral/Filled/Hover/Icon color': 'Icon/Primary',
-  'Button/Neutral/Filled/Hover/Text color': 'Text/Primary',
-  'Button/Neutral/Filled/Press/Background': 'Button/Neutral/Press',
-  'Button/Neutral/Filled/Press/Icon color': 'Icon/Primary',
-  'Button/Neutral/Filled/Press/Text color': 'Text/Primary',
-  'Button/Neutral/Outlined/Default/Background': 'Button/Neutral/Default transparent',
-  'Button/Neutral/Outlined/Default/Border color': 'Stroke/Default',
-  'Button/Neutral/Outlined/Default/Icon color': 'Icon/Primary',
-  'Button/Neutral/Outlined/Default/Text color': 'Text/Primary',
-  'Button/Neutral/Outlined/Hover/Background': 'Button/Neutral/Hover',
-  'Button/Neutral/Outlined/Hover/Border color': 'Stroke/Default',
-  'Button/Neutral/Outlined/Hover/Icon color': 'Icon/Primary',
-  'Button/Neutral/Outlined/Hover/Text color': 'Text/Primary',
-  'Button/Neutral/Outlined/Press/Background': 'Button/Neutral/Press',
-  'Button/Neutral/Outlined/Press/Border color': 'Stroke/Default',
-  'Button/Neutral/Outlined/Press/Icon color': 'Icon/Primary',
-  'Button/Neutral/Outlined/Press/Text color': 'Text/Primary',
-  'Button/Neutral/Text/Default/Background': 'Button/Neutral/Default transparent',
-  'Button/Neutral/Text/Default/Icon color': 'Icon/Primary',
-  'Button/Neutral/Text/Default/Text color': 'Text/Primary',
-  'Button/Neutral/Text/Hover/Background': 'Button/Neutral/Hover',
-  'Button/Neutral/Text/Hover/Icon color': 'Icon/Primary',
-  'Button/Neutral/Text/Hover/Text color': 'Text/Primary',
-  'Button/Neutral/Text/Press/Background': 'Button/Neutral/Press',
-  'Button/Neutral/Text/Press/Icon color': 'Icon/Primary',
-  'Button/Neutral/Text/Press/Text color': 'Text/Primary',
-  'Button/Positive/Filled/Default/Background': 'Button/Positive/Default',
-  'Button/Positive/Filled/Default/Icon color': 'Icon/Inversive',
-  'Button/Positive/Filled/Default/Text color': 'Text/Inversive',
-  'Button/Positive/Filled/Hover/Background': 'Button/Positive/Hover',
-  'Button/Positive/Filled/Hover/Icon color': 'Icon/Inversive',
-  'Button/Positive/Filled/Hover/Text color': 'Text/Inversive',
-  'Button/Positive/Filled/Press/Background': 'Button/Positive/Press',
-  'Button/Positive/Filled/Press/Icon color': 'Icon/Inversive',
-  'Button/Positive/Filled/Press/Text color': 'Text/Inversive',
-  'Button/Positive/Outlined/Default/Background': 'Button/Neutral/Default transparent',
-  'Button/Positive/Outlined/Default/Border color': 'Stroke/Positive',
-  'Button/Positive/Outlined/Default/Icon color': 'Icon/Positive',
-  'Button/Positive/Outlined/Default/Text color': 'Text/Positive',
-  'Button/Positive/Outlined/Hover/Background': 'Button/Positive/Lite hover',
-  'Button/Positive/Outlined/Hover/Border color': 'Stroke/Positive',
-  'Button/Positive/Outlined/Hover/Icon color': 'Icon/Positive',
-  'Button/Positive/Outlined/Hover/Text color': 'Text/Positive',
-  'Button/Positive/Outlined/Press/Background': 'Button/Positive/Lite press',
-  'Button/Positive/Outlined/Press/Border color': 'Stroke/Positive',
-  'Button/Positive/Outlined/Press/Icon color': 'Icon/Positive',
-  'Button/Positive/Outlined/Press/Text color': 'Text/Positive',
-  'Button/Positive/Text/Default/Background': 'Button/Positive/Lite default transparent',
-  'Button/Positive/Text/Default/Icon color': 'Icon/Positive',
-  'Button/Positive/Text/Default/Text color': 'Text/Positive',
-  'Button/Positive/Text/Hover/Background': 'Button/Positive/Lite hover',
-  'Button/Positive/Text/Hover/Icon color': 'Icon/Positive',
-  'Button/Positive/Text/Hover/Text color': 'Text/Positive',
-  'Button/Positive/Text/Press/Background': 'Button/Positive/Lite press',
-  'Button/Positive/Text/Press/Icon color': 'Icon/Positive',
-  'Button/Positive/Text/Press/Text color': 'Text/Positive',
-  'Button/Warning/Filled/Default/Background': 'Button/Warning/Default',
-  'Button/Warning/Filled/Default/Icon color': 'Icon/Inversive',
-  'Button/Warning/Filled/Default/Text color': 'Text/Inversive',
-  'Button/Warning/Filled/Hover/Background': 'Button/Warning/Hover',
-  'Button/Warning/Filled/Hover/Icon color': 'Icon/Inversive',
-  'Button/Warning/Filled/Hover/Text color': 'Text/Inversive',
-  'Button/Warning/Filled/Press/Background': 'Button/Warning/Press',
-  'Button/Warning/Filled/Press/Icon color': 'Icon/Inversive',
-  'Button/Warning/Filled/Press/Text color': 'Text/Inversive',
-  'Button/Warning/Outlined/Default/Background': 'Button/Warning/Lite default transparent',
-  'Button/Warning/Outlined/Default/Border color': 'Stroke/Warning',
-  'Button/Warning/Outlined/Default/Icon color': 'Icon/Warning',
-  'Button/Warning/Outlined/Default/Text color': 'Text/Warning',
-  'Button/Warning/Outlined/Hover/Background': 'Button/Warning/Lite hover',
-  'Button/Warning/Outlined/Hover/Border color': 'Stroke/Warning',
-  'Button/Warning/Outlined/Hover/Icon color': 'Icon/Warning',
-  'Button/Warning/Outlined/Hover/Text color': 'Text/Warning',
-  'Button/Warning/Outlined/Press/Background': 'Button/Warning/Lite press',
-  'Button/Warning/Outlined/Press/Border color': 'Stroke/Warning',
-  'Button/Warning/Outlined/Press/Icon color': 'Icon/Warning',
-  'Button/Warning/Outlined/Press/Text color': 'Text/Warning',
-  'Button/Warning/Text/Default/Background': 'Button/Warning/Lite default transparent',
-  'Button/Warning/Text/Default/Icon color': 'Icon/Warning',
-  'Button/Warning/Text/Default/Text color': 'Text/Warning',
-  'Button/Warning/Text/Hover/Background': 'Button/Warning/Lite hover',
-  'Button/Warning/Text/Hover/Icon color': 'Icon/Warning',
-  'Button/Warning/Text/Hover/Text color': 'Text/Warning',
-  'Button/Warning/Text/Press/Background': 'Button/Warning/Lite press',
-  'Button/Warning/Text/Press/Icon color': 'Icon/Warning',
-  'Button/Warning/Text/Press/Text color': 'Text/Warning',
-  'Button/Border size': 'Stroke/0,25x',
-  'Button/Border radius': 'Radius/2x',
-  'Button/M size/Gap': 'Space/2x',
-  'Button/M size/Pad bottom': 'Space/2x',
-  'Button/M size/Pad top': 'Space/2x',
-  'Button/M size/Pad left': 'Space/3x',
-  'Button/M size/Pad right': 'Space/3x',
-  'Button/M size/Text size': 'Body/Font size/S',
-  'Button/M size/Icon size': 'Icon size/Size 5x',
-  'Button/M size/Text weight': 'Font Weight/Medium',
-  'Button/S size/Gap': 'Space/1x',
-  'Button/S size/Pad bottom': 'Space/1x',
-  'Button/S size/Pad top': 'Space/1x',
-  'Button/S size/Pad left': 'Space/2x',
-  'Button/S size/Pad right': 'Space/2x',
-  'Button/S size/Text size': 'Body/Font size/S',
-  'Button/S size/Icon size': 'Icon size/Size 5x',
-  'Button/S size/Text weight': 'Font Weight/Medium',
-  'Button/XS size/Gap': 'Space/1x',
-  'Button/XS size/Pad bottom': 'Space/1x',
-  'Button/XS size/Pad top': 'Space/1x',
-  'Button/XS size/Pad left': 'Space/1,5x',
-  'Button/XS size/Pad right': 'Space/1,5x',
-  'Button/XS size/Text size': 'Caption/Font size/L',
-  'Button/XS size/Icon size': 'Icon size/Size 4x',
-  'Button/XS size/Text weight': 'Font Weight/Medium',
-};
-var FIGMA_CAPS = { accent:'Accent', neutral:'Neutral', positive:'Positive', negative:'Negative', warning:'Warning', disable:'Disable' };
-function figmaCap(s){ return s.charAt(0).toUpperCase() + s.slice(1); }
-function figmaVarName(style, type, group, state) {
-  if (group === 'shadow') return state === 'disable' ? 'Shadows/None' : 'Shadows/Sl';
-  var prop = { bg:'Background', border:'Border color', label:'Text color', icon:'Icon color' }[group];
-  if (state === 'disable') {
-    return (group === 'bg') ? ('Button/Disable/Background ' + type) : ('Button/Disable/' + prop);
-  }
-  return 'Button/' + figmaCap(style) + '/' + figmaCap(type) + '/' + figmaCap(state) + '/' + prop;
-}
-// Алиас токена (ссылка на исходную переменную) — из поля var в DS
-function figmaAlias(style, type, group, state) {
-  if (group === 'shadow') return ''; // у глобальной тени нет алиаса
-  return FIGMA_ALIAS[figmaVarName(style, type, group, state)] || '';
-}
-// Цвета кнопки для состояния (bg/border/text/icon) — из реальных переменных
-function stateColors(style, type, state) {
-  if (state === 'disable') {
-    return {
-      bg: FIGMA['Button/Disable/Background ' + type] || 'transparent',
-      border: FIGMA['Button/Disable/Border color'],
-      text: FIGMA['Button/Disable/Text color'],
-      icon: FIGMA['Button/Disable/Icon color']
-    };
-  }
-  var base = 'Button/' + figmaCap(style) + '/' + figmaCap(type) + '/' + figmaCap(state) + '/';
-  return {
-    bg: FIGMA[base + 'Background'],
-    border: type === 'outlined' ? FIGMA[base + 'Border color'] : 'transparent',
-    text: FIGMA[base + 'Text color'],
-    icon: FIGMA[base + 'Icon color']
-  };
-}
-// Кнопка-пример, отрисованная по DS (размер M: pad 8/12, gap 8, радиус 8, текст 14/500, иконка 20)
-// Иконка кнопки из Figma — «+» (add), как в DS; размер M 20px
-var ICON_PLUS = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0" aria-hidden="true"><path d="M5 12h14M12 5v14"/></svg>';
-function stateButton(style, type, state, group) {
-  var c = stateColors(style, type, state); // ТОЛЬКО реальные значения этого состояния, без подстановок
-  var icon = '<span style="display:inline-flex;align-items:center;justify-content:center;color:' + c.icon + '">' + ICON_PLUS + '</span>';
-  var border = type === 'outlined' ? ('border:1px solid ' + c.border + ';') : 'border:1px solid transparent;';
-  var shadow = (state !== 'disable' && type === 'filled') ? 'box-shadow:0 0 4px rgba(33,33,33,0.12),0 2px 2px rgba(33,33,33,0.04);' : '';
-  return '<button type="button" tabindex="-1"' + (state==='disable' ? ' disabled' : '') +
-         ' style="display:inline-flex;align-items:center;justify-content:center;height:36px;padding:8px 12px;gap:8px;border-radius:8px;font-size:14px;font-weight:500;color:' + c.text + ';background:' + c.bg + ';' + border +
-         shadow + 'font-family:inherit;cursor:default;pointer-events:none">' +
-         icon + '<span>Label</span>' + icon + '</button>';
-}
-
-// Значение токена для таблицы — реальное значение переменной Figma
-function tokenValue(style, type, group, state) {
-  if (group === 'shadow') return state === 'disable' ? 'none' : '0 0 4px rgba(33,33,33,0.12), 0 2px 2px rgba(33,33,33,0.04)';
-  var name = figmaVarName(style, type, group, state);
-  return FIGMA[name] || '—';
-}
-
-function buildTokenTabs() {
-  var wrap = document.getElementById('style-tabs');
-  var html = '';
-  Object.keys(BTN.styles).forEach(function (style, i) {
-    html += '<button class="comp-tab' + (i === 0 ? ' is-active' : '') + '" data-style="' + style + '" role="tab"><span class="cap-swatch" style="background:' + BTN_SWATCH[style] + '"></span>' + BTN.styles[style].label + '</button>';
-  });
-  wrap.innerHTML = html;
-  wrap.addEventListener('click', function (e) {
-    var tab = e.target.closest('.comp-tab');
-    if (!tab) return;
-    wrap.querySelectorAll('.comp-tab').forEach(function (t) { t.classList.remove('is-active'); });
-    tab.classList.add('is-active');
-    buildTokenTables(tab.dataset.style, 'filled');
-  });
-}
-
-function buildTokenTables(style, type) {
-  var wrap = document.getElementById('token-tables');
-  var html = '<div class="type-tabs" id="type-tabs">';
-  TYPES.forEach(function (t, i) {
-    html += '<button class="type-tab' + (t.toLowerCase() === type ? ' is-active' : '') + '" data-type="' + t.toLowerCase() + '">' + t + '</button>';
-  });
-  html += '</div><div id="type-table"></div>';
-  wrap.innerHTML = html;
-  wrap.querySelectorAll('#type-tabs .type-tab').forEach(function (t) {
-    t.addEventListener('click', function () {
-      wrap.querySelectorAll('#type-tabs .type-tab').forEach(function (x) { x.classList.remove('is-active'); });
-      t.classList.add('is-active');
-      buildTokenTable(style, t.dataset.type);
-    });
-  });
-  buildTokenTable(style, type);
-}
-
-function tokenRow(desc, varname, alias, value, exampleHtml) {
-  return '<tr><td>' + desc + '</td><td class="tok-var">' + varname + '</td><td class="tok-alias">' + alias + '</td><td class="tok-val">' + value + '</td>' +
-         '<td class="tok-example">' + exampleHtml + '</td></tr>';
-}
-
-function buildTokenTable(style, type) {
-  var table = document.getElementById('type-table');
-  var colors = BTN.colors[style][type];
-  var rows = '';
-
-  GROUPS.forEach(function (g) {
-    if (g.key === 'border' && type !== 'outlined') return; // у Filled/Text нет обводки — Border-группа только для Outlined
-    if (g.key === 'shadow' && type !== 'filled') return; // тень только у Filled — Shadow-группа только для Filled
-    var groupRows = '';
-    TOKEN_STATES.forEach(function (st) {
-      var name = figmaVarName(style, type, g.key, st.key);
-      if (g.key !== 'shadow' && !FIGMA[name]) return; // токена нет в переменных — строку не показываем (shadow — глобальный токен Shadows/Sl)
-      var ex = stateButton(style, type, st.key, g.key);
-      groupRows += tokenRow(st.label, name, figmaAlias(style, type, g.key, st.key), tokenValue(style, type, g.key, st.key), ex);
-    });
-    if (groupRows) rows += '<tr class="group-row"><td colspan="5">' + g.label + '</td></tr>' + groupRows;
-  });
-
-  table.innerHTML =
-    '<table class="token-table"><thead><tr><th>Описание</th><th>Токен</th><th>Алиасы</th><th>Значение</th><th>Пример</th></tr></thead>' +
-    '<tbody>' + rows + '</tbody></table>';
-}
-
-buildTokenTabs();
-buildTokenTables(Object.keys(BTN.styles)[0], 'filled'); // стартовая таблица: Accent / Filled
-
-/* ============================================================
-   Токены → Размеры
-   ============================================================ */
-(function buildSizesTable() {
-  var rows = '';
-  var rowsDef = [
-    { desc: 'Высота', tok: 'button.[size].height', xs: '24px', s: '28px', m: '36px' },
-    { desc: 'Минимальная ширина', tok: 'button.[size].min-width', xs: '24px', s: '28px', m: '36px' },
-    { desc: 'Отступ между лейблом и иконкой', tok: 'button.[size].spacing', xs: '4px', s: '4px', m: '8px' },
-    { desc: 'Padding слева', tok: 'button.[size].padding-left', xs: '6px', s: '8px', m: '12px' },
-    { desc: 'Padding справа', tok: 'button.[size].padding-right', xs: '6px', s: '8px', m: '12px' },
-    { desc: 'Скругление углов', tok: 'button.[size].border-radius', xs: 'var(--ds-radius-2x)', s: 'var(--ds-radius-2x)', m: 'var(--ds-radius-2x)' },
-    { desc: 'Толщина обводки', tok: 'button.[size].border-width', xs: '1px', s: '1px', m: '1px' },
-    { desc: 'Типографика лейбла', tok: 'button.[size].font', xs: '12px / 500', s: '14px / 500', m: '14px / 500' }
-  ];
-  rowsDef.forEach(function (r) {
-    rows += '<tr><td>' + r.desc + '</td><td class="tok-var">' + r.tok + '</td><td class="tok-val">' + r.xs + '</td><td class="tok-val">' + r.s + '</td><td class="tok-val">' + r.m + '</td></tr>';
-  });
-  document.getElementById('sizes-table').innerHTML =
-    '<thead><tr><th>Описание</th><th>Токен</th><th>XS · 24px</th><th>S · 28px</th><th>M · 36px</th></tr></thead><tbody>' + rows + '</tbody>';
-})();
-
-/* ============================================================
-   Блок HTML | CSS | Tokens под превью
-   ============================================================ */
-function esc(t) { return t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
-function escVar(t) { return t.replace(/var/g, '<span class="fn">var</span>'); }
-
-// CSS: код с номерами строк и подсветкой (как в оригинале)
-function renderCss(lines) {
-  var nums = lines.map(function (_, i) { return '<span>' + (i + 1) + '</span>'; }).join('');
-  var code = lines.map(function (line) {
-    var m = line.match(/^([a-z-]+):\s*(.*);$/);
-    if (!m) return '<div>' + esc(line) + '</div>';
-    var val = esc(m[2]).replace(/var/g, '<span class="c-var">var</span>');
-    if (m[2] === 'inline-flex' || m[2] === 'center') val = '<span class="c-val">' + val + '</span>';
-    return '<div><span class="c-key">' + m[1] + ':</span> ' + val + ';</div>';
-  }).join('');
-  return '<div class="po-css__row"><div class="po-css__nums">' + nums + '</div><div class="po-css__code">' + code + '</div></div>';
-}
-
-var lastHtmlLines = [];
-var lastCssLines = [];
-
-// обновление CSS-панели и Tokens-панели по текущим настройкам
-function updateCodePanels() {
-  var style = selVal('style');
-  var type = selVal('type');
-  var state = selVal('state');
-  var size = selVal('size');
-  var colors = BTN.colors[style][type][state] || BTN.colors[style][type]['default'];
-  var vars = BTN.vars(style, type, state);
-  var padVar = size === 'm' ? '--ds-space-3x' : size === 's' ? '--ds-space-2x' : '--ds-space-1-5x';
-  var padVal = size === 'm' ? '12px' : size === 's' ? '8px' : '6px';
-  var pyVar = size === 'm' ? '--ds-space-2x' : '--ds-space-1x';
-  var pyVal = size === 'm' ? '8px' : '4px';
-  var gapVar = size === 'm' ? '--ds-space-2x' : '--ds-space-1x';
-  var gapVal = size === 'm' ? '8px' : '4px';
-  var bw = type === 'outlined' ? '1' : '0';
-
-  // Tokens: подпись
-  document.getElementById('po-label').textContent = 'мастер страница / ' + size.toUpperCase() + ' / ' + style + ' / ' + type + ' / ' + state;
-
-  // Tokens: фигура
-  document.querySelectorAll('.pf-r').forEach(function (c) { c.textContent = '8'; });
-  document.querySelectorAll('.pf-bw').forEach(function (c) { c.textContent = bw; });
-  document.getElementById('pf-py-t').textContent = pyVal.replace('px', '');
-  document.getElementById('pf-py-b').textContent = pyVal.replace('px', '');
-  document.getElementById('pf-px-l').textContent = padVal.replace('px', '');
-  document.getElementById('pf-px-r').textContent = padVal.replace('px', '');
-
-  // Tokens: Layout
-  document.getElementById('po-pad-v').innerHTML =
-    escVar('var(' + pyVar + ', ' + pyVal + ') var(' + padVar + ', ' + padVal + ');');
-  document.getElementById('po-gap-v').innerHTML =
-    escVar('var(' + gapVar + ', ' + gapVal + ');');
-
-  // Tokens: Style
-  document.getElementById('po-r-v').innerHTML = escVar('var(--ds-radius-2x, 8px);');
-  document.getElementById('po-bg-v').innerHTML =
-    '<span class="fn">var</span>(' + vars.bg + ', <span class="dot" style="background:' + colors.bg + '"></span> ' + colors.bg + ');';
-  var shadow = type === 'text' ? 'none' : '0px 2px 2px #E0E0E0...';
-  document.getElementById('po-sh-v').textContent = shadow + ';';
-
-  // Tokens: Colors (как Layout/Style — строки с var())
-  document.getElementById('po-cbg-v').innerHTML = escVar('var(' + vars.bg + ', ' + colors.bg + ');');
-  document.getElementById('po-ctl-v').innerHTML = escVar('var(' + vars.label + ', ' + colors.label + ');');
-
-  // CSS: код с номерами строк и подсветкой
-  var lines = [
-    'display: inline-flex;',
-    'padding: var(' + pyVar + ', ' + pyVal + ') var(' + padVar + ', ' + padVal + ');',
-    'justify-content: center;',
-    'align-items: center;',
-    'gap: var(' + gapVar + ', ' + gapVal + ');',
-    'border-radius: var(--ds-radius-2x, 8px);',
-    'background: var(' + vars.bg + ', ' + colors.bg + ');'
-  ];
-  if (type === 'outlined') lines.push('border: 1px solid var(' + vars.border + ', ' + colors.border + ');');
-  lines.push('box-shadow: ' + shadow + ';');
-  lines.push('color: var(' + vars.label + ', ' + colors.label + ');');
-  lastCssLines = lines;
-  document.getElementById('cc-css').innerHTML = renderCss(lines);
-}
-
-// вкладки HTML | CSS | Tokens (только блок «Компонента», не «Вариантов»)
-var ccActive = 'html';
-document.querySelectorAll('#component-code .cc-tabs button').forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    document.querySelectorAll('#component-code .cc-tabs button').forEach(function (b) { b.classList.remove('is-active'); });
-    btn.classList.add('is-active');
-    ccActive = btn.dataset.cc;
-    document.querySelectorAll('#component-code .cc-panel').forEach(function (p) { p.classList.remove('is-active'); });
-    document.getElementById('cc-' + ccActive).classList.add('is-active');
-    // заголовок — название активной вкладки (HTML → «HTML», CSS → «CSS», Tokens → «TOKENS»)
-    document.getElementById('po-title').textContent =
-      ccActive === 'tokens' ? 'TOKENS' : ccActive.toUpperCase();
-  });
-});
-
-// сбор текста вкладки Tokens (Layout/Style/Colors) для копирования
-function collectTokensText(panelId) {
-  var panel = document.getElementById(panelId);
-  if (!panel) return '';
-  var out = [];
-  panel.querySelectorAll('.insp-section').forEach(function (sec) {
-    var title = sec.querySelector('.insp-title');
-    if (title) out.push(title.textContent);
-    // идём по DOM-порядку: строки, подписи и свотчи чередуются как на экране
-    sec.querySelectorAll('.insp-row, .insp-sub, .insp-swatch').forEach(function (el) {
-      var line;
-      if (el.classList.contains('insp-row')) {
-        var k = el.querySelector('.k');
-        var v = el.querySelector('.v');
-        line = (k ? k.textContent : '') + (v ? ' ' + v.textContent : '');
-      } else if (el.classList.contains('insp-sub')) {
-        line = el.textContent;
-      } else {
-        var t = el.querySelector('.t');
-        var hex = el.querySelector('.hex');
-        line = (t ? t.textContent : '') + (hex ? ' ' + hex.textContent : '');
-      }
-      out.push(line.replace(/\s+/g, ' ').trim());
-    });
-  });
-  return out.join('\n');
-}
-
-// копирование активной вкладки через иконку
-document.getElementById('cc-copy').addEventListener('click', function () {
-  var text;
-  if (ccActive === 'html') text = lastHtmlLines.join('\n');
-  else if (ccActive === 'css') text = lastCssLines.join('\n');
-  else text = collectTokensText('cc-tokens');
-  function done() {
-    var copy = document.getElementById('cc-copy');
-    copy.classList.add('copied');
-    setTimeout(function () { copy.classList.remove('copied'); }, 1500);
-  }
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(done).catch(function () { fallbackCopy(text); done(); });
-  } else { fallbackCopy(text); done(); }
-});
-function fallbackCopy(text) {
-  var ta = document.createElement('textarea');
-  ta.value = text;
-  ta.style.position = 'fixed';
-  ta.style.opacity = '0';
-  document.body.appendChild(ta);
-  ta.select();
-  try { document.execCommand('copy'); } catch (e) {}
-  document.body.removeChild(ta);
-}
-
-/* ============================================================
-   Поведение: авто-демо состояний и курсор (как в figma.site)
-   ============================================================ */
-(function () {
-  var panel = document.getElementById('tab-behavior');
-  var demos = document.querySelectorAll('[data-beh-anim]');
-  if (!panel || !demos.length) return;
-  demos.forEach(function (btn) {
-    var wrap = btn.parentElement;
-    var cursor = wrap.querySelector('.beh-cursor');
-    var svg = cursor.querySelector('svg');
-    var label = wrap.parentElement.querySelector('.beh-state');
-    var isHover = btn.dataset.behAnim === 'hover';
-    var seq = isHover ? ['default', 'default', 'hover', 'hover'] : ['default', 'hover', 'press'];
-    var interval = isHover ? 800 : 1200;
-    var colors = BTN.colors.accent[isHover ? 'filled' : 'outlined'];
-    var i = 0;
-    setInterval(function () {
-      if (!panel.classList.contains('is-active')) return; // анимация только на открытой вкладке
-      i = (i + 1) % seq.length;
-      var st = seq[i];
-      var c = colors[st];
-      btn.style.background = c.bg;
-      btn.style.borderColor = c.border;
-      btn.style.color = c.label;
-      cursor.classList.toggle('is-on', st === 'hover' || st === 'press');
-      svg.classList.toggle('is-press', st === 'press');
-      label.textContent = st;
-    }, interval);
-  });
-})();
-
-// лоадер: клик → «Saving data...» 2с → «Saved!» + галочка 2с → сброс (как в figma.site)
-var loaderBtn = document.getElementById('beh-loader-btn');
-var loaderCap = document.querySelector('.beh-loader__cap');
-if (loaderBtn && loaderCap) {
-  var loading = false;
-  loaderBtn.addEventListener('click', function () {
-    if (loading) return;
-    loading = true;
-    loaderBtn.style.pointerEvents = 'none';
-    loaderBtn.innerHTML = '<span class="ds-spinner" aria-hidden="true"></span><span class="ds-btn__label">Save Changes</span>';
-    loaderCap.textContent = 'Saving data...';
-    setTimeout(function () {
-      loaderBtn.innerHTML = '<span class="ds-btn__icon material-icons" aria-hidden="true">check</span><span class="ds-btn__label">Saved!</span>';
-      loaderCap.textContent = 'Done!';
-      setTimeout(function () {
-        loaderBtn.innerHTML = '<span class="ds-btn__label">Save Changes</span>';
-        loaderCap.textContent = 'Click to test loader';
-        loaderBtn.style.pointerEvents = '';
-        loading = false;
-      }, 2000);
-    }, 2000);
-  });
-}
-
-/* ============================================================
-   Копирование кода
-   ============================================================ */
-document.querySelectorAll('.copy-btn').forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    var target = document.getElementById(btn.dataset.copy);
-    var codeEl = target.querySelector ? target.querySelector('.po-css__code') : null;
-    var text = (codeEl ? codeEl.textContent : target.textContent).trim();
-    function done() {
-      btn.textContent = 'Скопировано ✓';
-      btn.classList.add('copied');
-      setTimeout(function () { btn.textContent = 'Копировать'; btn.classList.remove('copied'); }, 1500);
-    }
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(done).catch(function () { fallbackCopy(text); done(); });
-    } else { fallbackCopy(text); done(); }
-  });
-});
-
-// ============================================================
-// Вкладка «Figma» — таблица токенов Button в иерархии переменных Figma
-// ============================================================
-function buildFigmaTable() {
-  var host = document.getElementById('figma-table');
-  if (!host) return;
-  var keys = Object.keys(FIGMA).filter(function (k) { return k.indexOf('Button/') === 0; });
-  var SO = { Accent:0, Negative:1, Neutral:2, Positive:3, Warning:4, Disable:5, 'M size':6, 'S size':7, 'XS size':8, 'Border radius':9, 'Border size':10 };
-  var TO = { Filled:0, Outlined:1, Text:2 };
-  var STO = { Default:0, Hover:1, Press:2 };
-  var PO = { 'Background':0, 'Border color':1, 'Text color':2, 'Icon color':3 };
-  function segOrder(seg, idx) {
-    if (idx === 0) return 0;
-    if (idx === 1) return SO[seg] !== undefined ? SO[seg] : 99;
-    if (idx === 2) return TO[seg] !== undefined ? TO[seg] : 99;
-    if (idx === 3) return STO[seg] !== undefined ? STO[seg] : 99;
-    if (idx === 4) return PO[seg] !== undefined ? PO[seg] : 99;
-    return 99;
-  }
-  keys.sort(function (a, b) {
-    var pa = a.split('/'), pb = b.split('/');
-    var n = Math.max(pa.length, pb.length);
-    for (var i = 0; i < n; i++) { var oa = segOrder(pa[i], i), ob = segOrder(pb[i], i); if (oa !== ob) return oa - ob; }
-    return 0;
-  });
-  function propGroup(p) {
-    if (/^Background/.test(p)) return 'bg';
-    if (/^Border/.test(p)) return 'border';
-    if (/^Text color/.test(p)) return 'label';
-    if (/^Icon color/.test(p)) return 'icon';
-    return null;
-  }
-  function parseVar(parts) {
-    if (parts.length === 5) return { style: parts[1].toLowerCase(), type: parts[2].toLowerCase(), state: parts[3].toLowerCase(), group: propGroup(parts[4]) };
-    if (parts.length >= 3 && parts[1].toLowerCase() === 'disable') return { style: 'disable', type: parts.length >= 3 && /^Background/.test(parts[2]) ? parts[2].split(' ')[1] : 'filled', state: 'disable', group: propGroup(parts[2]) };
-    return null;
-  }
-  var tree = {};
-  keys.forEach(function (k) {
-    var parts = k.split('/'), node = tree;
-    for (var i = 0; i < parts.length; i++) { var seg = parts[i]; if (i === parts.length - 1) { node[seg] = { __v: FIGMA[k], __a: (FIGMA_ALIAS[k] || ''), __parts: parts }; } else { node[seg] = node[seg] || {}; node = node[seg]; } }
-  });
-  var flat = [];
-  (function render(node, depth, prefix) {
-    Object.keys(node).forEach(function (seg) {
-      var path = prefix ? prefix + '/' + seg : seg;
-      var child = node[seg];
-      if (child.__v !== undefined) {
-        flat.push({ type:'var', seg:seg, depth:depth, path:path, val:child.__v, alias:child.__a, ex:'' });
-      } else {
-        var folder = { type:'folder', seg:seg, depth:depth, path:path, index:flat.length, count:0, btn:'' };
-        // одна кнопка на состояние: если все дети папки — свойства (листья), это группа состояния
-        var childSegs = Object.keys(child);
-        var leafSms = childSegs.filter(function (k) { return child[k].__v !== undefined; });
-        if (leafSms.length && leafSms.length === childSegs.length) {
-          var samp = child[leafSms[0]];
-          var rr = parseVar(samp.__parts);
-          if (rr && rr.group) { try { folder.btn = stateButton(rr.style, rr.type, rr.state, rr.group); } catch (e) { folder.btn = ''; } }
-        }
-        flat.push(folder);
-        render(child, depth + 1, path);
-        folder.count = flat.length - folder.index - 1;
-      }
-    });
-  })(tree, 0, '');
-  var html = '<table class="token-table figma-table"><thead><tr><th>Переменная</th><th>Алиас</th><th>Значение</th><th>Пример</th></tr></thead><tbody>';
-  flat.forEach(function (r) {
-    if (r.type === 'folder') {
-      html += '<tr class="group-row figma-group' + (r.btn ? ' is-folded' : '') + '" data-count="' + r.count + '"><td style="padding-left:' + (r.depth * 14 + 8) + 'px" colspan="3"><span class="fold-tri"></span>' + r.seg + '</td><td class="tok-example">' + r.btn + '</td></tr>';
-    } else {
-      html += '<tr class="figma-var"><td class="figma-path" style="padding-left:' + (r.depth * 14 + 24) + 'px">' + r.seg + '</td><td class="tok-alias">' + r.alias + '</td><td class="tok-val">' + r.val + '</td><td class="tok-example">' + r.ex + '</td></tr>';
-    }
-  });
-  html += '</tbody></table>';
-  host.innerHTML = html;
-  // свернуть состояния по умолчанию (строки-свойства у них скрыты) — компактное дерево, значения по клику
-  host.querySelectorAll('tr.figma-group.is-folded').forEach(function (tr) {
-    var tbody = tr.parentElement;
-    var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
-    var idx = rows.indexOf(tr);
-    var count = +tr.getAttribute('data-count');
-    for (var j = idx + 1; j <= idx + count; j++) { if (rows[j]) rows[j].style.display = 'none'; }
-    tr.classList.add('collapsed');
-  });
-  host.querySelectorAll('.figma-group .fold-tri').forEach(function (tri) {
-    tri.addEventListener('click', function (e) {
-      e.stopPropagation();
-      var tr = tri.closest('tr');
-      var tbody = tr.parentElement;
-      var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
-      var idx = rows.indexOf(tr);
-      var count = +tr.getAttribute('data-count');
-      var collapse = !tr.classList.contains('collapsed');
-      for (var j = idx + 1; j <= idx + count; j++) {
-        if (!rows[j]) break;
-        rows[j].style.display = collapse ? 'none' : '';
-        if (collapse) rows[j].classList.add('collapsed');
-      }
-      tr.classList.toggle('collapsed', collapse);
-    });
-  });
-}
-buildFigmaTable();
-
 </script>
 
 <script src="sidebar.js?v=115"></script>
