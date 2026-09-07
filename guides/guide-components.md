@@ -12,6 +12,7 @@
 
 <!-- 2. Токены + нужные компоненты -->
 <link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="components/Button_DS/button.css">
 <link rel="stylesheet" href="components/Form-Field-Input_DS/input.css">
 <link rel="stylesheet" href="components/Checkbox_DS/checkbox.css">
