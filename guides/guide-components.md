@@ -12,10 +12,11 @@
 
 <!-- 2. Токены + нужные компоненты -->
 <link rel="stylesheet" href="tokens.css">
-<link rel="stylesheet" href="components/button.css">
-<link rel="stylesheet" href="components/input.css">
-<link rel="stylesheet" href="components/selection.css">
-<link rel="stylesheet" href="components/badge.css">
+<link rel="stylesheet" href="components/Button_DS/button.css">
+<link rel="stylesheet" href="components/Form-Field-Input_DS/input.css">
+<link rel="stylesheet" href="components/Checkbox_DS/checkbox.css">
+<link rel="stylesheet" href="components/Radio-Button_DS/radio.css">
+<link rel="stylesheet" href="components/Badge_DS/badge.css">
 ```
 
 ## Правила
