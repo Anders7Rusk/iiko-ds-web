@@ -341,7 +341,7 @@
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Arrow [55939:14119] — 13 вариантов; оси: Content */
+
 .ds-arrow {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
@@ -398,7 +398,7 @@
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Arrow list [55939:13307] — 13 вариантов; оси: Content */
+
 .ds-arrow-list {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
@@ -455,7 +455,7 @@
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Arrow menu [56090:1628] — 13 вариантов; оси: Content */
+
 .ds-arrow-menu {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
@@ -512,7 +512,7 @@
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Arrow select [57735:17989] — 13 вариантов; оси: Content */
+
 .ds-arrow-select {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
@@ -580,7 +580,7 @@ Variant=Empty — значение не выбрано; Populated — значе
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Autocomplete form [58107:8230] — 10 вариантов; оси: Variant, State */
+
 .ds-autocomplete-form {
   min-height: 48px;
   width: 250px;
@@ -806,7 +806,7 @@ Size=M, S, XS — по плотности интерфейса: M в форма�
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Button toggle [17039:71554] — 12 вариантов; оси: Size, Type, Content */
+
 .ds-button-toggle {
   width: fit-content;
   display: flex;
@@ -980,7 +980,7 @@ Variant=Normal / Error / Disable — обычный, с ошибкой (support-
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Checkbox label [53810:880] — 9 вариантов; оси: Variant, Type */
+
 .ds-checkbox-label {
   min-height: var(--ds-size-5x);
   width: fit-content;
@@ -1119,7 +1119,7 @@ Size=M — основной; S — плотные панели и строки �
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Chips [17168:83542] — 18 вариантов; оси: Size, Type, State */
+
 .ds-chips {
   width: fit-content;
   display: flex;
@@ -1273,7 +1273,7 @@ Size=M — основной; S — плотные панели и строки �
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Chips group [55750:5485] — 2 вариантов; оси: Size */
+
 .ds-chips-group {
   width: fit-content;
   display: flex;
@@ -1349,7 +1349,7 @@ Size=M — основной; S — плотные формы и панели.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Chips Input [52916:14622] — 16 вариантов; оси: Size, State */
+
 .ds-chips-input {
   width: 280px;
   display: flex;
@@ -1469,7 +1469,7 @@ _Описание компонента в Figma отсутствует._
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Chips Input [61382:55775] — 16 вариантов; оси: Size, State; ДУБЛЬ имени — второй сет «Chips Input», различать по node_id */
+
 .ds-chips-input-2 {
   width: 280px;
   display: flex;
@@ -1585,7 +1585,7 @@ _Описание компонента в Figma отсутствует._
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Chips input cell [60231:75648] — 8 вариантов; оси: State */
+
 .ds-chips-input-cell {
   min-height: var(--ds-size-10x);
   width: fit-content;
@@ -1677,7 +1677,7 @@ _Описание компонента в Figma отсутствует._
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Control arrow button [52868:3935] — 3 вариантов; оси: Size */
+
 .ds-control-arrow-button {
   width: fit-content;
   display: flex;
@@ -1745,7 +1745,7 @@ _Описание компонента в Figma отсутствует._
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Control Panel [58501:4052] — 3 вариантов; оси: Type */
+
 .ds-control-panel {
   display: flex;
   width: 280px;
@@ -1859,7 +1859,7 @@ _Описание компонента в Figma отсутствует._
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Control Panel [58982:11018] — 2 вариантов; оси: Type; ДУБЛЬ имени — второй сет «Control Panel», различать по node_id */
+
 .ds-control-panel-2 {
   display: flex;
   flex-direction: row;
@@ -1965,7 +1965,7 @@ Type=Year — выбор года.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Datepicker [58509:5439] — 3 вариантов; оси: Type */
+
 .ds-datepicker {
   width: fit-content;
   display: flex;
@@ -2068,7 +2068,7 @@ Type=Year — выбор года.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Dialog content [53535:1369] — 1 вариантов; оси: State */
+
 .ds-dialog-content {
   min-height: 204px;
   width: 500px;
@@ -2141,7 +2141,7 @@ Type=Year — выбор года.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Dialog footer [53749:638] — 1 вариантов; оси: State */
+
 .ds-dialog-footer {
   min-height: 69px;
   width: 501px;
@@ -2227,7 +2227,7 @@ Type=Year — выбор года.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Dialog header [53535:1322] — 2 вариантов; оси: Type */
+
 .ds-dialog-header {
   width: 500px;
   display: flex;
@@ -2317,7 +2317,7 @@ Type=Year — выбор года.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Dialog view [52952:1285] — 1 вариантов; оси: State */
+
 .ds-dialog-view {
   min-height: 364px;
   width: 500px;
@@ -2443,7 +2443,7 @@ Size=M, L — по длине и толщине линии.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Element [54104:20956] — 9 вариантов; оси: Content */
+
 .ds-element {
   display: flex;
   background: #ffffff;
@@ -2554,7 +2554,7 @@ Size=M, L — по длине и толщине линии.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Element Form Field [60231:76795] — 3 вариантов; оси: Variant */
+
 .ds-element-form-field {
   width: fit-content;
   display: flex;
@@ -2615,7 +2615,7 @@ Size=M, L — по длине и толщине линии.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Element left [59851:11313] — 5 вариантов; оси: Style */
+
 .ds-element-left {
   min-height: var(--ds-size-5x);
   width: fit-content;
@@ -2683,7 +2683,7 @@ Size=M, L — по длине и толщине линии.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Element menu [56090:1611] — 8 вариантов; оси: Content */
+
 .ds-element-menu {
   display: flex;
   background: #ffffff;
@@ -2787,7 +2787,7 @@ Size=M, L — по длине и толщине линии.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Element select [57735:17972] — 8 вариантов; оси: Content */
+
 .ds-element-select {
   display: flex;
   background: #ffffff;
@@ -2883,7 +2883,7 @@ Size=M, L — по длине и толщине линии.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Element sidenav [56598:2991] — 2 вариантов; оси: Content */
+
 .ds-element-sidenav {
   height: var(--ds-size-5x);
   width: var(--ds-size-5x);
@@ -2973,7 +2973,7 @@ Content=Counter — маркер с номером шага.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Element step [55403:7248] — 12 вариантов; оси: Content, State */
+
 .ds-element-step {
   min-height: var(--ds-size-6x);
   width: fit-content;
@@ -3090,7 +3090,7 @@ Variant=Default — обычная дата; Today — сегодня; Selected 
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Elements [58501:4220] — 30 вариантов; оси: Type, Variant, State */
+
 .ds-elements {
   display: flex;
   height: var(--ds-size-10x);
@@ -3303,7 +3303,7 @@ Variant=Default — обычное значение; Selected — выбранн
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Elements [58982:9594] — 8 вариантов; оси: Variant, State; ДУБЛЬ имени — второй сет «Elements», различать по node_id */
+
 .ds-elements-2 {
   min-height: var(--ds-size-10x);
   width: fit-content;
@@ -3395,7 +3395,7 @@ Variant=Default — обычное значение; Selected — выбранн
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Expansion content [61361:99603] — 2 вариантов; оси: Padding off/on */
+
 .ds-expansion-content {
   width: 597px;
   display: flex;
@@ -3446,7 +3446,7 @@ Variant=Default — обычное значение; Selected — выбранн
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Expansion group panel [56155:1676] — 2 вариантов; оси: Type ? */
+
 .ds-expansion-group-panel {
   width: 597px;
   display: flex;
@@ -3511,7 +3511,7 @@ _Описание компонента в Figma отсутствует._
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Form field cell [60220:72732] — 1 вариантов; оси: Variant */
+
 .ds-form-field-cell {
   min-height: var(--ds-size-10x);
   width: fit-content;
@@ -3572,7 +3572,7 @@ Orientation — сторона, с которой подсказка выход�
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Hint container [54593:479] — 10 вариантов; оси: Size, Orientation */
+
 .ds-hint-container {
   width: 250px;
   display: flex;
@@ -3688,7 +3688,7 @@ Orientation — сторона, с которой подсказка выход�
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Hint content [54713:3325] — 2 вариантов; оси: Content */
+
 .ds-hint-content {
   width: 250px;
   display: flex;
@@ -3786,7 +3786,7 @@ Orientation — сторона, с которой подсказка выход�
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Hint footer [54600:517] — 1 вариантов; оси: Content */
+
 .ds-hint-footer {
   min-height: 56px;
   width: 250px;
@@ -3881,7 +3881,7 @@ Orientation — сторона, с которой подсказка выход�
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Hint header [54594:2219] — 5 вариантов; оси: Style */
+
 .ds-hint-header {
   min-height: var(--ds-size-8x);
   width: 250px;
@@ -3991,7 +3991,7 @@ Orientation — сторона, с которой подсказка выход�
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Icon group [53467:1060] — 2 вариантов; оси: Size gap */
+
 .ds-icon-group {
   min-height: var(--ds-size-5x);
   width: fit-content;
@@ -4086,7 +4086,7 @@ State: Default, Hover, Focus, Focus+Placeholder, Focus+Value, Error, Error+Hover
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Input cell [60229:74436] — 8 вариантов; оси: State */
+
 .ds-input-cell {
   min-height: var(--ds-size-9x);
   width: 200px;
@@ -4181,7 +4181,7 @@ State: Default, Hover, Focus, Focus+Placeholder, Focus+Value, Error, Error+Hover
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Input Datepicker [58548:4764] — 2 вариантов; оси: Type */
+
 .ds-input-datepicker {
   min-height: 48px;
   width: 250px;
@@ -4276,7 +4276,7 @@ Size=M — основной; S и XS — плотные формы, панели
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Input number [17193:84750] — 29 вариантов; оси: Size, Variant, State */
+
 .ds-input-number {
   display: flex;
   flex-direction: row;
@@ -4392,7 +4392,7 @@ _Описание компонента в Figma отсутствует._
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Input number_but icon [56967:10506] — 1 вариантов; оси: — */
+
 .ds-input-number-but-icon {
   min-height: 56px;
   width: fit-content;
@@ -4487,7 +4487,7 @@ _Описание компонента в Figma отсутствует._
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Input Timepicker [58982:9561] — 2 вариантов; оси: Type */
+
 .ds-input-timepicker {
   min-height: 48px;
   width: 250px;
@@ -4576,7 +4576,7 @@ _Описание компонента в Figma отсутствует._
 <details><summary>CSS компонента</summary>
 
 ```css
-/* List (Сontainer) [57604:4762] — 1 вариантов; оси: Type */
+
 .ds-list-container {
   min-height: 257px;
   width: 258px;
@@ -4689,7 +4689,7 @@ _Описание компонента в Figma отсутствует._
 <details><summary>CSS компонента</summary>
 
 ```css
-/* List item [54101:7922] — 8 вариантов; оси: State */
+
 .ds-list-item {
   min-height: 68px;
   width: 258px;
@@ -4825,7 +4825,7 @@ Style=Main — основной; Inverse — инверсный для тёмн�
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Logo iiko [55332:19892] — 4 вариантов; оси: Size, Style */
+
 .ds-logo-iiko {
   height: 72px;
   display: flex;
@@ -4867,7 +4867,7 @@ Style=Main — основной; Inverse — инверсный для тёмн�
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Logo Syrve [56079:771] — 4 вариантов; оси: Size, Style */
+
 .ds-logo-syrve {
   height: 72px;
   display: flex;
@@ -4920,7 +4920,7 @@ Style=Main — основной; Inverse — инверсный для тёмн�
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Menu (Container) [54163:6705] — 1 вариантов; оси: Type */
+
 .ds-menu-container {
   min-height: 418px;
   width: 240px;
@@ -5049,7 +5049,7 @@ Style=Main — основной; Inverse — инверсный для тёмн�
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Menu item [56090:1476] — 7 вариантов; оси: State */
+
 .ds-menu-item {
   min-height: 68px;
   width: 258px;
@@ -5182,7 +5182,7 @@ _Описание компонента в Figma отсутствует._
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Picture [58937:3985] — 1 вариантов; оси: — */
+
 .ds-picture {
   min-height: 189px;
   width: 446px;
@@ -5282,7 +5282,7 @@ Variant=Normal / Error / Disable — обычный, с ошибкой, недо
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Radio button label [54095:4306] — 6 вариантов; оси: Variant, Type */
+
 .ds-radio-button-label {
   min-height: var(--ds-size-5x);
   width: fit-content;
@@ -5410,7 +5410,7 @@ Size=M, S — по толщине полосы под размер блока.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Scroll [53615:15339] — 12 вариантов; оси: Size, Position, State */
+
 .ds-scroll {
   display: flex;
   flex-direction: column;
@@ -5479,7 +5479,7 @@ Size=M, S — по толщине полосы под размер блока.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Scroll tabs [59032:1821] — 4 вариантов; оси: Orientation, State */
+
 .ds-scroll-tabs {
   min-height: var(--ds-size-7x);
   width: fit-content;
@@ -5566,7 +5566,7 @@ Size=M — основной; S — панели и шапки блоков; XS �
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Search [54453:1620] — 15 вариантов; оси: Size, State */
+
 .ds-search {
   display: flex;
   flex-direction: row;
@@ -5705,7 +5705,7 @@ Size=M — основной; S — панели и шапки блоков; XS �
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Select (Сontainer) [57735:17612] — 1 вариантов; оси: Type */
+
 .ds-select-container {
   min-height: 406px;
   width: 240px;
@@ -5836,7 +5836,7 @@ Size=M — основной; S — панели и шапки блоков; XS �
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Select cell [60231:74976] — 7 вариантов; оси: State */
+
 .ds-select-cell {
   min-height: var(--ds-size-9x);
   width: 200px;
@@ -5947,7 +5947,7 @@ Size=M — основной; S и XS — плотные формы и табли
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Select form [57862:17226] — 22 вариантов; оси: Size, Variant, State */
+
 .ds-select-form {
   width: 250px;
   display: flex;
@@ -6078,7 +6078,7 @@ Size=M — основной; S и XS — плотные формы и табли
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Select item [57735:17872] — 8 вариантов; оси: State, Subtitle */
+
 .ds-select-item {
   width: 258px;
   display: flex;
@@ -6227,7 +6227,7 @@ Size=M — основной; S и XS — плотные формы и табли
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Sidenav control [55142:1734] — 6 вариантов; оси: Mode, State */
+
 .ds-sidenav-control {
   min-height: 41px;
   display: flex;
@@ -6343,7 +6343,7 @@ Size=M — основной; S и XS — плотные формы и табли
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Sidenav Footer [55111:1056] — 3 вариантов; оси: Type, Mode */
+
 .ds-sidenav-footer {
   display: flex;
   width: 260px;
@@ -6438,7 +6438,7 @@ Size=M — основной; S и XS — плотные формы и табли
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Sidenav header [55045:637] — 3 вариантов; оси: Type, Mode */
+
 .ds-sidenav-header {
   display: flex;
   align-items: center;
@@ -6549,7 +6549,7 @@ Mode=Expanded — меню раскрыто (иконка + название); C
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Sidenav item [55070:3734] — 13 вариантов; оси: Type, Mode, State */
+
 .ds-sidenav-item {
   display: flex;
   width: 260px;
@@ -6679,7 +6679,7 @@ Mode=Dark — на светлых экранах; Light — на тёмных.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Snackbar [54373:10303] — 4 вариантов; оси: Type, Mode */
+
 .ds-snackbar {
   display: flex;
   flex-direction: column;
@@ -6781,7 +6781,7 @@ Mode=Dark — на светлых экранах; Light — на тёмных.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* State [54063:12395] — 2 вариантов; оси: State */
+
 .ds-state {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
@@ -6847,7 +6847,7 @@ Type=Filled — с подложкой, заметный. Type=Text — толь�
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Status [52928:6588] — 18 вариантов; оси: Style, Type */
+
 .ds-status {
   width: fit-content;
   display: flex;
@@ -7071,7 +7071,7 @@ Lvl=1 — основной уровень; Lvl=2 — вложенный.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Table 2 lvl [60074:44684] — 2 вариантов; оси: Type */
+
 .ds-table-2-lvl {
   min-height: 72px;
   display: flex;
@@ -7130,7 +7130,7 @@ Lvl=1 — основной уровень; Lvl=2 — вложенный.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Table Chips Input [60220:70978] — 8 вариантов; оси: Style */
+
 .ds-table-chips-input {
   min-height: var(--ds-size-6x);
   width: fit-content;
@@ -7234,7 +7234,7 @@ Lvl=1 — основной уровень; Lvl=2 — вложенный.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Table content cell [52954:1253] — 8 вариантов; оси: State */
+
 .ds-table-content-cell {
   min-height: var(--ds-size-9x);
   width: fit-content;
@@ -7320,7 +7320,7 @@ Lvl=1 — основной уровень; Lvl=2 — вложенный.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Table content row [60105:56764] — 5 вариантов; оси: State */
+
 .ds-table-content-row {
   min-height: var(--ds-size-9x);
   width: fit-content;
@@ -7379,7 +7379,7 @@ Lvl=1 — основной уровень; Lvl=2 — вложенный.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Table footer [59207:20759] — 1 вариантов; оси: Type */
+
 .ds-table-footer {
   height: 65px;
   width: 980px;
@@ -7449,7 +7449,7 @@ Lvl=1 — основной уровень; Lvl=2 — вложенный.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Table header cell [60098:45424] — 3 вариантов; оси: State */
+
 .ds-table-header-cell {
   min-height: var(--ds-size-9x);
   width: fit-content;
@@ -7535,7 +7535,7 @@ Lvl=1 — основной уровень; Lvl=2 — вложенный.
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Table header row [53556:3571] — 1 вариантов; оси: State */
+
 .ds-table-header-row {
   min-height: var(--ds-size-9x);
   width: fit-content;
@@ -7609,7 +7609,7 @@ Content=Text — с текстом; Icon — только иконки, когд
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Text UI [57938:18290] — 7 вариантов; оси: State */
+
 .ds-text-ui {
   min-height: 52px;
   width: fit-content;
@@ -7754,7 +7754,7 @@ Variant=Empty — поле без текста; Populated — с введённ�
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Textarea [57916:9023] — 13 вариантов; оси: Size, Variant, State */
+
 .ds-textarea {
   min-height: 96px;
   width: 250px;
@@ -7901,7 +7901,7 @@ Type=Time grid — сетка значений, когда нужен быстр
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Timepicker [58982:9858] — 2 вариантов; оси: Type */
+
 .ds-timepicker {
   width: fit-content;
   display: flex;
@@ -7991,7 +7991,7 @@ For icon=On — с местом под иконку у ветки; Off — бе�
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Tree [59564:1473] — 8 вариантов; оси: Level, Mode, For icon */
+
 .ds-tree {
   height: 44px;
   width: fit-content;
@@ -8089,7 +8089,7 @@ For icon=On — с местом под иконку у ветки; Off — бе�
 <details><summary>CSS компонента</summary>
 
 ```css
-/* Tree item [59564:1504] — 5 вариантов; оси: Mode */
+
 .ds-tree-item {
   height: 44px;
   display: flex;
@@ -8318,10 +8318,7 @@ For icon=On — с местом под иконку у ветки; Off — бе�
 Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип отрисуется **без интернета и без Google Fonts**. Подключать первым — иначе метрики (14/20, 16/24) поедут на системном шрифте.
 
 ```css
-/* Roboto 400/500 (latin + cyrillic), вшит в base64.
-   Прототип работает без интернета: подключать этот файл ПЕРВЫМ. */
 
-/* latin 400 */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
@@ -8331,7 +8328,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
 
-/* latin 500 */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
@@ -8341,7 +8337,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
 
-/* cyrillic 400 */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
@@ -8351,7 +8346,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
 }
 
-/* cyrillic 500 */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
@@ -8366,1779 +8360,1773 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 ### tokens.css (токены)
 
 ```css
-/* ============================================================
-   iiko DS — токены, сгенерированы напрямую из Figma Variables
-   Файл: Iiko Web DS (New) · выгрузка 2026-09-01
-   Переменных: 1743 в 10 коллекциях
-   Источник: плагин iiko DS — Variables Export → ds-variables.json
-   ============================================================ */
 
 :root {
 
-  /* ── Base Size (18) ─────────────────────────── */
-  --ds-size-0: 0px;   /* Size/0 */
-  --ds-size-0-5x: 2px;   /* Size/0,5x */
-  --ds-size-1x: 4px;   /* Size/1x */
-  --ds-size-1-5x: 6px;   /* Size/1,5x */
-  --ds-size-2x: 8px;   /* Size/2x */
-  --ds-size-2-5x: 10px;   /* Size/2,5x */
-  --ds-size-3x: 12px;   /* Size/3x */
-  --ds-size-3-5x: 14px;   /* Size/3,5x */
-  --ds-size-4x: 16px;   /* Size/4x */
-  --ds-size-5x: 20px;   /* Size/5x */
-  --ds-size-6x: 24px;   /* Size/6x */
-  --ds-size-7x: 28px;   /* Size/7x */
-  --ds-size-8x: 32px;   /* Size/8x */
-  --ds-size-circular: 9999px;   /* Size/Circular */
-  --ds-size-0-25x: 1px;   /* Size/0,25x */
-  --ds-size-8-5x: 34px;   /* Size/8,5x */
-  --ds-size-9x: 36px;   /* Size/9x */
-  --ds-size-10x: 40px;   /* Size/10x */
+  
+  --ds-size-0: 0px;   
+  --ds-size-0-5x: 2px;   
+  --ds-size-1x: 4px;   
+  --ds-size-1-5x: 6px;   
+  --ds-size-2x: 8px;   
+  --ds-size-2-5x: 10px;   
+  --ds-size-3x: 12px;   
+  --ds-size-3-5x: 14px;   
+  --ds-size-4x: 16px;   
+  --ds-size-5x: 20px;   
+  --ds-size-6x: 24px;   
+  --ds-size-7x: 28px;   
+  --ds-size-8x: 32px;   
+  --ds-size-circular: 9999px;   
+  --ds-size-0-25x: 1px;   
+  --ds-size-8-5x: 34px;   
+  --ds-size-9x: 36px;   
+  --ds-size-10x: 40px;   
 
-  /* ── Base Color (127) ─────────────────────────── */
-  --ds-palette-neutral-0: #ffffff;   /* Neutral/0 */
-  --ds-palette-neutral-100: #ebebeb;   /* Neutral/100 */
-  --ds-palette-neutral-200: #e0e0e0;   /* Neutral/200 */
-  --ds-palette-neutral-300: #d6d6d6;   /* Neutral/300 */
-  --ds-palette-neutral-400: #bdbdbd;   /* Neutral/400 */
-  --ds-palette-neutral-500: #9e9e9e;   /* Neutral/500 */
-  --ds-palette-neutral-600: #757575;   /* Neutral/600 */
-  --ds-palette-neutral-700: #616161;   /* Neutral/700 */
-  --ds-palette-neutral-800: #424242;   /* Neutral/800 */
-  --ds-palette-neutral-900: #333333;   /* Neutral/900 */
-  --ds-palette-negative-5: #fbf8f8;   /* Negative/5 */
-  --ds-palette-negative-200: #ffcccc;   /* Negative/200 */
-  --ds-palette-negative-300: #ffb8b8;   /* Negative/300 */
-  --ds-palette-negative-500: #ff5252;   /* Negative/500 */
-  --ds-palette-negative-700: #de1a12;   /* Negative/700 */
-  --ds-palette-negative-900: #7f0f0a;   /* Negative/900 */
-  --ds-palette-warning-5: #fdfcfa;   /* Warning/5 */
-  --ds-palette-warning-200: #ffe9cc;   /* Warning/200 */
-  --ds-palette-warning-300: #ffd9a8;   /* Warning/300 */
-  --ds-palette-warning-500: #ffab40;   /* Warning/500 */
-  --ds-palette-warning-700: #ea7806;   /* Warning/700 */
-  --ds-palette-warning-900: #994000;   /* Warning/900 */
-  --ds-palette-positive-5: #f8fbfa;   /* Positive/5 */
-  --ds-palette-positive-200: #c1f1d5;   /* Positive/200 */
-  --ds-palette-positive-300: #97e8b9;   /* Positive/300 */
-  --ds-palette-positive-500: #14b456;   /* Positive/500 */
-  --ds-palette-positive-700: #0f852c;   /* Positive/700 */
-  --ds-palette-positive-900: #0a571a;   /* Positive/900 */
-  --ds-palette-accent-5: #f8f9fc;   /* Accent/5 */
-  --ds-palette-accent-200: #ccdfff;   /* Accent/200 */
-  --ds-palette-accent-300: #a8c9ff;   /* Accent/300 */
-  --ds-palette-accent-500: #448aff;   /* Accent/500 */
-  --ds-palette-accent-700: #2651b5;   /* Accent/700 */
-  --ds-palette-accent-900: #162a69;   /* Accent/900 */
-  --ds-palette-contrast-1-5: #fbf7fc;   /* Contrast-1/5 */
-  --ds-palette-contrast-1-700: #9c27b0;   /* Contrast-1/700 */
-  --ds-palette-contrast-2-990: #291a14;   /* Contrast-2/990 */
-  --ds-palette-contrast-3-5: #f9fafb;   /* Contrast-3/5 */
-  --ds-palette-contrast-3-990: #142229;   /* Contrast-3/990 */
-  --ds-palette-accent-100: #e8f0ff;   /* Accent/100 */
-  --ds-palette-neutral-transparent: rgba(255, 255, 255, 0);   /* Neutral/Transparent */
-  --ds-palette-accent-990: #0d111c;   /* Accent/990 */
-  --ds-palette-accent-950: #151d37;   /* Accent/950 */
-  --ds-palette-accent-800: #123da1;   /* Accent/800 */
-  --ds-palette-accent-600: #3969d5;   /* Accent/600 */
-  --ds-palette-accent-400: #75a9ff;   /* Accent/400 */
-  --ds-palette-accent-50: #f0f5ff;   /* Accent/50 */
-  --ds-palette-accent-10: #f5f9ff;   /* Accent/10 */
-  --ds-palette-positive-990: #04250b;   /* Positive/990 */
-  --ds-palette-positive-950: #074013;   /* Positive/950 */
-  --ds-palette-positive-800: #0c6e21;   /* Positive/800 */
-  --ds-palette-positive-600: #119c34;   /* Positive/600 */
-  --ds-palette-positive-400: #50d889;   /* Positive/400 */
-  --ds-palette-positive-100: #e0f8ea;   /* Positive/100 */
-  --ds-palette-positive-50: #ebfbf2;   /* Positive/50 */
-  --ds-palette-positive-10: #f3fcf7;   /* Positive/10 */
-  --ds-palette-warning-950: #662a00;   /* Warning/950 */
-  --ds-palette-warning-990: #331500;   /* Warning/990 */
-  --ds-palette-warning-800: #cc5f00;   /* Warning/800 */
-  --ds-palette-warning-600: #fe8c06;   /* Warning/600 */
-  --ds-palette-warning-400: #ffc375;   /* Warning/400 */
-  --ds-palette-warning-100: #fff4e5;   /* Warning/100 */
-  --ds-palette-warning-50: #fff9f0;   /* Warning/50 */
-  --ds-palette-warning-10: #fffcf8;   /* Warning/10 */
-  --ds-palette-negative-950: #500907;   /* Negative/950 */
-  --ds-palette-negative-990: #300403;   /* Negative/990 */
-  --ds-palette-negative-800: #af150e;   /* Negative/800 */
-  --ds-palette-negative-600: #f4372f;   /* Negative/600 */
-  --ds-palette-negative-400: #ff8585;   /* Negative/400 */
-  --ds-palette-negative-100: #ffe5e5;   /* Negative/100 */
-  --ds-palette-negative-50: #fff2f2;   /* Negative/50 */
-  --ds-palette-negative-10: #fff8f8;   /* Negative/10 */
-  --ds-palette-neutral-990: #121212;   /* Neutral/990 */
-  --ds-palette-neutral-950: #212121;   /* Neutral/950 */
-  --ds-palette-neutral-10: #fafafa;   /* Neutral/10 */
-  --ds-palette-neutral-50: #f5f5f5;   /* Neutral/50 */
-  --ds-palette-contrast-1-50: #faf2fc;   /* Contrast-1/50 */
-  --ds-palette-contrast-1-100: #f4e2f9;   /* Contrast-1/100 */
-  --ds-palette-contrast-1-200: #efd5f6;   /* Contrast-1/200 */
-  --ds-palette-contrast-1-300: #e4b8ef;   /* Contrast-1/300 */
-  --ds-palette-contrast-1-400: #d58ee6;   /* Contrast-1/400 */
-  --ds-palette-contrast-1-500: #c564dd;   /* Contrast-1/500 */
-  --ds-palette-contrast-1-600: #b53ad4;   /* Contrast-1/600 */
-  --ds-palette-contrast-1-800: #761e86;   /* Contrast-1/800 */
-  --ds-palette-contrast-1-990: #2c0b32;   /* Contrast-1/990 */
-  --ds-palette-contrast-1-950: #3f1047;   /* Contrast-1/950 */
-  --ds-palette-contrast-1-900: #641971;   /* Contrast-1/900 */
-  --ds-palette-contrast-1-10: #fcf6fd;   /* Contrast-1/10 */
-  --ds-palette-contrast-2-5: #faf8f8;   /* Contrast-2/5 */
-  --ds-palette-contrast-2-950: #3e261e;   /* Contrast-2/950 */
-  --ds-palette-contrast-2-900: #5a3f35;   /* Contrast-2/900 */
-  --ds-palette-contrast-2-800: #795548;   /* Contrast-2/800 */
-  --ds-palette-contrast-2-700: #896152;   /* Contrast-2/700 */
-  --ds-palette-contrast-2-600: #a57969;   /* Contrast-2/600 */
-  --ds-palette-contrast-2-500: #c29180;   /* Contrast-2/500 */
-  --ds-palette-contrast-2-400: #d9ac9b;   /* Contrast-2/400 */
-  --ds-palette-contrast-2-300: #ebc9bc;   /* Contrast-2/300 */
-  --ds-palette-contrast-2-200: #f1d9d0;   /* Contrast-2/200 */
-  --ds-palette-contrast-2-100: #f7e9e3;   /* Contrast-2/100 */
-  --ds-palette-contrast-2-50: #fcf5f3;   /* Contrast-2/50 */
-  --ds-palette-contrast-2-10: #fcf8f6;   /* Contrast-2/10 */
-  --ds-palette-contrast-3-950: #263136;   /* Contrast-3/950 */
-  --ds-palette-contrast-3-900: #36474e;   /* Contrast-3/900 */
-  --ds-palette-contrast-3-800: #4b626d;   /* Contrast-3/800 */
-  --ds-palette-contrast-3-700: #607d8b;   /* Contrast-3/700 */
-  --ds-palette-contrast-3-600: #728f9d;   /* Contrast-3/600 */
-  --ds-palette-contrast-3-500: #90a7b2;   /* Contrast-3/500 */
-  --ds-palette-contrast-3-400: #a9c0cb;   /* Contrast-3/400 */
-  --ds-palette-contrast-3-300: #c9d7de;   /* Contrast-3/300 */
-  --ds-palette-contrast-3-200: #d9e3e8;   /* Contrast-3/200 */
-  --ds-palette-contrast-3-100: #e7eff3;   /* Contrast-3/100 */
-  --ds-palette-contrast-3-50: #f4f9fb;   /* Contrast-3/50 */
-  --ds-palette-contrast-3-10: #f8fafc;   /* Contrast-3/10 */
-  --ds-palette-contrast-4-5: #f9fbea;   /* Contrast-4/5 */
-  --ds-palette-contrast-4-10: #f6f8dd;   /* Contrast-4/10 */
-  --ds-palette-contrast-4-50: #f3f6d5;   /* Contrast-4/50 */
-  --ds-palette-contrast-4-100: #edf2c0;   /* Contrast-4/100 */
-  --ds-palette-contrast-4-200: #e8edab;   /* Contrast-4/200 */
-  --ds-palette-contrast-4-300: #e2e996;   /* Contrast-4/300 */
-  --ds-palette-contrast-4-400: #dce481;   /* Contrast-4/400 */
-  --ds-palette-contrast-4-500: #d6e06c;   /* Contrast-4/500 */
-  --ds-palette-contrast-4-600: #cad742;   /* Contrast-4/600 */
-  --ds-palette-contrast-4-700: #b1bd28;   /* Contrast-4/700 */
-  --ds-palette-contrast-4-800: #8a931f;   /* Contrast-4/800 */
-  --ds-palette-contrast-4-900: #626916;   /* Contrast-4/900 */
-  --ds-palette-contrast-4-950: #4f5412;   /* Contrast-4/950 */
-  --ds-palette-contrast-4-990: #272a09;   /* Contrast-4/990 */
+  
+  --ds-palette-neutral-0: #ffffff;   
+  --ds-palette-neutral-100: #ebebeb;   
+  --ds-palette-neutral-200: #e0e0e0;   
+  --ds-palette-neutral-300: #d6d6d6;   
+  --ds-palette-neutral-400: #bdbdbd;   
+  --ds-palette-neutral-500: #9e9e9e;   
+  --ds-palette-neutral-600: #757575;   
+  --ds-palette-neutral-700: #616161;   
+  --ds-palette-neutral-800: #424242;   
+  --ds-palette-neutral-900: #333333;   
+  --ds-palette-negative-5: #fbf8f8;   
+  --ds-palette-negative-200: #ffcccc;   
+  --ds-palette-negative-300: #ffb8b8;   
+  --ds-palette-negative-500: #ff5252;   
+  --ds-palette-negative-700: #de1a12;   
+  --ds-palette-negative-900: #7f0f0a;   
+  --ds-palette-warning-5: #fdfcfa;   
+  --ds-palette-warning-200: #ffe9cc;   
+  --ds-palette-warning-300: #ffd9a8;   
+  --ds-palette-warning-500: #ffab40;   
+  --ds-palette-warning-700: #ea7806;   
+  --ds-palette-warning-900: #994000;   
+  --ds-palette-positive-5: #f8fbfa;   
+  --ds-palette-positive-200: #c1f1d5;   
+  --ds-palette-positive-300: #97e8b9;   
+  --ds-palette-positive-500: #14b456;   
+  --ds-palette-positive-700: #0f852c;   
+  --ds-palette-positive-900: #0a571a;   
+  --ds-palette-accent-5: #f8f9fc;   
+  --ds-palette-accent-200: #ccdfff;   
+  --ds-palette-accent-300: #a8c9ff;   
+  --ds-palette-accent-500: #448aff;   
+  --ds-palette-accent-700: #2651b5;   
+  --ds-palette-accent-900: #162a69;   
+  --ds-palette-contrast-1-5: #fbf7fc;   
+  --ds-palette-contrast-1-700: #9c27b0;   
+  --ds-palette-contrast-2-990: #291a14;   
+  --ds-palette-contrast-3-5: #f9fafb;   
+  --ds-palette-contrast-3-990: #142229;   
+  --ds-palette-accent-100: #e8f0ff;   
+  --ds-palette-neutral-transparent: rgba(255, 255, 255, 0);   
+  --ds-palette-accent-990: #0d111c;   
+  --ds-palette-accent-950: #151d37;   
+  --ds-palette-accent-800: #123da1;   
+  --ds-palette-accent-600: #3969d5;   
+  --ds-palette-accent-400: #75a9ff;   
+  --ds-palette-accent-50: #f0f5ff;   
+  --ds-palette-accent-10: #f5f9ff;   
+  --ds-palette-positive-990: #04250b;   
+  --ds-palette-positive-950: #074013;   
+  --ds-palette-positive-800: #0c6e21;   
+  --ds-palette-positive-600: #119c34;   
+  --ds-palette-positive-400: #50d889;   
+  --ds-palette-positive-100: #e0f8ea;   
+  --ds-palette-positive-50: #ebfbf2;   
+  --ds-palette-positive-10: #f3fcf7;   
+  --ds-palette-warning-950: #662a00;   
+  --ds-palette-warning-990: #331500;   
+  --ds-palette-warning-800: #cc5f00;   
+  --ds-palette-warning-600: #fe8c06;   
+  --ds-palette-warning-400: #ffc375;   
+  --ds-palette-warning-100: #fff4e5;   
+  --ds-palette-warning-50: #fff9f0;   
+  --ds-palette-warning-10: #fffcf8;   
+  --ds-palette-negative-950: #500907;   
+  --ds-palette-negative-990: #300403;   
+  --ds-palette-negative-800: #af150e;   
+  --ds-palette-negative-600: #f4372f;   
+  --ds-palette-negative-400: #ff8585;   
+  --ds-palette-negative-100: #ffe5e5;   
+  --ds-palette-negative-50: #fff2f2;   
+  --ds-palette-negative-10: #fff8f8;   
+  --ds-palette-neutral-990: #121212;   
+  --ds-palette-neutral-950: #212121;   
+  --ds-palette-neutral-10: #fafafa;   
+  --ds-palette-neutral-50: #f5f5f5;   
+  --ds-palette-contrast-1-50: #faf2fc;   
+  --ds-palette-contrast-1-100: #f4e2f9;   
+  --ds-palette-contrast-1-200: #efd5f6;   
+  --ds-palette-contrast-1-300: #e4b8ef;   
+  --ds-palette-contrast-1-400: #d58ee6;   
+  --ds-palette-contrast-1-500: #c564dd;   
+  --ds-palette-contrast-1-600: #b53ad4;   
+  --ds-palette-contrast-1-800: #761e86;   
+  --ds-palette-contrast-1-990: #2c0b32;   
+  --ds-palette-contrast-1-950: #3f1047;   
+  --ds-palette-contrast-1-900: #641971;   
+  --ds-palette-contrast-1-10: #fcf6fd;   
+  --ds-palette-contrast-2-5: #faf8f8;   
+  --ds-palette-contrast-2-950: #3e261e;   
+  --ds-palette-contrast-2-900: #5a3f35;   
+  --ds-palette-contrast-2-800: #795548;   
+  --ds-palette-contrast-2-700: #896152;   
+  --ds-palette-contrast-2-600: #a57969;   
+  --ds-palette-contrast-2-500: #c29180;   
+  --ds-palette-contrast-2-400: #d9ac9b;   
+  --ds-palette-contrast-2-300: #ebc9bc;   
+  --ds-palette-contrast-2-200: #f1d9d0;   
+  --ds-palette-contrast-2-100: #f7e9e3;   
+  --ds-palette-contrast-2-50: #fcf5f3;   
+  --ds-palette-contrast-2-10: #fcf8f6;   
+  --ds-palette-contrast-3-950: #263136;   
+  --ds-palette-contrast-3-900: #36474e;   
+  --ds-palette-contrast-3-800: #4b626d;   
+  --ds-palette-contrast-3-700: #607d8b;   
+  --ds-palette-contrast-3-600: #728f9d;   
+  --ds-palette-contrast-3-500: #90a7b2;   
+  --ds-palette-contrast-3-400: #a9c0cb;   
+  --ds-palette-contrast-3-300: #c9d7de;   
+  --ds-palette-contrast-3-200: #d9e3e8;   
+  --ds-palette-contrast-3-100: #e7eff3;   
+  --ds-palette-contrast-3-50: #f4f9fb;   
+  --ds-palette-contrast-3-10: #f8fafc;   
+  --ds-palette-contrast-4-5: #f9fbea;   
+  --ds-palette-contrast-4-10: #f6f8dd;   
+  --ds-palette-contrast-4-50: #f3f6d5;   
+  --ds-palette-contrast-4-100: #edf2c0;   
+  --ds-palette-contrast-4-200: #e8edab;   
+  --ds-palette-contrast-4-300: #e2e996;   
+  --ds-palette-contrast-4-400: #dce481;   
+  --ds-palette-contrast-4-500: #d6e06c;   
+  --ds-palette-contrast-4-600: #cad742;   
+  --ds-palette-contrast-4-700: #b1bd28;   
+  --ds-palette-contrast-4-800: #8a931f;   
+  --ds-palette-contrast-4-900: #626916;   
+  --ds-palette-contrast-4-950: #4f5412;   
+  --ds-palette-contrast-4-990: #272a09;   
 
-  /* ── Space (13) ─────────────────────────── */
-  --ds-space-4x: var(--ds-size-4x);   /* Space/4x */
-  --ds-space-3x: var(--ds-size-3x);   /* Space/3x */
-  --ds-space-6x: var(--ds-size-6x);   /* Space/6x */
-  --ds-space-2-5x: var(--ds-size-2-5x);   /* Space/2,5x */
-  --ds-space-1-5x: var(--ds-size-1-5x);   /* Space/1,5x */
-  --ds-space-5x: var(--ds-size-5x);   /* Space/5x */
-  --ds-space-8x: var(--ds-size-8x);   /* Space/8x */
-  --ds-space-3-5x: var(--ds-size-3-5x);   /* Space/3,5x */
-  --ds-space-0: var(--ds-size-0);   /* Space/0 */
-  --ds-space-2x: var(--ds-size-2x);   /* Space/2x */
-  --ds-space-7x: var(--ds-size-7x);   /* Space/7x */
-  --ds-space-1x: var(--ds-size-1x);   /* Space/1x */
-  --ds-space-0-5x: var(--ds-size-0-5x);   /* Space/0,5x */
+  
+  --ds-space-4x: var(--ds-size-4x);   
+  --ds-space-3x: var(--ds-size-3x);   
+  --ds-space-6x: var(--ds-size-6x);   
+  --ds-space-2-5x: var(--ds-size-2-5x);   
+  --ds-space-1-5x: var(--ds-size-1-5x);   
+  --ds-space-5x: var(--ds-size-5x);   
+  --ds-space-8x: var(--ds-size-8x);   
+  --ds-space-3-5x: var(--ds-size-3-5x);   
+  --ds-space-0: var(--ds-size-0);   
+  --ds-space-2x: var(--ds-size-2x);   
+  --ds-space-7x: var(--ds-size-7x);   
+  --ds-space-1x: var(--ds-size-1x);   
+  --ds-space-0-5x: var(--ds-size-0-5x);   
 
-  /* ── Radius (9) ─────────────────────────── */
-  --ds-radius-4x: var(--ds-size-4x);   /* Radius/4x */
-  --ds-radius-2x: var(--ds-size-2x);   /* Radius/2x */
-  --ds-radius-6x: var(--ds-size-6x);   /* Radius/6x */
-  --ds-radius-0: var(--ds-size-0);   /* Radius/0 */
-  --ds-radius-1-5x: var(--ds-size-1-5x);   /* Radius/1,5x */
-  --ds-radius-circular: var(--ds-size-circular);   /* Radius/Circular */
-  --ds-radius-1x: var(--ds-size-1x);   /* Radius/1x */
-  --ds-radius-3x: var(--ds-size-3x);   /* Radius/3x */
-  --ds-radius-0-5x: var(--ds-size-0-5x);   /* Radius/0,5x */
+  
+  --ds-radius-4x: var(--ds-size-4x);   
+  --ds-radius-2x: var(--ds-size-2x);   
+  --ds-radius-6x: var(--ds-size-6x);   
+  --ds-radius-0: var(--ds-size-0);   
+  --ds-radius-1-5x: var(--ds-size-1-5x);   
+  --ds-radius-circular: var(--ds-size-circular);   
+  --ds-radius-1x: var(--ds-size-1x);   
+  --ds-radius-3x: var(--ds-size-3x);   
+  --ds-radius-0-5x: var(--ds-size-0-5x);   
 
-  /* ── Base Stroke (5) ─────────────────────────── */
-  --ds-stroke-pad: 1px;   /* Stroke/Pad */
-  --ds-stroke-1x: 4px;   /* Stroke/1x */
-  --ds-stroke-0-5x: 2px;   /* Stroke/0,5x */
-  --ds-stroke-0-25x: 1px;   /* Stroke/0,25x */
-  --ds-stroke-dash: 1px;   /* Stroke/Dash */
+  
+  --ds-stroke-pad: 1px;   
+  --ds-stroke-1x: 4px;   
+  --ds-stroke-0-5x: 2px;   
+  --ds-stroke-0-25x: 1px;   
+  --ds-stroke-dash: 1px;   
 
-  /* ── Shadows (45) ─────────────────────────── */
-  --ds-shadow-shadows-none-blur: var(--ds-size-0);   /* Shadows/None/Blur */
-  --ds-shadow-shadows-none-spread: var(--ds-size-0);   /* Shadows/None/Spread */
-  --ds-shadow-shadows-none-color: var(--ds-palette-neutral-0);   /* Shadows/None/Color */
-  --ds-shadow-shadows-s-1-x: var(--ds-size-0);   /* Shadows/S/1/X */
-  --ds-shadow-shadows-s-1-y: var(--ds-size-1x);   /* Shadows/S/1/Y */
-  --ds-shadow-shadows-s-1-blur: var(--ds-size-1-5x);   /* Shadows/S/1/Blur */
-  --ds-shadow-shadows-s-1-spread: var(--ds-size-0);   /* Shadows/S/1/Spread */
-  --ds-shadow-shadows-s-1-color: rgba(33, 33, 33, 0.1);   /* Shadows/S/1/Color */
-  --ds-shadow-shadows-s-2-x: var(--ds-size-0);   /* Shadows/S/2/X */
-  --ds-shadow-shadows-s-2-y: var(--ds-size-0);   /* Shadows/S/2/Y */
-  --ds-shadow-shadows-s-2-blur: var(--ds-size-4x);   /* Shadows/S/2/Blur */
-  --ds-shadow-shadows-s-2-spread: var(--ds-size-0);   /* Shadows/S/2/Spread */
-  --ds-shadow-shadows-s-2-color: rgba(33, 33, 33, 0.12);   /* Shadows/S/2/Color */
-  --ds-shadow-shadows-m-1-x: var(--ds-size-0);   /* Shadows/M/1/X */
-  --ds-shadow-shadows-m-1-y: var(--ds-size-2-5x);   /* Shadows/M/1/Y */
-  --ds-shadow-shadows-m-1-blur: var(--ds-size-6x);   /* Shadows/M/1/Blur */
-  --ds-shadow-shadows-m-1-spread: var(--ds-size-0);   /* Shadows/M/1/Spread */
-  --ds-shadow-shadows-m-1-color: rgba(33, 33, 33, 0.12);   /* Shadows/M/1/Color */
-  --ds-shadow-shadows-m-2-x: var(--ds-size-0);   /* Shadows/M/2/X */
-  --ds-shadow-shadows-m-2-y: var(--ds-size-0);   /* Shadows/M/2/Y */
-  --ds-shadow-shadows-m-2-blur: var(--ds-size-7x);   /* Shadows/M/2/Blur */
-  --ds-shadow-shadows-m-2-spread: var(--ds-size-0);   /* Shadows/M/2/Spread */
-  --ds-shadow-shadows-m-2-color: rgba(33, 33, 33, 0.12);   /* Shadows/M/2/Color */
-  --ds-shadow-shadows-xl-1-x: var(--ds-size-0);   /* Shadows/XL/1/X */
-  --ds-shadow-shadows-xl-1-y: var(--ds-size-3x);   /* Shadows/XL/1/Y */
-  --ds-shadow-shadows-xl-1-blur: var(--ds-size-4x);   /* Shadows/XL/1/Blur */
-  --ds-shadow-shadows-xl-1-spread: var(--ds-size-0);   /* Shadows/XL/1/Spread */
-  --ds-shadow-shadows-xl-1-color: rgba(33, 33, 33, 0.16);   /* Shadows/XL/1/Color */
-  --ds-shadow-shadows-xl-2-x: var(--ds-size-0);   /* Shadows/XL/2/X */
-  --ds-shadow-shadows-xl-2-y: var(--ds-size-0);   /* Shadows/XL/2/Y */
-  --ds-shadow-shadows-xl-2-blur: var(--ds-size-8x);   /* Shadows/XL/2/Blur */
-  --ds-shadow-shadows-xl-2-spread: var(--ds-size-0);   /* Shadows/XL/2/Spread */
-  --ds-shadow-shadows-xl-2-color: rgba(33, 33, 33, 0.16);   /* Shadows/XL/2/Color */
-  --ds-shadow-shadows-none-y: var(--ds-size-0-5x);   /* Shadows/None/Y */
-  --ds-shadow-shadows-none-x: var(--ds-size-0);   /* Shadows/None/X */
-  --ds-shadow-shadows-sl-1-x: var(--ds-size-0);   /* Shadows/Sl/1/X */
-  --ds-shadow-shadows-sl-1-y: var(--ds-size-0-5x);   /* Shadows/Sl/1/Y */
-  --ds-shadow-shadows-sl-1-blur: var(--ds-size-0-5x);   /* Shadows/Sl/1/Blur */
-  --ds-shadow-shadows-sl-1-spread: var(--ds-size-0);   /* Shadows/Sl/1/Spread */
-  --ds-shadow-shadows-sl-1-color: rgba(33, 33, 33, 0.04);   /* Shadows/Sl/1/Color */
-  --ds-shadow-shadows-sl-2-x: var(--ds-size-0);   /* Shadows/Sl/2/X */
-  --ds-shadow-shadows-sl-2-y: var(--ds-size-0);   /* Shadows/Sl/2/Y */
-  --ds-shadow-shadows-sl-2-blur: var(--ds-size-1x);   /* Shadows/Sl/2/Blur */
-  --ds-shadow-shadows-sl-2-spread: var(--ds-size-0);   /* Shadows/Sl/2/Spread */
-  --ds-shadow-shadows-sl-2-color: rgba(33, 33, 33, 0.12);   /* Shadows/Sl/2/Color */
+  
+  --ds-shadow-shadows-none-blur: var(--ds-size-0);   
+  --ds-shadow-shadows-none-spread: var(--ds-size-0);   
+  --ds-shadow-shadows-none-color: var(--ds-palette-neutral-0);   
+  --ds-shadow-shadows-s-1-x: var(--ds-size-0);   
+  --ds-shadow-shadows-s-1-y: var(--ds-size-1x);   
+  --ds-shadow-shadows-s-1-blur: var(--ds-size-1-5x);   
+  --ds-shadow-shadows-s-1-spread: var(--ds-size-0);   
+  --ds-shadow-shadows-s-1-color: rgba(33, 33, 33, 0.1);   
+  --ds-shadow-shadows-s-2-x: var(--ds-size-0);   
+  --ds-shadow-shadows-s-2-y: var(--ds-size-0);   
+  --ds-shadow-shadows-s-2-blur: var(--ds-size-4x);   
+  --ds-shadow-shadows-s-2-spread: var(--ds-size-0);   
+  --ds-shadow-shadows-s-2-color: rgba(33, 33, 33, 0.12);   
+  --ds-shadow-shadows-m-1-x: var(--ds-size-0);   
+  --ds-shadow-shadows-m-1-y: var(--ds-size-2-5x);   
+  --ds-shadow-shadows-m-1-blur: var(--ds-size-6x);   
+  --ds-shadow-shadows-m-1-spread: var(--ds-size-0);   
+  --ds-shadow-shadows-m-1-color: rgba(33, 33, 33, 0.12);   
+  --ds-shadow-shadows-m-2-x: var(--ds-size-0);   
+  --ds-shadow-shadows-m-2-y: var(--ds-size-0);   
+  --ds-shadow-shadows-m-2-blur: var(--ds-size-7x);   
+  --ds-shadow-shadows-m-2-spread: var(--ds-size-0);   
+  --ds-shadow-shadows-m-2-color: rgba(33, 33, 33, 0.12);   
+  --ds-shadow-shadows-xl-1-x: var(--ds-size-0);   
+  --ds-shadow-shadows-xl-1-y: var(--ds-size-3x);   
+  --ds-shadow-shadows-xl-1-blur: var(--ds-size-4x);   
+  --ds-shadow-shadows-xl-1-spread: var(--ds-size-0);   
+  --ds-shadow-shadows-xl-1-color: rgba(33, 33, 33, 0.16);   
+  --ds-shadow-shadows-xl-2-x: var(--ds-size-0);   
+  --ds-shadow-shadows-xl-2-y: var(--ds-size-0);   
+  --ds-shadow-shadows-xl-2-blur: var(--ds-size-8x);   
+  --ds-shadow-shadows-xl-2-spread: var(--ds-size-0);   
+  --ds-shadow-shadows-xl-2-color: rgba(33, 33, 33, 0.16);   
+  --ds-shadow-shadows-none-y: var(--ds-size-0-5x);   
+  --ds-shadow-shadows-none-x: var(--ds-size-0);   
+  --ds-shadow-shadows-sl-1-x: var(--ds-size-0);   
+  --ds-shadow-shadows-sl-1-y: var(--ds-size-0-5x);   
+  --ds-shadow-shadows-sl-1-blur: var(--ds-size-0-5x);   
+  --ds-shadow-shadows-sl-1-spread: var(--ds-size-0);   
+  --ds-shadow-shadows-sl-1-color: rgba(33, 33, 33, 0.04);   
+  --ds-shadow-shadows-sl-2-x: var(--ds-size-0);   
+  --ds-shadow-shadows-sl-2-y: var(--ds-size-0);   
+  --ds-shadow-shadows-sl-2-blur: var(--ds-size-1x);   
+  --ds-shadow-shadows-sl-2-spread: var(--ds-size-0);   
+  --ds-shadow-shadows-sl-2-color: rgba(33, 33, 33, 0.12);   
 
-  /* ── Base Typography (26) ─────────────────────────── */
-  --ds-typography-font-family-family: Roboto;   /* Font Family/Family */
-  --ds-typography-font-weight-regular: 400;   /* Font Weight/Regular */
-  --ds-typography-font-weight-medium: 500;   /* Font Weight/Medium */
-  --ds-typography-font-variant-normal: Normal;   /* Font Variant/Normal */
-  --ds-typography-font-variant-caps: Caps;   /* Font Variant/Caps */
-  --ds-typography-font-size-3x: 12px;   /* Font Size/3x */
-  --ds-typography-font-size-2-5x: 10px;   /* Font Size/2,5x */
-  --ds-typography-font-size-2x: 8px;   /* Font Size/2x */
-  --ds-typography-line-height-4x: 16px;   /* Line height/4x */
-  --ds-typography-line-height-2-5x: 10px;   /* Line height/2,5x */
-  --ds-typography-line-height-3x: 12px;   /* Line height/3x */
-  --ds-typography-font-size-3-5x: 14px;   /* Font Size/3,5x */
-  --ds-typography-font-size-4x: 16px;   /* Font Size/4x */
-  --ds-typography-font-size-5x: 20px;   /* Font Size/5x */
-  --ds-typography-font-size-6x: 24px;   /* Font Size/6x */
-  --ds-typography-font-size-8-5x: 34px;   /* Font Size/8,5x */
-  --ds-typography-line-height-6x: 24px;   /* Line height/6x */
-  --ds-typography-line-height-5x: 20px;   /* Line height/5x */
-  --ds-typography-line-height-8x: 32px;   /* Line height/8x */
-  --ds-typography-letter-spacing-0-25x: 1px;   /* Letter spacing/0,25x */
-  --ds-typography-letter-spacing-0-125x: 0.5px;   /* Letter spacing/0,125x */
-  --ds-typography-letter-spacing-none: 0px;   /* Letter spacing/None */
-  --ds-typography-font-family-family-variant: Helvetica;   /* Font Family/Family variant */
-  --ds-typography-line-height-7x: 28px;   /* Line height/7x */
-  --ds-typography-line-height-10x: 40px;   /* Line height/10x */
-  --ds-typography-font-size-4-5x: 18px;   /* Font Size/4,5x */
+  
+  --ds-typography-font-family-family: Roboto;   
+  --ds-typography-font-weight-regular: 400;   
+  --ds-typography-font-weight-medium: 500;   
+  --ds-typography-font-variant-normal: Normal;   
+  --ds-typography-font-variant-caps: Caps;   
+  --ds-typography-font-size-3x: 12px;   
+  --ds-typography-font-size-2-5x: 10px;   
+  --ds-typography-font-size-2x: 8px;   
+  --ds-typography-line-height-4x: 16px;   
+  --ds-typography-line-height-2-5x: 10px;   
+  --ds-typography-line-height-3x: 12px;   
+  --ds-typography-font-size-3-5x: 14px;   
+  --ds-typography-font-size-4x: 16px;   
+  --ds-typography-font-size-5x: 20px;   
+  --ds-typography-font-size-6x: 24px;   
+  --ds-typography-font-size-8-5x: 34px;   
+  --ds-typography-line-height-6x: 24px;   
+  --ds-typography-line-height-5x: 20px;   
+  --ds-typography-line-height-8x: 32px;   
+  --ds-typography-letter-spacing-0-25x: 1px;   
+  --ds-typography-letter-spacing-0-125x: 0.5px;   
+  --ds-typography-letter-spacing-none: 0px;   
+  --ds-typography-font-family-family-variant: Helvetica;   
+  --ds-typography-line-height-7x: 28px;   
+  --ds-typography-line-height-10x: 40px;   
+  --ds-typography-font-size-4-5x: 18px;   
 
-  /* ── Typography (21) ─────────────────────────── */
-  --ds-typography-caption-font-size-s: var(--ds-typography-font-size-2x);   /* Caption/Font size/S */
-  --ds-typography-caption-line-height-s: var(--ds-typography-line-height-2-5x);   /* Caption/Line height/S */
-  --ds-typography-caption-font-size-m: var(--ds-typography-font-size-2-5x);   /* Caption/Font size/M */
-  --ds-typography-caption-font-size-l: var(--ds-typography-font-size-3x);   /* Caption/Font size/L */
-  --ds-typography-caption-line-height-m: var(--ds-typography-line-height-3x);   /* Caption/Line height/M */
-  --ds-typography-caption-line-height-l: var(--ds-typography-line-height-4x);   /* Caption/Line height/L */
-  --ds-typography-body-font-size-s: var(--ds-typography-font-size-3-5x);   /* Body/Font size/S */
-  --ds-typography-body-font-size-l: var(--ds-typography-font-size-4-5x);   /* Body/Font size/L */
-  --ds-typography-body-line-height-l: var(--ds-typography-line-height-6x);   /* Body/Line height/L */
-  --ds-typography-body-line-height-s: var(--ds-typography-line-height-5x);   /* Body/Line height/S */
-  --ds-typography-header-font-size-s: var(--ds-typography-font-size-5x);   /* Header/Font size/S */
-  --ds-typography-header-font-size-m: var(--ds-typography-font-size-6x);   /* Header/Font size/M */
-  --ds-typography-header-line-height-l: var(--ds-typography-line-height-10x);   /* Header/Line height/L */
-  --ds-typography-header-line-height-m: var(--ds-typography-line-height-8x);   /* Header/Line height/M */
-  --ds-typography-letter-spacing-s: var(--ds-typography-letter-spacing-0-125x);   /* Letter spacing/S */
-  --ds-typography-letter-spacing-m: var(--ds-typography-letter-spacing-0-25x);   /* Letter spacing/M */
-  --ds-typography-header-font-size-l: var(--ds-typography-font-size-8-5x);   /* Header/Font size/L */
-  --ds-typography-letter-spacing-none: var(--ds-typography-letter-spacing-none);   /* Letter spacing/None */
-  --ds-typography-header-line-height-s: var(--ds-typography-line-height-7x);   /* Header/Line height/S */
-  --ds-typography-body-font-size-m: var(--ds-typography-font-size-4x);   /* Body/Font size/M */
-  --ds-typography-body-line-height-m: var(--ds-typography-line-height-6x);   /* Body/Line height/M */
+  
+  --ds-typography-caption-font-size-s: var(--ds-typography-font-size-2x);   
+  --ds-typography-caption-line-height-s: var(--ds-typography-line-height-2-5x);   
+  --ds-typography-caption-font-size-m: var(--ds-typography-font-size-2-5x);   
+  --ds-typography-caption-font-size-l: var(--ds-typography-font-size-3x);   
+  --ds-typography-caption-line-height-m: var(--ds-typography-line-height-3x);   
+  --ds-typography-caption-line-height-l: var(--ds-typography-line-height-4x);   
+  --ds-typography-body-font-size-s: var(--ds-typography-font-size-3-5x);   
+  --ds-typography-body-font-size-l: var(--ds-typography-font-size-4-5x);   
+  --ds-typography-body-line-height-l: var(--ds-typography-line-height-6x);   
+  --ds-typography-body-line-height-s: var(--ds-typography-line-height-5x);   
+  --ds-typography-header-font-size-s: var(--ds-typography-font-size-5x);   
+  --ds-typography-header-font-size-m: var(--ds-typography-font-size-6x);   
+  --ds-typography-header-line-height-l: var(--ds-typography-line-height-10x);   
+  --ds-typography-header-line-height-m: var(--ds-typography-line-height-8x);   
+  --ds-typography-letter-spacing-s: var(--ds-typography-letter-spacing-0-125x);   
+  --ds-typography-letter-spacing-m: var(--ds-typography-letter-spacing-0-25x);   
+  --ds-typography-header-font-size-l: var(--ds-typography-font-size-8-5x);   
+  --ds-typography-letter-spacing-none: var(--ds-typography-letter-spacing-none);   
+  --ds-typography-header-line-height-s: var(--ds-typography-line-height-7x);   
+  --ds-typography-body-font-size-m: var(--ds-typography-font-size-4x);   
+  --ds-typography-body-line-height-m: var(--ds-typography-line-height-6x);   
 
-  /* ── Color (133) ─────────────────────────── */
-  --ds-color-brand-accent-super-lightest: var(--ds-palette-accent-5);   /* Brand/Accent/Super lightest */
-  --ds-color-brand-accent-lighter: var(--ds-palette-accent-50);   /* Brand/Accent/Lighter */
-  --ds-color-brand-accent-light: var(--ds-palette-accent-300);   /* Brand/Accent/Light */
-  --ds-color-brand-accent-default: var(--ds-palette-accent-500);   /* Brand/Accent/Default */
-  --ds-color-brand-accent-dark: var(--ds-palette-accent-600);   /* Brand/Accent/Dark */
-  --ds-color-brand-accent-darker: var(--ds-palette-accent-700);   /* Brand/Accent/Darker */
-  --ds-color-brand-positive-lightest: var(--ds-palette-positive-10);   /* Brand/Positive/Lightest */
-  --ds-color-brand-positive-lighter: var(--ds-palette-positive-50);   /* Brand/Positive/Lighter */
-  --ds-color-brand-positive-light: var(--ds-palette-positive-300);   /* Brand/Positive/Light */
-  --ds-color-brand-positive-default: var(--ds-palette-positive-500);   /* Brand/Positive/Default */
-  --ds-color-brand-positive-dark: var(--ds-palette-positive-700);   /* Brand/Positive/Dark */
-  --ds-color-brand-positive-darker: var(--ds-palette-positive-900);   /* Brand/Positive/Darker */
-  --ds-color-brand-warning-lightest: var(--ds-palette-warning-10);   /* Brand/Warning/Lightest */
-  --ds-color-brand-warning-lighter: var(--ds-palette-warning-50);   /* Brand/Warning/Lighter */
-  --ds-color-brand-warning-light: var(--ds-palette-warning-300);   /* Brand/Warning/Light */
-  --ds-color-brand-warning-default: var(--ds-palette-warning-500);   /* Brand/Warning/Default */
-  --ds-color-brand-warning-dark: var(--ds-palette-warning-700);   /* Brand/Warning/Dark */
-  --ds-color-brand-warning-darker: var(--ds-palette-warning-900);   /* Brand/Warning/Darker */
-  --ds-color-brand-negative-lightest: var(--ds-palette-negative-10);   /* Brand/Negative/Lightest */
-  --ds-color-brand-negative-lighter: var(--ds-palette-negative-50);   /* Brand/Negative/Lighter */
-  --ds-color-brand-negative-light: var(--ds-palette-negative-300);   /* Brand/Negative/Light */
-  --ds-color-brand-negative-default: var(--ds-palette-negative-500);   /* Brand/Negative/Default */
-  --ds-color-brand-negative-dark: var(--ds-palette-negative-700);   /* Brand/Negative/Dark */
-  --ds-color-brand-negative-darker: var(--ds-palette-negative-900);   /* Brand/Negative/Darker */
-  --ds-color-brand-neutral-default: var(--ds-palette-neutral-0);   /* Brand/Neutral/Default */
-  --ds-color-brand-neutral-super-light: var(--ds-palette-neutral-50);   /* Brand/Neutral/Super light */
-  --ds-color-brand-neutral-lightest: var(--ds-palette-neutral-100);   /* Brand/Neutral/Lightest */
-  --ds-color-brand-neutral-lighter: var(--ds-palette-neutral-200);   /* Brand/Neutral/Lighter */
-  --ds-color-brand-neutral-light: var(--ds-palette-neutral-300);   /* Brand/Neutral/Light */
-  --ds-color-brand-neutral-neutral: var(--ds-palette-neutral-500);   /* Brand/Neutral/Neutral */
-  --ds-color-brand-neutral-dark: var(--ds-palette-neutral-600);   /* Brand/Neutral/Dark */
-  --ds-color-brand-neutral-darker: var(--ds-palette-neutral-700);   /* Brand/Neutral/Darker */
-  --ds-color-brand-neutral-darkest: var(--ds-palette-neutral-800);   /* Brand/Neutral/Darkest */
-  --ds-color-brand-neutral-super-dark: var(--ds-palette-neutral-900);   /* Brand/Neutral/Super Dark */
-  --ds-color-brand-contrast-1-lightest: var(--ds-palette-contrast-1-5);   /* Brand/Contrast-1/Lightest */
-  --ds-color-brand-contrast-1-dark: var(--ds-palette-contrast-1-700);   /* Brand/Contrast-1/Dark */
-  --ds-color-brand-contrast-2-lightest: var(--ds-palette-contrast-2-100);   /* Brand/Contrast-2/Lightest */
-  --ds-color-brand-contrast-2-dark: var(--ds-palette-contrast-2-950);   /* Brand/Contrast-2/Dark */
-  --ds-color-brand-contrast-3-lightest: var(--ds-palette-contrast-3-5);   /* Brand/Contrast-3/Lightest */
-  --ds-color-brand-contrast-3-dark: var(--ds-palette-contrast-3-950);   /* Brand/Contrast-3/Dark */
-  --ds-color-surface-default: var(--ds-color-brand-neutral-default);   /* Surface/Default */
-  --ds-color-surface-hover: var(--ds-color-brand-neutral-super-light);   /* Surface/Hover */
-  --ds-color-surface-selected: var(--ds-color-brand-neutral-super-light);   /* Surface/Selected */
-  --ds-color-surface-press: var(--ds-color-brand-neutral-lighter);   /* Surface/Press */
-  --ds-color-surface-snack-tooltip: var(--ds-color-brand-neutral-darkest);   /* Surface/Snack tooltip */
-  --ds-color-surface-sidebar-selected: var(--ds-color-brand-accent-lighter);   /* Surface/Sidebar selected */
-  --ds-color-surface-sidebar-active: var(--ds-color-brand-accent-light);   /* Surface/Sidebar active */
-  --ds-color-table-surfase-default: var(--ds-color-brand-neutral-default);   /* Table surfase/Default */
-  --ds-color-table-surfase-hover: var(--ds-color-brand-neutral-super-light);   /* Table surfase/Hover */
-  --ds-color-table-surfase-selected: var(--ds-color-brand-neutral-lightest);   /* Table surfase/Selected */
-  --ds-color-table-surfase-head: var(--ds-palette-accent-50);   /* Table surfase/Head */
-  --ds-color-table-surfase-head-group: var(--ds-palette-accent-100);   /* Table surfase/Head group */
-  --ds-color-text-primary: var(--ds-color-brand-neutral-super-dark);   /* Text/Primary */
-  --ds-color-text-inversive: var(--ds-color-brand-neutral-default);   /* Text/Inversive */
-  --ds-color-text-secondary: var(--ds-color-brand-neutral-darker);   /* Text/Secondary */
-  --ds-color-text-placeholder: var(--ds-color-brand-neutral-light);   /* Text/Placeholder */
-  --ds-color-text-disable: var(--ds-color-brand-neutral-neutral);   /* Text/Disable */
-  --ds-color-text-accent: var(--ds-color-brand-accent-default);   /* Text/Accent */
-  --ds-color-text-positive: var(--ds-color-brand-positive-default);   /* Text/Positive */
-  --ds-color-text-warning: var(--ds-color-brand-warning-dark);   /* Text/Warning */
-  --ds-color-text-negative: var(--ds-color-brand-negative-default);   /* Text/Negative */
-  --ds-color-shapes-lighter-pr: var(--ds-color-brand-accent-lighter);   /* Shapes/Lighter PR */
-  --ds-color-shapes-lighter-sc: var(--ds-color-brand-positive-lighter);   /* Shapes/Lighter SC */
-  --ds-color-shapes-lighter-wr: var(--ds-color-brand-warning-lighter);   /* Shapes/Lighter WR */
-  --ds-color-shapes-lighter-er: var(--ds-color-brand-negative-lighter);   /* Shapes/Lighter ER */
-  --ds-color-shapes-lightest-mg: var(--ds-color-brand-contrast-1-lightest);   /* Shapes/Lightest MG */
-  --ds-color-shapes-lightest-br: var(--ds-color-brand-contrast-2-lightest);   /* Shapes/Lightest BR */
-  --ds-color-shapes-lightest-db: var(--ds-color-brand-contrast-3-lightest);   /* Shapes/Lightest DB */
-  --ds-color-shapes-default: var(--ds-color-brand-neutral-default);   /* Shapes/Default */
-  --ds-color-shapes-hover: var(--ds-color-brand-neutral-super-light);   /* Shapes/Hover */
-  --ds-color-shapes-press: var(--ds-color-brand-neutral-lighter);   /* Shapes/Press */
-  --ds-color-icon-primary: var(--ds-color-brand-neutral-darker);   /* Icon/Primary */
-  --ds-color-icon-inversive: var(--ds-color-brand-neutral-default);   /* Icon/Inversive */
-  --ds-color-icon-disable: var(--ds-color-brand-neutral-neutral);   /* Icon/Disable */
-  --ds-color-icon-accent: var(--ds-color-brand-accent-default);   /* Icon/Accent */
-  --ds-color-icon-positive: var(--ds-color-brand-positive-default);   /* Icon/Positive */
-  --ds-color-icon-warning: var(--ds-color-brand-warning-dark);   /* Icon/Warning */
-  --ds-color-icon-negative: var(--ds-color-brand-negative-default);   /* Icon/Negative */
-  --ds-color-stroke-default: var(--ds-color-brand-neutral-lighter);   /* Stroke/Default */
-  --ds-color-stroke-hover: var(--ds-color-brand-neutral-neutral);   /* Stroke/Hover */
-  --ds-color-stroke-disable: var(--ds-color-brand-neutral-lightest);   /* Stroke/Disable */
-  --ds-color-stroke-accent: var(--ds-color-brand-accent-default);   /* Stroke/Accent */
-  --ds-color-stroke-positive: var(--ds-color-brand-positive-default);   /* Stroke/Positive */
-  --ds-color-stroke-warning: var(--ds-color-brand-warning-default);   /* Stroke/Warning */
-  --ds-color-stroke-negative: var(--ds-color-brand-negative-default);   /* Stroke/Negative */
-  --ds-color-surface-disable: var(--ds-color-brand-neutral-super-light);   /* Surface/Disable */
-  --ds-color-table-surfase-group: var(--ds-color-brand-neutral-lightest);   /* Table surfase/Group */
-  --ds-color-button-accent-default: var(--ds-palette-accent-500);   /* Button/Accent/Default */
-  --ds-color-button-accent-hover: var(--ds-palette-accent-600);   /* Button/Accent/Hover */
-  --ds-color-button-accent-press: var(--ds-palette-accent-700);   /* Button/Accent/Press */
-  --ds-color-button-positive-default: var(--ds-palette-positive-500);   /* Button/Positive/Default */
-  --ds-color-button-positive-hover: var(--ds-palette-positive-600);   /* Button/Positive/Hover */
-  --ds-color-button-positive-press: var(--ds-palette-positive-700);   /* Button/Positive/Press */
-  --ds-color-button-warning-default: var(--ds-palette-warning-500);   /* Button/Warning/Default */
-  --ds-color-button-warning-hover: var(--ds-palette-warning-600);   /* Button/Warning/Hover */
-  --ds-color-button-warning-press: var(--ds-palette-warning-700);   /* Button/Warning/Press */
-  --ds-color-button-negative-default: var(--ds-palette-negative-500);   /* Button/Negative/Default */
-  --ds-color-button-negative-hover: var(--ds-palette-negative-600);   /* Button/Negative/Hover */
-  --ds-color-button-negative-press: var(--ds-palette-negative-700);   /* Button/Negative/Press */
-  --ds-color-button-neutral-default: var(--ds-palette-neutral-0);   /* Button/Neutral/Default */
-  --ds-color-button-neutral-hover: var(--ds-palette-neutral-10);   /* Button/Neutral/Hover */
-  --ds-color-button-neutral-press: var(--ds-palette-neutral-100);   /* Button/Neutral/Press */
-  --ds-color-button-neutral-disable: var(--ds-palette-neutral-100);   /* Button/Neutral/Disable */
-  --ds-color-button-accent-lite-default: var(--ds-palette-neutral-0);   /* Button/Accent/Lite default */
-  --ds-color-button-accent-lite-hover: var(--ds-palette-accent-10);   /* Button/Accent/Lite hover */
-  --ds-color-button-accent-lite-press: var(--ds-palette-accent-100);   /* Button/Accent/Lite press */
-  --ds-color-button-positive-lite-default: var(--ds-palette-neutral-0);   /* Button/Positive/Lite default */
-  --ds-color-button-positive-lite-hover: var(--ds-palette-positive-10);   /* Button/Positive/Lite hover */
-  --ds-color-button-positive-lite-press: var(--ds-palette-positive-100);   /* Button/Positive/Lite press */
-  --ds-color-button-warning-lite-default: var(--ds-palette-neutral-0);   /* Button/Warning/Lite default */
-  --ds-color-button-warning-lite-hover: var(--ds-palette-warning-10);   /* Button/Warning/Lite hover */
-  --ds-color-button-warning-lite-press: var(--ds-palette-warning-100);   /* Button/Warning/Lite press */
-  --ds-color-button-negative-lite-default: var(--ds-palette-neutral-0);   /* Button/Negative/Lite default */
-  --ds-color-button-negative-lite-hover: var(--ds-palette-negative-10);   /* Button/Negative/Lite hover */
-  --ds-color-button-negative-lite-press: var(--ds-palette-negative-100);   /* Button/Negative/Lite press */
-  --ds-color-surface-default-variant: var(--ds-color-brand-accent-super-lightest);   /* Surface/Default variant */
-  --ds-color-brand-accent-lightest: var(--ds-palette-accent-10);   /* Brand/Accent/Lightest */
-  --ds-color-shapes-default-variant: var(--ds-color-brand-accent-super-lightest);   /* Shapes/Default variant */
-  --ds-color-shapes-disable: var(--ds-color-brand-neutral-lightest);   /* Shapes/Disable */
-  --ds-color-brand-neutral-default-transparent: var(--ds-palette-neutral-transparent);   /* Brand/Neutral/Default transparent */
-  --ds-color-button-neutral-default-transparent: var(--ds-palette-neutral-transparent);   /* Button/Neutral/Default transparent */
-  --ds-color-button-accent-lite-default-transparent: var(--ds-palette-neutral-transparent);   /* Button/Accent/Lite default transparent */
-  --ds-color-button-positive-lite-default-transparent: var(--ds-palette-neutral-transparent);   /* Button/Positive/Lite default transparent */
-  --ds-color-button-warning-lite-default-transparent: var(--ds-palette-neutral-transparent);   /* Button/Warning/Lite default transparent */
-  --ds-color-button-negative-lite-default-transparent: var(--ds-palette-neutral-transparent);   /* Button/Negative/Lite default transparent */
-  --ds-color-shapes-default-transparent: var(--ds-color-brand-neutral-default-transparent);   /* Shapes/Default transparent */
-  --ds-color-table-surfase-default-transparent: var(--ds-color-brand-neutral-default-transparent);   /* Table surfase/Default transparent */
-  --ds-color-table-surfase-zebra: var(--ds-palette-neutral-50);   /* Table surfase/Zebra */
-  --ds-color-surface-default-transparent: var(--ds-color-brand-neutral-default-transparent);   /* Surface/Default transparent */
-  --ds-color-brand-accent-default-transparent: var(--ds-palette-neutral-transparent);   /* Brand/Accent/Default transparent */
-  --ds-color-brand-contrast-4-lightest: var(--ds-palette-contrast-4-5);   /* Brand/Contrast-4/Lightest */
-  --ds-color-brand-contrast-4-dark: var(--ds-palette-contrast-4-950);   /* Brand/Contrast-4/Dark */
-  --ds-color-icon-primary-light: var(--ds-color-brand-neutral-neutral);   /* Icon/Primary light */
+  
+  --ds-color-brand-accent-super-lightest: var(--ds-palette-accent-5);   
+  --ds-color-brand-accent-lighter: var(--ds-palette-accent-50);   
+  --ds-color-brand-accent-light: var(--ds-palette-accent-300);   
+  --ds-color-brand-accent-default: var(--ds-palette-accent-500);   
+  --ds-color-brand-accent-dark: var(--ds-palette-accent-600);   
+  --ds-color-brand-accent-darker: var(--ds-palette-accent-700);   
+  --ds-color-brand-positive-lightest: var(--ds-palette-positive-10);   
+  --ds-color-brand-positive-lighter: var(--ds-palette-positive-50);   
+  --ds-color-brand-positive-light: var(--ds-palette-positive-300);   
+  --ds-color-brand-positive-default: var(--ds-palette-positive-500);   
+  --ds-color-brand-positive-dark: var(--ds-palette-positive-700);   
+  --ds-color-brand-positive-darker: var(--ds-palette-positive-900);   
+  --ds-color-brand-warning-lightest: var(--ds-palette-warning-10);   
+  --ds-color-brand-warning-lighter: var(--ds-palette-warning-50);   
+  --ds-color-brand-warning-light: var(--ds-palette-warning-300);   
+  --ds-color-brand-warning-default: var(--ds-palette-warning-500);   
+  --ds-color-brand-warning-dark: var(--ds-palette-warning-700);   
+  --ds-color-brand-warning-darker: var(--ds-palette-warning-900);   
+  --ds-color-brand-negative-lightest: var(--ds-palette-negative-10);   
+  --ds-color-brand-negative-lighter: var(--ds-palette-negative-50);   
+  --ds-color-brand-negative-light: var(--ds-palette-negative-300);   
+  --ds-color-brand-negative-default: var(--ds-palette-negative-500);   
+  --ds-color-brand-negative-dark: var(--ds-palette-negative-700);   
+  --ds-color-brand-negative-darker: var(--ds-palette-negative-900);   
+  --ds-color-brand-neutral-default: var(--ds-palette-neutral-0);   
+  --ds-color-brand-neutral-super-light: var(--ds-palette-neutral-50);   
+  --ds-color-brand-neutral-lightest: var(--ds-palette-neutral-100);   
+  --ds-color-brand-neutral-lighter: var(--ds-palette-neutral-200);   
+  --ds-color-brand-neutral-light: var(--ds-palette-neutral-300);   
+  --ds-color-brand-neutral-neutral: var(--ds-palette-neutral-500);   
+  --ds-color-brand-neutral-dark: var(--ds-palette-neutral-600);   
+  --ds-color-brand-neutral-darker: var(--ds-palette-neutral-700);   
+  --ds-color-brand-neutral-darkest: var(--ds-palette-neutral-800);   
+  --ds-color-brand-neutral-super-dark: var(--ds-palette-neutral-900);   
+  --ds-color-brand-contrast-1-lightest: var(--ds-palette-contrast-1-5);   
+  --ds-color-brand-contrast-1-dark: var(--ds-palette-contrast-1-700);   
+  --ds-color-brand-contrast-2-lightest: var(--ds-palette-contrast-2-100);   
+  --ds-color-brand-contrast-2-dark: var(--ds-palette-contrast-2-950);   
+  --ds-color-brand-contrast-3-lightest: var(--ds-palette-contrast-3-5);   
+  --ds-color-brand-contrast-3-dark: var(--ds-palette-contrast-3-950);   
+  --ds-color-surface-default: var(--ds-color-brand-neutral-default);   
+  --ds-color-surface-hover: var(--ds-color-brand-neutral-super-light);   
+  --ds-color-surface-selected: var(--ds-color-brand-neutral-super-light);   
+  --ds-color-surface-press: var(--ds-color-brand-neutral-lighter);   
+  --ds-color-surface-snack-tooltip: var(--ds-color-brand-neutral-darkest);   
+  --ds-color-surface-sidebar-selected: var(--ds-color-brand-accent-lighter);   
+  --ds-color-surface-sidebar-active: var(--ds-color-brand-accent-light);   
+  --ds-color-table-surfase-default: var(--ds-color-brand-neutral-default);   
+  --ds-color-table-surfase-hover: var(--ds-color-brand-neutral-super-light);   
+  --ds-color-table-surfase-selected: var(--ds-color-brand-neutral-lightest);   
+  --ds-color-table-surfase-head: var(--ds-palette-accent-50);   
+  --ds-color-table-surfase-head-group: var(--ds-palette-accent-100);   
+  --ds-color-text-primary: var(--ds-color-brand-neutral-super-dark);   
+  --ds-color-text-inversive: var(--ds-color-brand-neutral-default);   
+  --ds-color-text-secondary: var(--ds-color-brand-neutral-darker);   
+  --ds-color-text-placeholder: var(--ds-color-brand-neutral-light);   
+  --ds-color-text-disable: var(--ds-color-brand-neutral-neutral);   
+  --ds-color-text-accent: var(--ds-color-brand-accent-default);   
+  --ds-color-text-positive: var(--ds-color-brand-positive-default);   
+  --ds-color-text-warning: var(--ds-color-brand-warning-dark);   
+  --ds-color-text-negative: var(--ds-color-brand-negative-default);   
+  --ds-color-shapes-lighter-pr: var(--ds-color-brand-accent-lighter);   
+  --ds-color-shapes-lighter-sc: var(--ds-color-brand-positive-lighter);   
+  --ds-color-shapes-lighter-wr: var(--ds-color-brand-warning-lighter);   
+  --ds-color-shapes-lighter-er: var(--ds-color-brand-negative-lighter);   
+  --ds-color-shapes-lightest-mg: var(--ds-color-brand-contrast-1-lightest);   
+  --ds-color-shapes-lightest-br: var(--ds-color-brand-contrast-2-lightest);   
+  --ds-color-shapes-lightest-db: var(--ds-color-brand-contrast-3-lightest);   
+  --ds-color-shapes-default: var(--ds-color-brand-neutral-default);   
+  --ds-color-shapes-hover: var(--ds-color-brand-neutral-super-light);   
+  --ds-color-shapes-press: var(--ds-color-brand-neutral-lighter);   
+  --ds-color-icon-primary: var(--ds-color-brand-neutral-darker);   
+  --ds-color-icon-inversive: var(--ds-color-brand-neutral-default);   
+  --ds-color-icon-disable: var(--ds-color-brand-neutral-neutral);   
+  --ds-color-icon-accent: var(--ds-color-brand-accent-default);   
+  --ds-color-icon-positive: var(--ds-color-brand-positive-default);   
+  --ds-color-icon-warning: var(--ds-color-brand-warning-dark);   
+  --ds-color-icon-negative: var(--ds-color-brand-negative-default);   
+  --ds-color-stroke-default: var(--ds-color-brand-neutral-lighter);   
+  --ds-color-stroke-hover: var(--ds-color-brand-neutral-neutral);   
+  --ds-color-stroke-disable: var(--ds-color-brand-neutral-lightest);   
+  --ds-color-stroke-accent: var(--ds-color-brand-accent-default);   
+  --ds-color-stroke-positive: var(--ds-color-brand-positive-default);   
+  --ds-color-stroke-warning: var(--ds-color-brand-warning-default);   
+  --ds-color-stroke-negative: var(--ds-color-brand-negative-default);   
+  --ds-color-surface-disable: var(--ds-color-brand-neutral-super-light);   
+  --ds-color-table-surfase-group: var(--ds-color-brand-neutral-lightest);   
+  --ds-color-button-accent-default: var(--ds-palette-accent-500);   
+  --ds-color-button-accent-hover: var(--ds-palette-accent-600);   
+  --ds-color-button-accent-press: var(--ds-palette-accent-700);   
+  --ds-color-button-positive-default: var(--ds-palette-positive-500);   
+  --ds-color-button-positive-hover: var(--ds-palette-positive-600);   
+  --ds-color-button-positive-press: var(--ds-palette-positive-700);   
+  --ds-color-button-warning-default: var(--ds-palette-warning-500);   
+  --ds-color-button-warning-hover: var(--ds-palette-warning-600);   
+  --ds-color-button-warning-press: var(--ds-palette-warning-700);   
+  --ds-color-button-negative-default: var(--ds-palette-negative-500);   
+  --ds-color-button-negative-hover: var(--ds-palette-negative-600);   
+  --ds-color-button-negative-press: var(--ds-palette-negative-700);   
+  --ds-color-button-neutral-default: var(--ds-palette-neutral-0);   
+  --ds-color-button-neutral-hover: var(--ds-palette-neutral-10);   
+  --ds-color-button-neutral-press: var(--ds-palette-neutral-100);   
+  --ds-color-button-neutral-disable: var(--ds-palette-neutral-100);   
+  --ds-color-button-accent-lite-default: var(--ds-palette-neutral-0);   
+  --ds-color-button-accent-lite-hover: var(--ds-palette-accent-10);   
+  --ds-color-button-accent-lite-press: var(--ds-palette-accent-100);   
+  --ds-color-button-positive-lite-default: var(--ds-palette-neutral-0);   
+  --ds-color-button-positive-lite-hover: var(--ds-palette-positive-10);   
+  --ds-color-button-positive-lite-press: var(--ds-palette-positive-100);   
+  --ds-color-button-warning-lite-default: var(--ds-palette-neutral-0);   
+  --ds-color-button-warning-lite-hover: var(--ds-palette-warning-10);   
+  --ds-color-button-warning-lite-press: var(--ds-palette-warning-100);   
+  --ds-color-button-negative-lite-default: var(--ds-palette-neutral-0);   
+  --ds-color-button-negative-lite-hover: var(--ds-palette-negative-10);   
+  --ds-color-button-negative-lite-press: var(--ds-palette-negative-100);   
+  --ds-color-surface-default-variant: var(--ds-color-brand-accent-super-lightest);   
+  --ds-color-brand-accent-lightest: var(--ds-palette-accent-10);   
+  --ds-color-shapes-default-variant: var(--ds-color-brand-accent-super-lightest);   
+  --ds-color-shapes-disable: var(--ds-color-brand-neutral-lightest);   
+  --ds-color-brand-neutral-default-transparent: var(--ds-palette-neutral-transparent);   
+  --ds-color-button-neutral-default-transparent: var(--ds-palette-neutral-transparent);   
+  --ds-color-button-accent-lite-default-transparent: var(--ds-palette-neutral-transparent);   
+  --ds-color-button-positive-lite-default-transparent: var(--ds-palette-neutral-transparent);   
+  --ds-color-button-warning-lite-default-transparent: var(--ds-palette-neutral-transparent);   
+  --ds-color-button-negative-lite-default-transparent: var(--ds-palette-neutral-transparent);   
+  --ds-color-shapes-default-transparent: var(--ds-color-brand-neutral-default-transparent);   
+  --ds-color-table-surfase-default-transparent: var(--ds-color-brand-neutral-default-transparent);   
+  --ds-color-table-surfase-zebra: var(--ds-palette-neutral-50);   
+  --ds-color-surface-default-transparent: var(--ds-color-brand-neutral-default-transparent);   
+  --ds-color-brand-accent-default-transparent: var(--ds-palette-neutral-transparent);   
+  --ds-color-brand-contrast-4-lightest: var(--ds-palette-contrast-4-5);   
+  --ds-color-brand-contrast-4-dark: var(--ds-palette-contrast-4-950);   
+  --ds-color-icon-primary-light: var(--ds-color-brand-neutral-neutral);   
 
-  /* ── Component (1346) ─────────────────────────── */
-  --ds-color-button-accent-filled-default-background: var(--ds-color-button-accent-default);   /* Button/Accent/Filled/Default/Background */
-  --ds-color-button-accent-filled-default-text-color: var(--ds-color-text-inversive);   /* Button/Accent/Filled/Default/Text color */
-  --ds-color-button-accent-filled-default-icon-color: var(--ds-color-icon-inversive);   /* Button/Accent/Filled/Default/Icon color */
-  --ds-color-button-accent-filled-hover-background: var(--ds-color-button-accent-hover);   /* Button/Accent/Filled/Hover/Background */
-  --ds-color-button-accent-filled-hover-text-color: var(--ds-color-text-inversive);   /* Button/Accent/Filled/Hover/Text color */
-  --ds-color-button-accent-filled-hover-icon-color: var(--ds-color-icon-inversive);   /* Button/Accent/Filled/Hover/Icon color */
-  --ds-color-button-accent-filled-press-background: var(--ds-color-button-accent-press);   /* Button/Accent/Filled/Press/Background */
-  --ds-color-button-accent-filled-press-text-color: var(--ds-color-text-inversive);   /* Button/Accent/Filled/Press/Text color */
-  --ds-color-button-accent-filled-press-icon-color: var(--ds-color-icon-inversive);   /* Button/Accent/Filled/Press/Icon color */
-  --ds-color-button-accent-outlined-default-background: var(--ds-color-button-accent-lite-default-transparent);   /* Button/Accent/Outlined/Default/Background */
-  --ds-color-button-accent-outlined-default-text-color: var(--ds-color-text-accent);   /* Button/Accent/Outlined/Default/Text color */
-  --ds-color-button-accent-outlined-default-icon-color: var(--ds-color-icon-accent);   /* Button/Accent/Outlined/Default/Icon color */
-  --ds-color-button-accent-outlined-hover-background: var(--ds-color-button-accent-lite-hover);   /* Button/Accent/Outlined/Hover/Background */
-  --ds-color-button-accent-outlined-hover-text-color: var(--ds-color-text-accent);   /* Button/Accent/Outlined/Hover/Text color */
-  --ds-color-button-accent-outlined-hover-icon-color: var(--ds-color-icon-accent);   /* Button/Accent/Outlined/Hover/Icon color */
-  --ds-color-button-accent-outlined-press-background: var(--ds-color-button-accent-lite-press);   /* Button/Accent/Outlined/Press/Background */
-  --ds-color-button-accent-outlined-press-text-color: var(--ds-color-text-accent);   /* Button/Accent/Outlined/Press/Text color */
-  --ds-color-button-accent-outlined-press-icon-color: var(--ds-color-icon-accent);   /* Button/Accent/Outlined/Press/Icon color */
-  --ds-color-button-accent-outlined-default-border-color: var(--ds-color-stroke-accent);   /* Button/Accent/Outlined/Default/Border color */
-  --ds-color-button-neutral-filled-default-background: var(--ds-color-button-neutral-default);   /* Button/Neutral/Filled/Default/Background */
-  --ds-color-button-neutral-outlined-default-background: var(--ds-color-button-neutral-default-transparent);   /* Button/Neutral/Outlined/Default/Background */
-  --ds-color-button-neutral-outlined-default-text-color: var(--ds-color-text-primary);   /* Button/Neutral/Outlined/Default/Text color */
-  --ds-color-button-neutral-outlined-default-icon-color: var(--ds-color-icon-primary);   /* Button/Neutral/Outlined/Default/Icon color */
-  --ds-color-button-neutral-outlined-default-border-color: var(--ds-color-stroke-default);   /* Button/Neutral/Outlined/Default/Border color */
-  --ds-color-button-neutral-filled-default-text-color: var(--ds-color-text-primary);   /* Button/Neutral/Filled/Default/Text color */
-  --ds-color-button-neutral-filled-default-icon-color: var(--ds-color-icon-primary);   /* Button/Neutral/Filled/Default/Icon color */
-  --ds-button-m-size-icon-size: var(--ds-icon-size-size-5x);   /* Button/M size/Icon size */
-  --ds-button-border-radius: var(--ds-radius-2x);   /* Button/Border radius */
-  --ds-button-m-size-gap: var(--ds-space-2x);   /* Button/M size/Gap */
-  --ds-button-m-size-pad-left: var(--ds-space-3x);   /* Button/M size/Pad left */
-  --ds-button-m-size-pad-top: var(--ds-space-2x);   /* Button/M size/Pad top */
-  --ds-button-m-size-pad-right: var(--ds-space-3x);   /* Button/M size/Pad right */
-  --ds-button-m-size-pad-bottom: var(--ds-space-2x);   /* Button/M size/Pad bottom */
-  --ds-color-button-neutral-filled-hover-background: var(--ds-color-button-neutral-hover);   /* Button/Neutral/Filled/Hover/Background */
-  --ds-color-button-neutral-filled-hover-text-color: var(--ds-color-text-primary);   /* Button/Neutral/Filled/Hover/Text color */
-  --ds-color-button-neutral-filled-hover-icon-color: var(--ds-color-icon-primary);   /* Button/Neutral/Filled/Hover/Icon color */
-  --ds-color-button-neutral-filled-press-background: var(--ds-color-button-neutral-press);   /* Button/Neutral/Filled/Press/Background */
-  --ds-color-button-neutral-filled-press-text-color: var(--ds-color-text-primary);   /* Button/Neutral/Filled/Press/Text color */
-  --ds-color-button-neutral-filled-press-icon-color: var(--ds-color-icon-primary);   /* Button/Neutral/Filled/Press/Icon color */
-  --ds-button-s-size-icon-size: var(--ds-icon-size-size-5x);   /* Button/S size/Icon size */
-  --ds-button-s-size-gap: var(--ds-space-1x);   /* Button/S size/Gap */
-  --ds-button-s-size-pad-right: var(--ds-space-2x);   /* Button/S size/Pad right */
-  --ds-button-s-size-pad-bottom: var(--ds-space-1x);   /* Button/S size/Pad bottom */
-  --ds-button-s-size-pad-left: var(--ds-space-2x);   /* Button/S size/Pad left */
-  --ds-button-s-size-pad-top: var(--ds-space-1x);   /* Button/S size/Pad top */
-  --ds-color-button-accent-outlined-hover-border-color: var(--ds-color-stroke-accent);   /* Button/Accent/Outlined/Hover/Border color */
-  --ds-color-button-accent-outlined-press-border-color: var(--ds-color-stroke-accent);   /* Button/Accent/Outlined/Press/Border color */
-  --ds-color-button-neutral-outlined-hover-background: var(--ds-color-button-neutral-hover);   /* Button/Neutral/Outlined/Hover/Background */
-  --ds-color-button-neutral-outlined-hover-text-color: var(--ds-color-text-primary);   /* Button/Neutral/Outlined/Hover/Text color */
-  --ds-color-button-neutral-outlined-hover-icon-color: var(--ds-color-icon-primary);   /* Button/Neutral/Outlined/Hover/Icon color */
-  --ds-color-button-neutral-outlined-hover-border-color: var(--ds-color-stroke-default);   /* Button/Neutral/Outlined/Hover/Border color */
-  --ds-color-button-neutral-outlined-press-background: var(--ds-color-button-neutral-press);   /* Button/Neutral/Outlined/Press/Background */
-  --ds-color-button-neutral-outlined-press-text-color: var(--ds-color-text-primary);   /* Button/Neutral/Outlined/Press/Text color */
-  --ds-color-button-neutral-outlined-press-icon-color: var(--ds-color-icon-primary);   /* Button/Neutral/Outlined/Press/Icon color */
-  --ds-color-button-neutral-outlined-press-border-color: var(--ds-color-stroke-default);   /* Button/Neutral/Outlined/Press/Border color */
-  --ds-color-button-neutral-text-default-background: var(--ds-color-button-neutral-default-transparent);   /* Button/Neutral/Text/Default/Background */
-  --ds-color-button-neutral-text-default-text-color: var(--ds-color-text-primary);   /* Button/Neutral/Text/Default/Text color */
-  --ds-color-button-neutral-text-default-icon-color: var(--ds-color-icon-primary);   /* Button/Neutral/Text/Default/Icon color */
-  --ds-color-button-neutral-text-hover-background: var(--ds-color-button-neutral-hover);   /* Button/Neutral/Text/Hover/Background */
-  --ds-color-button-neutral-text-hover-text-color: var(--ds-color-text-primary);   /* Button/Neutral/Text/Hover/Text color */
-  --ds-color-button-neutral-text-hover-icon-color: var(--ds-color-icon-primary);   /* Button/Neutral/Text/Hover/Icon color */
-  --ds-color-button-neutral-text-press-background: var(--ds-color-button-neutral-press);   /* Button/Neutral/Text/Press/Background */
-  --ds-color-button-neutral-text-press-text-color: var(--ds-color-text-primary);   /* Button/Neutral/Text/Press/Text color */
-  --ds-color-button-neutral-text-press-icon-color: var(--ds-color-icon-primary);   /* Button/Neutral/Text/Press/Icon color */
-  --ds-color-button-accent-text-default-background: var(--ds-color-button-accent-lite-default-transparent);   /* Button/Accent/Text/Default/Background */
-  --ds-color-button-accent-text-hover-background: var(--ds-color-button-accent-lite-hover);   /* Button/Accent/Text/Hover/Background */
-  --ds-color-button-accent-text-press-background: var(--ds-color-button-accent-lite-press);   /* Button/Accent/Text/Press/Background */
-  --ds-color-button-accent-text-press-text-color: var(--ds-color-text-accent);   /* Button/Accent/Text/Press/Text color */
-  --ds-color-button-accent-text-press-icon-color: var(--ds-color-icon-accent);   /* Button/Accent/Text/Press/Icon color */
-  --ds-color-button-accent-text-hover-text-color: var(--ds-color-text-accent);   /* Button/Accent/Text/Hover/Text color */
-  --ds-color-button-accent-text-hover-icon-color: var(--ds-color-icon-accent);   /* Button/Accent/Text/Hover/Icon color */
-  --ds-color-button-accent-text-default-text-color: var(--ds-color-text-accent);   /* Button/Accent/Text/Default/Text color */
-  --ds-color-button-accent-text-default-icon-color: var(--ds-color-icon-accent);   /* Button/Accent/Text/Default/Icon color */
-  --ds-color-button-positive-filled-default-background: var(--ds-color-button-positive-default);   /* Button/Positive/Filled/Default/Background */
-  --ds-color-button-positive-filled-default-text-color: var(--ds-color-text-inversive);   /* Button/Positive/Filled/Default/Text color */
-  --ds-color-button-positive-filled-default-icon-color: var(--ds-color-icon-inversive);   /* Button/Positive/Filled/Default/Icon color */
-  --ds-color-button-positive-filled-hover-background: var(--ds-color-button-positive-hover);   /* Button/Positive/Filled/Hover/Background */
-  --ds-color-button-positive-filled-hover-text-color: var(--ds-color-text-inversive);   /* Button/Positive/Filled/Hover/Text color */
-  --ds-color-button-positive-filled-hover-icon-color: var(--ds-color-icon-inversive);   /* Button/Positive/Filled/Hover/Icon color */
-  --ds-color-button-positive-filled-press-background: var(--ds-color-button-positive-press);   /* Button/Positive/Filled/Press/Background */
-  --ds-color-button-positive-filled-press-text-color: var(--ds-color-text-inversive);   /* Button/Positive/Filled/Press/Text color */
-  --ds-color-button-positive-filled-press-icon-color: var(--ds-color-icon-inversive);   /* Button/Positive/Filled/Press/Icon color */
-  --ds-color-button-positive-outlined-default-background: var(--ds-color-button-neutral-default-transparent);   /* Button/Positive/Outlined/Default/Background */
-  --ds-color-button-positive-text-default-background: var(--ds-color-button-positive-lite-default-transparent);   /* Button/Positive/Text/Default/Background */
-  --ds-color-button-positive-text-default-text-color: var(--ds-color-text-positive);   /* Button/Positive/Text/Default/Text color */
-  --ds-color-button-positive-text-default-icon-color: var(--ds-color-icon-positive);   /* Button/Positive/Text/Default/Icon color */
-  --ds-color-button-positive-text-hover-background: var(--ds-color-button-positive-lite-hover);   /* Button/Positive/Text/Hover/Background */
-  --ds-color-button-positive-text-hover-text-color: var(--ds-color-text-positive);   /* Button/Positive/Text/Hover/Text color */
-  --ds-color-button-positive-text-hover-icon-color: var(--ds-color-icon-positive);   /* Button/Positive/Text/Hover/Icon color */
-  --ds-color-button-positive-text-press-background: var(--ds-color-button-positive-lite-press);   /* Button/Positive/Text/Press/Background */
-  --ds-color-button-positive-text-press-text-color: var(--ds-color-text-positive);   /* Button/Positive/Text/Press/Text color */
-  --ds-color-button-positive-text-press-icon-color: var(--ds-color-icon-positive);   /* Button/Positive/Text/Press/Icon color */
-  --ds-color-button-positive-outlined-default-text-color: var(--ds-color-text-positive);   /* Button/Positive/Outlined/Default/Text color */
-  --ds-color-button-positive-outlined-default-icon-color: var(--ds-color-icon-positive);   /* Button/Positive/Outlined/Default/Icon color */
-  --ds-color-button-positive-outlined-default-border-color: var(--ds-color-stroke-positive);   /* Button/Positive/Outlined/Default/Border color */
-  --ds-color-button-positive-outlined-hover-background: var(--ds-color-button-positive-lite-hover);   /* Button/Positive/Outlined/Hover/Background */
-  --ds-color-button-positive-outlined-hover-text-color: var(--ds-color-text-positive);   /* Button/Positive/Outlined/Hover/Text color */
-  --ds-color-button-positive-outlined-hover-icon-color: var(--ds-color-icon-positive);   /* Button/Positive/Outlined/Hover/Icon color */
-  --ds-color-button-positive-outlined-hover-border-color: var(--ds-color-stroke-positive);   /* Button/Positive/Outlined/Hover/Border color */
-  --ds-color-button-positive-outlined-press-background: var(--ds-color-button-positive-lite-press);   /* Button/Positive/Outlined/Press/Background */
-  --ds-color-button-positive-outlined-press-text-color: var(--ds-color-text-positive);   /* Button/Positive/Outlined/Press/Text color */
-  --ds-color-button-positive-outlined-press-icon-color: var(--ds-color-icon-positive);   /* Button/Positive/Outlined/Press/Icon color */
-  --ds-color-button-positive-outlined-press-border-color: var(--ds-color-stroke-positive);   /* Button/Positive/Outlined/Press/Border color */
-  --ds-color-button-warning-filled-default-background: var(--ds-color-button-warning-default);   /* Button/Warning/Filled/Default/Background */
-  --ds-color-button-warning-filled-default-text-color: var(--ds-color-text-inversive);   /* Button/Warning/Filled/Default/Text color */
-  --ds-color-button-warning-filled-default-icon-color: var(--ds-color-icon-inversive);   /* Button/Warning/Filled/Default/Icon color */
-  --ds-color-button-warning-filled-hover-background: var(--ds-color-button-warning-hover);   /* Button/Warning/Filled/Hover/Background */
-  --ds-color-button-warning-filled-hover-text-color: var(--ds-color-text-inversive);   /* Button/Warning/Filled/Hover/Text color */
-  --ds-color-button-warning-filled-hover-icon-color: var(--ds-color-icon-inversive);   /* Button/Warning/Filled/Hover/Icon color */
-  --ds-color-button-warning-filled-press-background: var(--ds-color-button-warning-press);   /* Button/Warning/Filled/Press/Background */
-  --ds-color-button-warning-filled-press-text-color: var(--ds-color-text-inversive);   /* Button/Warning/Filled/Press/Text color */
-  --ds-color-button-warning-filled-press-icon-color: var(--ds-color-icon-inversive);   /* Button/Warning/Filled/Press/Icon color */
-  --ds-color-button-warning-outlined-default-background: var(--ds-color-button-warning-lite-default-transparent);   /* Button/Warning/Outlined/Default/Background */
-  --ds-color-button-warning-text-default-background: var(--ds-color-button-warning-lite-default-transparent);   /* Button/Warning/Text/Default/Background */
-  --ds-color-button-warning-text-default-text-color: var(--ds-color-text-warning);   /* Button/Warning/Text/Default/Text color */
-  --ds-color-button-warning-text-default-icon-color: var(--ds-color-icon-warning);   /* Button/Warning/Text/Default/Icon color */
-  --ds-color-button-warning-text-hover-background: var(--ds-color-button-warning-lite-hover);   /* Button/Warning/Text/Hover/Background */
-  --ds-color-button-warning-text-hover-text-color: var(--ds-color-text-warning);   /* Button/Warning/Text/Hover/Text color */
-  --ds-color-button-warning-text-hover-icon-color: var(--ds-color-icon-warning);   /* Button/Warning/Text/Hover/Icon color */
-  --ds-color-button-warning-text-press-background: var(--ds-color-button-warning-lite-press);   /* Button/Warning/Text/Press/Background */
-  --ds-color-button-warning-text-press-text-color: var(--ds-color-text-warning);   /* Button/Warning/Text/Press/Text color */
-  --ds-color-button-warning-text-press-icon-color: var(--ds-color-icon-warning);   /* Button/Warning/Text/Press/Icon color */
-  --ds-color-button-warning-outlined-default-text-color: var(--ds-color-text-warning);   /* Button/Warning/Outlined/Default/Text color */
-  --ds-color-button-warning-outlined-default-icon-color: var(--ds-color-icon-warning);   /* Button/Warning/Outlined/Default/Icon color */
-  --ds-color-button-warning-outlined-default-border-color: var(--ds-color-stroke-warning);   /* Button/Warning/Outlined/Default/Border color */
-  --ds-color-button-warning-outlined-hover-background: var(--ds-color-button-warning-lite-hover);   /* Button/Warning/Outlined/Hover/Background */
-  --ds-color-button-warning-outlined-hover-text-color: var(--ds-color-text-warning);   /* Button/Warning/Outlined/Hover/Text color */
-  --ds-color-button-warning-outlined-hover-icon-color: var(--ds-color-icon-warning);   /* Button/Warning/Outlined/Hover/Icon color */
-  --ds-color-button-warning-outlined-hover-border-color: var(--ds-color-stroke-warning);   /* Button/Warning/Outlined/Hover/Border color */
-  --ds-color-button-warning-outlined-press-background: var(--ds-color-button-warning-lite-press);   /* Button/Warning/Outlined/Press/Background */
-  --ds-color-button-warning-outlined-press-text-color: var(--ds-color-text-warning);   /* Button/Warning/Outlined/Press/Text color */
-  --ds-color-button-warning-outlined-press-icon-color: var(--ds-color-icon-warning);   /* Button/Warning/Outlined/Press/Icon color */
-  --ds-color-button-warning-outlined-press-border-color: var(--ds-color-stroke-warning);   /* Button/Warning/Outlined/Press/Border color */
-  --ds-color-button-negative-filled-default-background: var(--ds-color-button-negative-default);   /* Button/Negative/Filled/Default/Background */
-  --ds-color-button-negative-filled-default-text-color: var(--ds-color-text-inversive);   /* Button/Negative/Filled/Default/Text color */
-  --ds-color-button-negative-filled-default-icon-color: var(--ds-color-icon-inversive);   /* Button/Negative/Filled/Default/Icon color */
-  --ds-color-button-negative-filled-hover-background: var(--ds-color-button-negative-hover);   /* Button/Negative/Filled/Hover/Background */
-  --ds-color-button-negative-filled-hover-text-color: var(--ds-color-text-inversive);   /* Button/Negative/Filled/Hover/Text color */
-  --ds-color-button-negative-filled-hover-icon-color: var(--ds-color-icon-inversive);   /* Button/Negative/Filled/Hover/Icon color */
-  --ds-color-button-negative-filled-press-background: var(--ds-color-button-negative-press);   /* Button/Negative/Filled/Press/Background */
-  --ds-color-button-negative-filled-press-text-color: var(--ds-color-text-inversive);   /* Button/Negative/Filled/Press/Text color */
-  --ds-color-button-negative-filled-press-icon-color: var(--ds-color-icon-inversive);   /* Button/Negative/Filled/Press/Icon color */
-  --ds-color-button-negative-outlined-default-background: var(--ds-color-button-negative-lite-default-transparent);   /* Button/Negative/Outlined/Default/Background */
-  --ds-color-button-negative-text-default-background: var(--ds-color-button-negative-lite-default-transparent);   /* Button/Negative/Text/Default/Background */
-  --ds-color-button-negative-text-default-text-color: var(--ds-color-text-negative);   /* Button/Negative/Text/Default/Text color */
-  --ds-color-button-negative-text-default-icon-color: var(--ds-color-icon-negative);   /* Button/Negative/Text/Default/Icon color */
-  --ds-color-button-negative-text-hover-background: var(--ds-color-button-negative-lite-hover);   /* Button/Negative/Text/Hover/Background */
-  --ds-color-button-negative-text-hover-text-color: var(--ds-color-text-negative);   /* Button/Negative/Text/Hover/Text color */
-  --ds-color-button-negative-text-hover-icon-color: var(--ds-color-icon-negative);   /* Button/Negative/Text/Hover/Icon color */
-  --ds-color-button-negative-text-press-background: var(--ds-color-button-negative-lite-press);   /* Button/Negative/Text/Press/Background */
-  --ds-color-button-negative-text-press-text-color: var(--ds-color-text-negative);   /* Button/Negative/Text/Press/Text color */
-  --ds-color-button-negative-text-press-icon-color: var(--ds-color-icon-negative);   /* Button/Negative/Text/Press/Icon color */
-  --ds-color-button-negative-outlined-default-text-color: var(--ds-color-text-negative);   /* Button/Negative/Outlined/Default/Text color */
-  --ds-color-button-negative-outlined-default-icon-color: var(--ds-color-icon-negative);   /* Button/Negative/Outlined/Default/Icon color */
-  --ds-color-button-negative-outlined-default-border-color: var(--ds-color-stroke-negative);   /* Button/Negative/Outlined/Default/Border color */
-  --ds-color-button-negative-outlined-hover-background: var(--ds-color-button-negative-lite-hover);   /* Button/Negative/Outlined/Hover/Background */
-  --ds-color-button-negative-outlined-hover-text-color: var(--ds-color-text-negative);   /* Button/Negative/Outlined/Hover/Text color */
-  --ds-color-button-negative-outlined-hover-icon-color: var(--ds-color-icon-negative);   /* Button/Negative/Outlined/Hover/Icon color */
-  --ds-color-button-negative-outlined-hover-border-color: var(--ds-color-stroke-negative);   /* Button/Negative/Outlined/Hover/Border color */
-  --ds-color-button-negative-outlined-press-background: var(--ds-color-button-negative-lite-press);   /* Button/Negative/Outlined/Press/Background */
-  --ds-color-button-negative-outlined-press-text-color: var(--ds-color-text-negative);   /* Button/Negative/Outlined/Press/Text color */
-  --ds-color-button-negative-outlined-press-icon-color: var(--ds-color-icon-negative);   /* Button/Negative/Outlined/Press/Icon color */
-  --ds-color-button-negative-outlined-press-border-color: var(--ds-color-stroke-negative);   /* Button/Negative/Outlined/Press/Border color */
-  --ds-color-button-icon-neutral-filled-default-background: var(--ds-color-button-neutral-default);   /* Button icon/Neutral/Filled/Default/Background */
-  --ds-color-button-icon-neutral-filled-icon-color: var(--ds-color-icon-primary);   /* Button icon/Neutral/Filled/Icon color */
-  --ds-color-button-icon-neutral-filled-hover-background: var(--ds-color-button-neutral-hover);   /* Button icon/Neutral/Filled/Hover/Background */
-  --ds-color-button-icon-neutral-filled-press-background: var(--ds-color-button-neutral-press);   /* Button icon/Neutral/Filled/Press/Background */
-  --ds-color-button-icon-neutral-outlined-default-background: var(--ds-color-button-neutral-default);   /* Button icon/Neutral/Outlined/Default/Background */
-  --ds-color-button-icon-neutral-outlined-icon-color: var(--ds-color-icon-primary);   /* Button icon/Neutral/Outlined/Icon color */
-  --ds-color-button-icon-neutral-outlined-border-color: var(--ds-color-stroke-default);   /* Button icon/Neutral/Outlined/Border color */
-  --ds-color-button-icon-neutral-text-default-background: var(--ds-color-button-neutral-default-transparent);   /* Button icon/Neutral/Text/Default/Background */
-  --ds-color-button-icon-neutral-text-hover-background: var(--ds-color-button-neutral-hover);   /* Button icon/Neutral/Text/Hover/Background */
-  --ds-color-button-icon-neutral-text-press-background: var(--ds-color-button-neutral-press);   /* Button icon/Neutral/Text/Press/Background */
-  --ds-color-button-icon-neutral-text-icon-color: var(--ds-color-icon-primary);   /* Button icon/Neutral/Text/Icon color */
-  --ds-color-button-icon-accent-filled-default-background: var(--ds-color-button-accent-default);   /* Button icon/Accent/Filled/Default/Background */
-  --ds-color-button-icon-accent-filled-icon-color: var(--ds-color-icon-inversive);   /* Button icon/Accent/Filled/Icon color */
-  --ds-color-button-icon-accent-filled-hover-background: var(--ds-color-button-accent-hover);   /* Button icon/Accent/Filled/Hover/Background */
-  --ds-color-button-icon-accent-filled-press-background: var(--ds-color-button-accent-press);   /* Button icon/Accent/Filled/Press/Background */
-  --ds-color-button-icon-accent-outlined-default-background: var(--ds-color-button-accent-lite-default);   /* Button icon/Accent/Outlined/Default/Background */
-  --ds-color-button-icon-accent-text-default-background: var(--ds-color-button-accent-lite-default-transparent);   /* Button icon/Accent/Text/Default/Background */
-  --ds-color-button-icon-accent-text-icon-color: var(--ds-color-icon-accent);   /* Button icon/Accent/Text/Icon color */
-  --ds-color-button-icon-accent-text-hover-background: var(--ds-color-button-accent-lite-hover);   /* Button icon/Accent/Text/Hover/Background */
-  --ds-color-button-icon-accent-text-press-background: var(--ds-color-button-accent-lite-press);   /* Button icon/Accent/Text/Press/Background */
-  --ds-color-button-icon-accent-outlined-icon-color: var(--ds-color-icon-accent);   /* Button icon/Accent/Outlined/Icon color */
-  --ds-color-button-icon-accent-outlined-border-color: var(--ds-color-stroke-accent);   /* Button icon/Accent/Outlined/Border color */
-  --ds-color-button-icon-accent-outlined-hover-background: var(--ds-color-button-accent-lite-hover);   /* Button icon/Accent/Outlined/Hover/Background */
-  --ds-color-button-icon-accent-outlined-press-background: var(--ds-color-button-accent-lite-press);   /* Button icon/Accent/Outlined/Press/Background */
-  --ds-button-icon-m-size-icon-size: var(--ds-icon-size-size-5x);   /* Button icon/M size/Icon size */
-  --ds-button-icon-border-radius: var(--ds-radius-2x);   /* Button icon/Border radius */
-  --ds-button-icon-m-size-pad-left: var(--ds-space-2x);   /* Button icon/M size/Pad left */
-  --ds-button-icon-m-size-pad-right: var(--ds-space-2x);   /* Button icon/M size/Pad right */
-  --ds-button-icon-m-size-pad-top: var(--ds-space-2x);   /* Button icon/M size/Pad top */
-  --ds-button-icon-m-size-pad-bottom: var(--ds-space-2x);   /* Button icon/M size/Pad bottom */
-  --ds-button-icon-s-size-pad-left: var(--ds-space-1x);   /* Button icon/S size/Pad left */
-  --ds-button-icon-s-size-pad-right: var(--ds-space-1x);   /* Button icon/S size/Pad right */
-  --ds-button-icon-s-size-pad-top: var(--ds-space-1x);   /* Button icon/S size/Pad top */
-  --ds-button-icon-s-size-pad-bottom: var(--ds-space-1x);   /* Button icon/S size/Pad bottom */
-  --ds-color-button-icon-neutral-outlined-hover-background: var(--ds-color-button-neutral-hover);   /* Button icon/Neutral/Outlined/Hover/Background */
-  --ds-color-button-icon-neutral-outlined-press-background: var(--ds-color-button-neutral-press);   /* Button icon/Neutral/Outlined/Press/Background */
-  --ds-color-button-icon-positive-filled-default-background: var(--ds-color-button-positive-default);   /* Button icon/Positive/Filled/Default/Background */
-  --ds-color-button-icon-positive-filled-icon-color: var(--ds-color-icon-inversive);   /* Button icon/Positive/Filled/Icon color */
-  --ds-color-button-icon-positive-filled-hover-background: var(--ds-color-button-positive-hover);   /* Button icon/Positive/Filled/Hover/Background */
-  --ds-color-button-icon-positive-filled-press-background: var(--ds-color-button-positive-press);   /* Button icon/Positive/Filled/Press/Background */
-  --ds-color-button-icon-positive-outlined-default-background: var(--ds-color-button-positive-lite-default);   /* Button icon/Positive/Outlined/Default/Background */
-  --ds-color-button-icon-positive-text-default-background: var(--ds-color-button-positive-lite-default-transparent);   /* Button icon/Positive/Text/Default/Background */
-  --ds-color-button-icon-positive-text-icon-color: var(--ds-color-icon-positive);   /* Button icon/Positive/Text/Icon color */
-  --ds-color-button-icon-positive-text-hover-background: var(--ds-color-button-positive-lite-hover);   /* Button icon/Positive/Text/Hover/Background */
-  --ds-color-button-icon-positive-text-press-background: var(--ds-color-button-positive-lite-press);   /* Button icon/Positive/Text/Press/Background */
-  --ds-color-button-icon-positive-outlined-icon-color: var(--ds-color-icon-positive);   /* Button icon/Positive/Outlined/Icon color */
-  --ds-color-button-icon-positive-outlined-border-color: var(--ds-color-stroke-positive);   /* Button icon/Positive/Outlined/Border color */
-  --ds-color-button-icon-positive-outlined-hover-background: var(--ds-color-button-positive-lite-hover);   /* Button icon/Positive/Outlined/Hover/Background */
-  --ds-color-button-icon-positive-outlined-press-background: var(--ds-color-button-positive-lite-press);   /* Button icon/Positive/Outlined/Press/Background */
-  --ds-color-button-icon-warning-filled-default-background: var(--ds-color-button-warning-default);   /* Button icon/Warning/Filled/Default/Background */
-  --ds-color-button-icon-warning-filled-icon-color: var(--ds-color-icon-inversive);   /* Button icon/Warning/Filled/Icon color */
-  --ds-color-button-icon-warning-filled-hover-background: var(--ds-color-button-warning-hover);   /* Button icon/Warning/Filled/Hover/Background */
-  --ds-color-button-icon-warning-filled-press-background: var(--ds-color-button-warning-press);   /* Button icon/Warning/Filled/Press/Background */
-  --ds-color-button-icon-warning-outlined-default-background: var(--ds-color-button-warning-lite-default);   /* Button icon/Warning/Outlined/Default/Background */
-  --ds-color-button-icon-warning-text-default-background: var(--ds-color-button-warning-lite-default-transparent);   /* Button icon/Warning/Text/Default/Background */
-  --ds-color-button-icon-warning-text-icon-color: var(--ds-color-icon-warning);   /* Button icon/Warning/Text/Icon color */
-  --ds-color-button-icon-warning-text-hover-background: var(--ds-color-button-warning-lite-hover);   /* Button icon/Warning/Text/Hover/Background */
-  --ds-color-button-icon-warning-text-press-background: var(--ds-color-button-warning-lite-press);   /* Button icon/Warning/Text/Press/Background */
-  --ds-color-button-icon-warning-outlined-icon-color: var(--ds-color-icon-warning);   /* Button icon/Warning/Outlined/Icon color */
-  --ds-color-button-icon-warning-outlined-border-color: var(--ds-color-stroke-warning);   /* Button icon/Warning/Outlined/Border color */
-  --ds-color-button-icon-warning-outlined-hover-background: var(--ds-color-button-warning-lite-hover);   /* Button icon/Warning/Outlined/Hover/Background */
-  --ds-color-button-icon-warning-outlined-press-background: var(--ds-color-button-warning-lite-press);   /* Button icon/Warning/Outlined/Press/Background */
-  --ds-color-button-icon-negative-filled-default-background: var(--ds-color-button-negative-default);   /* Button icon/Negative/Filled/Default/Background */
-  --ds-color-button-icon-negative-filled-icon-color: var(--ds-color-icon-inversive);   /* Button icon/Negative/Filled/Icon color */
-  --ds-color-button-icon-negative-filled-hover-background: var(--ds-color-button-negative-hover);   /* Button icon/Negative/Filled/Hover/Background */
-  --ds-color-button-icon-negative-filled-press-background: var(--ds-color-button-negative-press);   /* Button icon/Negative/Filled/Press/Background */
-  --ds-color-button-icon-negative-outlined-default-background: var(--ds-color-button-negative-lite-default);   /* Button icon/Negative/Outlined/Default/Background */
-  --ds-color-button-icon-negative-text-default-background: var(--ds-color-button-negative-lite-default-transparent);   /* Button icon/Negative/Text/Default/Background */
-  --ds-color-button-icon-negative-text-icon-color: var(--ds-color-icon-negative);   /* Button icon/Negative/Text/Icon color */
-  --ds-color-button-icon-negative-text-hover-background: var(--ds-color-button-negative-lite-hover);   /* Button icon/Negative/Text/Hover/Background */
-  --ds-color-button-icon-negative-text-press-background: var(--ds-color-button-negative-lite-press);   /* Button icon/Negative/Text/Press/Background */
-  --ds-color-button-icon-negative-outlined-icon-color: var(--ds-color-icon-negative);   /* Button icon/Negative/Outlined/Icon color */
-  --ds-color-button-icon-negative-outlined-border-color: var(--ds-color-stroke-negative);   /* Button icon/Negative/Outlined/Border color */
-  --ds-color-button-icon-negative-outlined-hover-background: var(--ds-color-button-negative-lite-hover);   /* Button icon/Negative/Outlined/Hover/Background */
-  --ds-color-button-icon-negative-outlined-press-background: var(--ds-color-button-negative-lite-press);   /* Button icon/Negative/Outlined/Press/Background */
-  --ds-button-toggle-border-radius: var(--ds-radius-3x);   /* Button toggle/Border radius */
-  --ds-button-toggle-pad-left: var(--ds-space-1x);   /* Button toggle/Pad left */
-  --ds-button-toggle-pad-right: var(--ds-space-1x);   /* Button toggle/Pad right */
-  --ds-button-toggle-pad-top: var(--ds-space-1x);   /* Button toggle/Pad top */
-  --ds-button-toggle-pad-bottom: var(--ds-space-1x);   /* Button toggle/Pad bottom */
-  --ds-color-button-toggle-filled-background: var(--ds-color-shapes-default);   /* Button toggle/Filled/Background */
-  --ds-button-toggle-gap: var(--ds-space-1x);   /* Button toggle/Gap */
-  --ds-color-chips-filled-default-background: var(--ds-color-shapes-default-variant);   /* Chips/Filled/Default/Background */
-  --ds-color-chips-text-color: var(--ds-color-text-primary);   /* Chips/Text color */
-  --ds-color-chips-icon-color: var(--ds-color-icon-primary);   /* Chips/Icon color */
-  --ds-color-chips-filled-hover-background: var(--ds-color-shapes-hover);   /* Chips/Filled/Hover/Background */
-  --ds-color-chips-filled-press-background: var(--ds-color-shapes-press);   /* Chips/Filled/Press/Background */
-  --ds-color-chips-outlined-default-background: var(--ds-color-shapes-default);   /* Chips/Outlined/Default/Background */
-  --ds-color-chips-outlined-default-border-color: var(--ds-color-stroke-default);   /* Chips/Outlined/Default/Border color */
-  --ds-chips-border-size: var(--ds-stroke-0-25x);   /* Chips/Border size */
-  --ds-chips-m-size-text-size: var(--ds-typography-body-font-size-s);   /* Chips/M size/Text size */
-  --ds-chips-text-weight: var(--ds-typography-font-weight-medium);   /* Chips/Text weight */
-  --ds-chips-m-size-icon-size: var(--ds-icon-size-size-5x);   /* Chips/M size/Icon size */
-  --ds-chips-m-size-border-radius: var(--ds-radius-3x);   /* Chips/M size/Border radius */
-  --ds-chips-m-size-gap: var(--ds-space-2x);   /* Chips/M size/Gap */
-  --ds-chips-m-size-pad-left: var(--ds-space-2x);   /* Chips/M size/Pad left */
-  --ds-chips-m-size-pad-right: var(--ds-space-2x);   /* Chips/M size/Pad right */
-  --ds-chips-m-size-pad-top: var(--ds-space-1-5x);   /* Chips/M size/Pad top */
-  --ds-chips-m-size-pad-bottom: var(--ds-space-1-5x);   /* Chips/M size/Pad bottom */
-  --ds-chips-s-size-pad-left: var(--ds-space-1-5x);   /* Chips/S size/Pad left */
-  --ds-chips-s-size-pad-right: var(--ds-space-1-5x);   /* Chips/S size/Pad right */
-  --ds-chips-s-size-pad-top: var(--ds-space-1x);   /* Chips/S size/Pad top */
-  --ds-chips-s-size-pad-bottom: var(--ds-space-1x);   /* Chips/S size/Pad bottom */
-  --ds-color-chips-outlined-hover-background: var(--ds-color-shapes-default);   /* Chips/Outlined/Hover/Background */
-  --ds-color-chips-outlined-hover-border-color: var(--ds-color-stroke-hover);   /* Chips/Outlined/Hover/Border color */
-  --ds-color-chips-outlined-press-background: var(--ds-color-shapes-press);   /* Chips/Outlined/Press/Background */
-  --ds-color-chips-outlined-press-border-color: var(--ds-color-stroke-default);   /* Chips/Outlined/Press/Border color */
-  --ds-chips-s-size-text-size: var(--ds-typography-caption-font-size-l);   /* Chips/S size/Text size */
-  --ds-color-button-disable-background-filled: var(--ds-color-button-neutral-disable);   /* Button/Disable/Background filled */
-  --ds-color-button-disable-text-color: var(--ds-color-text-disable);   /* Button/Disable/Text color */
-  --ds-color-button-disable-icon-color: var(--ds-color-icon-disable);   /* Button/Disable/Icon color */
-  --ds-color-button-disable-background-text: var(--ds-color-button-neutral-default-transparent);   /* Button/Disable/Background text */
-  --ds-color-button-disable-background-outlined: var(--ds-color-button-neutral-default-transparent);   /* Button/Disable/Background outlined */
-  --ds-color-button-disable-border-color: var(--ds-color-stroke-disable);   /* Button/Disable/Border color */
-  --ds-color-button-icon-disable-background-filled: var(--ds-color-button-neutral-disable);   /* Button icon/Disable/Background filled */
-  --ds-color-button-icon-disable-icon-color: var(--ds-color-icon-disable);   /* Button icon/Disable/Icon color */
-  --ds-color-button-icon-disable-background-text: var(--ds-color-button-neutral-default-transparent);   /* Button icon/Disable/Background text */
-  --ds-color-button-icon-disable-background-outlined: var(--ds-color-button-neutral-disable);   /* Button icon/Disable/Background outlined */
-  --ds-color-button-icon-disable-border-color: var(--ds-color-stroke-disable);   /* Button icon/Disable/Border color */
-  --ds-color-chips-disable-background-filled: var(--ds-color-shapes-disable);   /* Chips/Disable/Background filled */
-  --ds-color-chips-disable-text-color: var(--ds-color-text-disable);   /* Chips/Disable/Text color */
-  --ds-color-chips-disable-icon-color: var(--ds-color-icon-disable);   /* Chips/Disable/Icon color */
-  --ds-color-chips-disable-background-outlined: var(--ds-color-shapes-default);   /* Chips/Disable/Background outlined */
-  --ds-color-chips-disable-border-color: var(--ds-color-stroke-disable);   /* Chips/Disable/Border color */
-  --ds-button-icon-gap: var(--ds-space-2x);   /* Button icon/Gap */
-  --ds-button-icon-border-size: var(--ds-stroke-0-25x);   /* Button icon/Border size */
-  --ds-button-border-size: var(--ds-stroke-0-25x);   /* Button/Border size */
-  --ds-color-form-field-filled-default-input-text-color: var(--ds-color-text-primary);   /* Form field/Filled/Default/Input text color */
-  --ds-color-form-field-filled-default-icon-color-default: var(--ds-color-icon-primary);   /* Form field/Filled/Default/Icon color default */
-  --ds-color-form-field-outlined-default-background: var(--ds-color-shapes-default);   /* Form field/Outlined/Default/Background */
-  --ds-color-form-field-outlined-default-text-color: var(--ds-color-text-primary);   /* Form field/Outlined/Default/Text color */
-  --ds-color-form-field-outlined-default-icon-color: var(--ds-color-icon-primary);   /* Form field/Outlined/Default/Icon color */
-  --ds-color-form-field-outlined-default-border-color: var(--ds-color-stroke-default);   /* Form field/Outlined/Default/Border color */
-  --ds-form-field-m-size-text: var(--ds-typography-body-font-size-m);   /* Form field/M size/Text */
-  --ds-form-field-text-weight: var(--ds-typography-font-weight-medium);   /* Form field/Text weight */
-  --ds-form-field-border-size: var(--ds-stroke-0-25x);   /* Form field/Border size */
-  --ds-form-field-border-radius: var(--ds-radius-3x);   /* Form field/Border radius */
-  --ds-form-field-m-size-icon: var(--ds-icon-size-size-6x);   /* Form field/M size/Icon */
-  --ds-form-field-s-size-icon: var(--ds-icon-size-size-6x);   /* Form field/S size/Icon */
-  --ds-color-form-field-outlined-hover-background: var(--ds-color-button-neutral-hover);   /* Form field/Outlined/Hover/Background */
-  --ds-color-form-field-outlined-hover-text-color: var(--ds-color-text-primary);   /* Form field/Outlined/Hover/Text color */
-  --ds-color-form-field-outlined-hover-icon-color: var(--ds-color-icon-primary);   /* Form field/Outlined/Hover/Icon color */
-  --ds-color-form-field-outlined-hover-border-color: var(--ds-color-stroke-default);   /* Form field/Outlined/Hover/Border color */
-  --ds-color-form-field-outlined-focus-background: var(--ds-color-button-neutral-press);   /* Form field/Outlined/Focus/Background */
-  --ds-color-form-field-outlined-focus-text-color: var(--ds-color-text-primary);   /* Form field/Outlined/Focus/Text color */
-  --ds-color-form-field-outlined-focus-icon-color: var(--ds-color-icon-primary);   /* Form field/Outlined/Focus/Icon color */
-  --ds-color-form-field-outlined-focus-border-color: var(--ds-color-stroke-default);   /* Form field/Outlined/Focus/Border color */
-  --ds-form-field-m-size-text-label: var(--ds-typography-caption-font-size-l);   /* Form field/M size/Text label */
-  --ds-form-field-s-size-text: var(--ds-typography-body-font-size-m);   /* Form field/S size/Text */
-  --ds-form-field-s-size-text-label: var(--ds-typography-caption-font-size-l);   /* Form field/S size/Text label */
-  --ds-form-field-gap-input-support: var(--ds-space-1x);   /* Form field/Gap input support */
-  --ds-form-field-gap-input-frame: var(--ds-space-2x);   /* Form field/Gap input frame */
-  --ds-form-field-gap-input-content: var(--ds-space-0);   /* Form field/Gap input content */
-  --ds-form-field-m-size-text-support: var(--ds-typography-caption-font-size-l);   /* Form field/M size/Text support */
-  --ds-form-field-s-size-text-support: var(--ds-typography-caption-font-size-l);   /* Form field/S size/Text support */
-  --ds-form-field-pad-support-left: var(--ds-space-3x);   /* Form field/Pad support left */
-  --ds-form-field-pad-support-right: var(--ds-space-3x);   /* Form field/Pad support right */
-  --ds-form-field-m-size-pad-input-right: var(--ds-space-3x);   /* Form field/M size/Pad input right */
-  --ds-form-field-m-size-pad-input-left: var(--ds-space-3x);   /* Form field/M size/Pad input left */
-  --ds-form-field-m-size-pad-input-bottom: var(--ds-space-3x);   /* Form field/M size/Pad input bottom */
-  --ds-form-field-m-size-pad-input-top: var(--ds-space-3x);   /* Form field/M size/Pad input top */
-  --ds-color-form-field-background-support: var(--ds-color-shapes-default-transparent);   /* Form field/Background support */
-  --ds-color-form-field-outlined-error-background: var(--ds-color-button-neutral-press);   /* Form field/Outlined/Error/Background */
-  --ds-color-form-field-outlined-error-text-color: var(--ds-color-text-primary);   /* Form field/Outlined/Error/Text color */
-  --ds-color-form-field-outlined-error-icon-color: var(--ds-color-icon-primary);   /* Form field/Outlined/Error/Icon color */
-  --ds-color-form-field-outlined-error-border-color: var(--ds-color-stroke-default);   /* Form field/Outlined/Error/Border color */
-  --ds-color-form-field-filled-default-label-text-color: var(--ds-color-text-secondary);   /* Form field/Filled/Default/Label text color */
-  --ds-color-form-field-filled-default-support-text-color: var(--ds-color-text-secondary);   /* Form field/Filled/Default/Support text color */
-  --ds-color-form-field-filled-default-border-color: var(--ds-color-stroke-default);   /* Form field/Filled/Default/Border color */
-  --ds-color-form-field-filled-default-icon-color-warning: var(--ds-color-icon-warning);   /* Form field/Filled/Default/Icon color warning */
-  --ds-color-form-field-input-filled-background: var(--ds-color-shapes-default-variant);   /* Form field/Input filled background */
-  --ds-color-form-field-filled-hover-input-text-color: var(--ds-color-text-primary);   /* Form field/Filled/Hover/Input text color */
-  --ds-color-form-field-filled-hover-label-text-color: var(--ds-color-text-secondary);   /* Form field/Filled/Hover/Label text color */
-  --ds-color-form-field-filled-hover-text-support-color: var(--ds-color-text-secondary);   /* Form field/Filled/Hover/Text support color */
-  --ds-color-form-field-filled-hover-icon-color-default: var(--ds-color-icon-primary);   /* Form field/Filled/Hover/Icon color default */
-  --ds-color-form-field-filled-hover-icon-color-warning: var(--ds-color-icon-warning);   /* Form field/Filled/Hover/Icon color warning */
-  --ds-color-form-field-filled-hover-border-color: var(--ds-color-stroke-hover);   /* Form field/Filled/Hover/Border color */
-  --ds-color-form-field-filled-focus-input-cursor-color: var(--ds-color-text-primary);   /* Form field/Filled/Focus/Input cursor color */
-  --ds-color-form-field-filled-focus-label-text-color: var(--ds-color-text-accent);   /* Form field/Filled/Focus/Label text color */
-  --ds-color-form-field-filled-focus-support-text-color: var(--ds-color-text-secondary);   /* Form field/Filled/Focus/Support text color */
-  --ds-color-form-field-filled-focus-icon-color-default: var(--ds-color-icon-primary);   /* Form field/Filled/Focus/Icon color default */
-  --ds-color-form-field-filled-focus-icon-color-warning: var(--ds-color-icon-warning);   /* Form field/Filled/Focus/Icon color warning */
-  --ds-color-form-field-filled-focus-border-color: var(--ds-color-stroke-accent);   /* Form field/Filled/Focus/Border color */
-  --ds-color-form-field-filled-focus-input-text-placeholder-color: var(--ds-color-text-placeholder);   /* Form field/Filled/Focus/Input text placeholder color */
-  --ds-color-form-field-filled-focus-input-text-color: var(--ds-color-text-primary);   /* Form field/Filled/Focus/Input text color */
-  --ds-color-form-field-filled-error-input-text-color: var(--ds-color-text-primary);   /* Form field/Filled/Error/Input text color */
-  --ds-color-form-field-filled-error-input-text-placeholder-color: var(--ds-color-text-placeholder);   /* Form field/Filled/Error/Input text placeholder color */
-  --ds-color-form-field-filled-error-input-cursor-color: var(--ds-color-text-primary);   /* Form field/Filled/Error/Input cursor color */
-  --ds-color-form-field-filled-error-label-text-color: var(--ds-color-text-negative);   /* Form field/Filled/Error/Label text color */
-  --ds-color-form-field-filled-error-text-support-color: var(--ds-color-text-negative);   /* Form field/Filled/Error/Text support color */
-  --ds-color-form-field-filled-error-icon-color-default: var(--ds-color-icon-primary);   /* Form field/Filled/Error/Icon color default */
-  --ds-color-form-field-filled-error-icon-color-warning: var(--ds-color-icon-warning);   /* Form field/Filled/Error/Icon color warning */
-  --ds-color-form-field-filled-error-border-color: var(--ds-color-stroke-negative);   /* Form field/Filled/Error/Border color */
-  --ds-color-form-field-filled-error-icon-color-error: var(--ds-color-icon-negative);   /* Form field/Filled/Error/Icon color error */
-  --ds-form-field-filled-focus-border-size-focus: var(--ds-stroke-0-25x);   /* Form field/Filled/Focus/Border size focus */
-  --ds-form-field-filled-error-border-size-focus: var(--ds-stroke-0-5x);   /* Form field/Filled/Error/Border size focus */
-  --ds-color-form-field-filled-hover-input-background-hover: var(--ds-color-shapes-hover);   /* Form field/Filled/Hover/Input background hover */
-  --ds-color-form-field-filled-error-input-background-hover: var(--ds-color-shapes-hover);   /* Form field/Filled/Error/Input background hover */
-  --ds-color-form-field-filled-disable-input-text-color: var(--ds-color-text-disable);   /* Form field/Filled/Disable/Input text color */
-  --ds-color-form-field-filled-disable-label-text-color: var(--ds-color-text-disable);   /* Form field/Filled/Disable/Label text color */
-  --ds-color-form-field-filled-disable-support-text-color: var(--ds-color-text-disable);   /* Form field/Filled/Disable/Support text color */
-  --ds-color-form-field-filled-disable-icon-color-disable: var(--ds-color-icon-disable);   /* Form field/Filled/Disable/Icon color disable */
-  --ds-color-form-field-filled-disable-icon-color-warning: var(--ds-color-icon-warning);   /* Form field/Filled/Disable/Icon color warning */
-  --ds-color-form-field-filled-disable-border-color: var(--ds-color-stroke-disable);   /* Form field/Filled/Disable/Border color */
-  --ds-color-form-field-filled-disable-input-background: var(--ds-color-surface-disable);   /* Form field/Filled/Disable/Input background */
-  --ds-color-form-field-input-outlined-background: var(--ds-color-shapes-default);   /* Form field/Input outlined background */
-  --ds-chips-input-m-size-pad-top: var(--ds-size-1x);   /* Chips input/M size/Pad top */
-  --ds-chips-input-m-size-pad-bottom: var(--ds-size-2x);   /* Chips input/M size/Pad bottom */
-  --ds-form-field-s-size-pad-input-left: var(--ds-space-3x);   /* Form field/S size/Pad input left */
-  --ds-form-field-s-size-pad-input-bottom: var(--ds-space-1-5x);   /* Form field/S size/Pad input bottom */
-  --ds-form-field-s-size-pad-input-top: var(--ds-space-1-5x);   /* Form field/S size/Pad input top */
-  --ds-form-field-s-size-pad-input-right: var(--ds-space-3x);   /* Form field/S size/Pad input right */
-  --ds-color-button-toggle-outlined-background: var(--ds-color-shapes-default);   /* Button toggle/Outlined/Background */
-  --ds-button-toggle-outlined-border-size: var(--ds-stroke-0-25x);   /* Button toggle/Outlined/Border size */
-  --ds-color-button-toggle-outlined-border-color: var(--ds-color-stroke-default);   /* Button toggle/Outlined/Border color */
-  --ds-form-field-xs-size-text: var(--ds-typography-body-font-size-s);   /* Form field/XS size/Text */
-  --ds-form-field-xs-size-text-label: var(--ds-typography-caption-font-size-l);   /* Form field/XS size/Text label */
-  --ds-form-field-xs-size-text-support: var(--ds-typography-caption-font-size-l);   /* Form field/XS size/Text support */
-  --ds-form-field-xs-size-icon: var(--ds-icon-size-size-5x);   /* Form field/XS size/Icon */
-  --ds-form-field-xs-size-pad-input-left: var(--ds-space-2x);   /* Form field/XS size/Pad input left */
-  --ds-form-field-xs-size-pad-input-right: var(--ds-space-2x);   /* Form field/XS size/Pad input right */
-  --ds-form-field-xs-size-pad-input-top: var(--ds-space-1x);   /* Form field/XS size/Pad input top */
-  --ds-form-field-xs-size-pad-input-bottom: var(--ds-space-1x);   /* Form field/XS size/Pad input bottom */
-  --ds-color-input-number-input-background: var(--ds-color-shapes-default);   /* Input number/Input/Background */
-  --ds-color-input-number-input-default-border-color: var(--ds-color-stroke-default);   /* Input number/Input/Default/Border color */
-  --ds-input-number-input-border-size: var(--ds-stroke-0-25x);   /* Input number/Input/Border size */
-  --ds-color-slide-toggle-selected-default-background: var(--ds-color-brand-accent-default);   /* Slide toggle/Selected/Default/Background */
-  --ds-slide-toggle-border-radius-knob: var(--ds-radius-circular);   /* Slide toggle/Border radius knob */
-  --ds-slide-toggle-knob-width: var(--ds-size-4x);   /* Slide toggle/Knob width */
-  --ds-slide-toggle-knob-height: var(--ds-size-4x);   /* Slide toggle/Knob height */
-  --ds-slide-toggle-border-radius: var(--ds-radius-3x);   /* Slide toggle/Border radius */
-  --ds-slide-toggle-selected-pad-right: var(--ds-space-0-5x);   /* Slide toggle/Selected/Pad right */
-  --ds-slide-toggle-selected-pad-left: var(--ds-space-4x);   /* Slide toggle/Selected/Pad left */
-  --ds-slide-toggle-pad-top: var(--ds-space-0-5x);   /* Slide toggle/Pad top */
-  --ds-slide-toggle-pad-bottom: var(--ds-space-0-5x);   /* Slide toggle/Pad bottom */
-  --ds-slide-toggle-deselected-pad-right: var(--ds-space-4x);   /* Slide toggle/Deselected/Pad right */
-  --ds-slide-toggle-deselected-pad-left: var(--ds-space-0-5x);   /* Slide toggle/Deselected/Pad left */
-  --ds-icon-size-size-4x: var(--ds-size-4x);   /* Icon size/Size 4x */
-  --ds-icon-size-size-9x: var(--ds-size-9x);   /* Icon size/Size 9x */
-  --ds-icon-size-size-8x: var(--ds-size-8x);   /* Icon size/Size 8x */
-  --ds-icon-size-size-6x: var(--ds-size-6x);   /* Icon size/Size 6x */
-  --ds-icon-size-size-5x: var(--ds-size-5x);   /* Icon size/Size 5x */
-  --ds-icon-size-size-10x: var(--ds-size-10x);   /* Icon size/Size 10x */
-  --ds-status-text-size: var(--ds-typography-caption-font-size-l);   /* Status/Text size */
-  --ds-status-pad-left: var(--ds-space-1-5x);   /* Status/Pad left */
-  --ds-status-pad-right: var(--ds-space-1-5x);   /* Status/Pad right */
-  --ds-status-pad-top: var(--ds-space-1x);   /* Status/Pad top */
-  --ds-status-pad-bottom: var(--ds-space-1x);   /* Status/Pad bottom */
-  --ds-color-status-neutral-filled-background: var(--ds-palette-neutral-10);   /* Status/Neutral/Filled/Background */
-  --ds-color-status-neutral-filled-text-color: var(--ds-color-text-secondary);   /* Status/Neutral/Filled/Text color */
-  --ds-status-text-weight: var(--ds-typography-font-weight-medium);   /* Status/Text weight */
-  --ds-status-gap: var(--ds-space-1x);   /* Status/Gap */
-  --ds-status-icon-size: var(--ds-icon-size-size-4x);   /* Status/Icon size */
-  --ds-status-border-radius: var(--ds-radius-2x);   /* Status/Border radius */
-  --ds-color-status-neutral-text-text-color: var(--ds-color-text-secondary);   /* Status/Neutral/Text/Text color */
-  --ds-color-status-icon-color: var(--ds-color-icon-primary);   /* Status/Icon color */
-  --ds-color-status-accent-filled-background: var(--ds-palette-accent-10);   /* Status/Accent/Filled/Background */
-  --ds-color-status-accent-filled-text-color: var(--ds-color-text-accent);   /* Status/Accent/Filled/Text color */
-  --ds-color-status-accent-text-text-color: var(--ds-color-text-accent);   /* Status/Accent/Text/Text color */
-  --ds-color-status-positive-filled-background: var(--ds-palette-positive-10);   /* Status/Positive/Filled/Background */
-  --ds-color-status-positive-filled-text-color: var(--ds-color-text-positive);   /* Status/Positive/Filled/Text color */
-  --ds-color-status-positive-text-text-color: var(--ds-color-text-positive);   /* Status/Positive/Text/Text color */
-  --ds-color-status-warning-filled-background: var(--ds-palette-warning-10);   /* Status/Warning/Filled/Background */
-  --ds-color-status-warning-filled-text-color: var(--ds-color-text-warning);   /* Status/Warning/Filled/Text color */
-  --ds-color-status-warning-text-text-color: var(--ds-color-text-warning);   /* Status/Warning/Text/Text color */
-  --ds-color-status-negative-filled-background: var(--ds-palette-negative-10);   /* Status/Negative/Filled/Background */
-  --ds-color-status-negative-filled-text-color: var(--ds-color-text-negative);   /* Status/Negative/Filled/Text color */
-  --ds-color-status-negative-text-text-color: var(--ds-color-text-negative);   /* Status/Negative/Text/Text color */
-  --ds-color-status-contrast-1-filled-background: var(--ds-palette-contrast-1-10);   /* Status/Contrast-1/Filled/Background */
-  --ds-color-status-contrast-1-filled-text-color: var(--ds-palette-contrast-1-700);   /* Status/Contrast-1/Filled/Text color */
-  --ds-color-status-contrast-1-text-text-color: var(--ds-color-brand-contrast-1-dark);   /* Status/Contrast-1/Text/Text color */
-  --ds-color-status-contrast-2-filled-background: var(--ds-palette-contrast-2-10);   /* Status/Contrast-2/Filled/Background */
-  --ds-color-status-contrast-2-filled-text-color: var(--ds-palette-contrast-2-950);   /* Status/Contrast-2/Filled/Text color */
-  --ds-color-status-contrast-2-text-text-color: var(--ds-color-brand-contrast-2-dark);   /* Status/Contrast-2/Text/Text color */
-  --ds-color-status-contrast-3-filled-background: var(--ds-palette-contrast-3-10);   /* Status/Contrast-3/Filled/Background */
-  --ds-color-status-contrast-3-filled-text-color: var(--ds-palette-contrast-3-950);   /* Status/Contrast-3/Filled/Text color */
-  --ds-color-status-contrast-3-text-text-color: var(--ds-color-brand-contrast-3-dark);   /* Status/Contrast-3/Text/Text color */
-  --ds-expansion-panel-collaps-text-size: var(--ds-typography-body-font-size-s);   /* Expansion panel/Collaps/Text size */
-  --ds-expansion-panel-collaps-text-weight: var(--ds-typography-font-weight-medium);   /* Expansion panel/Collaps/Text weight */
-  --ds-expansion-panel-collaps-gap: var(--ds-space-2x);   /* Expansion panel/Collaps/Gap */
-  --ds-expansion-panel-collaps-border-radius: var(--ds-radius-3x);   /* Expansion panel/Collaps/Border radius */
-  --ds-expansion-panel-collaps-pad-left: var(--ds-space-4x);   /* Expansion panel/Collaps/Pad left */
-  --ds-expansion-panel-collaps-pad-right: var(--ds-space-4x);   /* Expansion panel/Collaps/Pad right */
-  --ds-expansion-panel-collaps-pad-top: var(--ds-space-3x);   /* Expansion panel/Collaps/Pad top */
-  --ds-expansion-panel-collaps-pad-bottom: var(--ds-space-3x);   /* Expansion panel/Collaps/Pad bottom */
-  --ds-expansion-panel-collaps-gap-icon-group: var(--ds-space-2x);   /* Expansion panel/Collaps/Gap icon group ? */
-  --ds-color-expansion-panel-collaps-text-color: var(--ds-color-text-primary);   /* Expansion panel/Collaps/Text color */
-  --ds-expansion-panel-collaps-border-size: var(--ds-stroke-0-25x);   /* Expansion panel/Collaps/Border size */
-  --ds-color-expansion-panel-collaps-border-color: var(--ds-color-stroke-default);   /* Expansion panel/Collaps/Border color */
-  --ds-expansion-panel-content-pad-left: var(--ds-space-4x);   /* Expansion panel/Content/Pad left */
-  --ds-expansion-panel-content-pad-right: var(--ds-space-4x);   /* Expansion panel/Content/Pad right */
-  --ds-expansion-panel-content-pad-top: var(--ds-space-4x);   /* Expansion panel/Content/Pad top */
-  --ds-expansion-panel-content-pad-bottom: var(--ds-space-4x);   /* Expansion panel/Content/Pad bottom */
-  --ds-expansion-panel-expand-border-radius: var(--ds-radius-3x);   /* Expansion panel/Expand/Border radius */
-  --ds-expansion-panel-expand-border-size: var(--ds-stroke-0-25x);   /* Expansion panel/Expand/Border size */
-  --ds-color-expansion-panel-expand-border-color: var(--ds-color-stroke-default);   /* Expansion panel/Expand/Border color */
-  --ds-expansion-panel-content-text-size: var(--ds-typography-body-font-size-s);   /* Expansion panel/Content/Text size */
-  --ds-color-expansion-panel-content-text-color: var(--ds-color-text-primary);   /* Expansion panel/Content/Text color */
-  --ds-expansion-panel-content-text-weight: var(--ds-typography-font-weight-regular);   /* Expansion panel/Content/Text weight */
-  --ds-color-dialog-background: var(--ds-color-surface-default);   /* Dialog/Background */
-  --ds-dialog-border-radius: var(--ds-radius-3x);   /* Dialog/Border radius */
-  --ds-dialog-header-gap: var(--ds-space-2x);   /* Dialog/Header/Gap */
-  --ds-dialog-header-pad-top: var(--ds-space-6x);   /* Dialog/Header/Pad top */
-  --ds-dialog-header-title-size: var(--ds-typography-font-size-5x);   /* Dialog/Header/Title size */
-  --ds-dialog-header-title-weight: var(--ds-typography-font-weight-medium);   /* Dialog/Header/Title weight */
-  --ds-color-dialog-header-title-color: var(--ds-color-text-primary);   /* Dialog/Header/Title color */
-  --ds-dialog-header-desc-size: var(--ds-typography-font-size-4x);   /* Dialog/Header/Desc size */
-  --ds-dialog-header-desc-weight: var(--ds-typography-font-weight-regular);   /* Dialog/Header/Desc weight */
-  --ds-color-dialog-header-desc-color: var(--ds-color-text-secondary);   /* Dialog/Header/Desc color */
-  --ds-color-table-cell-text-color: var(--ds-color-text-primary);   /* Table cell/Text color */
-  --ds-color-table-cell-background: var(--ds-color-table-surfase-default-transparent);   /* Table cell/Background */
-  --ds-table-cell-pad-left: var(--ds-space-2x);   /* Table cell/Pad left */
-  --ds-table-cell-pad-right: var(--ds-space-2x);   /* Table cell/Pad right */
-  --ds-table-cell-pad-top: var(--ds-space-2x);   /* Table cell/Pad top */
-  --ds-table-cell-pad-bottom: var(--ds-space-2x);   /* Table cell/Pad bottom */
-  --ds-color-table-row-header-background-header: var(--ds-color-table-surfase-head);   /* Table row/Header/Background header */
-  --ds-table-row-header-border-radius-top-left: var(--ds-radius-2x);   /* Table row/Header/Border radius top left */
-  --ds-table-row-header-border-radius-top-right: var(--ds-radius-2x);   /* Table row/Header/Border radius top right */
-  --ds-color-table-row-content-default-background: var(--ds-color-table-surfase-default);   /* Table row/Content/Default/Background */
-  --ds-table-row-content-border-bottom-size: var(--ds-stroke-0-25x);   /* Table row/Content/Border bottom size */
-  --ds-color-table-row-content-border-color: var(--ds-color-stroke-default);   /* Table row/Content/Border color */
-  --ds-color-expansion-panel-collaps-hover-background: var(--ds-color-surface-hover);   /* Expansion panel/Collaps/Hover/Background */
-  --ds-color-expansion-panel-collaps-default-background: var(--ds-color-surface-default-variant);   /* Expansion panel/Collaps/Default/Background */
-  --ds-slide-toggle-gap: var(--ds-space-2x);   /* Slide toggle/Gap */
-  --ds-slide-toggle-text-weight: var(--ds-typography-font-weight-regular);   /* Slide toggle/Text weight */
-  --ds-slide-toggle-text-size: var(--ds-typography-body-font-size-s);   /* Slide toggle/Text size */
-  --ds-color-slide-toggle-selected-hover-background: var(--ds-color-brand-accent-dark);   /* Slide toggle/Selected/Hover/Background */
-  --ds-color-slide-toggle-deselected-default-background: var(--ds-color-brand-neutral-neutral);   /* Slide toggle/Deselected/Default/Background */
-  --ds-color-slide-toggle-deselected-hover-background: var(--ds-color-brand-neutral-dark);   /* Slide toggle/Deselected/Hover/Background */
-  --ds-color-slide-toggle-deselected-disable-background: var(--ds-color-brand-neutral-lighter);   /* Slide toggle/Deselected/Disable/Background */
-  --ds-color-slide-toggle-selected-disable-background: var(--ds-color-brand-neutral-lighter);   /* Slide toggle/Selected/Disable/Background */
-  --ds-color-slide-toggle-deselected-disable-text-color: var(--ds-color-text-disable);   /* Slide toggle/Deselected/Disable/Text color */
-  --ds-color-slide-toggle-selected-disable-text-color: var(--ds-color-text-disable);   /* Slide toggle/Selected/Disable/Text color */
-  --ds-color-slide-toggle-text-color: var(--ds-color-text-primary);   /* Slide toggle/Text color */
-  --ds-color-slide-toggle-knob-color: var(--ds-color-brand-neutral-default);   /* Slide toggle/Knob color */
-  --ds-table-cell-header-hover-border-size: var(--ds-stroke-0-25x);   /* Table cell/Header/Hover/Border size */
-  --ds-color-table-cell-header-default-background: var(--ds-color-table-surfase-head);   /* Table cell/Header/Default/Background */
-  --ds-color-table-row-content-hover-background: var(--ds-color-table-surfase-hover);   /* Table row/Content/Hover/Background */
-  --ds-color-table-cell-header-disable-text-color: var(--ds-color-text-disable);   /* Table cell/Header/Disable/Text color */
-  --ds-color-table-row-content-zebra-background: var(--ds-color-table-surfase-zebra);   /* Table row/Content/Zebra/Background */
-  --ds-dialog-content-title-size: var(--ds-typography-font-size-4x);   /* Dialog/Content/Title size */
-  --ds-dialog-content-gap: var(--ds-space-4x);   /* Dialog/Content/Gap */
-  --ds-color-dialog-content-title-color: var(--ds-color-text-primary);   /* Dialog/Content/Title color */
-  --ds-dialog-footer-pad-bottom: var(--ds-space-4x);   /* Dialog/Footer/Pad bottom */
-  --ds-dialog-footer-pad-top: var(--ds-space-4x);   /* Dialog/Footer/Pad top */
-  --ds-dialog-content-title-weight: var(--ds-typography-font-weight-medium);   /* Dialog/Content/Title weight */
-  --ds-dialog-content-text-weight: var(--ds-typography-font-weight-regular);   /* Dialog/Content/Text weight */
-  --ds-dialog-content-text-size: var(--ds-typography-font-size-3-5x);   /* Dialog/Content/Text size */
-  --ds-color-dialog-content-text-color: var(--ds-color-text-secondary);   /* Dialog/Content/Text color */
-  --ds-table-cell-text-size: var(--ds-typography-body-font-size-s);   /* Table cell/Text size */
-  --ds-table-cell-text-weight: var(--ds-typography-font-weight-regular);   /* Table cell/Text weight */
-  --ds-divider-size-m: var(--ds-stroke-0-25x);   /* Divider/Size M */
-  --ds-color-table-cell-header-background: var(--ds-color-table-surfase-default-transparent);   /* Table cell/Header/Background */
-  --ds-color-table-cell-content-default-background: var(--ds-color-table-surfase-default-transparent);   /* Table cell/Content/Default/Background */
-  --ds-color-table-cell-content-hover-border-color: var(--ds-color-stroke-hover);   /* Table cell/Content/Hover/Border color */
-  --ds-table-cell-content-hover-border-size: var(--ds-stroke-0-25x);   /* Table cell/Content/Hover/Border size */
-  --ds-color-table-cell-content-focus-border-color: var(--ds-color-stroke-accent);   /* Table cell/Content/Focus/Border color */
-  --ds-table-cell-content-focus-border-size: var(--ds-stroke-0-25x);   /* Table cell/Content/Focus/Border size */
-  --ds-color-table-cell-content-edit-border-color: var(--ds-color-stroke-accent);   /* Table cell/Content/Edit/Border color */
-  --ds-table-cell-content-edit-border-size: var(--ds-stroke-0-25x);   /* Table cell/Content/Edit/Border size */
-  --ds-color-table-cell-content-error-border-color: var(--ds-color-stroke-negative);   /* Table cell/Content/Error/Border color */
-  --ds-table-cell-content-error-border-size: var(--ds-stroke-0-25x);   /* Table cell/Content/Error/Border size */
-  --ds-color-table-cell-content-background: var(--ds-color-table-surfase-default-transparent);   /* Table cell/Content/Background */
-  --ds-color-table-cell-content-disable-text-color: var(--ds-color-text-disable);   /* Table cell/Content/Disable/Text Color */
-  --ds-color-table-cell-header-hover-background: var(--ds-palette-accent-5);   /* Table cell/Header/Hover/Background */
-  --ds-color-table-cell-header-disable-background: var(--ds-color-table-surfase-head);   /* Table cell/Header/Disable/Background */
-  --ds-color-divider-solid-lite-color: var(--ds-color-stroke-default);   /* Divider/Solid/Lite/Color */
-  --ds-color-divider-solid-default-color: var(--ds-color-stroke-default);   /* Divider/Solid/Default/Color */
-  --ds-color-divider-solid-hover-color: var(--ds-color-stroke-accent);   /* Divider/Solid/Hover/Color */
-  --ds-color-divider-dashed-default-color: var(--ds-color-stroke-default);   /* Divider/Dashed/Default/Color */
-  --ds-color-table-cell-header-disable-icon-color: var(--ds-color-icon-disable);   /* Table cell/Header/Disable/Icon color */
-  --ds-color-table-row-content-selected-background: var(--ds-color-table-surfase-selected);   /* Table row/Content/Selected/Background */
-  --ds-color-table-cell-content-hover-background: var(--ds-color-table-surfase-hover);   /* Table cell/Content/Hover/Background */
-  --ds-dialog-content-pad-top: var(--ds-space-2x);   /* Dialog/Content/Pad top */
-  --ds-color-scroll-default-background: var(--ds-palette-neutral-10);   /* Scroll/Default/Background */
-  --ds-color-scroll-default-knob-color: var(--ds-palette-neutral-300);   /* Scroll/Default/Knob color */
-  --ds-scroll-knob-radius: var(--ds-radius-2x);   /* Scroll/Knob radius */
-  --ds-scroll-border-radius: var(--ds-radius-2x);   /* Scroll/Border radius */
-  --ds-color-scroll-hover-knob-color: var(--ds-palette-neutral-500);   /* Scroll/Hover/Knob color */
-  --ds-color-scroll-hover-background: var(--ds-palette-neutral-100);   /* Scroll/Hover/Background */
-  --ds-dialog-header-pad-bottom: var(--ds-space-2x);   /* Dialog/Header/Pad bottom */
-  --ds-dialog-content-pad-bottom: var(--ds-space-2x);   /* Dialog/Content/Pad bottom */
-  --ds-button-group-gap: var(--ds-space-2x);   /* Button group/Gap */
-  --ds-color-backdrop-background: var(--ds-palette-neutral-900);   /* Backdrop/Background */
-  --ds-card-header-pad-top: var(--ds-space-6x);   /* Card/Header/Pad top */
-  --ds-card-header-pad-bottom: var(--ds-space-2x);   /* Card/Header/Pad bottom */
-  --ds-card-header-gap: var(--ds-space-2x);   /* Card/Header/Gap */
-  --ds-card-header-title-size: var(--ds-typography-font-size-5x);   /* Card/Header/Title size */
-  --ds-card-header-title-weight: var(--ds-typography-font-weight-medium);   /* Card/Header/Title weight */
-  --ds-color-card-header-title-color: var(--ds-color-text-primary);   /* Card/Header/Title color */
-  --ds-card-header-desc-size: var(--ds-typography-font-size-4x);   /* Card/Header/Desc size */
-  --ds-card-header-desc-weight: var(--ds-typography-font-weight-regular);   /* Card/Header/Desc weight */
-  --ds-color-card-header-desc-color: var(--ds-color-text-secondary);   /* Card/Header/Desc color */
-  --ds-card-content-gap: var(--ds-space-2x);   /* Card/Content/Gap */
-  --ds-card-content-pad-top: var(--ds-space-2x);   /* Card/Content/Pad top */
-  --ds-card-content-pad-bottom: var(--ds-space-2x);   /* Card/Content/Pad bottom */
-  --ds-card-content-title-size: var(--ds-typography-font-size-4x);   /* Card/Content/Title size */
-  --ds-card-content-title-weight: var(--ds-typography-font-weight-medium);   /* Card/Content/Title weight */
-  --ds-color-card-content-title-color: var(--ds-color-text-primary);   /* Card/Content/Title color */
-  --ds-card-content-text-size: var(--ds-typography-font-size-4x);   /* Card/Content/Text size */
-  --ds-card-content-text-weight: var(--ds-typography-font-weight-medium);   /* Card/Content/Text weight */
-  --ds-color-card-content-text-color: var(--ds-color-text-secondary);   /* Card/Content/Text color */
-  --ds-card-footer-pad-top: var(--ds-space-4x);   /* Card/Footer/Pad top */
-  --ds-card-footer-pad-bottom: var(--ds-space-4x);   /* Card/Footer/Pad bottom */
-  --ds-card-pad-left: var(--ds-space-6x);   /* Card/Pad left */
-  --ds-card-pad-right: var(--ds-space-6x);   /* Card/Pad right */
-  --ds-card-border-radius: var(--ds-radius-2x);   /* Card/Border radius */
-  --ds-color-card-background: var(--ds-color-shapes-default);   /* Card/Background */
-  --ds-checkbox-icon-size: var(--ds-icon-size-size-5x);   /* Checkbox/Icon size */
-  --ds-color-checkbox-normal-deselected-press-background: var(--ds-palette-neutral-200);   /* Checkbox/Normal/Deselected/Press/Background */
-  --ds-color-checkbox-normal-deselected-hover-background: var(--ds-palette-neutral-100);   /* Checkbox/Normal/Deselected/Hover/Background */
-  --ds-color-checkbox-normal-deselected-default-background: var(--ds-color-shapes-default-transparent);   /* Checkbox/Normal/Deselected/Default/Background */
-  --ds-color-checkbox-normal-selected-default-background: var(--ds-color-shapes-default-transparent);   /* Checkbox/Normal/Selected/Default/Background */
-  --ds-color-checkbox-normal-selected-hover-background: var(--ds-palette-accent-100);   /* Checkbox/Normal/Selected/Hover/Background */
-  --ds-color-checkbox-normal-selected-press-background: var(--ds-palette-accent-200);   /* Checkbox/Normal/Selected/Press/Background */
-  --ds-color-checkbox-normal-selected-icon-color: var(--ds-color-icon-accent);   /* Checkbox/Normal/Selected/Icon color */
-  --ds-color-checkbox-normal-inderterminate-default-background: var(--ds-color-shapes-default-transparent);   /* Checkbox/Normal/Inderterminate/Default/Background */
-  --ds-color-checkbox-normal-inderterminate-hover-background: var(--ds-palette-accent-100);   /* Checkbox/Normal/Inderterminate/Hover/Background */
-  --ds-color-checkbox-normal-inderterminate-press-background: var(--ds-palette-accent-200);   /* Checkbox/Normal/Inderterminate/Press/Background */
-  --ds-color-checkbox-normal-inderterminate-icon-color: var(--ds-color-icon-accent);   /* Checkbox/Normal/Inderterminate/Icon color */
-  --ds-color-checkbox-error-icon-color: var(--ds-color-icon-negative);   /* Checkbox/Error/Icon color */
-  --ds-color-checkbox-error-deselected-default-background: var(--ds-color-shapes-default-transparent);   /* Checkbox/Error/Deselected/Default/Background */
-  --ds-color-checkbox-error-deselected-hover-background: var(--ds-palette-negative-100);   /* Checkbox/Error/Deselected/Hover/Background */
-  --ds-color-checkbox-error-deselected-press-background: var(--ds-palette-negative-200);   /* Checkbox/Error/Deselected/Press/Background */
-  --ds-color-checkbox-error-selected-default-background: var(--ds-color-shapes-default-transparent);   /* Checkbox/Error/Selected/Default/Background */
-  --ds-color-checkbox-error-selected-hover-background: var(--ds-palette-negative-100);   /* Checkbox/Error/Selected/Hover/Background */
-  --ds-color-checkbox-error-selected-press-background: var(--ds-palette-negative-200);   /* Checkbox/Error/Selected/Press/Background */
-  --ds-color-checkbox-error-inderterminate-default-background: var(--ds-color-shapes-default-transparent);   /* Checkbox/Error/Inderterminate/Default/Background */
-  --ds-color-checkbox-error-inderterminate-hover-background: var(--ds-palette-negative-100);   /* Checkbox/Error/Inderterminate/Hover/Background */
-  --ds-color-checkbox-error-inderterminate-press-background: var(--ds-palette-negative-200);   /* Checkbox/Error/Inderterminate/Press/Background */
-  --ds-color-checkbox-disable-deselected-icon-color: var(--ds-color-icon-disable);   /* Checkbox/Disable/Deselected/Icon color */
-  --ds-color-checkbox-disable-selected-icon-color: var(--ds-color-icon-disable);   /* Checkbox/Disable/Selected/Icon color */
-  --ds-color-checkbox-disable-inderterminate-icon-color: var(--ds-color-icon-disable);   /* Checkbox/Disable/Inderterminate/Icon color */
-  --ds-color-checkbox-normal-deselected-icon-color: var(--ds-color-icon-primary);   /* Checkbox/Normal/Deselected/Icon color */
-  --ds-color-checkbox-disable-background: var(--ds-color-shapes-default-transparent);   /* Checkbox/Disable/Background */
-  --ds-checkbox-label-gap: var(--ds-space-2x);   /* Checkbox label/Gap */
-  --ds-checkbox-label-text-weight: var(--ds-typography-font-weight-regular);   /* Checkbox label/Text weight */
-  --ds-checkbox-label-text-size: var(--ds-typography-body-font-size-s);   /* Checkbox label/Text size */
-  --ds-color-checkbox-label-text-color: var(--ds-color-text-primary);   /* Checkbox label/Text color */
-  --ds-color-checkbox-label-text-disable-color: var(--ds-color-text-disable);   /* Checkbox label/Text disable color */
-  --ds-checkbox-group-vertical-gap: var(--ds-space-2x);   /* Checkbox group/Vertical/Gap */
-  --ds-checkbox-group-text-size: var(--ds-typography-body-font-size-s);   /* Checkbox group/Text size */
-  --ds-checkbox-group-text-weight: var(--ds-typography-font-weight-regular);   /* Checkbox group/Text weight */
-  --ds-color-checkbox-group-text-color: var(--ds-color-text-primary);   /* Checkbox group/Text color */
-  --ds-color-checkbox-group-text-disable: var(--ds-color-text-disable);   /* Checkbox group/Text disable */
-  --ds-checkbox-group-horizontal-gap: var(--ds-space-8x);   /* Checkbox group/Horizontal/Gap */
-  --ds-checkbox-group-group-gap: var(--ds-space-2x);   /* Checkbox group/Group/Gap */
-  --ds-checkbox-group-group-pad-left-0: var(--ds-space-0);   /* Checkbox group/Group/Pad left 0 */
-  --ds-checkbox-group-group-pad-left-4x: var(--ds-space-4x);   /* Checkbox group/Group/Pad left 4x */
-  --ds-color-radio-button-normal-deselected-default-background: var(--ds-color-shapes-default-transparent);   /* Radio button/Normal/Deselected/Default/Background */
-  --ds-color-radio-button-normal-deselected-icon-color: var(--ds-color-icon-primary);   /* Radio button/Normal/Deselected/Icon color */
-  --ds-color-radio-button-normal-deselected-hover-background: var(--ds-palette-neutral-100);   /* Radio button/Normal/Deselected/Hover/Background */
-  --ds-color-radio-button-normal-deselected-press-background: var(--ds-palette-neutral-200);   /* Radio button/Normal/Deselected/Press/Background */
-  --ds-color-radio-button-normal-selected-default-background: var(--ds-color-shapes-default-transparent);   /* Radio button/Normal/Selected/Default/Background */
-  --ds-color-radio-button-normal-selected-icon-color: var(--ds-color-icon-accent);   /* Radio button/Normal/Selected/Icon color */
-  --ds-color-radio-button-normal-selected-hover-background: var(--ds-palette-accent-100);   /* Radio button/Normal/Selected/Hover/Background */
-  --ds-color-radio-button-normal-selected-press-background: var(--ds-palette-accent-200);   /* Radio button/Normal/Selected/Press/Background */
-  --ds-radio-button-icon-size: var(--ds-icon-size-size-5x);   /* Radio button/Icon size */
-  --ds-color-radio-button-error-deselected-default-background: var(--ds-color-shapes-default-transparent);   /* Radio button/Error/Deselected/Default/Background */
-  --ds-color-radio-button-error-deselected-hover-background: var(--ds-palette-negative-100);   /* Radio button/Error/Deselected/Hover/Background */
-  --ds-color-radio-button-error-deselected-press-background: var(--ds-palette-negative-200);   /* Radio button/Error/Deselected/Press/Background */
-  --ds-color-radio-button-error-selected-default-background: var(--ds-color-shapes-default-transparent);   /* Radio button/Error/Selected/Default/Background */
-  --ds-color-radio-button-error-selected-hover-background: var(--ds-palette-negative-100);   /* Radio button/Error/Selected/Hover/Background */
-  --ds-color-radio-button-error-selected-press-background: var(--ds-palette-negative-200);   /* Radio button/Error/Selected/Press/Background */
-  --ds-color-radio-button-error-icon-color: var(--ds-color-icon-negative);   /* Radio button/Error/Icon color */
-  --ds-color-radio-button-disable-background: var(--ds-color-shapes-default-transparent);   /* Radio button/Disable/Background */
-  --ds-color-radio-button-disable-deselected-icon-color: var(--ds-color-icon-disable);   /* Radio button/Disable/Deselected/Icon color */
-  --ds-color-radio-button-disable-selected-icon-color: var(--ds-color-icon-disable);   /* Radio button/Disable/Selected/Icon color */
-  --ds-radio-button-label-gap: var(--ds-space-2x);   /* Radio button label/Gap */
-  --ds-radio-button-label-text-size: var(--ds-typography-body-font-size-s);   /* Radio button label/Text size */
-  --ds-radio-button-label-text-weight: var(--ds-typography-font-weight-regular);   /* Radio button label/Text weight */
-  --ds-color-radio-button-label-text-color: var(--ds-color-text-primary);   /* Radio button label/Text color */
-  --ds-color-radio-button-label-text-disable-color: var(--ds-color-text-disable);   /* Radio button label/Text disable color */
-  --ds-radio-button-group-vertical-gap: var(--ds-space-2x);   /* Radio button group/Vertical/Gap */
-  --ds-radio-button-group-text-size: var(--ds-typography-body-font-size-s);   /* Radio button group/Text size */
-  --ds-radio-button-group-text-weight: var(--ds-typography-font-weight-regular);   /* Radio button group/Text weight */
-  --ds-color-radio-button-group-text-color: var(--ds-color-text-primary);   /* Radio button group/Text color */
-  --ds-color-radio-button-group-text-disable-color: var(--ds-color-text-disable);   /* Radio button group/Text disable color */
-  --ds-radio-button-group-horizontal-gap: var(--ds-space-8x);   /* Radio button group/Horizontal/Gap */
-  --ds-color-input-number-input-icon-color: var(--ds-color-icon-primary);   /* Input number/Input/Icon color */
-  --ds-input-number-input-pad-top: var(--ds-space-2x);   /* Input number/Input/Pad top */
-  --ds-input-number-input-pad-right: var(--ds-space-2x);   /* Input number/Input/Pad right */
-  --ds-input-number-input-pad-bottom: var(--ds-space-2x);   /* Input number/Input/Pad bottom */
-  --ds-input-number-input-pad-left: var(--ds-space-2x);   /* Input number/Input/Pad left */
-  --ds-input-number-input-border-radius: var(--ds-radius-2x);   /* Input number/Input/Border radius */
-  --ds-input-number-input-gap: var(--ds-space-1x);   /* Input number/Input/Gap */
-  --ds-input-number-input-text-size: var(--ds-typography-body-font-size-s);   /* Input number/Input/Text size */
-  --ds-input-number-input-text-weight: var(--ds-typography-font-weight-medium);   /* Input number/Input/Text weight */
-  --ds-color-input-number-input-text-color: var(--ds-color-text-primary);   /* Input number/Input/Text color */
-  --ds-color-input-number-input-hover-border-color: var(--ds-color-stroke-hover);   /* Input number/Input/Hover/Border color */
-  --ds-color-input-number-input-focus-border-color: var(--ds-color-stroke-accent);   /* Input number/Input/Focus/Border color */
-  --ds-color-input-number-input-error-border-color: var(--ds-color-stroke-negative);   /* Input number/Input/Error/Border color */
-  --ds-color-input-number-input-disable-border-color: var(--ds-color-stroke-disable);   /* Input number/Input/Disable/Border color */
-  --ds-color-input-number-input-disable-text-color: var(--ds-color-text-disable);   /* Input number/Input/Disable/Text color */
-  --ds-color-input-number-input-disable-icon-color: var(--ds-color-icon-disable);   /* Input number/Input/Disable/Icon color */
-  --ds-color-input-number-input-error-icon-color: var(--ds-color-icon-negative);   /* Input number/Input/Error/Icon color */
-  --ds-banners-pad-left: var(--ds-space-4x);   /* Banners/Pad left */
-  --ds-banners-pad-right: var(--ds-space-4x);   /* Banners/Pad right */
-  --ds-banners-pad-top: var(--ds-space-3x);   /* Banners/Pad top */
-  --ds-banners-pad-bottom: var(--ds-space-3x);   /* Banners/Pad bottom */
-  --ds-banners-border-radius: var(--ds-radius-3x);   /* Banners/Border radius */
-  --ds-banners-text-size: var(--ds-typography-body-font-size-s);   /* Banners/Text size */
-  --ds-banners-text-weight-r: var(--ds-typography-font-weight-regular);   /* Banners/Text weight R */
-  --ds-color-banners-neutral-icon-color: var(--ds-color-icon-primary);   /* Banners/Neutral/Icon color */
-  --ds-color-banners-text-color: var(--ds-color-text-primary);   /* Banners/Text color */
-  --ds-banners-horizontal-gap: var(--ds-space-2x);   /* Banners/Horizontal/Gap */
-  --ds-snackbar-pad-left: var(--ds-space-3x);   /* Snackbar/Pad left */
-  --ds-snackbar-pad-right: var(--ds-space-3x);   /* Snackbar/Pad right */
-  --ds-snackbar-pad-top: var(--ds-space-3x);   /* Snackbar/Pad top */
-  --ds-snackbar-pad-bottom: var(--ds-space-3x);   /* Snackbar/Pad bottom */
-  --ds-snackbar-border-radius: var(--ds-space-2x);   /* Snackbar/Border radius */
-  --ds-snackbar-title-size: var(--ds-typography-body-font-size-s);   /* Snackbar/Title size */
-  --ds-snackbar-title-weight: var(--ds-typography-font-weight-regular);   /* Snackbar/Title weight */
-  --ds-color-snackbar-complex-dark-background: var(--ds-color-surface-snack-tooltip);   /* Snackbar/Complex/Dark/Background */
-  --ds-color-snackbar-complex-dark-text-color: var(--ds-color-text-inversive);   /* Snackbar/Complex/Dark/Text color */
-  --ds-snackbar-gap: var(--ds-space-2x);   /* Snackbar/Gap */
-  --ds-color-banners-neutral-background: var(--ds-color-shapes-default);   /* Banners/Neutral/Background */
-  --ds-color-tab-inactive-default-background: var(--ds-color-shapes-default-transparent);   /* Tab/Inactive/Default/Background */
-  --ds-tab-lvl-1-pad-left: var(--ds-space-6x);   /* Tab/Lvl 1/Pad left */
-  --ds-tab-lvl-1-pad-right: var(--ds-space-6x);   /* Tab/Lvl 1/Pad right */
-  --ds-tab-lvl-1-text-size: var(--ds-typography-body-font-size-m);   /* Tab/Lvl 1/Text size */
-  --ds-tab-lvl-1-text-weight: var(--ds-typography-font-weight-medium);   /* Tab/Lvl 1/Text weight */
-  --ds-color-tab-inactive-icon-color: var(--ds-color-icon-primary);   /* Tab/Inactive/Icon color */
-  --ds-color-tab-inactive-text-color: var(--ds-color-text-primary);   /* Tab/Inactive/Text color */
-  --ds-color-tab-active-icon-color: var(--ds-color-icon-accent);   /* Tab/Active/Icon color */
-  --ds-color-tab-active-text-color: var(--ds-color-text-accent);   /* Tab/Active/Text color */
-  --ds-badge-text-size: var(--ds-typography-caption-font-size-l);   /* Badge/Text size */
-  --ds-badge-text-weight: var(--ds-typography-font-weight-medium);   /* Badge/Text weight */
-  --ds-color-banners-accent-background: var(--ds-color-shapes-lighter-pr);   /* Banners/Accent/Background */
-  --ds-color-banners-warning-background: var(--ds-color-shapes-lighter-wr);   /* Banners/Warning/Background */
-  --ds-color-banners-negative-background: var(--ds-color-shapes-lighter-er);   /* Banners/Negative/Background */
-  --ds-color-banners-positive-background: var(--ds-color-shapes-lighter-sc);   /* Banners/Positive/Background */
-  --ds-color-banners-accent-icon-color: var(--ds-color-icon-accent);   /* Banners/Accent/Icon color */
-  --ds-color-banners-warning-icon-color: var(--ds-color-icon-warning);   /* Banners/Warning/Icon color */
-  --ds-color-banners-negative-icon-color: var(--ds-color-icon-negative);   /* Banners/Negative/Icon color */
-  --ds-color-banners-positive-icon-color: var(--ds-color-icon-positive);   /* Banners/Positive/Icon color */
-  --ds-search-m-size-pad-left: var(--ds-space-3x);   /* Search/M size/Pad left */
-  --ds-search-m-size-pad-right: var(--ds-space-3x);   /* Search/M size/Pad right */
-  --ds-search-m-size-pad-top: var(--ds-space-3x);   /* Search/M size/Pad top */
-  --ds-search-m-size-pad-bottom: var(--ds-space-3x);   /* Search/M size/Pad bottom */
-  --ds-search-gap: var(--ds-space-2x);   /* Search/Gap */
-  --ds-search-border-radius: var(--ds-space-3x);   /* Search/Border radius */
-  --ds-search-text-size: var(--ds-typography-body-font-size-m);   /* Search/Text size */
-  --ds-search-text-weight: var(--ds-typography-font-weight-regular);   /* Search/Text weight */
-  --ds-color-search-focusvalue-text-color: var(--ds-color-text-primary);   /* Search/Focus+Value/Text color */
-  --ds-color-search-background: var(--ds-color-shapes-default-variant);   /* Search/Background */
-  --ds-color-search-focusvalue-border-color: var(--ds-color-stroke-accent);   /* Search/Focus+Value/Border Color */
-  --ds-form-field-filled-focus-border-size-focus-2: var(--ds-stroke-0-5x);   /* Form field/Filled/Focus/Border size focus 2 */
-  --ds-tab-lvl-1-pad-top: var(--ds-space-1x);   /* Tab/Lvl 1/Pad top */
-  --ds-tab-gap: var(--ds-space-2x);   /* Tab/Gap */
-  --ds-color-badge-text-color: var(--ds-color-text-inversive);   /* Badge/Text color */
-  --ds-badge-border-radius: var(--ds-radius-circular);   /* Badge/Border radius */
-  --ds-badge-counter-pad-left: var(--ds-space-1-5x);   /* Badge/Counter/Pad left */
-  --ds-badge-counter-pad-right: var(--ds-space-1-5x);   /* Badge/Counter/Pad right */
-  --ds-color-search-focus-border-color: var(--ds-color-stroke-accent);   /* Search/Focus/Border Color */
-  --ds-color-search-focus-text-color: var(--ds-color-text-placeholder);   /* Search/Focus/Text color */
-  --ds-color-search-focus-cursor-color: var(--ds-color-text-primary);   /* Search/Focus/Cursor color */
-  --ds-color-search-default-border-color: var(--ds-color-stroke-default);   /* Search/Default/Border Color */
-  --ds-search-border-size: var(--ds-stroke-0-25x);   /* Search/Border size */
-  --ds-color-search-default-text-color: var(--ds-color-text-placeholder);   /* Search/Default/Text color */
-  --ds-color-search-hover-border-color: var(--ds-color-stroke-hover);   /* Search/Hover/Border Color */
-  --ds-color-search-hover-text-color: var(--ds-color-text-placeholder);   /* Search/Hover/Text color */
-  --ds-color-search-disable-text-color: var(--ds-color-text-disable);   /* Search/Disable/Text color */
-  --ds-color-search-disable-background: var(--ds-color-shapes-disable);   /* Search/Disable/Background */
-  --ds-color-search-disable-icon-color: var(--ds-color-icon-disable);   /* Search/Disable/Icon color */
-  --ds-color-tab-active-text-color-counter: var(--ds-color-text-accent);   /* Tab/Active/Text color counter */
-  --ds-color-tab-inactive-text-color-counter: var(--ds-color-text-primary);   /* Tab/Inactive/Text color counter */
-  --ds-color-search-completed-border-color: var(--ds-color-stroke-default);   /* Search/Completed/Border Color */
-  --ds-color-search-completed-text-color: var(--ds-color-text-primary);   /* Search/Completed/Text color */
-  --ds-color-tab-inactive-hover-background: var(--ds-color-shapes-hover);   /* Tab/Inactive/Hover/Background */
-  --ds-color-tab-inactive-press-background: var(--ds-color-shapes-press);   /* Tab/Inactive/Press/Background */
-  --ds-color-tab-disable-background: var(--ds-color-shapes-default-transparent);   /* Tab/Disable/Background */
-  --ds-color-tab-disable-text-color: var(--ds-color-text-disable);   /* Tab/Disable/Text color */
-  --ds-color-tab-disable-icon-color: var(--ds-color-icon-disable);   /* Tab/Disable/Icon color */
-  --ds-color-input-number-control-background: var(--ds-color-shapes-default);   /* Input number/Control/Background */
-  --ds-input-number-control-pad-left: var(--ds-space-2x);   /* Input number/Control/Pad left */
-  --ds-input-number-control-pad-right: var(--ds-space-2x);   /* Input number/Control/Pad right */
-  --ds-input-number-control-pad-top: var(--ds-space-2x);   /* Input number/Control/Pad top */
-  --ds-input-number-control-pad-bottom: var(--ds-space-2x);   /* Input number/Control/Pad bottom */
-  --ds-input-number-control-border-size: var(--ds-stroke-0-25x);   /* Input number/Control/Border size */
-  --ds-input-number-control-border-radius: var(--ds-radius-2x);   /* Input number/Control/Border radius */
-  --ds-input-number-control-gap: var(--ds-space-0-5x);   /* Input number/Control/Gap */
-  --ds-input-number-control-text-size: var(--ds-typography-body-font-size-s);   /* Input number/Control/Text size */
-  --ds-color-input-number-control-text-color: var(--ds-color-text-primary);   /* Input number/Control/Text color */
-  --ds-input-number-control-text-weight: var(--ds-typography-font-weight-medium);   /* Input number/Control/Text weight */
-  --ds-color-input-number-control-icon-color: var(--ds-color-icon-primary);   /* Input number/Control/Icon color */
-  --ds-color-input-number-control-default-border-color: var(--ds-color-stroke-default);   /* Input number/Control/Default/Border color */
-  --ds-color-input-number-control-hover-border-color: var(--ds-color-stroke-hover);   /* Input number/Control/Hover/Border color */
-  --ds-color-input-number-control-focus-border-color: var(--ds-color-stroke-accent);   /* Input number/Control/Focus/Border color */
-  --ds-color-input-number-control-error-border-color: var(--ds-color-stroke-negative);   /* Input number/Control/Error/Border color */
-  --ds-color-input-number-control-error-icon-color: var(--ds-color-icon-negative);   /* Input number/Control/Error/Icon color */
-  --ds-color-input-number-control-disable-border-color: var(--ds-color-stroke-disable);   /* Input number/Control/Disable/Border color */
-  --ds-color-input-number-control-disable-text-color: var(--ds-color-text-disable);   /* Input number/Control/Disable/Text color */
-  --ds-color-input-number-control-disable-icon-color: var(--ds-color-icon-disable);   /* Input number/Control/Disable/Icon color */
-  --ds-color-tab-active-hover-background: var(--ds-color-shapes-hover);   /* Tab/Active/Hover/Background */
-  --ds-color-tab-active-press-background: var(--ds-color-shapes-press);   /* Tab/Active/Press/Background */
-  --ds-divider-size-l: var(--ds-stroke-0-5x);   /* Divider/Size L */
-  --ds-color-tab-active-default-background: var(--ds-color-shapes-default-transparent);   /* Tab/Active/Default/Background */
-  --ds-hint-header-pad-left: var(--ds-space-3x);   /* Hint/Header/Pad left */
-  --ds-hint-header-pad-right: var(--ds-space-3x);   /* Hint/Header/Pad right */
-  --ds-hint-header-pad-top: var(--ds-space-2x);   /* Hint/Header/Pad top */
-  --ds-hint-header-pad-bottom: var(--ds-space-1x);   /* Hint/Header/Pad bottom */
-  --ds-hint-header-gap: var(--ds-space-2x);   /* Hint/Header/Gap */
-  --ds-hint-border-radius: var(--ds-space-2x);   /* Hint/Border radius */
-  --ds-hint-header-text-size: var(--ds-typography-body-font-size-s);   /* Hint/Header/Text size */
-  --ds-hint-header-text-weight: var(--ds-typography-font-weight-medium);   /* Hint/Header/Text weight */
-  --ds-color-hint-header-text-color: var(--ds-color-text-inversive);   /* Hint/Header/Text color */
-  --ds-color-hint-header-neutral-icon-color: var(--ds-color-icon-inversive);   /* Hint/Header/Neutral/Icon color */
-  --ds-color-hint-header-accent-icon-color: var(--ds-color-icon-accent);   /* Hint/Header/Accent/Icon color */
-  --ds-color-hint-header-positive-icon-color: var(--ds-color-icon-positive);   /* Hint/Header/Positive/Icon color */
-  --ds-color-hint-header-warning-icon-color: var(--ds-color-icon-warning);   /* Hint/Header/Warning/Icon color */
-  --ds-color-hint-header-negative-icon-color: var(--ds-color-icon-negative);   /* Hint/Header/Negative/Icon color */
-  --ds-color-hint-background-color: var(--ds-color-surface-snack-tooltip);   /* Hint/Background color */
-  --ds-color-hint-header-icon-color: var(--ds-color-icon-inversive);   /* Hint/Header/Icon color */
-  --ds-color-hint-content-text-color: var(--ds-color-text-inversive);   /* Hint/Content/Text color */
-  --ds-color-hint-content-icon-color: var(--ds-color-icon-inversive);   /* Hint/Content/Icon color */
-  --ds-hint-content-gap: var(--ds-space-2x);   /* Hint/Content/Gap */
-  --ds-hint-content-pad-top: var(--ds-space-2x);   /* Hint/Content/Pad top */
-  --ds-hint-content-pad-right: var(--ds-space-3x);   /* Hint/Content/Pad right */
-  --ds-hint-content-pad-bottom: var(--ds-space-2x);   /* Hint/Content/Pad bottom */
-  --ds-hint-content-pad-left: var(--ds-space-3x);   /* Hint/Content/Pad left */
-  --ds-hint-content-text-weight: var(--ds-typography-font-weight-regular);   /* Hint/Content/Text weight */
-  --ds-hint-content-text-size: var(--ds-typography-caption-font-size-l);   /* Hint/Content/Text size */
-  --ds-hint-footer-pad-left: var(--ds-space-3x);   /* Hint/Footer/Pad left */
-  --ds-hint-footer-pad-right: var(--ds-space-3x);   /* Hint/Footer/Pad right */
-  --ds-hint-footer-pad-top: var(--ds-space-4x);   /* Hint/Footer/Pad top */
-  --ds-hint-footer-pad-bottom: var(--ds-space-3x);   /* Hint/Footer/Pad bottom */
-  --ds-hint-footer-gap: var(--ds-space-3x);   /* Hint/Footer/Gap */
-  --ds-color-hint-footer-text-color: var(--ds-color-text-inversive);   /* Hint/Footer/Text color */
-  --ds-hint-footer-title-size: var(--ds-typography-body-font-size-s);   /* Hint/Footer/Title size */
-  --ds-hint-footer-title-weight: var(--ds-typography-font-weight-medium);   /* Hint/Footer/Title weight */
-  --ds-list-item-pad-left: var(--ds-space-4x);   /* List item/Pad left */
-  --ds-list-item-pad-right: var(--ds-space-4x);   /* List item/Pad right */
-  --ds-list-item-pad-top: var(--ds-space-2x);   /* List item/Pad top */
-  --ds-list-item-pad-bottom: var(--ds-space-2x);   /* List item/Pad bottom */
-  --ds-color-list-item-text-color: var(--ds-color-text-primary);   /* List item/Text color */
-  --ds-list-item-text-weight: var(--ds-typography-font-weight-regular);   /* List item/Text weight */
-  --ds-list-item-gap: var(--ds-space-2x);   /* List item/Gap */
-  --ds-color-list-item-icon-color: var(--ds-color-icon-primary);   /* List item/Icon color */
-  --ds-color-list-item-default-background: var(--ds-color-surface-default);   /* List item/Default/Background */
-  --ds-color-list-item-hover-background: var(--ds-color-surface-hover);   /* List item/Hover/Background */
-  --ds-color-list-item-press-background: var(--ds-color-surface-press);   /* List item/Press/Background */
-  --ds-color-list-item-selected-background: var(--ds-color-surface-default);   /* List item/Selected/Background */
-  --ds-color-list-item-negative-background: var(--ds-color-shapes-default);   /* List item/Negative/Background */
-  --ds-color-list-item-disable-background: var(--ds-color-surface-default);   /* List item/Disable/Background */
-  --ds-color-list-item-text-label-color: var(--ds-color-text-secondary);   /* List item/Text label color */
-  --ds-color-list-item-disable-icon-color: var(--ds-color-icon-disable);   /* List item/Disable/Icon color */
-  --ds-color-list-item-disable-label-text-color: var(--ds-color-text-disable);   /* List item/Disable/Label text color */
-  --ds-color-list-item-disable-text-color: var(--ds-color-text-disable);   /* List item/Disable/Text color */
-  --ds-color-list-item-negative-icon-color: var(--ds-color-icon-negative);   /* List item/Negative/Icon color */
-  --ds-color-list-item-negative-label-text-color: var(--ds-color-text-negative);   /* List item/Negative/Label text color */
-  --ds-color-list-item-negative-text-color: var(--ds-color-text-negative);   /* List item/Negative/Text color */
-  --ds-color-list-item-selected-icon-color: var(--ds-color-icon-accent);   /* List item/Selected/Icon color */
-  --ds-color-divider-solid-selected-color: var(--ds-color-stroke-accent);   /* Divider/Solid/Selected/Color */
-  --ds-color-tab-disable-divider: var(--ds-color-stroke-disable);   /* Tab/Disable/Divider */
-  --ds-color-divider-solid-disable-color: var(--ds-color-stroke-disable);   /* Divider/Solid/Disable/Color */
-  --ds-tabs-gap: var(--ds-space-0);   /* Tabs/Gap */
-  --ds-search-s-size-pad-left: var(--ds-space-3x);   /* Search/S size/Pad left */
-  --ds-search-s-size-pad-right: var(--ds-space-3x);   /* Search/S size/Pad right */
-  --ds-search-s-size-pad-top: var(--ds-space-2x);   /* Search/S size/Pad top */
-  --ds-search-s-size-pad-bottom: var(--ds-space-2x);   /* Search/S size/Pad bottom */
-  --ds-banners-vertical-gap: var(--ds-space-2x);   /* Banners/Vertical/Gap */
-  --ds-banners-vertical-gap-container: var(--ds-space-2x);   /* Banners/Vertical/Gap container */
-  --ds-menu-pad-top: var(--ds-space-2x);   /* Menu/Pad top */
-  --ds-menu-pad-bottom: var(--ds-space-2x);   /* Menu/Pad bottom */
-  --ds-menu-border-radius: var(--ds-radius-2x);   /* Menu/Border radius */
-  --ds-color-menu-background: var(--ds-color-shapes-default);   /* Menu/Background */
-  --ds-icon-size-gap-group-2x: var(--ds-space-2x);   /* Icon size/Gap group 2x */
-  --ds-icon-size-gap-group-4x: var(--ds-space-4x);   /* Icon size/Gap group 4x */
-  --ds-scroll-pad-bottom: var(--ds-space-0-5x);   /* Scroll/Pad bottom */
-  --ds-scroll-pad-top: var(--ds-space-0-5x);   /* Scroll/Pad top */
-  --ds-color-scroll-background: var(--ds-palette-neutral-transparent);   /* Scroll/Background */
-  --ds-menu-gap: var(--ds-space-0);   /* Menu/Gap */
-  --ds-menu-gap-list: var(--ds-space-0);   /* Menu/Gap list */
-  --ds-button-group-default-pad-bottom: var(--ds-space-0);   /* Button group/Default/Pad bottom */
-  --ds-button-group-default-pad-top: var(--ds-space-0);   /* Button group/Default/Pad top */
-  --ds-button-group-default-pad-right: var(--ds-space-0);   /* Button group/Default/Pad right */
-  --ds-button-group-default-pad-left: var(--ds-space-0);   /* Button group/Default/Pad left */
-  --ds-button-group-margins-pad-bottom: var(--ds-space-2x);   /* Button group/Margins/Pad bottom */
-  --ds-button-group-margins-pad-top: var(--ds-space-2x);   /* Button group/Margins/Pad top */
-  --ds-button-group-margins-pad-right: var(--ds-space-4x);   /* Button group/Margins/Pad right */
-  --ds-button-group-margins-pad-left: var(--ds-space-4x);   /* Button group/Margins/Pad left */
-  --ds-color-stepper-background: var(--ds-color-surface-default-transparent);   /* Stepper/Background */
-  --ds-color-stepper-default-background: var(--ds-palette-neutral-10);   /* Stepper/Default/Background */
-  --ds-color-stepper-hover-background: var(--ds-palette-accent-10);   /* Stepper/Hover/Background */
-  --ds-color-stepper-hover-text-color: var(--ds-color-text-accent);   /* Stepper/Hover/Text color */
-  --ds-color-stepper-hover-icon-color: var(--ds-color-icon-accent);   /* Stepper/Hover/Icon color */
-  --ds-color-stepper-press-background: var(--ds-palette-accent-50);   /* Stepper/Press/Background */
-  --ds-color-stepper-press-text-color: var(--ds-color-brand-accent-dark);   /* Stepper/Press/Text color */
-  --ds-color-stepper-press-icon-color: var(--ds-color-icon-accent);   /* Stepper/Press/Icon color */
-  --ds-color-stepper-selected-background: var(--ds-palette-accent-10);   /* Stepper/Selected/Background */
-  --ds-color-stepper-selected-text-color: var(--ds-color-text-accent);   /* Stepper/Selected/Text color */
-  --ds-color-stepper-selected-icon-color: var(--ds-color-icon-accent);   /* Stepper/Selected/Icon color */
-  --ds-color-stepper-error-background: var(--ds-palette-negative-10);   /* Stepper/Error/Background */
-  --ds-color-stepper-error-text-color: var(--ds-color-text-negative);   /* Stepper/Error/Text color */
-  --ds-color-stepper-error-icon-color: var(--ds-color-icon-negative);   /* Stepper/Error/Icon color */
-  --ds-color-stepper-disable-background: var(--ds-palette-neutral-10);   /* Stepper/Disable/Background */
-  --ds-color-stepper-disable-text-color: var(--ds-color-text-disable);   /* Stepper/Disable/Text color */
-  --ds-color-stepper-disable-icon-color: var(--ds-color-icon-disable);   /* Stepper/Disable/Icon color */
-  --ds-color-stepper-default-text-color: var(--ds-color-text-primary);   /* Stepper/Default/Text color */
-  --ds-stepper-text-weight: var(--ds-typography-font-weight-regular);   /* Stepper/Text weight */
-  --ds-stepper-gap: var(--ds-space-2x);   /* Stepper/Gap */
-  --ds-color-stepper-default-icon-color: var(--ds-color-icon-primary);   /* Stepper/Default/Icon color */
-  --ds-stepper-selected-border-size: var(--ds-stroke-0-25x);   /* Stepper/Selected/Border size */
-  --ds-stepper-pad-left: var(--ds-space-2x);   /* Stepper/Pad left */
-  --ds-stepper-pad-right: var(--ds-space-2x);   /* Stepper/Pad right */
-  --ds-stepper-pad-bottom: var(--ds-space-1x);   /* Stepper/Pad bottom */
-  --ds-stepper-pad-top: var(--ds-space-1x);   /* Stepper/Pad top */
-  --ds-stepper-border-radius: var(--ds-radius-2x);   /* Stepper/Border radius */
-  --ds-color-stepper-text-color: var(--ds-color-text-primary);   /* Stepper/Text color */
-  --ds-stepper-text-size: var(--ds-typography-body-font-size-s);   /* Stepper/Text size */
-  --ds-color-stepper-icon-color: var(--ds-color-icon-primary);   /* Stepper/Icon color */
-  --ds-color-stepper-selected-border-color: var(--ds-color-stroke-accent);   /* Stepper/Selected/Border color */
-  --ds-status-pad-bottom-text: var(--ds-space-0);   /* Status/Pad bottom text */
-  --ds-status-pad-top-text: var(--ds-space-0);   /* Status/Pad top text */
-  --ds-status-pad-right-text: var(--ds-space-0);   /* Status/Pad right text */
-  --ds-status-pad-left-text: var(--ds-space-0);   /* Status/Pad left text */
-  --ds-chips-s-size-icon-size: var(--ds-icon-size-size-4x);   /* Chips/S size/Icon size */
-  --ds-list-item-text-size: var(--ds-typography-body-font-size-s);   /* List item/Text size */
-  --ds-list-item-text-size-label: var(--ds-typography-caption-font-size-l);   /* List item/Text size label */
-  --ds-menu-item-pad-left: var(--ds-space-4x);   /* Menu item/Pad left */
-  --ds-menu-item-pad-right: var(--ds-space-4x);   /* Menu item/Pad right */
-  --ds-menu-item-pad-top: var(--ds-space-2x);   /* Menu item/Pad top */
-  --ds-menu-item-pad-bottom: var(--ds-space-2x);   /* Menu item/Pad bottom */
-  --ds-color-menu-item-default-background: var(--ds-color-surface-default);   /* Menu item/Default/Background */
-  --ds-color-menu-item-hover-background: var(--ds-color-surface-hover);   /* Menu item/Hover/Background */
-  --ds-color-menu-item-press-background: var(--ds-color-surface-press);   /* Menu item/Press/Background */
-  --ds-color-menu-item-selected-background: var(--ds-color-shapes-default);   /* Menu item/Selected/Background */
-  --ds-color-menu-item-selected-icon-color: var(--ds-color-icon-accent);   /* Menu item/Selected/Icon color */
-  --ds-color-menu-item-negative-background: var(--ds-color-shapes-default);   /* Menu item/Negative/Background */
-  --ds-color-menu-item-negative-text-color: var(--ds-color-text-negative);   /* Menu item/Negative/Text color */
-  --ds-color-menu-item-negative-label-text-color: var(--ds-color-text-negative);   /* Menu item/Negative/Label text color */
-  --ds-color-menu-item-negative-icon-color: var(--ds-color-icon-negative);   /* Menu item/Negative/Icon color */
-  --ds-color-menu-item-disable-background: var(--ds-color-surface-default);   /* Menu item/Disable/Background */
-  --ds-color-menu-item-disable-text-color: var(--ds-color-text-disable);   /* Menu item/Disable/Text color */
-  --ds-color-menu-item-disable-label-text-color: var(--ds-color-text-disable);   /* Menu item/Disable/Label text color */
-  --ds-color-menu-item-disable-icon-color: var(--ds-color-icon-disable);   /* Menu item/Disable/Icon color */
-  --ds-menu-item-text-size: var(--ds-typography-body-font-size-s);   /* Menu item/Text size */
-  --ds-color-menu-item-text-color: var(--ds-color-text-primary);   /* Menu item/Text color */
-  --ds-menu-item-text-size-label: var(--ds-typography-caption-font-size-l);   /* Menu item/Text size label */
-  --ds-color-menu-item-text-label-color: var(--ds-color-text-secondary);   /* Menu item/Text label color */
-  --ds-menu-item-text-weight: var(--ds-typography-font-weight-regular);   /* Menu item/Text weight */
-  --ds-menu-item-gap: var(--ds-space-2x);   /* Menu item/Gap */
-  --ds-color-menu-item-icon-color: var(--ds-color-icon-primary);   /* Menu item/Icon color */
-  --ds-color-expansion-panel-collaps-press-background: var(--ds-color-surface-press);   /* Expansion panel/Collaps/Press/Background */
-  --ds-color-expansion-panel-collaps-disable-background: var(--ds-color-surface-disable);   /* Expansion panel/Collaps/Disable/Background */
-  --ds-color-expansion-panel-collaps-disable-text-color: var(--ds-color-text-disable);   /* Expansion panel/Collaps/Disable/Text color */
-  --ds-color-expansion-panel-collaps-disable-border-color: var(--ds-color-stroke-disable);   /* Expansion panel/Collaps/Disable/Border color */
-  --ds-color-expansion-panel-content-background: var(--ds-color-surface-default);   /* Expansion panel/Content/Background */
-  --ds-expansion-panel-collaps-gap-group: var(--ds-space-2x);   /* Expansion panel/Collaps/Gap group */
-  --ds-hint-content-gap-content: var(--ds-space-1x);   /* Hint/Content/Gap content */
-  --ds-search-xs-size-pad-left: var(--ds-space-3x);   /* Search/XS size/Pad left */
-  --ds-search-xs-size-pad-right: var(--ds-space-3x);   /* Search/XS size/Pad right */
-  --ds-search-xs-size-pad-top: var(--ds-space-2x);   /* Search/XS size/Pad top */
-  --ds-search-xs-size-pad-bottom: var(--ds-space-2x);   /* Search/XS size/Pad bottom */
-  --ds-sidenav-footer-l1-collapsed-gap: var(--ds-space-0);   /* Sidenav/Footer/L1/Collapsed/Gap */
-  --ds-sidenav-header-l2-gap: var(--ds-space-2x);   /* Sidenav/Header/L2/Gap */
-  --ds-color-sidenav-header-l1-background: var(--ds-palette-contrast-3-950);   /* Sidenav/Header/L1/Background */
-  --ds-color-sidenav-header-l2-background: var(--ds-color-surface-default);   /* Sidenav/Header/L2/Background */
-  --ds-stepper-gap-line: var(--ds-space-2x);   /* Stepper/Gap line */
-  --ds-stepper-divider-width: var(--ds-size-2x);   /* Stepper/Divider width */
-  --ds-color-stepper-divider-color: var(--ds-palette-neutral-700);   /* Stepper/Divider color */
-  --ds-stepper-text-weight-button: var(--ds-typography-font-weight-medium);   /* Stepper/Text weight button */
-  --ds-stepper-gap-button: var(--ds-space-4x);   /* Stepper/Gap button */
-  --ds-color-search-hover-background-xs: var(--ds-palette-accent-100);   /* Search/Hover/Background XS */
-  --ds-color-search-default-background-xs: var(--ds-palette-accent-50);   /* Search/Default/Background XS */
-  --ds-hint-arrow-width: var(--ds-space-2x);   /* Hint/Arrow/Width */
-  --ds-hint-arrow-height: var(--ds-space-1x);   /* Hint/Arrow/Height */
-  --ds-tab-lvv-2-pad-left: var(--ds-space-3x);   /* Tab/Lvv 2/Pad left */
-  --ds-tab-lvv-2-pad-right: var(--ds-space-3x);   /* Tab/Lvv 2/Pad right */
-  --ds-tab-lvv-2-pad-top: var(--ds-space-1x);   /* Tab/Lvv 2/Pad top */
-  --ds-color-divider-dashed-selected-color: var(--ds-color-stroke-accent);   /* Divider/Dashed/Selected/Color */
-  --ds-color-divider-dashed-disable-color: var(--ds-color-stroke-disable);   /* Divider/Dashed/Disable/Color */
-  --ds-tab-lvv-2-text-weight: var(--ds-typography-font-weight-regular);   /* Tab/Lvv 2/Text weight */
-  --ds-sidenav-header-pad-bottom: var(--ds-space-3x);   /* Sidenav/Header/Pad bottom */
-  --ds-sidenav-header-pad-top: var(--ds-space-3x);   /* Sidenav/Header/Pad top */
-  --ds-sidenav-header-l1-collapsed-pad-right: var(--ds-space-3-5x);   /* Sidenav/Header/L1/Collapsed/Pad right */
-  --ds-sidenav-header-l1-collapsed-pad-left: var(--ds-space-3-5x);   /* Sidenav/Header/L1/Collapsed/Pad left */
-  --ds-sidenav-header-l1-expanded-pad-right: var(--ds-space-4x);   /* Sidenav/Header/L1/Expanded/Pad right */
-  --ds-sidenav-header-l1-expanded-pad-left: var(--ds-space-4x);   /* Sidenav/Header/L1/Expanded/Pad left */
-  --ds-sidenav-header-l2-gap-content: var(--ds-space-2x);   /* Sidenav/Header/L2/Gap content */
-  --ds-sidenav-header-l2-pad-right: var(--ds-space-4x);   /* Sidenav/Header/L2/Pad right */
-  --ds-sidenav-header-l2-pad-left: var(--ds-space-4x);   /* Sidenav/Header/L2/Pad left */
-  --ds-sidenav-control-pad-top: var(--ds-space-2x);   /* Sidenav/Control/Pad top */
-  --ds-sidenav-control-pad-bottom: var(--ds-space-3x);   /* Sidenav/Control/Pad bottom */
-  --ds-color-sidenav-control-background: var(--ds-palette-contrast-3-950);   /* Sidenav/Control/Background */
-  --ds-color-sidenav-control-background-hover: var(--ds-palette-contrast-3-900);   /* Sidenav/Control/Background hover */
-  --ds-color-sidenav-control-background-press: var(--ds-palette-contrast-3-900);   /* Sidenav/Control/Background press */
-  --ds-sidenav-control-pad-left: var(--ds-space-4x);   /* Sidenav/Control/Pad left */
-  --ds-sidenav-control-pad-right: var(--ds-space-4x);   /* Sidenav/Control/Pad right */
-  --ds-sidenav-header-l2-text-size: var(--ds-typography-body-font-size-m);   /* Sidenav/Header/L2/Text size */
-  --ds-color-sidenav-header-l2-text-color: var(--ds-color-text-primary);   /* Sidenav/Header/L2/Text color */
-  --ds-sidenav-header-l2-text-weight: var(--ds-typography-font-weight-medium);   /* Sidenav/Header/L2/Text weight */
-  --ds-sidenav-element-gap: var(--ds-space-0);   /* Sidenav/Element/Gap */
-  --ds-color-sidenav-element-collaps-icon-background: var(--ds-palette-contrast-3-900);   /* Sidenav/Element/Collaps icon/Background */
-  --ds-sidenav-control-collapsed-gap: var(--ds-space-0);   /* Sidenav/Control/Collapsed/Gap */
-  --ds-sidenav-control-expanded-gap: var(--ds-space-0);   /* Sidenav/Control/Expanded/Gap */
-  --ds-sidenav-control-expanded-gap-content: var(--ds-space-2x);   /* Sidenav/Control/Expanded/Gap content */
-  --ds-color-sidenav-item-l1-background: var(--ds-palette-contrast-3-950);   /* Sidenav/Item/L1/Background */
-  --ds-color-sidenav-item-l1-background-hover: var(--ds-palette-contrast-3-900);   /* Sidenav/Item/L1/Background hover */
-  --ds-color-sidenav-item-l1-background-selected: var(--ds-palette-contrast-3-800);   /* Sidenav/Item/L1/Background selected */
-  --ds-sidenav-item-l1-pad-left: var(--ds-space-4x);   /* Sidenav/Item/L1/Pad left */
-  --ds-sidenav-item-l1-pad-right: var(--ds-space-4x);   /* Sidenav/Item/L1/Pad right */
-  --ds-sidenav-item-l2-gap-container: var(--ds-space-2x);   /* Sidenav/Item/L2/Gap container */
-  --ds-sidenav-item-l2-gap-content: var(--ds-space-2x);   /* Sidenav/Item/L2/Gap content */
-  --ds-sidenav-item-l2-pad-left: var(--ds-space-4x);   /* Sidenav/Item/L2/Pad left */
-  --ds-sidenav-item-l2-pad-right: var(--ds-space-4x);   /* Sidenav/Item/L2/Pad right */
-  --ds-color-sidenav-item-l2-background: var(--ds-color-surface-default);   /* Sidenav/Item/L2/Background */
-  --ds-color-sidenav-item-l2-text-color: var(--ds-color-text-primary);   /* Sidenav/Item/L2/Text color */
-  --ds-sidenav-item-l2-text-size: var(--ds-typography-caption-font-size-l);   /* Sidenav/Item/L2/Text size */
-  --ds-sidenav-item-l2-text-weight: var(--ds-typography-font-weight-medium);   /* Sidenav/Item/L2/Text weight */
-  --ds-sidenav-item-l1-text-weight: var(--ds-typography-font-weight-regular);   /* Sidenav/Item/L1/Text weight */
-  --ds-sidenav-item-l1-text-size: var(--ds-typography-caption-font-size-l);   /* Sidenav/Item/L1/Text size */
-  --ds-color-sidenav-item-l1-text-color: var(--ds-color-text-inversive);   /* Sidenav/Item/L1/Text color */
-  --ds-color-sidenav-item-l2-background-selected: var(--ds-color-brand-accent-lighter);   /* Sidenav/Item/L2/Background selected */
-  --ds-color-sidenav-item-l2-background-hover: var(--ds-color-brand-accent-super-lightest);   /* Sidenav/Item/L2/Background hover */
-  --ds-sidenav-item-l2-pad-bottom: var(--ds-space-2-5x);   /* Sidenav/Item/L2/Pad bottom */
-  --ds-sidenav-item-l2-pad-top: var(--ds-space-2-5x);   /* Sidenav/Item/L2/Pad top */
-  --ds-sidenav-item-l3-gap: var(--ds-space-2x);   /* Sidenav/Item/L3/Gap */
-  --ds-sidenav-item-l3-pad-left: var(--ds-space-8x);   /* Sidenav/Item/L3/Pad left */
-  --ds-sidenav-item-l3-pad-right: var(--ds-space-4x);   /* Sidenav/Item/L3/Pad right */
-  --ds-sidenav-item-l3-pad-top: var(--ds-space-2x);   /* Sidenav/Item/L3/Pad top */
-  --ds-sidenav-item-l3-pad-bottom: var(--ds-space-2x);   /* Sidenav/Item/L3/Pad bottom */
-  --ds-color-sidenav-item-l3-text-color: var(--ds-color-text-primary);   /* Sidenav/Item/L3/Text color */
-  --ds-sidenav-item-l3-text-size: var(--ds-typography-caption-font-size-l);   /* Sidenav/Item/L3/Text size */
-  --ds-sidenav-item-l3-text-weight: var(--ds-typography-font-weight-regular);   /* Sidenav/Item/L3/Text weight */
-  --ds-color-sidenav-item-l3-background: var(--ds-color-surface-default);   /* Sidenav/Item/L3/Background */
-  --ds-color-sidenav-item-l3-background-hover: var(--ds-color-brand-accent-super-lightest);   /* Sidenav/Item/L3/Background hover */
-  --ds-color-sidenav-item-l3-background-selected: var(--ds-color-brand-accent-lighter);   /* Sidenav/Item/L3/Background selected */
-  --ds-color-sidenav-item-l3-text-color-selected: var(--ds-color-text-accent);   /* Sidenav/Item/L3/Text color selected */
-  --ds-sidenav-footer-l1-expanded-gap: var(--ds-space-0);   /* Sidenav/Footer/L1/Expanded/Gap */
-  --ds-sidenav-footer-l2-gap: var(--ds-space-3x);   /* Sidenav/Footer/L2/Gap */
-  --ds-sidenav-footer-l2-pad-bottom: var(--ds-space-3x);   /* Sidenav/Footer/L2/Pad bottom */
-  --ds-sidenav-footer-l2-pad-right: var(--ds-space-4x);   /* Sidenav/Footer/L2/Pad right */
-  --ds-sidenav-footer-l2-pad-top: var(--ds-space-3x);   /* Sidenav/Footer/L2/Pad top */
-  --ds-sidenav-footer-l2-pad-left: var(--ds-space-4x);   /* Sidenav/Footer/L2/Pad left */
-  --ds-color-sidenav-footer-l2-background: var(--ds-color-surface-default);   /* Sidenav/Footer/L2/Background */
-  --ds-sidenav-footer-l2-text-weight: var(--ds-typography-font-weight-regular);   /* Sidenav/Footer/L2/Text weight */
-  --ds-sidenav-footer-l2-text-size: var(--ds-typography-caption-font-size-l);   /* Sidenav/Footer/L2/Text size */
-  --ds-color-sidenav-footer-l2-text-color: var(--ds-color-text-secondary);   /* Sidenav/Footer/L2/Text color */
-  --ds-sidenav-footer-l2-logo-width: 38px;   /* Sidenav/Footer/L2/Logo width */
-  --ds-sidenav-footer-l2-logo-height: 16px;   /* Sidenav/Footer/L2/Logo height */
-  --ds-sidenav-sidebar-l1-gap: var(--ds-space-0);   /* Sidenav/Sidebar/L1/Gap */
-  --ds-sidenav-sidebar-l2-gap: var(--ds-space-0);   /* Sidenav/Sidebar/L2/Gap */
-  --ds-sidenav-sidebar-pad-top: var(--ds-space-2x);   /* Sidenav/Sidebar/Pad top */
-  --ds-sidenav-sidebar-pad-bottom: var(--ds-space-2x);   /* Sidenav/Sidebar/Pad bottom */
-  --ds-color-sidenav-sidebar-l1-background: var(--ds-palette-contrast-3-950);   /* Sidenav/Sidebar/L1/Background */
-  --ds-chips-s-size-border-radius: var(--ds-radius-2x);   /* Chips/S size/Border radius */
-  --ds-form-field-xs-size-border-radius: var(--ds-radius-0);   /* Form field/XS size/Border radius */
-  --ds-button-xs-size-icon-size: var(--ds-icon-size-size-4x);   /* Button/XS size/Icon size */
-  --ds-button-xs-size-gap: var(--ds-space-1x);   /* Button/XS size/Gap */
-  --ds-button-xs-size-pad-left: var(--ds-space-1-5x);   /* Button/XS size/Pad left */
-  --ds-button-xs-size-pad-right: var(--ds-space-1-5x);   /* Button/XS size/Pad right */
-  --ds-button-xs-size-pad-top: var(--ds-space-1x);   /* Button/XS size/Pad top */
-  --ds-button-xs-size-pad-bottom: var(--ds-space-1x);   /* Button/XS size/Pad bottom */
-  --ds-button-xs-size-text-weight: var(--ds-typography-font-weight-medium);   /* Button/XS size/Text weight */
-  --ds-button-xs-size-text-size: var(--ds-typography-caption-font-size-l);   /* Button/XS size/Text size */
-  --ds-button-icon-xs-size-pad-left: var(--ds-space-1x);   /* Button icon/XS size/Pad left */
-  --ds-button-icon-xs-size-pad-right: var(--ds-space-1x);   /* Button icon/XS size/Pad right */
-  --ds-button-icon-xs-size-pad-top: var(--ds-space-1x);   /* Button icon/XS size/Pad top */
-  --ds-button-icon-xs-size-pad-bottom: var(--ds-space-1x);   /* Button icon/XS size/Pad bottom */
-  --ds-list-gap: var(--ds-space-0);   /* List/Gap */
-  --ds-list-gap-list: var(--ds-space-0);   /* List/Gap list */
-  --ds-list-pad-top: var(--ds-space-2x);   /* List/Pad top */
-  --ds-list-pad-bottom: var(--ds-space-2x);   /* List/Pad bottom */
-  --ds-list-border-radius: var(--ds-radius-0);   /* List/Border radius */
-  --ds-color-list-background: var(--ds-color-shapes-default);   /* List/Background */
-  --ds-scroll-pad-right: var(--ds-space-0-5x);   /* Scroll/Pad right */
-  --ds-scroll-pad-left: var(--ds-space-0-5x);   /* Scroll/Pad left */
-  --ds-color-menu-item-selected-back-selected: var(--ds-palette-accent-10);   /* Menu item/Selected/Back selected */
-  --ds-menu-item-pad-left-s: 32px;   /* Menu item/Pad left S */
-  --ds-menu-item-pad-left-m: 48px;   /* Menu item/Pad left M */
-  --ds-color-list-item-selected-back-selected: var(--ds-palette-accent-10);   /* List item/Selected/Back selected */
-  --ds-color-form-field-input-label-text-color: var(--ds-color-text-secondary);   /* Form field/Input label text color */
-  --ds-form-field-pad-textarea-top: var(--ds-space-1x);   /* Form field/Pad textarea top */
-  --ds-form-field-pad-textarea-bottom: var(--ds-space-2x);   /* Form field/Pad textarea bottom */
-  --ds-color-status-contrast-4-filled-background: var(--ds-palette-contrast-4-5);   /* Status/Contrast-4/Filled/Background */
-  --ds-color-status-contrast-4-filled-text-color: var(--ds-palette-contrast-4-950);   /* Status/Contrast-4/Filled/Text color */
-  --ds-color-status-contrast-4-text-text-color: var(--ds-color-brand-contrast-4-dark);   /* Status/Contrast-4/Text/Text color */
-  --ds-snackbar-cont-size: var(--ds-typography-caption-font-size-l);   /* Snackbar/Cont size */
-  --ds-snackbar-cont-weight: var(--ds-typography-font-weight-regular);   /* Snackbar/Cont weight */
-  --ds-color-snackbar-complex-light-background: var(--ds-color-surface-default);   /* Snackbar/Complex/Light/Background */
-  --ds-snackbar-max-width: 370px;   /* Snackbar/Max width */
-  --ds-color-snackbar-complex-light-text-color: var(--ds-color-text-primary);   /* Snackbar/Complex/Light/Text color */
-  --ds-color-snackbar-progress-color: var(--ds-color-icon-accent);   /* Snackbar/Progress color */
-  --ds-dialog-header-pad-right: var(--ds-space-6x);   /* Dialog/Header/Pad right */
-  --ds-dialog-header-pad-left: var(--ds-space-6x);   /* Dialog/Header/Pad left */
-  --ds-dialog-content-pad-left: var(--ds-space-6x);   /* Dialog/Content/Pad left */
-  --ds-dialog-content-pad-right: var(--ds-space-6x);   /* Dialog/Content/Pad right */
-  --ds-dialog-footer-pad-right: var(--ds-space-6x);   /* Dialog/Footer/Pad right */
-  --ds-dialog-footer-pad-left: var(--ds-space-6x);   /* Dialog/Footer/Pad left */
-  --ds-sidenav-item-l1-pad-bottom: var(--ds-space-3x);   /* Sidenav/Item/L1/Pad bottom */
-  --ds-sidenav-item-l1-pad-top: var(--ds-space-3x);   /* Sidenav/Item/L1/Pad top */
-  --ds-color-sidenav-item-l1-indicator: var(--ds-color-icon-inversive);   /* Sidenav/Item/L1/Indicator */
-  --ds-color-sidenav-item-l1-element-left: var(--ds-color-icon-inversive);   /* Sidenav/Item/L1/Element left */
-  --ds-sidenav-item-l1-gap-container: var(--ds-space-2x);   /* Sidenav/Item/L1/Gap container */
-  --ds-color-sidenav-item-l1-element-right: var(--ds-color-icon-inversive);   /* Sidenav/Item/L1/Element right */
-  --ds-sidenav-item-l1-gap-content: var(--ds-space-2x);   /* Sidenav/Item/L1/Gap content */
-  --ds-color-sidenav-item-l3-indicator: var(--ds-color-icon-accent);   /* Sidenav/Item/L3/Indicator */
-  --ds-sidenav-control-text-weight: var(--ds-typography-font-weight-regular);   /* Sidenav/Control/Text weight */
-  --ds-sidenav-control-text-size: var(--ds-typography-caption-font-size-m);   /* Sidenav/Control/Text size */
-  --ds-color-sidenav-control-text-color: var(--ds-color-text-inversive);   /* Sidenav/Control/Text color */
-  --ds-color-sidenav-control-divider: var(--ds-palette-contrast-3-900);   /* Sidenav/Control/Divider */
-  --ds-sidenav-header-l1-expanded-gap: 92px;   /* Sidenav/Header/L1/Expanded/Gap */
-  --ds-color-sidenav-header-l1-expanded-logo: var(--ds-color-shapes-default);   /* Sidenav/Header/L1/Expanded/Logo */
-  --ds-color-sidenav-header-l1-collapsed-logo: var(--ds-color-shapes-default);   /* Sidenav/Header/L1/Collapsed/Logo */
-  --ds-color-sidenav-header-l1-collapsed-logo-element: var(--ds-palette-negative-500);   /* Sidenav/Header/L1/Collapsed/Logo element */
-  --ds-color-sidenav-footer-l2-logo: var(--ds-palette-negative-500);   /* Sidenav/Footer/L2/Logo */
-  --ds-sidenav-header-l1-expanded-logo-width: 56px;   /* Sidenav/Header/L1/Expanded/Logo width */
-  --ds-sidenav-header-l1-expanded-logo-height: 24px;   /* Sidenav/Header/L1/Expanded/Logo height */
-  --ds-color-sidenav-sidebar-l2-background: var(--ds-color-surface-default);   /* Sidenav/Sidebar/L2/Background */
-  --ds-sidenav-sidebar-info-pad-top: var(--ds-space-4x);   /* Sidenav/Sidebar/Info/Pad top */
-  --ds-color-sidenav-sidebar-info-background-container: var(--ds-color-surface-default-variant);   /* Sidenav/Sidebar/Info/Background container */
-  --ds-sidenav-sidebar-info-pad-bottom: var(--ds-space-4x);   /* Sidenav/Sidebar/Info/Pad bottom */
-  --ds-sidenav-sidebar-info-pad-left: var(--ds-space-2x);   /* Sidenav/Sidebar/Info/Pad left */
-  --ds-sidenav-sidebar-info-pad-right: var(--ds-space-2x);   /* Sidenav/Sidebar/Info/Pad right */
-  --ds-color-sidenav-item-l3-background-active: var(--ds-color-brand-accent-lighter);   /* Sidenav/Item/L3/Background active */
-  --ds-sidenav-sidebar-info-pad-left-container: var(--ds-space-3x);   /* Sidenav/Sidebar/Info/Pad left container */
-  --ds-sidenav-sidebar-info-pad-right-container: var(--ds-space-3x);   /* Sidenav/Sidebar/Info/Pad right container */
-  --ds-sidenav-sidebar-info-pad-top-container: var(--ds-space-3x);   /* Sidenav/Sidebar/Info/Pad top container */
-  --ds-sidenav-sidebar-info-pad-bottom-container: var(--ds-space-3x);   /* Sidenav/Sidebar/Info/Pad bottom container */
-  --ds-sidenav-sidebar-info-gap-container: var(--ds-space-4x);   /* Sidenav/Sidebar/Info/Gap container */
-  --ds-table-pad-top: var(--ds-space-3x);   /* Table/Pad top */
-  --ds-table-pad-left: var(--ds-space-8x);   /* Table/Pad left */
-  --ds-table-pad-right: var(--ds-space-8x);   /* Table/Pad right */
-  --ds-table-pad-bottom: var(--ds-space-3x);   /* Table/Pad bottom */
-  --ds-table-footer-pad-bottom: var(--ds-space-3x);   /* Table footer/Pad bottom */
-  --ds-table-footer-pad-top: var(--ds-space-3x);   /* Table footer/Pad top */
-  --ds-table-footer-pad-right: var(--ds-space-8x);   /* Table footer/Pad right */
-  --ds-table-footer-pad-left: var(--ds-space-8x);   /* Table footer/Pad left */
-  --ds-color-table-footer-background: var(--ds-color-table-surfase-default);   /* Table footer/Background */
-  --ds-chips-input-gap-chips-input-frame: var(--ds-size-1x);   /* Chips input/Gap chips input frame */
-  --ds-color-status-background: var(--ds-color-shapes-default-transparent);   /* Status/Background */
-  --ds-chips-gap-group: var(--ds-space-2x);   /* Chips/Gap group */
-  --ds-button-m-size-text-weight: var(--ds-typography-font-weight-medium);   /* Button/M size/Text weight */
-  --ds-button-m-size-text-size: var(--ds-typography-body-font-size-s);   /* Button/M size/Text size */
-  --ds-button-s-size-text-weight: var(--ds-typography-font-weight-medium);   /* Button/S size/Text weight */
-  --ds-button-s-size-text-size: var(--ds-typography-body-font-size-s);   /* Button/S size/Text size */
-  --ds-button-icon-s-size-icon-size: var(--ds-icon-size-size-5x);   /* Button icon/S size/Icon size */
-  --ds-button-icon-xs-size-icon-size: var(--ds-icon-size-size-4x);   /* Button icon/XS size/Icon size */
-  --ds-color-list-item-link-background: var(--ds-color-surface-default);   /* List item/Link/Background */
-  --ds-color-list-item-link-text-color: var(--ds-color-text-accent);   /* List item/Link/Text color */
-  --ds-checkbox-label-gap-support: var(--ds-space-1x);   /* Checkbox label/Gap support */
-  --ds-checkbox-label-pad-left-support-0: var(--ds-space-0);   /* Checkbox label/Pad left support 0 */
-  --ds-checkbox-label-pad-left-support-7x: var(--ds-space-7x);   /* Checkbox label/Pad left support 7x */
-  --ds-radio-button-label-gap-support: var(--ds-space-1x);   /* Radio button label/Gap support */
-  --ds-checkbox-group-vertical-gap-support: var(--ds-space-2x);   /* Checkbox group/Vertical/Gap support */
-  --ds-checkbox-group-group-gap-support: var(--ds-space-2x);   /* Checkbox group/Group/Gap support */
-  --ds-checkbox-group-horizontal-gap-support: var(--ds-space-2x);   /* Checkbox group/Horizontal/Gap support */
-  --ds-radio-button-group-vertical-gap-support: var(--ds-space-2x);   /* Radio button group/Vertical/Gap support */
-  --ds-radio-button-group-horizontal-gap-support: var(--ds-space-2x);   /* Radio button group/Horizontal/Gap support */
-  --ds-radio-button-label-pad-left-support-7x: var(--ds-space-7x);   /* Radio button label/Pad left support 7x */
-  --ds-radio-button-label-pad-left-support-0: var(--ds-space-0);   /* Radio button label/Pad left support 0 */
-  --ds-slide-toggle-gap-support: var(--ds-space-1x);   /* Slide toggle/Gap support */
-  --ds-slide-toggle-pad-left-support-10-5x: 42px;   /* Slide toggle/Pad left support 10,5x */
-  --ds-slide-toggle-pad-left-support-0: var(--ds-space-0);   /* Slide toggle/Pad left support 0 */
-  --ds-chips-s-size-gap: var(--ds-space-1x);   /* Chips/S size/Gap */
-  --ds-color-slide-toggle-text-support-color: var(--ds-color-text-secondary);   /* Slide toggle/Text support color */
-  --ds-slide-toggle-text-support-weight: var(--ds-typography-font-weight-regular);   /* Slide toggle/Text support weight */
-  --ds-slide-toggle-text-support-size: var(--ds-typography-caption-font-size-l);   /* Slide toggle/Text support size */
-  --ds-color-checkbox-label-text-support-color: var(--ds-color-text-secondary);   /* Checkbox label/Text support color */
-  --ds-checkbox-label-text-support-weight: var(--ds-typography-font-weight-regular);   /* Checkbox label/Text support weight */
-  --ds-checkbox-label-text-support-size: var(--ds-typography-caption-font-size-l);   /* Checkbox label/Text support size */
-  --ds-color-checkbox-group-text-support-color: var(--ds-color-text-secondary);   /* Checkbox group/Text support color */
-  --ds-checkbox-group-text-support-weight: var(--ds-typography-font-weight-regular);   /* Checkbox group/Text support weight */
-  --ds-checkbox-group-text-support-size: var(--ds-typography-caption-font-size-l);   /* Checkbox group/Text support size */
-  --ds-color-slide-toggle-text-error-color: var(--ds-color-text-negative);   /* Slide toggle/Text error color */
-  --ds-color-radio-button-label-text-support-color: var(--ds-color-text-secondary);   /* Radio button label/Text support color */
-  --ds-radio-button-label-text-support-weight: var(--ds-typography-font-weight-regular);   /* Radio button label/Text support weight */
-  --ds-radio-button-label-text-support-size: var(--ds-typography-caption-font-size-l);   /* Radio button label/Text support size */
-  --ds-color-radio-button-label-text-error-color: var(--ds-color-text-negative);   /* Radio button label/Text error color */
-  --ds-radio-button-group-text-support-weight: var(--ds-typography-font-weight-regular);   /* Radio button group/Text support weight */
-  --ds-radio-button-group-text-support-size: var(--ds-typography-caption-font-size-l);   /* Radio button group/Text support size */
-  --ds-color-radio-button-group-text-support-color: var(--ds-color-text-secondary);   /* Radio button group/Text support color */
-  --ds-color-radio-button-group-text-support-error-color: var(--ds-color-text-negative);   /* Radio button group/Text support error color */
-  --ds-color-checkbox-label-text-support-error-color: var(--ds-color-text-negative);   /* Checkbox label/Text support error color */
-  --ds-color-checkbox-group-text-support-error-color: var(--ds-color-text-negative);   /* Checkbox group/Text support error color */
-  --ds-color-badge-accent-background: var(--ds-color-brand-accent-default);   /* Badge/Accent/Background */
-  --ds-color-badge-negative-background: var(--ds-color-brand-negative-default);   /* Badge/Negative/Background */
-  --ds-color-badge-positive-background: var(--ds-color-brand-positive-default);   /* Badge/Positive/Background */
-  --ds-color-badge-warning-background: var(--ds-color-brand-warning-default);   /* Badge/Warning/Background */
-  --ds-badge-point-height: var(--ds-size-2x);   /* Badge/Point/Height */
-  --ds-badge-point-width: var(--ds-size-2x);   /* Badge/Point/Width */
-  --ds-banners-border-dash-size: var(--ds-stroke-dash);   /* Banners/Border dash size */
-  --ds-color-banners-border-color: var(--ds-color-stroke-accent);   /* Banners/Border color */
-  --ds-banners-text-weight-m: var(--ds-typography-font-weight-medium);   /* Banners/Text weight M */
-  --ds-color-text-ui-default-background: var(--ds-color-surface-default);   /* Text UI/Default/Background */
-  --ds-color-text-ui-hover-background: var(--ds-color-surface-hover);   /* Text UI/Hover/Background */
-  --ds-color-text-ui-press-background: var(--ds-color-surface-press);   /* Text UI/Press/Background */
-  --ds-color-text-ui-selected-background: var(--ds-color-surface-default);   /* Text UI/Selected/Background */
-  --ds-color-text-ui-link-background: var(--ds-color-surface-default);   /* Text UI/Link/Background */
-  --ds-color-text-ui-link-text-color: var(--ds-color-text-accent);   /* Text UI/Link/Text color */
-  --ds-color-text-ui-selected-back-selected: var(--ds-palette-accent-10);   /* Text UI/Selected/Back selected */
-  --ds-color-text-ui-selected-icon-color: var(--ds-color-icon-accent);   /* Text UI/Selected/Icon color */
-  --ds-color-text-ui-negative-background: var(--ds-color-shapes-default);   /* Text UI/Negative/Background */
-  --ds-color-text-ui-negative-text-color: var(--ds-color-text-negative);   /* Text UI/Negative/Text color */
-  --ds-color-text-ui-negative-label-text-color: var(--ds-color-text-negative);   /* Text UI/Negative/Label text color */
-  --ds-color-text-ui-negative-icon-color: var(--ds-color-icon-negative);   /* Text UI/Negative/Icon color */
-  --ds-color-text-ui-disable-background: var(--ds-color-surface-default);   /* Text UI/Disable/Background */
-  --ds-color-text-ui-disable-text-color: var(--ds-color-text-disable);   /* Text UI/Disable/Text color */
-  --ds-color-text-ui-disable-label-text-color: var(--ds-color-text-disable);   /* Text UI/Disable/Label text color */
-  --ds-color-text-ui-disable-icon-color: var(--ds-color-icon-disable);   /* Text UI/Disable/Icon color */
-  --ds-text-ui-gap: var(--ds-space-2x);   /* Text UI/Gap */
-  --ds-text-ui-text-size: var(--ds-typography-body-font-size-s);   /* Text UI/Text size */
-  --ds-color-text-ui-text-color: var(--ds-color-text-primary);   /* Text UI/Text color */
-  --ds-text-ui-text-size-label: var(--ds-typography-caption-font-size-l);   /* Text UI/Text size label */
-  --ds-color-text-ui-text-label-color: var(--ds-color-text-secondary);   /* Text UI/Text label color */
-  --ds-text-ui-text-weight: var(--ds-typography-font-weight-regular);   /* Text UI/Text weight */
-  --ds-color-text-ui-icon-color: var(--ds-color-icon-primary);   /* Text UI/Icon color */
-  --ds-text-ui-pad-top: var(--ds-space-2x);   /* Text UI/Pad top */
-  --ds-text-ui-pad-bottom: var(--ds-space-2x);   /* Text UI/Pad bottom */
-  --ds-text-ui-pad-left: var(--ds-space-4x);   /* Text UI/Pad left */
-  --ds-text-ui-pad-right: var(--ds-space-4x);   /* Text UI/Pad right */
-  --ds-table-cell-pad-left-2x: 36px;   /* Table cell/Pad left 2x */
-  --ds-color-text-ui-text-placeholder: var(--ds-color-text-placeholder);   /* Text UI/Text placeholder */
-  --ds-badge-counter-pad-bottom: var(--ds-size-0-25x);   /* Badge/Counter/Pad bottom */
-  --ds-badge-counter-pad-top: var(--ds-size-0-25x);   /* Badge/Counter/Pad top */
-  --ds-color-chips-outlined-focus-background: var(--ds-color-shapes-default);   /* Chips/Outlined/Focus/Background */
-  --ds-color-chips-outlined-focus-border-color: var(--ds-color-stroke-accent);   /* Chips/Outlined/Focus/Border color */
-  --ds-color-banners-accent-background-tip: var(--ds-color-brand-accent-lightest);   /* Banners/Accent/Background tip */
-  --ds-banners-text-size-tip: var(--ds-typography-caption-font-size-l);   /* Banners/Text size tip */
-  --ds-dialog-shadows: 12 dp M;   /* Dialog/Shadows */
-  --ds-snackbar-gap-group: var(--ds-space-2x);   /* Snackbar/Gap group */
-  --ds-color-snackbar-single-dark-background: var(--ds-color-surface-snack-tooltip);   /* Snackbar/Single/Dark/Background */
-  --ds-color-snackbar-single-dark-text-color: var(--ds-color-text-inversive);   /* Snackbar/Single/Dark/Text color */
-  --ds-color-snackbar-single-light-background: var(--ds-color-surface-default);   /* Snackbar/Single/Light/Background */
-  --ds-color-snackbar-single-light-text-color: var(--ds-color-text-primary);   /* Snackbar/Single/Light/Text color */
-  --ds-select-item-gap: var(--ds-space-2x);   /* Select item/Gap */
-  --ds-select-item-text-size: var(--ds-typography-body-font-size-s);   /* Select item/Text size */
-  --ds-color-select-item-text-color: var(--ds-color-text-primary);   /* Select item/Text color */
-  --ds-select-item-text-size-label: var(--ds-typography-caption-font-size-l);   /* Select item/Text size label */
-  --ds-color-select-item-text-label-color: var(--ds-color-text-secondary);   /* Select item/Text label color */
-  --ds-select-item-text-weight: var(--ds-typography-font-weight-regular);   /* Select item/Text weight */
-  --ds-color-select-item-icon-color: var(--ds-color-icon-primary);   /* Select item/Icon color */
-  --ds-select-item-pad-left-s: 32px;   /* Select item/Pad left S */
-  --ds-select-item-pad-left-m: 48px;   /* Select item/Pad left M */
-  --ds-select-item-pad-left: var(--ds-space-4x);   /* Select item/Pad left */
-  --ds-select-item-pad-right: var(--ds-space-4x);   /* Select item/Pad right */
-  --ds-select-item-pad-top: var(--ds-space-2x);   /* Select item/Pad top */
-  --ds-select-item-pad-bottom: var(--ds-space-2x);   /* Select item/Pad bottom */
-  --ds-color-select-item-default-background: var(--ds-color-surface-default);   /* Select item/Default/Background */
-  --ds-color-select-item-hover-background: var(--ds-color-surface-hover);   /* Select item/Hover/Background */
-  --ds-color-select-item-press-background: var(--ds-color-surface-press);   /* Select item/Press/Background */
-  --ds-color-select-item-selected-background: var(--ds-color-shapes-default);   /* Select item/Selected/Background */
-  --ds-color-select-item-selected-back-selected: var(--ds-palette-accent-10);   /* Select item/Selected/Back selected */
-  --ds-color-select-item-selected-icon-color: var(--ds-color-icon-accent);   /* Select item/Selected/Icon color */
-  --ds-color-select-item-negative-background: var(--ds-color-shapes-default);   /* Select item/Negative/Background */
-  --ds-color-select-item-negative-text-color: var(--ds-color-text-negative);   /* Select item/Negative/Text color */
-  --ds-color-select-item-negative-label-text-color: var(--ds-color-text-negative);   /* Select item/Negative/Label text color */
-  --ds-color-select-item-negative-icon-color: var(--ds-color-icon-negative);   /* Select item/Negative/Icon color */
-  --ds-color-select-item-disable-background: var(--ds-color-surface-default);   /* Select item/Disable/Background */
-  --ds-color-select-item-disable-text-color: var(--ds-color-text-disable);   /* Select item/Disable/Text color */
-  --ds-color-select-item-disable-label-text-color: var(--ds-color-text-disable);   /* Select item/Disable/Label text color */
-  --ds-color-select-item-disable-icon-color: var(--ds-color-icon-disable);   /* Select item/Disable/Icon color */
-  --ds-select-item-text-size-sub: var(--ds-typography-caption-font-size-m);   /* Select item/Text size sub */
-  --ds-select-item-text-weight-sub: var(--ds-typography-font-weight-medium);   /* Select item/Text weight sub */
-  --ds-select-item-pad-top-sub: var(--ds-space-3x);   /* Select item/Pad top sub */
-  --ds-select-item-pad-bottom-sub: var(--ds-space-1-5x);   /* Select item/Pad bottom sub */
-  --ds-dialog-content-gap-text: var(--ds-space-2x);   /* Dialog/Content/Gap text */
-  --ds-card-border-size: var(--ds-stroke-0-25x);   /* Card/Border size */
-  --ds-color-card-border-color: var(--ds-color-stroke-default);   /* Card/Border color */
-  --ds-card-shadows: 01 dp Sl;   /* Card/Shadows */
-  --ds-tab-lvl-1-pad-bottom: var(--ds-space-1x);   /* Tab/Lvl 1/Pad bottom */
-  --ds-tab-lvv-2-pad-bottom: var(--ds-space-1x);   /* Tab/Lvv 2/Pad bottom */
-  --ds-tab-lvv-2-text-size: var(--ds-typography-body-font-size-s);   /* Tab/Lvv 2/Text size */
-  --ds-color-tab-icon-color-negative: var(--ds-color-icon-negative);   /* Tab/Icon color negative */
-  --ds-color-expansion-panel-collaps-default-background-info: var(--ds-color-brand-accent-lightest);   /* Expansion panel/Collaps/Default/Background info */
-  --ds-color-expansion-panel-content-background-info: var(--ds-color-brand-accent-lightest);   /* Expansion panel/Content/Background info */
-  --ds-color-expansion-panel-collaps-hover-background-info: var(--ds-color-brand-accent-lighter);   /* Expansion panel/Collaps/Hover/Background info */
-  --ds-color-expansion-panel-collaps-press-background-info: var(--ds-palette-accent-100);   /* Expansion panel/Collaps/Press/Background info */
-  --ds-color-expansion-panel-collaps-disable-background-info: var(--ds-color-brand-accent-lightest);   /* Expansion panel/Collaps/Disable/Background info */
-  --ds-color-expansion-panel-content-text-color-disable: var(--ds-color-text-disable);   /* Expansion panel/Content/Text color disable */
-  --ds-color-expansion-panel-expand-background: var(--ds-color-surface-default);   /* Expansion panel/Expand/Background */
-  --ds-elements-datepicker-border-radius: var(--ds-radius-circular);   /* Elements Datepicker/Border radius */
-  --ds-elements-datepicker-border-size: var(--ds-stroke-0-25x);   /* Elements Datepicker/Border size */
-  --ds-elements-datepicker-text-weight: var(--ds-typography-font-weight-regular);   /* Elements Datepicker/Text weight */
-  --ds-elements-datepicker-cell-pad-left: var(--ds-space-2-5x);   /* Elements Datepicker/Cell/Pad left */
-  --ds-elements-datepicker-cell-pad-right: var(--ds-space-2-5x);   /* Elements Datepicker/Cell/Pad right */
-  --ds-elements-datepicker-cell-pad-top: var(--ds-space-2x);   /* Elements Datepicker/Cell/Pad top */
-  --ds-elements-datepicker-cell-pad-bottom: var(--ds-space-2x);   /* Elements Datepicker/Cell/Pad bottom */
-  --ds-elements-datepicker-cell-text-size: var(--ds-typography-body-font-size-m);   /* Elements Datepicker/Cell/Text size */
-  --ds-elements-datepicker-year-pad-left: var(--ds-space-4x);   /* Elements Datepicker/Year/Pad left */
-  --ds-elements-datepicker-year-pad-right: var(--ds-space-4x);   /* Elements Datepicker/Year/Pad right */
-  --ds-elements-datepicker-year-pad-top: var(--ds-space-2x);   /* Elements Datepicker/Year/Pad top */
-  --ds-elements-datepicker-year-pad-bottom: var(--ds-space-2x);   /* Elements Datepicker/Year/Pad bottom */
-  --ds-elements-datepicker-year-text-size: var(--ds-typography-body-font-size-m);   /* Elements Datepicker/Year/Text size */
-  --ds-elements-datepicker-month-pad-left: var(--ds-space-2x);   /* Elements Datepicker/Month/Pad left */
-  --ds-elements-datepicker-month-pad-right: var(--ds-space-1x);   /* Elements Datepicker/Month/Pad right */
-  --ds-elements-datepicker-month-pad-top: var(--ds-space-2-5x);   /* Elements Datepicker/Month/Pad top */
-  --ds-elements-datepicker-month-pad-bottom: var(--ds-space-2-5x);   /* Elements Datepicker/Month/Pad bottom */
-  --ds-elements-datepicker-month-gap: var(--ds-space-2x);   /* Elements Datepicker/Month/Gap */
-  --ds-elements-datepicker-month-text-size: var(--ds-typography-body-font-size-s);   /* Elements Datepicker/Month/Text size */
-  --ds-elements-datepicker-month-icon-size: var(--ds-icon-size-size-5x);   /* Elements Datepicker/Month/Icon size */
-  --ds-color-elements-datepicker-cell-text-color: var(--ds-color-text-primary);   /* Elements Datepicker/Cell/Text color */
-  --ds-color-elements-datepicker-cell-default-default-background: var(--ds-palette-neutral-transparent);   /* Elements Datepicker/Cell/Default/Default/Background */
-  --ds-color-elements-datepicker-cell-default-hover-background: var(--ds-color-brand-neutral-super-light);   /* Elements Datepicker/Cell/Default/Hover/Background */
-  --ds-color-elements-datepicker-cell-default-press-background: var(--ds-color-brand-neutral-lighter);   /* Elements Datepicker/Cell/Default/Press/Background */
-  --ds-color-elements-datepicker-cell-default-disable-background: var(--ds-palette-neutral-transparent);   /* Elements Datepicker/Cell/Default/Disable/Background */
-  --ds-color-elements-datepicker-cell-default-disable-text-color: var(--ds-color-text-disable);   /* Elements Datepicker/Cell/Default/Disable/Text color */
-  --ds-color-elements-datepicker-cell-today-border-color: var(--ds-color-stroke-hover);   /* Elements Datepicker/Cell/Today/Border color */
-  --ds-color-elements-datepicker-cell-today-default-background: var(--ds-color-brand-neutral-default);   /* Elements Datepicker/Cell/Today/Default/Background */
-  --ds-color-elements-datepicker-cell-today-hover-background: var(--ds-color-brand-neutral-super-light);   /* Elements Datepicker/Cell/Today/Hover/Background */
-  --ds-color-elements-datepicker-cell-today-press-background: var(--ds-color-brand-neutral-lighter);   /* Elements Datepicker/Cell/Today/Press/Background */
-  --ds-color-elements-datepicker-cell-today-disable-background: var(--ds-color-brand-neutral-lighter);   /* Elements Datepicker/Cell/Today/Disable/Background */
-  --ds-color-elements-datepicker-cell-today-disable-text-color: var(--ds-color-text-disable);   /* Elements Datepicker/Cell/Today/Disable/Text color */
-  --ds-color-elements-datepicker-cell-selected-text-color: var(--ds-color-text-inversive);   /* Elements Datepicker/Cell/Selected/Text color */
-  --ds-color-elements-datepicker-cell-selected-default-background: var(--ds-color-button-accent-filled-default-background);   /* Elements Datepicker/Cell/Selected/Default/Background */
-  --ds-color-elements-datepicker-cell-selected-hover-background: var(--ds-color-button-accent-filled-hover-background);   /* Elements Datepicker/Cell/Selected/Hover/Background */
-  --ds-color-elements-datepicker-cell-selected-press-background: var(--ds-color-button-accent-filled-press-background);   /* Elements Datepicker/Cell/Selected/Press/Background */
-  --ds-color-elements-datepicker-cell-range-default-background: var(--ds-color-brand-neutral-default);   /* Elements Datepicker/Cell/Range/Default/Background */
-  --ds-color-elements-datepicker-cell-range-press-state-layer: var(--ds-color-brand-neutral-lighter);   /* Elements Datepicker/Cell/Range/Press/State layer */
-  --ds-color-elements-datepicker-cell-range-disable-text-color: var(--ds-color-text-disable);   /* Elements Datepicker/Cell/Range/Disable/Text color */
-  --ds-color-elements-datepicker-year-default-text-color: var(--ds-color-text-primary);   /* Elements Datepicker/Year/Default/Text color */
-  --ds-color-elements-datepicker-year-default-default-background: var(--ds-color-brand-neutral-default);   /* Elements Datepicker/Year/Default/Default/Background */
-  --ds-color-elements-datepicker-year-default-hover-background: var(--ds-color-brand-neutral-super-light);   /* Elements Datepicker/Year/Default/Hover/Background */
-  --ds-color-elements-datepicker-year-default-press-background: var(--ds-color-brand-neutral-lighter);   /* Elements Datepicker/Year/Default/Press/Background */
-  --ds-color-elements-datepicker-year-default-disable-text-color: var(--ds-color-text-disable);   /* Elements Datepicker/Year/Default/Disable/Text color */
-  --ds-color-elements-datepicker-year-today-border-color: var(--ds-color-stroke-hover);   /* Elements Datepicker/Year/Today/Border color */
-  --ds-color-elements-datepicker-year-today-text-color: var(--ds-color-text-primary);   /* Elements Datepicker/Year/Today/Text color */
-  --ds-color-elements-datepicker-year-today-default-background: var(--ds-color-brand-neutral-default);   /* Elements Datepicker/Year/Today/Default/Background */
-  --ds-color-elements-datepicker-year-today-hover-background: var(--ds-color-brand-neutral-super-light);   /* Elements Datepicker/Year/Today/Hover/Background */
-  --ds-color-elements-datepicker-year-today-press-background: var(--ds-color-brand-neutral-lighter);   /* Elements Datepicker/Year/Today/Press/Background */
-  --ds-color-elements-datepicker-year-today-disable-text-color: var(--ds-color-text-disable);   /* Elements Datepicker/Year/Today/Disable/Text color */
-  --ds-color-elements-datepicker-year-selected-text-color: var(--ds-color-text-inversive);   /* Elements Datepicker/Year/Selected/Text color */
-  --ds-color-elements-datepicker-year-selected-default-background: var(--ds-color-button-accent-filled-default-background);   /* Elements Datepicker/Year/Selected/Default/Background */
-  --ds-color-elements-datepicker-year-selected-hover-background: var(--ds-color-button-accent-filled-hover-background);   /* Elements Datepicker/Year/Selected/Hover/Background */
-  --ds-color-elements-datepicker-year-selected-press-background: var(--ds-color-button-accent-filled-press-background);   /* Elements Datepicker/Year/Selected/Press/Background */
-  --ds-color-elements-datepicker-month-text-color: var(--ds-color-text-primary);   /* Elements Datepicker/Month/Text color */
-  --ds-color-elements-datepicker-month-icon-color: var(--ds-color-icon-primary);   /* Elements Datepicker/Month/Icon color */
-  --ds-color-elements-datepicker-month-default-default-background: var(--ds-color-brand-neutral-default);   /* Elements Datepicker/Month/Default/Default/Background */
-  --ds-color-elements-datepicker-month-default-hover-background: var(--ds-color-brand-neutral-super-light);   /* Elements Datepicker/Month/Default/Hover/Background */
-  --ds-color-elements-datepicker-month-default-press-background: var(--ds-color-brand-neutral-lighter);   /* Elements Datepicker/Month/Default/Press/Background */
-  --ds-color-elements-datepicker-month-default-disable-text-color: var(--ds-color-text-disable);   /* Elements Datepicker/Month/Default/Disable/Text color */
-  --ds-color-elements-datepicker-month-default-disable-icon-color: var(--ds-color-icon-disable);   /* Elements Datepicker/Month/Default/Disable/Icon color */
-  --ds-elements-datepicker-year-selected-gap: var(--ds-space-2x);   /* Elements Datepicker/Year/Selected/Gap */
-  --ds-input-datepicker-icon: date_range;   /* Input Datepicker/Icon */
-  --ds-input-datepicker-empty-placeholder-text: ДД.ММ.ГГГГ;   /* Input Datepicker/Empty/Placeholder text */
-  --ds-input-datepicker-populated-label-text: Дата;   /* Input Datepicker/Populated/Label text */
-  --ds-input-datepicker-populated-placeholder-text: ДД.ММ.ГГГГ;   /* Input Datepicker/Populated/Placeholder text */
-  --ds-control-panel-datepicker-pad-top: var(--ds-space-1x);   /* Control Panel Datepicker/Pad top */
-  --ds-control-panel-datepicker-pad-bottom: var(--ds-space-1x);   /* Control Panel Datepicker/Pad bottom */
-  --ds-control-panel-datepicker-control-gap: Auto;   /* Control Panel Datepicker/Control/Gap */
-  --ds-control-panel-datepicker-week-pad-top: var(--ds-space-0-5x);   /* Control Panel Datepicker/Week/Pad top */
-  --ds-control-panel-datepicker-week-pad-bottom: var(--ds-space-0-5x);   /* Control Panel Datepicker/Week/Pad bottom */
-  --ds-datepicker-pad-top: var(--ds-space-2x);   /* Datepicker/Pad top */
-  --ds-datepicker-pad-bottom: var(--ds-space-2x);   /* Datepicker/Pad bottom */
-  --ds-datepicker-pad-left: var(--ds-space-4x);   /* Datepicker/Pad left */
-  --ds-datepicker-pad-right: var(--ds-space-4x);   /* Datepicker/Pad right */
-  --ds-datepicker-border-radius: var(--ds-radius-3x);   /* Datepicker/Border radius */
-  --ds-datepicker-border-size: var(--ds-stroke-0-25x);   /* Datepicker/Border size */
-  --ds-color-datepicker-border-color: var(--ds-color-stroke-default);   /* Datepicker/Border color */
-  --ds-input-timepicker-icon: schedule_time;   /* Input Timepicker/Icon */
-  --ds-input-timepicker-empty-placeholder-text: ЧЧ.ММ;   /* Input Timepicker/Empty/Placeholder text */
-  --ds-input-timepicker-populated-label-text: Время;   /* Input Timepicker/Populated/Label text */
-  --ds-input-timepicker-populated-placeholder-text: ЧЧ.ММ;   /* Input Timepicker/Populated/Placeholder text */
-  --ds-elements-timepicker-border-radius: var(--ds-radius-circular);   /* Elements Timepicker/Border radius */
-  --ds-elements-timepicker-text-weight: var(--ds-typography-font-weight-regular);   /* Elements Timepicker/Text weight */
-  --ds-elements-timepicker-pad-left: var(--ds-space-4x);   /* Elements Timepicker/Pad left */
-  --ds-elements-timepicker-pad-right: var(--ds-space-4x);   /* Elements Timepicker/Pad right */
-  --ds-elements-timepicker-pad-top: var(--ds-space-2x);   /* Elements Timepicker/Pad top */
-  --ds-elements-timepicker-pad-bottom: var(--ds-space-2x);   /* Elements Timepicker/Pad bottom */
-  --ds-elements-timepicker-text-size: var(--ds-typography-body-font-size-m);   /* Elements Timepicker/Text size */
-  --ds-color-elements-timepicker-selected-text-color: var(--ds-color-text-inversive);   /* Elements Timepicker/Selected/Text color */
-  --ds-color-elements-timepicker-selected-default-background: var(--ds-color-button-accent-filled-default-background);   /* Elements Timepicker/Selected/Default/Background */
-  --ds-color-elements-timepicker-selected-hover-background: var(--ds-color-button-accent-filled-hover-background);   /* Elements Timepicker/Selected/Hover/Background */
-  --ds-color-elements-timepicker-selected-press-background: var(--ds-color-button-accent-filled-press-background);   /* Elements Timepicker/Selected/Press/Background */
-  --ds-color-elements-timepicker-default-text-color: var(--ds-color-text-primary);   /* Elements Timepicker/Default/Text color */
-  --ds-color-elements-timepicker-default-default-background: var(--ds-color-brand-neutral-default);   /* Elements Timepicker/Default/Default/Background */
-  --ds-color-elements-timepicker-default-hover-background: var(--ds-color-brand-neutral-super-light);   /* Elements Timepicker/Default/Hover/Background */
-  --ds-color-elements-timepicker-default-press-background: var(--ds-color-brand-neutral-lighter);   /* Elements Timepicker/Default/Press/Background */
-  --ds-color-elements-timepicker-default-range-background: var(--ds-palette-accent-50);   /* Elements Timepicker/Default/Range/Background */
-  --ds-color-elements-timepicker-default-disable-text-color: var(--ds-color-text-disable);   /* Elements Timepicker/Default/Disable/Text color */
-  --ds-control-panel-timepicker-pad-top: var(--ds-space-1x);   /* Control Panel Timepicker/Pad top */
-  --ds-control-panel-timepicker-pad-bottom: var(--ds-space-1x);   /* Control Panel Timepicker/Pad bottom */
-  --ds-control-panel-timepicker-control-gap: Auto;   /* Control Panel Timepicker/Control/Gap */
-  --ds-control-panel-timepicker-time-pad-top: var(--ds-space-0-5x);   /* Control Panel Timepicker/Time/Pad top */
-  --ds-control-panel-timepicker-time-pad-bottom: var(--ds-space-0-5x);   /* Control Panel Timepicker/Time/Pad bottom */
-  --ds-timepicker-time-grid-pad-top: var(--ds-space-2x);   /* Timepicker/Time grid/Pad top */
-  --ds-timepicker-time-grid-pad-bottom: var(--ds-space-2x);   /* Timepicker/Time grid/Pad bottom */
-  --ds-timepicker-time-grid-border-radius: var(--ds-radius-3x);   /* Timepicker/Time grid/Border radius */
-  --ds-timepicker-time-grid-border-size: var(--ds-stroke-0-25x);   /* Timepicker/Time grid/Border size */
-  --ds-color-timepicker-time-grid-border-color: var(--ds-color-stroke-default);   /* Timepicker/Time grid/Border color */
-  --ds-timepicker-time-line-component: Select (Container);   /* Timepicker/Time line/Component */
+  
+  --ds-color-button-accent-filled-default-background: var(--ds-color-button-accent-default);   
+  --ds-color-button-accent-filled-default-text-color: var(--ds-color-text-inversive);   
+  --ds-color-button-accent-filled-default-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-button-accent-filled-hover-background: var(--ds-color-button-accent-hover);   
+  --ds-color-button-accent-filled-hover-text-color: var(--ds-color-text-inversive);   
+  --ds-color-button-accent-filled-hover-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-button-accent-filled-press-background: var(--ds-color-button-accent-press);   
+  --ds-color-button-accent-filled-press-text-color: var(--ds-color-text-inversive);   
+  --ds-color-button-accent-filled-press-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-button-accent-outlined-default-background: var(--ds-color-button-accent-lite-default-transparent);   
+  --ds-color-button-accent-outlined-default-text-color: var(--ds-color-text-accent);   
+  --ds-color-button-accent-outlined-default-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-button-accent-outlined-hover-background: var(--ds-color-button-accent-lite-hover);   
+  --ds-color-button-accent-outlined-hover-text-color: var(--ds-color-text-accent);   
+  --ds-color-button-accent-outlined-hover-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-button-accent-outlined-press-background: var(--ds-color-button-accent-lite-press);   
+  --ds-color-button-accent-outlined-press-text-color: var(--ds-color-text-accent);   
+  --ds-color-button-accent-outlined-press-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-button-accent-outlined-default-border-color: var(--ds-color-stroke-accent);   
+  --ds-color-button-neutral-filled-default-background: var(--ds-color-button-neutral-default);   
+  --ds-color-button-neutral-outlined-default-background: var(--ds-color-button-neutral-default-transparent);   
+  --ds-color-button-neutral-outlined-default-text-color: var(--ds-color-text-primary);   
+  --ds-color-button-neutral-outlined-default-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-button-neutral-outlined-default-border-color: var(--ds-color-stroke-default);   
+  --ds-color-button-neutral-filled-default-text-color: var(--ds-color-text-primary);   
+  --ds-color-button-neutral-filled-default-icon-color: var(--ds-color-icon-primary);   
+  --ds-button-m-size-icon-size: var(--ds-icon-size-size-5x);   
+  --ds-button-border-radius: var(--ds-radius-2x);   
+  --ds-button-m-size-gap: var(--ds-space-2x);   
+  --ds-button-m-size-pad-left: var(--ds-space-3x);   
+  --ds-button-m-size-pad-top: var(--ds-space-2x);   
+  --ds-button-m-size-pad-right: var(--ds-space-3x);   
+  --ds-button-m-size-pad-bottom: var(--ds-space-2x);   
+  --ds-color-button-neutral-filled-hover-background: var(--ds-color-button-neutral-hover);   
+  --ds-color-button-neutral-filled-hover-text-color: var(--ds-color-text-primary);   
+  --ds-color-button-neutral-filled-hover-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-button-neutral-filled-press-background: var(--ds-color-button-neutral-press);   
+  --ds-color-button-neutral-filled-press-text-color: var(--ds-color-text-primary);   
+  --ds-color-button-neutral-filled-press-icon-color: var(--ds-color-icon-primary);   
+  --ds-button-s-size-icon-size: var(--ds-icon-size-size-5x);   
+  --ds-button-s-size-gap: var(--ds-space-1x);   
+  --ds-button-s-size-pad-right: var(--ds-space-2x);   
+  --ds-button-s-size-pad-bottom: var(--ds-space-1x);   
+  --ds-button-s-size-pad-left: var(--ds-space-2x);   
+  --ds-button-s-size-pad-top: var(--ds-space-1x);   
+  --ds-color-button-accent-outlined-hover-border-color: var(--ds-color-stroke-accent);   
+  --ds-color-button-accent-outlined-press-border-color: var(--ds-color-stroke-accent);   
+  --ds-color-button-neutral-outlined-hover-background: var(--ds-color-button-neutral-hover);   
+  --ds-color-button-neutral-outlined-hover-text-color: var(--ds-color-text-primary);   
+  --ds-color-button-neutral-outlined-hover-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-button-neutral-outlined-hover-border-color: var(--ds-color-stroke-default);   
+  --ds-color-button-neutral-outlined-press-background: var(--ds-color-button-neutral-press);   
+  --ds-color-button-neutral-outlined-press-text-color: var(--ds-color-text-primary);   
+  --ds-color-button-neutral-outlined-press-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-button-neutral-outlined-press-border-color: var(--ds-color-stroke-default);   
+  --ds-color-button-neutral-text-default-background: var(--ds-color-button-neutral-default-transparent);   
+  --ds-color-button-neutral-text-default-text-color: var(--ds-color-text-primary);   
+  --ds-color-button-neutral-text-default-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-button-neutral-text-hover-background: var(--ds-color-button-neutral-hover);   
+  --ds-color-button-neutral-text-hover-text-color: var(--ds-color-text-primary);   
+  --ds-color-button-neutral-text-hover-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-button-neutral-text-press-background: var(--ds-color-button-neutral-press);   
+  --ds-color-button-neutral-text-press-text-color: var(--ds-color-text-primary);   
+  --ds-color-button-neutral-text-press-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-button-accent-text-default-background: var(--ds-color-button-accent-lite-default-transparent);   
+  --ds-color-button-accent-text-hover-background: var(--ds-color-button-accent-lite-hover);   
+  --ds-color-button-accent-text-press-background: var(--ds-color-button-accent-lite-press);   
+  --ds-color-button-accent-text-press-text-color: var(--ds-color-text-accent);   
+  --ds-color-button-accent-text-press-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-button-accent-text-hover-text-color: var(--ds-color-text-accent);   
+  --ds-color-button-accent-text-hover-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-button-accent-text-default-text-color: var(--ds-color-text-accent);   
+  --ds-color-button-accent-text-default-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-button-positive-filled-default-background: var(--ds-color-button-positive-default);   
+  --ds-color-button-positive-filled-default-text-color: var(--ds-color-text-inversive);   
+  --ds-color-button-positive-filled-default-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-button-positive-filled-hover-background: var(--ds-color-button-positive-hover);   
+  --ds-color-button-positive-filled-hover-text-color: var(--ds-color-text-inversive);   
+  --ds-color-button-positive-filled-hover-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-button-positive-filled-press-background: var(--ds-color-button-positive-press);   
+  --ds-color-button-positive-filled-press-text-color: var(--ds-color-text-inversive);   
+  --ds-color-button-positive-filled-press-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-button-positive-outlined-default-background: var(--ds-color-button-neutral-default-transparent);   
+  --ds-color-button-positive-text-default-background: var(--ds-color-button-positive-lite-default-transparent);   
+  --ds-color-button-positive-text-default-text-color: var(--ds-color-text-positive);   
+  --ds-color-button-positive-text-default-icon-color: var(--ds-color-icon-positive);   
+  --ds-color-button-positive-text-hover-background: var(--ds-color-button-positive-lite-hover);   
+  --ds-color-button-positive-text-hover-text-color: var(--ds-color-text-positive);   
+  --ds-color-button-positive-text-hover-icon-color: var(--ds-color-icon-positive);   
+  --ds-color-button-positive-text-press-background: var(--ds-color-button-positive-lite-press);   
+  --ds-color-button-positive-text-press-text-color: var(--ds-color-text-positive);   
+  --ds-color-button-positive-text-press-icon-color: var(--ds-color-icon-positive);   
+  --ds-color-button-positive-outlined-default-text-color: var(--ds-color-text-positive);   
+  --ds-color-button-positive-outlined-default-icon-color: var(--ds-color-icon-positive);   
+  --ds-color-button-positive-outlined-default-border-color: var(--ds-color-stroke-positive);   
+  --ds-color-button-positive-outlined-hover-background: var(--ds-color-button-positive-lite-hover);   
+  --ds-color-button-positive-outlined-hover-text-color: var(--ds-color-text-positive);   
+  --ds-color-button-positive-outlined-hover-icon-color: var(--ds-color-icon-positive);   
+  --ds-color-button-positive-outlined-hover-border-color: var(--ds-color-stroke-positive);   
+  --ds-color-button-positive-outlined-press-background: var(--ds-color-button-positive-lite-press);   
+  --ds-color-button-positive-outlined-press-text-color: var(--ds-color-text-positive);   
+  --ds-color-button-positive-outlined-press-icon-color: var(--ds-color-icon-positive);   
+  --ds-color-button-positive-outlined-press-border-color: var(--ds-color-stroke-positive);   
+  --ds-color-button-warning-filled-default-background: var(--ds-color-button-warning-default);   
+  --ds-color-button-warning-filled-default-text-color: var(--ds-color-text-inversive);   
+  --ds-color-button-warning-filled-default-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-button-warning-filled-hover-background: var(--ds-color-button-warning-hover);   
+  --ds-color-button-warning-filled-hover-text-color: var(--ds-color-text-inversive);   
+  --ds-color-button-warning-filled-hover-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-button-warning-filled-press-background: var(--ds-color-button-warning-press);   
+  --ds-color-button-warning-filled-press-text-color: var(--ds-color-text-inversive);   
+  --ds-color-button-warning-filled-press-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-button-warning-outlined-default-background: var(--ds-color-button-warning-lite-default-transparent);   
+  --ds-color-button-warning-text-default-background: var(--ds-color-button-warning-lite-default-transparent);   
+  --ds-color-button-warning-text-default-text-color: var(--ds-color-text-warning);   
+  --ds-color-button-warning-text-default-icon-color: var(--ds-color-icon-warning);   
+  --ds-color-button-warning-text-hover-background: var(--ds-color-button-warning-lite-hover);   
+  --ds-color-button-warning-text-hover-text-color: var(--ds-color-text-warning);   
+  --ds-color-button-warning-text-hover-icon-color: var(--ds-color-icon-warning);   
+  --ds-color-button-warning-text-press-background: var(--ds-color-button-warning-lite-press);   
+  --ds-color-button-warning-text-press-text-color: var(--ds-color-text-warning);   
+  --ds-color-button-warning-text-press-icon-color: var(--ds-color-icon-warning);   
+  --ds-color-button-warning-outlined-default-text-color: var(--ds-color-text-warning);   
+  --ds-color-button-warning-outlined-default-icon-color: var(--ds-color-icon-warning);   
+  --ds-color-button-warning-outlined-default-border-color: var(--ds-color-stroke-warning);   
+  --ds-color-button-warning-outlined-hover-background: var(--ds-color-button-warning-lite-hover);   
+  --ds-color-button-warning-outlined-hover-text-color: var(--ds-color-text-warning);   
+  --ds-color-button-warning-outlined-hover-icon-color: var(--ds-color-icon-warning);   
+  --ds-color-button-warning-outlined-hover-border-color: var(--ds-color-stroke-warning);   
+  --ds-color-button-warning-outlined-press-background: var(--ds-color-button-warning-lite-press);   
+  --ds-color-button-warning-outlined-press-text-color: var(--ds-color-text-warning);   
+  --ds-color-button-warning-outlined-press-icon-color: var(--ds-color-icon-warning);   
+  --ds-color-button-warning-outlined-press-border-color: var(--ds-color-stroke-warning);   
+  --ds-color-button-negative-filled-default-background: var(--ds-color-button-negative-default);   
+  --ds-color-button-negative-filled-default-text-color: var(--ds-color-text-inversive);   
+  --ds-color-button-negative-filled-default-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-button-negative-filled-hover-background: var(--ds-color-button-negative-hover);   
+  --ds-color-button-negative-filled-hover-text-color: var(--ds-color-text-inversive);   
+  --ds-color-button-negative-filled-hover-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-button-negative-filled-press-background: var(--ds-color-button-negative-press);   
+  --ds-color-button-negative-filled-press-text-color: var(--ds-color-text-inversive);   
+  --ds-color-button-negative-filled-press-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-button-negative-outlined-default-background: var(--ds-color-button-negative-lite-default-transparent);   
+  --ds-color-button-negative-text-default-background: var(--ds-color-button-negative-lite-default-transparent);   
+  --ds-color-button-negative-text-default-text-color: var(--ds-color-text-negative);   
+  --ds-color-button-negative-text-default-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-button-negative-text-hover-background: var(--ds-color-button-negative-lite-hover);   
+  --ds-color-button-negative-text-hover-text-color: var(--ds-color-text-negative);   
+  --ds-color-button-negative-text-hover-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-button-negative-text-press-background: var(--ds-color-button-negative-lite-press);   
+  --ds-color-button-negative-text-press-text-color: var(--ds-color-text-negative);   
+  --ds-color-button-negative-text-press-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-button-negative-outlined-default-text-color: var(--ds-color-text-negative);   
+  --ds-color-button-negative-outlined-default-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-button-negative-outlined-default-border-color: var(--ds-color-stroke-negative);   
+  --ds-color-button-negative-outlined-hover-background: var(--ds-color-button-negative-lite-hover);   
+  --ds-color-button-negative-outlined-hover-text-color: var(--ds-color-text-negative);   
+  --ds-color-button-negative-outlined-hover-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-button-negative-outlined-hover-border-color: var(--ds-color-stroke-negative);   
+  --ds-color-button-negative-outlined-press-background: var(--ds-color-button-negative-lite-press);   
+  --ds-color-button-negative-outlined-press-text-color: var(--ds-color-text-negative);   
+  --ds-color-button-negative-outlined-press-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-button-negative-outlined-press-border-color: var(--ds-color-stroke-negative);   
+  --ds-color-button-icon-neutral-filled-default-background: var(--ds-color-button-neutral-default);   
+  --ds-color-button-icon-neutral-filled-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-button-icon-neutral-filled-hover-background: var(--ds-color-button-neutral-hover);   
+  --ds-color-button-icon-neutral-filled-press-background: var(--ds-color-button-neutral-press);   
+  --ds-color-button-icon-neutral-outlined-default-background: var(--ds-color-button-neutral-default);   
+  --ds-color-button-icon-neutral-outlined-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-button-icon-neutral-outlined-border-color: var(--ds-color-stroke-default);   
+  --ds-color-button-icon-neutral-text-default-background: var(--ds-color-button-neutral-default-transparent);   
+  --ds-color-button-icon-neutral-text-hover-background: var(--ds-color-button-neutral-hover);   
+  --ds-color-button-icon-neutral-text-press-background: var(--ds-color-button-neutral-press);   
+  --ds-color-button-icon-neutral-text-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-button-icon-accent-filled-default-background: var(--ds-color-button-accent-default);   
+  --ds-color-button-icon-accent-filled-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-button-icon-accent-filled-hover-background: var(--ds-color-button-accent-hover);   
+  --ds-color-button-icon-accent-filled-press-background: var(--ds-color-button-accent-press);   
+  --ds-color-button-icon-accent-outlined-default-background: var(--ds-color-button-accent-lite-default);   
+  --ds-color-button-icon-accent-text-default-background: var(--ds-color-button-accent-lite-default-transparent);   
+  --ds-color-button-icon-accent-text-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-button-icon-accent-text-hover-background: var(--ds-color-button-accent-lite-hover);   
+  --ds-color-button-icon-accent-text-press-background: var(--ds-color-button-accent-lite-press);   
+  --ds-color-button-icon-accent-outlined-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-button-icon-accent-outlined-border-color: var(--ds-color-stroke-accent);   
+  --ds-color-button-icon-accent-outlined-hover-background: var(--ds-color-button-accent-lite-hover);   
+  --ds-color-button-icon-accent-outlined-press-background: var(--ds-color-button-accent-lite-press);   
+  --ds-button-icon-m-size-icon-size: var(--ds-icon-size-size-5x);   
+  --ds-button-icon-border-radius: var(--ds-radius-2x);   
+  --ds-button-icon-m-size-pad-left: var(--ds-space-2x);   
+  --ds-button-icon-m-size-pad-right: var(--ds-space-2x);   
+  --ds-button-icon-m-size-pad-top: var(--ds-space-2x);   
+  --ds-button-icon-m-size-pad-bottom: var(--ds-space-2x);   
+  --ds-button-icon-s-size-pad-left: var(--ds-space-1x);   
+  --ds-button-icon-s-size-pad-right: var(--ds-space-1x);   
+  --ds-button-icon-s-size-pad-top: var(--ds-space-1x);   
+  --ds-button-icon-s-size-pad-bottom: var(--ds-space-1x);   
+  --ds-color-button-icon-neutral-outlined-hover-background: var(--ds-color-button-neutral-hover);   
+  --ds-color-button-icon-neutral-outlined-press-background: var(--ds-color-button-neutral-press);   
+  --ds-color-button-icon-positive-filled-default-background: var(--ds-color-button-positive-default);   
+  --ds-color-button-icon-positive-filled-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-button-icon-positive-filled-hover-background: var(--ds-color-button-positive-hover);   
+  --ds-color-button-icon-positive-filled-press-background: var(--ds-color-button-positive-press);   
+  --ds-color-button-icon-positive-outlined-default-background: var(--ds-color-button-positive-lite-default);   
+  --ds-color-button-icon-positive-text-default-background: var(--ds-color-button-positive-lite-default-transparent);   
+  --ds-color-button-icon-positive-text-icon-color: var(--ds-color-icon-positive);   
+  --ds-color-button-icon-positive-text-hover-background: var(--ds-color-button-positive-lite-hover);   
+  --ds-color-button-icon-positive-text-press-background: var(--ds-color-button-positive-lite-press);   
+  --ds-color-button-icon-positive-outlined-icon-color: var(--ds-color-icon-positive);   
+  --ds-color-button-icon-positive-outlined-border-color: var(--ds-color-stroke-positive);   
+  --ds-color-button-icon-positive-outlined-hover-background: var(--ds-color-button-positive-lite-hover);   
+  --ds-color-button-icon-positive-outlined-press-background: var(--ds-color-button-positive-lite-press);   
+  --ds-color-button-icon-warning-filled-default-background: var(--ds-color-button-warning-default);   
+  --ds-color-button-icon-warning-filled-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-button-icon-warning-filled-hover-background: var(--ds-color-button-warning-hover);   
+  --ds-color-button-icon-warning-filled-press-background: var(--ds-color-button-warning-press);   
+  --ds-color-button-icon-warning-outlined-default-background: var(--ds-color-button-warning-lite-default);   
+  --ds-color-button-icon-warning-text-default-background: var(--ds-color-button-warning-lite-default-transparent);   
+  --ds-color-button-icon-warning-text-icon-color: var(--ds-color-icon-warning);   
+  --ds-color-button-icon-warning-text-hover-background: var(--ds-color-button-warning-lite-hover);   
+  --ds-color-button-icon-warning-text-press-background: var(--ds-color-button-warning-lite-press);   
+  --ds-color-button-icon-warning-outlined-icon-color: var(--ds-color-icon-warning);   
+  --ds-color-button-icon-warning-outlined-border-color: var(--ds-color-stroke-warning);   
+  --ds-color-button-icon-warning-outlined-hover-background: var(--ds-color-button-warning-lite-hover);   
+  --ds-color-button-icon-warning-outlined-press-background: var(--ds-color-button-warning-lite-press);   
+  --ds-color-button-icon-negative-filled-default-background: var(--ds-color-button-negative-default);   
+  --ds-color-button-icon-negative-filled-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-button-icon-negative-filled-hover-background: var(--ds-color-button-negative-hover);   
+  --ds-color-button-icon-negative-filled-press-background: var(--ds-color-button-negative-press);   
+  --ds-color-button-icon-negative-outlined-default-background: var(--ds-color-button-negative-lite-default);   
+  --ds-color-button-icon-negative-text-default-background: var(--ds-color-button-negative-lite-default-transparent);   
+  --ds-color-button-icon-negative-text-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-button-icon-negative-text-hover-background: var(--ds-color-button-negative-lite-hover);   
+  --ds-color-button-icon-negative-text-press-background: var(--ds-color-button-negative-lite-press);   
+  --ds-color-button-icon-negative-outlined-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-button-icon-negative-outlined-border-color: var(--ds-color-stroke-negative);   
+  --ds-color-button-icon-negative-outlined-hover-background: var(--ds-color-button-negative-lite-hover);   
+  --ds-color-button-icon-negative-outlined-press-background: var(--ds-color-button-negative-lite-press);   
+  --ds-button-toggle-border-radius: var(--ds-radius-3x);   
+  --ds-button-toggle-pad-left: var(--ds-space-1x);   
+  --ds-button-toggle-pad-right: var(--ds-space-1x);   
+  --ds-button-toggle-pad-top: var(--ds-space-1x);   
+  --ds-button-toggle-pad-bottom: var(--ds-space-1x);   
+  --ds-color-button-toggle-filled-background: var(--ds-color-shapes-default);   
+  --ds-button-toggle-gap: var(--ds-space-1x);   
+  --ds-color-chips-filled-default-background: var(--ds-color-shapes-default-variant);   
+  --ds-color-chips-text-color: var(--ds-color-text-primary);   
+  --ds-color-chips-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-chips-filled-hover-background: var(--ds-color-shapes-hover);   
+  --ds-color-chips-filled-press-background: var(--ds-color-shapes-press);   
+  --ds-color-chips-outlined-default-background: var(--ds-color-shapes-default);   
+  --ds-color-chips-outlined-default-border-color: var(--ds-color-stroke-default);   
+  --ds-chips-border-size: var(--ds-stroke-0-25x);   
+  --ds-chips-m-size-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-chips-text-weight: var(--ds-typography-font-weight-medium);   
+  --ds-chips-m-size-icon-size: var(--ds-icon-size-size-5x);   
+  --ds-chips-m-size-border-radius: var(--ds-radius-3x);   
+  --ds-chips-m-size-gap: var(--ds-space-2x);   
+  --ds-chips-m-size-pad-left: var(--ds-space-2x);   
+  --ds-chips-m-size-pad-right: var(--ds-space-2x);   
+  --ds-chips-m-size-pad-top: var(--ds-space-1-5x);   
+  --ds-chips-m-size-pad-bottom: var(--ds-space-1-5x);   
+  --ds-chips-s-size-pad-left: var(--ds-space-1-5x);   
+  --ds-chips-s-size-pad-right: var(--ds-space-1-5x);   
+  --ds-chips-s-size-pad-top: var(--ds-space-1x);   
+  --ds-chips-s-size-pad-bottom: var(--ds-space-1x);   
+  --ds-color-chips-outlined-hover-background: var(--ds-color-shapes-default);   
+  --ds-color-chips-outlined-hover-border-color: var(--ds-color-stroke-hover);   
+  --ds-color-chips-outlined-press-background: var(--ds-color-shapes-press);   
+  --ds-color-chips-outlined-press-border-color: var(--ds-color-stroke-default);   
+  --ds-chips-s-size-text-size: var(--ds-typography-caption-font-size-l);   
+  --ds-color-button-disable-background-filled: var(--ds-color-button-neutral-disable);   
+  --ds-color-button-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-button-disable-icon-color: var(--ds-color-icon-disable);   
+  --ds-color-button-disable-background-text: var(--ds-color-button-neutral-default-transparent);   
+  --ds-color-button-disable-background-outlined: var(--ds-color-button-neutral-default-transparent);   
+  --ds-color-button-disable-border-color: var(--ds-color-stroke-disable);   
+  --ds-color-button-icon-disable-background-filled: var(--ds-color-button-neutral-disable);   
+  --ds-color-button-icon-disable-icon-color: var(--ds-color-icon-disable);   
+  --ds-color-button-icon-disable-background-text: var(--ds-color-button-neutral-default-transparent);   
+  --ds-color-button-icon-disable-background-outlined: var(--ds-color-button-neutral-disable);   
+  --ds-color-button-icon-disable-border-color: var(--ds-color-stroke-disable);   
+  --ds-color-chips-disable-background-filled: var(--ds-color-shapes-disable);   
+  --ds-color-chips-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-chips-disable-icon-color: var(--ds-color-icon-disable);   
+  --ds-color-chips-disable-background-outlined: var(--ds-color-shapes-default);   
+  --ds-color-chips-disable-border-color: var(--ds-color-stroke-disable);   
+  --ds-button-icon-gap: var(--ds-space-2x);   
+  --ds-button-icon-border-size: var(--ds-stroke-0-25x);   
+  --ds-button-border-size: var(--ds-stroke-0-25x);   
+  --ds-color-form-field-filled-default-input-text-color: var(--ds-color-text-primary);   
+  --ds-color-form-field-filled-default-icon-color-default: var(--ds-color-icon-primary);   
+  --ds-color-form-field-outlined-default-background: var(--ds-color-shapes-default);   
+  --ds-color-form-field-outlined-default-text-color: var(--ds-color-text-primary);   
+  --ds-color-form-field-outlined-default-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-form-field-outlined-default-border-color: var(--ds-color-stroke-default);   
+  --ds-form-field-m-size-text: var(--ds-typography-body-font-size-m);   
+  --ds-form-field-text-weight: var(--ds-typography-font-weight-medium);   
+  --ds-form-field-border-size: var(--ds-stroke-0-25x);   
+  --ds-form-field-border-radius: var(--ds-radius-3x);   
+  --ds-form-field-m-size-icon: var(--ds-icon-size-size-6x);   
+  --ds-form-field-s-size-icon: var(--ds-icon-size-size-6x);   
+  --ds-color-form-field-outlined-hover-background: var(--ds-color-button-neutral-hover);   
+  --ds-color-form-field-outlined-hover-text-color: var(--ds-color-text-primary);   
+  --ds-color-form-field-outlined-hover-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-form-field-outlined-hover-border-color: var(--ds-color-stroke-default);   
+  --ds-color-form-field-outlined-focus-background: var(--ds-color-button-neutral-press);   
+  --ds-color-form-field-outlined-focus-text-color: var(--ds-color-text-primary);   
+  --ds-color-form-field-outlined-focus-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-form-field-outlined-focus-border-color: var(--ds-color-stroke-default);   
+  --ds-form-field-m-size-text-label: var(--ds-typography-caption-font-size-l);   
+  --ds-form-field-s-size-text: var(--ds-typography-body-font-size-m);   
+  --ds-form-field-s-size-text-label: var(--ds-typography-caption-font-size-l);   
+  --ds-form-field-gap-input-support: var(--ds-space-1x);   
+  --ds-form-field-gap-input-frame: var(--ds-space-2x);   
+  --ds-form-field-gap-input-content: var(--ds-space-0);   
+  --ds-form-field-m-size-text-support: var(--ds-typography-caption-font-size-l);   
+  --ds-form-field-s-size-text-support: var(--ds-typography-caption-font-size-l);   
+  --ds-form-field-pad-support-left: var(--ds-space-3x);   
+  --ds-form-field-pad-support-right: var(--ds-space-3x);   
+  --ds-form-field-m-size-pad-input-right: var(--ds-space-3x);   
+  --ds-form-field-m-size-pad-input-left: var(--ds-space-3x);   
+  --ds-form-field-m-size-pad-input-bottom: var(--ds-space-3x);   
+  --ds-form-field-m-size-pad-input-top: var(--ds-space-3x);   
+  --ds-color-form-field-background-support: var(--ds-color-shapes-default-transparent);   
+  --ds-color-form-field-outlined-error-background: var(--ds-color-button-neutral-press);   
+  --ds-color-form-field-outlined-error-text-color: var(--ds-color-text-primary);   
+  --ds-color-form-field-outlined-error-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-form-field-outlined-error-border-color: var(--ds-color-stroke-default);   
+  --ds-color-form-field-filled-default-label-text-color: var(--ds-color-text-secondary);   
+  --ds-color-form-field-filled-default-support-text-color: var(--ds-color-text-secondary);   
+  --ds-color-form-field-filled-default-border-color: var(--ds-color-stroke-default);   
+  --ds-color-form-field-filled-default-icon-color-warning: var(--ds-color-icon-warning);   
+  --ds-color-form-field-input-filled-background: var(--ds-color-shapes-default-variant);   
+  --ds-color-form-field-filled-hover-input-text-color: var(--ds-color-text-primary);   
+  --ds-color-form-field-filled-hover-label-text-color: var(--ds-color-text-secondary);   
+  --ds-color-form-field-filled-hover-text-support-color: var(--ds-color-text-secondary);   
+  --ds-color-form-field-filled-hover-icon-color-default: var(--ds-color-icon-primary);   
+  --ds-color-form-field-filled-hover-icon-color-warning: var(--ds-color-icon-warning);   
+  --ds-color-form-field-filled-hover-border-color: var(--ds-color-stroke-hover);   
+  --ds-color-form-field-filled-focus-input-cursor-color: var(--ds-color-text-primary);   
+  --ds-color-form-field-filled-focus-label-text-color: var(--ds-color-text-accent);   
+  --ds-color-form-field-filled-focus-support-text-color: var(--ds-color-text-secondary);   
+  --ds-color-form-field-filled-focus-icon-color-default: var(--ds-color-icon-primary);   
+  --ds-color-form-field-filled-focus-icon-color-warning: var(--ds-color-icon-warning);   
+  --ds-color-form-field-filled-focus-border-color: var(--ds-color-stroke-accent);   
+  --ds-color-form-field-filled-focus-input-text-placeholder-color: var(--ds-color-text-placeholder);   
+  --ds-color-form-field-filled-focus-input-text-color: var(--ds-color-text-primary);   
+  --ds-color-form-field-filled-error-input-text-color: var(--ds-color-text-primary);   
+  --ds-color-form-field-filled-error-input-text-placeholder-color: var(--ds-color-text-placeholder);   
+  --ds-color-form-field-filled-error-input-cursor-color: var(--ds-color-text-primary);   
+  --ds-color-form-field-filled-error-label-text-color: var(--ds-color-text-negative);   
+  --ds-color-form-field-filled-error-text-support-color: var(--ds-color-text-negative);   
+  --ds-color-form-field-filled-error-icon-color-default: var(--ds-color-icon-primary);   
+  --ds-color-form-field-filled-error-icon-color-warning: var(--ds-color-icon-warning);   
+  --ds-color-form-field-filled-error-border-color: var(--ds-color-stroke-negative);   
+  --ds-color-form-field-filled-error-icon-color-error: var(--ds-color-icon-negative);   
+  --ds-form-field-filled-focus-border-size-focus: var(--ds-stroke-0-25x);   
+  --ds-form-field-filled-error-border-size-focus: var(--ds-stroke-0-5x);   
+  --ds-color-form-field-filled-hover-input-background-hover: var(--ds-color-shapes-hover);   
+  --ds-color-form-field-filled-error-input-background-hover: var(--ds-color-shapes-hover);   
+  --ds-color-form-field-filled-disable-input-text-color: var(--ds-color-text-disable);   
+  --ds-color-form-field-filled-disable-label-text-color: var(--ds-color-text-disable);   
+  --ds-color-form-field-filled-disable-support-text-color: var(--ds-color-text-disable);   
+  --ds-color-form-field-filled-disable-icon-color-disable: var(--ds-color-icon-disable);   
+  --ds-color-form-field-filled-disable-icon-color-warning: var(--ds-color-icon-warning);   
+  --ds-color-form-field-filled-disable-border-color: var(--ds-color-stroke-disable);   
+  --ds-color-form-field-filled-disable-input-background: var(--ds-color-surface-disable);   
+  --ds-color-form-field-input-outlined-background: var(--ds-color-shapes-default);   
+  --ds-chips-input-m-size-pad-top: var(--ds-size-1x);   
+  --ds-chips-input-m-size-pad-bottom: var(--ds-size-2x);   
+  --ds-form-field-s-size-pad-input-left: var(--ds-space-3x);   
+  --ds-form-field-s-size-pad-input-bottom: var(--ds-space-1-5x);   
+  --ds-form-field-s-size-pad-input-top: var(--ds-space-1-5x);   
+  --ds-form-field-s-size-pad-input-right: var(--ds-space-3x);   
+  --ds-color-button-toggle-outlined-background: var(--ds-color-shapes-default);   
+  --ds-button-toggle-outlined-border-size: var(--ds-stroke-0-25x);   
+  --ds-color-button-toggle-outlined-border-color: var(--ds-color-stroke-default);   
+  --ds-form-field-xs-size-text: var(--ds-typography-body-font-size-s);   
+  --ds-form-field-xs-size-text-label: var(--ds-typography-caption-font-size-l);   
+  --ds-form-field-xs-size-text-support: var(--ds-typography-caption-font-size-l);   
+  --ds-form-field-xs-size-icon: var(--ds-icon-size-size-5x);   
+  --ds-form-field-xs-size-pad-input-left: var(--ds-space-2x);   
+  --ds-form-field-xs-size-pad-input-right: var(--ds-space-2x);   
+  --ds-form-field-xs-size-pad-input-top: var(--ds-space-1x);   
+  --ds-form-field-xs-size-pad-input-bottom: var(--ds-space-1x);   
+  --ds-color-input-number-input-background: var(--ds-color-shapes-default);   
+  --ds-color-input-number-input-default-border-color: var(--ds-color-stroke-default);   
+  --ds-input-number-input-border-size: var(--ds-stroke-0-25x);   
+  --ds-color-slide-toggle-selected-default-background: var(--ds-color-brand-accent-default);   
+  --ds-slide-toggle-border-radius-knob: var(--ds-radius-circular);   
+  --ds-slide-toggle-knob-width: var(--ds-size-4x);   
+  --ds-slide-toggle-knob-height: var(--ds-size-4x);   
+  --ds-slide-toggle-border-radius: var(--ds-radius-3x);   
+  --ds-slide-toggle-selected-pad-right: var(--ds-space-0-5x);   
+  --ds-slide-toggle-selected-pad-left: var(--ds-space-4x);   
+  --ds-slide-toggle-pad-top: var(--ds-space-0-5x);   
+  --ds-slide-toggle-pad-bottom: var(--ds-space-0-5x);   
+  --ds-slide-toggle-deselected-pad-right: var(--ds-space-4x);   
+  --ds-slide-toggle-deselected-pad-left: var(--ds-space-0-5x);   
+  --ds-icon-size-size-4x: var(--ds-size-4x);   
+  --ds-icon-size-size-9x: var(--ds-size-9x);   
+  --ds-icon-size-size-8x: var(--ds-size-8x);   
+  --ds-icon-size-size-6x: var(--ds-size-6x);   
+  --ds-icon-size-size-5x: var(--ds-size-5x);   
+  --ds-icon-size-size-10x: var(--ds-size-10x);   
+  --ds-status-text-size: var(--ds-typography-caption-font-size-l);   
+  --ds-status-pad-left: var(--ds-space-1-5x);   
+  --ds-status-pad-right: var(--ds-space-1-5x);   
+  --ds-status-pad-top: var(--ds-space-1x);   
+  --ds-status-pad-bottom: var(--ds-space-1x);   
+  --ds-color-status-neutral-filled-background: var(--ds-palette-neutral-10);   
+  --ds-color-status-neutral-filled-text-color: var(--ds-color-text-secondary);   
+  --ds-status-text-weight: var(--ds-typography-font-weight-medium);   
+  --ds-status-gap: var(--ds-space-1x);   
+  --ds-status-icon-size: var(--ds-icon-size-size-4x);   
+  --ds-status-border-radius: var(--ds-radius-2x);   
+  --ds-color-status-neutral-text-text-color: var(--ds-color-text-secondary);   
+  --ds-color-status-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-status-accent-filled-background: var(--ds-palette-accent-10);   
+  --ds-color-status-accent-filled-text-color: var(--ds-color-text-accent);   
+  --ds-color-status-accent-text-text-color: var(--ds-color-text-accent);   
+  --ds-color-status-positive-filled-background: var(--ds-palette-positive-10);   
+  --ds-color-status-positive-filled-text-color: var(--ds-color-text-positive);   
+  --ds-color-status-positive-text-text-color: var(--ds-color-text-positive);   
+  --ds-color-status-warning-filled-background: var(--ds-palette-warning-10);   
+  --ds-color-status-warning-filled-text-color: var(--ds-color-text-warning);   
+  --ds-color-status-warning-text-text-color: var(--ds-color-text-warning);   
+  --ds-color-status-negative-filled-background: var(--ds-palette-negative-10);   
+  --ds-color-status-negative-filled-text-color: var(--ds-color-text-negative);   
+  --ds-color-status-negative-text-text-color: var(--ds-color-text-negative);   
+  --ds-color-status-contrast-1-filled-background: var(--ds-palette-contrast-1-10);   
+  --ds-color-status-contrast-1-filled-text-color: var(--ds-palette-contrast-1-700);   
+  --ds-color-status-contrast-1-text-text-color: var(--ds-color-brand-contrast-1-dark);   
+  --ds-color-status-contrast-2-filled-background: var(--ds-palette-contrast-2-10);   
+  --ds-color-status-contrast-2-filled-text-color: var(--ds-palette-contrast-2-950);   
+  --ds-color-status-contrast-2-text-text-color: var(--ds-color-brand-contrast-2-dark);   
+  --ds-color-status-contrast-3-filled-background: var(--ds-palette-contrast-3-10);   
+  --ds-color-status-contrast-3-filled-text-color: var(--ds-palette-contrast-3-950);   
+  --ds-color-status-contrast-3-text-text-color: var(--ds-color-brand-contrast-3-dark);   
+  --ds-expansion-panel-collaps-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-expansion-panel-collaps-text-weight: var(--ds-typography-font-weight-medium);   
+  --ds-expansion-panel-collaps-gap: var(--ds-space-2x);   
+  --ds-expansion-panel-collaps-border-radius: var(--ds-radius-3x);   
+  --ds-expansion-panel-collaps-pad-left: var(--ds-space-4x);   
+  --ds-expansion-panel-collaps-pad-right: var(--ds-space-4x);   
+  --ds-expansion-panel-collaps-pad-top: var(--ds-space-3x);   
+  --ds-expansion-panel-collaps-pad-bottom: var(--ds-space-3x);   
+  --ds-expansion-panel-collaps-gap-icon-group: var(--ds-space-2x);   
+  --ds-color-expansion-panel-collaps-text-color: var(--ds-color-text-primary);   
+  --ds-expansion-panel-collaps-border-size: var(--ds-stroke-0-25x);   
+  --ds-color-expansion-panel-collaps-border-color: var(--ds-color-stroke-default);   
+  --ds-expansion-panel-content-pad-left: var(--ds-space-4x);   
+  --ds-expansion-panel-content-pad-right: var(--ds-space-4x);   
+  --ds-expansion-panel-content-pad-top: var(--ds-space-4x);   
+  --ds-expansion-panel-content-pad-bottom: var(--ds-space-4x);   
+  --ds-expansion-panel-expand-border-radius: var(--ds-radius-3x);   
+  --ds-expansion-panel-expand-border-size: var(--ds-stroke-0-25x);   
+  --ds-color-expansion-panel-expand-border-color: var(--ds-color-stroke-default);   
+  --ds-expansion-panel-content-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-color-expansion-panel-content-text-color: var(--ds-color-text-primary);   
+  --ds-expansion-panel-content-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-color-dialog-background: var(--ds-color-surface-default);   
+  --ds-dialog-border-radius: var(--ds-radius-3x);   
+  --ds-dialog-header-gap: var(--ds-space-2x);   
+  --ds-dialog-header-pad-top: var(--ds-space-6x);   
+  --ds-dialog-header-title-size: var(--ds-typography-font-size-5x);   
+  --ds-dialog-header-title-weight: var(--ds-typography-font-weight-medium);   
+  --ds-color-dialog-header-title-color: var(--ds-color-text-primary);   
+  --ds-dialog-header-desc-size: var(--ds-typography-font-size-4x);   
+  --ds-dialog-header-desc-weight: var(--ds-typography-font-weight-regular);   
+  --ds-color-dialog-header-desc-color: var(--ds-color-text-secondary);   
+  --ds-color-table-cell-text-color: var(--ds-color-text-primary);   
+  --ds-color-table-cell-background: var(--ds-color-table-surfase-default-transparent);   
+  --ds-table-cell-pad-left: var(--ds-space-2x);   
+  --ds-table-cell-pad-right: var(--ds-space-2x);   
+  --ds-table-cell-pad-top: var(--ds-space-2x);   
+  --ds-table-cell-pad-bottom: var(--ds-space-2x);   
+  --ds-color-table-row-header-background-header: var(--ds-color-table-surfase-head);   
+  --ds-table-row-header-border-radius-top-left: var(--ds-radius-2x);   
+  --ds-table-row-header-border-radius-top-right: var(--ds-radius-2x);   
+  --ds-color-table-row-content-default-background: var(--ds-color-table-surfase-default);   
+  --ds-table-row-content-border-bottom-size: var(--ds-stroke-0-25x);   
+  --ds-color-table-row-content-border-color: var(--ds-color-stroke-default);   
+  --ds-color-expansion-panel-collaps-hover-background: var(--ds-color-surface-hover);   
+  --ds-color-expansion-panel-collaps-default-background: var(--ds-color-surface-default-variant);   
+  --ds-slide-toggle-gap: var(--ds-space-2x);   
+  --ds-slide-toggle-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-slide-toggle-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-color-slide-toggle-selected-hover-background: var(--ds-color-brand-accent-dark);   
+  --ds-color-slide-toggle-deselected-default-background: var(--ds-color-brand-neutral-neutral);   
+  --ds-color-slide-toggle-deselected-hover-background: var(--ds-color-brand-neutral-dark);   
+  --ds-color-slide-toggle-deselected-disable-background: var(--ds-color-brand-neutral-lighter);   
+  --ds-color-slide-toggle-selected-disable-background: var(--ds-color-brand-neutral-lighter);   
+  --ds-color-slide-toggle-deselected-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-slide-toggle-selected-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-slide-toggle-text-color: var(--ds-color-text-primary);   
+  --ds-color-slide-toggle-knob-color: var(--ds-color-brand-neutral-default);   
+  --ds-table-cell-header-hover-border-size: var(--ds-stroke-0-25x);   
+  --ds-color-table-cell-header-default-background: var(--ds-color-table-surfase-head);   
+  --ds-color-table-row-content-hover-background: var(--ds-color-table-surfase-hover);   
+  --ds-color-table-cell-header-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-table-row-content-zebra-background: var(--ds-color-table-surfase-zebra);   
+  --ds-dialog-content-title-size: var(--ds-typography-font-size-4x);   
+  --ds-dialog-content-gap: var(--ds-space-4x);   
+  --ds-color-dialog-content-title-color: var(--ds-color-text-primary);   
+  --ds-dialog-footer-pad-bottom: var(--ds-space-4x);   
+  --ds-dialog-footer-pad-top: var(--ds-space-4x);   
+  --ds-dialog-content-title-weight: var(--ds-typography-font-weight-medium);   
+  --ds-dialog-content-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-dialog-content-text-size: var(--ds-typography-font-size-3-5x);   
+  --ds-color-dialog-content-text-color: var(--ds-color-text-secondary);   
+  --ds-table-cell-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-table-cell-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-divider-size-m: var(--ds-stroke-0-25x);   
+  --ds-color-table-cell-header-background: var(--ds-color-table-surfase-default-transparent);   
+  --ds-color-table-cell-content-default-background: var(--ds-color-table-surfase-default-transparent);   
+  --ds-color-table-cell-content-hover-border-color: var(--ds-color-stroke-hover);   
+  --ds-table-cell-content-hover-border-size: var(--ds-stroke-0-25x);   
+  --ds-color-table-cell-content-focus-border-color: var(--ds-color-stroke-accent);   
+  --ds-table-cell-content-focus-border-size: var(--ds-stroke-0-25x);   
+  --ds-color-table-cell-content-edit-border-color: var(--ds-color-stroke-accent);   
+  --ds-table-cell-content-edit-border-size: var(--ds-stroke-0-25x);   
+  --ds-color-table-cell-content-error-border-color: var(--ds-color-stroke-negative);   
+  --ds-table-cell-content-error-border-size: var(--ds-stroke-0-25x);   
+  --ds-color-table-cell-content-background: var(--ds-color-table-surfase-default-transparent);   
+  --ds-color-table-cell-content-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-table-cell-header-hover-background: var(--ds-palette-accent-5);   
+  --ds-color-table-cell-header-disable-background: var(--ds-color-table-surfase-head);   
+  --ds-color-divider-solid-lite-color: var(--ds-color-stroke-default);   
+  --ds-color-divider-solid-default-color: var(--ds-color-stroke-default);   
+  --ds-color-divider-solid-hover-color: var(--ds-color-stroke-accent);   
+  --ds-color-divider-dashed-default-color: var(--ds-color-stroke-default);   
+  --ds-color-table-cell-header-disable-icon-color: var(--ds-color-icon-disable);   
+  --ds-color-table-row-content-selected-background: var(--ds-color-table-surfase-selected);   
+  --ds-color-table-cell-content-hover-background: var(--ds-color-table-surfase-hover);   
+  --ds-dialog-content-pad-top: var(--ds-space-2x);   
+  --ds-color-scroll-default-background: var(--ds-palette-neutral-10);   
+  --ds-color-scroll-default-knob-color: var(--ds-palette-neutral-300);   
+  --ds-scroll-knob-radius: var(--ds-radius-2x);   
+  --ds-scroll-border-radius: var(--ds-radius-2x);   
+  --ds-color-scroll-hover-knob-color: var(--ds-palette-neutral-500);   
+  --ds-color-scroll-hover-background: var(--ds-palette-neutral-100);   
+  --ds-dialog-header-pad-bottom: var(--ds-space-2x);   
+  --ds-dialog-content-pad-bottom: var(--ds-space-2x);   
+  --ds-button-group-gap: var(--ds-space-2x);   
+  --ds-color-backdrop-background: var(--ds-palette-neutral-900);   
+  --ds-card-header-pad-top: var(--ds-space-6x);   
+  --ds-card-header-pad-bottom: var(--ds-space-2x);   
+  --ds-card-header-gap: var(--ds-space-2x);   
+  --ds-card-header-title-size: var(--ds-typography-font-size-5x);   
+  --ds-card-header-title-weight: var(--ds-typography-font-weight-medium);   
+  --ds-color-card-header-title-color: var(--ds-color-text-primary);   
+  --ds-card-header-desc-size: var(--ds-typography-font-size-4x);   
+  --ds-card-header-desc-weight: var(--ds-typography-font-weight-regular);   
+  --ds-color-card-header-desc-color: var(--ds-color-text-secondary);   
+  --ds-card-content-gap: var(--ds-space-2x);   
+  --ds-card-content-pad-top: var(--ds-space-2x);   
+  --ds-card-content-pad-bottom: var(--ds-space-2x);   
+  --ds-card-content-title-size: var(--ds-typography-font-size-4x);   
+  --ds-card-content-title-weight: var(--ds-typography-font-weight-medium);   
+  --ds-color-card-content-title-color: var(--ds-color-text-primary);   
+  --ds-card-content-text-size: var(--ds-typography-font-size-4x);   
+  --ds-card-content-text-weight: var(--ds-typography-font-weight-medium);   
+  --ds-color-card-content-text-color: var(--ds-color-text-secondary);   
+  --ds-card-footer-pad-top: var(--ds-space-4x);   
+  --ds-card-footer-pad-bottom: var(--ds-space-4x);   
+  --ds-card-pad-left: var(--ds-space-6x);   
+  --ds-card-pad-right: var(--ds-space-6x);   
+  --ds-card-border-radius: var(--ds-radius-2x);   
+  --ds-color-card-background: var(--ds-color-shapes-default);   
+  --ds-checkbox-icon-size: var(--ds-icon-size-size-5x);   
+  --ds-color-checkbox-normal-deselected-press-background: var(--ds-palette-neutral-200);   
+  --ds-color-checkbox-normal-deselected-hover-background: var(--ds-palette-neutral-100);   
+  --ds-color-checkbox-normal-deselected-default-background: var(--ds-color-shapes-default-transparent);   
+  --ds-color-checkbox-normal-selected-default-background: var(--ds-color-shapes-default-transparent);   
+  --ds-color-checkbox-normal-selected-hover-background: var(--ds-palette-accent-100);   
+  --ds-color-checkbox-normal-selected-press-background: var(--ds-palette-accent-200);   
+  --ds-color-checkbox-normal-selected-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-checkbox-normal-inderterminate-default-background: var(--ds-color-shapes-default-transparent);   
+  --ds-color-checkbox-normal-inderterminate-hover-background: var(--ds-palette-accent-100);   
+  --ds-color-checkbox-normal-inderterminate-press-background: var(--ds-palette-accent-200);   
+  --ds-color-checkbox-normal-inderterminate-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-checkbox-error-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-checkbox-error-deselected-default-background: var(--ds-color-shapes-default-transparent);   
+  --ds-color-checkbox-error-deselected-hover-background: var(--ds-palette-negative-100);   
+  --ds-color-checkbox-error-deselected-press-background: var(--ds-palette-negative-200);   
+  --ds-color-checkbox-error-selected-default-background: var(--ds-color-shapes-default-transparent);   
+  --ds-color-checkbox-error-selected-hover-background: var(--ds-palette-negative-100);   
+  --ds-color-checkbox-error-selected-press-background: var(--ds-palette-negative-200);   
+  --ds-color-checkbox-error-inderterminate-default-background: var(--ds-color-shapes-default-transparent);   
+  --ds-color-checkbox-error-inderterminate-hover-background: var(--ds-palette-negative-100);   
+  --ds-color-checkbox-error-inderterminate-press-background: var(--ds-palette-negative-200);   
+  --ds-color-checkbox-disable-deselected-icon-color: var(--ds-color-icon-disable);   
+  --ds-color-checkbox-disable-selected-icon-color: var(--ds-color-icon-disable);   
+  --ds-color-checkbox-disable-inderterminate-icon-color: var(--ds-color-icon-disable);   
+  --ds-color-checkbox-normal-deselected-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-checkbox-disable-background: var(--ds-color-shapes-default-transparent);   
+  --ds-checkbox-label-gap: var(--ds-space-2x);   
+  --ds-checkbox-label-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-checkbox-label-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-color-checkbox-label-text-color: var(--ds-color-text-primary);   
+  --ds-color-checkbox-label-text-disable-color: var(--ds-color-text-disable);   
+  --ds-checkbox-group-vertical-gap: var(--ds-space-2x);   
+  --ds-checkbox-group-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-checkbox-group-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-color-checkbox-group-text-color: var(--ds-color-text-primary);   
+  --ds-color-checkbox-group-text-disable: var(--ds-color-text-disable);   
+  --ds-checkbox-group-horizontal-gap: var(--ds-space-8x);   
+  --ds-checkbox-group-group-gap: var(--ds-space-2x);   
+  --ds-checkbox-group-group-pad-left-0: var(--ds-space-0);   
+  --ds-checkbox-group-group-pad-left-4x: var(--ds-space-4x);   
+  --ds-color-radio-button-normal-deselected-default-background: var(--ds-color-shapes-default-transparent);   
+  --ds-color-radio-button-normal-deselected-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-radio-button-normal-deselected-hover-background: var(--ds-palette-neutral-100);   
+  --ds-color-radio-button-normal-deselected-press-background: var(--ds-palette-neutral-200);   
+  --ds-color-radio-button-normal-selected-default-background: var(--ds-color-shapes-default-transparent);   
+  --ds-color-radio-button-normal-selected-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-radio-button-normal-selected-hover-background: var(--ds-palette-accent-100);   
+  --ds-color-radio-button-normal-selected-press-background: var(--ds-palette-accent-200);   
+  --ds-radio-button-icon-size: var(--ds-icon-size-size-5x);   
+  --ds-color-radio-button-error-deselected-default-background: var(--ds-color-shapes-default-transparent);   
+  --ds-color-radio-button-error-deselected-hover-background: var(--ds-palette-negative-100);   
+  --ds-color-radio-button-error-deselected-press-background: var(--ds-palette-negative-200);   
+  --ds-color-radio-button-error-selected-default-background: var(--ds-color-shapes-default-transparent);   
+  --ds-color-radio-button-error-selected-hover-background: var(--ds-palette-negative-100);   
+  --ds-color-radio-button-error-selected-press-background: var(--ds-palette-negative-200);   
+  --ds-color-radio-button-error-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-radio-button-disable-background: var(--ds-color-shapes-default-transparent);   
+  --ds-color-radio-button-disable-deselected-icon-color: var(--ds-color-icon-disable);   
+  --ds-color-radio-button-disable-selected-icon-color: var(--ds-color-icon-disable);   
+  --ds-radio-button-label-gap: var(--ds-space-2x);   
+  --ds-radio-button-label-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-radio-button-label-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-color-radio-button-label-text-color: var(--ds-color-text-primary);   
+  --ds-color-radio-button-label-text-disable-color: var(--ds-color-text-disable);   
+  --ds-radio-button-group-vertical-gap: var(--ds-space-2x);   
+  --ds-radio-button-group-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-radio-button-group-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-color-radio-button-group-text-color: var(--ds-color-text-primary);   
+  --ds-color-radio-button-group-text-disable-color: var(--ds-color-text-disable);   
+  --ds-radio-button-group-horizontal-gap: var(--ds-space-8x);   
+  --ds-color-input-number-input-icon-color: var(--ds-color-icon-primary);   
+  --ds-input-number-input-pad-top: var(--ds-space-2x);   
+  --ds-input-number-input-pad-right: var(--ds-space-2x);   
+  --ds-input-number-input-pad-bottom: var(--ds-space-2x);   
+  --ds-input-number-input-pad-left: var(--ds-space-2x);   
+  --ds-input-number-input-border-radius: var(--ds-radius-2x);   
+  --ds-input-number-input-gap: var(--ds-space-1x);   
+  --ds-input-number-input-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-input-number-input-text-weight: var(--ds-typography-font-weight-medium);   
+  --ds-color-input-number-input-text-color: var(--ds-color-text-primary);   
+  --ds-color-input-number-input-hover-border-color: var(--ds-color-stroke-hover);   
+  --ds-color-input-number-input-focus-border-color: var(--ds-color-stroke-accent);   
+  --ds-color-input-number-input-error-border-color: var(--ds-color-stroke-negative);   
+  --ds-color-input-number-input-disable-border-color: var(--ds-color-stroke-disable);   
+  --ds-color-input-number-input-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-input-number-input-disable-icon-color: var(--ds-color-icon-disable);   
+  --ds-color-input-number-input-error-icon-color: var(--ds-color-icon-negative);   
+  --ds-banners-pad-left: var(--ds-space-4x);   
+  --ds-banners-pad-right: var(--ds-space-4x);   
+  --ds-banners-pad-top: var(--ds-space-3x);   
+  --ds-banners-pad-bottom: var(--ds-space-3x);   
+  --ds-banners-border-radius: var(--ds-radius-3x);   
+  --ds-banners-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-banners-text-weight-r: var(--ds-typography-font-weight-regular);   
+  --ds-color-banners-neutral-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-banners-text-color: var(--ds-color-text-primary);   
+  --ds-banners-horizontal-gap: var(--ds-space-2x);   
+  --ds-snackbar-pad-left: var(--ds-space-3x);   
+  --ds-snackbar-pad-right: var(--ds-space-3x);   
+  --ds-snackbar-pad-top: var(--ds-space-3x);   
+  --ds-snackbar-pad-bottom: var(--ds-space-3x);   
+  --ds-snackbar-border-radius: var(--ds-space-2x);   
+  --ds-snackbar-title-size: var(--ds-typography-body-font-size-s);   
+  --ds-snackbar-title-weight: var(--ds-typography-font-weight-regular);   
+  --ds-color-snackbar-complex-dark-background: var(--ds-color-surface-snack-tooltip);   
+  --ds-color-snackbar-complex-dark-text-color: var(--ds-color-text-inversive);   
+  --ds-snackbar-gap: var(--ds-space-2x);   
+  --ds-color-banners-neutral-background: var(--ds-color-shapes-default);   
+  --ds-color-tab-inactive-default-background: var(--ds-color-shapes-default-transparent);   
+  --ds-tab-lvl-1-pad-left: var(--ds-space-6x);   
+  --ds-tab-lvl-1-pad-right: var(--ds-space-6x);   
+  --ds-tab-lvl-1-text-size: var(--ds-typography-body-font-size-m);   
+  --ds-tab-lvl-1-text-weight: var(--ds-typography-font-weight-medium);   
+  --ds-color-tab-inactive-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-tab-inactive-text-color: var(--ds-color-text-primary);   
+  --ds-color-tab-active-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-tab-active-text-color: var(--ds-color-text-accent);   
+  --ds-badge-text-size: var(--ds-typography-caption-font-size-l);   
+  --ds-badge-text-weight: var(--ds-typography-font-weight-medium);   
+  --ds-color-banners-accent-background: var(--ds-color-shapes-lighter-pr);   
+  --ds-color-banners-warning-background: var(--ds-color-shapes-lighter-wr);   
+  --ds-color-banners-negative-background: var(--ds-color-shapes-lighter-er);   
+  --ds-color-banners-positive-background: var(--ds-color-shapes-lighter-sc);   
+  --ds-color-banners-accent-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-banners-warning-icon-color: var(--ds-color-icon-warning);   
+  --ds-color-banners-negative-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-banners-positive-icon-color: var(--ds-color-icon-positive);   
+  --ds-search-m-size-pad-left: var(--ds-space-3x);   
+  --ds-search-m-size-pad-right: var(--ds-space-3x);   
+  --ds-search-m-size-pad-top: var(--ds-space-3x);   
+  --ds-search-m-size-pad-bottom: var(--ds-space-3x);   
+  --ds-search-gap: var(--ds-space-2x);   
+  --ds-search-border-radius: var(--ds-space-3x);   
+  --ds-search-text-size: var(--ds-typography-body-font-size-m);   
+  --ds-search-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-color-search-focusvalue-text-color: var(--ds-color-text-primary);   
+  --ds-color-search-background: var(--ds-color-shapes-default-variant);   
+  --ds-color-search-focusvalue-border-color: var(--ds-color-stroke-accent);   
+  --ds-form-field-filled-focus-border-size-focus-2: var(--ds-stroke-0-5x);   
+  --ds-tab-lvl-1-pad-top: var(--ds-space-1x);   
+  --ds-tab-gap: var(--ds-space-2x);   
+  --ds-color-badge-text-color: var(--ds-color-text-inversive);   
+  --ds-badge-border-radius: var(--ds-radius-circular);   
+  --ds-badge-counter-pad-left: var(--ds-space-1-5x);   
+  --ds-badge-counter-pad-right: var(--ds-space-1-5x);   
+  --ds-color-search-focus-border-color: var(--ds-color-stroke-accent);   
+  --ds-color-search-focus-text-color: var(--ds-color-text-placeholder);   
+  --ds-color-search-focus-cursor-color: var(--ds-color-text-primary);   
+  --ds-color-search-default-border-color: var(--ds-color-stroke-default);   
+  --ds-search-border-size: var(--ds-stroke-0-25x);   
+  --ds-color-search-default-text-color: var(--ds-color-text-placeholder);   
+  --ds-color-search-hover-border-color: var(--ds-color-stroke-hover);   
+  --ds-color-search-hover-text-color: var(--ds-color-text-placeholder);   
+  --ds-color-search-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-search-disable-background: var(--ds-color-shapes-disable);   
+  --ds-color-search-disable-icon-color: var(--ds-color-icon-disable);   
+  --ds-color-tab-active-text-color-counter: var(--ds-color-text-accent);   
+  --ds-color-tab-inactive-text-color-counter: var(--ds-color-text-primary);   
+  --ds-color-search-completed-border-color: var(--ds-color-stroke-default);   
+  --ds-color-search-completed-text-color: var(--ds-color-text-primary);   
+  --ds-color-tab-inactive-hover-background: var(--ds-color-shapes-hover);   
+  --ds-color-tab-inactive-press-background: var(--ds-color-shapes-press);   
+  --ds-color-tab-disable-background: var(--ds-color-shapes-default-transparent);   
+  --ds-color-tab-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-tab-disable-icon-color: var(--ds-color-icon-disable);   
+  --ds-color-input-number-control-background: var(--ds-color-shapes-default);   
+  --ds-input-number-control-pad-left: var(--ds-space-2x);   
+  --ds-input-number-control-pad-right: var(--ds-space-2x);   
+  --ds-input-number-control-pad-top: var(--ds-space-2x);   
+  --ds-input-number-control-pad-bottom: var(--ds-space-2x);   
+  --ds-input-number-control-border-size: var(--ds-stroke-0-25x);   
+  --ds-input-number-control-border-radius: var(--ds-radius-2x);   
+  --ds-input-number-control-gap: var(--ds-space-0-5x);   
+  --ds-input-number-control-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-color-input-number-control-text-color: var(--ds-color-text-primary);   
+  --ds-input-number-control-text-weight: var(--ds-typography-font-weight-medium);   
+  --ds-color-input-number-control-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-input-number-control-default-border-color: var(--ds-color-stroke-default);   
+  --ds-color-input-number-control-hover-border-color: var(--ds-color-stroke-hover);   
+  --ds-color-input-number-control-focus-border-color: var(--ds-color-stroke-accent);   
+  --ds-color-input-number-control-error-border-color: var(--ds-color-stroke-negative);   
+  --ds-color-input-number-control-error-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-input-number-control-disable-border-color: var(--ds-color-stroke-disable);   
+  --ds-color-input-number-control-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-input-number-control-disable-icon-color: var(--ds-color-icon-disable);   
+  --ds-color-tab-active-hover-background: var(--ds-color-shapes-hover);   
+  --ds-color-tab-active-press-background: var(--ds-color-shapes-press);   
+  --ds-divider-size-l: var(--ds-stroke-0-5x);   
+  --ds-color-tab-active-default-background: var(--ds-color-shapes-default-transparent);   
+  --ds-hint-header-pad-left: var(--ds-space-3x);   
+  --ds-hint-header-pad-right: var(--ds-space-3x);   
+  --ds-hint-header-pad-top: var(--ds-space-2x);   
+  --ds-hint-header-pad-bottom: var(--ds-space-1x);   
+  --ds-hint-header-gap: var(--ds-space-2x);   
+  --ds-hint-border-radius: var(--ds-space-2x);   
+  --ds-hint-header-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-hint-header-text-weight: var(--ds-typography-font-weight-medium);   
+  --ds-color-hint-header-text-color: var(--ds-color-text-inversive);   
+  --ds-color-hint-header-neutral-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-hint-header-accent-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-hint-header-positive-icon-color: var(--ds-color-icon-positive);   
+  --ds-color-hint-header-warning-icon-color: var(--ds-color-icon-warning);   
+  --ds-color-hint-header-negative-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-hint-background-color: var(--ds-color-surface-snack-tooltip);   
+  --ds-color-hint-header-icon-color: var(--ds-color-icon-inversive);   
+  --ds-color-hint-content-text-color: var(--ds-color-text-inversive);   
+  --ds-color-hint-content-icon-color: var(--ds-color-icon-inversive);   
+  --ds-hint-content-gap: var(--ds-space-2x);   
+  --ds-hint-content-pad-top: var(--ds-space-2x);   
+  --ds-hint-content-pad-right: var(--ds-space-3x);   
+  --ds-hint-content-pad-bottom: var(--ds-space-2x);   
+  --ds-hint-content-pad-left: var(--ds-space-3x);   
+  --ds-hint-content-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-hint-content-text-size: var(--ds-typography-caption-font-size-l);   
+  --ds-hint-footer-pad-left: var(--ds-space-3x);   
+  --ds-hint-footer-pad-right: var(--ds-space-3x);   
+  --ds-hint-footer-pad-top: var(--ds-space-4x);   
+  --ds-hint-footer-pad-bottom: var(--ds-space-3x);   
+  --ds-hint-footer-gap: var(--ds-space-3x);   
+  --ds-color-hint-footer-text-color: var(--ds-color-text-inversive);   
+  --ds-hint-footer-title-size: var(--ds-typography-body-font-size-s);   
+  --ds-hint-footer-title-weight: var(--ds-typography-font-weight-medium);   
+  --ds-list-item-pad-left: var(--ds-space-4x);   
+  --ds-list-item-pad-right: var(--ds-space-4x);   
+  --ds-list-item-pad-top: var(--ds-space-2x);   
+  --ds-list-item-pad-bottom: var(--ds-space-2x);   
+  --ds-color-list-item-text-color: var(--ds-color-text-primary);   
+  --ds-list-item-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-list-item-gap: var(--ds-space-2x);   
+  --ds-color-list-item-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-list-item-default-background: var(--ds-color-surface-default);   
+  --ds-color-list-item-hover-background: var(--ds-color-surface-hover);   
+  --ds-color-list-item-press-background: var(--ds-color-surface-press);   
+  --ds-color-list-item-selected-background: var(--ds-color-surface-default);   
+  --ds-color-list-item-negative-background: var(--ds-color-shapes-default);   
+  --ds-color-list-item-disable-background: var(--ds-color-surface-default);   
+  --ds-color-list-item-text-label-color: var(--ds-color-text-secondary);   
+  --ds-color-list-item-disable-icon-color: var(--ds-color-icon-disable);   
+  --ds-color-list-item-disable-label-text-color: var(--ds-color-text-disable);   
+  --ds-color-list-item-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-list-item-negative-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-list-item-negative-label-text-color: var(--ds-color-text-negative);   
+  --ds-color-list-item-negative-text-color: var(--ds-color-text-negative);   
+  --ds-color-list-item-selected-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-divider-solid-selected-color: var(--ds-color-stroke-accent);   
+  --ds-color-tab-disable-divider: var(--ds-color-stroke-disable);   
+  --ds-color-divider-solid-disable-color: var(--ds-color-stroke-disable);   
+  --ds-tabs-gap: var(--ds-space-0);   
+  --ds-search-s-size-pad-left: var(--ds-space-3x);   
+  --ds-search-s-size-pad-right: var(--ds-space-3x);   
+  --ds-search-s-size-pad-top: var(--ds-space-2x);   
+  --ds-search-s-size-pad-bottom: var(--ds-space-2x);   
+  --ds-banners-vertical-gap: var(--ds-space-2x);   
+  --ds-banners-vertical-gap-container: var(--ds-space-2x);   
+  --ds-menu-pad-top: var(--ds-space-2x);   
+  --ds-menu-pad-bottom: var(--ds-space-2x);   
+  --ds-menu-border-radius: var(--ds-radius-2x);   
+  --ds-color-menu-background: var(--ds-color-shapes-default);   
+  --ds-icon-size-gap-group-2x: var(--ds-space-2x);   
+  --ds-icon-size-gap-group-4x: var(--ds-space-4x);   
+  --ds-scroll-pad-bottom: var(--ds-space-0-5x);   
+  --ds-scroll-pad-top: var(--ds-space-0-5x);   
+  --ds-color-scroll-background: var(--ds-palette-neutral-transparent);   
+  --ds-menu-gap: var(--ds-space-0);   
+  --ds-menu-gap-list: var(--ds-space-0);   
+  --ds-button-group-default-pad-bottom: var(--ds-space-0);   
+  --ds-button-group-default-pad-top: var(--ds-space-0);   
+  --ds-button-group-default-pad-right: var(--ds-space-0);   
+  --ds-button-group-default-pad-left: var(--ds-space-0);   
+  --ds-button-group-margins-pad-bottom: var(--ds-space-2x);   
+  --ds-button-group-margins-pad-top: var(--ds-space-2x);   
+  --ds-button-group-margins-pad-right: var(--ds-space-4x);   
+  --ds-button-group-margins-pad-left: var(--ds-space-4x);   
+  --ds-color-stepper-background: var(--ds-color-surface-default-transparent);   
+  --ds-color-stepper-default-background: var(--ds-palette-neutral-10);   
+  --ds-color-stepper-hover-background: var(--ds-palette-accent-10);   
+  --ds-color-stepper-hover-text-color: var(--ds-color-text-accent);   
+  --ds-color-stepper-hover-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-stepper-press-background: var(--ds-palette-accent-50);   
+  --ds-color-stepper-press-text-color: var(--ds-color-brand-accent-dark);   
+  --ds-color-stepper-press-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-stepper-selected-background: var(--ds-palette-accent-10);   
+  --ds-color-stepper-selected-text-color: var(--ds-color-text-accent);   
+  --ds-color-stepper-selected-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-stepper-error-background: var(--ds-palette-negative-10);   
+  --ds-color-stepper-error-text-color: var(--ds-color-text-negative);   
+  --ds-color-stepper-error-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-stepper-disable-background: var(--ds-palette-neutral-10);   
+  --ds-color-stepper-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-stepper-disable-icon-color: var(--ds-color-icon-disable);   
+  --ds-color-stepper-default-text-color: var(--ds-color-text-primary);   
+  --ds-stepper-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-stepper-gap: var(--ds-space-2x);   
+  --ds-color-stepper-default-icon-color: var(--ds-color-icon-primary);   
+  --ds-stepper-selected-border-size: var(--ds-stroke-0-25x);   
+  --ds-stepper-pad-left: var(--ds-space-2x);   
+  --ds-stepper-pad-right: var(--ds-space-2x);   
+  --ds-stepper-pad-bottom: var(--ds-space-1x);   
+  --ds-stepper-pad-top: var(--ds-space-1x);   
+  --ds-stepper-border-radius: var(--ds-radius-2x);   
+  --ds-color-stepper-text-color: var(--ds-color-text-primary);   
+  --ds-stepper-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-color-stepper-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-stepper-selected-border-color: var(--ds-color-stroke-accent);   
+  --ds-status-pad-bottom-text: var(--ds-space-0);   
+  --ds-status-pad-top-text: var(--ds-space-0);   
+  --ds-status-pad-right-text: var(--ds-space-0);   
+  --ds-status-pad-left-text: var(--ds-space-0);   
+  --ds-chips-s-size-icon-size: var(--ds-icon-size-size-4x);   
+  --ds-list-item-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-list-item-text-size-label: var(--ds-typography-caption-font-size-l);   
+  --ds-menu-item-pad-left: var(--ds-space-4x);   
+  --ds-menu-item-pad-right: var(--ds-space-4x);   
+  --ds-menu-item-pad-top: var(--ds-space-2x);   
+  --ds-menu-item-pad-bottom: var(--ds-space-2x);   
+  --ds-color-menu-item-default-background: var(--ds-color-surface-default);   
+  --ds-color-menu-item-hover-background: var(--ds-color-surface-hover);   
+  --ds-color-menu-item-press-background: var(--ds-color-surface-press);   
+  --ds-color-menu-item-selected-background: var(--ds-color-shapes-default);   
+  --ds-color-menu-item-selected-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-menu-item-negative-background: var(--ds-color-shapes-default);   
+  --ds-color-menu-item-negative-text-color: var(--ds-color-text-negative);   
+  --ds-color-menu-item-negative-label-text-color: var(--ds-color-text-negative);   
+  --ds-color-menu-item-negative-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-menu-item-disable-background: var(--ds-color-surface-default);   
+  --ds-color-menu-item-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-menu-item-disable-label-text-color: var(--ds-color-text-disable);   
+  --ds-color-menu-item-disable-icon-color: var(--ds-color-icon-disable);   
+  --ds-menu-item-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-color-menu-item-text-color: var(--ds-color-text-primary);   
+  --ds-menu-item-text-size-label: var(--ds-typography-caption-font-size-l);   
+  --ds-color-menu-item-text-label-color: var(--ds-color-text-secondary);   
+  --ds-menu-item-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-menu-item-gap: var(--ds-space-2x);   
+  --ds-color-menu-item-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-expansion-panel-collaps-press-background: var(--ds-color-surface-press);   
+  --ds-color-expansion-panel-collaps-disable-background: var(--ds-color-surface-disable);   
+  --ds-color-expansion-panel-collaps-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-expansion-panel-collaps-disable-border-color: var(--ds-color-stroke-disable);   
+  --ds-color-expansion-panel-content-background: var(--ds-color-surface-default);   
+  --ds-expansion-panel-collaps-gap-group: var(--ds-space-2x);   
+  --ds-hint-content-gap-content: var(--ds-space-1x);   
+  --ds-search-xs-size-pad-left: var(--ds-space-3x);   
+  --ds-search-xs-size-pad-right: var(--ds-space-3x);   
+  --ds-search-xs-size-pad-top: var(--ds-space-2x);   
+  --ds-search-xs-size-pad-bottom: var(--ds-space-2x);   
+  --ds-sidenav-footer-l1-collapsed-gap: var(--ds-space-0);   
+  --ds-sidenav-header-l2-gap: var(--ds-space-2x);   
+  --ds-color-sidenav-header-l1-background: var(--ds-palette-contrast-3-950);   
+  --ds-color-sidenav-header-l2-background: var(--ds-color-surface-default);   
+  --ds-stepper-gap-line: var(--ds-space-2x);   
+  --ds-stepper-divider-width: var(--ds-size-2x);   
+  --ds-color-stepper-divider-color: var(--ds-palette-neutral-700);   
+  --ds-stepper-text-weight-button: var(--ds-typography-font-weight-medium);   
+  --ds-stepper-gap-button: var(--ds-space-4x);   
+  --ds-color-search-hover-background-xs: var(--ds-palette-accent-100);   
+  --ds-color-search-default-background-xs: var(--ds-palette-accent-50);   
+  --ds-hint-arrow-width: var(--ds-space-2x);   
+  --ds-hint-arrow-height: var(--ds-space-1x);   
+  --ds-tab-lvv-2-pad-left: var(--ds-space-3x);   
+  --ds-tab-lvv-2-pad-right: var(--ds-space-3x);   
+  --ds-tab-lvv-2-pad-top: var(--ds-space-1x);   
+  --ds-color-divider-dashed-selected-color: var(--ds-color-stroke-accent);   
+  --ds-color-divider-dashed-disable-color: var(--ds-color-stroke-disable);   
+  --ds-tab-lvv-2-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-sidenav-header-pad-bottom: var(--ds-space-3x);   
+  --ds-sidenav-header-pad-top: var(--ds-space-3x);   
+  --ds-sidenav-header-l1-collapsed-pad-right: var(--ds-space-3-5x);   
+  --ds-sidenav-header-l1-collapsed-pad-left: var(--ds-space-3-5x);   
+  --ds-sidenav-header-l1-expanded-pad-right: var(--ds-space-4x);   
+  --ds-sidenav-header-l1-expanded-pad-left: var(--ds-space-4x);   
+  --ds-sidenav-header-l2-gap-content: var(--ds-space-2x);   
+  --ds-sidenav-header-l2-pad-right: var(--ds-space-4x);   
+  --ds-sidenav-header-l2-pad-left: var(--ds-space-4x);   
+  --ds-sidenav-control-pad-top: var(--ds-space-2x);   
+  --ds-sidenav-control-pad-bottom: var(--ds-space-3x);   
+  --ds-color-sidenav-control-background: var(--ds-palette-contrast-3-950);   
+  --ds-color-sidenav-control-background-hover: var(--ds-palette-contrast-3-900);   
+  --ds-color-sidenav-control-background-press: var(--ds-palette-contrast-3-900);   
+  --ds-sidenav-control-pad-left: var(--ds-space-4x);   
+  --ds-sidenav-control-pad-right: var(--ds-space-4x);   
+  --ds-sidenav-header-l2-text-size: var(--ds-typography-body-font-size-m);   
+  --ds-color-sidenav-header-l2-text-color: var(--ds-color-text-primary);   
+  --ds-sidenav-header-l2-text-weight: var(--ds-typography-font-weight-medium);   
+  --ds-sidenav-element-gap: var(--ds-space-0);   
+  --ds-color-sidenav-element-collaps-icon-background: var(--ds-palette-contrast-3-900);   
+  --ds-sidenav-control-collapsed-gap: var(--ds-space-0);   
+  --ds-sidenav-control-expanded-gap: var(--ds-space-0);   
+  --ds-sidenav-control-expanded-gap-content: var(--ds-space-2x);   
+  --ds-color-sidenav-item-l1-background: var(--ds-palette-contrast-3-950);   
+  --ds-color-sidenav-item-l1-background-hover: var(--ds-palette-contrast-3-900);   
+  --ds-color-sidenav-item-l1-background-selected: var(--ds-palette-contrast-3-800);   
+  --ds-sidenav-item-l1-pad-left: var(--ds-space-4x);   
+  --ds-sidenav-item-l1-pad-right: var(--ds-space-4x);   
+  --ds-sidenav-item-l2-gap-container: var(--ds-space-2x);   
+  --ds-sidenav-item-l2-gap-content: var(--ds-space-2x);   
+  --ds-sidenav-item-l2-pad-left: var(--ds-space-4x);   
+  --ds-sidenav-item-l2-pad-right: var(--ds-space-4x);   
+  --ds-color-sidenav-item-l2-background: var(--ds-color-surface-default);   
+  --ds-color-sidenav-item-l2-text-color: var(--ds-color-text-primary);   
+  --ds-sidenav-item-l2-text-size: var(--ds-typography-caption-font-size-l);   
+  --ds-sidenav-item-l2-text-weight: var(--ds-typography-font-weight-medium);   
+  --ds-sidenav-item-l1-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-sidenav-item-l1-text-size: var(--ds-typography-caption-font-size-l);   
+  --ds-color-sidenav-item-l1-text-color: var(--ds-color-text-inversive);   
+  --ds-color-sidenav-item-l2-background-selected: var(--ds-color-brand-accent-lighter);   
+  --ds-color-sidenav-item-l2-background-hover: var(--ds-color-brand-accent-super-lightest);   
+  --ds-sidenav-item-l2-pad-bottom: var(--ds-space-2-5x);   
+  --ds-sidenav-item-l2-pad-top: var(--ds-space-2-5x);   
+  --ds-sidenav-item-l3-gap: var(--ds-space-2x);   
+  --ds-sidenav-item-l3-pad-left: var(--ds-space-8x);   
+  --ds-sidenav-item-l3-pad-right: var(--ds-space-4x);   
+  --ds-sidenav-item-l3-pad-top: var(--ds-space-2x);   
+  --ds-sidenav-item-l3-pad-bottom: var(--ds-space-2x);   
+  --ds-color-sidenav-item-l3-text-color: var(--ds-color-text-primary);   
+  --ds-sidenav-item-l3-text-size: var(--ds-typography-caption-font-size-l);   
+  --ds-sidenav-item-l3-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-color-sidenav-item-l3-background: var(--ds-color-surface-default);   
+  --ds-color-sidenav-item-l3-background-hover: var(--ds-color-brand-accent-super-lightest);   
+  --ds-color-sidenav-item-l3-background-selected: var(--ds-color-brand-accent-lighter);   
+  --ds-color-sidenav-item-l3-text-color-selected: var(--ds-color-text-accent);   
+  --ds-sidenav-footer-l1-expanded-gap: var(--ds-space-0);   
+  --ds-sidenav-footer-l2-gap: var(--ds-space-3x);   
+  --ds-sidenav-footer-l2-pad-bottom: var(--ds-space-3x);   
+  --ds-sidenav-footer-l2-pad-right: var(--ds-space-4x);   
+  --ds-sidenav-footer-l2-pad-top: var(--ds-space-3x);   
+  --ds-sidenav-footer-l2-pad-left: var(--ds-space-4x);   
+  --ds-color-sidenav-footer-l2-background: var(--ds-color-surface-default);   
+  --ds-sidenav-footer-l2-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-sidenav-footer-l2-text-size: var(--ds-typography-caption-font-size-l);   
+  --ds-color-sidenav-footer-l2-text-color: var(--ds-color-text-secondary);   
+  --ds-sidenav-footer-l2-logo-width: 38px;   
+  --ds-sidenav-footer-l2-logo-height: 16px;   
+  --ds-sidenav-sidebar-l1-gap: var(--ds-space-0);   
+  --ds-sidenav-sidebar-l2-gap: var(--ds-space-0);   
+  --ds-sidenav-sidebar-pad-top: var(--ds-space-2x);   
+  --ds-sidenav-sidebar-pad-bottom: var(--ds-space-2x);   
+  --ds-color-sidenav-sidebar-l1-background: var(--ds-palette-contrast-3-950);   
+  --ds-chips-s-size-border-radius: var(--ds-radius-2x);   
+  --ds-form-field-xs-size-border-radius: var(--ds-radius-0);   
+  --ds-button-xs-size-icon-size: var(--ds-icon-size-size-4x);   
+  --ds-button-xs-size-gap: var(--ds-space-1x);   
+  --ds-button-xs-size-pad-left: var(--ds-space-1-5x);   
+  --ds-button-xs-size-pad-right: var(--ds-space-1-5x);   
+  --ds-button-xs-size-pad-top: var(--ds-space-1x);   
+  --ds-button-xs-size-pad-bottom: var(--ds-space-1x);   
+  --ds-button-xs-size-text-weight: var(--ds-typography-font-weight-medium);   
+  --ds-button-xs-size-text-size: var(--ds-typography-caption-font-size-l);   
+  --ds-button-icon-xs-size-pad-left: var(--ds-space-1x);   
+  --ds-button-icon-xs-size-pad-right: var(--ds-space-1x);   
+  --ds-button-icon-xs-size-pad-top: var(--ds-space-1x);   
+  --ds-button-icon-xs-size-pad-bottom: var(--ds-space-1x);   
+  --ds-list-gap: var(--ds-space-0);   
+  --ds-list-gap-list: var(--ds-space-0);   
+  --ds-list-pad-top: var(--ds-space-2x);   
+  --ds-list-pad-bottom: var(--ds-space-2x);   
+  --ds-list-border-radius: var(--ds-radius-0);   
+  --ds-color-list-background: var(--ds-color-shapes-default);   
+  --ds-scroll-pad-right: var(--ds-space-0-5x);   
+  --ds-scroll-pad-left: var(--ds-space-0-5x);   
+  --ds-color-menu-item-selected-back-selected: var(--ds-palette-accent-10);   
+  --ds-menu-item-pad-left-s: 32px;   
+  --ds-menu-item-pad-left-m: 48px;   
+  --ds-color-list-item-selected-back-selected: var(--ds-palette-accent-10);   
+  --ds-color-form-field-input-label-text-color: var(--ds-color-text-secondary);   
+  --ds-form-field-pad-textarea-top: var(--ds-space-1x);   
+  --ds-form-field-pad-textarea-bottom: var(--ds-space-2x);   
+  --ds-color-status-contrast-4-filled-background: var(--ds-palette-contrast-4-5);   
+  --ds-color-status-contrast-4-filled-text-color: var(--ds-palette-contrast-4-950);   
+  --ds-color-status-contrast-4-text-text-color: var(--ds-color-brand-contrast-4-dark);   
+  --ds-snackbar-cont-size: var(--ds-typography-caption-font-size-l);   
+  --ds-snackbar-cont-weight: var(--ds-typography-font-weight-regular);   
+  --ds-color-snackbar-complex-light-background: var(--ds-color-surface-default);   
+  --ds-snackbar-max-width: 370px;   
+  --ds-color-snackbar-complex-light-text-color: var(--ds-color-text-primary);   
+  --ds-color-snackbar-progress-color: var(--ds-color-icon-accent);   
+  --ds-dialog-header-pad-right: var(--ds-space-6x);   
+  --ds-dialog-header-pad-left: var(--ds-space-6x);   
+  --ds-dialog-content-pad-left: var(--ds-space-6x);   
+  --ds-dialog-content-pad-right: var(--ds-space-6x);   
+  --ds-dialog-footer-pad-right: var(--ds-space-6x);   
+  --ds-dialog-footer-pad-left: var(--ds-space-6x);   
+  --ds-sidenav-item-l1-pad-bottom: var(--ds-space-3x);   
+  --ds-sidenav-item-l1-pad-top: var(--ds-space-3x);   
+  --ds-color-sidenav-item-l1-indicator: var(--ds-color-icon-inversive);   
+  --ds-color-sidenav-item-l1-element-left: var(--ds-color-icon-inversive);   
+  --ds-sidenav-item-l1-gap-container: var(--ds-space-2x);   
+  --ds-color-sidenav-item-l1-element-right: var(--ds-color-icon-inversive);   
+  --ds-sidenav-item-l1-gap-content: var(--ds-space-2x);   
+  --ds-color-sidenav-item-l3-indicator: var(--ds-color-icon-accent);   
+  --ds-sidenav-control-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-sidenav-control-text-size: var(--ds-typography-caption-font-size-m);   
+  --ds-color-sidenav-control-text-color: var(--ds-color-text-inversive);   
+  --ds-color-sidenav-control-divider: var(--ds-palette-contrast-3-900);   
+  --ds-sidenav-header-l1-expanded-gap: 92px;   
+  --ds-color-sidenav-header-l1-expanded-logo: var(--ds-color-shapes-default);   
+  --ds-color-sidenav-header-l1-collapsed-logo: var(--ds-color-shapes-default);   
+  --ds-color-sidenav-header-l1-collapsed-logo-element: var(--ds-palette-negative-500);   
+  --ds-color-sidenav-footer-l2-logo: var(--ds-palette-negative-500);   
+  --ds-sidenav-header-l1-expanded-logo-width: 56px;   
+  --ds-sidenav-header-l1-expanded-logo-height: 24px;   
+  --ds-color-sidenav-sidebar-l2-background: var(--ds-color-surface-default);   
+  --ds-sidenav-sidebar-info-pad-top: var(--ds-space-4x);   
+  --ds-color-sidenav-sidebar-info-background-container: var(--ds-color-surface-default-variant);   
+  --ds-sidenav-sidebar-info-pad-bottom: var(--ds-space-4x);   
+  --ds-sidenav-sidebar-info-pad-left: var(--ds-space-2x);   
+  --ds-sidenav-sidebar-info-pad-right: var(--ds-space-2x);   
+  --ds-color-sidenav-item-l3-background-active: var(--ds-color-brand-accent-lighter);   
+  --ds-sidenav-sidebar-info-pad-left-container: var(--ds-space-3x);   
+  --ds-sidenav-sidebar-info-pad-right-container: var(--ds-space-3x);   
+  --ds-sidenav-sidebar-info-pad-top-container: var(--ds-space-3x);   
+  --ds-sidenav-sidebar-info-pad-bottom-container: var(--ds-space-3x);   
+  --ds-sidenav-sidebar-info-gap-container: var(--ds-space-4x);   
+  --ds-table-pad-top: var(--ds-space-3x);   
+  --ds-table-pad-left: var(--ds-space-8x);   
+  --ds-table-pad-right: var(--ds-space-8x);   
+  --ds-table-pad-bottom: var(--ds-space-3x);   
+  --ds-table-footer-pad-bottom: var(--ds-space-3x);   
+  --ds-table-footer-pad-top: var(--ds-space-3x);   
+  --ds-table-footer-pad-right: var(--ds-space-8x);   
+  --ds-table-footer-pad-left: var(--ds-space-8x);   
+  --ds-color-table-footer-background: var(--ds-color-table-surfase-default);   
+  --ds-chips-input-gap-chips-input-frame: var(--ds-size-1x);   
+  --ds-color-status-background: var(--ds-color-shapes-default-transparent);   
+  --ds-chips-gap-group: var(--ds-space-2x);   
+  --ds-button-m-size-text-weight: var(--ds-typography-font-weight-medium);   
+  --ds-button-m-size-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-button-s-size-text-weight: var(--ds-typography-font-weight-medium);   
+  --ds-button-s-size-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-button-icon-s-size-icon-size: var(--ds-icon-size-size-5x);   
+  --ds-button-icon-xs-size-icon-size: var(--ds-icon-size-size-4x);   
+  --ds-color-list-item-link-background: var(--ds-color-surface-default);   
+  --ds-color-list-item-link-text-color: var(--ds-color-text-accent);   
+  --ds-checkbox-label-gap-support: var(--ds-space-1x);   
+  --ds-checkbox-label-pad-left-support-0: var(--ds-space-0);   
+  --ds-checkbox-label-pad-left-support-7x: var(--ds-space-7x);   
+  --ds-radio-button-label-gap-support: var(--ds-space-1x);   
+  --ds-checkbox-group-vertical-gap-support: var(--ds-space-2x);   
+  --ds-checkbox-group-group-gap-support: var(--ds-space-2x);   
+  --ds-checkbox-group-horizontal-gap-support: var(--ds-space-2x);   
+  --ds-radio-button-group-vertical-gap-support: var(--ds-space-2x);   
+  --ds-radio-button-group-horizontal-gap-support: var(--ds-space-2x);   
+  --ds-radio-button-label-pad-left-support-7x: var(--ds-space-7x);   
+  --ds-radio-button-label-pad-left-support-0: var(--ds-space-0);   
+  --ds-slide-toggle-gap-support: var(--ds-space-1x);   
+  --ds-slide-toggle-pad-left-support-10-5x: 42px;   
+  --ds-slide-toggle-pad-left-support-0: var(--ds-space-0);   
+  --ds-chips-s-size-gap: var(--ds-space-1x);   
+  --ds-color-slide-toggle-text-support-color: var(--ds-color-text-secondary);   
+  --ds-slide-toggle-text-support-weight: var(--ds-typography-font-weight-regular);   
+  --ds-slide-toggle-text-support-size: var(--ds-typography-caption-font-size-l);   
+  --ds-color-checkbox-label-text-support-color: var(--ds-color-text-secondary);   
+  --ds-checkbox-label-text-support-weight: var(--ds-typography-font-weight-regular);   
+  --ds-checkbox-label-text-support-size: var(--ds-typography-caption-font-size-l);   
+  --ds-color-checkbox-group-text-support-color: var(--ds-color-text-secondary);   
+  --ds-checkbox-group-text-support-weight: var(--ds-typography-font-weight-regular);   
+  --ds-checkbox-group-text-support-size: var(--ds-typography-caption-font-size-l);   
+  --ds-color-slide-toggle-text-error-color: var(--ds-color-text-negative);   
+  --ds-color-radio-button-label-text-support-color: var(--ds-color-text-secondary);   
+  --ds-radio-button-label-text-support-weight: var(--ds-typography-font-weight-regular);   
+  --ds-radio-button-label-text-support-size: var(--ds-typography-caption-font-size-l);   
+  --ds-color-radio-button-label-text-error-color: var(--ds-color-text-negative);   
+  --ds-radio-button-group-text-support-weight: var(--ds-typography-font-weight-regular);   
+  --ds-radio-button-group-text-support-size: var(--ds-typography-caption-font-size-l);   
+  --ds-color-radio-button-group-text-support-color: var(--ds-color-text-secondary);   
+  --ds-color-radio-button-group-text-support-error-color: var(--ds-color-text-negative);   
+  --ds-color-checkbox-label-text-support-error-color: var(--ds-color-text-negative);   
+  --ds-color-checkbox-group-text-support-error-color: var(--ds-color-text-negative);   
+  --ds-color-badge-accent-background: var(--ds-color-brand-accent-default);   
+  --ds-color-badge-negative-background: var(--ds-color-brand-negative-default);   
+  --ds-color-badge-positive-background: var(--ds-color-brand-positive-default);   
+  --ds-color-badge-warning-background: var(--ds-color-brand-warning-default);   
+  --ds-badge-point-height: var(--ds-size-2x);   
+  --ds-badge-point-width: var(--ds-size-2x);   
+  --ds-banners-border-dash-size: var(--ds-stroke-dash);   
+  --ds-color-banners-border-color: var(--ds-color-stroke-accent);   
+  --ds-banners-text-weight-m: var(--ds-typography-font-weight-medium);   
+  --ds-color-text-ui-default-background: var(--ds-color-surface-default);   
+  --ds-color-text-ui-hover-background: var(--ds-color-surface-hover);   
+  --ds-color-text-ui-press-background: var(--ds-color-surface-press);   
+  --ds-color-text-ui-selected-background: var(--ds-color-surface-default);   
+  --ds-color-text-ui-link-background: var(--ds-color-surface-default);   
+  --ds-color-text-ui-link-text-color: var(--ds-color-text-accent);   
+  --ds-color-text-ui-selected-back-selected: var(--ds-palette-accent-10);   
+  --ds-color-text-ui-selected-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-text-ui-negative-background: var(--ds-color-shapes-default);   
+  --ds-color-text-ui-negative-text-color: var(--ds-color-text-negative);   
+  --ds-color-text-ui-negative-label-text-color: var(--ds-color-text-negative);   
+  --ds-color-text-ui-negative-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-text-ui-disable-background: var(--ds-color-surface-default);   
+  --ds-color-text-ui-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-text-ui-disable-label-text-color: var(--ds-color-text-disable);   
+  --ds-color-text-ui-disable-icon-color: var(--ds-color-icon-disable);   
+  --ds-text-ui-gap: var(--ds-space-2x);   
+  --ds-text-ui-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-color-text-ui-text-color: var(--ds-color-text-primary);   
+  --ds-text-ui-text-size-label: var(--ds-typography-caption-font-size-l);   
+  --ds-color-text-ui-text-label-color: var(--ds-color-text-secondary);   
+  --ds-text-ui-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-color-text-ui-icon-color: var(--ds-color-icon-primary);   
+  --ds-text-ui-pad-top: var(--ds-space-2x);   
+  --ds-text-ui-pad-bottom: var(--ds-space-2x);   
+  --ds-text-ui-pad-left: var(--ds-space-4x);   
+  --ds-text-ui-pad-right: var(--ds-space-4x);   
+  --ds-table-cell-pad-left-2x: 36px;   
+  --ds-color-text-ui-text-placeholder: var(--ds-color-text-placeholder);   
+  --ds-badge-counter-pad-bottom: var(--ds-size-0-25x);   
+  --ds-badge-counter-pad-top: var(--ds-size-0-25x);   
+  --ds-color-chips-outlined-focus-background: var(--ds-color-shapes-default);   
+  --ds-color-chips-outlined-focus-border-color: var(--ds-color-stroke-accent);   
+  --ds-color-banners-accent-background-tip: var(--ds-color-brand-accent-lightest);   
+  --ds-banners-text-size-tip: var(--ds-typography-caption-font-size-l);   
+  --ds-dialog-shadows: 12 dp M;   
+  --ds-snackbar-gap-group: var(--ds-space-2x);   
+  --ds-color-snackbar-single-dark-background: var(--ds-color-surface-snack-tooltip);   
+  --ds-color-snackbar-single-dark-text-color: var(--ds-color-text-inversive);   
+  --ds-color-snackbar-single-light-background: var(--ds-color-surface-default);   
+  --ds-color-snackbar-single-light-text-color: var(--ds-color-text-primary);   
+  --ds-select-item-gap: var(--ds-space-2x);   
+  --ds-select-item-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-color-select-item-text-color: var(--ds-color-text-primary);   
+  --ds-select-item-text-size-label: var(--ds-typography-caption-font-size-l);   
+  --ds-color-select-item-text-label-color: var(--ds-color-text-secondary);   
+  --ds-select-item-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-color-select-item-icon-color: var(--ds-color-icon-primary);   
+  --ds-select-item-pad-left-s: 32px;   
+  --ds-select-item-pad-left-m: 48px;   
+  --ds-select-item-pad-left: var(--ds-space-4x);   
+  --ds-select-item-pad-right: var(--ds-space-4x);   
+  --ds-select-item-pad-top: var(--ds-space-2x);   
+  --ds-select-item-pad-bottom: var(--ds-space-2x);   
+  --ds-color-select-item-default-background: var(--ds-color-surface-default);   
+  --ds-color-select-item-hover-background: var(--ds-color-surface-hover);   
+  --ds-color-select-item-press-background: var(--ds-color-surface-press);   
+  --ds-color-select-item-selected-background: var(--ds-color-shapes-default);   
+  --ds-color-select-item-selected-back-selected: var(--ds-palette-accent-10);   
+  --ds-color-select-item-selected-icon-color: var(--ds-color-icon-accent);   
+  --ds-color-select-item-negative-background: var(--ds-color-shapes-default);   
+  --ds-color-select-item-negative-text-color: var(--ds-color-text-negative);   
+  --ds-color-select-item-negative-label-text-color: var(--ds-color-text-negative);   
+  --ds-color-select-item-negative-icon-color: var(--ds-color-icon-negative);   
+  --ds-color-select-item-disable-background: var(--ds-color-surface-default);   
+  --ds-color-select-item-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-select-item-disable-label-text-color: var(--ds-color-text-disable);   
+  --ds-color-select-item-disable-icon-color: var(--ds-color-icon-disable);   
+  --ds-select-item-text-size-sub: var(--ds-typography-caption-font-size-m);   
+  --ds-select-item-text-weight-sub: var(--ds-typography-font-weight-medium);   
+  --ds-select-item-pad-top-sub: var(--ds-space-3x);   
+  --ds-select-item-pad-bottom-sub: var(--ds-space-1-5x);   
+  --ds-dialog-content-gap-text: var(--ds-space-2x);   
+  --ds-card-border-size: var(--ds-stroke-0-25x);   
+  --ds-color-card-border-color: var(--ds-color-stroke-default);   
+  --ds-card-shadows: 01 dp Sl;   
+  --ds-tab-lvl-1-pad-bottom: var(--ds-space-1x);   
+  --ds-tab-lvv-2-pad-bottom: var(--ds-space-1x);   
+  --ds-tab-lvv-2-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-color-tab-icon-color-negative: var(--ds-color-icon-negative);   
+  --ds-color-expansion-panel-collaps-default-background-info: var(--ds-color-brand-accent-lightest);   
+  --ds-color-expansion-panel-content-background-info: var(--ds-color-brand-accent-lightest);   
+  --ds-color-expansion-panel-collaps-hover-background-info: var(--ds-color-brand-accent-lighter);   
+  --ds-color-expansion-panel-collaps-press-background-info: var(--ds-palette-accent-100);   
+  --ds-color-expansion-panel-collaps-disable-background-info: var(--ds-color-brand-accent-lightest);   
+  --ds-color-expansion-panel-content-text-color-disable: var(--ds-color-text-disable);   
+  --ds-color-expansion-panel-expand-background: var(--ds-color-surface-default);   
+  --ds-elements-datepicker-border-radius: var(--ds-radius-circular);   
+  --ds-elements-datepicker-border-size: var(--ds-stroke-0-25x);   
+  --ds-elements-datepicker-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-elements-datepicker-cell-pad-left: var(--ds-space-2-5x);   
+  --ds-elements-datepicker-cell-pad-right: var(--ds-space-2-5x);   
+  --ds-elements-datepicker-cell-pad-top: var(--ds-space-2x);   
+  --ds-elements-datepicker-cell-pad-bottom: var(--ds-space-2x);   
+  --ds-elements-datepicker-cell-text-size: var(--ds-typography-body-font-size-m);   
+  --ds-elements-datepicker-year-pad-left: var(--ds-space-4x);   
+  --ds-elements-datepicker-year-pad-right: var(--ds-space-4x);   
+  --ds-elements-datepicker-year-pad-top: var(--ds-space-2x);   
+  --ds-elements-datepicker-year-pad-bottom: var(--ds-space-2x);   
+  --ds-elements-datepicker-year-text-size: var(--ds-typography-body-font-size-m);   
+  --ds-elements-datepicker-month-pad-left: var(--ds-space-2x);   
+  --ds-elements-datepicker-month-pad-right: var(--ds-space-1x);   
+  --ds-elements-datepicker-month-pad-top: var(--ds-space-2-5x);   
+  --ds-elements-datepicker-month-pad-bottom: var(--ds-space-2-5x);   
+  --ds-elements-datepicker-month-gap: var(--ds-space-2x);   
+  --ds-elements-datepicker-month-text-size: var(--ds-typography-body-font-size-s);   
+  --ds-elements-datepicker-month-icon-size: var(--ds-icon-size-size-5x);   
+  --ds-color-elements-datepicker-cell-text-color: var(--ds-color-text-primary);   
+  --ds-color-elements-datepicker-cell-default-default-background: var(--ds-palette-neutral-transparent);   
+  --ds-color-elements-datepicker-cell-default-hover-background: var(--ds-color-brand-neutral-super-light);   
+  --ds-color-elements-datepicker-cell-default-press-background: var(--ds-color-brand-neutral-lighter);   
+  --ds-color-elements-datepicker-cell-default-disable-background: var(--ds-palette-neutral-transparent);   
+  --ds-color-elements-datepicker-cell-default-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-elements-datepicker-cell-today-border-color: var(--ds-color-stroke-hover);   
+  --ds-color-elements-datepicker-cell-today-default-background: var(--ds-color-brand-neutral-default);   
+  --ds-color-elements-datepicker-cell-today-hover-background: var(--ds-color-brand-neutral-super-light);   
+  --ds-color-elements-datepicker-cell-today-press-background: var(--ds-color-brand-neutral-lighter);   
+  --ds-color-elements-datepicker-cell-today-disable-background: var(--ds-color-brand-neutral-lighter);   
+  --ds-color-elements-datepicker-cell-today-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-elements-datepicker-cell-selected-text-color: var(--ds-color-text-inversive);   
+  --ds-color-elements-datepicker-cell-selected-default-background: var(--ds-color-button-accent-filled-default-background);   
+  --ds-color-elements-datepicker-cell-selected-hover-background: var(--ds-color-button-accent-filled-hover-background);   
+  --ds-color-elements-datepicker-cell-selected-press-background: var(--ds-color-button-accent-filled-press-background);   
+  --ds-color-elements-datepicker-cell-range-default-background: var(--ds-color-brand-neutral-default);   
+  --ds-color-elements-datepicker-cell-range-press-state-layer: var(--ds-color-brand-neutral-lighter);   
+  --ds-color-elements-datepicker-cell-range-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-elements-datepicker-year-default-text-color: var(--ds-color-text-primary);   
+  --ds-color-elements-datepicker-year-default-default-background: var(--ds-color-brand-neutral-default);   
+  --ds-color-elements-datepicker-year-default-hover-background: var(--ds-color-brand-neutral-super-light);   
+  --ds-color-elements-datepicker-year-default-press-background: var(--ds-color-brand-neutral-lighter);   
+  --ds-color-elements-datepicker-year-default-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-elements-datepicker-year-today-border-color: var(--ds-color-stroke-hover);   
+  --ds-color-elements-datepicker-year-today-text-color: var(--ds-color-text-primary);   
+  --ds-color-elements-datepicker-year-today-default-background: var(--ds-color-brand-neutral-default);   
+  --ds-color-elements-datepicker-year-today-hover-background: var(--ds-color-brand-neutral-super-light);   
+  --ds-color-elements-datepicker-year-today-press-background: var(--ds-color-brand-neutral-lighter);   
+  --ds-color-elements-datepicker-year-today-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-elements-datepicker-year-selected-text-color: var(--ds-color-text-inversive);   
+  --ds-color-elements-datepicker-year-selected-default-background: var(--ds-color-button-accent-filled-default-background);   
+  --ds-color-elements-datepicker-year-selected-hover-background: var(--ds-color-button-accent-filled-hover-background);   
+  --ds-color-elements-datepicker-year-selected-press-background: var(--ds-color-button-accent-filled-press-background);   
+  --ds-color-elements-datepicker-month-text-color: var(--ds-color-text-primary);   
+  --ds-color-elements-datepicker-month-icon-color: var(--ds-color-icon-primary);   
+  --ds-color-elements-datepicker-month-default-default-background: var(--ds-color-brand-neutral-default);   
+  --ds-color-elements-datepicker-month-default-hover-background: var(--ds-color-brand-neutral-super-light);   
+  --ds-color-elements-datepicker-month-default-press-background: var(--ds-color-brand-neutral-lighter);   
+  --ds-color-elements-datepicker-month-default-disable-text-color: var(--ds-color-text-disable);   
+  --ds-color-elements-datepicker-month-default-disable-icon-color: var(--ds-color-icon-disable);   
+  --ds-elements-datepicker-year-selected-gap: var(--ds-space-2x);   
+  --ds-input-datepicker-icon: date_range;   
+  --ds-input-datepicker-empty-placeholder-text: ДД.ММ.ГГГГ;   
+  --ds-input-datepicker-populated-label-text: Дата;   
+  --ds-input-datepicker-populated-placeholder-text: ДД.ММ.ГГГГ;   
+  --ds-control-panel-datepicker-pad-top: var(--ds-space-1x);   
+  --ds-control-panel-datepicker-pad-bottom: var(--ds-space-1x);   
+  --ds-control-panel-datepicker-control-gap: Auto;   
+  --ds-control-panel-datepicker-week-pad-top: var(--ds-space-0-5x);   
+  --ds-control-panel-datepicker-week-pad-bottom: var(--ds-space-0-5x);   
+  --ds-datepicker-pad-top: var(--ds-space-2x);   
+  --ds-datepicker-pad-bottom: var(--ds-space-2x);   
+  --ds-datepicker-pad-left: var(--ds-space-4x);   
+  --ds-datepicker-pad-right: var(--ds-space-4x);   
+  --ds-datepicker-border-radius: var(--ds-radius-3x);   
+  --ds-datepicker-border-size: var(--ds-stroke-0-25x);   
+  --ds-color-datepicker-border-color: var(--ds-color-stroke-default);   
+  --ds-input-timepicker-icon: schedule_time;   
+  --ds-input-timepicker-empty-placeholder-text: ЧЧ.ММ;   
+  --ds-input-timepicker-populated-label-text: Время;   
+  --ds-input-timepicker-populated-placeholder-text: ЧЧ.ММ;   
+  --ds-elements-timepicker-border-radius: var(--ds-radius-circular);   
+  --ds-elements-timepicker-text-weight: var(--ds-typography-font-weight-regular);   
+  --ds-elements-timepicker-pad-left: var(--ds-space-4x);   
+  --ds-elements-timepicker-pad-right: var(--ds-space-4x);   
+  --ds-elements-timepicker-pad-top: var(--ds-space-2x);   
+  --ds-elements-timepicker-pad-bottom: var(--ds-space-2x);   
+  --ds-elements-timepicker-text-size: var(--ds-typography-body-font-size-m);   
+  --ds-color-elements-timepicker-selected-text-color: var(--ds-color-text-inversive);   
+  --ds-color-elements-timepicker-selected-default-background: var(--ds-color-button-accent-filled-default-background);   
+  --ds-color-elements-timepicker-selected-hover-background: var(--ds-color-button-accent-filled-hover-background);   
+  --ds-color-elements-timepicker-selected-press-background: var(--ds-color-button-accent-filled-press-background);   
+  --ds-color-elements-timepicker-default-text-color: var(--ds-color-text-primary);   
+  --ds-color-elements-timepicker-default-default-background: var(--ds-color-brand-neutral-default);   
+  --ds-color-elements-timepicker-default-hover-background: var(--ds-color-brand-neutral-super-light);   
+  --ds-color-elements-timepicker-default-press-background: var(--ds-color-brand-neutral-lighter);   
+  --ds-color-elements-timepicker-default-range-background: var(--ds-palette-accent-50);   
+  --ds-color-elements-timepicker-default-disable-text-color: var(--ds-color-text-disable);   
+  --ds-control-panel-timepicker-pad-top: var(--ds-space-1x);   
+  --ds-control-panel-timepicker-pad-bottom: var(--ds-space-1x);   
+  --ds-control-panel-timepicker-control-gap: Auto;   
+  --ds-control-panel-timepicker-time-pad-top: var(--ds-space-0-5x);   
+  --ds-control-panel-timepicker-time-pad-bottom: var(--ds-space-0-5x);   
+  --ds-timepicker-time-grid-pad-top: var(--ds-space-2x);   
+  --ds-timepicker-time-grid-pad-bottom: var(--ds-space-2x);   
+  --ds-timepicker-time-grid-border-radius: var(--ds-radius-3x);   
+  --ds-timepicker-time-grid-border-size: var(--ds-stroke-0-25x);   
+  --ds-color-timepicker-time-grid-border-color: var(--ds-color-stroke-default);   
+  --ds-timepicker-time-line-component: Select (Container);   
 
-  /* ── Совместимость: токены прежнего набора (140) ── */
+  
   --ds-color-chips-input-background-support: rgba(255, 255, 255, 0.0);
   --ds-color-chips-input-default-action-text-color: #616161;
   --ds-color-chips-input-default-background: #f8f9fc;
@@ -10281,10 +10269,8 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   --ds-shadow-xl: 0px 12px 16px 0px rgba(33, 33, 33, 0.161), 0px 0px 32px 0px rgba(33, 33, 33, 0.161);
 }
 
-/* ==== СТИЛИ FIGMA (авто: gen_style_tokens.py) ==== */
-/* Стили Figma (текст, тени, цвета) — выгрузка плагина v2. Не править руками. */
 :root {
-  /* --- Типографика (текстовые стили) --- */
+  
   --ds-font-header-l-34-normal-regular: 400 34px/40px "Roboto";
   --ds-font-header-l-34-normal-regular-size: 34px;
   --ds-font-header-l-34-normal-regular-line: 40px;
@@ -10465,13 +10451,13 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   --ds-font-caption-s-8-caps-medium-line: 10px;
   --ds-font-caption-s-8-caps-medium-spacing: 0.5px;
   --ds-font-caption-s-8-caps-medium-weight: 500;
-  /* --- Тени (эффект-стили) --- */
+  
   --ds-shadow-shadows-none: 0px 2px 0px 0px #ffffff;
   --ds-shadow-shadows-01-dp-sl: 0px 0px 4px 0px rgba(33, 33, 33, 0.12), 0px 2px 2px 0px rgba(33, 33, 33, 0.04);
   --ds-shadow-shadows-08-dp-s: 0px 0px 16px 0px rgba(33, 33, 33, 0.12), 0px 4px 6px 0px rgba(33, 33, 33, 0.1);
   --ds-shadow-shadows-12-dp-m: 0px 0px 28px 0px rgba(33, 33, 33, 0.12), 0px 10px 24px 0px rgba(33, 33, 33, 0.12);
   --ds-shadow-shadows-24-dp-xl: 0px 0px 32px 0px rgba(33, 33, 33, 0.16), 0px 12px 16px 0px rgba(33, 33, 33, 0.16);
-  /* --- Цветовые стили --- */
+  
   --ds-paint-surface-default: #ffffff;
   --ds-paint-surface-default-v2: #f8f9fc;
   --ds-paint-surface-hover: #f5f5f5;
@@ -10540,7 +10526,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   --ds-paint-stroke-error: #ff5252;
 }
 
-/* Классы типографики: применяются как есть, без хардкода размеров */
 .ds-text-header-l-34-normal-regular {
   font-family: "Roboto", sans-serif;
   font-size: var(--ds-font-header-l-34-normal-regular-size);
@@ -10812,7 +10797,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-weight: var(--ds-font-caption-s-8-caps-medium-weight);
   text-transform: uppercase;
 }
-/* ==== /СТИЛИ FIGMA ==== */
 
 ```
 
@@ -10821,13 +10805,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 Порядок важен: сначала автоген всех компонентов, затем ВЫВЕРЕННЫЕ вручную файлы — они должны перекрывать автоген, а не наоборот.
 
 ```css
-/* ============================================================
-   iiko DS — компоненты (все 111, сгенерировано из Figma)
-   Классы: .ds-<компонент> + модификаторы --<вариант>
-   Все значения — только токены из tokens.css
-   ============================================================ */
 
-/* Arrow [55939:14119] — 13 вариантов; оси: Content */
 .ds-arrow {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
@@ -10860,7 +10838,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   background: #ffffff;
 }
 
-/* Arrow list [55939:13307] — 13 вариантов; оси: Content */
 .ds-arrow-list {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
@@ -10893,7 +10870,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   background: #ffffff;
 }
 
-/* Arrow menu [56090:1628] — 13 вариантов; оси: Content */
 .ds-arrow-menu {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
@@ -10926,7 +10902,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   background: #ffffff;
 }
 
-/* Arrow select [57735:17989] — 13 вариантов; оси: Content */
 .ds-arrow-select {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
@@ -10959,7 +10934,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   background: #ffffff;
 }
 
-/* Autocomplete form [58107:8230] — 10 вариантов; оси: Variant, State */
 .ds-autocomplete-form {
   min-height: 48px;
   width: 250px;
@@ -11045,8 +11019,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Backdrop [53623:806] — 1 вариантов; оси: Type */
-/* height из макета Figma: 240px — размер примера, задавайте по месту */
 .ds-backdrop {
   display: flex;
   flex-direction: row;
@@ -11055,7 +11027,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Button toggle [17039:71554] — 12 вариантов; оси: Size, Type, Content */
 .ds-button-toggle {
   width: fit-content;
   display: flex;
@@ -11119,7 +11090,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   background: var(--ds-color-button-toggle-filled-background, #ffffff);
 }
 
-/* Checkbox label [53810:880] — 9 вариантов; оси: Variant, Type */
 .ds-checkbox-label {
   min-height: var(--ds-size-5x);
   width: fit-content;
@@ -11213,7 +11183,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-checkbox-label-text-disable-color, #9e9e9e);
 }
 
-/* Chips [17168:83542] — 18 вариантов; оси: Size, Type, State */
 .ds-chips {
   width: fit-content;
   display: flex;
@@ -11341,7 +11310,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Chips group [55750:5485] — 2 вариантов; оси: Size */
 .ds-chips-group {
   width: fit-content;
   display: flex;
@@ -11381,7 +11349,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-4x);
 }
 
-/* Chips Input [52916:14622] — 16 вариантов; оси: Size, State */
 .ds-chips-input {
   width: 280px;
   display: flex;
@@ -11471,7 +11438,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Chips Input [61382:55775] — 16 вариантов; оси: Size, State; ДУБЛЬ имени — второй сет «Chips Input», различать по node_id */
 .ds-chips-input-2 {
   width: 280px;
   display: flex;
@@ -11557,7 +11523,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Chips input cell [60231:75648] — 8 вариантов; оси: State */
 .ds-chips-input-cell {
   min-height: var(--ds-size-10x);
   width: fit-content;
@@ -11624,7 +11589,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Control arrow button [52868:3935] — 3 вариантов; оси: Size */
 .ds-control-arrow-button {
   width: fit-content;
   display: flex;
@@ -11659,7 +11623,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: var(--ds-size-3x);
 }
 
-/* Control Panel [58501:4052] — 3 вариантов; оси: Type */
 .ds-control-panel {
   display: flex;
   width: 280px;
@@ -11742,7 +11705,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-text-primary, #333333);
 }
 
-/* Control Panel [58982:11018] — 2 вариантов; оси: Type; ДУБЛЬ имени — второй сет «Control Panel», различать по node_id */
 .ds-control-panel-2 {
   display: flex;
   flex-direction: row;
@@ -11810,7 +11772,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-text-primary, #333333);
 }
 
-/* Datepicker [58509:5439] — 3 вариантов; оси: Type */
 .ds-datepicker {
   width: fit-content;
   display: flex;
@@ -11888,7 +11849,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-text-primary, #333333);
 }
 
-/* Dialog content [53535:1369] — 1 вариантов; оси: State */
 .ds-dialog-content {
   min-height: 204px;
   width: 500px;
@@ -11935,7 +11895,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   background: var(--ds-color-scroll-default-background, #fafafa);
 }
 
-/* Dialog footer [53749:638] — 1 вариантов; оси: State */
 .ds-dialog-footer {
   min-height: 69px;
   width: 501px;
@@ -11992,7 +11951,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 
-/* Dialog header [53535:1322] — 2 вариантов; оси: Type */
 .ds-dialog-header {
   width: 500px;
   display: flex;
@@ -12050,7 +12008,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-dialog-header-title-color, #333333);
 }
 
-/* Dialog view [52952:1285] — 1 вариантов; оси: State */
 .ds-dialog-view {
   min-height: 364px;
   width: 500px;
@@ -12120,7 +12077,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   padding: var(--ds-dialog-footer-pad-top, 16px) var(--ds-dialog-footer-pad-right, 24px) var(--ds-dialog-footer-pad-bottom, 16px) var(--ds-dialog-footer-pad-left, 24px);
 }
 
-/* Element [54104:20956] — 9 вариантов; оси: Content */
 .ds-element {
   display: flex;
   background: #ffffff;
@@ -12194,7 +12150,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-badge-text-color, #ffffff);
 }
 
-/* Element cell [58885:32432] — 11 вариантов; оси: Variant */
 .ds-element-cell {
   width: fit-content;
   display: flex;
@@ -12289,7 +12244,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 
-/* Element Form Field [60231:76795] — 3 вариантов; оси: Variant */
 .ds-element-form-field {
   width: fit-content;
   display: flex;
@@ -12328,7 +12282,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: #616161;
 }
 
-/* Element left [59851:11313] — 5 вариантов; оси: Style */
 .ds-element-left {
   min-height: var(--ds-size-5x);
   width: fit-content;
@@ -12362,7 +12315,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   background: #ffffff;
 }
 
-/* Element menu [56090:1611] — 8 вариантов; оси: Content */
 .ds-element-menu {
   display: flex;
   background: #ffffff;
@@ -12432,7 +12384,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-badge-text-color, #ffffff);
 }
 
-/* Element select [57735:17972] — 8 вариантов; оси: Content */
 .ds-element-select {
   display: flex;
   background: #ffffff;
@@ -12502,7 +12453,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-badge-text-color, #ffffff);
 }
 
-/* Element sidenav [56598:2991] — 2 вариантов; оси: Content */
 .ds-element-sidenav {
   height: var(--ds-size-5x);
   width: var(--ds-size-5x);
@@ -12553,7 +12503,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-text-accent, #448aff);
 }
 
-/* Element step [55403:7248] — 12 вариантов; оси: Content, State */
 .ds-element-step {
   min-height: var(--ds-size-6x);
   width: fit-content;
@@ -12622,7 +12571,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Elementare cell [60220:72578] — 10 вариантов; оси: Variant */
 .ds-elementare-cell {
   width: fit-content;
   display: flex;
@@ -12712,7 +12660,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-chips-text-color, #333333);
 }
 
-/* Elements [58501:4220] — 30 вариантов; оси: Type, Variant, State */
 .ds-elements {
   display: flex;
   height: var(--ds-size-10x);
@@ -12891,7 +12838,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Elements [58982:9594] — 8 вариантов; оси: Variant, State; ДУБЛЬ имени — второй сет «Elements», различать по node_id */
 .ds-elements-2 {
   min-height: var(--ds-size-10x);
   width: fit-content;
@@ -12957,7 +12903,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Expansion content [61361:99603] — 2 вариантов; оси: Padding off/on */
 .ds-expansion-content {
   width: 597px;
   display: flex;
@@ -12982,7 +12927,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-expansion-panel-content-text-color, #333333);
 }
 
-/* Expansion group panel [56155:1676] — 2 вариантов; оси: Type ? */
 .ds-expansion-group-panel {
   width: 597px;
   display: flex;
@@ -13006,7 +12950,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-expansion-panel-collaps-text-color, #333333);
 }
 
-/* Form field cell [60220:72732] — 1 вариантов; оси: Variant */
 .ds-form-field-cell {
   min-height: var(--ds-size-10x);
   width: fit-content;
@@ -13029,7 +12972,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   padding: var(--ds-table-cell-pad-top, 8px) var(--ds-table-cell-pad-right, 8px) var(--ds-table-cell-pad-bottom, 8px) var(--ds-table-cell-pad-left, 8px);
 }
 
-/* Hint container [54593:479] — 10 вариантов; оси: Size, Orientation */
 .ds-hint-container {
   width: 250px;
   display: flex;
@@ -13113,7 +13055,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 
-/* Hint content [54713:3325] — 2 вариантов; оси: Content */
 .ds-hint-content {
   width: 250px;
   display: flex;
@@ -13183,7 +13124,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-hint-content-text-color, #ffffff);
 }
 
-/* Hint footer [54600:517] — 1 вариантов; оси: Content */
 .ds-hint-footer {
   min-height: 56px;
   width: 250px;
@@ -13240,7 +13180,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-hint-footer-text-color, #ffffff);
 }
 
-/* Hint header [54594:2219] — 5 вариантов; оси: Style */
 .ds-hint-header {
   min-height: var(--ds-size-8x);
   width: 250px;
@@ -13324,7 +13263,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-hint-header-text-color, #ffffff);
 }
 
-/* Icon group [53467:1060] — 2 вариантов; оси: Size gap */
 .ds-icon-group {
   min-height: var(--ds-size-5x);
   width: fit-content;
@@ -13355,7 +13293,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   gap: var(--ds-icon-size-gap-group-4x, 16px);
 }
 
-/* Input cell [60229:74436] — 8 вариантов; оси: State */
 .ds-input-cell {
   min-height: var(--ds-size-9x);
   width: 200px;
@@ -13421,7 +13358,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Input Datepicker [58548:4764] — 2 вариантов; оси: Type */
 .ds-input-datepicker {
   min-height: 48px;
   width: 250px;
@@ -13477,7 +13413,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 
-/* Input number [17193:84750] — 29 вариантов; оси: Size, Variant, State */
 .ds-input-number {
   display: flex;
   flex-direction: row;
@@ -13569,7 +13504,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Input number_but icon [56967:10506] — 1 вариантов; оси: — */
 .ds-input-number-but-icon {
   min-height: 56px;
   width: fit-content;
@@ -13635,7 +13569,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-form-field-filled-default-support-text-color, #616161);
 }
 
-/* Input Timepicker [58982:9561] — 2 вариантов; оси: Type */
 .ds-input-timepicker {
   min-height: 48px;
   width: 250px;
@@ -13691,7 +13624,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-form-field-filled-default-label-text-color, #616161);
 }
 
-/* List (Сontainer) [57604:4762] — 1 вариантов; оси: Type */
 .ds-list-container {
   min-height: 257px;
   width: 258px;
@@ -13766,7 +13698,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-list-item-text-label-color, #616161);
 }
 
-/* List item [54101:7922] — 8 вариантов; оси: State */
 .ds-list-item {
   min-height: 68px;
   width: 258px;
@@ -13876,7 +13807,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Logo iiko [55332:19892] — 4 вариантов; оси: Size, Style */
 .ds-logo-iiko {
   height: 72px;
   display: flex;
@@ -13892,7 +13822,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   background: var(--ds-palette-neutral-0, #ffffff);
 }
 
-/* Logo Syrve [56079:771] — 4 вариантов; оси: Size, Style */
 .ds-logo-syrve {
   height: 72px;
   display: flex;
@@ -13908,7 +13837,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   background: #00062b;
 }
 
-/* Menu (Container) [54163:6705] — 1 вариантов; оси: Type */
 .ds-menu-container {
   min-height: 418px;
   width: 240px;
@@ -13999,7 +13927,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-search-default-text-color, #d6d6d6);
 }
 
-/* Menu item [56090:1476] — 7 вариантов; оси: State */
 .ds-menu-item {
   min-height: 68px;
   width: 258px;
@@ -14109,7 +14036,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Picture [58937:3985] — 1 вариантов; оси: — */
 .ds-picture {
   min-height: 189px;
   width: 446px;
@@ -14137,7 +14063,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   gap: 440px;
 }
 
-/* Radio button label [54095:4306] — 6 вариантов; оси: Variant, Type */
 .ds-radio-button-label {
   min-height: var(--ds-size-5x);
   width: fit-content;
@@ -14231,7 +14156,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-radio-button-label-text-disable-color, #9e9e9e);
 }
 
-/* Scroll [53615:15339] — 12 вариантов; оси: Size, Position, State */
 .ds-scroll {
   display: flex;
   flex-direction: column;
@@ -14271,7 +14195,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   background: var(--ds-color-scroll-hover-background, #ebebeb);
 }
 
-/* Scroll tabs [59032:1821] — 4 вариантов; оси: Orientation, State */
 .ds-scroll-tabs {
   min-height: var(--ds-size-7x);
   width: fit-content;
@@ -14318,7 +14241,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   padding: 0 48px 0 0;
 }
 
-/* Search [54453:1620] — 15 вариантов; оси: Size, State */
 .ds-search {
   display: flex;
   flex-direction: row;
@@ -14419,7 +14341,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Select (Сontainer) [57735:17612] — 1 вариантов; оси: Type */
 .ds-select-container {
   min-height: 406px;
   width: 240px;
@@ -14519,7 +14440,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-search-default-text-color, #d6d6d6);
 }
 
-/* Select cell [60231:74976] — 7 вариантов; оси: State */
 .ds-select-cell {
   min-height: var(--ds-size-9x);
   width: 200px;
@@ -14590,7 +14510,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Select form [57862:17226] — 22 вариантов; оси: Size, Variant, State */
 .ds-select-form {
   width: 250px;
   display: flex;
@@ -14683,7 +14602,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Select item [57735:17872] — 8 вариантов; оси: State, Subtitle */
 .ds-select-item {
   width: 258px;
   display: flex;
@@ -14799,7 +14717,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Sidenav control [55142:1734] — 6 вариантов; оси: Mode, State */
 .ds-sidenav-control {
   min-height: 41px;
   display: flex;
@@ -14883,7 +14800,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   gap: var(--ds-sidenav-control-collapsed-gap);
 }
 
-/* Sidenav Footer [55111:1056] — 3 вариантов; оси: Type, Mode */
 .ds-sidenav-footer {
   display: flex;
   width: 260px;
@@ -14945,7 +14861,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-text-accent, #448aff);
 }
 
-/* Sidenav header [55045:637] — 3 вариантов; оси: Type, Mode */
 .ds-sidenav-header {
   display: flex;
   align-items: center;
@@ -15021,7 +14936,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   background: var(--ds-color-sidenav-header-l1-background, #263136);
 }
 
-/* Sidenav item [55070:3734] — 13 вариантов; оси: Type, Mode, State */
 .ds-sidenav-item {
   display: flex;
   width: 260px;
@@ -15087,8 +15001,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   background: var(--ds-color-sidenav-item-l1-background, #263136);
 }
 
-/* Sidenav View [55074:393] — 3 вариантов; оси: Type, State */
-/* height из макета Figma: 1024px — размер примера, задавайте по месту */
 .ds-sidenav-view {
   display: flex;
   flex-direction: column;
@@ -15144,7 +15056,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   background: #ffffff;
 }
 
-/* Snackbar [54373:10303] — 4 вариантов; оси: Type, Mode */
 .ds-snackbar {
   display: flex;
   flex-direction: column;
@@ -15232,7 +15143,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-snackbar-complex-light-text-color, #333333);
 }
 
-/* State [54063:12395] — 2 вариантов; оси: State */
 .ds-state {
   height: var(--ds-size-6x);
   width: var(--ds-size-6x);
@@ -15248,7 +15158,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   background: #e0e0e0;
 }
 
-/* Status [52928:6588] — 18 вариантов; оси: Style, Type */
 .ds-status {
   width: fit-content;
   display: flex;
@@ -15384,7 +15293,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-status-contrast-4-text-text-color, #4f5412);
 }
 
-/* Table 2 lvl [60074:44684] — 2 вариантов; оси: Type */
 .ds-table-2-lvl {
   min-height: 72px;
   display: flex;
@@ -15408,7 +15316,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   align-items: center;
 }
 
-/* Table Chips Input [60220:70978] — 8 вариантов; оси: Style */
 .ds-table-chips-input {
   min-height: var(--ds-size-6x);
   width: fit-content;
@@ -15482,7 +15389,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: #9e9e9e;
 }
 
-/* Table content cell [52954:1253] — 8 вариантов; оси: State */
 .ds-table-content-cell {
   min-height: var(--ds-size-9x);
   width: fit-content;
@@ -15540,7 +15446,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Table content row [60105:56764] — 5 вариантов; оси: State */
 .ds-table-content-row {
   min-height: var(--ds-size-9x);
   width: fit-content;
@@ -15572,7 +15477,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Table footer [59207:20759] — 1 вариантов; оси: Type */
 .ds-table-footer {
   height: 65px;
   width: 980px;
@@ -15610,7 +15514,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-expansion-panel-content-text-color, #333333);
 }
 
-/* Table header cell [60098:45424] — 3 вариантов; оси: State */
 .ds-table-header-cell {
   min-height: var(--ds-size-9x);
   width: fit-content;
@@ -15672,7 +15575,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Table header row [53556:3571] — 1 вариантов; оси: State */
 .ds-table-header-row {
   min-height: var(--ds-size-9x);
   width: fit-content;
@@ -15693,7 +15595,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   white-space: nowrap;
 }
 
-/* Text UI [57938:18290] — 7 вариантов; оси: State */
 .ds-text-ui {
   min-height: 52px;
   width: fit-content;
@@ -15793,7 +15694,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Textarea [57916:9023] — 13 вариантов; оси: Size, Variant, State */
 .ds-textarea {
   min-height: 96px;
   width: 250px;
@@ -15905,7 +15805,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* Timepicker [58982:9858] — 2 вариантов; оси: Type */
 .ds-timepicker {
   width: fit-content;
   display: flex;
@@ -15962,7 +15861,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-text-primary, #333333);
 }
 
-/* Tree [59564:1473] — 8 вариантов; оси: Level, Mode, For icon */
 .ds-tree {
   height: 44px;
   width: fit-content;
@@ -16030,7 +15928,6 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   align-items: center;
 }
 
-/* Tree item [59564:1504] — 5 вариантов; оси: Mode */
 .ds-tree-item {
   height: 44px;
   display: flex;
@@ -16073,25 +15970,17 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   padding: 0 var(--ds-size-3x) 0 11px;
 }
 
-/* ============================================================
-   iiko DS — Button (кнопка)
-   Источник: Figma, страница «🔵Готово 🧾 → Button»
-   Варианты: Size XS/S/M · Style Accent/Neutral/Positive/Negative/Warning/Disable
-             Type Filled/Outlined/Text · State Default/Hover/Press/Disable
-   Все значения — только токены из tokens.css
-   ============================================================ */
-
 .ds-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   border: 1px solid transparent;
-  border-radius: var(--ds-radius-2x);            /* 8px */
+  border-radius: var(--ds-radius-2x);            
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  font-size: var(--ds-typography-font-size-3-5x); /* 14px */
-  font-weight: var(--ds-typography-font-weight-medium); /* 500 */
-  letter-spacing: var(--ds-typography-letter-spacing-s); /* 0.5px */
+  font-size: var(--ds-typography-font-size-3-5x); 
+  font-weight: var(--ds-typography-font-weight-medium); 
+  letter-spacing: var(--ds-typography-letter-spacing-s); 
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
@@ -16109,16 +15998,13 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* ── Размеры ─────────────────────────────────────────────── */
-
 .ds-btn--xs {
   height: 24px;
   padding: 4px 6px;
-  gap: var(--ds-space-1x);                        /* 4px */
-  font-size: var(--ds-typography-font-size-3x);   /* 12px */
+  gap: var(--ds-space-1x);                        
+  font-size: var(--ds-typography-font-size-3x);   
 }
-.ds-btn--xs /* Контейнер текста (Figma: «Button Container» — HUG, выравнивание по центру).
-   Своей типографики нет: размер/вес/цвет наследуются от .ds-btn */
+.ds-btn--xs 
 .ds-btn__label {
   display: inline-flex;
   align-items: center;
@@ -16138,22 +16024,18 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-btn--m {
   height: 36px;
   padding: 8px 12px;
-  gap: var(--ds-space-2x);                        /* 8px */
+  gap: var(--ds-space-2x);                        
 }
 .ds-btn--m .ds-btn__icon { font-size: 20px; }
-
-/* ── Группа кнопок (Button group из Figma) ───────────────── */
 
 .ds-btn-group {
   display: flex;
 }
-.ds-btn-group--horizontal { flex-direction: row; gap: var(--ds-button-group-gap); }    /* 8px */
-.ds-btn-group--vertical   { flex-direction: column; gap: var(--ds-button-group-gap); } /* 8px */
+.ds-btn-group--horizontal { flex-direction: row; gap: var(--ds-button-group-gap); }    
+.ds-btn-group--vertical   { flex-direction: column; gap: var(--ds-button-group-gap); } 
 .ds-btn-group--margins {
-  padding: var(--ds-button-group-margins-pad-top) var(--ds-button-group-margins-pad-right); /* 8px 16px */
+  padding: var(--ds-button-group-margins-pad-top) var(--ds-button-group-margins-pad-right); 
 }
-
-/* ── Иконки ──────────────────────────────────────────────── */
 
 .ds-btn__icon {
   display: inline-flex;
@@ -16164,22 +16046,20 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   line-height: 1;
 }
 
-/* ── Стили: Accent ───────────────────────────────────────── */
-
 .ds-btn--accent.ds-btn--filled {
-  background: var(--ds-color-button-accent-default);   /* #448AFF */
-  color: var(--ds-color-text-inversive);               /* #FFFFFF */
+  background: var(--ds-color-button-accent-default);   
+  color: var(--ds-color-text-inversive);               
 }
-.ds-btn--accent.ds-btn--filled:hover  { background: var(--ds-color-button-accent-hover); }   /* #3969D5 */
-.ds-btn--accent.ds-btn--filled:active { background: var(--ds-color-button-accent-press); }   /* #2651B5 */
+.ds-btn--accent.ds-btn--filled:hover  { background: var(--ds-color-button-accent-hover); }   
+.ds-btn--accent.ds-btn--filled:active { background: var(--ds-color-button-accent-press); }   
 
 .ds-btn--accent.ds-btn--outlined {
-  background: var(--ds-color-button-accent-lite-default); /* #FFFFFF */
+  background: var(--ds-color-button-accent-lite-default); 
   border-color: var(--ds-color-button-accent-default);
   color: var(--ds-color-button-accent-default);
 }
-.ds-btn--accent.ds-btn--outlined:hover  { background: var(--ds-color-button-accent-lite-hover); } /* #F5F9FF */
-.ds-btn--accent.ds-btn--outlined:active { background: var(--ds-color-button-accent-lite-press); } /* #E8F0FF */
+.ds-btn--accent.ds-btn--outlined:hover  { background: var(--ds-color-button-accent-lite-hover); } 
+.ds-btn--accent.ds-btn--outlined:active { background: var(--ds-color-button-accent-lite-press); } 
 
 .ds-btn--accent.ds-btn--text {
   background: var(--ds-color-button-accent-lite-default);
@@ -16188,18 +16068,16 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-btn--accent.ds-btn--text:hover  { background: var(--ds-color-button-accent-lite-hover); }
 .ds-btn--accent.ds-btn--text:active { background: var(--ds-color-button-accent-lite-press); }
 
-/* ── Стили: Neutral ──────────────────────────────────────── */
-
 .ds-btn--neutral.ds-btn--filled {
-  background: var(--ds-color-button-neutral-default); /* #FFFFFF */
-  color: var(--ds-color-text-primary);                /* #333333 */
+  background: var(--ds-color-button-neutral-default); 
+  color: var(--ds-color-text-primary);                
 }
-.ds-btn--neutral.ds-btn--filled:hover  { background: var(--ds-color-button-neutral-hover); } /* #FAFAFA */
-.ds-btn--neutral.ds-btn--filled:active { background: var(--ds-color-button-neutral-press); } /* #EBEBEB */
+.ds-btn--neutral.ds-btn--filled:hover  { background: var(--ds-color-button-neutral-hover); } 
+.ds-btn--neutral.ds-btn--filled:active { background: var(--ds-color-button-neutral-press); } 
 
 .ds-btn--neutral.ds-btn--outlined {
   background: var(--ds-color-button-neutral-default);
-  border-color: var(--ds-color-stroke-default);      /* #E0E0E0 */
+  border-color: var(--ds-color-stroke-default);      
   color: var(--ds-color-text-primary);
 }
 .ds-btn--neutral.ds-btn--outlined:hover  { background: var(--ds-color-button-neutral-hover); }
@@ -16212,22 +16090,20 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-btn--neutral.ds-btn--text:hover  { background: var(--ds-color-button-neutral-hover); }
 .ds-btn--neutral.ds-btn--text:active { background: var(--ds-color-button-neutral-press); }
 
-/* ── Стили: Positive ─────────────────────────────────────── */
-
 .ds-btn--positive.ds-btn--filled {
-  background: var(--ds-color-button-positive-default); /* #14B456 */
+  background: var(--ds-color-button-positive-default); 
   color: var(--ds-color-text-inversive);
 }
-.ds-btn--positive.ds-btn--filled:hover  { background: var(--ds-color-button-positive-hover); } /* #119C34 */
-.ds-btn--positive.ds-btn--filled:active { background: var(--ds-color-button-positive-press); } /* #0F852C */
+.ds-btn--positive.ds-btn--filled:hover  { background: var(--ds-color-button-positive-hover); } 
+.ds-btn--positive.ds-btn--filled:active { background: var(--ds-color-button-positive-press); } 
 
 .ds-btn--positive.ds-btn--outlined {
   background: var(--ds-color-button-positive-lite-default);
   border-color: var(--ds-color-button-positive-default);
   color: var(--ds-color-button-positive-default);
 }
-.ds-btn--positive.ds-btn--outlined:hover  { background: var(--ds-color-button-positive-lite-hover); } /* #F3FCF7 */
-.ds-btn--positive.ds-btn--outlined:active { background: var(--ds-color-button-positive-lite-press); } /* #E0F8EA */
+.ds-btn--positive.ds-btn--outlined:hover  { background: var(--ds-color-button-positive-lite-hover); } 
+.ds-btn--positive.ds-btn--outlined:active { background: var(--ds-color-button-positive-lite-press); } 
 
 .ds-btn--positive.ds-btn--text {
   background: var(--ds-color-button-positive-lite-default);
@@ -16236,22 +16112,20 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-btn--positive.ds-btn--text:hover  { background: var(--ds-color-button-positive-lite-hover); }
 .ds-btn--positive.ds-btn--text:active { background: var(--ds-color-button-positive-lite-press); }
 
-/* ── Стили: Negative ─────────────────────────────────────── */
-
 .ds-btn--negative.ds-btn--filled {
-  background: var(--ds-color-button-negative-default); /* #FF5252 */
+  background: var(--ds-color-button-negative-default); 
   color: var(--ds-color-text-inversive);
 }
-.ds-btn--negative.ds-btn--filled:hover  { background: var(--ds-color-button-negative-hover); } /* #F4372F */
-.ds-btn--negative.ds-btn--filled:active { background: var(--ds-color-button-negative-press); } /* #DE1A12 */
+.ds-btn--negative.ds-btn--filled:hover  { background: var(--ds-color-button-negative-hover); } 
+.ds-btn--negative.ds-btn--filled:active { background: var(--ds-color-button-negative-press); } 
 
 .ds-btn--negative.ds-btn--outlined {
   background: var(--ds-color-button-negative-lite-default);
   border-color: var(--ds-color-button-negative-default);
   color: var(--ds-color-button-negative-default);
 }
-.ds-btn--negative.ds-btn--outlined:hover  { background: var(--ds-color-button-negative-lite-hover); } /* #FFF8F8 */
-.ds-btn--negative.ds-btn--outlined:active { background: var(--ds-color-button-negative-lite-press); } /* #FFE5E5 */
+.ds-btn--negative.ds-btn--outlined:hover  { background: var(--ds-color-button-negative-lite-hover); } 
+.ds-btn--negative.ds-btn--outlined:active { background: var(--ds-color-button-negative-lite-press); } 
 
 .ds-btn--negative.ds-btn--text {
   background: var(--ds-color-button-negative-lite-default);
@@ -16260,22 +16134,20 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-btn--negative.ds-btn--text:hover  { background: var(--ds-color-button-negative-lite-hover); }
 .ds-btn--negative.ds-btn--text:active { background: var(--ds-color-button-negative-lite-press); }
 
-/* ── Стили: Warning ──────────────────────────────────────── */
-
 .ds-btn--warning.ds-btn--filled {
-  background: var(--ds-color-button-warning-default); /* #FFAB40 */
+  background: var(--ds-color-button-warning-default); 
   color: var(--ds-color-text-inversive);
 }
-.ds-btn--warning.ds-btn--filled:hover  { background: var(--ds-color-button-warning-hover); } /* #FE8C06 */
-.ds-btn--warning.ds-btn--filled:active { background: var(--ds-color-button-warning-press); } /* #EA7806 */
+.ds-btn--warning.ds-btn--filled:hover  { background: var(--ds-color-button-warning-hover); } 
+.ds-btn--warning.ds-btn--filled:active { background: var(--ds-color-button-warning-press); } 
 
 .ds-btn--warning.ds-btn--outlined {
   background: var(--ds-color-button-warning-lite-default);
   border-color: var(--ds-color-button-warning-default);
-  color: var(--ds-color-button-warning-press);      /* по ДС текст #EA7806 */
+  color: var(--ds-color-button-warning-press);      
 }
-.ds-btn--warning.ds-btn--outlined:hover  { background: var(--ds-color-button-warning-lite-hover); } /* #FFFCF8 */
-.ds-btn--warning.ds-btn--outlined:active { background: var(--ds-color-button-warning-lite-press); } /* #FFF4E5 */
+.ds-btn--warning.ds-btn--outlined:hover  { background: var(--ds-color-button-warning-lite-hover); } 
+.ds-btn--warning.ds-btn--outlined:active { background: var(--ds-color-button-warning-lite-press); } 
 
 .ds-btn--warning.ds-btn--text {
   background: var(--ds-color-button-warning-lite-default);
@@ -16284,12 +16156,10 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-btn--warning.ds-btn--text:hover  { background: var(--ds-color-button-warning-lite-hover); }
 .ds-btn--warning.ds-btn--text:active { background: var(--ds-color-button-warning-lite-press); }
 
-/* ── Стили: Disable / disabled ───────────────────────────── */
-
 .ds-btn--filled:disabled,
 .ds-btn--filled.ds-btn--disabled {
-  background: var(--ds-color-button-neutral-disable); /* #EBEBEB */
-  color: var(--ds-color-text-disable);                /* #9E9E9E */
+  background: var(--ds-color-button-neutral-disable); 
+  color: var(--ds-color-text-disable);                
 }
 
 .ds-btn--outlined:disabled,
@@ -16305,26 +16175,17 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   color: var(--ds-color-text-disable);
 }
 
-/* ============================================================
-   iiko DS — Button icon + Button icon group
-   Источник: Figma, страница «Button icon» [17123:81299], 153 варианта
-   Оси: Size (M/S/XS) × Style (Accent/Negative/Neutral/Positive/Warning)
-        × Type (Filled/Outlined/Text) × State (Default/Hover/Press/Disable/Loading)
-   Размеры: M 36×36 (иконка 20) · S 28×28 (иконка 20) · XS 24×24 (иконка 16)
-   Радиус 8px у всех размеров
-   ============================================================ */
-
 .ds-btn-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   flex-shrink: 0;
-  width: var(--ds-size-9x);                    /* M: 36px */
+  width: var(--ds-size-9x);                    
   height: var(--ds-size-9x);
-  padding: var(--ds-space-2x);                 /* 8px */
+  padding: var(--ds-space-2x);                 
   border: 1px solid transparent;
-  border-radius: var(--ds-radius-2x);          /* 8px */
+  border-radius: var(--ds-radius-2x);          
   background: none;
   cursor: pointer;
   transition: background-color .12s ease, border-color .12s ease;
@@ -16334,37 +16195,33 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--ds-size-5x);                    /* 20px */
+  width: var(--ds-size-5x);                    
   height: var(--ds-size-5x);
-  flex-shrink: 0;                              /* иконка не сжимается */
+  flex-shrink: 0;                              
 }
 .ds-btn-icon__icon svg { width: 100%; height: 100%; display: block; }
 .ds-btn-icon__icon svg path { fill: currentColor; }
 
-/* ── Размеры ──────────────────────────────────────────────── */
-
 .ds-btn-icon--m {
-  width: var(--ds-size-9x);                    /* 36px */
+  width: var(--ds-size-9x);                    
   height: var(--ds-size-9x);
-  padding: var(--ds-space-2x);                 /* 8px */
+  padding: var(--ds-space-2x);                 
 }
 .ds-btn-icon--s {
-  width: var(--ds-size-7x);                    /* 28px */
+  width: var(--ds-size-7x);                    
   height: var(--ds-size-7x);
-  padding: var(--ds-space-1x);                 /* 4px */
+  padding: var(--ds-space-1x);                 
 }
 .ds-btn-icon--xs {
-  width: var(--ds-size-6x);                    /* 24px */
+  width: var(--ds-size-6x);                    
   height: var(--ds-size-6x);
-  padding: var(--ds-space-1x);                 /* 4px */
+  padding: var(--ds-space-1x);                 
 }
 .ds-btn-icon--xs .ds-btn-icon__icon {
-  width: var(--ds-size-4x);                    /* 16px */
+  width: var(--ds-size-4x);                    
   height: var(--ds-size-4x);
-  flex-shrink: 0;                              /* иконка не сжимается */
+  flex-shrink: 0;                              
 }
-
-/* ── Состояния: общие ─────────────────────────────────────── */
 
 .ds-btn-icon:disabled,
 .ds-btn-icon--disabled {
@@ -16383,19 +16240,15 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   border-color: transparent;
 }
 
-/* ── Button icon group (Orientation=Horizontally / Vertically) ── */
-
 .ds-btn-icon-group {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--ds-space-2x);                     /* 8px */
+  gap: var(--ds-space-2x);                     
 }
 .ds-btn-icon-group--vertically {
   flex-direction: column;
 }
-
-/* ── Стиль × Тип (все комбинации, значения из токенов ДС) ── */
 
 .ds-btn-icon--accent.ds-btn-icon--filled {
   background: var(--ds-color-button-icon-accent-filled-default-background);
@@ -16553,57 +16406,42 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   background: var(--ds-color-button-icon-warning-text-press-background);
 }
 
-/* ============================================================
-   iiko DS — Input (Form field + Input)
-   Источник: Figma, страница «     Form field+Input», COMPONENT_SET «Input»
-   Свойства: Size (M/S/XS) · Variant (Empty/Populated/No label up) · State (8)
-   M — лейбл сверху (48px), S — 36px, XS — 28px (S/XS без лейбла)
-   XS: Border radius = 0px, фон прозрачный (fill visible=false) — 1:1 из Figma
-   Все значения — только токены из tokens.css
-   ============================================================ */
-
 .ds-input {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-space-1x);            /* 4px — Input/Gap input support */
+  gap: var(--ds-space-1x);            
   width: 100%;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* ── Рамка поля (Input Frame) ─────────────────────────── */
-
 .ds-input__frame {
   display: flex;
   align-items: center;
-  gap: var(--ds-space-2x);            /* 8px — Input/Gap input frame */
+  gap: var(--ds-space-2x);            
   box-sizing: border-box;
-  border: 1px solid var(--ds-color-stroke-default);   /* #E0E0E0 */
-  border-radius: var(--ds-radius-3x);                 /* 12px — Input/Border radius */
-  background: var(--ds-color-shapes-default-variant); /* #F8F9FC — Input/Input filled background */
+  border: 1px solid var(--ds-color-stroke-default);   
+  border-radius: var(--ds-radius-3x);                 
+  background: var(--ds-color-shapes-default-variant); 
   transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
-.ds-input--m .ds-input__frame { height: 48px; padding: 12px; }               /* M: Pad 12/12 */
-.ds-input--s .ds-input__frame { height: 36px; padding: 6px 12px; }           /* S: Pad 6/12 */
+.ds-input--m .ds-input__frame { height: 48px; padding: 12px; }               
+.ds-input--s .ds-input__frame { height: 36px; padding: 6px 12px; }           
 .ds-input--xs .ds-input__frame {
   height: 28px;
-  padding: 4px 8px;                 /* XS: Pad 4/8 */
-  border-radius: var(--ds-radius-0);   /* XS: Border radius = 0px */
-  background: transparent;             /* XS: заливка выключена в Figma */
+  padding: 4px 8px;                 
+  border-radius: var(--ds-radius-0);   
+  background: transparent;             
 }
-
-/* ── Иконки слева/справа (Element left / Element right) ── */
 
 .ds-input__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-size: 20px;                   /* Input/[M|S|XS] size/Icon: узлы 20×20 */
-  color: var(--ds-color-icon-primary);  /* #616161 */
+  font-size: 20px;                   
+  color: var(--ds-color-icon-primary);  
 }
-
-/* ── Содержимое: лейбл + поле ─────────────────────────── */
 
 .ds-input__content {
   display: flex;
@@ -16614,11 +16452,11 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 }
 
 .ds-input__label {
-  font-size: var(--ds-typography-font-size-3x);    /* 12px — Input/[M|S|XS] size/Text label */
+  font-size: var(--ds-typography-font-size-3x);    
   font-weight: var(--ds-typography-font-weight-regular);
   letter-spacing: var(--ds-typography-letter-spacing-s);
   line-height: 16px;
-  color: var(--ds-color-text-secondary);           /* #616161 — Input/Input label text color */
+  color: var(--ds-color-text-secondary);           
   transition: color 0.15s ease;
 }
 
@@ -16630,104 +16468,88 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   background: transparent;
   padding: 0;
   font-family: inherit;
-  font-size: var(--ds-typography-font-size-4x);    /* 16px — M/S: Text */
+  font-size: var(--ds-typography-font-size-4x);    
   font-weight: var(--ds-typography-font-weight-regular);
   letter-spacing: var(--ds-typography-letter-spacing-s);
   line-height: 24px;
-  color: var(--ds-color-text-primary);             /* #333333 */
+  color: var(--ds-color-text-primary);             
 }
 
 .ds-input--xs .ds-input__field {
-  font-size: var(--ds-typography-font-size-3-5x);  /* 14px — XS: Text */
+  font-size: var(--ds-typography-font-size-3-5x);  
   line-height: 20px;
 }
 .ds-input--xs .ds-input__label,
-.ds-input--s  .ds-input__label { display: none; }  /* S/XS — No label up */
+.ds-input--s  .ds-input__label { display: none; }  
 
 .ds-input__field::placeholder {
-  color: var(--ds-color-text-placeholder);         /* #D6D6D6 */
+  color: var(--ds-color-text-placeholder);         
   opacity: 1;
 }
-
-/* ── Поддержка: Support text + Hint text (Support-блок) ── */
 
 .ds-input__support-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;   /* как в Figma: Support text слева, Hint text справа (фреймы 176/74) */
+  justify-content: space-between;   
 }
 
 .ds-input__support,
 .ds-input__hint {
-  font-size: var(--ds-typography-font-size-3x);    /* 12px — Text support */
+  font-size: var(--ds-typography-font-size-3x);    
   font-weight: var(--ds-typography-font-weight-regular);
   letter-spacing: var(--ds-typography-letter-spacing-s);
   line-height: 16px;
-  color: var(--ds-color-text-secondary);           /* #616161 */
+  color: var(--ds-color-text-secondary);           
   transition: color 0.15s ease;
 }
 
-/* ── Состояния (Input/Filled/[State]/*) ────────────────── */
-
-/* Hover */
 .ds-input__frame:hover {
-  background: var(--ds-color-shapes-hover);        /* #F5F5F5 */
-  border-color: var(--ds-color-stroke-hover);      /* #9E9E9E */
+  background: var(--ds-color-shapes-hover);        
+  border-color: var(--ds-color-stroke-hover);      
 }
 
-/* Focus (рамка подсвечивается, когда фокус внутри) */
 .ds-input__frame:focus-within {
-  background: var(--ds-color-shapes-default-variant); /* #F8F9FC */
-  border-color: var(--ds-color-stroke-accent);        /* #448AFF */
+  background: var(--ds-color-shapes-default-variant); 
+  border-color: var(--ds-color-stroke-accent);        
 }
 .ds-input__frame:focus-within .ds-input__label { color: var(--ds-color-text-accent); }
 
-/* Error / Error+Hover */
 .ds-input--error .ds-input__frame {
-  border-color: var(--ds-color-stroke-negative);   /* #FF5252 */
+  border-color: var(--ds-color-stroke-negative);   
   background: var(--ds-color-shapes-default-variant);
 }
 .ds-input--error .ds-input__frame:hover {
-  background: var(--ds-color-shapes-hover);        /* Error+Hover: фон #F5F5F5 */
+  background: var(--ds-color-shapes-hover);        
 }
 .ds-input--error .ds-input__label,
 .ds-input--error .ds-input__support {
-  color: var(--ds-color-text-negative);            /* #FF5252 */
+  color: var(--ds-color-text-negative);            
 }
 
-/* Disabled */
 .ds-input--disabled .ds-input__frame,
 .ds-input--disabled .ds-input__frame:hover {
-  background: var(--ds-color-surface-disable);     /* #F5F5F5 */
-  border-color: var(--ds-color-stroke-disable);    /* #EBEBEB */
+  background: var(--ds-color-surface-disable);     
+  border-color: var(--ds-color-stroke-disable);    
 }
 .ds-input--disabled .ds-input__label,
 .ds-input--disabled .ds-input__field,
 .ds-input--disabled .ds-input__support,
 .ds-input--disabled .ds-input__hint,
 .ds-input--disabled .ds-input__icon {
-  color: var(--ds-color-text-disable);             /* #9E9E9E */
+  color: var(--ds-color-text-disable);             
 }
 .ds-input--disabled .ds-input__field { cursor: not-allowed; }
-
-/* ============================================================
-   iiko DS — Checkbox (чекбокс) и Radio button (радиокнопка)
-   Источник: Figma, страницы «🔵Готово 🧾 → Checkbox / Radio button»
-   Варианты: Normal / Error / Disable · Selected / Deselected / Indeterminate
-   Иконки — Material Icons 20px, цвета из токенов
-   ============================================================ */
 
 .ds-checkbox,
 .ds-radio {
   display: inline-flex;
   align-items: center;
-  gap: var(--ds-space-2x);              /* 8px */
+  gap: var(--ds-space-2x);              
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   cursor: pointer;
   user-select: none;
 }
 
-/* скрываем нативный контрол, рисуем иконку */
 .ds-checkbox__input,
 .ds-radio__input {
   position: absolute;
@@ -16747,37 +16569,33 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   height: 20px;
   font-size: 20px;
   line-height: 1;
-  color: var(--ds-color-icon-primary);            /* #616161 — deselected */
+  color: var(--ds-color-icon-primary);            
   transition: color 0.15s ease;
 }
 
-/* иконки подставляются автоматически по состоянию контрола */
 .ds-checkbox__box::before { content: 'check_box_outline_blank'; }
 
 .ds-checkbox__label,
 .ds-radio__label {
-  font-size: var(--ds-typography-font-size-3-5x); /* 14px */
+  font-size: var(--ds-typography-font-size-3-5x); 
   font-weight: var(--ds-typography-font-weight-regular);
   letter-spacing: 0.25px;
   line-height: 20px;
-  color: var(--ds-color-text-primary);            /* #333333 */
+  color: var(--ds-color-text-primary);            
 }
 .ds-checkbox__label { color: var(--ds-color-checkbox-label-text-color); }
 .ds-radio__label { color: var(--ds-color-radio-button-label-text-color); }
 
-/* ── Checkbox: выбран / не выбран / indeterminate ────────── */
-
 .ds-checkbox__box { color: var(--ds-color-checkbox-normal-deselected-icon-color); }
 .ds-checkbox__input:checked ~ .ds-checkbox__box {
-  color: var(--ds-color-checkbox-normal-selected-icon-color);             /* #448AFF */
+  color: var(--ds-color-checkbox-normal-selected-icon-color);             
 }
 .ds-checkbox__input:indeterminate ~ .ds-checkbox__box {
-  color: var(--ds-color-checkbox-normal-inderterminate-icon-color);       /* #448AFF */
+  color: var(--ds-color-checkbox-normal-inderterminate-icon-color);       
 }
 .ds-checkbox__input:checked ~ .ds-checkbox__box::before { content: 'check_box'; }
 .ds-checkbox__input:indeterminate ~ .ds-checkbox__box::before { content: 'indeterminate_check_box'; }
 
-/* Checkbox label — обёртка (Form + Support) как авто-лейаут Figma: 20 + 4 + 16 = 40 */
 .ds-checkbox-wrap {
   display: inline-flex;
   flex-direction: column;
@@ -16785,30 +16603,24 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 }
 .ds-checkbox-wrap .ds-checkbox { align-self: flex-start; }
 
-/* ── Radio: выбран / не выбран ───────────────────────────── */
-
-.ds-radio__box { color: var(--ds-color-radio-button-normal-deselected-icon-color); }  /* #616161 */
+.ds-radio__box { color: var(--ds-color-radio-button-normal-deselected-icon-color); }  
 .ds-radio__input:checked + .ds-radio__box {
-  color: var(--ds-color-radio-button-normal-selected-icon-color);             /* #448AFF */
+  color: var(--ds-color-radio-button-normal-selected-icon-color);             
 }
-
-/* ── Error ───────────────────────────────────────────────── */
 
 .ds-checkbox--error .ds-checkbox__box,
 .ds-checkbox--error .ds-checkbox__input:checked ~ .ds-checkbox__box,
 .ds-checkbox--error .ds-checkbox__input:indeterminate ~ .ds-checkbox__box {
-  color: var(--ds-color-checkbox-error-icon-color);           /* #FF5252 */
+  color: var(--ds-color-checkbox-error-icon-color);           
 }
 .ds-radio--error .ds-radio__box,
 .ds-radio--error .ds-radio__input:checked + .ds-radio__box {
-  color: var(--ds-color-radio-button-error-icon-color);       /* #FF5252 */
+  color: var(--ds-color-radio-button-error-icon-color);       
 }
 .ds-checkbox--error .ds-checkbox__label,
 .ds-radio--error .ds-radio__label {
-  color: var(--ds-color-text-primary);  /* в Figma текст лейбла Error = #333333 (Text/Primary) */
+  color: var(--ds-color-text-primary);  
 }
-
-/* ── Disabled ────────────────────────────────────────────── */
 
 .ds-checkbox--disabled,
 .ds-radio--disabled {
@@ -16820,43 +16632,35 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-checkbox--disabled .ds-checkbox__label { color: var(--ds-color-checkbox-label-text-disable-color); }
 .ds-radio--disabled .ds-radio__box,
 .ds-radio--disabled .ds-radio__input:checked + .ds-radio__box {
-  color: var(--ds-color-radio-button-disable-deselected-icon-color);          /* #9E9E9E */
+  color: var(--ds-color-radio-button-disable-deselected-icon-color);          
 }
 .ds-radio--disabled .ds-radio__label {
-  color: var(--ds-color-radio-button-label-text-disable-color);               /* #9E9E9E */
+  color: var(--ds-color-radio-button-label-text-disable-color);               
 }
-
-/* ── Группа контролов (Checkbox group / Radio button group) ─ */
 
 .ds-checkbox-group,
 .ds-radio-group {
   display: flex;
 }
 .ds-checkbox-group--vertical,
-.ds-radio-group--vertical { flex-direction: column; gap: var(--ds-space-2x); }  /* 8px */
+.ds-radio-group--vertical { flex-direction: column; gap: var(--ds-space-2x); }  
 .ds-checkbox-group--horizontal,
-.ds-radio-group--horizontal { flex-direction: row; gap: var(--ds-space-8x); }  /* 32px */
-
-/* ── Подпись под контролом (Support/Error text) ──────────── */
+.ds-radio-group--horizontal { flex-direction: row; gap: var(--ds-space-8x); }  
 
 .ds-checkbox__support,
 .ds-radio__support {
   display: block;
-  margin-top: var(--ds-space-1x);                 /* 4px */
-  margin-left: 28px;                              /* выравнивание по тексту (Pad left support 7x) */
-  font-size: var(--ds-typography-font-size-3x);   /* 12px (Text support size) */
+  margin-top: var(--ds-space-1x);                 
+  margin-left: 28px;                              
+  font-size: var(--ds-typography-font-size-3x);   
   line-height: 16px;
 }
-.ds-checkbox__support { color: var(--ds-color-checkbox-label-text-support-color); }  /* #616161 */
-.ds-radio__support { color: var(--ds-color-radio-button-label-text-support-color); } /* #616161 */
+.ds-checkbox__support { color: var(--ds-color-checkbox-label-text-support-color); }  
+.ds-radio__support { color: var(--ds-color-radio-button-label-text-support-color); } 
 .ds-checkbox--error ~ .ds-checkbox__support,
 .ds-radio--error .ds-radio__support {
-  color: var(--ds-color-text-negative);           /* #FF5252 */
+  color: var(--ds-color-text-negative);           
 }
-
-/* ── Подложка состояния (State 28×28) — hover/press в Figma ──
-   Внутри .ds-radio__box: круг под иконкой 20px. Используется
-   в превью «Интерактивного компонента» и матрице вариантов. */
 
 .ds-radio__box {
   position: relative;
@@ -16880,68 +16684,54 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   z-index: 0;
 }
 
-/* ============================================================
-   iiko DS — иконки Checkbox / Radio (SVG из файла иконок ДС)
-   Сгенерировано scripts/gen_selection_icons.py
-   Цвета — компонентные токены; шрифт Material Icons не нужен
-   ============================================================ */
-
 .ds-checkbox__box::before, .ds-radio__box::before { content: none !important; }
 .ds-checkbox__box, .ds-radio__box { background-repeat: no-repeat; background-position: center; background-size: 20px 20px; }
 
 .ds-checkbox__box {
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23616161%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-normal-deselected-icon-color */
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23616161%22%2F%3E%3C%2Fsvg%3E");   
 }
 .ds-checkbox__input:checked ~ .ds-checkbox__box {
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10.6%2016.2L17.65%209.15L16.25%207.75L10.6%2013.4L7.75%2010.55L6.35%2011.95L10.6%2016.2ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23448aff%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-normal-selected-icon-color */
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10.6%2016.2L17.65%209.15L16.25%207.75L10.6%2013.4L7.75%2010.55L6.35%2011.95L10.6%2016.2ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23448aff%22%2F%3E%3C%2Fsvg%3E");   
 }
 .ds-checkbox__input:indeterminate ~ .ds-checkbox__box {
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2013H17V11H7V13ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23448aff%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-normal-inderterminate-icon-color */
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2013H17V11H7V13ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23448aff%22%2F%3E%3C%2Fsvg%3E");   
 }
 .ds-checkbox--error .ds-checkbox__box {
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23ff5252%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-error-icon-color */
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23ff5252%22%2F%3E%3C%2Fsvg%3E");   
 }
 .ds-checkbox--error .ds-checkbox__input:checked ~ .ds-checkbox__box {
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10.6%2016.2L17.65%209.15L16.25%207.75L10.6%2013.4L7.75%2010.55L6.35%2011.95L10.6%2016.2ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23ff5252%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-error-icon-color */
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10.6%2016.2L17.65%209.15L16.25%207.75L10.6%2013.4L7.75%2010.55L6.35%2011.95L10.6%2016.2ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23ff5252%22%2F%3E%3C%2Fsvg%3E");   
 }
 .ds-checkbox--error .ds-checkbox__input:indeterminate ~ .ds-checkbox__box {
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2013H17V11H7V13ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23ff5252%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-error-icon-color */
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2013H17V11H7V13ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%23ff5252%22%2F%3E%3C%2Fsvg%3E");   
 }
 .ds-checkbox--disabled .ds-checkbox__box {
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%239e9e9e%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-disable-deselected-icon-color */
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%239e9e9e%22%2F%3E%3C%2Fsvg%3E");   
 }
 .ds-checkbox--disabled .ds-checkbox__input:checked ~ .ds-checkbox__box {
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10.6%2016.2L17.65%209.15L16.25%207.75L10.6%2013.4L7.75%2010.55L6.35%2011.95L10.6%2016.2ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%239e9e9e%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-disable-selected-icon-color */
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10.6%2016.2L17.65%209.15L16.25%207.75L10.6%2013.4L7.75%2010.55L6.35%2011.95L10.6%2016.2ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%239e9e9e%22%2F%3E%3C%2Fsvg%3E");   
 }
 .ds-checkbox--disabled .ds-checkbox__input:indeterminate ~ .ds-checkbox__box {
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2013H17V11H7V13ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%239e9e9e%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-checkbox-disable-inderterminate-icon-color */
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2013H17V11H7V13ZM5%2021C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H19C19.55%203%2020.0208%203.19583%2020.4125%203.5875C20.8042%203.97917%2021%204.45%2021%205V19C21%2019.55%2020.8042%2020.0208%2020.4125%2020.4125C20.0208%2020.8042%2019.55%2021%2019%2021H5ZM5%2019H19V5H5V19Z%22%20fill%3D%22%239e9e9e%22%2F%3E%3C%2Fsvg%3E");   
 }
 .ds-radio__box {
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%23616161%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-radio-button-normal-deselected-icon-color */
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%23616161%22%2F%3E%3C%2Fsvg%3E");   
 }
 .ds-radio__input:checked + .ds-radio__box {
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2017C13.3833%2017%2014.5625%2016.5125%2015.5375%2015.5375C16.5125%2014.5625%2017%2013.3833%2017%2012C17%2010.6167%2016.5125%209.4375%2015.5375%208.4625C14.5625%207.4875%2013.3833%207%2012%207C10.6167%207%209.4375%207.4875%208.4625%208.4625C7.4875%209.4375%207%2010.6167%207%2012C7%2013.3833%207.4875%2014.5625%208.4625%2015.5375C9.4375%2016.5125%2010.6167%2017%2012%2017ZM12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%23448aff%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-radio-button-normal-selected-icon-color */
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2017C13.3833%2017%2014.5625%2016.5125%2015.5375%2015.5375C16.5125%2014.5625%2017%2013.3833%2017%2012C17%2010.6167%2016.5125%209.4375%2015.5375%208.4625C14.5625%207.4875%2013.3833%207%2012%207C10.6167%207%209.4375%207.4875%208.4625%208.4625C7.4875%209.4375%207%2010.6167%207%2012C7%2013.3833%207.4875%2014.5625%208.4625%2015.5375C9.4375%2016.5125%2010.6167%2017%2012%2017ZM12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%23448aff%22%2F%3E%3C%2Fsvg%3E");   
 }
 .ds-radio--error .ds-radio__box {
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%23ff5252%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-radio-button-error-icon-color */
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%23ff5252%22%2F%3E%3C%2Fsvg%3E");   
 }
 .ds-radio--error .ds-radio__input:checked + .ds-radio__box {
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2017C13.3833%2017%2014.5625%2016.5125%2015.5375%2015.5375C16.5125%2014.5625%2017%2013.3833%2017%2012C17%2010.6167%2016.5125%209.4375%2015.5375%208.4625C14.5625%207.4875%2013.3833%207%2012%207C10.6167%207%209.4375%207.4875%208.4625%208.4625C7.4875%209.4375%207%2010.6167%207%2012C7%2013.3833%207.4875%2014.5625%208.4625%2015.5375C9.4375%2016.5125%2010.6167%2017%2012%2017ZM12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%23ff5252%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-radio-button-error-icon-color */
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2017C13.3833%2017%2014.5625%2016.5125%2015.5375%2015.5375C16.5125%2014.5625%2017%2013.3833%2017%2012C17%2010.6167%2016.5125%209.4375%2015.5375%208.4625C14.5625%207.4875%2013.3833%207%2012%207C10.6167%207%209.4375%207.4875%208.4625%208.4625C7.4875%209.4375%207%2010.6167%207%2012C7%2013.3833%207.4875%2014.5625%208.4625%2015.5375C9.4375%2016.5125%2010.6167%2017%2012%2017ZM12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%23ff5252%22%2F%3E%3C%2Fsvg%3E");   
 }
 .ds-radio--disabled .ds-radio__box {
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%239e9e9e%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-radio-button-disable-deselected-icon-color */
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%239e9e9e%22%2F%3E%3C%2Fsvg%3E");   
 }
 .ds-radio--disabled .ds-radio__input:checked + .ds-radio__box {
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2017C13.3833%2017%2014.5625%2016.5125%2015.5375%2015.5375C16.5125%2014.5625%2017%2013.3833%2017%2012C17%2010.6167%2016.5125%209.4375%2015.5375%208.4625C14.5625%207.4875%2013.3833%207%2012%207C10.6167%207%209.4375%207.4875%208.4625%208.4625C7.4875%209.4375%207%2010.6167%207%2012C7%2013.3833%207.4875%2014.5625%208.4625%2015.5375C9.4375%2016.5125%2010.6167%2017%2012%2017ZM12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%239e9e9e%22%2F%3E%3C%2Fsvg%3E");   /* --ds-color-radio-button-disable-selected-icon-color */
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2017C13.3833%2017%2014.5625%2016.5125%2015.5375%2015.5375C16.5125%2014.5625%2017%2013.3833%2017%2012C17%2010.6167%2016.5125%209.4375%2015.5375%208.4625C14.5625%207.4875%2013.3833%207%2012%207C10.6167%207%209.4375%207.4875%208.4625%208.4625C7.4875%209.4375%207%2010.6167%207%2012C7%2013.3833%207.4875%2014.5625%208.4625%2015.5375C9.4375%2016.5125%2010.6167%2017%2012%2017ZM12%2022C10.6167%2022%209.31667%2021.7375%208.1%2021.2125C6.88333%2020.6875%205.825%2019.975%204.925%2019.075C4.025%2018.175%203.3125%2017.1167%202.7875%2015.9C2.2625%2014.6833%202%2013.3833%202%2012C2%2010.6167%202.2625%209.31667%202.7875%208.1C3.3125%206.88333%204.025%205.825%204.925%204.925C5.825%204.025%206.88333%203.3125%208.1%202.7875C9.31667%202.2625%2010.6167%202%2012%202C13.3833%202%2014.6833%202.2625%2015.9%202.7875C17.1167%203.3125%2018.175%204.025%2019.075%204.925C19.975%205.825%2020.6875%206.88333%2021.2125%208.1C21.7375%209.31667%2022%2010.6167%2022%2012C22%2013.3833%2021.7375%2014.6833%2021.2125%2015.9C20.6875%2017.1167%2019.975%2018.175%2019.075%2019.075C18.175%2019.975%2017.1167%2020.6875%2015.9%2021.2125C14.6833%2021.7375%2013.3833%2022%2012%2022ZM12%2020C14.2333%2020%2016.125%2019.225%2017.675%2017.675C19.225%2016.125%2020%2014.2333%2020%2012C20%209.76667%2019.225%207.875%2017.675%206.325C16.125%204.775%2014.2333%204%2012%204C9.76667%204%207.875%204.775%206.325%206.325C4.775%207.875%204%209.76667%204%2012C4%2014.2333%204.775%2016.125%206.325%2017.675C7.875%2019.225%209.76667%2020%2012%2020Z%22%20fill%3D%22%239e9e9e%22%2F%3E%3C%2Fsvg%3E");   
 }
-
-/* ============================================================
-   iiko DS — Badge (счётчик / точка)
-   Источник: Figma, страница «🔵Готово 🧾 → Badge»
-   Варианты: Style Accent/Positive/Warning/Negative
-             Type Counter (19×18, паддинг 1px 6px, скругление 9999px) / Point (8×8, скругление 9999px)
-   Все значения — только токены из tokens.css
-   ============================================================ */
 
 .ds-badge {
   display: inline-flex;
@@ -16950,87 +16740,66 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-shrink: 0;
   box-sizing: border-box;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  font-size: var(--ds-typography-font-size-3x);      /* 12px */
-  font-weight: var(--ds-typography-font-weight-medium); /* 500 */
-  line-height: var(--ds-typography-caption-line-height-l); /* 16px */
-  color: var(--ds-color-text-inversive);             /* #FFFFFF */
+  font-size: var(--ds-typography-font-size-3x);      
+  font-weight: var(--ds-typography-font-weight-medium); 
+  line-height: var(--ds-typography-caption-line-height-l); 
+  color: var(--ds-color-text-inversive);             
   vertical-align: middle;
 }
-
-/* ── Counter: пилюля 19×18 ──────────────────────────────── */
 
 .ds-badge--counter {
   height: 18px;
   min-width: 19px;
-  padding: var(--ds-size-0-25x) var(--ds-space-1-5x); /* 1px 6px */
-  border-radius: var(--ds-radius-circular);          /* 9999px */
+  padding: var(--ds-size-0-25x) var(--ds-space-1-5x); 
+  border-radius: var(--ds-radius-circular);          
 }
-
-/* ── Point: точка 8×8 ───────────────────────────────────── */
 
 .ds-badge--point {
   width: 8px;
   height: 8px;
-  border-radius: var(--ds-radius-circular);          /* 9999px */
+  border-radius: var(--ds-radius-circular);          
 }
 
-/* ── Стили ──────────────────────────────────────────────── */
-
-.ds-badge--accent   { background: var(--ds-color-badge-accent-background); }   /* #448AFF */
-.ds-badge--positive { background: var(--ds-color-badge-positive-background); } /* #14B456 */
-.ds-badge--warning  { background: var(--ds-color-badge-warning-background); }  /* #FFAB40 */
-.ds-badge--negative { background: var(--ds-color-badge-negative-background); } /* #FF5252 */
-
-/* ── Матрица вариантов Badge (страница badge.html) ────────────────
-   У Badge нет размеров и состояний (только Style × Type), поэтому:
-   подписи типов без сдвига под шапку размера, ряд — 2 колонки.
-   Скоуплено под .page-badge, чтобы не протекать на другие страницы
-   (у Button/Checkbox 3 состояния → ряд должен быть 3-колоночным). */
+.ds-badge--accent   { background: var(--ds-color-badge-accent-background); }   
+.ds-badge--positive { background: var(--ds-color-badge-positive-background); } 
+.ds-badge--warning  { background: var(--ds-color-badge-warning-background); }  
+.ds-badge--negative { background: var(--ds-color-badge-negative-background); } 
 
 .page-badge #matrix-root .matrix-types { padding-top: 16px; }
 .page-badge #matrix-root .matrix-row { grid-template-columns: repeat(2, 1fr); }
-
-/* ============================================================
-   iiko DS — Tabs, Divider, Info panel (выверено по ДС и макету)
-   Автогенерация для этих компонентов давала артефакты
-   (рамка у .ds-tabs, белый фон у .ds-divider), поэтому правила
-   заданы точно: цвета/размеры — только токены из tokens.css
-   ============================================================ */
-
-/* ── Tabs (подчёркнутые: актив = акцент + 2px) ────────────── */
 
 .ds-tabs {
   display: flex;
   align-items: stretch;
   gap: var(--ds-space-0);
-  border-bottom: 1px solid var(--ds-color-divider-solid-default-color); /* #E0E0E0 */
+  border-bottom: 1px solid var(--ds-color-divider-solid-default-color); 
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .ds-tab {
   display: inline-flex;
   align-items: center;
-  gap: var(--ds-space-2x);                                /* 8px */
+  gap: var(--ds-space-2x);                                
   box-sizing: border-box;
-  height: 32px;                                           /* ДС Lvl=1: 32px */
-  padding: var(--ds-space-1x) var(--ds-space-6x);          /* ДС Lvl=1: 4px 24px */
+  height: 32px;                                           
+  padding: var(--ds-space-1x) var(--ds-space-6x);          
   border: none;
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
   background: var(--ds-color-tab-innactive-default-background);
-  color: var(--ds-color-tab-innactive-text-color);        /* #333333 */
+  color: var(--ds-color-tab-innactive-text-color);        
   font-family: inherit;
-  font-size: var(--ds-typography-body-font-size-m);       /* ДС Lvl=1: 16px */
-  font-weight: var(--ds-typography-font-weight-medium);   /* ДС Lvl=1: 500 */
+  font-size: var(--ds-typography-body-font-size-m);       
+  font-weight: var(--ds-typography-font-weight-medium);   
   letter-spacing: var(--ds-typography-letter-spacing-s);
-  line-height: var(--ds-typography-body-line-height-m);   /* ДС Lvl=1: 24px */
+  line-height: var(--ds-typography-body-line-height-m);   
   white-space: nowrap;
   cursor: pointer;
   transition: background-color .15s ease, color .15s ease, border-color .15s ease;
 }
 
-.ds-tab:hover  { background: var(--ds-color-tab-innactive-hover-background); }  /* #F5F5F5 */
-.ds-tab:active { background: var(--ds-color-tab-innactive-press-background); }  /* #E0E0E0 */
+.ds-tab:hover  { background: var(--ds-color-tab-innactive-hover-background); }  
+.ds-tab:active { background: var(--ds-color-tab-innactive-press-background); }  
 
 .ds-tab__icon {
   flex-shrink: 0;
@@ -17039,12 +16808,12 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--ds-color-tab-innactive-icon-color);        /* #616161 */
+  color: var(--ds-color-tab-innactive-icon-color);        
 }
 
 .ds-tab--active {
-  color: var(--ds-color-tab-active-text-color);           /* #448AFF */
-  border-bottom-color: var(--ds-color-tab-active-divider);/* #448AFF */
+  color: var(--ds-color-tab-active-text-color);           
+  border-bottom-color: var(--ds-color-tab-active-divider);
 }
 .ds-tab--active .ds-tab__icon { color: var(--ds-color-tab-active-icon-color); }
 .ds-tab--active:hover  { background: var(--ds-color-tab-active-hover-background); }
@@ -17052,46 +16821,37 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 
 .ds-tab--disabled,
 .ds-tab:disabled {
-  color: var(--ds-color-tab-disable-text-color);          /* #9E9E9E */
+  color: var(--ds-color-tab-disable-text-color);          
   pointer-events: none;
 }
 .ds-tab--disabled .ds-tab__icon { color: var(--ds-color-tab-disable-icon-color); }
 
-/* Уровень 2 — ДС: h28, padding 4/12, шрифт 14px/400, lh 20 (отличается от Lvl=1!) */
 .ds-tabs--lvl2 .ds-tab {
   height: 28px;
   padding: var(--ds-space-1x) var(--ds-space-3x);
-  font-size: var(--ds-typography-body-font-size-s);       /* 14px */
-  font-weight: var(--ds-typography-font-weight-regular);  /* 400 */
-  line-height: var(--ds-typography-body-line-height-s);   /* 20px */
+  font-size: var(--ds-typography-body-font-size-s);       
+  font-weight: var(--ds-typography-font-weight-regular);  
+  line-height: var(--ds-typography-body-line-height-s);   
 }
 
-/* Счётчик в табе (Badge внутри) */
 .ds-tab__counter {
   color: var(--ds-color-tab-innactive-counter-text-color);
   font-size: var(--ds-typography-font-size-3x);
 }
 .ds-tab--active .ds-tab__counter { color: var(--ds-color-tab-active-counter-text-color); }
 
-/* ── Divider ──────────────────────────────────────────────── */
-
-/* ── Divider (Figma 58320:441 — 16 вариантов; 53556:7964 — Type=Solid) ──
-   Size=M → 1px, Size=L → 2px
-   Solid:  Default/Lite #E0E0E0 · Hover/Selected #448AFF · Disable #EBEBEB
-   Dashed: линия 1px dash 4/4, те же цвета по состояниям              */
-
 .ds-divider {
-  height: 1px;                                              /* Size=M */
+  height: 1px;                                              
   border: none;
   margin: 0;
-  background: var(--ds-color-divider-solid-default-color);  /* #E0E0E0 */
+  background: var(--ds-color-divider-solid-default-color);  
 }
 .ds-divider--m            { height: 1px; }
-.ds-divider--l            { height: 2px; }                  /* Size=L */
+.ds-divider--l            { height: 2px; }                  
 .ds-divider--lite         { background: var(--ds-color-divider-solid-lite-color); }
-.ds-divider:hover         { background: var(--ds-color-divider-solid-hover-color); }     /* #448AFF */
-.ds-divider--selected     { background: var(--ds-color-divider-solid-selected-color); }  /* #448AFF */
-.ds-divider--disable      { background: var(--ds-color-divider-solid-disable-color); }   /* #EBEBEB */
+.ds-divider:hover         { background: var(--ds-color-divider-solid-hover-color); }     
+.ds-divider--selected     { background: var(--ds-color-divider-solid-selected-color); }  
+.ds-divider--disable      { background: var(--ds-color-divider-solid-disable-color); }   
 .ds-divider--dashed {
   height: 0;
   background: none;
@@ -17101,15 +16861,14 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-divider--dashed.ds-divider--selected { border-top-color: var(--ds-color-divider-dashed-selected-color); }
 .ds-divider--dashed.ds-divider--disable  { border-top-color: var(--ds-color-divider-dashed-disable-color); }
 
-/* совместимость: раньше класс назывался .ds-divider-line */
 .ds-divider-line {
   height: 1px;
   border: none;
   margin: 0;
-  background: var(--ds-color-divider-solid-default-color);  /* #E0E0E0 */
+  background: var(--ds-color-divider-solid-default-color);  
 }
 .ds-divider-line--lite     { background: var(--ds-color-divider-solid-lite-color); }
-.ds-divider-line--selected { background: var(--ds-color-divider-solid-selected-color); } /* #448AFF */
+.ds-divider-line--selected { background: var(--ds-color-divider-solid-selected-color); } 
 .ds-divider-line--disable  { background: var(--ds-color-divider-solid-disable-color); }
 .ds-divider-line--dashed {
   height: 0;
@@ -17117,24 +16876,17 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   border-top: 1px dashed var(--ds-color-divider-dashed-default-color);
 }
 
-/* ── (было .ds-info-panel — удалено: в ДС для пояснений
-       используется компонент Banners, см. .ds-banner ниже) ── */
-
-/* ── Banners (компонент ДС для информационных сообщений) ───
-   Style: Accent / Positive / Warning / Negative / Neutral
-   ДС: padding 12px 16px, radius 12px, gap 8px, иконка 20px       */
-
 .ds-banner {
   display: flex;
-  gap: var(--ds-space-2x);                                /* 8px */
+  gap: var(--ds-space-2x);                                
   box-sizing: border-box;
-  padding: var(--ds-space-3x) var(--ds-space-4x);          /* 12px 16px */
-  border-radius: var(--ds-radius-3x);                     /* 12px */
-  background: var(--ds-color-banners-accent-background);  /* #F0F5FF */
-  color: var(--ds-color-banners-text-color);              /* #333333 */
+  padding: var(--ds-space-3x) var(--ds-space-4x);          
+  border-radius: var(--ds-radius-3x);                     
+  background: var(--ds-color-banners-accent-background);  
+  color: var(--ds-color-banners-text-color);              
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  font-size: var(--ds-typography-body-font-size-s);       /* 14px */
-  line-height: var(--ds-typography-body-line-height-s);   /* 20px */
+  font-size: var(--ds-typography-body-font-size-s);       
+  line-height: var(--ds-typography-body-line-height-s);   
   letter-spacing: var(--ds-typography-letter-spacing-s);
 }
 
@@ -17157,7 +16909,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--ds-color-banners-accent-icon-color);       /* #448AFF */
+  color: var(--ds-color-banners-accent-icon-color);       
 }
 .ds-banner--positive .ds-banner__icon { color: var(--ds-color-banners-positive-icon-color); }
 .ds-banner--warning  .ds-banner__icon { color: var(--ds-color-banners-warning-icon-color); }
@@ -17178,17 +16930,14 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   gap: var(--ds-space-2x);
 }
 
-/* ── Иконки в инпутах: SVG из файла иконок ДС ─────────────── */
-
 .ds-input__icon svg { width: 20px; height: 20px; display: block; }
 .ds-input__icon svg path { fill: currentColor; }
 
-/* контрол числа (стрелки вверх/вниз, как Control number button в ДС) */
 .ds-input__stepper {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  color: var(--ds-color-icon-primary);                     /* #616161 */
+  color: var(--ds-color-icon-primary);                     
 }
 .ds-input__stepper svg { width: 20px; height: 12px; display: block; }
 .ds-input__stepper svg path { fill: currentColor; }
@@ -17197,90 +16946,69 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: flex; cursor: pointer; color: inherit;
 }
 
-/* ── Подпись группы полей (label над полем) ───────────────── */
-
 .ds-field-label {
   display: block;
-  color: var(--ds-color-text-primary);                    /* #333333 */
+  color: var(--ds-color-text-primary);                    
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  font-size: var(--ds-typography-font-size-3-5x);         /* 14px */
-  font-weight: var(--ds-typography-font-weight-medium);   /* 500 */
+  font-size: var(--ds-typography-font-size-3-5x);         
+  font-weight: var(--ds-typography-font-weight-medium);   
   letter-spacing: var(--ds-typography-letter-spacing-s);
   line-height: 20px;
 }
-
-/* ============================================================
-   iiko DS — Card view (Filled / Outlined / Shadow)
-   Источник: Figma, страница «🟡Card_DS», COMPONENT_SET «Card view»
-   Обновлено: Card header / Card content (SLOT) / Card footer
-   Размер: 501×248 · header 108 · content 88 · footer 52
-   Разметка — ровно по свежему дереву Figma.
-   ============================================================ */
 
 .ds-card {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  border-radius: var(--ds-radius-2x);                 /* 8px */
-  background: var(--ds-color-surface-default);        /* #FFFFFF */
+  border-radius: var(--ds-radius-2x);                 
+  background: var(--ds-color-surface-default);        
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Type=Filled — без рамки и тени */
 .ds-card--filled { }
 
-/* Type=Outlined — рамка 1px #E0E0E0 */
 .ds-card--outlined {
-  border: 1px solid var(--ds-color-stroke-default);   /* #E0E0E0 */
+  border: 1px solid var(--ds-color-stroke-default);   
 }
 
-/* Type=Shadow — эффект-стиль ДС «Shadows/01 dp Sl» (Card/Shadows) */
 .ds-card--shadow {
   box-shadow: var(--ds-shadow-shadows-01-dp-sl);
 }
 
-/* Type=Custom — карточка только с контентом (SLOT, 500×88, pad 16) */
 .ds-card--custom {
   padding: 16px;
 }
 
-/* ── Card header (16px сверху/по бокам, gap 8) ────────────────
-   РЕАЛЬНОЕ значение паддинга = 16px (токен Space/6x устарел=24, не берём). */
-
 .ds-card__header {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-space-2x);                            /* 8px */
-  padding: 16px 16px 4px;                            /* сверху/бока 16, низ 4 (текущее дерево) */
+  gap: var(--ds-space-2x);                            
+  padding: 16px 16px 4px;                            
 }
 
 .ds-card__label-up,
 .ds-card__label-down {
-  color: var(--ds-color-text-secondary);              /* #616161 */
-  font-size: var(--ds-typography-body-font-size-m);   /* 16px (Body M) */
-  font-weight: var(--ds-typography-font-weight-regular); /* 400 */
-  line-height: var(--ds-typography-body-line-height-m); /* 24px */
+  color: var(--ds-color-text-secondary);              
+  font-size: var(--ds-typography-body-font-size-m);   
+  font-weight: var(--ds-typography-font-weight-regular); 
+  line-height: var(--ds-typography-body-line-height-m); 
   letter-spacing: var(--ds-typography-letter-spacing-none);
 }
 
 .ds-card__title {
   margin: 0;
-  color: var(--ds-color-text-primary);                /* #333333 */
-  font-size: var(--ds-typography-header-font-size-s); /* 20px */
+  color: var(--ds-color-text-primary);                
+  font-size: var(--ds-typography-header-font-size-s); 
   font-weight: var(--ds-typography-font-weight-medium);
-  line-height: var(--ds-typography-header-line-height-s); /* 28px */
+  line-height: var(--ds-typography-header-line-height-s); 
   letter-spacing: var(--ds-typography-letter-spacing-none);
 }
-
-/* ── Card content (SLOT, паддинг 16/16/16) ─────────────────── */
 
 .ds-card__content {
   display: flex;
   flex-direction: column;
-  padding: 16px;                                      /* 16/16/16 (было 8/24) */
+  padding: 16px;                                      
 }
-
-/* ── Card footer — Divider + Action (Action pad 16 по бокам/снизу) ── */
 
 .ds-card__footer {
   display: flex;
@@ -17288,71 +17016,56 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 }
 .ds-card__divider {
   height: 1px;
-  background: var(--ds-color-stroke-default);         /* #E0E0E0 */
+  background: var(--ds-color-stroke-default);         
   border: none;
 }
 .ds-card__footer__action {
   display: flex;
   align-items: center;
-  gap: var(--ds-space-2x);                            /* 8px */
-  padding: 4px 16px 16px;                             /* сверху 4, бока/низ 16 */
+  gap: var(--ds-space-2x);                            
+  padding: 4px 16px 16px;                             
 }
 .ds-card__footer--right .ds-card__footer__action { justify-content: flex-end; }
-
-/* ============================================================
-   iiko DS — Expansion panel + Expansion content
-   Источник: Figma, страница «Expansion panel»
-   Variant=Default : border 1px #E0E0E0, fill #F8F9FC
-   Variant=Info    : border 1px #448AFF ПУНКТИР [2,2], fill #F5F9FF
-   Шапка панели: h44, pad 12/16, r12, gap 8, иконки 20px
-   Состояния: Default / Hover / Press / Disable
-   Collaps/Expand: Off / On (стрелка keyboard_arrow_down поворачивается)
-   ============================================================ */
 
 .ds-expansion {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  border-radius: var(--ds-radius-3x);                    /* 12px */
-  border: 1px solid var(--ds-color-stroke-default);      /* Default: #E0E0E0 — рамка вокруг шапки И контента */
-  background: var(--ds-color-surface-default);           /* #FFFFFF */
+  border-radius: var(--ds-radius-3x);                    
+  border: 1px solid var(--ds-color-stroke-default);      
+  background: var(--ds-color-surface-default);           
   overflow: hidden;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Variant=Info — пунктирная акцентная рамка вокруг всей панели */
 .ds-expansion--info {
-  border: 1px dashed var(--ds-color-stroke-accent);      /* #448AFF, пунктир */
-  background: var(--ds-palette-accent-10);               /* #F5F9FF */
+  border: 1px dashed var(--ds-color-stroke-accent);      
+  background: var(--ds-palette-accent-10);               
 }
-
-/* ── Шапка панели (44px, рамки нет — она у контейнера) ────── */
 
 .ds-expansion__header {
   display: flex;
   align-items: center;
-  gap: var(--ds-space-2x);                               /* 8px */
+  gap: var(--ds-space-2x);                               
   box-sizing: border-box;
   min-height: 44px;
-  padding: var(--ds-space-3x) var(--ds-space-4x);         /* 12px 16px */
+  padding: var(--ds-space-3x) var(--ds-space-4x);         
   background: transparent;
   cursor: pointer;
   transition: background-color .15s ease;
 }
 
-.ds-expansion__header:hover  { background: var(--ds-color-shapes-hover); }   /* #F5F5F5 */
-.ds-expansion__header:active { background: var(--ds-color-shapes-press); }   /* #E0E0E0 */
+.ds-expansion__header:hover  { background: var(--ds-color-shapes-hover); }   
+.ds-expansion__header:active { background: var(--ds-color-shapes-press); }   
 
 .ds-expansion--disabled {
-  border-color: var(--ds-color-stroke-disable);          /* #EBEBEB */
-  background: var(--ds-color-surface-disable);           /* #F5F5F5 */
+  border-color: var(--ds-color-stroke-disable);          
+  background: var(--ds-color-surface-disable);           
 }
 .ds-expansion--disabled .ds-expansion__header {
   color: var(--ds-color-text-disable);
   pointer-events: none;
 }
-
-/* ── Элементы шапки ───────────────────────────────────────── */
 
 .ds-expansion__icon {
   flex-shrink: 0;
@@ -17361,9 +17074,9 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--ds-color-icon-primary);                   /* #616161 */
+  color: var(--ds-color-icon-primary);                   
 }
-.ds-expansion--info .ds-expansion__icon { color: var(--ds-color-icon-accent); }  /* #448AFF */
+.ds-expansion--info .ds-expansion__icon { color: var(--ds-color-icon-accent); }  
 
 .ds-expansion__arrow {
   flex-shrink: 0;
@@ -17379,14 +17092,13 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 
 .ds-expansion__title {
   flex: 1;
-  color: var(--ds-color-text-primary);                   /* #333333 */
-  font-size: var(--ds-typography-body-font-size-s);      /* 14px */
-  font-weight: var(--ds-typography-font-weight-medium);  /* 500 */
-  line-height: var(--ds-typography-body-line-height-s);  /* 20px */
+  color: var(--ds-color-text-primary);                   
+  font-size: var(--ds-typography-body-font-size-s);      
+  font-weight: var(--ds-typography-font-weight-medium);  
+  line-height: var(--ds-typography-body-line-height-s);  
   letter-spacing: var(--ds-typography-letter-spacing-s);
 }
 
-/* группа иконок справа (Icon group из ДС) */
 .ds-expansion__actions {
   display: flex;
   align-items: center;
@@ -17394,91 +17106,75 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-shrink: 0;
 }
 
-/* ── Expansion content (Padding off/on = True → pad 16) ───── */
-
 .ds-expansion__content {
   display: flex;
   flex-direction: column;
-  padding: var(--ds-space-4x);                           /* 16px */
+  padding: var(--ds-space-4x);                           
   color: var(--ds-color-text-primary);
-  font-size: var(--ds-typography-body-font-size-s);      /* 14px */
-  line-height: var(--ds-typography-body-line-height-s);  /* 20px */
+  font-size: var(--ds-typography-body-font-size-s);      
+  line-height: var(--ds-typography-body-line-height-s);  
   letter-spacing: var(--ds-typography-letter-spacing-s);
 }
 .ds-expansion__content--no-padding { padding: 0; }
 
-/* иконки из файла иконок ДС приходят с fill из ДС — красим токеном компонента */
 .ds-expansion__icon svg path,
 .ds-expansion__arrow svg path { fill: currentColor; }
 .ds-expansion:not(.ds-expansion--open) .ds-expansion__content { display: none; }
 
-/* ============================================================
-   iiko DS — Stepper (Step + Stepper line)
-   Источник: Figma, страница «Stepper»
-   Step: h24 (Background=Off) / h32 r8 fill #FAFAFA (Background=On)
-         gap 8, Element left 24×24, текст 14/400
-   Selected: текст #448AFF, иконка #448AFF
-   ============================================================ */
-
 .ds-stepper {
   display: flex;
   align-items: center;
-  gap: var(--ds-space-2x);                                  /* 8px */
+  gap: var(--ds-space-2x);                                  
   background: var(--ds-color-stepper-background);
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* ── Шаг ──────────────────────────────────────────────────── */
-
 .ds-step {
   display: inline-flex;
   align-items: center;
-  gap: var(--ds-space-2x);                                  /* 8px */
+  gap: var(--ds-space-2x);                                  
   box-sizing: border-box;
   min-height: 24px;
   border: none;
   background: none;
   padding: 0;
-  color: var(--ds-color-stepper-default-text-color);        /* #333333 */
+  color: var(--ds-color-stepper-default-text-color);        
   font-family: inherit;
-  font-size: var(--ds-typography-body-font-size-s);         /* 14px */
-  font-weight: var(--ds-typography-font-weight-regular);    /* 400 */
-  line-height: var(--ds-typography-body-line-height-s);     /* 20px */
+  font-size: var(--ds-typography-body-font-size-s);         
+  font-weight: var(--ds-typography-font-weight-regular);    
+  line-height: var(--ds-typography-body-line-height-s);     
   letter-spacing: var(--ds-typography-letter-spacing-s);
   white-space: nowrap;
   cursor: pointer;
 }
 
-/* Background=On — подложка */
 .ds-step--bg {
   min-height: 32px;
   padding: var(--ds-space-1x) var(--ds-space-2x);
-  border-radius: var(--ds-radius-2x);                       /* 8px */
-  background: var(--ds-color-stepper-default-background);   /* #FAFAFA */
+  border-radius: var(--ds-radius-2x);                       
+  background: var(--ds-color-stepper-default-background);   
 }
 
 .ds-step:hover {
-  color: var(--ds-color-stepper-hover-text-color);          /* #448AFF */
+  color: var(--ds-color-stepper-hover-text-color);          
 }
 .ds-step--bg:hover { background: var(--ds-color-stepper-hover-background); }
 
 .ds-step--selected {
-  color: var(--ds-color-stepper-selected-text-color);       /* #448AFF */
+  color: var(--ds-color-stepper-selected-text-color);       
 }
 .ds-step--bg.ds-step--selected {
-  background: var(--ds-color-stepper-selected-background);  /* #F5F9FF */
+  background: var(--ds-color-stepper-selected-background);  
   border: 1px solid var(--ds-color-stepper-selected-border-color);
 }
 
 .ds-step--disabled,
 .ds-step:disabled {
-  color: var(--ds-color-stepper-disable-text-color);        /* #9E9E9E */
+  color: var(--ds-color-stepper-disable-text-color);        
   pointer-events: none;
 }
 
 .ds-step--error { color: var(--ds-color-stepper-error-text-color); }
-
-/* ── Номер / иконка шага (Element left 24×24) ─────────────── */
 
 .ds-step__num {
   display: inline-flex;
@@ -17487,16 +17183,15 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-shrink: 0;
   width: 24px;
   height: 24px;
-  border-radius: var(--ds-radius-circular);                 /* 9999px */
-  color: var(--ds-color-stepper-default-icon-color);        /* #616161 */
-  font-size: var(--ds-typography-body-font-size-s);         /* 14px */
+  border-radius: var(--ds-radius-circular);                 
+  color: var(--ds-color-stepper-default-icon-color);        
+  font-size: var(--ds-typography-body-font-size-s);         
   line-height: 20px;
 }
 
-/* выбранный шаг — залитый акцентный круг с белой цифрой */
 .ds-step--selected .ds-step__num {
-  background: var(--ds-color-brand-accent-default);         /* #448AFF */
-  color: var(--ds-color-text-inversive);                    /* #FFFFFF */
+  background: var(--ds-color-brand-accent-default);         
+  color: var(--ds-color-text-inversive);                    
 }
 .ds-step--disabled .ds-step__num { color: var(--ds-color-stepper-disable-icon-color); }
 .ds-step--error .ds-step__num    { color: var(--ds-color-stepper-error-icon-color); }
@@ -17513,79 +17208,50 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
 .ds-step__icon svg { width: 24px; height: 24px; display: block; }
 .ds-step__icon svg path { fill: currentColor; }
 
-/* ── Разделитель между шагами (Stepper divider) ───────────── */
-
 .ds-stepper__divider {
   flex-shrink: 0;
   width: 8px;
   height: 1px;
-  background: var(--ds-color-stepper-divider-color);         /* #616161 */
+  background: var(--ds-color-stepper-divider-color);         
 }
-
-/* ============================================================
-   Stepper button (Figma 55419:7330) — счётчик шагов + кнопки навигации
-   12 вариантов: Type=Filled|Outlined × Position=First|Middle|Last
-                 × Content=Text|Icon      (высота ряда 36, gap 16)
-   Состав из Figma (что писать в разметке):
-     Position=First  → одна кнопка «Далее» (иконка справа keyboard_arrow_right)
-     Position=Middle → Button group (gap 8): «Назад» (keyboard_arrow_left слева)
-                       + «Далее» (keyboard_arrow_right справа)
-     Position=Last   → одна кнопка «Назад» (keyboard_arrow_left слева)
-     Content=Text    → .ds-btn.ds-btn--m ; Content=Icon → .ds-button-icon (36×36)
-     Type=Filled     → .ds-btn--accent.ds-btn--filled  (#448AFF + тень)
-     Type=Outlined   → .ds-btn--accent.ds-btn--outlined (рамка 1px #448AFF)
-   ============================================================ */
 
 .ds-stepper-button {
   display: flex;
   align-items: center;
-  gap: var(--ds-space-4x);                                  /* 16px */
+  gap: var(--ds-space-4x);                                  
   min-height: 36px;
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* «N из M» — TEXT 14/500 lh20 #333333 */
 .ds-stepper-button__counter {
   flex-shrink: 0;
-  color: var(--ds-color-text-primary);                      /* #333333 */
-  font-size: var(--ds-typography-body-font-size-s);         /* 14px */
-  font-weight: var(--ds-typography-font-weight-medium);     /* 500 */
-  line-height: var(--ds-typography-body-line-height-s);     /* 20px */
+  color: var(--ds-color-text-primary);                      
+  font-size: var(--ds-typography-body-font-size-s);         
+  font-weight: var(--ds-typography-font-weight-medium);     
+  line-height: var(--ds-typography-body-line-height-s);     
   white-space: nowrap;
 }
 
-/* Button group / Button icon group внутри — gap 8 */
 .ds-stepper-button__group {
   display: flex;
   align-items: center;
-  gap: var(--ds-space-2x);                                  /* 8px */
+  gap: var(--ds-space-2x);                                  
 }
-
-/* ============================================================
-   iiko DS — Slide toggle
-   Источник: Figma, страница «Slide toggle»
-   Трек 34×20 r12; кнопка (Oval) 16×16 r9999 белая
-   Off: фон #9E9E9E (hover #757575) · On: #448AFF (hover #3969D5)
-   Disable: #E0E0E0, текст #9E9E9E
-   Title 14/400 #333333 · Support down 12px #616161
-   ============================================================ */
 
 .ds-slide-toggle {
   display: inline-flex;
   flex-direction: column;
-  gap: var(--ds-space-1x);                                    /* 4px */
+  gap: var(--ds-space-1x);                                    
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* строка: переключатель + заголовок + иконка */
 .ds-slide-toggle__row {
   display: flex;
   align-items: center;
-  gap: var(--ds-space-2x);                                    /* 8px */
+  gap: var(--ds-space-2x);                                    
   cursor: pointer;
 }
 
-/* нативный чекбокс скрыт */
 .ds-slide-toggle__input {
   position: absolute;
   opacity: 0;
@@ -17594,18 +17260,16 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   pointer-events: none;
 }
 
-/* трек */
 .ds-slide-toggle__track {
   position: relative;
   flex-shrink: 0;
   width: 34px;
   height: 20px;
-  border-radius: var(--ds-radius-3x);                         /* 12px */
-  background: var(--ds-color-slide-toggle-deselected-default-background); /* #9E9E9E */
+  border-radius: var(--ds-radius-3x);                         
+  background: var(--ds-color-slide-toggle-deselected-default-background); 
   transition: background-color .15s ease;
 }
 
-/* кнопка-кружок */
 .ds-slide-toggle__track::after {
   content: '';
   position: absolute;
@@ -17613,59 +17277,55 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   left: 2px;
   width: 16px;
   height: 16px;
-  border-radius: var(--ds-radius-circular);                   /* 9999px */
-  background: var(--ds-color-slide-toggle-knob-color);        /* #FFFFFF */
+  border-radius: var(--ds-radius-circular);                   
+  background: var(--ds-color-slide-toggle-knob-color);        
   transition: transform .15s ease;
 }
 
 .ds-slide-toggle__row:hover .ds-slide-toggle__track {
-  background: var(--ds-color-slide-toggle-deselected-hover-background);   /* #757575 */
+  background: var(--ds-color-slide-toggle-deselected-hover-background);   
 }
 
-/* включён */
 .ds-slide-toggle__input:checked + .ds-slide-toggle__track {
-  background: var(--ds-color-slide-toggle-selected-default-background);   /* #448AFF */
+  background: var(--ds-color-slide-toggle-selected-default-background);   
 }
 .ds-slide-toggle__input:checked + .ds-slide-toggle__track::after {
   transform: translateX(14px);
 }
 .ds-slide-toggle__row:hover .ds-slide-toggle__input:checked + .ds-slide-toggle__track {
-  background: var(--ds-color-slide-toggle-selected-hover-background);     /* #3969D5 */
+  background: var(--ds-color-slide-toggle-selected-hover-background);     
 }
 
-/* disabled */
 .ds-slide-toggle__input:disabled + .ds-slide-toggle__track {
-  background: var(--ds-color-slide-toggle-deselected-disable-background); /* #E0E0E0 */
+  background: var(--ds-color-slide-toggle-deselected-disable-background); 
 }
 .ds-slide-toggle__input:checked:disabled + .ds-slide-toggle__track {
   background: var(--ds-color-slide-toggle-selected-disable-background);
 }
 .ds-slide-toggle--disabled { pointer-events: none; }
 .ds-slide-toggle--disabled .ds-slide-toggle__title {
-  color: var(--ds-color-slide-toggle-deselected-disable-text-color);      /* #9E9E9E */
+  color: var(--ds-color-slide-toggle-deselected-disable-text-color);      
 }
 
-/* тексты */
 .ds-slide-toggle__title {
-  color: var(--ds-color-slide-toggle-text-color);             /* #333333 */
-  font-size: var(--ds-typography-body-font-size-s);           /* 14px */
-  font-weight: var(--ds-typography-font-weight-regular);      /* 400 */
-  line-height: var(--ds-typography-body-line-height-s);       /* 20px */
+  color: var(--ds-color-slide-toggle-text-color);             
+  font-size: var(--ds-typography-body-font-size-s);           
+  font-weight: var(--ds-typography-font-weight-regular);      
+  line-height: var(--ds-typography-body-line-height-s);       
   letter-spacing: var(--ds-typography-letter-spacing-s);
 }
 
 .ds-slide-toggle__support {
-  color: var(--ds-color-slide-toggle-text-support-color);      /* #616161 */
-  font-size: var(--ds-typography-caption-font-size-l);         /* 12px */
-  line-height: var(--ds-typography-caption-line-height-l);     /* 16px */
+  color: var(--ds-color-slide-toggle-text-support-color);      
+  font-size: var(--ds-typography-caption-font-size-l);         
+  line-height: var(--ds-typography-caption-line-height-l);     
   letter-spacing: var(--ds-typography-letter-spacing-s);
-  padding-left: 42px;                                          /* под текст: трек 34 + gap 8 */
+  padding-left: 42px;                                          
 }
 .ds-slide-toggle--error .ds-slide-toggle__support {
-  color: var(--ds-color-slide-toggle-text-error-color);        /* #FF5252 */
+  color: var(--ds-color-slide-toggle-text-error-color);        
 }
 
-/* иконка-подсказка в строке */
 .ds-slide-toggle__icon {
   display: inline-flex;
   align-items: center;
@@ -17673,7 +17333,7 @@ Roboto 400/500, latin + cyrillic, зашит прямо в CSS: прототип
   flex-shrink: 0;
   width: 20px;
   height: 20px;
-  color: var(--ds-color-icon-primary);                         /* #616161 */
+  color: var(--ds-color-icon-primary);                         
 }
 .ds-slide-toggle__icon svg { width: 20px; height: 20px; display: block; }
 .ds-slide-toggle__icon svg path { fill: currentColor; }
