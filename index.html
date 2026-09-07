@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iiko DS · Компоненты в коде</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components/index.css">
+<style>
+  body{margin:0;background:#fff;color:#333;font-family:Roboto,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  .ds-layout{max-width:1180px;margin:0 auto;padding:40px 32px 64px}
+  .ds-logo{color:#448aff;font-weight:500;font-size:14px;letter-spacing:.05em;text-transform:uppercase}
+  h1{font-size:32px;font-weight:500;margin:12px 0 8px;color:#212121}
+  .ds-lead{color:#616161;font-size:15px;line-height:1.55;max-width:720px;margin:0 0 28px}
+  .ds-nav{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+  .ds-nav a{text-decoration:none;color:#448aff;font-size:14px;border:1px solid #e0e0e0;border-radius:8px;
+            padding:8px 14px;transition:.15s}
+  .ds-nav a:hover{background:#f5faff;border-color:#448aff}
+  .ds-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+  .ds-card{border:1px solid #e0e0e0;border-radius:12px;overflow:hidden;background:#fff;text-decoration:none;
+           color:inherit;display:flex;flex-direction:column;transition:.15s}
+  .ds-card:hover{border-color:#448aff;box-shadow:0 2px 2px rgba(0,0,0,.04),0 0 4px rgba(33,33,33,.12)}
+  .ds-card__preview{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+                    padding:24px 20px;background:#fafafa;border-bottom:1px solid #e0e0e0;min-height:96px}
+  .ds-card__body{padding:14px 16px}
+  .ds-card__name{font-size:15px;font-weight:500;color:#212121}
+  .ds-card__tag{display:inline-block;font-size:12px;color:#0f7b3a;background:#e7f7ee;border-radius:6px;
+                padding:2px 8px;margin-top:6px}
+  .ds-foot{margin-top:36px;padding-top:20px;border-top:1px solid #e0e0e0;color:#9e9e9e;font-size:13px}
+  .ds-foot a{color:#448aff;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="ds-layout">
+
+  <div class="ds-logo">iiko Design System</div>
+  <h1>Компоненты в коде</h1>
+  <p class="ds-lead">Дизайн-система iiko — компоненты, токены и инструкции, собранные из Figma.
+  Чистые HTML/CSS (без фреймворков): открой компонент или собери прототип в VSCode.
+  Все стили — только через токены <code>tokens.css</code>.</p>
+
+  <nav class="ds-nav">
+    <a href="https://anders7rusk.github.io/iiko-ds-kit/">Каталог витрины</a>
+    <a href="https://anders7rusk.github.io/iiko-ds-kit/component-template.html">Мастер страница</a>
+    <a href="guides/guide-components.md">Гайд: компоненты</a>
+    <a href="guides/guide-prototyping.md">Гайд: прототипы</a>
+    <a href="iiko-ds-spec.md">Спека ДС</a>
+  </nav>
+
+  <div class="ds-grid">
+
+    <a class="ds-card" href="https://anders7rusk.github.io/iiko-ds-kit/button.html">
+      <div class="ds-card__preview">
+        <button class="ds-btn ds-btn--m ds-btn--accent ds-btn--filled">
+          <span class="ds-btn__icon material-icons" aria-hidden="true">add</span>
+          <span class="ds-btn__label">Button</span>
+        </button>
+      </div>
+      <div class="ds-card__body">
+        <div class="ds-card__name">Button</div>
+        <span class="ds-card__tag">готово</span>
+      </div>
+    </a>
+
+    <a class="ds-card" href="https://anders7rusk.github.io/iiko-ds-kit/input.html">
+      <div class="ds-card__preview">
+        <div class="ds-input ds-input--m">
+          <div class="ds-input__frame">
+            <div class="ds-input__content">
+              <label class="ds-input__label" for="pv-input">Label</label>
+              <input class="ds-input__field" id="pv-input" type="text" placeholder="Input text">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ds-card__body">
+        <div class="ds-card__name">Form field + Input</div>
+        <span class="ds-card__tag">готово</span>
+      </div>
+    </a>
+
+    <a class="ds-card" href="https://anders7rusk.github.io/iiko-ds-kit/checkbox.html">
+      <div class="ds-card__preview">
+        <label class="ds-checkbox">
+          <input type="checkbox" class="ds-checkbox__input" checked>
+          <span class="ds-checkbox__box material-icons" aria-hidden="true"></span>
+          <span class="ds-checkbox__label">Checkbox</span>
+        </label>
+      </div>
+      <div class="ds-card__body">
+        <div class="ds-card__name">Checkbox</div>
+        <span class="ds-card__tag">готово</span>
+      </div>
+    </a>
+
+    <a class="ds-card" href="https://anders7rusk.github.io/iiko-ds-kit/radio.html">
+      <div class="ds-card__preview">
+        <label class="ds-radio">
+          <input type="radio" class="ds-radio__input" name="pv-radio" checked>
+          <span class="ds-radio__box material-icons" aria-hidden="true"></span>
+          <span class="ds-radio__label">Radio</span>
+        </label>
+      </div>
+      <div class="ds-card__body">
+        <div class="ds-card__name">Radio button</div>
+        <span class="ds-card__tag">готово</span>
+      </div>
+    </a>
+
+    <a class="ds-card" href="https://anders7rusk.github.io/iiko-ds-kit/badge.html">
+      <div class="ds-card__preview">
+        <span class="ds-badge ds-badge--counter ds-badge--accent">7</span>
+        <span class="ds-badge ds-badge--point ds-badge--positive"></span>
+      </div>
+      <div class="ds-card__body">
+        <div class="ds-card__name">Badge</div>
+        <span class="ds-card__tag">готово</span>
+      </div>
+    </a>
+
+    <a class="ds-card" href="https://anders7rusk.github.io/iiko-ds-kit/chips.html">
+      <div class="ds-card__preview">
+        <div class="ds-chips ds-chips--filled">
+          <span class="ds-chips__label">Чип</span>
+        </div>
+      </div>
+      <div class="ds-card__body">
+        <div class="ds-card__name">Chips</div>
+        <span class="ds-card__tag">готово</span>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="ds-foot">
+    Все компоненты и их варианты — в витрине <a href="https://anders7rusk.github.io/iiko-ds-kit/">iiko-ds-kit</a>.
+    Спека дизайн-системы: <a href="iiko-ds-spec.md">iiko-ds-spec.md</a>. Источник правды — Figma.
+  </div>
+
+</div>
+</body>
+</html>
